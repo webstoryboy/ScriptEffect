@@ -5,27 +5,26 @@
         이 강의는 기본적인 HTML, CSS, JavaScript, JQuery를 알고 있어야 배울 수 있는 강의입니다. <br>
         웹표준 강의, 반응형 강의, 메가박스 강의를 보고 오시면 도움이 됩니다.^^<br><br>
 
-        모든 강의는 소스를 보면서 따라하는 튜토리얼이며,<br>
-        패럴랙스 사이트를 만들기 전에 레이아웃을 만드는 영상입니다.
+        모든 강의는 소스를 보면서 따라하는 튜토리얼입니다.
     </p>
 
     <div class="code-youtube">
         <h2>Code Youtube</h2>
-        <iframe src="https://www.youtube.com/embed/v7qAG4wbGuM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <iframe src="https://www.youtube.com/embed/3JsPBWcxc0o" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     </div>
     <!-- //code-youtube -->
 
     <div class="code-reference">
         <h2>Code Sample</h2>
         <p class="bubble info">전체 소스는 여기서 다운 받을 수 있습니다. </p>
-        <p class="bubble info"><a class="color-values" href="https://github.com/webstoryboy/ScriptEffect" target="_blank">바로가기</a></p>
+        <p class="bubble info"><a class="color-values" href="https://github.com/webstoryboy/ScriptEffect/tree/main/webstoryboy/parallaxEffect" target="_blank">바로가기</a></p>
         <p class="bubble warning">샘플 소스는 여기서 확인 할 수 있습니다. </p>
-        <p class="bubble warning"><a class="color-values" href="https://webstoryboy.github.io/ScriptEffect/webstoryboy/parallaxEffect/parallaxLayout.html" target="_blank">바로가기</a></p>
+        <p class="bubble warning"><a class="color-values" href="https://webstoryboy.github.io/ScriptEffect/webstoryboy/parallaxEffect/parallaxEffect02-javascript.html" target="_blank">바로가기</a></p>
     </div>
     <!-- //code-reference -->
 
     <div class="code-reference">
-        <h2>Sourece Reference</h2>
+        <h2>Source Reference</h2>
         <table>
             <thead>
                 <tr>
@@ -97,18 +96,37 @@
     &lt;meta charset="UTF-8"&gt;
     &lt;meta http-equiv="X-UA-Compatible" content="IE=edge"&gt;
     &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
-    &lt;title&gt;Parallax Layout&lt;/title&gt;
+    &lt;title&gt;Parallax Effect&lt;/title&gt;
 
     &lt;link href="https://fonts.googleapis.com/css2?family=Lato:wght@100&display=swap" rel="stylesheet"&gt;
-    
 &lt;/head&gt;
 &lt;body class="parallax"&gt;
 
+    &lt;!-- info --&gt;
+    &lt;div class="paraScroll"&gt;scrollTop() : &lt;span&gt;0&lt;/span&gt;px&lt;/div&gt;
+    &lt;!-- //info --&gt;
+
     &lt;header id="paraHeader"&gt;
-        &lt;h1&gt;Parallax Effect - Layout&lt;/h1&gt;
-        &lt;p&gt;패럴랙스 스크롤링 효과 - 레이아웃&lt;/p&gt;
+        &lt;h1&gt;Parallax Effect02 - Javascript&lt;/h1&gt;
+        &lt;p&gt;패럴랙스 스크롤링 효과 - 닷 메뉴&lt;/p&gt;
     &lt;/header&gt;
     &lt;!-- //header --&gt;
+
+    &lt;!-- nav --&gt;
+    &lt;nav class="paraDot"&gt;
+        &lt;ul&gt;
+            &lt;li class="active"&gt;&lt;a href="#section1"&gt;&lt;span&gt;section1&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="#section2"&gt;&lt;span&gt;section2&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="#section3"&gt;&lt;span&gt;section3&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="#section4"&gt;&lt;span&gt;section4&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="#section5"&gt;&lt;span&gt;section5&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="#section6"&gt;&lt;span&gt;section6&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="#section7"&gt;&lt;span&gt;section7&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="#section8"&gt;&lt;span&gt;section8&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="#section9"&gt;&lt;span&gt;section9&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/nav&gt;
+    &lt;!-- //nav --&gt;
 
     &lt;main id="paraCont"&gt;
         &lt;section id="section1" class="content__item"&gt;
@@ -147,7 +165,7 @@
             &lt;figure class="content__item__imgWrap"&gt;
                 &lt;div class="content__item__img"&gt;&lt;/div&gt;
             &lt;/figure&gt;
-            &lt;p class="content__item__desc"&gt;모든지 기본을 중요하게 생각한다.&lt;/p&gt;
+            &lt;p class="content__item__desc"&gt;모든지 기본을 중요하게 생각하고 행동한다.&lt;/p&gt;
         &lt;/section&gt;
         &lt;!-- //section4 --&gt;
 
@@ -208,7 +226,7 @@
         &lt;div class="footerInfo"&gt;
             &lt;h3&gt;제이쿼리&lt;/h3&gt;
             &lt;ul&gt;
-                &lt;li class="active"&gt;&lt;a href="parallaxEffect01-jquery.html"&gt;1&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href="parallaxEffect01-jquery.html"&gt;1&lt;/a&gt;&lt;/li&gt;
                 &lt;li&gt;&lt;a href="parallaxEffect02-jquery.html"&gt;2&lt;/a&gt;&lt;/li&gt;
                 &lt;li&gt;&lt;a href="parallaxEffect03-jquery.html"&gt;3&lt;/a&gt;&lt;/li&gt;
                 &lt;li&gt;&lt;a href="parallaxEffect04-jquery.html"&gt;4&lt;/a&gt;&lt;/li&gt;
@@ -222,7 +240,7 @@
             &lt;h3&gt;자바스크립트&lt;/h3&gt;
             &lt;ul&gt;
                 &lt;li&gt;&lt;a href="parallaxEffect01-javascript.html"&gt;1&lt;/a&gt;&lt;/li&gt;
-                &lt;li&gt;&lt;a href="parallaxEffect02-javascript.html"&gt;2&lt;/a&gt;&lt;/li&gt;
+                &lt;li class="active"&gt;&lt;a href="parallaxEffect02-javascript.html"&gt;2&lt;/a&gt;&lt;/li&gt;
                 &lt;li&gt;&lt;a href="parallaxEffect03-javascript.html"&gt;3&lt;/a&gt;&lt;/li&gt;
                 &lt;li&gt;&lt;a href="parallaxEffect04-javascript.html"&gt;4&lt;/a&gt;&lt;/li&gt;
                 &lt;li&gt;&lt;a href="parallaxEffect05-javascript.html"&gt;5&lt;/a&gt;&lt;/li&gt;
@@ -412,13 +430,164 @@
     .content__item:nth-child(9) .content__item__img {
         background-image: url(https://webstoryboy.github.io/wtss/refer-effect/assets/img/bg9.jpg);
     }
+
+    /* paraDot */
+    .paraDot {
+        position: fixed;
+        right: 20px;
+        top: 50%;
+        z-index: 1000;
+        transform: translateY(-50%);
+        background: rgba(0,0,0,0.4);
+        padding: 20px 10px;
+        border-radius: 30px;
+    }
+    .paraDot li {
+        list-style: none;
+    }
+    .paraDot li a {
+        width: 20px; 
+        height: 20px;
+        display: block;
+        border: 2px solid #fff;
+        border-radius: 50%;
+        margin: 8px;
+        position: relative;
+        text-decoration: none;
+    }
+    .paraDot li a span {
+        position: absolute;
+        left: -105px;
+        top: 50%;
+        transform: translateY(-50%);
+        background: #fff;
+        color: #000;
+        display: block;
+        padding: 2px 15px;
+        border-radius: 30px;
+        opacity: 0;
+    }
+    .paraDot li.active a {
+        background: #fff;
+    }
+    .paraDot li.active a span {
+        opacity: 1;
+    }
+
+    /* info */
+    .paraScroll {
+        position: fixed;
+        left: 20px;
+        bottom: 20px;
+        z-index: 1000;
+        background: rgba(0,0,0,.4);
+        color: #fff;
+        height: 40px;
+        line-height: 40px;
+        border-radius: 50px;
+        text-align: center;
+        font-size: 12px;
+        padding: 0px 20px;
+    }
 &lt;/style&gt;
 </code></pre>
                 </div>
                 <!--//tab-cont2 -->
 
                 <div>
-<pre class="line-numbers language-javascript"><code>//none
+<pre class="line-numbers language-javascript"><code>&lt;!-- script --&gt;
+&lt;script&gt;
+    document.querySelectorAll(".paraDot ul li a").forEach(el =&gt; {
+        el.addEventListener("click", e =&gt; {
+            e.preventDefault();
+            document.querySelector(el.getAttribute("href")).scrollIntoView({
+                behavior: "smooth"
+            })
+        })
+    });
+
+    window.addEventListener("scroll", function(){
+        let scrollTop = window.pageYOffset || document.documentElement.scrollTop || window.scrollY;
+
+        // if( scrollTop &gt;= document.getElementById("section1").offsetTop ){
+        //     document.querySelectorAll(".paraDot ul li").forEach(el =&gt; {
+        //         el.classList.remove("active");
+        //     })
+        //     document.querySelector(".paraDot ul li:nth-child(1)").classList.add("active");
+        // }
+        // if( scrollTop &gt;= document.getElementById("section2").offsetTop ){
+        //     document.querySelectorAll(".paraDot ul li").forEach(el =&gt; {
+        //         el.classList.remove("active");
+        //     })
+        //     document.querySelector(".paraDot ul li:nth-child(2)").classList.add("active");
+        // }
+        // if( scrollTop &gt;= document.getElementById("section3").offsetTop ){
+        //     document.querySelectorAll(".paraDot ul li").forEach(el =&gt; {
+        //         el.classList.remove("active");
+        //     })
+        //     document.querySelector(".paraDot ul li:nth-child(3)").classList.add("active");
+        // }
+        // if( scrollTop &gt;= document.getElementById("section4").offsetTop ){
+        //     document.querySelectorAll(".paraDot ul li").forEach(el =&gt; {
+        //         el.classList.remove("active");
+        //     })
+        //     document.querySelector(".paraDot ul li:nth-child(4)").classList.add("active");
+        // }
+        // if( scrollTop &gt;= document.getElementById("section5").offsetTop ){
+        //     document.querySelectorAll(".paraDot ul li").forEach(el =&gt; {
+        //         el.classList.remove("active");
+        //     })
+        //     document.querySelector(".paraDot ul li:nth-child(5)").classList.add("active");
+        // }
+        // if( scrollTop &gt;= document.getElementById("section6").offsetTop ){
+        //     document.querySelectorAll(".paraDot ul li").forEach(el =&gt; {
+        //         el.classList.remove("active");
+        //     })
+        //     document.querySelector(".paraDot ul li:nth-child(6)").classList.add("active");
+        // }
+        // if( scrollTop &gt;= document.getElementById("section7").offsetTop ){
+        //     document.querySelectorAll(".paraDot ul li").forEach(el =&gt; {
+        //         el.classList.remove("active");
+        //     })
+        //     document.querySelector(".paraDot ul li:nth-child(7)").classList.add("active");
+        // }
+        // if( scrollTop &gt;= document.getElementById("section8").offsetTop ){
+        //     document.querySelectorAll(".paraDot ul li").forEach(el =&gt; {
+        //         el.classList.remove("active");
+        //     })
+        //     document.querySelector(".paraDot ul li:nth-child(8)").classList.add("active");
+        // }
+        // if( scrollTop &gt;= document.getElementById("section9").offsetTop ){
+        //     document.querySelectorAll(".paraDot ul li").forEach(el =&gt; {
+        //         el.classList.remove("active");
+        //     })
+        //     document.querySelector(".paraDot ul li:nth-child(9)").classList.add("active");
+        // }
+
+        //for문
+        // for( let i=1; i&lt;=9; i++ ){
+        //     if( scrollTop &gt;= document.getElementById("section"+i).offsetTop ){
+        //         document.querySelectorAll(".paraDot ul li").forEach(el =&gt; {
+        //             el.classList.remove("active");
+        //         })
+        //         document.querySelector(".paraDot ul li:nth-child("+i+")").classList.add("active");
+        //     }
+        // }
+
+        //forEach()
+        document.querySelectorAll(".content__item").forEach((element, index) =&gt; {
+            if( scrollTop &gt;= element.offsetTop ){
+                document.querySelectorAll(".paraDot ul li").forEach(li =&gt; {
+                    li.classList.remove("active");
+                });
+                document.querySelector(".paraDot ul li:nth-child("+(index+1)+")").classList.add("active");
+            }
+        });
+
+        //info
+        document.querySelector(".paraScroll span").innerText = parseInt(scrollTop);
+    }); 
+&lt;/script&gt;
 
 </code></pre>
                 </div>
@@ -436,12 +605,4 @@
         <p class="bubble warning">YOUTUBE <a class="color-values" href="https://www.youtube.com/webstoryboy"target="_blank"> 바로가기</a></p>
         <p class="bubble warning">INFLUENCER <a class="color-values" href="https://in.naver.com/webstoryboy"target="_blank"> 바로가기</a></p>
     </div>
-
-    <p class="bubble">
-        도움이 되셨다면 구독과 좋아요 버튼을 꾸욱~~!!<br>
-        여러분의 댓글은 영상을 제작하는데 많은 힘이 됩니다.<br>
-        모르시거나 궁금한 사항은 언제든지 댓글로 남겨주세요.<br>
-        최대한 힘이 되어 드리겠습니다.<br>
-        오늘도 수고하셨습니다.
-    </p>
 </div>
