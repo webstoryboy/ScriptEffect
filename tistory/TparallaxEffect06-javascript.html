@@ -10,7 +10,7 @@
 
     <div class="code-youtube">
         <h2>Code Youtube</h2>
-        <iframe src="https://www.youtube.com/embed/6K2kLMrcfeM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <iframe src="https://www.youtube.com/embed/LZwBQpmmTVg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     </div>
     <!-- //code-youtube -->
 
@@ -19,7 +19,7 @@
         <p class="bubble info">전체 소스는 여기서 다운 받을 수 있습니다. </p>
         <p class="bubble info"><a class="color-values" href="https://github.com/webstoryboy/ScriptEffect/tree/main/webstoryboy/parallaxEffect" target="_blank">바로가기</a></p>
         <p class="bubble warning">샘플 소스는 여기서 확인 할 수 있습니다. </p>
-        <p class="bubble warning"><a class="color-values" href="https://webstoryboy.github.io/ScriptEffect/webstoryboy/parallaxEffect/parallaxEffect04-javascript.html" target="_blank">바로가기</a></p>
+        <p class="bubble warning"><a class="color-values" href="https://webstoryboy.github.io/ScriptEffect/webstoryboy/parallaxEffect/parallaxEffect06-jquery.html" target="_blank">바로가기</a></p>
     </div>
     <!-- //code-reference -->
 
@@ -107,23 +107,23 @@
     &lt;!-- //info --&gt;
 
     &lt;header id="paraHeader"&gt;
-        &lt;h1&gt;Parallax Effect04 - Javascript&lt;/h1&gt;
-        &lt;p&gt;패럴랙스 스크롤링 효과 - 숨김 메뉴2&lt;/p&gt;
+        &lt;h1&gt;Parallax Effect06 - Javascript&lt;/h1&gt;
+        &lt;p&gt;패럴랙스 스크롤링 효과 - 이미지 이질감&lt;/p&gt;
     &lt;/header&gt;
     &lt;!-- //header --&gt;
 
     &lt;!-- nav --&gt;
     &lt;nav class="paraNav"&gt;
         &lt;ul&gt;
-            &lt;li class="active"&gt;&lt;a href="#section1"&gt;메뉴1&lt;/a&gt;&lt;/li&gt;
-            &lt;li&gt;&lt;a href="#section2"&gt;메뉴2&lt;/a&gt;&lt;/li&gt;
-            &lt;li&gt;&lt;a href="#section3"&gt;메뉴3&lt;/a&gt;&lt;/li&gt;
-            &lt;li&gt;&lt;a href="#section4"&gt;메뉴4&lt;/a&gt;&lt;/li&gt;
-            &lt;li&gt;&lt;a href="#section5"&gt;메뉴5&lt;/a&gt;&lt;/li&gt;
-            &lt;li&gt;&lt;a href="#section6"&gt;메뉴6&lt;/a&gt;&lt;/li&gt;
-            &lt;li&gt;&lt;a href="#section7"&gt;메뉴7&lt;/a&gt;&lt;/li&gt;
-            &lt;li&gt;&lt;a href="#section8"&gt;메뉴8&lt;/a&gt;&lt;/li&gt;
-            &lt;li&gt;&lt;a href="#section9"&gt;메뉴9&lt;/a&gt;&lt;/li&gt;
+            &lt;li class="active"&gt;&lt;a href="#section1"&gt;s1&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="#section2"&gt;s2&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="#section3"&gt;s3&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="#section4"&gt;s4&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="#section5"&gt;s5&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="#section6"&gt;s6&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="#section7"&gt;s7&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="#section8"&gt;s8&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="#section9"&gt;s9&lt;/a&gt;&lt;/li&gt;
         &lt;/ul&gt;
     &lt;/nav&gt;
     &lt;!-- //nav --&gt;
@@ -242,9 +242,9 @@
                 &lt;li&gt;&lt;a href="parallaxEffect01-javascript.html"&gt;1&lt;/a&gt;&lt;/li&gt;
                 &lt;li&gt;&lt;a href="parallaxEffect02-javascript.html"&gt;2&lt;/a&gt;&lt;/li&gt;
                 &lt;li&gt;&lt;a href="parallaxEffect03-javascript.html"&gt;3&lt;/a&gt;&lt;/li&gt;
-                &lt;li class="active"&gt;&lt;a href="parallaxEffect04-javascript.html"&gt;4&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href="parallaxEffect04-javascript.html"&gt;4&lt;/a&gt;&lt;/li&gt;
                 &lt;li&gt;&lt;a href="parallaxEffect05-javascript.html"&gt;5&lt;/a&gt;&lt;/li&gt;
-                &lt;li&gt;&lt;a href="parallaxEffect06-javascript.html"&gt;6&lt;/a&gt;&lt;/li&gt;
+                &lt;li class="active"&gt;&lt;a href="parallaxEffect06-javascript.html"&gt;6&lt;/a&gt;&lt;/li&gt;
                 &lt;li&gt;&lt;a href="parallaxEffect07-javascript.html"&gt;7&lt;/a&gt;&lt;/li&gt;
                 &lt;li&gt;&lt;a href="parallaxEffect08-javascript.html"&gt;8&lt;/a&gt;&lt;/li&gt;
             &lt;/ul&gt;
@@ -293,7 +293,7 @@
         max-width: 1600px;
         margin: 0 auto;
         width: 100%;
-        overflow: hidden;
+        /* overflow: hidden; */
     }
     #paraFooter {
         padding: 10vw 0;
@@ -376,19 +376,16 @@
         padding-bottom: 56%;
         background: #000;
         position: relative;
+        overflow: hidden;
     }
     .content__item__img {
         position: absolute;
-        left: 0; top: 0;
-        width: 100%;
-        height: 100%;
+        left: -10%; top: -10%;
+        width: 120%;
+        height: 120%;
         background-repeat: no-repeat;
         background-size: cover;
         filter: saturate(0%);
-        transition: all 1s;
-    }
-    .content__item__img:hover {
-        filter: saturate(100%);
     }
     .content__item__desc {
         font-size: 4vw;
@@ -441,9 +438,6 @@
         border-radius: 50px;
         transition: top 0.4s ease;
     }
-    .paraNav.hide {
-        top: -100px;
-    }
     .paraNav li {
         display: inline-block;
         list-style: none;
@@ -452,7 +446,8 @@
         color: #fff;
         text-decoration: none;
         display: inline-block;
-        padding: 5px 20px;
+        padding: 5px;
+        width: 30px;
         height: 30px;
         text-align: center;
         line-height: 30px;
@@ -484,32 +479,52 @@
                 <!--//tab-cont2 -->
 
                 <div>
-<pre class="line-numbers language-javascript"><code>&lt;script&gt;
-    document.querySelectorAll(".paraNav ul li a").forEach(elem =&gt; {
-        elem.addEventListener("click", (e) =&gt; {
-            e.preventDefault();
-            document.querySelector(elem.getAttribute("href")).scrollIntoView({
-                behavior: "smooth"
+<pre class="line-numbers language-javascript"><code>&lt;!-- script --&gt;
+&lt;script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js"&gt;&lt;/script&gt;
+&lt;script&gt;
+    function scrollMenu(){
+        document.querySelectorAll(".paraNav ul li a").forEach(elem =&gt; {
+            elem.addEventListener("click", (e) =&gt; {
+                e.preventDefault();
+                document.querySelector(elem.getAttribute("href")).scrollIntoView({
+                    behavior: "smooth"
+                })
             })
-        })
-    });
+        });
+    }
 
-    let nowScrollTop;
-    let lastScrollTop = 0;
-    
-    function hasScroll(){
-        let scrollTop = document.documentElement.scrollTop || window.scrollY || window.pageYOffset;
+    function scrollProgress(){
+        let scrollTop = window.pageYOffset || window.scrollY || document.documentElement.scrollTop;
 
-        if(scrollTop &gt; lastScrollTop){
-            document.querySelector(".paraNav").classList.add("hide");
-        } else {
-            document.querySelector(".paraNav").classList.remove("hide");
-        }
+        // let offset1 = scrollTop - document.getElementById("section1").offsetTop;
+        // let offset2 = scrollTop - document.getElementById("section2").offsetTop;
+        // let offset3 = scrollTop - document.getElementById("section3").offsetTop;
+        // let offset4 = scrollTop - document.getElementById("section4").offsetTop;
+        // let offset5 = scrollTop - document.getElementById("section5").offsetTop;
+        // let offset6 = scrollTop - document.getElementById("section6").offsetTop;
+        // let offset7 = scrollTop - document.getElementById("section7").offsetTop;
+        // let offset8 = scrollTop - document.getElementById("section8").offsetTop;
+        // let offset9 = scrollTop - document.getElementById("section9").offsetTop;
 
-        lastScrollTop = scrollTop;
+        // document.getElementById("section1").style.transform = "translateX("+offset1+"px)";
+        // document.getElementById("section2").style.transform = "translateX("+offset2+"px)";
+        // document.getElementById("section3").style.transform = "translateX("+offset3+"px)";
+        // document.getElementById("section4").style.transform = "translateX("+offset4+"px)";
+        // document.getElementById("section5").style.transform = "translateX("+offset5+"px)";
+        // document.getElementById("section6").style.transform = "translateX("+offset6+"px)";
+        // document.getElementById("section7").style.transform = "translateX("+offset7+"px)";
+        // document.getElementById("section8").style.transform = "translateX("+offset8+"px)";
+        // document.getElementById("section9").style.transform = "translateX("+offset9+"px)";
 
-        //출력
-        document.querySelector(".paraScroll span").innerText = parseInt(scrollTop);
+        //forEach()
+        document.querySelectorAll(".content__item").forEach(item =&gt; {
+            let offset1 = (scrollTop - item.offsetTop) * 0.1;
+            let offset2 = (scrollTop - item.offsetTop) * 0.05;
+
+            item.querySelector(".content__item__img").style.transform = "translateX("+ offset1 +"px)";
+            item.querySelector(".content__item__desc").style.transform = "translateX("+ -offset2 +"px)";
+            item.querySelector(".content__item__num").style.transform = "translateY("+ offset1 +"px)";
+        });
 
         //메뉴
         document.querySelectorAll(".content__item").forEach((item, index) =&gt; {
@@ -520,20 +535,13 @@
                 document.querySelector(".paraNav ul li:nth-child("+(index+1)+")").classList.add("active");
             }
         })
-    };
 
-    function scrollProgress(){
-        nowScrollTop = true;
-
-        setTimeout(() =&gt; {
-            if(nowScrollTop) {
-                nowScrollTop = false;
-                hasScroll();
-            }
-        }, 500);
+        //출력
+        document.querySelector(".paraScroll span").innerText = parseInt(scrollTop);
     }
 
     window.addEventListener("scroll", scrollProgress);
+    scrollMenu();
 &lt;/script&gt;
 </code></pre>
                 </div>
