@@ -22,4 +22,4 @@ https://webstoryboy.github.io/ScriptEffect/webstoryboy/parallaxEffect/parallaxEf
 
 
 #마우스 이펙트 레이아웃<br>
-https://webstoryboy.github.io/ScriptEffect/webstoryboy/parallaxEffect/mouseIndex.html<br>
+https://webstoryboy.github.io/ScriptEffect/webstoryboy/mouseEffect/mouseIndex.html<br>
