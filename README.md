@@ -31,7 +31,7 @@ Parallax Effect08 - 리빌 효과(Javascript) <a href="https://webstoryboy.githu
 ## 마우스 이펙트(Mouse Effect)<br>
 
 패럴랙스 이펙스 스크롤링 효과 설명서 <a href="https://wtss.tistory.com/category/%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20%ED%9A%A8%EA%B3%BC/02%20MOUSE%20EFFECT">바로가기</a><br>
-패럴랙스 이펙스 스크롤링 효과 유튜브 <a href="#">바로가기</a><br>
+패럴랙스 이펙스 스크롤링 효과 유튜브 <a href="https://www.youtube.com/watch?v=D2g-QBlb_ZY&list=PL4UVBBIc6giLdK1TMPZl_m1syoZQkjBZz">바로가기</a><br>
 
 Mouse Index - 인덱스 <a href="https://webstoryboy.github.io/ScriptEffect/webstoryboy/mouseEffect/mouseIndex.html">바로가기</a><br>
 Mouse Effect01 - 따라다니기(jQuery) <a href="https://webstoryboy.github.io/ScriptEffect/webstoryboy/mouseEffect/mouseEffect01-jquery.html">바로가기</a><br>
