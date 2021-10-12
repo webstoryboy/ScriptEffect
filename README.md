@@ -1,4 +1,4 @@
-# ScriptEffect
+# Webstoryboy ScriptEffect
 
 ## 패럴랙스 이펙트(Parallax Effect)<br>
 
