@@ -8,7 +8,7 @@
 
     <div class="code-youtube">
         <h2>Code Youtube</h2>
-        <iframe src="https://www.youtube.com/embed/aOFF-fSZz-0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <iframe src="https://www.youtube.com/embed/4Go0-7r8eh0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     </div>
     <!-- //code-youtube -->
 
@@ -17,7 +17,7 @@
         <p class="bubble info">전체 소스는 여기서 다운 받을 수 있습니다. </p>
         <p class="bubble info"><a class="color-values" href="https://github.com/webstoryboy/ScriptEffect/tree/main/webstoryboy/mouseEffect" target="_blank">바로가기</a></p>
         <p class="bubble warning">샘플 소스는 여기서 확인 할 수 있습니다. </p>
-        <p class="bubble warning"><a class="color-values" href="https://webstoryboy.github.io/ScriptEffect/webstoryboy/mouseEffect/mouseEffect01-jquery.html" target="_blank">바로가기</a></p>
+        <p class="bubble warning"><a class="color-values" href="https://webstoryboy.github.io/ScriptEffect/webstoryboy/mouseEffect/mouseEffect01-javascript.html" target="_blank">바로가기</a></p>
     </div>
     <!-- //code-reference -->
 
@@ -115,13 +115,13 @@
 
     &lt;!-- info --&gt;
     &lt;div class="info"&gt;
-        &lt;h1&gt;&lt;a href="index.html"&gt;Mouse Effect01 - jQuery&lt;/a&gt;&lt;/h1&gt;
+        &lt;h1&gt;&lt;a href="index.html"&gt;Mouse Effect01 - Javascript&lt;/a&gt;&lt;/h1&gt;
         &lt;p&gt;마우스 이펙트 - 따라다니기&lt;/p&gt;
     &lt;/div&gt;
 
     &lt;div class="info right"&gt;
         &lt;ul&gt;
-            &lt;li&gt;&lt;a href="mouseEffect01-javascript.html"&gt;1&lt;/a&gt;&lt;/li&gt;
+            &lt;li class="active"&gt;&lt;a href="mouseEffect01-javascript.html"&gt;1&lt;/a&gt;&lt;/li&gt;
             &lt;li&gt;&lt;a href="mouseEffect02-javascript.html"&gt;2&lt;/a&gt;&lt;/li&gt;
             &lt;li&gt;&lt;a href="mouseEffect03-javascript.html"&gt;3&lt;/a&gt;&lt;/li&gt;
             &lt;li&gt;&lt;a href="mouseEffect04-javascript.html"&gt;4&lt;/a&gt;&lt;/li&gt;
@@ -131,7 +131,7 @@
             &lt;li&gt;&lt;a href="mouseEffect08-javascript.html"&gt;8&lt;/a&gt;&lt;/li&gt;
         &lt;/ul&gt;
         &lt;ul&gt;
-            &lt;li class="active"&gt;&lt;a href="mouseEffect01-jquery.html"&gt;1&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="mouseEffect01-jquery.html"&gt;1&lt;/a&gt;&lt;/li&gt;
             &lt;li&gt;&lt;a href="mouseEffect02-jquery.html"&gt;2&lt;/a&gt;&lt;/li&gt;
             &lt;li&gt;&lt;a href="mouseEffect03-jquery.html"&gt;3&lt;/a&gt;&lt;/li&gt;
             &lt;li&gt;&lt;a href="mouseEffect04-jquery.html"&gt;4&lt;/a&gt;&lt;/li&gt;
@@ -210,7 +210,7 @@
         top: 0;
         width: 100%;
         height: 100vh;
-        background-color: rgba(52, 5, 70, 0.7);
+        background-color: rgba(5, 36, 70, 0.87);
         z-index: -1;
     }
 
@@ -360,88 +360,97 @@
 
                 <div>
 <pre class="line-numbers language-javascript"><code>&lt;!-- script --&gt;
-&lt;script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"&gt;&lt;/script&gt;
-&lt;script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"&gt;&lt;/script&gt;
 &lt;script&gt;
     //출력용
-    $(window).mousemove(function(event){
-        $(".clientX").text(event.clientX);  //브라우저 X좌표
-        $(".clientY").text(event.clientY);  //브라우저 Y좌표
-        $(".offsetX").text(event.offsetX);  //요소 X좌표
-        $(".offsetY").text(event.offsetY);  //요소 Y좌표
-        $(".pageX").text(event.pageX);      //페이지 X좌표
-        $(".pageY").text(event.pageX);      //페이지 X좌표
-        $(".screenX").text(event.screenX);  //디바이스 X좌표
-        $(".screenY").text(event.screenY);  //디바이스 Y좌표
+    window.addEventListener("mousemove", function(event){
+        document.querySelector(".clientX").innerText = event.clientX;
+        document.querySelector(".clientY").innerText = event.clientY;
+        document.querySelector(".offsetX").innerText = event.offsetX;
+        document.querySelector(".offsetY").innerText = event.offsetY;
+        document.querySelector(".pageX").innerText = event.pageX;
+        document.querySelector(".pageY").innerText = event.pageY;
+        document.querySelector(".screenX").innerText = event.screenX;
+        document.querySelector(".screenY").innerText = event.screenY;
     });
 
     //마우스 움직이기
-    $(window).mousemove(function(e){
-        // $(".cursor").css("left", "100px");
-        // $(".cursor").css("top", "100px");
-        //$(".cursor").css({"left":"100px", "top":"100px"});
-        //$(".cursor").css({ left:"100px", top:"100px"});
-        //$(".cursor").css({ left: 100, top: 100});
+    window.addEventListener("mousemove", function(e){
+        // document.querySelector(".cursor").style.left = e.clientX -25 + "px";
+        // document.querySelector(".cursor").style.top = e.clientY -25 + "px";
 
-        $(".cursor").css({ left: e.clientX - 25, top: e.clientY - 25 });
+        let x = e.clientX -25 + "px";
+        let y = e.clientY -25 + "px";
+        document.querySelector(".cursor").style.cssText = "left:" + x + "; top:" + y; 
     });
 
-    //마우스 오버효과
-    // $(".mouseCont .style1").hover(function(){
-    //     $(".cursor").addClass("style1");
-    // }, function(){
-    //     $(".cursor").removeClass("style1");
+    // document.querySelector(".mouseCont .style1").addEventListener("mouseover", function(){
+    //     document.querySelector(".cursor").classList.add("style1");
     // });
-    // $(".mouseCont .style2").hover(function(){
-    //     $(".cursor").addClass("style2");
-    // }, function(){
-    //     $(".cursor").removeClass("style2");
+    // document.querySelector(".mouseCont .style1").addEventListener("mouseout", function(){
+    //     document.querySelector(".cursor").classList.remove("style1");
     // });
-    // $(".mouseCont .style3").hover(function(){
-    //     $(".cursor").addClass("style3");
-    // }, function(){
-    //     $(".cursor").removeClass("style3");
+    // document.querySelector(".mouseCont .style2").addEventListener("mouseover", function(){
+    //     document.querySelector(".cursor").classList.add("style2");
     // });
-    // $(".mouseCont .style4").hover(function(){
-    //     $(".cursor").addClass("style4");
-    // }, function(){
-    //     $(".cursor").removeClass("style4");
+    // document.querySelector(".mouseCont .style2").addEventListener("mouseout", function(){
+    //     document.querySelector(".cursor").classList.remove("style2");
     // });
-    // $(".mouseCont .style5").hover(function(){
-    //     $(".cursor").addClass("style5");
-    // }, function(){
-    //     $(".cursor").removeClass("style5");
+    // document.querySelector(".mouseCont .style3").addEventListener("mouseover", function(){
+    //     document.querySelector(".cursor").classList.add("style3");
     // });
-    // $(".mouseCont .style6").hover(function(){
-    //     $(".cursor").addClass("style6");
-    // }, function(){
-    //     $(".cursor").removeClass("style6");
+    // document.querySelector(".mouseCont .style3").addEventListener("mouseout", function(){
+    //     document.querySelector(".cursor").classList.remove("style3");
+    // });
+    // document.querySelector(".mouseCont .style4").addEventListener("mouseover", function(){
+    //     document.querySelector(".cursor").classList.add("style4");
+    // });
+    // document.querySelector(".mouseCont .style4").addEventListener("mouseout", function(){
+    //     document.querySelector(".cursor").classList.remove("style4");
+    // });
+    // document.querySelector(".mouseCont .style5").addEventListener("mouseover", function(){
+    //     document.querySelector(".cursor").classList.add("style5");
+    // });
+    // document.querySelector(".mouseCont .style5").addEventListener("mouseout", function(){
+    //     document.querySelector(".cursor").classList.remove("style5");
+    // });
+    // document.querySelector(".mouseCont .style6").addEventListener("mouseover", function(){
+    //     document.querySelector(".cursor").classList.add("style6");
+    // });
+    // document.querySelector(".mouseCont .style6").addEventListener("mouseout", function(){
+    //     document.querySelector(".cursor").classList.remove("style6");
     // });
 
-    // for문
-    // for ( let i=1; i&lt;=6; i++ ){
-    //     $(".mouseCont .style" + i).hover(function(){
-    //         $(".cursor").addClass("style" + i);
-    //     }, function(){
-    //         $(".cursor").removeClass("style" + i);
+    // for()
+    // for( let i=1; i&lt;=6; i++ ){
+    //     document.querySelector(".mouseCont .style"+i).addEventListener("mouseover", function(){
+    //         document.querySelector(".cursor").classList.add("style"+i);
+    //     });
+    //     document.querySelector(".mouseCont .style"+i).addEventListener("mouseout", function(){
+    //         document.querySelector(".cursor").classList.remove("style"+i);
     //     });
     // }
 
-    // each()
-    // $(".mouseCont span").each(function(index, element){
-    //     $(element).hover(function(){
-    //         $(".cursor").addClass("style" + (index+1));
-    //     }, function(){
-    //         $(".cursor").removeClass("style" + (index+1));
+    // forEach()
+    // document.querySelectorAll(".mouseCont span").forEach((element, index) =&gt; {
+    //     element.addEventListener("mouseover", () =&gt; {
+    //         document.querySelector(".cursor").classList.add("style"+(index+1));
     //     });
-    // });
+    //     element.addEventListener("mouseout", function(){
+    //         document.querySelector(".cursor").classList.remove("style"+(index+1));
+    //     });
+    // })
 
-    // attr()
-    $(".mouseCont span").hover(function(){
-        $(".cursor").addClass($(this).attr("class"));
-    }, function(){
-        $(".cursor").removeClass($(this).attr("class"));
-    });
+    // getAttribute()
+    document.querySelectorAll(".mouseCont span").forEach(element =&gt; {
+        let style = element.getAttribute("class");
+
+        element.addEventListener("mouseover", () =&gt; {
+            document.querySelector(".cursor").classList.add(style);
+        })
+        element.addEventListener("mouseout", () =&gt; {
+            document.querySelector(".cursor").classList.remove(style);
+        })
+    })
 &lt;/script&gt;
 </code></pre>
                 </div>

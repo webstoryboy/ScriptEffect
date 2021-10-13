@@ -41,7 +41,7 @@
         .bg {
             position: relative;
             height: 100vh;
-            background-image: url(https://webstoryboy.github.io/wtss/refer-effect/assets/img/bg11.jpg);
+            background-image: url(https://webstoryboy.github.io/ScriptEffect/webstoryboy/assets/img/bg11.jpg);
             background-size: cover;
             background-position: center center;
             background-repeat: no-repeat;
@@ -258,30 +258,30 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
     <script>
-        // 출력용
-        $(window).mousemove(function(e){
-            $(".clientX").text(e.clientX);   //브라우저 X좌표 기준
-            $(".clientY").text(e.clientY);   //브라우저 Y좌표 기준
-            $(".offsetX").text(e.offsetX);   //요소 X좌표 기준
-            $(".offsetY").text(e.offsetY);   //요소 Y좌표 기준
-            $(".pageX").text(e.pageX);       //페이지 X좌표 기준
-            $(".pageY").text(e.pageY);       //페이지 Y좌표 기준
-            $(".screenX").text(e.screenX);   //디바이스 X좌표 기준
-            $(".screenY").text(e.screenY);   //디바이스 Y좌표 기준
+        //출력용
+        $(window).mousemove(function(event){
+            $(".clientX").text(event.clientX);  //브라우저 X좌표
+            $(".clientY").text(event.clientY);  //브라우저 Y좌표
+            $(".offsetX").text(event.offsetX);  //요소 X좌표
+            $(".offsetY").text(event.offsetY);  //요소 Y좌표
+            $(".pageX").text(event.pageX);      //페이지 X좌표
+            $(".pageY").text(event.pageX);      //페이지 X좌표
+            $(".screenX").text(event.screenX);  //디바이스 X좌표
+            $(".screenY").text(event.screenY);  //디바이스 Y좌표
         });
 
         //마우스 움직이기
         $(window).mousemove(function(e){
-            // $(".cursor").css("left","100px");
-            // $(".cursor").css("top","100px");
-            // $(".cursor").css({"left":"100px", "top":"100px"});
-            // $(".cursor").css({left:"100px", top:"100px"});
-            // $(".cursor").css({left:100, "background-color":100});
-            // $(".cursor").css({left:100, backgroundColor:100});
-            
-            $(".cursor").css({ left: e.clientX - 25, top: e.clientY - 25});
+            // $(".cursor").css("left", "100px");
+            // $(".cursor").css("top", "100px");
+            //$(".cursor").css({"left":"100px", "top":"100px"});
+            //$(".cursor").css({ left:"100px", top:"100px"});
+            //$(".cursor").css({ left: 100, top: 100});
+
+            $(".cursor").css({ left: e.clientX - 25, top: e.clientY - 25 });
         });
 
+        //마우스 오버효과
         // $(".mouseCont .style1").hover(function(){
         //     $(".cursor").addClass("style1");
         // }, function(){
@@ -313,25 +313,25 @@
         //     $(".cursor").removeClass("style6");
         // });
 
-        //for문
-        // for( let i=1; i<=6; i++ ){
-        //     $(".mouseCont .style"+i).hover(function(){
-        //         $(".cursor").addClass("style"+i);
+        // for문
+        // for ( let i=1; i<=6; i++ ){
+        //     $(".mouseCont .style" + i).hover(function(){
+        //         $(".cursor").addClass("style" + i);
         //     }, function(){
-        //         $(".cursor").removeClass("style"+i);
+        //         $(".cursor").removeClass("style" + i);
         //     });
         // }
 
-        //each()
-        // $(".mouseCont span").each((index, element) => {
+        // each()
+        // $(".mouseCont span").each(function(index, element){
         //     $(element).hover(function(){
-        //         $(".cursor").addClass("style"+ (index+1));
+        //         $(".cursor").addClass("style" + (index+1));
         //     }, function(){
-        //         $(".cursor").removeClass("style"+(index+1));
+        //         $(".cursor").removeClass("style" + (index+1));
         //     });
         // });
 
-        //attr()
+        // attr()
         $(".mouseCont span").hover(function(){
             $(".cursor").addClass($(this).attr("class"));
         }, function(){
