@@ -41,7 +41,7 @@
         .bg {
             position: relative;
             height: 100vh;
-            background-image: url(../assets/img/bg3.jpg);
+            background-image: url(../assets/img/bg4.jpg);
             background-size: cover;
             background-position: center center;
             background-repeat: no-repeat;
@@ -53,7 +53,7 @@
             top: 0;
             width: 100%;
             height: 100vh;
-            background-color: rgba(52, 5, 70, 0.7);
+            background-color: rgba(5, 36, 70, 0.7);
             z-index: -1;
         }
     
@@ -113,6 +113,7 @@
             top: auto;
             right: 0px;
             bottom: 0px;
+            width: 200px;
         }
         .info.left li {
             display: block;
@@ -156,84 +157,61 @@
             height: 10px;
             border-radius: 50%;
             z-index: 9999;
-            background-color: rgba(255,255,255,0.1);
+            background-color: #fff;
             user-select: none;
             pointer-events: none;
-            transition: transform 0.3s, opacity 0.2s;
+            transition: transform 0.3s;
+            mix-blend-mode: difference;
         }
         .cursor.active {
-            opacity: .5;
-            transform: scale(0);
+            transform: scale(20);
         }
         .cursor.show {
-            opacity: .5;
-            transform: scale(1);
-            background: rgba(255, 51, 0, 1);
-        }
-        .cursor-follower {
-            position: absolute;
-            width: 30px; height: 30px;
-            background: rgba(255,255,255,0.3);
-            border-radius: 50%;
-            user-select: none;
-            pointer-events: none;
-            transition: transform 0.6s ease-in-out, opacity 0.2s ease-in-out;
-        }
-        .cursor-follower.active {
-            transform: scale(5);
-            background: rgba(255, 166, 0, 0.6);
-        }
-        .cursor-follower.show {
-            transform: scale(5);
-            background: rgba(255, 51, 0, 0.6);
-        }
-        .info, .info a {
-            cursor: none;
+            transform: scale(10);
+            background: blue;
         }
     &lt;/style&gt;
+    
 &lt;/head&gt;
 &lt;body class="mouse bg"&gt;
 
     &lt;!-- main --&gt;
-    &lt;main id="mouseCont"&gt;
+    &lt;main&gt;
         &lt;div class="cursor"&gt;&lt;/div&gt;
-        &lt;div class="cursor-follower"&gt;&lt;/div&gt;
 
         &lt;article class="mouseCont"&gt;
-            &lt;p&gt;When money speaks, the &lt;em&gt;truth&lt;/em&gt; keeps silent.&lt;/p&gt;
-            &lt;p&gt;돈이 말할 때는 &lt;em&gt;진실&lt;/em&gt;은 입을 다문다&lt;/p&gt;
+            &lt;p&gt;Never &lt;em&gt;underestimate&lt;/em&gt; your own ignorance.&lt;/p&gt;
+            &lt;p&gt;네 자신의 무지를 절대 &lt;em&gt;과소평가&lt;/em&gt; 하지 마라.&lt;/p&gt;
         &lt;/article&gt;
     &lt;/main&gt;
     &lt;!-- //main --&gt;
 
     &lt;!-- info --&gt;
     &lt;div class="info"&gt;
-        &lt;h1&gt;&lt;a href="index.html"&gt;Mouse Effect02 - jQuery&lt;/a&gt;&lt;/h1&gt;
-        &lt;p&gt;마우스 이펙트 - 따라다니기&lt;/p&gt;
+        &lt;h1&gt;&lt;a href="index.html"&gt;Mouse Effect03 - Javascript&lt;/a&gt;&lt;/h1&gt;
+        &lt;p&gt;마우스 이펙트 - 브랜딩 이펙트&lt;/p&gt;
     &lt;/div&gt;
 
     &lt;div class="info right"&gt;
         &lt;ul&gt;
-            &lt;li&gt;&lt;a href="javascriptME01.html"&gt;1&lt;/a&gt;&lt;/li&gt;
-            &lt;li&gt;&lt;a href="javascriptME02.html"&gt;2&lt;/a&gt;&lt;/li&gt;
-            &lt;li&gt;&lt;a href="javascriptME03.html"&gt;3&lt;/a&gt;&lt;/li&gt;
-            &lt;li&gt;&lt;a href="javascriptME04.html"&gt;4&lt;/a&gt;&lt;/li&gt;
-            &lt;li&gt;&lt;a href="javascriptME05.html"&gt;5&lt;/a&gt;&lt;/li&gt;
-            &lt;li&gt;&lt;a href="javascriptME06.html"&gt;6&lt;/a&gt;&lt;/li&gt;
-            &lt;li&gt;&lt;a href="javascriptME07.html"&gt;7&lt;/a&gt;&lt;/li&gt;
-            &lt;li&gt;&lt;a href="javascriptME08.html"&gt;8&lt;/a&gt;&lt;/li&gt;
-            &lt;li&gt;&lt;a href="javascriptME09.html"&gt;9&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="mouseEffect01-javascript.html"&gt;1&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="mouseEffect02-javascript.html"&gt;2&lt;/a&gt;&lt;/li&gt;
+            &lt;li class="active"&gt;&lt;a href="mouseEffect03-javascript.html"&gt;3&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="mouseEffect04-javascript.html"&gt;4&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="mouseEffect05-javascript.html"&gt;5&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="mouseEffect06-javascript.html"&gt;6&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="mouseEffect07-javascript.html"&gt;7&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="mouseEffect08-javascript.html"&gt;8&lt;/a&gt;&lt;/li&gt;
         &lt;/ul&gt;
         &lt;ul&gt;
-            &lt;li&gt;&lt;a href="jqueryME01.html"&gt;1&lt;/a&gt;&lt;/li&gt;
-            &lt;li class="active"&gt;&lt;a href="jqueryME02.html"&gt;2&lt;/a&gt;&lt;/li&gt;
-            &lt;li&gt;&lt;a href="jqueryME03.html"&gt;3&lt;/a&gt;&lt;/li&gt;
-            &lt;li&gt;&lt;a href="jqueryME04.html"&gt;4&lt;/a&gt;&lt;/li&gt;
-            &lt;li&gt;&lt;a href="jqueryME05.html"&gt;5&lt;/a&gt;&lt;/li&gt;
-            &lt;li&gt;&lt;a href="jqueryME06.html"&gt;6&lt;/a&gt;&lt;/li&gt;
-            &lt;li&gt;&lt;a href="jqueryME07.html"&gt;7&lt;/a&gt;&lt;/li&gt;
-            &lt;li&gt;&lt;a href="jqueryME08.html"&gt;8&lt;/a&gt;&lt;/li&gt;
-            &lt;li&gt;&lt;a href="jqueryME09.html"&gt;9&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="mouseEffect01-jquery.html"&gt;1&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="mouseEffect02-jquery.html"&gt;2&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="mouseEffect03-jquery.html"&gt;3&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="mouseEffect04-jquery.html"&gt;4&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="mouseEffect05-jquery.html"&gt;5&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="mouseEffect06-jquery.html"&gt;6&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="mouseEffect07-jquery.html"&gt;7&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="mouseEffect08-jquery.html"&gt;8&lt;/a&gt;&lt;/li&gt;
         &lt;/ul&gt;
     &lt;/div&gt;
 
@@ -246,43 +224,35 @@
     &lt;!-- //info --&gt;
 
     &lt;!-- script --&gt;
-    &lt;script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"&gt;&lt;/script&gt;
-    &lt;script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"&gt;&lt;/script&gt;
-    &lt;script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/gsap.min.js"&gt;&lt;/script&gt;
+    &lt;script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/gsap.min.js"&gt;&lt;/script&gt;  
     &lt;script&gt;
-        const cursor = $(".cursor");
-        const follower = $(".cursor-follower");
-
         //움직임 효과
-        $(window).mousemove(function(e){
-            // cursor.css({left: e.pageX -5 , top: e.pageY -5});
-            // follower.css({left: e.pageX -15, top: e.pageY -15});
-            gsap.to(cursor, {duration: 0.3, left: e.pageX -5, top: e.pageY -5});
-            gsap.to(follower, {duration: 0.8, left: e.pageX -15, top: e.pageY -15});
+        document.addEventListener("mousemove", e =&gt; {
+            gsap.to(".cursor", {duration: .5, left: e.pageX, top: e.pageY});
+
+            //출력
+            document.querySelector(".pageX").innerText = e.pageX + "px";
+            document.querySelector(".pageY").innerText = e.pageY + "px";
         });
 
         //오버 효과
-        $(".mouseCont em").hover(function(){
-            cursor.addClass("active");
-            follower.addClass("active");
-        }, function(){
-            cursor.removeClass("active");
-            follower.removeClass("active");
+        document.querySelectorAll(".mouseCont em").forEach(em =&gt; {
+            em.addEventListener("mouseenter", () =&gt; {
+                document.querySelector(".cursor").classList.add("active");
+            });
+            em.addEventListener("mouseleave", () =&gt; {
+                document.querySelector(".cursor").classList.remove("active");
+            });
         });
 
-        $(".info").hover(function(){
-            cursor.addClass("show");
-            follower.addClass("show");
-        }, function(){
-            cursor.removeClass("show");
-            follower.removeClass("show");
-        });
-
-        // 출력용
-        $(window).mousemove(function(e){
-            $(".pageX").text(e.pageX + "px");
-            $(".pageY").text(e.pageY + "px");
-        });
-    &lt;/script&gt;
+        document.querySelectorAll(".info").forEach(em =&gt; {
+            em.addEventListener("mouseenter", () =&gt; {
+                document.querySelector(".cursor").classList.add("show");
+            });
+            em.addEventListener("mouseleave", () =&gt; {
+                document.querySelector(".cursor").classList.remove("show");
+            });
+        })
+    &lt;/script&gt; 
 &lt;/body&gt;
 &lt;/html&gt;
