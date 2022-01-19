@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout05</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        #wrap {
+
+        }
+        #header {
+            height: 100px;
+            background-color: #EFEBE9;
+        }
+        #nav {
+            height: 100px;
+            background-color: #BCAAA4;
+        }
+        #main {
+            height: 780px;
+            background-color: #8D6E63;
+        }
+        #footer {
+            height: 100px;
+            background-color: #4E342E;
+        }
+        .container {
+            width: 1200px;
+            height: inherit;
+            background: rgba(0, 0, 0, 0.1);
+            margin: 0 auto;
+        }
+        #main .container {
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: column;
+        }
+        #main .container .aside {
+            width: 400px;
+            height: 780px;
+            background-color: #795548;
+        }
+        #main .container .content1 {
+            width: 800px;
+            height: 390px;
+            background-color: #6D4C41;
+        }
+        #main .container .content2 {
+            width: 800px;
+            height: 390px;
+            background-color: #5D4037;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <header id="header">
+            <div class="container"></div>
+        </header>
+        <nav id="nav">
+            <div class="container"></div>
+        </nav>
+        <main id="main">
+            <div class="container">
+                <aside class="aside"></aside>
+                <section class="content1"></section>
+                <section class="content2"></section>
+            </div>
+        </main>
+        <footer id="footer">
+            <div class="container"></div>
+        </footer>
+    </div>
+</body>
+</html>

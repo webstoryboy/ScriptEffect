@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>webstandardCode02</title>
+
+    <link rel="stylesheet" href="assets/css/fonts.css">
+    <link rel="stylesheet" href="assets/css/reset.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/prism.css">
+</head>
+<body>
+    <header id="header">
+        <h1>port</h1>
+        <nav>
+            <ul>
+                <li><a href="webstandardLayout02.html">설명보기</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!-- //header -->
+
+    <main id="main">
+        <section id="explanation" class="container">
+            <h2>Code</h2>
+            <div class="code_link">
+                <ul>
+                    <li><a href="webstandardCode01.html">layout01</a></li>
+                    <li class="active"><a href="webstandardCode02.html">Layout02</a>
+                        <ul class="sub">
+                            <li class="active"><a href="#">01</a></li>
+                            <li><a href="#">02</a></li>
+                            <li class="last"><a href="#">완성</a><a href="layout02.html">완성사이트</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="webstandardCode03.html">Layout03</a></li>
+                    <li><a href="webstandardCode04.html">layout04</a></li>
+                    <li><a href="webstandardCode05.html">layout05</a></li>
+                </ul>
+            </div>
+            <div class="code_view">
+                <div>
+<pre class="line-numbers"><code class="language-js">&lt;!DOCTYPE html&gt;
+&lt;html lang="ko"&gt;
+    &lt;head&gt;
+        &lt;meta charset="UTF-8"&gt;
+        &lt;meta http-equiv="X-UA-Compatible" content="IE=edge"&gt;
+        &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+        &lt;title&gt;Layout02&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;div id="container"&gt;
+            &lt;div id="header"&gt;&lt;/div&gt;
+            &lt;div id="nav"&gt;&lt;/div&gt;
+            &lt;div id="contents"&gt;&lt;/div&gt;
+            &lt;div id="footer"&gt;&lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+                </div>
+                <div>
+<pre class="line-numbers"><code class="language-js">&lt;!DOCTYPE html&gt;
+&lt;html lang="ko"&gt;
+    &lt;head&gt;
+        &lt;meta charset="UTF-8"&gt;
+        &lt;meta http-equiv="X-UA-Compatible" content="IE=edge"&gt;
+        &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+        &lt;title&gt;Layout02&lt;/title&gt;
+        &lt;style&gt;
+            * {
+                margin: 0;
+                padding: 0;
+            }
+            body {
+                background-color: #E8F5E9;
+            }
+            #container {
+                width: 1200px;
+                margin: 0 auto;
+            }
+            #header {
+                width: 1200px;
+                height: 100px;
+                background-color: #C8E6C9;
+            }
+            #nav {
+                width: 1200px;
+                height: 100px;
+                background-color: #A5D6A7;
+            }
+            #contents {
+                width: 1200px;
+                height: 780px;
+                background-color: #81C784;
+            }
+            #footer {
+                width: 1200px;
+                height: 100px;
+                background-color: #43A047;
+            }
+        &lt;/style&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;div id="container"&gt;
+            &lt;div id="header"&gt;&lt;/div&gt;
+            &lt;div id="nav"&gt;&lt;/div&gt;
+            &lt;div id="contents"&gt;&lt;/div&gt;
+            &lt;div id="footer"&gt;&lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+                </div>
+                <div>
+<pre class="line-numbers"><code class="language-js">&lt;!DOCTYPE html&gt;
+&lt;html lang="ko"&gt;
+    &lt;head&gt;
+        &lt;meta charset="UTF-8"&gt;
+        &lt;meta http-equiv="X-UA-Compatible" content="IE=edge"&gt;
+        &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+        &lt;title&gt;Layout02&lt;/title&gt;
+        &lt;style&gt;
+            * {
+                margin: 0;
+                padding: 0;
+            }
+            body {
+                background-color: #E8F5E9;
+            }
+            #container {
+                width: 1200px;
+                margin: 0 auto;
+            }
+            #header {
+                width: 1200px;
+                height: 100px;
+                background-color: #C8E6C9;
+            }
+            #nav {
+                width: 1200px;
+                height: 100px;
+                background-color: #A5D6A7;
+            }
+            #contents {
+                width: 1200px;
+            }
+            #contents .left {
+                width: 300px;
+                height: 780px;
+                background-color: #81C784;
+                float: left;
+            }
+            #contents .center {
+                width: 600px;
+                height: 780px;
+                background-color: #66BB6A;
+                float: left;
+            }
+            #contents .right {
+                width: 300px;
+                height: 780px;
+                background-color: #4CAF50;
+                float: left;
+            }
+            #footer {
+                width: 1200px;
+                height: 100px;
+                background-color: #43A047;
+                clear: both;
+            }
+        &lt;/style&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;div id="container"&gt;
+            &lt;div id="header"&gt;&lt;/div&gt;
+            &lt;div id="nav"&gt;&lt;/div&gt;
+            &lt;div id="contents"&gt;
+                &lt;div class="left"&gt;&lt;/div&gt;
+                &lt;div class="center"&gt;&lt;/div&gt;
+                &lt;div class="right"&gt;&lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div id="footer"&gt;&lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+                </div>           
+            </div>
+        </section>
+        <!-- //explanation -->
+
+    </main>
+    <!-- //main -->
+
+    <footer id="footer">
+        <a href="mailto:webstoryboy@naver.com">webstoryboy@naver.com</a>
+    </footer> 
+
+    <!-- script -->
+    <script src="assets/js/prism.js"></script>
+    <script src="assets/js/script.js"></script>
+</body>
+</html>

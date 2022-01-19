@@ -1,0 +1,556 @@
+body {
+    background: #000;
+}
+
+/* container */
+.container {
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+/* header */
+#header {
+    position: fixed;
+    left: 0; top: 0;
+    z-index: 10000;
+    width: 100%;
+    background: #1a1a1a;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'NexonLv1GothicLow';
+}
+#header h1 {
+    color: #fff;
+    padding: 14px 20px 10px 20px;
+    font-size: 1rem;    
+} 
+#header nav {
+    margin-right: 10px;
+}
+#header nav li a {
+    color: #fff;
+    padding: 10px 20px;
+    background: #5c43f5;
+    border-radius: 5px;
+    font-size: 0.8rem;
+}
+
+/* footer */
+#footer {
+    text-align: center;
+    margin-bottom: 100px;
+}
+#footer a {
+    font-family: 'NexonLv1GothicLow';
+    color: #444;
+    font-size: 14px;
+}
+
+/* aside */
+#aside {
+    position: fixed;
+    left: 0; top: 70px; bottom: 20px;
+    z-index: 10000;
+    width: 500px; height: 90vh;
+    background: rgb(17, 17, 17);
+    border-radius: 0 0 10px 0;
+    left: -500px;
+    transition: left 200ms cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+#aside.nav-open {
+    left: 0;
+}
+#aside button {
+    position: absolute;
+    right: -56px;
+    top: 0;
+    background: #1a1a1a;
+    width: 56px; height: 56px;
+    border-radius: 0 10px 10px 0;
+    transition: all 200ms cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+#aside button span {
+    background: #fff;
+    width: 22px; height: 2px;
+    display: block;
+    margin-left: 16px;
+}
+#aside button span::before {
+    content: '';
+    width: 22px; height: 2px;
+    background: #fff;
+    position: absolute;
+    left: 16px; top: 19px;
+}
+#aside button span::after {
+    content: '';
+    width: 22px; height: 2px;
+    background: #fff;
+    position: absolute;
+    left: 16px; bottom: 19px;
+}
+#aside button.open span {
+    opacity: 1;
+    background: rgb(17, 17, 17);;
+}
+#aside button.open span::before {
+    transform: rotate(45deg);
+    top: 27px;
+}
+#aside button.open span::after {
+    transform: rotate(-45deg);
+    bottom: 27px;
+}
+
+#aside .chapter {
+    font-family: 'NexonLv1GothicLow';
+    overflow-y: scroll;
+    width: 500px; height: 90vh;
+}
+#aside .chapter .chapter-title {
+    padding: 24px 40px 20px 40px;
+    color: #705df2;
+    background: #222;
+}
+#aside .chapter .chapter-title .label {
+    font-size: 14px;
+    color: #fff;
+}
+#aside .chapter .chapter-title .class {
+    font-size: 30px;
+}
+#aside .chapter .chapter-sub {
+    padding: 20px;
+}
+#aside .chapter .chapter-sub ul li {
+    margin-bottom: 10px;
+}
+#aside .chapter .chapter-sub ul li a {
+    color: #fff;
+    padding: 20px 40px;
+    display: block;
+    font-size: 20px;
+    opacity: 0.1;
+    transition: all 0.4s;
+}
+#aside .chapter .chapter-sub ul li a:hover, 
+#aside .chapter .chapter-sub ul li.active a {
+    background: #1a1a1a;
+    border-radius: 50px;
+    opacity: 1;
+}
+
+/* lesson */
+#lesson {
+    position: fixed;
+    right: 20px; 
+    bottom: -400px;
+    width: 500px;
+    height: 400px;
+    z-index: 10000;
+    background: #1a1a1a;
+    border-radius: 0 10px 0 0;
+    font-family: 'NexonLv1GothicLow';
+    transition: all 200ms cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+#lesson.open {
+    bottom: 0;
+}
+#lesson button {
+    position: absolute;
+    top: -57px; 
+    right: 0;
+    background: #1a1a1a;
+    color: #fff;
+    border-radius: 10px 10px 0 0;
+    padding: 16px 30px 14px 50px;
+    display: inline-block;
+    font-family: 'NexonLv1GothicLow';
+    font-size: 18px;
+    box-shadow: 10px 10px 10px rgba(0,0,0,0.2);
+    text-align: left;
+    cursor: pointer;
+}
+#lesson button::before {
+    content: '';
+    background-image: url(../img/icon.svg);
+    background-position: 0 -25px;
+    width: 20px; 
+    height: 20px;
+    position: absolute;
+    left: 19px; top: 18px;
+}
+#lesson .link {
+    color: #fff;
+    padding: 40px 30px;
+}
+#lesson .link li {
+    padding-bottom: 3px;
+}
+#lesson .link li a {
+    color: #fff;
+    font-size: 18px;
+}
+
+/* youtube */
+#youtube {
+    margin-top: 100px;
+    border-radius: 10px 10px 0 0;
+    overflow: hidden;
+}
+#youtube .video {
+    position: relative;
+    width: 100%;
+    height: auto;
+    padding-top: 56.15%;
+}
+#youtube .video .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+#youtube .video .icon span {
+    margin-left: 5px;
+    background: red;
+    display: inline-block;
+}
+#youtube .video .icon span:hover {
+    background: blue;
+}
+#youtube .video.none {
+    position: relative;
+}
+#youtube .video.none::before {
+    content: '준비중';
+    color: #fff;
+    text-align: center;
+    padding-top: 10px;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0; top: 0;
+    background: #2e1ba9;
+    z-index: 10;
+}
+#youtube .video iframe {
+    z-index: 1;
+    top: 0;
+    left: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+#youtube .video.absolute {
+    position: fixed;
+    left: 10px;
+    bottom: 33px;
+    z-index: 20000;
+    width: 605px;
+    height: 340px;
+    padding-top: 50px;
+    background: #5c43f5;
+    border-radius: 10px 10px 0 0;
+}
+#youtube .video.absolute.none {
+    position: absolute;
+    display: none;
+}
+#youtube .video.absolute iframe {
+    margin-top: 33px;
+}
+#youtube .desc {
+    display: flex;
+}
+#youtube .desc .left {
+    width: 50%;
+    background: #705df2;
+    padding: 40px;
+    border-radius: 0 0 0 10px;
+    font-family: 'NexonLv1GothicLow';
+    color: #fff;
+}
+#youtube .desc .left .num {
+    font-size: 26px;
+}
+#youtube .desc .left .title {
+    font-size: 28px;
+    margin-bottom: 5px;
+}
+#youtube .desc .left .difficulty span {
+    border: 1px solid #fff;
+    border-radius: 10px;
+    padding: 2px 10px;
+    font-size: 0.8em;
+}
+#youtube .desc .right {
+    width: 50%;
+    background: #6151D2;
+    border-radius: 0 0 10px 0px;
+    padding: 40px;
+    color: #fff;
+    font-family: 'NexonLv1GothicLow';
+}
+#youtube .desc .right h3 {
+    margin-bottom: 10px;
+}
+#youtube .desc .right a {
+    background: #fff;
+    padding: 10px 40px;
+    display: inline-block;
+    border-radius: 40px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+#youtube .desc .right a.black {
+    background: #433992;
+    color: #fff;
+}
+
+/* explanation */
+#explanation {
+    font-family: 'NexonLv1GothicLow';
+    padding: 50px;
+    color: #fff;
+    word-break: keep-all;
+}
+#explanation h2 {
+    font-size: 40px;
+    margin-bottom: 30px;
+    margin-top: 100px;
+}
+#explanation p {
+    font-size: 16px;
+    line-height: 2;
+    margin-bottom: 20px;
+    font-weight: 300;
+    position: relative;
+}
+#explanation pre {
+    margin-bottom: 15px;
+    margin-top: 0;
+}
+#explanation p code {
+    font-family: 'NexonLv1GothicLow';
+    font-size: 0.9em;
+    background: #433992;
+    color: #fff;
+    padding: 5px 4px 4px 4px;
+    vertical-align: 2px;
+    border-radius: 5px;
+}
+#explanation p[data-num]::before {
+    content: '';
+    position: absolute;
+    left: -30px; top: -1px;
+    opacity: 0.3;
+}
+#explanation p[data-num='01']::before {
+    content: "01"; 
+}
+#explanation p[data-num='02']::before {
+    content: "02"; 
+}
+#explanation p[data-num='03']::before {
+    content: "03"; 
+}
+#explanation p[data-num='04']::before {
+    content: "04"; 
+}
+#explanation p[data-num='05']::before {
+    content: "05"; 
+}
+#explanation p[data-num='06']::before {
+    content: "06"; 
+}
+#explanation p[data-num='07']::before {
+    content: "07"; 
+}
+#explanation p[data-num='08']::before {
+    content: "08"; 
+}
+#explanation p[data-num='09']::before {
+    content: "09"; 
+}
+#explanation .detail {
+    font-family: 'NexonLv1GothicLow';
+    color: #9a92dd;
+    text-decoration: underline;
+    font-weight: 500;
+}
+#explanation .code_link li {
+    display: inline-block;
+    margin-bottom: 65px;
+    position: relative;
+}
+#explanation .code_link li a {
+    color: #fff;
+    background: #222;
+    padding: 5px 20px;
+    display: inline-block;
+    border-radius: 30px;
+}
+#explanation .code_link li.active a {
+    background: #fff;
+    color: #000;
+}
+#explanation .code_link li .sub {
+    position: absolute;
+    left: 0; top: 40px;
+    width: 500px;
+}
+#explanation .code_link li .sub li {
+    display: inline;
+}
+#explanation .code_link li .sub li a {
+    width: 30px; height: 30px;
+    text-align: center;
+    line-height: 30px;
+    padding: 0;
+    background: #222;
+    color: #fff;
+    letter-spacing: -1px;
+}
+#explanation .code_link li .sub li.last a {
+    width: auto;
+    padding: 0 10px;
+    margin-right: 5px;
+}
+#explanation .code_link li .sub li.last a:last-child {
+    visibility: hidden;
+    border: 2px solid #fff;
+    background: transparent;
+    color: #fff;
+    line-height: 1.9;
+}
+#explanation .code_link li .sub li.last.active a:last-child {
+    visibility: visible;
+}
+#explanation .code_link li .sub li.active a {
+    background: #fff;
+    color: #000;
+}
+#explanation .refer li a {
+    color: #fff;
+    font-size: 16px;
+    line-height: 2;
+    margin-bottom: 20px;
+    font-weight: 300;
+}
+#explanation .code_view > div:first-child {
+    display: block;
+}
+#explanation .code_view > div {
+    display: none;
+}
+
+
+/* sampleBtn */
+.sampleBtn {
+    position: relative;
+    padding-left: 54px !important;
+}
+.sampleBtn::before {
+    content: '';
+    background-image: url(../img/icon.svg);
+    background-position: -20px -20px;
+    background-size: 400px 400px;
+    width: 20px; 
+    height: 20px;
+    display: inline-block;
+    position: absolute;
+    left: 30px; top: 11px;
+}
+.sampleBtn2 {
+    position: relative;
+    padding-left: 54px !important;
+}
+.sampleBtn2::before {
+    content: '';
+    background-image: url(../img/icon.svg);
+    background-position: -40px 0px;
+    background-size: 400px 400px;
+    width: 20px; 
+    height: 20px;
+    display: inline-block;
+    position: absolute;
+    left: 30px; top: 11px;
+}
+.sampleBtn3 {
+    position: relative;
+    padding-left: 54px !important;
+}
+.sampleBtn3::after {
+    content: '';
+    background-image: url(../img/icon.svg);
+    background-position: -60px 0px;
+    background-size: 400px 400px;
+    width: 20px; 
+    height: 20px;
+    display: inline-block;
+    position: absolute;
+    right: 10px; top: 9px;
+}
+
+/* resizable */
+.ui-resizable-e {
+    cursor: e-resize;
+    width: 7px;
+    right: -5px;
+    top: 0;
+    height: 100%;
+}
+.ui-resizable-s {
+    cursor: s-resize;
+    height: 7px;
+    width: 100%;
+    bottom: -5px;
+    left: 0;
+}
+.ui-resizable-handle {
+    position: absolute;
+    font-size: 0.1px;
+    display: block;
+    -ms-touch-action: none;
+    touch-action: none;
+}
+.ui-icon {
+    display: none;
+}
+.absolute .ui-icon {
+    display: block;
+    width: 20px;
+    height: 20px;
+    background: #5c43f5;
+    position: absolute;
+    right: 0;
+    bottom: -33px;
+    background-image: url(../img/icon.svg);
+    background-position: -78px 2px;
+    background-size: 400px 400px;
+}
+
+
+@media (max-width: 1220px){
+    .container {
+        width: 98%;
+    }
+    #explanation {
+        padding: 30px;
+    }
+}
+
+@media (max-width: 960px){
+    #youtube .desc {
+        flex-direction: column;
+    }
+    #youtube .desc .left {
+        width: 100%;
+        border-radius: 0;
+    }
+    #youtube .desc .right {
+        width: 100%;
+        border-radius: 0 0 10px 10px;
+    }
+}

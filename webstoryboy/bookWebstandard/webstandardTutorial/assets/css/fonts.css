@@ -1,0 +1,33 @@
+@font-face {
+    font-family: 'NexonLv1GothicLow';
+    font-weight: 300;
+    font-style: normal;
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/NexonLv1GothicLow/NexonLv1GothicLowLight.eot');
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/NexonLv1GothicLow/NexonLv1GothicLowLight.eot?#iefix') format('embedded-opentype'),
+         url('https://cdn.jsdelivr.net/gh/webfontworld/NexonLv1GothicLow/NexonLv1GothicLowLight.woff2') format('woff2'),
+         url('https://cdn.jsdelivr.net/gh/webfontworld/NexonLv1GothicLow/NexonLv1GothicLowLight.woff') format('woff'),
+         url('https://cdn.jsdelivr.net/gh/webfontworld/NexonLv1GothicLow/NexonLv1GothicLowLight.ttf') format("truetype");
+    font-display: swap;
+}
+@font-face {
+    font-family: 'NexonLv1GothicLow';
+    font-weight: 400;
+    font-style: normal;
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/NexonLv1GothicLow/NexonLv1GothicLowRegular.eot');
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/NexonLv1GothicLow/NexonLv1GothicLowRegular.eot?#iefix') format('embedded-opentype'),
+         url('https://cdn.jsdelivr.net/gh/webfontworld/NexonLv1GothicLow/NexonLv1GothicLowRegular.woff2') format('woff2'),
+         url('https://cdn.jsdelivr.net/gh/webfontworld/NexonLv1GothicLow/NexonLv1GothicLowRegular.woff') format('woff'),
+         url('https://cdn.jsdelivr.net/gh/webfontworld/NexonLv1GothicLow/NexonLv1GothicLowRegular.ttf') format("truetype");
+    font-display: swap;
+}
+@font-face {
+    font-family: 'NexonLv1GothicLow';
+    font-weight: 700;
+    font-style: normal;
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/NexonLv1GothicLow/NexonLv1GothicLowBold.eot');
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/NexonLv1GothicLow/NexonLv1GothicLowBold.eot?#iefix') format('embedded-opentype'),
+         url('https://cdn.jsdelivr.net/gh/webfontworld/NexonLv1GothicLow/NexonLv1GothicLowBold.woff2') format('woff2'),
+         url('https://cdn.jsdelivr.net/gh/webfontworld/NexonLv1GothicLow/NexonLv1GothicLowBold.woff') format('woff'),
+         url('https://cdn.jsdelivr.net/gh/webfontworld/NexonLv1GothicLow/NexonLv1GothicLowBold.ttf') format("truetype");
+    font-display: swap;
+}

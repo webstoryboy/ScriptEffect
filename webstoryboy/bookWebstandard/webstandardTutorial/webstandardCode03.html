@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>webstandardCode03</title>
+
+    <link rel="stylesheet" href="assets/css/fonts.css">
+    <link rel="stylesheet" href="assets/css/reset.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/prism.css">
+</head>
+<body>
+    <header id="header">
+        <h1>port</h1>
+        <nav>
+            <ul>
+                <li><a href="webstandardLayout01.html">설명보기</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!-- //header -->
+
+    <main id="main">
+        <section id="explanation" class="container">
+            <h2>Code</h2>
+            <div class="code_link">
+                <ul>
+                    <li><a href="webstandardCode01.html">layout01</a></li>
+                    <li><a href="webstandardCode02.html">Layout02</a></li>
+                    <li class="active"><a href="webstandardCode03.html">Layout03</a>
+                        <ul class="sub">
+                            <li class="active"><a href="#">01</a></li>
+                            <li><a href="#">02</a></li>
+                            <li><a href="#">03</a></li>
+                            <li class="last"><a href="#">완성</a><a href="layout03.html">완성사이트</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="webstandardCode04.html">layout04</a></li>
+                    <li><a href="webstandardCode05.html">layout05</a></li>
+                </ul>
+            </div>
+            <div class="code_view">
+                <div>
+<pre class="line-numbers"><code class="language-js">&lt;!DOCTYPE html&gt;
+&lt;html lang="ko"&gt;
+    &lt;head&gt;
+        &lt;meta charset="UTF-8"&gt;
+        &lt;meta http-equiv="X-UA-Compatible" content="IE=edge"&gt;
+        &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+        &lt;title&gt;Layout03&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;div id="wrap"&gt;
+            &lt;header id="header"&gt;&lt;/header&gt;
+            &lt;nav id="nav"&gt;&lt;/nav&gt;
+            &lt;section id="contents"&gt;&lt;/section&gt;
+            &lt;footer id="footer"&gt;&lt;/footer&gt;
+        &lt;/div&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+                </div>
+                <div>
+<pre class="line-numbers"><code class="language-js">&lt;!DOCTYPE html&gt;
+&lt;html lang="ko"&gt;
+    &lt;head&gt;
+        &lt;meta charset="UTF-8"&gt;
+        &lt;meta http-equiv="X-UA-Compatible" content="IE=edge"&gt;
+        &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+        &lt;title&gt;Layout03&lt;/title&gt;
+        &lt;style&gt;
+            * {
+                margin: 0;
+                padding: 0;
+            }
+            body {
+                background-color: #E1F5FE;
+            }
+            #wrap {
+                width: 1200px;
+                margin: 0 auto;
+            }
+            #header {
+                width: 1200px;
+                height: 100px;
+                background-color: #B3E5FC;
+            }
+            #nav {
+                width: 1200px;
+                height: 100px;
+                background-color: #81D4FA;
+            }
+            #section {
+                width: 1200px;
+                height: 780px;
+                background-color: #4FC3F7;
+            }
+            #footer {
+                width: 1200px;
+                height: 100px;
+                background-color: #0288D1;
+            }
+        &lt;/style&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;div id="wrap"&gt;
+            &lt;header id="header"&gt;&lt;/header&gt;
+            &lt;nav id="nav"&gt;&lt;/nav&gt;
+            &lt;main id="section"&gt;&lt;/main&gt;
+            &lt;footer id="footer"&gt;&lt;/footer&gt;
+        &lt;/div&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+                </div>
+                <div>
+<pre class="line-numbers"><code class="language-js">&lt;!DOCTYPE html&gt;
+&lt;html lang="ko"&gt;
+    &lt;head&gt;
+        &lt;meta charset="UTF-8"&gt;
+        &lt;meta http-equiv="X-UA-Compatible" content="IE=edge"&gt;
+        &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+        &lt;title&gt;Layout03&lt;/title&gt;
+        &lt;style&gt;
+            * {
+                margin: 0;
+                padding: 0;
+            }
+            body {
+                background-color: #E1F5FE;
+            }
+            #wrap {
+                width: 1200px;
+                margin: 0 auto;
+            }
+            #header {
+                width: 1200px;
+                height: 100px;
+                background-color: #B3E5FC;
+            }
+            #nav {
+                width: 1200px;
+                height: 100px;
+                background-color: #81D4FA;
+            }
+            #section {
+                width: 1200px;
+                display: flex;
+            }
+            #section .aside {
+                width: 300px;
+                height: 780px;
+                background-color: #4FC3F7;
+            }
+            #section .content {
+                width: 900px;
+                height: 780px;
+                background-color: #29B6F6;
+            }
+            #footer {
+                width: 1200px;
+                height: 100px;
+                background-color: #0288D1;
+            }
+        &lt;/style&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;div id="wrap"&gt;
+            &lt;header id="header"&gt;&lt;/header&gt;
+            &lt;nav id="nav"&gt;&lt;/nav&gt;
+            &lt;section id="section"&gt;
+                &lt;aside class="aside"&gt;&lt;/aside&gt;
+                &lt;section class="content"&gt;&lt;/section&gt;
+            &lt;/section&gt;
+            &lt;footer id="footer"&gt;&lt;/footer&gt;
+        &lt;/div&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+                </div>   
+                <div>
+<pre class="line-numbers"><code class="language-js">&lt;!DOCTYPE html&gt;
+&lt;html lang="ko"&gt;
+    &lt;head&gt;
+        &lt;meta charset="UTF-8"&gt;
+        &lt;meta http-equiv="X-UA-Compatible" content="IE=edge"&gt;
+        &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+        &lt;title&gt;Layout03&lt;/title&gt;
+        &lt;style&gt;
+            * {
+                margin: 0;
+                padding: 0;
+            }
+            body {
+                background-color: #E1F5FE;
+            }
+            #wrap {
+                width: 1200px;
+                margin: 0 auto;
+            }
+            #header {
+                width: 1200px;
+                height: 100px;
+                background-color: #B3E5FC;
+            }
+            #nav {
+                width: 1200px;
+                height: 100px;
+                background-color: #81D4FA;
+            }
+            #section {
+                width: 1200px;
+                display: flex;
+            }
+            #section .aside {
+                width: 300px;
+                height: 780px;
+                background-color: #4FC3F7;
+            }
+            #section .content {
+                width: 900px;
+            }
+            #section .content .article1 {
+                width: 900px;
+                height: 260px;
+                background-color: #29B6F6;
+            }
+            #section .content .article2 {
+                width: 900px;
+                height: 260px;
+                background-color: #03A9F4;
+            }
+            #section .content .article3 {
+                width: 900px;
+                height: 260px;
+                background-color: #039BE5;
+            }
+            #footer {
+                width: 1200px;
+                height: 100px;
+                background-color: #0288D1;
+            }
+        &lt;/style&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;div id="wrap"&gt;
+            &lt;header id="header"&gt;&lt;/header&gt;
+            &lt;nav id="nav"&gt;&lt;/nav&gt;
+            &lt;section id="section"&gt;
+                &lt;aside class="aside"&gt;&lt;/aside&gt;
+                &lt;section class="content"&gt;
+                    &lt;article class="article1"&gt;&lt;/article&gt;
+                    &lt;article class="article2"&gt;&lt;/article&gt;
+                    &lt;article class="article3"&gt;&lt;/article&gt;
+                &lt;/section&gt;
+            &lt;/section&gt;
+            &lt;footer id="footer"&gt;&lt;/footer&gt;
+        &lt;/div&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+                </div>            
+            </div>
+        </section>
+        <!-- //explanation -->
+
+    </main>
+    <!-- //main -->
+
+    <footer id="footer">
+        <a href="mailto:webstoryboy@naver.com">webstoryboy@naver.com</a>
+    </footer> 
+
+    <!-- script -->
+    <script src="assets/js/prism.js"></script>
+    <script src="assets/js/script.js"></script>
+</body>
+</html>
