@@ -6,14 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>"포트폴리오가 실력이다." : 웹 표준 사이트 만들기</title>
 
-    <link rel="stylesheet" href="assets/css/fonts.css">
-    <link rel="stylesheet" href="assets/css/reset.css">
-    <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="stylesheet" href="assets/css/prism.css">
+    <link rel="stylesheet" href="../assets/css/fonts.css">
+    <link rel="stylesheet" href="../assets/css/reset.css">
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/prism.css">
 </head>
 <body>
     <header id="header">
-        <h1>WEBS : 웹 표준 사이트 만들기</h1>
+        <h1>WEBS : 웹 표준 사이트 만들기 : Layout04</h1>
         <nav>
             <ul>
                 <li><a href="#">질문하기</a></li>
@@ -27,7 +27,7 @@
             <button class="aside-btn"><span></span></button>
             <div class="chapter">
                 <div class="chapter-title">
-                    <div class="label">Chapter 05</div>
+                    <div class="label">Chapter 04</div>
                     <div class="class">Classic 레이아웃</div>
                 </div>
                 <div class="chapter-sub">
@@ -35,8 +35,8 @@
                         <li><a href="webstandardLayout01.html">01. 레이아웃 연습 : Layout01</a></li>
                         <li><a href="webstandardLayout02.html">02. 레이아웃 연습 : Layout02</a></li>
                         <li><a href="webstandardLayout03.html">03. 레이아웃 연습 : Layout03</a></li>
-                        <li><a href="webstandardLayout04.html">04. 레이아웃 연습 : Layout04</a></li>
-                        <li class="active"><a href="webstandardLayout05.html">05. 레이아웃 연습 : Layout05</a></li>
+                        <li class="active"><a href="webstandardLayout04.html">04. 레이아웃 연습 : Layout04</a></li>
+                        <li><a href="webstandardLayout05.html">05. 레이아웃 연습 : Layout05</a></li>
                     </ul>
                 </div>
                 <div class="chapter-title">
@@ -45,9 +45,9 @@
                 </div>
                 <div class="chapter-sub">
                     <ul>
-                        <li><a href="#">01. 메뉴 : Menu01</a></li>
-                        <li><a href="#">02. 메뉴 : Menu02</a></li>
-                        <li><a href="#">03. 메뉴 : Menu03</a></li>
+                        <li><a href="../02_menu/webstandardMenu01.html">01. 메뉴 : Menu01</a></li>
+                        <li><a href="../02_menu/webstandardMenu02.html">02. 메뉴 : Menu02</a></li>
+                        <li><a href="../02_menu/webstandardMenu03.html">03. 메뉴 : Menu03</a></li>
                     </ul>
                 </div>
             </div>
@@ -60,8 +60,8 @@
             </div>
             <div class="desc">
                 <div class="left">
-                    <span class="num">05.</span>
-                    <h3 class="title">레이아웃 연습 : Layout05</h3>
+                    <span class="num">04.</span>
+                    <h3 class="title">레이아웃 연습 : Layout04</h3>
                     <span class="difficulty">난이도 <span>쉬움</span></span>
                 </div>
                 <div class="right">
@@ -106,41 +106,7 @@
     <!-- script -->
     <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
     <script src="https://code.jquery.com/ui/1.13.0/jquery-ui.js"></script>
-    <script src="assets/js/prism.js"></script>
-    <script>
-
-        $( ".resizable" ).resizable({
-            aspectRatio: 16 / 9
-        });
-        $( ".draggable" ).draggable();
-
-        window.addEventListener("scroll", function(){
-            let scrollTop = document.documentElement.scrollTop || window.scrollY || window.pageYOffset;
-
-            if(scrollTop > document.querySelector("#youtube .desc .left").offsetTop - 62){
-                document.querySelector("#youtube .video").classList.add("absolute");
-            } else {
-                document.querySelector("#youtube .video").classList.remove("absolute");
-            }
-
-            if(scrollTop == 0){
-                document.querySelector("#youtube .video").removeAttribute("style");
-            }
-        });
-
-        const nav = document.querySelector("#aside");
-        const navBtn = document.querySelector(".aside-btn");
-        const lesson = document.querySelector("#lesson");
-        const lessonBtn = document.querySelector(".lesson-btn");
-
-        navBtn.addEventListener("click", function() {
-            nav.classList.toggle("nav-open");
-            navBtn.classList.toggle("open");
-        });
-
-        lessonBtn.addEventListener("click", function() {
-            lesson.classList.toggle("open");
-        });
-    </script>
+    <script src="../assets/js/prism.js"></script>
+    <script src="../assets/js/script.js"></script> 
 </body>
 </html>

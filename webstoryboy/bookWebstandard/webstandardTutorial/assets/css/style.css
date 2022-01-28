@@ -23,7 +23,7 @@ body {
 }
 #header h1 {
     color: #fff;
-    padding: 14px 20px 10px 20px;
+    padding: 20px 20px 18px 20px;
     font-size: 1rem;    
 } 
 #header nav {
@@ -110,7 +110,7 @@ body {
     width: 500px; height: 90vh;
 }
 #aside .chapter .chapter-title {
-    padding: 24px 40px 20px 40px;
+    padding: 16px 30px 10px 30px;
     color: #705df2;
     background: #222;
 }
@@ -119,20 +119,20 @@ body {
     color: #fff;
 }
 #aside .chapter .chapter-title .class {
-    font-size: 30px;
+    font-size: 24px;
 }
 #aside .chapter .chapter-sub {
     padding: 20px;
 }
 #aside .chapter .chapter-sub ul li {
-    margin-bottom: 10px;
+    margin-bottom: 5px;
 }
 #aside .chapter .chapter-sub ul li a {
     color: #fff;
-    padding: 20px 40px;
+    padding: 14px 30px;
     display: block;
-    font-size: 20px;
-    opacity: 0.1;
+    font-size: 18px;
+    opacity: 0.4;
     transition: all 0.4s;
 }
 #aside .chapter .chapter-sub ul li a:hover, 
@@ -151,7 +151,7 @@ body {
     height: 400px;
     z-index: 10000;
     background: #1a1a1a;
-    border-radius: 0 10px 0 0;
+    border-radius: 10px 0 0 0;
     font-family: 'NexonLv1GothicLow';
     transition: all 200ms cubic-bezier(0.215, 0.61, 0.355, 1);
 }
