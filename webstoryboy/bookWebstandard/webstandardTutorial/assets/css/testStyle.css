@@ -1,0 +1,199 @@
+
+
+.container {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+hr {opacity: 0.1;}
+
+/* 이미지/텍스트 유형01 : cont_img_text01 */
+.cit01 {
+    padding: 150px 0;
+    overflow: hidden;
+}
+.cit01 .text {
+    float: left;
+    width: 386.66px;
+    height: 530px;
+    margin-right: 20px;
+}
+.cit01 .text .text_title {
+    font-family: 'GmarketSans';
+    font-size: 50px;
+    font-weight: 500;
+    margin: 70px 0 45px -4px;
+}
+.cit01 .text .text_desc {
+    font-family: 'NEXONLv1Gothic';
+    font-size: 18px;
+    font-weight: 300;
+    color: #888;
+    margin-bottom: 55px;
+}
+.cit01 .text .text_more {
+    font-family: 'NEXONLv1Gothic';
+    font-size: 18px;
+}
+.cit01 .text .text_more a {
+    color: #af3029;
+}
+.cit01 .text .text_more svg {
+    vertical-align: 2px;
+}
+.cit01 .img1 {
+    float: left;
+    width: 386.66px;
+    height: 530px;
+    margin-right: 20px;
+    background-image: url(../img/img_text_bg1.jpg);
+    background-size: 100%;
+}
+.cit01 .img2 {
+    float: left;
+    width: 386.66px;
+    height: 530px;
+    background-image: url(../img/img_text_bg2.jpg);
+    background-size: 100%;
+}
+@media (-webkit-min-device-pixel-ratio: 1.5){
+    .cit01 .img1 {
+        background-image: url(../img/img_text_bg1@2x.jpg);
+    }
+    .cit01 .img2 {
+        background-image: url(../img/img_text_bg2@2x.jpg);
+    }
+}
+@media (-webkit-min-device-pixel-ratio: 2.5){
+    .cit01 .img1 {
+        background-image: url(../img/img_text_bg1@3x.jpg);
+    }
+    .cit01 .img2 {
+        background-image: url(../img/img_text_bg2@3x.jpg);
+    }
+}
+
+
+/* 이미지/텍스트 유형02 : cont_img_text02 */
+.cit02 {
+    overflow: hidden;
+    padding: 150px 0;
+    min-width: 1200px;
+}
+.cit02 .left {
+    float: left;
+    width: 55%;
+    height: 400px;
+    background: url(../img/img_text_bg3.jpg) no-repeat center center;
+    background-size: cover;
+}
+.cit02 .right {
+    font-family: 'GmarketSans';
+    float: left;
+    width: 42%;
+    margin-left: 3%;
+}
+.cit02 .right .sub {
+    font-size: 16px;
+    color: #7c7c7c;
+    margin-bottom: 10px;
+    display: inline-block;
+    /* text-decoration: underline;
+    text-underline-position: under; */
+    border-bottom: 1px solid #7c7c7c;
+}
+.cit02 .right .title {
+    font-size: 40px;
+    font-weight: 500;
+    margin-bottom: 38px;
+    line-height: 1.2;
+}
+.cit02 .right .desc {
+    font-size: 20px;
+    font-weight: 300;
+    margin-bottom: 38px;
+    white-space: nowrap;
+}
+.cit02 .right .view {
+    font-size: 16px;
+    font-weight: 300;
+    background: #000;
+    padding: 9px 46px;
+    display: inline-block;
+    color: #fff;
+    font-weight: 500;
+}
+
+/* 이미지/텍스트 유형03 : cont_img_text03 */
+.cit03 {
+    overflow: hidden;
+    padding: 150px 0 250px;
+    background: url(../img/img_text_bg4.jpg) no-repeat;
+    background-repeat: no-repeat;
+    background-position: right bottom;
+    background-size: 1600px 340px;
+    margin-bottom: 150px;
+}
+.cit03 .title {
+    font-size: 50px;
+    font-weight: 500;
+}
+.cit03 .sub {
+    font-size: 24px;
+    opacity: 0.5;
+    font-weight: 300;
+    margin-bottom: 20px;
+    display: inline-block;
+}
+.cit03 .desc {
+    background: rgba(0,0,0,0.8);
+    color: #fff;
+    width: 440px;
+    padding: 20px;
+    font-size: 18px;
+    font-weight: 300;
+}
+
+
+/* 카드 유형 */
+.cont_card01 {}
+
+.cardType01 {
+    font-family: 'GmarketSans';
+    padding: 150px 0;
+}
+.cardType01 h2 {
+    font-weight: 500;
+    font-size: 50px;
+    margin-bottom: 7px;
+}
+.cardType01 p {
+    font-weight: 200;
+    font-size: 26px;
+    line-height: 1.28;
+    margin-bottom: 40px;
+}
+.card_wrap {
+    display: grid;
+    grid-template-columns: repeat(3, 3fr);
+    gap: 2%;
+}
+.card_wrap .card .img {
+    margin-bottom: 10px;
+}
+.card_wrap .card .title {
+    display: block;
+    font-size: 32px;
+}
+.card_wrap .card .desc {
+    display: block;
+    font-size: 18px;
+    line-height: 1.4;
+    font-weight: 300;
+    margin-bottom: 3px;
+}
+.card_wrap .card .keyword {
+    font-size: 14px;
+    font-weight: 300;
+    opacity: 0.6;
+}
