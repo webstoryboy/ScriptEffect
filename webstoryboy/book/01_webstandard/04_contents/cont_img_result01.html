@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>이미지 유형01</title>
+
+    <link rel="stylesheet" href="../../assets/css/fonts.css">
+    <link rel="stylesheet" href="../../assets/css/reset.css">
+    <style>
+        /* container */
+        .container {
+            max-width: 1200px;
+            width: 100%;
+            margin: 0 auto;
+        }
+        
+        /* imageType01 */
+        .imageType01 {
+            font-family: 'GmarketSans';
+            padding: 150px 0;
+        }
+        .imageType01 h2 {
+            font-size: 50px;
+            line-height: 1;
+            font-weight: 500;
+            margin-bottom: 30px;
+        }
+        .imageType01 h2 em {
+            font-size: 20px;
+            color: #777;
+            font-weight: 300;
+            vertical-align: -4px;
+        }
+        .imageType01 .image-wrap {
+            overflow: hidden;
+        }
+        .imageType01 .image-wrap .image {
+            position: relative;
+            float: left;
+            width: 590px;
+            height: 385px;
+            overflow: hidden;
+        }
+        .imageType01 .image-wrap .image:first-child {
+            margin-right: 20px;
+        }
+        .imageType01 .image-wrap .image:first-child {
+            background-color: #9a481d;
+        }
+        .imageType01 .image-wrap .image:last-child {
+            background-color: #b59140;
+        }
+        .imageType01 .image-wrap .image .image-img {
+            opacity: 0.8;
+            transform: scale(1);
+            transition: opacity 0.4s, transform 0.4s;
+        }
+        .imageType01 .image-wrap .image:hover .image-img {
+            opacity: 1;
+            transform: scale(1.1);
+        }
+        .imageType01 .image-wrap .image .image-cont {
+            position: absolute;
+            left: 30px;
+            bottom: 30px;
+            color: #fff;
+        }
+        .imageType01 .image-wrap .image .image-title {
+            font-size: 30px;
+            font-weight: 500;
+            margin-bottom: 6px;
+            transform: translateY(100px);
+            transition: transform 0.35s 0.35s;
+            /* transition-property: transform;
+            transition-duration: 0.35s;
+            transition-delay: 0.35s;
+            transition-timing-function: ease-in; */
+        }
+        .imageType01 .image-wrap .image:hover .image-title {
+            transform: translateY(0px);
+            transition: transform 0.35s ;
+        }
+        .imageType01 .image-wrap .image .image-desc {
+            font-size: 14px;
+            font-weight: 500;
+            line-height: 1.4;
+            padding-right: 30%;
+            word-break: keep-all;
+            overflow: hidden;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            opacity: 0;
+            transform: translateY(30px);
+            transition: transform 0.35s 0.2s, opacity 0.55s 0.2s;
+        }
+        .imageType01 .image-wrap .image:hover .image-desc {
+            opacity: 1;
+            transform: translateY(0px);
+        }
+        .imageType01 .image-wrap .image .image-btn {
+            padding: 8px 18px;
+            display: inline-block;
+            background-color: #777;
+            color: #fff;
+            margin-top: 10px;
+            opacity: 0;
+            transform: translateY(30px);
+            transition: transform 0.35s 0.2s, opacity 0.55s 0.2s;
+        }
+        .imageType01 .image-wrap .image:hover .image-btn {
+            opacity: 1;
+            transform: translateY(0px);
+        }
+        .imageType01 .image-wrap .image .image-btn.red {
+            background-color: #9a481d;
+        }
+        .imageType01 .image-wrap .image .image-btn.yellow {
+            background-color: #b59140;
+        }
+    </style>
+</head>
+<body>
+    <!-- imageType01 -->
+    <section class="section">
+        <div class="container">
+            <div class="imageType01">
+                <h2>동물공감 인터뷰 <em>이미지 유형01</em></h2>
+                <div class="image-wrap">
+                    <div class="image">
+                        <img class="image-img" src="../../assets/img/imagetype01.jpg" alt="웰시코기 이미지입니다.">
+                        <div class="image-cont">
+                            <h3 class="image-title">애교만점 웰시코기</h3>
+                            <p class="image-desc">포메라니안은 작고 귀여운 체구에 비해 대범한 성격을 가지고 있으며 호기심이 많은 견종입니다. </p>
+                            <a class="image-btn red" href="#">자세히 보기</a>
+                        </div>
+                    </div>
+                    <div class="image">
+                        <img class="image-img" src="../../assets/img/imagetype02.jpg" alt="비숑프리제 이미지입니다.">
+                        <div class="image-cont s2">
+                            <h3 class="image-title">강아지계의 연예인</h3>
+                            <p class="image-desc">최근 연예인들 사이에서 키우는 강아지로 유명해진 비숑프리제는 생김새가 아주 작은 바빗과 매우 흡사하여 바비숑이라는 이름...</p>
+                            <a class="image-btn yellow" href="#">자세히 보기</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- //imageType01 -->
+</body>
+</html>

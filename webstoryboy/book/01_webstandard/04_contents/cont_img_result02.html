@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>이미지 유형01</title>
+
+    <link rel="stylesheet" href="../../assets/css/fonts.css">
+    <link rel="stylesheet" href="../../assets/css/reset.css">
+    <style>
+        /* container */
+        .container {
+            max-width: 1200px;
+            width: 100%;
+            margin: 0 auto;
+        }
+        
+        /* imageType02 */
+        .imageType02 {
+            font-family: 'GmarketSans';
+            padding: 150px 0;
+        }
+        .imageType02 h2 {
+            font-size: 50px;
+            line-height: 1;
+            font-weight: 500;
+            margin-bottom: 30px;
+        }
+        .imageType02 h2 em {
+            font-size: 20px;
+            color: #777;
+            font-weight: 300;
+            vertical-align: -4px;
+        }
+        .imageType02 .image-wrap {
+            display: flex;
+            justify-content: space-between;
+        }
+        .imageType02 .image-wrap .image {
+            width: 386px;
+            position: relative;
+            perspective: 800px;
+        }
+        .imageType02 .image-wrap .image::after {
+            content: '';
+            background: #fff;
+            display: block;
+            position: absolute;
+            left: 30px; top: 30px; right: 30px; bottom: 30px;
+            opacity: 0;
+            transform: rotateX(-90deg);
+            transition: all 0.4s ease-in-out;
+        }
+        .imageType02 .image-wrap .image:hover::after {
+            opacity: 0.9;
+            transform: rotateX(0deg);
+        }
+        .imageType02 .image-wrap .image .image-cont {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            color: #fff;
+            text-align: center;
+            opacity: 0;
+            transform: translate(-50%, 50%);
+            z-index: 1000;
+            transition: all 0.3s ease-out;
+        }
+        .imageType02 .image-wrap .image:hover .image-cont {
+            opacity: 1;
+            transform: translate(-50%, -50%);
+        }
+        .imageType02 .image-wrap .image .image-title {
+            font-size: 30px;
+            font-weight: 500;
+            color: #000;
+        }
+        .imageType02 .image-wrap .image .image-btn {
+            color: #fff;
+            padding: 7px 24px 5px 24px;
+            background: #000;
+            border-radius: 40px;
+            font-weight: 300;
+            margin-top: 5px;
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+    <!-- imageType02 -->
+    <section class="section">
+        <div class="container">
+            <div class="imageType02">
+                <h2>깊은 저 바닷속 해파리 <em>이미지 유형02</em></h2>
+                <div class="image-wrap">
+                    <div class="image">
+                        <img class="image-img" src="../../assets/img/imageType03.jpg" alt="해파리 이미지1">
+                        <div class="image-cont">
+                            <h3 class="image-title">해파리 형태</h3>
+                            <a href="#" class="image-btn">자세히 보기</a>
+                        </div>
+                    </div>
+                    <div class="image">
+                        <img class="image-img" src="../../assets/img/imageType04.jpg" alt="해파리 이미지2">
+                        <div class="image-cont">
+                            <h3 class="image-title">해파리 종류</h3>
+                            <a href="#" class="image-btn">자세히 보기</a>
+                        </div>
+                    </div>
+                    <div class="image">
+                        <img class="image-img" src="../../assets/img/imageType05.jpg" alt="해파리 이미지3">
+                        <div class="image-cont">
+                            <h3 class="image-title">위험한 해파리</h3>
+                            <a href="#" class="image-btn">자세히 보기</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- //imageType02 -->
+</body>
+</html>

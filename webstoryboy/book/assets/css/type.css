@@ -1,0 +1,687 @@
+body {
+    background-color: #f3f3f3;
+}
+/* container */
+.container {
+    width: 1200px;
+    margin: 0 auto;
+    position: relative;
+    /* background: rgba(0,0,0,0.3); */
+}
+.container-fluid {
+    width: 96%;
+    margin: 0 auto;
+}
+
+/* section */
+.section {
+    margin: 150px 0;
+    background-color: #fff;
+    box-shadow: 0 0 50px rgba(0,0,0,0.1);
+}
+
+
+/* menuType01 */
+.menuType01 {
+    font-family: 'NEXONLv1Gothic';
+    min-width: 1200px;
+    white-space: nowrap;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #eee;
+}
+.menuType01 h1 {
+    text-transform: uppercase;
+    font-size: 30px;
+}
+.menuType01 h1 a {
+    padding: 10px; 
+    margin: 10px;
+}
+.menuType01 h1 em {
+    font-size: 16px;
+}
+.menuType01 nav li {
+    display: inline;
+}
+.menuType01 nav li a {
+    padding: 10px 20px;
+    margin: 15px;
+    display: inline-block;
+    font-size: 16px;
+}
+.menuType01 .member {
+    padding: 20px; 
+}
+.menuType01 .member a {
+    border: 1px solid #000;
+    padding: 7px 20px 5px;
+    border-radius: 50px;
+    transition: background 0.3s, color 0.3s;
+}
+.menuType01 .member a:hover {
+    background: #000;
+    color: #fff;
+}
+
+
+/* imageType01 */
+.imageType01 {
+    font-family: 'GmarketSans';
+    padding: 150px 0;
+}
+.imageType01 h2 {
+    font-size: 50px;
+    line-height: 1;
+    font-weight: 500;
+    margin-bottom: 30px;
+}
+.imageType01 h2 em {
+    font-size: 20px;
+    color: #777;
+    font-weight: 300;
+    vertical-align: -4px;
+}
+.imageType01 .image-wrap {
+    overflow: hidden;
+}
+.imageType01 .image-wrap .image {
+    position: relative;
+    float: left;
+    width: 590px;
+    height: 385px;
+    overflow: hidden;
+}
+.imageType01 .image-wrap .image:first-child {
+    margin-right: 20px;
+}
+.imageType01 .image-wrap .image:first-child {
+    background-color: #9a481d;
+}
+.imageType01 .image-wrap .image:last-child {
+    background-color: #b59140;
+}
+.imageType01 .image-wrap .image .image-img {
+    opacity: 0.8;
+    transform: scale(1);
+    transition: opacity 0.4s, transform 0.4s;
+}
+.imageType01 .image-wrap .image:hover .image-img {
+    opacity: 1;
+    transform: scale(1.1);
+}
+.imageType01 .image-wrap .image .image-cont {
+    position: absolute;
+    left: 30px;
+    bottom: 30px;
+    color: #fff;
+}
+.imageType01 .image-wrap .image .image-title {
+    font-size: 30px;
+    font-weight: 500;
+    margin-bottom: 6px;
+    transform: translateY(100px);
+    transition: transform 0.35s 0.35s;
+    /* transition-property: transform;
+    transition-duration: 0.35s;
+    transition-delay: 0.35s;
+    transition-timing-function: ease-in; */
+}
+.imageType01 .image-wrap .image:hover .image-title {
+    transform: translateY(0px);
+    transition: transform 0.35s ;
+}
+.imageType01 .image-wrap .image .image-desc {
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.4;
+    padding-right: 30%;
+    word-break: keep-all;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: transform 0.35s 0.2s, opacity 0.55s 0.2s;
+}
+.imageType01 .image-wrap .image:hover .image-desc {
+    opacity: 1;
+    transform: translateY(0px);
+}
+.imageType01 .image-wrap .image .image-btn {
+    padding: 8px 18px;
+    display: inline-block;
+    background-color: #777;
+    color: #fff;
+    margin-top: 10px;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: transform 0.35s 0.2s, opacity 0.55s 0.2s;
+}
+.imageType01 .image-wrap .image:hover .image-btn {
+    opacity: 1;
+    transform: translateY(0px);
+}
+.imageType01 .image-wrap .image .image-btn.red {
+    background-color: #9a481d;
+}
+.imageType01 .image-wrap .image .image-btn.yellow {
+    background-color: #b59140;
+}
+
+
+/* imageType02 */
+.imageType02 {
+    font-family: 'GmarketSans';
+    padding: 150px 0;
+}
+.imageType02 h2 {
+    font-size: 50px;
+    line-height: 1;
+    font-weight: 500;
+    margin-bottom: 30px;
+}
+.imageType02 h2 em {
+    font-size: 20px;
+    color: #777;
+    font-weight: 300;
+    vertical-align: -4px;
+}
+.imageType02 .image-wrap {
+    display: flex;
+    justify-content: space-between;
+}
+.imageType02 .image-wrap .image {
+    width: 386px;
+    position: relative;
+    perspective: 800px;
+}
+.imageType02 .image-wrap .image::after {
+    content: '';
+    background: #fff;
+    display: block;
+    position: absolute;
+    left: 30px; top: 30px; right: 30px; bottom: 30px;
+    opacity: 0;
+    transform: rotateX(-90deg);
+    transition: all 0.4s ease-in-out;
+}
+.imageType02 .image-wrap .image:hover::after {
+    opacity: 0.9;
+    transform: rotateX(0deg);
+}
+.imageType02 .image-wrap .image .image-cont {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    color: #fff;
+    text-align: center;
+    opacity: 0;
+    transform: translate(-50%, 50%);
+    z-index: 1000;
+    transition: all 0.3s ease-out;
+}
+.imageType02 .image-wrap .image:hover .image-cont {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+}
+.imageType02 .image-wrap .image .image-title {
+    font-size: 30px;
+    font-weight: 500;
+    color: #000;
+}
+.imageType02 .image-wrap .image .image-btn {
+    color: #fff;
+    padding: 7px 24px 5px 24px;
+    background: #000;
+    border-radius: 40px;
+    font-weight: 300;
+    margin-top: 5px;
+    display: inline-block;
+}
+
+/* imgTextType01 */
+.imgTextType01 {
+    font-family: 'GmarketSans';
+    padding: 150px 0;
+    display: flex;
+    justify-content: space-between;
+}
+.imgTextType01 > div:first-child {
+    width: 50%;
+}
+.imgTextType01 > div:last-child {
+    width: 46%;
+}
+.imgTextType01 .imgText-sub{
+    font-size: 16px;
+    line-height: 1;
+    color: #7c7c7c;
+    font-weight: 500;
+    margin-bottom: 20px;
+    display: inline-block;
+    border-bottom: 1px solid #7c7c7c;
+}
+.imgTextType01 .imgText-title {
+    font-size: 50px;
+    line-height: 1;
+    font-weight: 500;
+    margin-bottom: 30px;
+}
+.imgTextType01 .imgText-desc {
+    font-size: 18px;
+    font-weight: 300;
+    color: #888;
+    margin-bottom: 25px;
+}
+.imgTextType01 .imgText-more {
+    font-size: 16px;
+    background: #000;
+    padding: 9px 46px;
+    display: inline-block;
+    color: #fff;
+    font-weight: 500;
+}
+
+
+
+/* imgTextType02 */
+.imgTextType02 {
+    font-family: 'GmarketSans';
+    padding: 150px 0;
+    display: flex;
+    justify-content: space-between;
+}
+.imgTextType02 > div {
+    width: 387px;
+}
+.imgTextType02 .imgText-sub{
+    font-size: 16px;
+    line-height: 1;
+    color: #7c7c7c;
+    font-weight: 500;
+    margin-bottom: 20px;
+    display: inline-block;
+    border-bottom: 1px solid #7c7c7c;
+}
+.imgTextType02 .imgText-title {
+    font-size: 50px;
+    line-height: 1;
+    font-weight: 500;
+    margin-bottom: 30px;
+}
+.imgTextType02 .imgText-desc {
+    font-size: 18px;
+    font-weight: 300;
+    color: #888;
+    margin-bottom: 55px;
+}
+.imgTextType02 .imgText-more a {
+    font-size: 18px;
+    color: #af3029;
+} 
+.imgTextType02 .imgText-more svg {
+    vertical-align: 2px;
+}
+
+
+
+
+
+
+/* cardType01 */
+.cardType01 {
+    font-family: 'GmarketSans';
+    padding: 150px 0;
+}
+.cardType01 h2 {
+    font-weight: 500;
+    font-size: 50px;
+    margin-bottom: 7px;
+}
+.cardType01 > h2 em {
+    font-size: 20px;
+    color: #777;
+    font-weight: 300;
+    vertical-align: -4px;
+}
+.cardType01 > p {
+    font-weight: 200;
+    font-size: 26px;
+    line-height: 1.28;
+    margin-bottom: 40px;
+}
+.cardType01 .card-wrap {
+    display: flex;
+    justify-content: space-between;
+}
+.cardType01 .card-wrap > div {
+    width: 387px;
+}
+.cardType01 .card-wrap .card .card-img {
+    margin-bottom: 10px;
+}
+.cardType01 .card-wrap .card .card-title {
+    display: block;
+    font-size: 32px;
+    white-space: nowrap;  /* 한줄 효과 */
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.cardType01 .card-wrap .card .card-desc {
+    font-size: 20px;
+    font-weight: 300;
+    overflow: hidden; /* 두줄 효과 */
+    display: -webkit-box; 
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+
+/* cardType02 */
+.cardType02 {
+    font-family: 'GmarketSans';
+    padding: 150px 0;
+}
+.cardType02 h2 {
+    font-weight: 500;
+    font-size: 50px;
+    margin-bottom: 7px;
+    text-align: center;
+}
+.cardType02 > h2 em {
+    font-size: 20px;
+    color: #777;
+    font-weight: 300;
+    vertical-align: -4px;
+}
+.cardType02 > p {
+    font-size: 26px;
+    font-weight: 300;
+    text-align: center;
+}
+.cardType02 .card-wrap ul {
+    display: flex;
+}
+.cardType02 .card-wrap li {
+    width: 285px;
+    height: 356px;
+    margin: 40px 20px 0 0;
+    padding: 15px 15px 16px 14px;
+    border-radius: 5px;
+    border: solid 1px #e6e6e6;
+}
+.cardType02 .card-wrap li strong {
+    display: block;
+    font-size: 24px;
+    font-weight: 500;
+    margin-top: 10px;
+}
+.cardType02 .card-wrap li em {
+    font-family: 'SCoreDream';
+    font-size: 16px;
+    font-weight: 300;
+}
+.cardType02 .card-wrap li span {
+    margin: 6px 5px 0 1px;
+    padding: 4px 16px 3px;
+    border-radius: 20px;
+    background-color: #000;
+    display: inline-block;
+    color: #fff;
+    font-size: 10px;
+    text-transform: uppercase;
+}
+
+
+
+/* bannerType01 */
+.bannerType01 {
+    font-family: 'GmarketSans';
+    min-width: 1200px;
+    white-space: nowrap;
+    padding: 150px 0;
+}
+.bannerType01 .banner-wrap {
+    background: url(../img/bbg.jpg) center no-repeat;
+    background-size: cover;
+    height: 440px;
+    text-align: center;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center
+}
+.bannerType01 .banner-wrap h2 {
+    font-weight: 500;
+    font-size: 50px;
+    margin-bottom: 10px;
+}
+.bannerType01 .banner-wrap p {
+    font-size: 22px;
+    font-weight: 300;
+}
+.bannerType01 .banner-wrap span {
+    font-size: 16px;
+    line-height: 1;
+    color: #fff;
+    font-weight: 500;
+    margin-top: 40px;
+    display: inline;
+    border-bottom: 1px solid #fff;
+}
+
+
+
+/* sliderType01 */
+.sliderType01 {
+    padding: 150px 0;
+}
+.sliderType01 .slider {
+    position: relative;
+    color: #fff;
+}
+.sliderType01 .slider .slider-inner {
+    width: 1200px;
+    margin: 0 auto;
+}
+.sliderType01 .slider .slider-inner em {
+    font-family: 'NEXONLv1Gothic';
+    font-size: 24px;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding-top: 100px;
+    display: block;
+}
+.sliderType01 .slider .slider-inner h3 {
+    font-family: 'GmarketSans';
+    font-size: 100px;
+    font-weight: 300;
+    line-height: 1.2;
+    text-indent: -8px;
+}
+.sliderType01 .slider .slider-inner p {
+    font-family: 'NEXONLv1Gothic';
+    font-size: 20px;
+    font-weight: 300;
+}
+.sliderType01 .slider .slider-inner .btn {
+    display: block;
+    padding-bottom: 100px;
+    margin-top: 260px;
+}
+.sliderType01 .slider .slider-inner .btn a {
+    width: 200px; height: 50px;
+    display: inline-block;
+    text-align: center;
+    line-height: 50px;
+    font-family: 'NEXONLv1Gothic';
+    font-size: 16px;
+    margin-right: 7px;
+}
+.sliderType01 .slider .slider-inner .btn a.white {
+    background: #fff;
+    color: #000;
+}
+.sliderType01 .slider .slider-inner .btn a.black {
+    background: #000;
+    color: #fff;
+}
+.sliderType01 .slider .slider-arrow a {
+    width: 21px; height: 41px;
+    display: block;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.sliderType01 .slider .slider-arrow a.left {
+    left: 25px;
+}
+.sliderType01 .slider .slider-arrow a.right {
+    right: 25px;
+}
+.sliderType01 .slider .slider-dot {
+    position: absolute;
+    left: 50%;
+    bottom: 35px;
+    transform: translateX(-50%);
+}
+.sliderType01 .slider .slider-dot a.dot {
+    width: 15px; height: 15px;
+    border: 3px solid #fff;
+    display: inline-block;
+    border-radius: 50%;
+    margin: 0 6px;
+    box-sizing: border-box;
+}
+.sliderType01 .slider .slider-dot a.dot.active {
+    background-color: #fff;
+}
+.sliderType01 .slider .slider-dot a.play {
+    width: 13px;
+    display: inline-block;
+    margin: 0 6px;
+}
+.sliderType01 .slider .slider-dot a.stop {
+    width: 9px; 
+    display: inline-block;
+    margin-left: 7px;
+}
+.sliderType01 .slider:nth-child(1) {
+    background-image: url(../img/bg01.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+}
+
+
+/* noticeType01 */
+.noticeType01 {
+    padding: 150px 0;
+}
+.noticeType01 h2 {
+    font-weight: 500;
+    font-size: 50px;
+    line-height: 1;
+    margin-bottom: 17px;
+    text-align: center;
+}
+.noticeType01 > p {
+    font-size: 20px;
+    font-weight: 300;
+    text-align: center;
+    margin-bottom: 70px;
+    color: #777;
+}
+.noticeType01 .notice {
+    display: flex;
+    justify-content: space-between;
+}
+.noticeType01 .notice article {
+    position: relative;
+    flex: 0 0 47%;
+    width: 47%;
+}
+.noticeType01 .notice article h3 {
+    font-size: 24px;
+    margin-bottom: 15px;
+    border-bottom: 1px solid rgb(98, 98, 98);
+}
+.noticeType01 .notice article li {
+    font-size: 16px;
+    color: #666;
+    padding-left: 14px;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+}
+.noticeType01 .notice article li::before {
+    content: '';
+    width: 5px; height: 5px;
+    position: absolute;
+    left: 0; top: 10px;
+    background: #000;
+}
+.noticeType01 .notice article li a {
+    padding: 3px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.noticeType01 .notice article li a:hover {
+    text-decoration: underline;
+}
+.noticeType01 .notice article .more {
+    position: absolute;
+    right: 0; 
+    top: 12px;
+}
+.noticeType01 .notice article .more:hover {
+    text-decoration: underline;
+}
+
+
+/* footerType01 */
+.footerType01 {
+    padding: 150px 0;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.footerType01 .link {
+    flex: 0 0 80%;
+    display: flex;
+}
+.footerType01 .link > div {
+    margin-right: 10%;
+}
+.footerType01 .link > div h3 {
+    font-size: 18px;
+    margin-bottom: 15px;
+    display: block;
+}
+.footerType01 .link > div li {
+    margin-bottom: 5px;
+}
+.footerType01 .link > div li a:hover {
+    text-decoration: underline;
+}
+.footerType01 .info dt {
+    font-size: 18px;
+}
+.footerType01 .info dd {
+    margin-bottom: 10px;
+}
+.footerType01 .right {
+    flex: 0 0 100%;
+    margin-top: 50px;
+    border-top: 1px solid #eee;
+    text-align: center;
+    padding-top: 50px;
+}
+.section-info address {
+    font-style: normal;
+}

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>이미지 유형01</title>
+
+    <link rel="stylesheet" href="../../assets/css/fonts.css">
+    <link rel="stylesheet" href="../../assets/css/reset.css">
+    <style>
+        /* container */
+        .container {
+            max-width: 1200px;
+            width: 100%;
+            margin: 0 auto;
+        }
+        
+        /* noticeType01 */
+        .noticeType01 {
+            padding: 150px 0;
+        }
+        .noticeType01 h2 {
+            font-weight: 500;
+            font-size: 50px;
+            line-height: 1;
+            margin-bottom: 17px;
+            text-align: center;
+        }
+        .noticeType01 > p {
+            font-size: 20px;
+            font-weight: 300;
+            text-align: center;
+            margin-bottom: 70px;
+            color: #777;
+        }
+        .noticeType01 .notice {
+            display: flex;
+            justify-content: space-between;
+        }
+        .noticeType01 .notice article {
+            position: relative;
+            flex: 0 0 47%;
+            width: 47%;
+        }
+        .noticeType01 .notice article h3 {
+            font-size: 24px;
+            margin-bottom: 15px;
+            border-bottom: 1px solid rgb(98, 98, 98);
+        }
+        .noticeType01 .notice article li {
+            font-size: 16px;
+            color: #666;
+            padding-left: 14px;
+            position: relative;
+            display: flex;
+            justify-content: space-between;
+        }
+        .noticeType01 .notice article li::before {
+            content: '';
+            width: 5px; height: 5px;
+            position: absolute;
+            left: 0; top: 10px;
+            background: #000;
+        }
+        .noticeType01 .notice article li a {
+            padding: 3px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+        .noticeType01 .notice article li a:hover {
+            text-decoration: underline;
+        }
+        .noticeType01 .notice article .more {
+            position: absolute;
+            right: 0; 
+            top: 12px;
+        }
+        .noticeType01 .notice article .more:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <!-- noticeType01 -->
+    <section class="section">
+        <div class="container">
+            <div class="noticeType01">
+                <h2>최신 소식</h2>
+                <p>최신 소식을 바로 확인 할 수 있습니다.</p>
+                <div class="notice">
+                    <article>
+                        <h3>게시판 업데이트</h3>
+                        <ul>
+                            <li><a href="#">스크립트 강의 업데이트 예정입니다.</a><span>2021.02.02</span></li>
+                            <li><a href="#">유튜브에 강의 업데이트할 예정입니다.</a><span>2021.02.02</span></li>
+                            <li><a href="#">스터디 참여에 대해서 자세히 알려드립니다.</a><span>2021.02.02</span></li>
+                            <li><a href="#">스터디 강의와 면접 잘 보는 법에 대해서 알려드릴께요~</a><span>2021.02.02</span></li>
+                        </ul>
+                        <a href="#" title="더보기" class="more">더보기</a>
+                    </article>
+                    <article>
+                        <h3>댓글 업데이트</h3>
+                        <ul>
+                            <li><a href="#">감사합니다. 잘 보고 있어요^^</a><span>2021.02.02</span></li>
+                            <li><a href="#">앞으로도 좋은 영상 부탁드령요~</a><span>2021.02.02</span></li>
+                            <li><a href="#">여기가 짱인듯.. 너무 좋아요~~ 너무 필요한 거였어요~ 여기가 짱인듯.. 너무 좋아요~~ </a><span>2021.02.02</span></li>
+                            <li><a href="#">앞으로도 좋은 영상 부탁드령요~</a><span>2021.02.02</span></li>
+                        </ul>
+                        <a href="#" title="더보기" class="more">더보기</a>
+                    </article>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- //noticeType01 -->
+</body>
+</html>

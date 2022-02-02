@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>메뉴 유형01</title>
+
+    <link rel="stylesheet" href="../../assets/css/fonts.css">
+    <link rel="stylesheet" href="../../assets/css/reset.css">
+    <style>
+        .menuType01 {
+            font-family: 'NEXONLv1Gothic';
+            min-width: 1200px;
+            white-space: nowrap;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-bottom: 1px solid #eee;
+        }
+        .menuType01 h1 {
+            text-transform: uppercase;
+            font-size: 30px;
+        }
+        .menuType01 h1 a {
+            padding: 10px; 
+            margin: 10px;
+        }
+        .menuType01 h1 em {
+            font-size: 16px;
+        }
+        .menuType01 nav li {
+            display: inline;
+        }
+        .menuType01 nav li a {
+            padding: 10px 20px;
+            margin: 15px;
+            display: inline-block;
+            font-size: 16px;
+        }
+        .menuType01 .member {
+            padding: 20px; 
+        }
+        .menuType01 .member a {
+            border: 1px solid #000;
+            padding: 7px 20px 5px;
+            border-radius: 50px;
+            transition: background 0.3s, color 0.3s;
+        }
+        .menuType01 .member a:hover {
+            background: #000;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <header class="menuType01">
+        <h1><a href="main.html">web <em>class</em></a></h1>
+        <nav>
+            <h2 class="ir_so">메인 메뉴</h2>
+            <ul>
+                <li><a href="#">댓글</a></li>
+                <li><a href="#">회원가입</a></li>
+                <li><a href="#">로그인</a></li>
+                <li><a href="#">게시판</a></li>
+                <li><a href="#">문의하기</a></li>
+            </ul>
+        </nav>
+        <div class="member">
+            <a href="#">로그인</a>
+            <a href="#">회원가입</a>
+        </div>
+    </header>
+</body>
+</html>
