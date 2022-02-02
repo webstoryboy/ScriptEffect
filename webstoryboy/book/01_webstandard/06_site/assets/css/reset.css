@@ -1,8 +1,7 @@
-@charset "utf-8";
-
-/* 보더 초기화 */
-*, *::before, *::after {
-    box-sizing: border-box;
+/* 기본 셋팅 */
+:root {
+    font-size: 16px;
+    line-height: 1.53;
 }
 
 /* 여백 초기화 */
@@ -40,6 +39,22 @@ figcaption {
     box-sizing: border-box;
 }
 
+/* 시멘틱 태그 초기화 */
+article, 
+aside, 
+details, 
+figcaption, 
+figure, 
+footer, 
+header, 
+hgroup, 
+menu, 
+nav, 
+section {
+	display: block;
+    box-sizing: border-box;
+}
+
 /* 폰트 초기화 */
 body,
 button,
@@ -47,167 +62,120 @@ input,
 select,
 table,
 textarea {
-    font-size: 14px;
-    line-height: 1.5;
     color: #222;
-    font-family: 'NEXONLv1Gothic', AppleSDGothicNeo-Regular, 'Malgun Gothic', '맑은 고딕', dotum, '돋움', sans-serif;
+    font-family: 'NexonLv1Gothic', 'AppleSDGothicNeo-Regular', 'Malgun Gothic', '맑은 고딕', dotum, 돋움;
 }
 
 /* 링크 초기화 */
-a { 
+a {
     color: #222;
-    text-decoration: none
+    text-decoration: none;
 }
 
 /* 목록 초기화 */
 ol,
-ul,li {
-    list-style: none
+ul {
+    list-style: none;
 }
 
 /* 스타일 초기화 */
-strong {
-    font-weight: normal;
-}
-em,
-address {
+em {
     font-style: normal;
 }
+
 img {
     width: 100%;
     vertical-align: top;
 }
-fieldset {
-    border: 0 none;
-}
-button {
-    border: 0;
-    background-color: transparent;
-    cursor: pointer;
-}
-
-/* 테이블 초기화 */
-table {
-    border-collapse: collapse;
-    border-spacing: 0;
-}
-
-/* 제목 초기화 */
 h1,h2,h3,h4,h5,h6 {
     font-weight: normal;
 }
 
-/* 리스트 스타일 유형 */
-ul.list li,
-ol.list li,
-dl.list li {
+/* 스킵 메뉴 */
+#skip {
     position: relative;
-    padding-left: 10px;
+    z-index: 10000;
 }
-ul.list li::before,
-ol.list li::before,
-dl.list li::before {
-    content: '';
-    width: 3px; height: 3px;
+#skip a {
     background: #000;
+    color: #fff;
     position: absolute;
-    left: 0; top: 7px;
+    left: -400px; top: 5px;
+    padding: 20px 40px;
+    display: inline-block;
+    transition: left 0.3s ease-in;
+}
+#skip a:active,
+#skip a:focus {
+    left: 5px;
 }
 
-/* ir 효과 */
-/* (ir_pm) 의미있는 이미지의 대체 텍스트를 제공하는 경우 */
-/* (ir_wa) 의미있는 이미지의 대체 텍스트로 이미지가 없어도 대체 텍스트를 보여주고자 할 때 */
-/* (ir_so) 대체 텍스트가 아닌 접근성을 위한 숨김 텍스트를 제공할 때 */
+/* 클리어 픽스 */
+.clearfix {
+    zoom: 1;
+}
+.clearfix::before,
+.clearfix::after {
+    content: '';
+    display: block;
+}
+.clearfix::after {
+    clear: both;
+}
+
+/* ir 효과 
+ir_pm : 의미있는 이미지의 대체 텍스트를 제공하는 경우
+ir_wa : 의미있는 이미지의 대체 텍스트로 이미지가 없어도 대체 텍스트를 보여주고 싶을 때
+ir_so : 대체 텍스트가 아닌 접근성을 위한 숨김 텍스트를 제공할 때
+*/
 .ir_pm {
-    display: block; 
-    overflow: hidden; 
-    font-size: 0; 
-    line-height: 0; 
+    display: block;
+    overflow: hidden;
+    font-size: 0;
+    line-height: 0;
     text-indent: -9999px;
-} 
+}
 .ir_wa {
-    display: block; 
-    overflow: hidden; 
-    position: relative; 
-    z-index: -1; 
-    width: 100%; 
+    display: block;
+    overflow: hidden;
+    position: relative;
+    z-index: -1;
+    width: 100%;
     height: 100%;
 }
 .ir_so {
-    overflow: hidden; 
-    position: absolute; 
-    width: 0; 
-    height: 0; 
-    line-height: 0; 
+    overflow: hidden;
+    position: absolute;
+    width: 0;
+    height: 0;
+    line-height: 0;
     text-indent: -9999px;
-} 
-
-/* 인풋 스타일 유형 */
-.input_write {
-    width: 100%;
-    display: block;
-    border: 1px solid #dfdfdf;
-    padding: 13px;
-    height: 56px;
-    font-size: 16px;
-    line-height: 22px;
-    box-sizing: border-box;
-}
-.input_write2 {
-    border: 2px solid #a69cf7;
-    padding: 15px 30px;
-    margin: 5px;
-    border-radius: 50px;
-    outline: none;
-    background: #d3cef8;
-    color: #7266c7;
-}
-.input_write2.w100 {
-    min-width: 300px;
-}
-.input_write2::-webkit-input-placeholder {
-    color: #7266c7;
-}
-.input_write2:-ms-input-placeholder {
-    color: #7266c7;
-}
-.input_write2::placeholder {
-    color: #7266c7;
 }
 
-/* 버튼 스타일 유형 */
-.btn_submit {
-    width: 100%;
-    padding: 16px;
-    background-color:#eee;
-    transition: box-shadow .3s, background-color .3s;
-}
-.btn_submit:hover {
-    box-shadow: inset 0 0 0 2px #000;
-    background-color:#fff;
-}
-.btn_submit2 {
-    background: #a69cf7;
-    color: #fff;
-    border-radius: 50px;
-    width: 58px;
-    height: 58px;
-    margin-top: 4px;
-    margin-left: 4px;
-    transition: box-shadow .3s;
-}
-.btn_submit2:hover {
-    box-shadow: inset 0 0 0 5px #9082f5;
-}
+/* 폰트 셋팅 */
+.NexonLv1 {font-family: 'NexonLv1Gothic';}
+.NexonLv1-300 {font-family: 'NexonLv1Gothic'; font-weight: 300;}
+.NexonLv1-400 {font-family: 'NexonLv1Gothic'; font-weight: 400;}
+.NexonLv1-700 {font-family: 'NexonLv1Gothic'; font-weight: 700;}
+.NexonLv2 {font-family: 'NexonLv2Gothic';}
+.NexonLv2-300 {font-family: 'NexonLv2Gothic'; font-weight: 300;}
+.NexonLv2-400 {font-family: 'NexonLv2Gothic'; font-weight: 400;}
+.NexonLv2-500 {font-family: 'NexonLv2Gothic'; font-weight: 500;}
+.NexonLv2-700 {font-family: 'NexonLv2Gothic'; font-weight: 700;}
+.Gmarket {font-family: 'GmarketSans';}
+.Gmarket-300 {font-family: 'GmarketSans'; font-weight: 300;}
+.Gmarket-500 {font-family: 'GmarketSans'; font-weight: 500;}
+.Gmarket-700 {font-family: 'GmarketSans'; font-weight: 700;}
 
-/* 간격 */
-.m0  {margin-top: 0;}
+/* 간격 셋팅 */
+.mt0 {margin-top: 0 !important;}
 .mt10 {margin-top: 10px !important;}
 .mt20 {margin-top: 20px !important;}
 .mt30 {margin-top: 30px !important;}
 .mt40 {margin-top: 40px !important;}
 .mt50 {margin-top: 50px !important;}
 
+.mb0 {margin-bottom: 0 !important;}
 .mb10 {margin-bottom: 10px !important;}
 .mb20 {margin-bottom: 20px !important;}
 .mb30 {margin-bottom: 30px !important;}
