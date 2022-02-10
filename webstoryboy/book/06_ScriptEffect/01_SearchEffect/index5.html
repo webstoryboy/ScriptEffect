@@ -118,22 +118,33 @@
             border-radius: 4px;
         }
         .board .prop {
-            padding: 10px;
-            background-color: #bdd6e6;
             text-align: left;
             margin-top: 10px;
         }
-        .board .prop span {
-            border: 1px solid #000;
-            padding: 2px 15px;
-            margin: 5px;
-            display: inline-block;
-            word-break: keep-all;
-            white-space: nowrap;
-            border-radius: 50px;
+        .board .prop li {
+            line-height: 1.6;
+            list-style: none;
+            background-color: #bdd6e6;
+            margin: 5px 0;
+            padding: 5px 10px;
+            border-radius: 4px;
         }
         .board .list ul li.show {
             display: block;
+        }
+        .board .search span {
+            border: 1px solid #000;
+            border-radius: 40px;
+            padding: 3px 20px;
+            margin: 3px 0;
+            font-size: 16px;
+            display: inline-block;
+            cursor: pointer;
+        }
+        .board .search span:hover {
+            background: #bdd6e6;
+            color: #fff;
+            border-color: #bdd6e6;
         }
     </style>
 </head>
@@ -148,64 +159,69 @@
                 <li><a href="index4.html">4</a></li>
                 <li class="active"><a href="index5.html">5</a></li>
                 <li><a href="index6.html">6</a></li>
+                <li><a href="index7.html">7</a></li>
             </ul>
         </div>
         <div class="board">
-            <span>filter()를 이용하여 속성 설명 검색하기</span>
+            <span>filter()를 이용하여 조회수 검색하기</span>
             <h1>CSS 속성 검색하기</h1>
             
             <div class="search">
-                <label for="search-box">검색하기</label>
-                <input id="search-box" type="text" placeholder="CSS 속성 검색하기">
+                <!-- <label for="search-box">검색하기</label>
+                <input id="search-box" type="text" placeholder="CSS 속성 검색하기"> -->
+                <span data-view="10">10개 이상</span>
+                <span data-view="20">20개 이상</span>
+                <span data-view="30">30개 이상</span>
+                <span data-view="40">40개 이상</span>
             </div>
             <div class="count">
                 
             </div>
-            <div class="desc">
-                아래의 속성을 검색하면 설명이 나옵니다.
-            </div>
             <div class="prop">
-                
+                <ul></ul>
             </div>
         </div>
     </div>
 
     <script>
         const cssProperty = [
-            {name: "align-content", usability: 7, desc: "align-content 속성은 콘텐츠 아이템의 상하관계 정렬 상태를 설정합니다."},
-            {name: "align-items", usability: 4, desc: "align-items 속성은 콘텐츠 아이템의 내부 상하관계 정렬 상태를 설정합니다."},
-            {name: "align-self", usability: 3, desc: "align-self 속성은 개별적인 콘텐츠 아이템의 정렬 상태를 설정합니다."},
-            {name: "all", usability: 0, desc: "all 속성은 요소의 속성을 초기화 또는 상속을 설정합니다."},
-            {name: "animation", usability: 4, desc: "animation 속성은 애니메이션과 관련된 속성을 일괄적으로 설정합니다."},
-            {name: "animation-delay", usability: 4, desc: "animation-delay 속성은 애니메이션 지연 시간을 설정합니다."},
-            {name: "animation-direction", usability: 3, desc: "animation-direction 속성은 애니메이션 움직임 방향을 설정합니다."},
-            {name: "animation-duration", usability: 4, desc: "animation-duration 속성은 애니메이션 움직임 시간을 설정합니다."},
-            {name: "animation-fill-mode", usability: 5, desc: "animation-fill-mode 속성은 애니메이션이 끝난 후의 상태를 설정합니다."},
+            {name: "align-content", view: "10", desc: "align-content 속성은 콘텐츠 아이템의 상하관계 정렬 상태를 설정합니다."},
+            {name: "align-items", view: "20", desc: "align-items 속성은 콘텐츠 아이템의 내부 상하관계 정렬 상태를 설정합니다."},
+            {name: "align-self", view: "30", desc: "align-self 속성은 개별적인 콘텐츠 아이템의 정렬 상태를 설정합니다."},
+            {name: "all", view: "40", desc: "all 속성은 요소의 속성을 초기화 또는 상속을 설정합니다."},
+            {name: "animation", view: "10", desc: "animation 속성은 애니메이션과 관련된 속성을 일괄적으로 설정합니다."},
+            {name: "animation-delay", view: "30", desc: "animation-delay 속성은 애니메이션 지연 시간을 설정합니다."},
+            {name: "animation-direction", view: "40", desc: "animation-direction 속성은 애니메이션 움직임 방향을 설정합니다."},
+            {name: "animation-duration", view: "50", desc: "animation-duration 속성은 애니메이션 움직임 시간을 설정합니다."},
+            {name: "animation-fill-mode", view: "20", desc: "animation-fill-mode 속성은 애니메이션이 끝난 후의 상태를 설정합니다."},
         ]
         const searchBox = document.querySelector("#search-box");
         const cssDesc = document.querySelector(".desc");
-        const cssProp = document.querySelector(".prop");
+        const cssProp = document.querySelector(".prop ul");
         const cssCount = document.querySelector(".count");
-
-        searchBox.addEventListener("keyup", () => {   
-            const searchProp = searchBox.value;  
-            findProp(searchProp)
+        
+        document.querySelectorAll('.search span').forEach((element) => {
+            element.addEventListener('click', (event) => {
+                onClickButton(event);
+            });
         });
 
-        cssProperty.map((e,i) => {
-            cssProp.innerHTML += "<span>" + e.name + "</span>";
-            cssCount.innerHTML = "전체 속성 갯수 : <em>" + i + "</em>개";
-        })
-
-        function findProp(searchProp){
-            const targetData = cssProperty.find((data) => data.name === searchProp);
-
-            if(targetData == null){
-                cssDesc.textContent = "해당 속성은 존재하지 않습니다.";
-                return;
-            }
-            cssDesc.textContent = targetData.desc;
+        function onClickButton(event) {
+            const button = event.target;
+            const targetAge = button.dataset.view;
+            const filterdList = cssProperty.filter((data) => data.view >= targetAge);
+            updateList(filterdList);
         }
+
+        function updateList(filterdList) {
+            let listHtml = '';
+
+            for (const data of filterdList) {
+                listHtml += `<li>${data.name} : ${data.desc} <span>${data.view}</span></li>`;
+            }
+            cssProp.innerHTML = listHtml;
+        }
+        updateList(cssProperty);
     </script>
 </body>
 </html>

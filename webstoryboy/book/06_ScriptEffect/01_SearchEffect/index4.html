@@ -186,15 +186,22 @@
         const cssDesc = document.querySelector(".desc");
         const cssProp = document.querySelector(".prop");
         const cssCount = document.querySelector(".count");
+        
+        cssProperty.map((e,i) => {
+            cssProp.innerHTML += "<span>" + e.name + "</span>";
+            cssCount.innerHTML = "전체 속성 갯수 : <em>" + i + "</em>개";
+        });
 
         searchBox.addEventListener("keyup", () => {   
             const searchProp = searchBox.value;  
             findProp(searchProp)
         });
 
-        cssProperty.map((e,i) => {
-            cssProp.innerHTML += "<span>" + e.name + "</span>";
-            cssCount.innerHTML = "전체 속성 갯수 : <em>" + i + "</em>개";
+        document.querySelectorAll(".prop span").forEach(el => {
+            el.addEventListener("click", () => {
+                const searchProp = el.innerText;
+                findProp(searchProp)
+            })
         })
 
         function findProp(searchProp){

@@ -1,0 +1,162 @@
+/* menuType01 : header */
+.header {
+    font-family: 'NEXONLv1Gothic';
+    min-width: 1200px;
+    white-space: nowrap;
+}
+.header-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #eee;
+}
+.header-brand {
+    text-transform: uppercase;
+    font-size: 30px;
+    font-weight: 700;
+}
+.header-brand a {
+    padding: 10px; 
+    margin: 10px;
+}
+.header-brand em {
+    font-size: 16px;
+    font-weight: 500;
+}
+.header-nav li {
+    display: inline;
+}
+.header-nav li a {
+    padding: 10px 20px;
+    margin: 15px;
+    display: inline-block;
+    font-size: 16px;
+    transition: all 0.2s;
+    border-radius: 5px;
+}
+.header-nav li a:hover {
+    background: #f5f5f5;
+}
+.header-member {
+    padding: 20px; 
+}
+.header-member a {
+    border: 1px solid #000;
+    padding: 7px 20px 5px;
+    border-radius: 50px;
+    transition: background 0.3s, color 0.3s;
+}
+.header-member a:hover {
+    background: #000;
+    color: #fff;
+}
+/* menuType01 : header */
+
+
+
+/* slideType01 : slider */
+.slider {
+    position: relative;
+    color: #fff;
+    font-family: 'NEXONLv1Gothic';
+}
+.slider-inner {
+    background: #ccc;
+}
+.slider-img {
+    background-image: url(../img/bg01.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.slider-img .desc {
+    max-width: 1160px;
+    white-space: nowrap;
+    margin: 0 auto;
+    /* background: rgba(0,0,0,0.3); */
+}
+.slider-img .desc span {
+    font-size: 20px;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding-top: 100px;
+    display: block;
+}
+.slider-img .desc h3 {
+    font-family: 'GmarketSans';
+    font-size: 110px;
+    font-weight: 300;
+    line-height: 1;
+    text-indent: -9px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+.slider-img .desc p {
+    font-size: 20px;
+    font-weight: 300;
+    margin-bottom: 150px;
+}
+.slider-img .desc .btn {
+    padding-bottom: 100px;
+}
+.slider-img .desc .btn a {
+    width: 200px; 
+    height: 50px;
+    display: inline-block;
+    text-align: center;
+    line-height: 50px;
+    font-size: 16px;
+    margin-right: 7px;
+}
+.slider-img .desc .btn a.white {
+    background: #fff;
+    color: #000;
+}
+.slider-img .desc .btn a.black {
+    background: #000;
+    color: #fff;
+}
+.slider-arrow a {
+    width: 21px; 
+    height: 41px;
+    display: block;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.slider-arrow a.left {
+    left: 25px;
+}
+.slider-arrow a.right {
+    right: 25px;
+}
+.slider-dot {
+    position: absolute;
+    left: 50%;
+    bottom: 15px;
+    transform: translateX(-50%);
+}
+.slider-dot a.dot {
+    width: 15px; 
+    height: 15px;
+    border: 3px solid #fff;
+    display: inline-block;
+    border-radius: 50%;
+    margin: 2px 6px;
+}
+.slider-dot a.dot.active {
+    background-color: #fff;
+}
+.slider-dot a.play {
+    width: 13px;
+    height: 13px;
+    display: inline-block;
+    margin: 0 6px;
+}
+.slider-dot a.stop {
+    width: 9px; 
+    height: 13px;
+    display: inline-block;
+    margin-left: 7px;
+}
+/* slideType01 : slider */

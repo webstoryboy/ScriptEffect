@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @font-face {
+            font-family: 'NexonLv1Gothic';
+            font-weight: 400;
+            font-style: normal;
+            src: url('https://cdn.jsdelivr.net/gh/webfontworld/NexonLv1Gothic/NexonLv1GothicRegular.eot');
+            src: url('https://cdn.jsdelivr.net/gh/webfontworld/NexonLv1Gothic/NexonLv1GothicRegular.eot?#iefix') format('embedded-opentype'),
+                url('https://cdn.jsdelivr.net/gh/webfontworld/NexonLv1Gothic/NexonLv1GothicRegular.woff2') format('woff2'),
+                url('https://cdn.jsdelivr.net/gh/webfontworld/NexonLv1Gothic/NexonLv1GothicRegular.woff') format('woff'),
+                url('https://cdn.jsdelivr.net/gh/webfontworld/NexonLv1Gothic/NexonLv1GothicRegular.ttf') format("truetype");
+            font-display: swap;
+        }
+        @font-face {
+            font-family: 'TmonMonsori';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/TmonMonsori.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'NexonLv1Gothic';
+            font-size: 16px;
+            line-height: 1.6;
+            word-break: break-all;
+        }
+        a {
+            text-decoration: none;
+            color: #223547;
+        }
+        .num {
+            margin: 10px;
+        }
+        .num li {
+            list-style: none;
+            display: inline;
+        }
+        .num li a {
+            border: 1px solid #000;
+            width: 30px; 
+            height: 30px;
+            border-radius: 50px;
+            display: inline-block;
+            text-align: center;
+            line-height: 30px;
+        }
+        .num li.active a {
+            background: #000;
+            color: #fff;
+        }
+        .board {
+            margin: 5vw 10vw 10vw 10vw;
+            width: 80vw;
+            background-color: #f1f3f6;
+            border: 2px solid #000;
+            padding: 3%;
+            text-align: center;
+            box-sizing: border-box;
+        }
+        .board h1 {
+            font-family: 'TmonMonsori';
+            color: #223547;
+            font-size: 60px;   
+            margin-top: 10px; 
+            margin-bottom: 20px;
+        }
+        .board span {
+            color: #223547;
+            font-size: 20px;
+        }
+        .board .search label {
+            background-color: #bfe6fe;
+            font-size: 26px;
+            padding: 10px 30px;
+            border: 1px solid #000;
+            border-radius: 40px;
+            display: none;
+        }
+        .board .search input {
+            font-size: 24px;
+            border: 2px solid #000;
+            padding: 12px 10px 10px 30px;
+            border-radius: 40px;
+            outline: none;
+            width: 50%;
+        }
+        .board .result {
+            margin-top: 10px;
+            color: #777;
+        }
+        .board .result em {
+            font-style: normal;
+            color: #830e0e;
+        }
+        .board .count {
+            text-align: right;
+            color: #777;
+            margin-top: 30px;
+        }
+        .board .count em {
+            font-style: normal;
+        }
+        .board .desc {
+            font-size: 18px;
+            line-height: 1.6;
+            list-style: none;
+            background-color: #bdd6e6;
+            margin: 5px 0;
+            padding: 17px 10px 15px 10px;
+            border-radius: 4px;
+        }
+        .board .prop {
+            text-align: left;
+            margin-top: 10px;
+        }
+        .board .prop ul li {
+            line-height: 1.6;
+            list-style: none;
+            background-color: #bdd6e6;
+            margin: 5px 0;
+            padding: 5px 10px;
+            border-radius: 4px;
+        }
+        .board .search span {
+            border: 1px solid #000;
+            border-radius: 40px;
+            padding: 3px 20px;
+            margin: 3px 0;
+            font-size: 16px;
+            display: inline-block;
+            cursor: pointer;
+        }
+        .board .search span:hover {
+            background: #bdd6e6;
+            color: #fff;
+            border-color: #bdd6e6;
+        }
+        .board .prop {
+            padding: 10px;
+            background-color: #bdd6e6;
+            text-align: left;
+            margin-top: 10px;
+        }
+        .board .prop span {
+            border: 1px solid #000;
+            padding: 2px 15px;
+            margin: 5px;
+            display: inline-block;
+            word-break: keep-all;
+            white-space: nowrap;
+            border-radius: 50px;
+        }
+    </style>
+</head>
+<body>
+    
+    <div id="wrap">
+        <div class="num">
+            <ul>
+                <li><a href="index.html">1</a></li>
+                <li><a href="index2.html">2</a></li>
+                <li><a href="index3.html">3</a></li>
+                <li><a href="index4.html">4</a></li>
+                <li><a href="index5.html">5</a></li>
+                <li><a href="index6.html">6</a></li>
+                <li><a href="index7.html">7</a></li>
+                <li class="active"><a href="index8.html">8</a></li>
+            </ul>
+        </div>
+        <div class="board">
+            <span>CSS 속성 맞추기 게임</span>
+            <h1>CSS 속성 검색하기</h1>
+            
+            <div class="search">
+                <label for="search-box">검색하기</label>
+                <input id="search-box" type="text" placeholder="CSS 속성 검색하기">
+            </div>
+            <div class="count">
+                
+            </div>
+            <div class="prop">
+                <ul></ul>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const cssProperty = [
+            {num: 1, name: "align-content", desc: "align-content 속성은 콘텐츠 아이템의 상하관계 정렬 상태를 설정합니다."},
+            {num: 2, name: "align-items", desc: "align-items 속성은 콘텐츠 아이템의 내부 상하관계 정렬 상태를 설정합니다."},
+            {num: 3, name: "align-self", desc: "align-self 속성은 개별적인 콘텐츠 아이템의 정렬 상태를 설정합니다."},
+            {num: 4, name: "all", desc: "all 속성은 요소의 속성을 초기화 또는 상속을 설정합니다."},
+            {num: 5, name: "animation", desc: "animation 속성은 애니메이션과 관련된 속성을 일괄적으로 설정합니다."},
+            {num: 6, name: "animation-delay", desc: "animation-delay 속성은 애니메이션 지연 시간을 설정합니다."},
+            {num: 7, name: "animation-direction", desc: "animation-direction 속성은 애니메이션 움직임 방향을 설정합니다."},
+            {num: 8, name: "animation-duration", desc: "animation-duration 속성은 애니메이션 움직임 시간을 설정합니다."},
+            {num: 9, name: "animation-fill-mode", desc: "animation-fill-mode 속성은 애니메이션이 끝난 후의 상태를 설정합니다."},
+        ]
+        const searchBox = document.querySelector("#search-box");
+        const cssProp = document.querySelector(".prop ul");
+        const cssCount = document.querySelector(".count");
+
+        let quizProp,           //css 속성들
+            quizCount,          //css 속성 갯수
+            quizAnswers = {};   //css 속성 확인 여부
+
+        searchBox.addEventListener("input", checkInput);
+
+        function initAnswers(){
+            cssProperty.forEach((data, index) => {
+                // cssProp.innerHTML += "<span>" + data.name + "</span>";
+                cssCount.innerHTML = "전체 속성 갯수 : <em>" + (index+1) + "</em>개";
+
+                quizProp = data.name.trim().toLowerCase()
+                quizAnswers[quizProp] = false;
+                quizCount = (index+1);
+            });
+        }
+        initAnswers();
+        
+        function checkInput(event) {
+            let input = event.currentTarget.value.trim().toLowerCase();
+
+            if(quizAnswers.hasOwnProperty(input) && !quizAnswers[input]){
+                quizAnswers[input] = true;
+
+                //초기화
+                searchBox.value = "";
+
+                //정답 추가
+                cssProp.innerHTML += "<span>" + input + "</span>";
+            }
+            console.log(quizAnswers)
+        }
+    </script>
+</body>
+</html>
