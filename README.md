@@ -1,5 +1,14 @@
 # Webstoryboy ScriptEffect
 
+
+
+
+
+<a href="https://webstoryboy.github.io/ScriptEffect/webstoryboy/book/01_webstandard/00_image/image_doc01.html">이미지 유형01</a><br>
+
+
+
+
 ## 패럴랙스 이펙트(Parallax Effect)<br>
 
 패럴랙스 이펙스 스크롤링 효과 설명서 <a href="https://wtss.tistory.com/category/%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20%ED%9A%A8%EA%B3%BC/04%20PARALLAX%20EFFECT">바로가기</a><br>
