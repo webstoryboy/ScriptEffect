@@ -92,14 +92,6 @@
             border-radius: 40px;
             width: 50%;
         }
-        .board .count {
-            text-align: right;
-            color: #777;
-        }
-        .board .count em {
-            font-style: normal;
-            color: #223547;
-        }
         .board .list {
             text-align: left;
         }
@@ -114,6 +106,9 @@
         .board .list li:hover {
             background-color: #a5c3d5;
             cursor: grabbing
+        }
+        .board .list li.hide {
+            display: none;
         }
         @media (max-width: 800px){
             .board {
@@ -139,22 +134,14 @@
                 font-size: 14px;
             }
         }
-
-        /*  */
-        .board .list li {
-            display: none;
-        }
-        .board .list li.show {
-            display: block;
-        }
     </style>
 </head>
 <body>
     <div id="wrap">
         <div class="number">
             <ul>
-                <li><a href="index1.html">1</a></li>
-                <li class="active"><a href="index2.html#">2</a></li>
+                <li class="active"><a href="index1.html">1</a></li>
+                <li><a href="index2.html">2</a></li>
                 <li><a href="index3.html">3</a></li>
                 <li><a href="index4.html">4</a></li>
                 <li><a href="index5.html">5</a></li>
@@ -164,16 +151,12 @@
             </ul>
         </div>
         <div class="board">
-            <span class="sub"><a href="../javascript06.html#sample10">includes( )</a>를 이용하여 CSS 속성 검색하기</span>
+            <span class="sub"><a href="../javascript06.html#sample10">indexOf( )</a>를 이용하여 CSS 속성 검색하기</span>
             <h1><a href="searchEffect.html">CSS 속성 검색하기</a></h1>
 
             <div class="search">
                 <label for="search-box">검색하기</label>
                 <input type="text" id="search-box" placeholder="CSS 속성을 입력해주세요!!">
-            </div>
-
-            <div class="count">
-                전체 속성 갯수 : <em>0</em>개
             </div>
 
             <div class="list">
@@ -199,31 +182,23 @@
     <script>
         const searchBox = document.querySelector("#search-box");
         const cssList = document.querySelectorAll(".list ul li");
-        const cssCount = document.querySelector(".count em");
-
-        cssList.forEach((element, index) => {
-            element.classList.add("show");
-            console.log(index);
-            cssCount.innerHTML = index + 1;
-        });
 
         searchBox.addEventListener("keyup", () => {
-            const searchWord = searchBox.value; //사용자가 입력한 값
-
-            //console.log(searchWord)
+            const searchWord = searchBox.value; //사용자가 입력한 데이터 저장소
+            //console.log(searchWord);
 
             cssList.forEach(el => {
-                const cssName = el.dataset.name; //CSS 속성 모든 값
-                //console.log(cssName);
+                console.log(el.dataset.name)
 
-                if(cssName.includes(searchWord)){
-                    el.classList.add("show");
+                const cssName = el.dataset.name; //CSS 속성 값
+                
+                if(cssName.indexOf(searchWord)){
+                    el.classList.add("hide");
                 } else {
-                    el.classList.remove("show");
+                    el.classList.remove("hide");
                 }
             })
         })
-
     </script>
 </body>
 </html>

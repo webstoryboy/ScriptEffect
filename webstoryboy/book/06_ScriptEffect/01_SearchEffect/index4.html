@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Search Effect</title>
     <style>
         @font-face {
             font-family: 'NexonLv1Gothic';
@@ -31,187 +31,230 @@
             font-size: 16px;
             line-height: 1.6;
             word-break: break-all;
+            color: #223547;
         }
         a {
             text-decoration: none;
             color: #223547;
         }
-        .num {
+        .number {
             margin: 10px;
         }
-        .num li {
+        .number li {
             list-style: none;
             display: inline;
         }
-        .num li a {
-            border: 1px solid #000;
-            width: 30px; 
+        .number li a {
+            border: 1px solid #223547;
+            width: 30px;
             height: 30px;
             border-radius: 50px;
             display: inline-block;
             text-align: center;
             line-height: 30px;
+            transition: all 0.3s;
         }
-        .num li.active a {
-            background: #000;
+        .number li.active a {
+            background: #223547;
             color: #fff;
         }
         .board {
             margin: 5vw 10vw 10vw 10vw;
             width: 80vw;
-            background-color: #f1f3f6;
-            border: 2px solid #000;
-            padding: 3%;
+            background: #f1f3f6;
+            border: 2px solid #223547;
+            padding: 3vw;
             text-align: center;
-            box-sizing: border-box;
+            border-radius: 10px;
         }
-        .board h1 {
-            font-family: 'TmonMonsori';
-            color: #223547;
-            font-size: 60px;   
-            margin-top: 10px; 
-            margin-bottom: 20px;
-        }
-        .board span {
-            color: #223547;
+        .board .sub {
             font-size: 20px;
         }
+        .board .sub a {
+            font-size: 20px;
+            border-bottom: 1px solid #223547;
+        }
+        .board h1 a {
+            font-family: 'TmonMonsori';
+            font-size: 80px;
+            margin-bottom: 1vw;
+        }
+        .board .search {
+            margin-bottom: 3vw;
+        }
         .board .search label {
-            background-color: #bfe6fe;
-            font-size: 26px;
-            padding: 10px 30px;
-            border: 1px solid #000;
-            border-radius: 40px;
             display: none;
         }
         .board .search input {
             font-size: 24px;
-            border: 2px solid #000;
-            padding: 12px 10px 10px 30px;
+            border: 2px solid #223547;
+            padding: 10px 40px;
             border-radius: 40px;
-            outline: none;
             width: 50%;
-        }
-        .board .result {
-            margin-top: 10px;
-            color: #777;
-        }
-        .board .result em {
-            font-style: normal;
-            color: #830e0e;
         }
         .board .count {
             text-align: right;
             color: #777;
-            margin-top: 30px;
         }
         .board .count em {
             font-style: normal;
+            color: #223547;
         }
-        .board .desc {
-            font-size: 18px;
-            line-height: 1.6;
-            list-style: none;
+        .board .list {
+            text-align: left;
+        }
+        .board .list li {
             background-color: #bdd6e6;
             margin: 5px 0;
-            padding: 17px 10px 15px 10px;
+            padding: 7px 10px;
+            border-radius: 4px;
+            list-style: none;
+            transition: all 0.3s;
+        }
+        .board .list li:hover {
+            background-color: #a5c3d5;
+            cursor: grabbing
+        }
+        @media (max-width: 800px){
+            .board {
+                margin: 2vw 2vw 2vw 2vw;
+                width: 96vw;
+                padding: 4vw 2vw;
+            }
+            .board .sub {
+                font-size: 14px;
+            }
+            .board .sub a {
+                font-size: 14px;
+            }
+            .board h1 a {
+                font-size: 40px;
+            }
+            .board .search input {
+                font-size: 16px;
+                padding: 5px 20px;
+                width: 100%;
+            }
+            .board .list li {
+                font-size: 14px;
+            }
+        }
+
+        /* option */
+        .board .desc {
+            background: #a5c3d5;
+            font-size: 18px;
+            margin: 5px 0;
+            border-radius: 4px;
+            padding: 15px 10px;
+        }
+        .board .list {
+            background: #a5c3d5;
+            padding: 15px 10px;
             border-radius: 4px;
         }
-        .board .prop {
-            padding: 10px;
-            background-color: #bdd6e6;
-            text-align: left;
-            margin-top: 10px;
-        }
-        .board .prop span {
-            border: 1px solid #000;
-            padding: 2px 15px;
-            margin: 5px;
+        .board .list span {
+            border: 1px solid #223547;
+            border-radius: 20px;
+            padding: 5px 20px;
+            margin: 3px;
             display: inline-block;
-            word-break: keep-all;
-            white-space: nowrap;
-            border-radius: 50px;
+            transition: all 0.3s;
+            cursor: pointer;
         }
-        .board .list ul li.show {
-            display: block;
+        .board .list span:hover {
+            background: #223547;
+            color: #fff;
         }
     </style>
 </head>
 <body>
-    
     <div id="wrap">
-        <div class="num">
+        <div class="number">
             <ul>
-                <li><a href="index.html">1</a></li>
-                <li><a href="index2.html">2</a></li>
+                <li><a href="index1.html">1</a></li>
+                <li><a href="index2.html#">2</a></li>
                 <li><a href="index3.html">3</a></li>
                 <li class="active"><a href="index4.html">4</a></li>
                 <li><a href="index5.html">5</a></li>
                 <li><a href="index6.html">6</a></li>
+                <li><a href="index7.html">7</a></li>
+                <li><a href="index8.html">8</a></li>
             </ul>
         </div>
         <div class="board">
-            <span>find()를 이용하여 속성 설명 검색하기</span>
-            <h1>CSS 속성 검색하기</h1>
-            
+            <span class="sub"><a href="../javascript06.html#sample11">find()</a>를 이용하여 속성을 검색하면 설명 보여주기</span>
+            <h1><a href="searchEffect.html">CSS 속성 검색하기</a></h1>
+
+            <!-- 검색 영역 -->
             <div class="search">
                 <label for="search-box">검색하기</label>
-                <input id="search-box" type="text" placeholder="CSS 속성 검색하기">
+                <input type="text" id="search-box" placeholder="CSS 속성을 입력해주세요!!">
             </div>
-            <div class="count">
-                
-            </div>
-            <div class="desc">
-                아래의 속성을 검색하면 설명이 나옵니다.
-            </div>
-            <div class="prop">
-                
-            </div>
+
+            <!-- 전체 목록 갯수 -->
+            <div class="count">전체 목록 갯수 : 0개</div>
+
+            <!-- CSS 설명 영역 -->
+            <div class="desc">아래의 속성을 검색하면 설명이 나옵니다.!</div>
+
+            <!-- CSS 속성 리스트 -->
+            <div class="list"></div>
         </div>
     </div>
 
+    <!-- script -->
     <script>
         const cssProperty = [
-            {name: "align-content", desc: "align-content 속성은 콘텐츠 아이템의 상하관계 정렬 상태를 설정합니다."},
-            {name: "align-items", desc: "align-items 속성은 콘텐츠 아이템의 내부 상하관계 정렬 상태를 설정합니다."},
-            {name: "align-self", desc: "align-self 속성은 개별적인 콘텐츠 아이템의 정렬 상태를 설정합니다."},
-            {name: "all", desc: "all 속성은 요소의 속성을 초기화 또는 상속을 설정합니다."},
-            {name: "animation", desc: "animation 속성은 애니메이션과 관련된 속성을 일괄적으로 설정합니다."},
-            {name: "animation-delay", desc: "animation-delay 속성은 애니메이션 지연 시간을 설정합니다."},
-            {name: "animation-direction", desc: "animation-direction 속성은 애니메이션 움직임 방향을 설정합니다."},
-            {name: "animation-duration", desc: "animation-duration 속성은 애니메이션 움직임 시간을 설정합니다."},
+            {name: "all", desc: "all 속성은 CSS 속성을 재설정하는데 사용할 수 있는 약식 속성입니다."},
+            {name: "animation", desc: "animation 속성은 애니메이션 속성을 설정하기 위한 약식 속성입니다."},
+            {name: "animation-delay", desc: "animation-delay 속성은 애니메이션이 시작되는 시간을 설정합니다."},
+            {name: "animation-direction", desc: "animation-direction 속성은 애니메이션이 움직이는 방향을 설정합니다."},
+            {name: "animation-duration", desc: "animation-duration 속성은 애니메이션이 움직이는 시간을 설정합니다."},
             {name: "animation-fill-mode", desc: "animation-fill-mode 속성은 애니메이션이 끝난 후의 상태를 설정합니다."},
-        ]
+            {name: "animation-iteration-count", desc: "animation-iteration-count 속성은 애니메이션 반복 횟수를 설정합니다."},
+            {name: "animation-name", desc: "animation-name 속성은 애니메이션 키프레임 이름을 설정합니다."},
+            {name: "animation-play-state", desc: "animation-play-state 속성은 애니메이션의 진행상태를 설정합니다."},
+            {name: "backdrop-filter", desc: "backdrop-filter 속성은 요소 뒤에 필터효과를 설정합니다."},
+            {name: "backface-visibility", desc: "backface-visibility 속성은 요소 뒷면 출력 여부 설정합니다."},
+            {name: "caption-side", desc: "caption-side 속성은 테이블 caption의 위치를 설정합니다."},
+            {name: "direction", desc: "direction 속성은 문장의 방향을 설정합니다."},
+            {name: "filter", desc: "filter 속성은 그래픽 효과를 설정합니다."},
+            {name: "flex", desc: "flex 속성은 콘텐츠의 성질을 flex로 정의합니다."},
+            {name: "grid-template-columns", desc: "grid-template-columns 속성은 가로 컬럼의 크기와 위치 설정합니다."},
+        ];
         const searchBox = document.querySelector("#search-box");
-        const cssDesc = document.querySelector(".desc");
-        const cssProp = document.querySelector(".prop");
         const cssCount = document.querySelector(".count");
-        
-        cssProperty.map((e,i) => {
-            cssProp.innerHTML += "<span>" + e.name + "</span>";
-            cssCount.innerHTML = "전체 속성 갯수 : <em>" + i + "</em>개";
+        const cssDesc = document.querySelector(".desc");
+        const cssList = document.querySelector(".list");
+
+        //출력하기
+        cssProperty.map((element, index) => {
+            cssCount.innerText = "전체 목록 갯수 : "+ (index+1) +"개";
+            cssList.innerHTML += "<span>"+ element.name +"</span>";
         });
 
-        searchBox.addEventListener("keyup", () => {   
-            const searchProp = searchBox.value;  
-            findProp(searchProp)
+        searchBox.addEventListener("keyup", () => {
+            const searchWord = searchBox.value;
+            //console.log(searchWord)
+            findProp(searchWord);
         });
 
-        document.querySelectorAll(".prop span").forEach(el => {
-            el.addEventListener("click", () => {
-                const searchProp = el.innerText;
-                findProp(searchProp)
+        document.querySelectorAll(".list span").forEach(span => {
+            span.addEventListener("click", () => {
+                const listProp = span.innerText;
+                findProp(listProp);
             })
         })
 
         function findProp(searchProp){
-            const targetData = cssProperty.find((data) => data.name === searchProp);
+            const targetData = cssProperty.find((data) => data.name === searchProp)
 
             if(targetData == null){
-                cssDesc.textContent = "해당 속성은 존재하지 않습니다.";
+                cssDesc.textContent = "해당 속성은 존재하지 않습니다. 다시 검색해 주세요!";
                 return;
             }
-            cssDesc.textContent = targetData.desc;
+            cssDesc.innerHTML = targetData.desc;
         }
     </script>
 </body>

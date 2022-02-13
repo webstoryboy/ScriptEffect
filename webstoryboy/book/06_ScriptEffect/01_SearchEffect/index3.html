@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Search Effect</title>
     <style>
         @font-face {
             font-family: 'NexonLv1Gothic';
@@ -31,234 +31,232 @@
             font-size: 16px;
             line-height: 1.6;
             word-break: break-all;
+            color: #223547;
         }
         a {
             text-decoration: none;
             color: #223547;
         }
-        .num {
+        .number {
             margin: 10px;
         }
-        .num li {
+        .number li {
             list-style: none;
             display: inline;
         }
-        .num li a {
-            border: 1px solid #000;
-            width: 30px; 
+        .number li a {
+            border: 1px solid #223547;
+            width: 30px;
             height: 30px;
             border-radius: 50px;
             display: inline-block;
             text-align: center;
             line-height: 30px;
+            transition: all 0.3s;
         }
-        .num li.active a {
-            background: #000;
+        .number li.active a {
+            background: #223547;
             color: #fff;
         }
         .board {
             margin: 5vw 10vw 10vw 10vw;
             width: 80vw;
-            background-color: #f1f3f6;
-            border: 2px solid #000;
-            padding: 3%;
+            background: #f1f3f6;
+            border: 2px solid #223547;
+            padding: 3vw;
             text-align: center;
-            box-sizing: border-box;
+            border-radius: 10px;
         }
-        .board h1 {
-            font-family: 'TmonMonsori';
-            color: #223547;
-            font-size: 60px;   
-            margin-top: 10px; 
-            margin-bottom: 20px;
-        }
-        .board span {
-            color: #223547;
+        .board .sub {
             font-size: 20px;
         }
+        .board .sub a {
+            font-size: 20px;
+            border-bottom: 1px solid #223547;
+        }
+        .board h1 a {
+            font-family: 'TmonMonsori';
+            font-size: 80px;
+            margin-bottom: 1vw;
+        }
+        .board .search {
+            margin-bottom: 3vw;
+        }
         .board .search label {
-            background-color: #bfe6fe;
-            font-size: 26px;
-            padding: 10px 30px;
-            border: 1px solid #000;
-            border-radius: 40px;
             display: none;
         }
         .board .search input {
             font-size: 24px;
-            border: 2px solid #000;
-            padding: 12px 10px 10px 30px;
+            border: 2px solid #223547;
+            padding: 10px 40px;
             border-radius: 40px;
-            outline: none;
             width: 50%;
-        }
-        .board .result {
-            margin-top: 10px;
-            color: #777;
-        }
-        .board .result em {
-            font-style: normal;
-            color: #830e0e;
         }
         .board .count {
             text-align: right;
             color: #777;
-            margin-top: 30px;
         }
         .board .count em {
             font-style: normal;
+            color: #223547;
         }
         .board .list {
             text-align: left;
-            margin-top: 10px;
         }
-        .board .list ul li {
-            line-height: 1.6;
-            list-style: none;
+        .board .list li {
             background-color: #bdd6e6;
             margin: 5px 0;
-            padding: 5px 10px;
+            padding: 7px 10px;
             border-radius: 4px;
-            display: none;
+            list-style: none;
+            transition: all 0.3s;
         }
-        .board .list ul li.show {
-            display: block;
+        .board .list li:hover {
+            background-color: #a5c3d5;
+            cursor: grabbing
+        }
+        @media (max-width: 800px){
+            .board {
+                margin: 2vw 2vw 2vw 2vw;
+                width: 96vw;
+                padding: 4vw 2vw;
+            }
+            .board .sub {
+                font-size: 14px;
+            }
+            .board .sub a {
+                font-size: 14px;
+            }
+            .board h1 a {
+                font-size: 40px;
+            }
+            .board .search input {
+                font-size: 16px;
+                padding: 5px 20px;
+                width: 100%;
+            }
+            .board .list li {
+                font-size: 14px;
+            }
         }
 
+        /* option */
         .board .search span {
-            border: 1px solid #000;
-            border-radius: 40px;
-            padding: 3px 20px;
-            margin: 3px 0;
-            font-size: 16px;
+            border: 1px solid #223547;
+            border-radius: 30px;
+            padding: 5px 30px;
             display: inline-block;
-            cursor: pointer;
+            margin: 3px;
+            transition: all 0.2s;
         }
         .board .search span:hover {
-            background: #bdd6e6;
+            background: #223547;
             color: #fff;
-            border-color: #bdd6e6;
+            cursor: pointer;
+        }
+        .board .list li {
+            display: none;
+        }
+        .board .list li.show {
+            display: block;
         }
     </style>
 </head>
 <body>
-    
     <div id="wrap">
-        <div class="num">
+        <div class="number">
             <ul>
-                <li><a href="index.html">1</a></li>
-                <li><a href="index2.html">2</a></li>
+                <li><a href="index1.html">1</a></li>
+                <li><a href="index2.html#">2</a></li>
                 <li class="active"><a href="index3.html">3</a></li>
                 <li><a href="index4.html">4</a></li>
                 <li><a href="index5.html">5</a></li>
                 <li><a href="index6.html">6</a></li>
+                <li><a href="index7.html">7</a></li>
+                <li><a href="index8.html">8</a></li>
             </ul>
         </div>
         <div class="board">
-            <span>charAt()를 이용하여 알파벳 별로 검색하기</span>
-            <h1>CSS 속성 검색하기</h1>
-            
+            <span class="sub"><a href="#">charAt( )</a>를 이용하여 알파벳 별로 검색하기</span>
+            <h1><a href="searchEffect.html">CSS 속성 검색하기</a></h1>
+
             <div class="search">
-                <!-- <label for="search-box">검색하기</label>
-                <input id="search-box" type="text" placeholder="CSS 속성 검색하기"> -->
                 <span>a</span>
                 <span>b</span>
                 <span>c</span>
                 <span>d</span>
                 <span>e</span>
-                <span>f</span><br>
-                <span>레이아웃</span>
-                <span>애니메이션</span>
-                <span>효과</span>
-                <span>테이블</span>
-                <span>글자</span>
-                <span>위치</span> 
-                <span>간격</span>
-                <span>크기</span>
-                <span>기타</span>
+                <span>f</span>
+                <span>g</span>
+                <span>h</span>
             </div>
+
             <div class="count">
                 전체 속성 갯수 : <em>0</em>개
             </div>
+
             <div class="list">
                 <ul>
-                    <li data-name="align-content" data-topic="레이아웃"><strong>align-content</strong> : align-content 속성은 콘텐츠 아이템의 상하관계 정렬 상태를 설정합니다.</li>
-                    <li data-name="align-items" data-topic="레이아웃"><strong>align-items</strong> 속성은 콘텐츠 아이템의 내부 상하관계 정렬 상태를 설정합니다.</li>
-                    <li data-name="align-self" data-topic="레이아웃">align-self 속성은 개별적인 콘텐츠 아이템의 정렬 상태를 설정합니다.</li>
-                    <li data-name="all" data-topic="레이아웃">all 속성은 요소의 속성을 초기화 또는 상속을 설정합니다.</li>
-                    <li data-name="animation" data-topic="애니메이션">animation 속성은 애니메이션과 관련된 속성을 일괄적으로 설정합니다.</li>
-                    <li data-name="animation-delay" data-topic="애니메이션">animation-delay 속성은 애니메이션 지연 시간을 설정합니다.</li>
-                    <li data-name="animation-direction" data-topic="애니메이션">animation-direction 속성은 애니메이션 움직임 방향을 설정합니다.</li>
-                    <li data-name="animation-duration" data-topic="애니메이션">animation-duration 속성은 애니메이션 움직임 시간을 설정합니다.</li>
-                    <li data-name="animation-fill-mode" data-topic="애니메이션">animation-fill-mode 속성은 애니메이션이 끝난 후의 상태를 설정합니다.</li>
-                    <li data-name="animation-iteration-count" data-topic="애니메이션">animation-iteration-count 속성은 애니메이션 반복 횟수 설정합니다.</li>
-                    <li data-name="animation-name" data-topic="애니메이션">animation-name 속성은 애니메이션 keyframe 이름을 설정합니다.</li>
-                    <li data-name="animation-play-state" data-topic="애니메이션">animation-play-state 속성은 애니메이션 진행상태를 설정합니다.</li>
-                    <li data-name="animation-timing-function" data-topic="애니메이션">animation-timing-function 속성은 애니메이션 움직임의 속도를 설정합니다.</li>
-
-                    <li data-name="backdrop-filter" data-topic="효과">backdrop-filter 속성은 배경에 그래픽 효과를 설정합니다.</li>
-                    <li data-name="backface-visibility" data-topic="기타">backface-visibility 속성은 요소의 뒷면을 설정합니다.</li>
-
-                    <li data-name="caption-side" data-topic="테이블">caption-side 속성은 caption의 위치를 설정합니다.</li>
-                    <li data-name="caret-color" data-topic="기타">caret-color 속성은 input의 커서 색을 정의합니다.</li>
-
-                    <li data-name="direction" data-topic="글자">direction 속성은 문장의 방향을 설정합니다.</li>
-
-                    <li data-name="empty-cells" data-topic="테이블">empty-cells 속성은 테이블의 빈요소의 속성을 설정합니다.</li>
-
-                    <li data-name="filter" data-topic="효과">filter 속성은 그래픽 효과를 설정합니다.</li>
-                    <li data-name="flex" data-topic="레이아웃">flex 속성은 콘텐츠의 성질을 flex로 정의합니다.</li>
-
-                    <li data-name="grid" data-topic="레이아웃">grid-template-columns 속성은 가로 컬럼의 크기와 위치 설정합니다.</li>
-
-                    <li data-name="hanging-punctuation" data-topic="기타">hanging-punctuation 속성은 글씨의 시작 및 끝의 위치 정의합니다.</li>
-
-                    <li data-name="isolation" data-topic="기타">isolation 속성은 stacking context을 설정합니다.</li>
-
-                    <li data-name="justify-content" data-topic="레이아웃">justify-content 속성은 콘텐츠의 좌우 관계 정렬 상태를 정의합니다.</li>
-
-                    <li data-name="left" data-topic="위치">left 속성은 위치 요소의 왼쪽 속성을 설정합니다.</li>
-
-                    <li data-name="margin" data-topic="간격">margin 속성은 요소의 바같쪽 여백을 설정합니다.</li>
-                    <li data-name="margin-bottom" data-topic="간격">margin-bottom 속성은 요소의 아래 바같쪽 여백을 설정합니다.</li>
-                    <li data-name="margin-left" data-topic="간격">margin-left 속성은 요소의 왼쪽 바같쪽 여백을 설정합니다.</li>
-
-                    <li data-name="object-fit" data-topic="크기">object-fit 속성은 &lt;img&gt;, &lt;video&gt; 태그의 크기를 정의합니다.</li>
-
+                    <li data-name="all"><strong>all</strong> : all 속성은 CSS 속성을 재설정하는데 사용할 수 있는 약식 속성입니다.</li>
+                    <li data-name="animation"><strong>animation</strong> : animation 속성은 애니메이션 속성을 설정하기 위한 약식 속성입니다.</li>
+                    <li data-name="animation-delay"><strong>animation-delay</strong> : animation-delay 속성은 애니메이션이 시작되는 시간을 설정합니다.</li>
+                    <li data-name="animation-direction"><strong>animation-direction</strong> : animation-direction 속성은 애니메이션이 움직이는 방향을 설정합니다.</li>
+                    <li data-name="animation-duration"><strong>animation-duration</strong> : animation-duration 속성은 애니메이션이 움직이는 시간을 설정합니다.</li>
+                    <li data-name="animation-fill-mod"><strong>animation-fill-mode</strong> : animation-fill-mode 속성은 애니메이션이 끝난 후의 상태를 설정합니다.</li>
+                    <li data-name="animation-iteration-count"><strong>animation-iteration-count</strong> : animation-iteration-count 속성은 애니메이션 반복 횟수를 설정합니다.</li>
+                    <li data-name="animation-name"><strong>animation-name</strong> : animation-name 속성은 애니메이션 키프레임 이름을 설정합니다.</li>
+                    <li data-name="animation-play-state"><strong>animation-play-state</strong> : animation-play-state 속성은 애니메이션의 진행상태를 설정합니다.</li>
+                    <li data-name="backdrop-filter"><strong>backdrop-filter</strong> : backdrop-filter 속성은 요소 뒤에 필터효과를 설정합니다.</li>
+                    <li data-name="backface-visibility"><strong>backface-visibility</strong> : backface-visibility 속성은 요소 뒷면 출력 여부 설정합니다.</li>
+                    <li data-name="caption-side"><strong>caption-side</strong> : caption-side 속성은 테이블 caption의 위치를 설정합니다.</li>
+                    <li data-name="direction"><strong>direction</strong> : direction 속성은 문장의 방향을 설정합니다.</li>
+                    <li data-name="empty-cells"><strong>empty-cells</strong> : empty-cells 속성은 테이블의 빈요소의 속성을 설정합니다.</li>
+                    <li data-name="filter"><strong>filter</strong> : filter 속성은 그래픽 효과를 설정합니다.</li>
+                    <li data-name="flex"><strong>flex</strong> : flex 속성은 콘텐츠의 성질을 flex로 정의합니다.</li>
+                    <li data-name="grid"><strong>grid</strong> : grid-template-columns 속성은 가로 컬럼의 크기와 위치 설정합니다.</li>
+                    <li data-name="hanging-punctuation"><strong>hanging-punctuation</strong> : hanging-punctuation 속성은 글씨의 시작 및 끝의 위치 정의합니다.</li>
+                    <li data-name="isolation"><strong>isolation</strong> : isolation 속성은 stacking context을 설정합니다.</li>
+                    <li data-name="justify-content"><strong>justify-content</strong> : justify-content 속성은 콘텐츠의 좌우 관계 정렬 상태를 정의합니다.</li>
+                    <li data-name="left"><strong>left</strong> : left 속성은 위치 요소의 왼쪽 속성을 설정합니다.</li>
+                    <li data-name="margin"><strong>margin</strong> : margin 속성은 요소의 바같쪽 여백을 설정합니다.</li>
+                    <li data-name="margin"><strong>margin</strong> : margin 속성은 요소의 바같쪽 여백을 설정합니다.</li>
                 </ul>
             </div>
         </div>
     </div>
 
+    <!-- script -->
     <script>
-        const searchBox = document.querySelector("#search-box");
-        const cssList = document.querySelectorAll(".list ul li");
-        const cssCount = document.querySelector(".count em");
-        
-        cssList.forEach((e, i) => {
-            e.classList.add("show");
-            cssCount.innerHTML = i;
+        const searchBox = document.querySelectorAll(".search span");    //알파벳 버튼들
+        const cssList = document.querySelectorAll(".list ul li");       //속성 리스트
+        const cssCount = document.querySelector(".count em");           //속성 갯수
+
+        //모든 데이터 보이기
+        cssList.forEach((li, index) => {
+            li.classList.add("show");
+            cssCount.innerText = index;
         })
 
-        document.querySelectorAll(".search span").forEach(el => {
+        //알파벳을 클릭하면 클릭한 데이터 값을 가져와야 한다.
+        //searchBox.addEventListener is not a function
+        searchBox.forEach(el => {
             el.addEventListener("click", () => {
-                const searchWord = el.innerText;
-                //console.log(searchWord)
+                const searchWord = el.innerText;            //알파벳 첫글자
+                //console.log(searcWord)
 
-                cssList.forEach((el) => {
-                    const cssName = el.dataset.name;
-                    const cssTopic = el.dataset.topic;
+                cssList.forEach(el => {
+                    const cssName = el.dataset.name;       //CSS 속성 값
+                    //console.log(cssName)
 
-                    if(searchWord.charAt(0) === cssName.charAt(0) || searchWord.charAt(0) === cssTopic.charAt(0)){
+                    //알파벳 첫글자(a) == CSS 속성의 첫글자(a)
+                    if(searchWord.charAt(0) === cssName.charAt(0)){
                         el.classList.add("show");
                     } else {
                         el.classList.remove("show");
                     }
-                });
+                })
             })
         })
-
-
     </script>
 </body>
 </html>
