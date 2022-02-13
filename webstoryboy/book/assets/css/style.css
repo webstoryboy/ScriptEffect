@@ -676,3 +676,29 @@ body.intro #footer {
     vertical-align: top;
 }
 
+/* layout */
+.layout {
+    display: flex;
+    justify-content: space-between;
+}
+.culumn6 {
+    width: 49%;
+} 
+
+/* media */
+@media (max-width: 800px) {
+    .container {width: 94%;}
+    #aside {top: 4px;}
+    #header {height: 62px; width: 100%; overflow: hidden;}
+    #header nav {display: none;}
+    #header h1 {padding-left: 60px; padding-top: 22px;}
+    #explanation {padding: 0px;}
+    #explanation h2 {font-size: 26px; margin-top: 70px; margin-bottom: 20px;}
+    #explanation p {font-size: 14px; line-height: 1.8;}
+    pre[class*=language-] {padding: 1em !important;}
+    code[class*=language-], pre[class*=language-] {font-size: 14px !important;}
+    #youtube .desc .left {padding: 20px;}
+    #youtube .desc .right {padding: 20px;}
+    #youtube .desc .left .title {font-size: 22px;}
+    #youtube .desc .right h3 {display: none;}
+}
