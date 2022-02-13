@@ -1,0 +1,10 @@
+/* container */
+.container {
+    width: 1160px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.bg-color {
+    background-color: #f7f6ff;
+}
