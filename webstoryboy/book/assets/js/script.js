@@ -4,9 +4,9 @@ $( ".resizable" ).resizable({
 $( ".draggable" ).draggable();
 
 
-document.querySelector("#explanation .soFar .click").addEventListener("click", (e) => {
+document.querySelector(".soFar .click").addEventListener("click", (e) => {
     e.preventDefault();
-    document.querySelector("#explanation .soFar").classList.toggle("show");
+    document.querySelector(".soFar").classList.toggle("show");
 })
 
 document.querySelector(".result01-click").addEventListener("click", (e) => {
@@ -20,6 +20,10 @@ document.querySelector(".result02-click").addEventListener("click", (e) => {
 document.querySelector(".result03-click").addEventListener("click", (e) => {
     e.preventDefault();
     document.querySelector(".result03-view").classList.toggle("show");
+})
+document.querySelector(".result04-click").addEventListener("click", (e) => {
+    e.preventDefault();
+    document.querySelector(".result04-view").classList.toggle("show");
 })
 
 window.addEventListener("scroll", function(){

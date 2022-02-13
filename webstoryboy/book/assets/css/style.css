@@ -454,6 +454,9 @@ body.intro #footer {
 #explanation .soFar .view {
     display: none;
 }
+#explanation .soFar .view.show {
+    display: block;
+}
 #explanation .soFar.show .view {
     display: block;
 }
@@ -668,7 +671,7 @@ body.intro #footer {
 }
 .highlight [fakeimage] {
     height: 100px;
-    width: 200px;
+    max-width: 200px;
 }
 
 .highlight .card {
@@ -680,6 +683,7 @@ body.intro #footer {
 .layout {
     display: flex;
     justify-content: space-between;
+    margin-bottom: 10px;
 }
 .culumn6 {
     width: 49%;

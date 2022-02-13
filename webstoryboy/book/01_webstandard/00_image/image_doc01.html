@@ -187,7 +187,7 @@
 &lt;/body&gt;
 &lt;/html&gt;
 </code></pre>
-                <div class="soFar result01-click mb100">
+                <div class="soFar result01-click">
                     <div class="click">여기까지 결과 확인하기</div>
                 </div>    
             </div>
@@ -196,7 +196,7 @@
                 <iframe style="width: 100%; height: 400px; background: #fff;" src="image_result01_01.html" frameborder="0"></iframe>
             </div>
 
-            <div class="container">   
+            <div class="container mt100">   
                 <p data-num="01" class="mt50">
                     <code>section</code>을 만들고, 가운데 구조 <code>container</code>를 만듭니다.
                     section 속성에는 padding: 120px 0을 설정하고 전체 선택자(*)를 이용하여,
@@ -241,7 +241,7 @@
                     .image 클래스에 <code>width</code> 값을 넣어줍니다.
                     이미지는 <code>width</code>에 100%를 선언하여, 박스 크기에 맞추어 줍니다.
                 </p>
-                <div class="soFar result02-click mb100">
+                <div class="soFar result02-click">
                     <div class="click">여기까지 결과 확인하기</div>
                 </div> 
             </div>
@@ -250,7 +250,7 @@
                 <iframe style="width: 100%; height: 500px; background: #fff;" src="image_result01_02.html" frameborder="0"></iframe>
             </div>
 
-            <div class="container">
+            <div class="container mt100">
                 <p class="mt50">여기까지 잘 따라오셨다면, 제목과 설명 부분을 설정하겠습니다.</p>
 
 <pre><code class="language-html">&lt;div class="image-inner"&gt;
@@ -325,7 +325,7 @@
                     버튼은 <code>inline</code> 구조이기 때문에 패딩이나 마진이 안 먹힐 수 있어서 <code>inline-block</code>을 넣어줍니다.
                     이렇게 하면 영역도 먹히면서 가로 정렬이 됩니다.
                 </p>
-                <div class="soFar result03-click mb100">
+                <div class="soFar result03-click">
                     <div class="click">여기까지 결과 확인하기</div>
                 </div> 
             </div>
@@ -335,49 +335,295 @@
             </div>
 
 
-            <div class="container">
-                <p>이번에는 웹 표준에 맞게 시멘틱 태그를 사용하고 네이밍도 다시 설정하겠습니다.</p>
+            <div class="container mt100">
+                <p>
+                    이번에는 웹 표준에 맞게 시멘틱 태그를 사용하고 네이밍도 다시 설정하겠습니다.
+                    &lt;article&gt; 태그는 사이트의 독립적인 컨텐츠 섹션을 설정할 때 사용하므로
+                    이미지 섹션은 &lt;article&gt; 태그로 설정하겠습니다.
+                    &lt;figure&gt; 태그는 이미지를 표현 할 때 사용하므로 &lt;img&gt; 태그와 같이 사용하겠습니다.
+                    전체적인 구조를 image__header와 image__body로 나누어서 좀 더 체계적으로 설정하였고,
+                    네이밍도 알기 쉽게 체계화하였습니다.
+                </p>
 
                 <div class="layout">
                     <div class="culumn6">
                         <div class="highlight">
-                            <article class="&lt;image-wrap&gt;">
-                                <div class="contaienr">
-                                    <div class="h2"></div>
-                                    <div class="p"></div>
-                                    <div class="image-inner">
-                                        <div class="image">
-                                            <div class="img"></div>
-                                        </div>
-                                        <div class="image-text">
-                                            <div class="h3"></div>
-                                            <div class="p"></div>
-                                            <div class="a"></div>
-                                        </div>
-                                    </div>
+                            <div class="&lt;article&gt;">
+                                <div class="&lt;div&gt;">
+                                    <figure class="&lt;figure&gt;">
+                                        <div class="&lt;img&gt;" fakeimage></div>
+                                    </figure>
                                 </div>
-                            </article>
+                                <div class="&lt;div&gt;">
+                                    <div class="&lt;h3&gt;"></div>
+                                    <div class="&lt;p&gt;"></div>
+                                    <div class="&lt;a&gt;"></div>
+                                </div>
+                            </div>
                         </div>
-                        <!-- highlight -->
                     </div>
                     <div class="culumn6">
                         <div class="highlight">
                             <div class="image">
-                                <div class="card__header">
-                                    <figure class="card__figure">
-                                        <div class="card__image" fakeimage></div>
+                                <div class="image__header">
+                                    <figure class="image__figure">
+                                        <div class="image__img" fakeimage></div>
                                     </figure>
                                 </div>
-                                <div class="card__body">
-                                    <div class="card__title"></div>
-                                    <div class="card__desc"></div>
+                                <div class="image__body">
+                                    <div class="image__title"></div>
+                                    <div class="image__desc"></div>
+                                    <div class="image__btn"></div>
                                 </div>
                             </div>
                         </div>
-                        <!-- highlight -->
                     </div>
                 </div>
-                
+
+                <p>
+                    여러분들도 이렇게 코딩을 다시 한번 해보시고 저랑 비교해 보면 좋을 것 같습니다.
+                    클래스 이름도 부모-자식 관계로 써도 좋지만,
+                    하이픈(__)을 사용하여 쓰는 방법도 있습니다.
+                    클래스 이름 표현하는 방법도 여러가지가 있지만,
+                    여러분 나름대로 효과적이고, 효율적인 방법으로 사용하면 됩니다.
+                    또는 회사에서 쓰는 규칙이 있다면 그 방법을 사용해도 됩니다.
+                </p>
+
+                <div class="layout">
+                    <div class="culumn6">
+<pre><code class="language-css">.image-inner {
+    display: flex;
+    justify-content: space-between;
+}
+.image-inner .image {
+    width: 49%;
+    position: relative;
+    text-align: left;
+}
+.image-inner .image img {
+    width: 100%;
+}
+.image-inner .image .image-text {
+    position: absolute;
+    left: 30px;
+    bottom: 30px;
+    color: #fff;
+}
+.image-inner .image .image-text h3 {
+    font-size: 32px;
+    font-family: 'NexonFootballGothic';
+    font-weight: 300;
+    margin-bottom: 10px;
+}
+.image-inner .image .image-text p {
+    font-size: 16px;
+    font-family: 'NexonLv1Gothic';
+    font-weight: 400;
+    line-height: 140%;
+    margin-bottom: 16px;
+}
+.image-inner .image .image-text a {
+    text-decoration: none;
+    color: #fff;
+    font-family: 'NexonLv1Gothic';
+    background: #BE4E15;
+    padding: 10px 20px;
+    display: inline-block;
+}
+.image-inner .image:last-child .image-text a {
+    background: #C9931D;
+}
+</code></pre>
+                    </div>
+                    <div class="culumn6">
+<pre><code class="language-css">.image__inner {
+    display: flex;
+    justify-content: space-between;
+}
+.image__inner .image {
+    width: 49%;
+    position: relative;
+    text-align: left;
+}
+.image__figure img {
+    width: 100%;
+}
+.image__body {
+    position: absolute;
+    left: 30px;
+    bottom: 30px;
+    color: #fff;
+}
+.image__title {
+    font-size: 32px;
+    font-family: 'NexonFootballGothic';
+    font-weight: 300;
+    margin-bottom: 10px;
+}
+.image__desc {
+    font-size: 16px;
+    font-family: 'NexonLv1Gothic';
+    font-weight: 400;
+    line-height: 140%;
+    margin-bottom: 16px;
+}
+.image__btn {
+    text-decoration: none;
+    color: #fff;
+    font-family: 'NexonLv1Gothic';
+    background: #BE4E15;
+    padding: 10px 20px;
+    display: inline-block;
+}
+.image__btn.yellow {
+    background: #C9931D;
+}
+</code></pre>
+                    </div>
+                </div>
+
+                <p>
+                    웹 표준 코딩에 있어 의미에 맞는 태그 사용도 중요하지만, 
+                    누구나 알아보기 쉽게 적절한 네이밍을 사용하는 것도 매우 중요합니다. 
+                    별거 아닌 것 같지만 이런 사소한 부분부터 신경을 써주는게 웹 표준, 웹 접근성의 기본이라고 할 수 있습니다.
+                </p>
+
+                <div class="soFar">
+                    <div class="click result04-click">여기까지 코드 확인하기</div>
+                    <div class="view result04-view">
+<pre><code class="language-html">&lt;!DOCTYPE html&gt;
+&lt;html lang="ko"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta http-equiv="X-UA-Compatible" content="IE=edge"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;이미지 유형01&lt;/title&gt;
+
+    &lt;link href="https://webfontworld.github.io/gmarket/GmarketSans.css" rel="stylesheet"&gt;
+    &lt;link href="https://webfontworld.github.io/NexonFootballGothic/NexonFootballGothic.css" rel="stylesheet"&gt;
+    &lt;link href="https://webfontworld.github.io/NexonLv1Gothic/NexonLv1Gothic.css" rel="stylesheet"&gt;
+    &lt;style&gt;
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .image-wrap {
+            width: 100%;
+            /* background: rgba(0,0,0,0.2); */
+        }
+        .gmark {
+            font-family: 'GmarketSans';
+        }
+        .section {
+            padding: 120px 0;
+            text-align: center;
+        }
+        .section__h2 {
+            font-size: 50px;
+            font-weight: 500;
+            margin-bottom: 20px;
+            line-height: 1;
+        }
+        .section__desc {
+            font-size: 22px;
+            font-weight: 300;
+            margin-bottom: 80px;
+            line-height: 150%;
+            color: #67778A;
+        }
+        .container {
+            width: 1160px;
+            margin: 0 auto;
+            padding: 0 20px;
+            /* background: rgba(0,0,0,0.3); */
+        }
+        .image__inner {
+            display: flex;
+            justify-content: space-between;
+        }
+        .image__inner .image {
+            width: 49%;
+            position: relative;
+            text-align: left;
+        }
+        .image__figure img {
+            width: 100%;
+        }
+        .image__body {
+            position: absolute;
+            left: 30px;
+            bottom: 30px;
+            color: #fff;
+        }
+        .image__title {
+            font-size: 32px;
+            font-family: 'NexonFootballGothic';
+            font-weight: 300;
+            margin-bottom: 10px;
+        }
+        .image__desc {
+            font-size: 16px;
+            font-family: 'NexonLv1Gothic';
+            font-weight: 400;
+            line-height: 140%;
+            margin-bottom: 16px;
+        }
+        .image__btn {
+            text-decoration: none;
+            color: #fff;
+            font-family: 'NexonLv1Gothic';
+            background: #BE4E15;
+            padding: 10px 20px;
+            display: inline-block;
+        }
+        .image__btn.yellow {
+            background: #C9931D;
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;section class="image-wrap gmark section"&gt;
+        &lt;div class="container"&gt;
+            &lt;h2 class="section__h2"&gt;동물공감 인터뷰&lt;/h2&gt;
+            &lt;p class="section__desc"&gt;
+                이미지 유형입니다. 마우스 오버시 자세한 정보가 나와는 구조입니다.&lt;br&gt;
+                Gmarket Sans Light 22px 150% #67778A 
+            &lt;/p&gt;
+            &lt;div class="image__inner"&gt;
+                &lt;article class="image"&gt;
+                    &lt;div class="image__header"&gt;
+                        &lt;figure class="image__figure"&gt;
+                            &lt;img src="../../assets/img/imagetype01.jpg" alt="애교만점 웰시코기"&gt;
+                        &lt;/figure&gt;
+                    &lt;/div&gt;
+                    &lt;div class="image__body"&gt;
+                        &lt;h3 class="image__title"&gt;애교만점 웰시코기&lt;/h3&gt;
+                        &lt;p class="image__desc"&gt;제목은 넥슨 풋볼 고딕 폰트입니다.&lt;br&gt;설명부분은 넥슨 LV1 고딕 16px 140% 입니다.&lt;/p&gt;
+                        &lt;a href="#" class="image__btn"&gt;자세히 보기&lt;/a&gt;
+                    &lt;/div&gt;
+                &lt;/article&gt;
+
+                &lt;article class="image"&gt;
+                    &lt;div class="image__header"&gt;
+                        &lt;figure class="image__figure"&gt;
+                            &lt;img src="../../assets/img/imagetype02.jpg" alt="코카스 파니엘"&gt;
+                        &lt;/figure&gt;
+                    &lt;/div&gt;
+                    &lt;div class="image__body"&gt;
+                        &lt;h3 class="image__title"&gt;코카스 파니엘&lt;/h3&gt;
+                        &lt;p class="image__desc"&gt;제목은 넥슨 풋볼 고딕 폰트입니다.&lt;br&gt;설명부분은 넥슨 LV1 고딕 16px 140% 입니다.&lt;/p&gt;
+                        &lt;a href="#" class="image__btn yellow"&gt;자세히 보기&lt;/a&gt;
+                    &lt;/div&gt;
+                &lt;/article&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/section&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+                    </div>
+                </div>
             </div>
 
             <div class="container">

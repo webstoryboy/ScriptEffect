@@ -1,18 +1,130 @@
-&lt;div class="image-inner"&gt;
-    &lt;div class="image"&gt;
-        &lt;img src="../../assets/img/imagetype01.jpg" alt="애교만점 웰시코기"&gt;
-        &lt;div class="image-text"&gt;
-            &lt;h3&gt;애교만점 웰시코기&lt;/h3&gt;
-            &lt;p&gt;제목은 넥슨 풋볼 고딕 폰트입니다.&lt;br&gt;설명부분은 넥슨 LV1 고딕 16px 140% 입니다.&lt;/p&gt;
-            &lt;a href="#"&gt;자세히 보기&lt;/a&gt;
+&lt;!DOCTYPE html&gt;
+&lt;html lang="ko"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta http-equiv="X-UA-Compatible" content="IE=edge"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;이미지 유형01&lt;/title&gt;
+
+    &lt;link href="https://webfontworld.github.io/gmarket/GmarketSans.css" rel="stylesheet"&gt;
+    &lt;link href="https://webfontworld.github.io/NexonFootballGothic/NexonFootballGothic.css" rel="stylesheet"&gt;
+    &lt;link href="https://webfontworld.github.io/NexonLv1Gothic/NexonLv1Gothic.css" rel="stylesheet"&gt;
+    &lt;style&gt;
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .image-wrap {
+            width: 100%;
+            /* background: rgba(0,0,0,0.2); */
+        }
+        .gmark {
+            font-family: 'GmarketSans';
+        }
+        .section {
+            padding: 120px 0;
+            text-align: center;
+        }
+        .section .h2 {
+            font-size: 50px;
+            font-weight: 500;
+            margin-bottom: 20px;
+            line-height: 1;
+        }
+        .section .desc {
+            font-size: 22px;
+            font-weight: 300;
+            margin-bottom: 80px;
+            line-height: 150%;
+            color: #67778A;
+        }
+        .container {
+            width: 1160px;
+            margin: 0 auto;
+            padding: 0 20px;
+            /* background: rgba(0,0,0,0.3); */
+        }
+        .image__inner {
+            display: flex;
+            justify-content: space-between;
+        }
+        .image__inner .image {
+            width: 49%;
+            position: relative;
+            text-align: left;
+        }
+        .image__figure img {
+            width: 100%;
+        }
+        .image__body {
+            position: absolute;
+            left: 30px;
+            bottom: 30px;
+            color: #fff;
+        }
+        .image__title {
+            font-size: 32px;
+            font-family: 'NexonFootballGothic';
+            font-weight: 300;
+            margin-bottom: 10px;
+        }
+        .image__desc {
+            font-size: 16px;
+            font-family: 'NexonLv1Gothic';
+            font-weight: 400;
+            line-height: 140%;
+            margin-bottom: 16px;
+        }
+        .image__btn {
+            text-decoration: none;
+            color: #fff;
+            font-family: 'NexonLv1Gothic';
+            background: #BE4E15;
+            padding: 10px 20px;
+            display: inline-block;
+        }
+        .image__btn.yellow {
+            background: #C9931D;
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;section class="image-wrap gmark section"&gt;
+        &lt;div class="container"&gt;
+            &lt;h2 class="h2"&gt;동물공감 인터뷰&lt;/h2&gt;
+            &lt;p class="desc"&gt;
+                이미지 유형입니다. 마우스 오버시 자세한 정보가 나와는 구조입니다.&lt;br&gt;
+                Gmarket Sans Light 22px 150% #67778A 
+            &lt;/p&gt;
+            &lt;div class="image__inner"&gt;
+                &lt;article class="image"&gt;
+                    &lt;div class="image__header"&gt;
+                        &lt;figure class="image__figure"&gt;
+                            &lt;img src="../../assets/img/imagetype01.jpg" alt="애교만점 웰시코기"&gt;
+                        &lt;/figure&gt;
+                    &lt;/div&gt;
+                    &lt;div class="image__body"&gt;
+                        &lt;h3 class="image__title"&gt;애교만점 웰시코기&lt;/h3&gt;
+                        &lt;p class="image__desc"&gt;제목은 넥슨 풋볼 고딕 폰트입니다.&lt;br&gt;설명부분은 넥슨 LV1 고딕 16px 140% 입니다.&lt;/p&gt;
+                        &lt;a href="#" class="image__btn"&gt;자세히 보기&lt;/a&gt;
+                    &lt;/div&gt;
+                &lt;/article&gt;
+
+                &lt;article class="image"&gt;
+                    &lt;div class="image__header"&gt;
+                        &lt;figure class="image__figure"&gt;
+                            &lt;img src="../../assets/img/imagetype02.jpg" alt="코카스 파니엘"&gt;
+                        &lt;/figure&gt;
+                    &lt;/div&gt;
+                    &lt;div class="image__body"&gt;
+                        &lt;h3 class="image__title"&gt;코카스 파니엘&lt;/h3&gt;
+                        &lt;p class="image__desc"&gt;제목은 넥슨 풋볼 고딕 폰트입니다.&lt;br&gt;설명부분은 넥슨 LV1 고딕 16px 140% 입니다.&lt;/p&gt;
+                        &lt;a href="#" class="image__btn yellow"&gt;자세히 보기&lt;/a&gt;
+                    &lt;/div&gt;
+                &lt;/article&gt;
+            &lt;/div&gt;
         &lt;/div&gt;
-    &lt;/div&gt;
-    &lt;div class="image"&gt;
-        &lt;img src="../../assets/img/imagetype02.jpg" alt="코카스 파니엘"&gt;
-        &lt;div class="image-text"&gt;
-            &lt;h3&gt;애교만점 웰시코기&lt;/h3&gt;
-            &lt;p&gt;제목은 넥슨 풋볼 고딕 폰트입니다.&lt;br&gt;설명부분은 넥슨 LV1 고딕 16px 140% 입니다.&lt;/p&gt;
-            &lt;a href="#"&gt;자세히 보기&lt;/a&gt;
-        &lt;/div&gt;
-    &lt;/div&gt;
-&lt;/div&gt;
+    &lt;/section&gt;
+&lt;/body&gt;
+&lt;/html&gt;
