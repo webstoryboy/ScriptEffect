@@ -3,6 +3,25 @@ $( ".resizable" ).resizable({
 });
 $( ".draggable" ).draggable();
 
+
+document.querySelector("#explanation .soFar .click").addEventListener("click", (e) => {
+    e.preventDefault();
+    document.querySelector("#explanation .soFar").classList.toggle("show");
+})
+
+document.querySelector(".result01-click").addEventListener("click", (e) => {
+    e.preventDefault();
+    document.querySelector(".result01-view").classList.toggle("show");
+})
+document.querySelector(".result02-click").addEventListener("click", (e) => {
+    e.preventDefault();
+    document.querySelector(".result02-view").classList.toggle("show");
+})
+document.querySelector(".result03-click").addEventListener("click", (e) => {
+    e.preventDefault();
+    document.querySelector(".result03-view").classList.toggle("show");
+})
+
 window.addEventListener("scroll", function(){
     let scrollTop = document.documentElement.scrollTop || window.scrollY || window.pageYOffset;
 

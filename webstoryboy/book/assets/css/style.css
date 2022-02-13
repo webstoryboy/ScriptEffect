@@ -332,7 +332,6 @@ body.intro #footer {
 /* explanation */
 #explanation {
     font-family: 'NexonLv1Gothic';
-    padding: 50px;
     color: #fff;
     word-break: keep-all;
 }
@@ -349,7 +348,6 @@ body.intro #footer {
     position: relative;
 }
 #explanation pre {
-    margin-bottom: 15px;
     margin-top: 0;
 }
 #explanation p code {
@@ -362,37 +360,11 @@ body.intro #footer {
     border-radius: 5px;
 }
 #explanation p[data-num]::before {
-    content: '';
+    content: attr(data-num);
     position: absolute;
-    left: -30px; top: -1px;
+    left: -30px; 
+    top: -1px;
     opacity: 0.3;
-}
-#explanation p[data-num='01']::before {
-    content: "01"; 
-}
-#explanation p[data-num='02']::before {
-    content: "02"; 
-}
-#explanation p[data-num='03']::before {
-    content: "03"; 
-}
-#explanation p[data-num='04']::before {
-    content: "04"; 
-}
-#explanation p[data-num='05']::before {
-    content: "05"; 
-}
-#explanation p[data-num='06']::before {
-    content: "06"; 
-}
-#explanation p[data-num='07']::before {
-    content: "07"; 
-}
-#explanation p[data-num='08']::before {
-    content: "08"; 
-}
-#explanation p[data-num='09']::before {
-    content: "09"; 
 }
 #explanation .detail {
     font-family: 'NexonLv1Gothic';
@@ -418,7 +390,8 @@ body.intro #footer {
 }
 #explanation .code_link li .sub {
     position: absolute;
-    left: 0; top: 40px;
+    left: 0; 
+    top: 40px;
     width: 500px;
 }
 #explanation .code_link li .sub li {
@@ -459,11 +432,39 @@ body.intro #footer {
     margin-bottom: 20px;
     font-weight: 300;
 }
+#explanation .refer li a:hover {
+    border-bottom: 1px solid #fff;
+}
 #explanation .code_view > div:first-child {
     display: block;
 }
 #explanation .code_view > div {
     display: none;
+}
+#explanation .soFar {
+    width: 100%;
+}
+#explanation .soFar .click {
+    background: #9a92dd;
+    text-align: center;
+    border-radius: 20px;
+    margin: 0 0 5px;
+    cursor: pointer;
+}
+#explanation .soFar .view {
+    display: none;
+}
+#explanation .soFar.show .view {
+    display: block;
+}
+#explanation .soFar.show .click {
+    background: #705df2;
+}
+#explanation .none {
+    display: none;
+}
+#explanation .none.show {
+    display: block;
 }
 
 /* intro */
@@ -623,3 +624,55 @@ body.intro #footer {
         border-radius: 0 0 10px 10px;
     }
 }
+
+/* highlight */
+.highlight {
+    background: #0f0d1f;
+    width: 100%;
+    padding: 1em;
+    border-radius: 10px;
+}
+.highlight * {
+    border: 1px dashed #fff;
+    padding: 0.5rem;
+    margin: 0.75rem;
+    cursor: help;
+    position: relative;
+    transition: all 0.3s ease-out;
+    border-radius: 0.1875em;
+}
+.highlight *:hover, .highlight *:focus {
+    border-style: solid;
+    border-color: #5551ff;
+    box-shadow: 0 0 0.25em #5551ff, inset 0 0 0.25em #5551ff;
+    outline: none;
+}
+.highlight *::after {
+    content: attr(class);
+    position: absolute;
+    left: 0.5em;
+    top: -0.875em;
+    font-size: 0.5625rem;
+    letter-spacing: 0.1em;
+    padding: 0.25em 0.5em;
+    font-weight: normal;
+    color: #fff;
+    white-space: nowrap;
+    background: #0f0d1f;
+    text-transform: none;
+    line-height: 1;
+    transition: all 0.3s ease-out;
+}
+.highlight *:hover::after {
+    color: #5551ff;
+}
+.highlight [fakeimage] {
+    height: 100px;
+    width: 200px;
+}
+
+.highlight .card {
+    display: inline-block;
+    vertical-align: top;
+}
+
