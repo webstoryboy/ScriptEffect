@@ -1,0 +1,357 @@
+<h2>background-attachment</h2>
+<p>background-attachment 속성은 배경 이미지의 고정 여부를 설정합니다.</p>
+
+<hr>
+
+<h3>background-attachment</h3>
+<p class="blue">background-attachment 속성은 배경 이미지의 고정 여부를 설정합니다.</p>
+
+<div class="table-responsive">
+    <table class="table table-bordered table-striped table-hover">
+        <colgroup>
+            <col style="width: 30%">
+            <col style="width: 70%">
+        </colgroup>
+        <thead>
+            <tr>
+                <th>특징</th>
+                <th>설명</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th><a href="http://webzz.tistory.com/360">기본 값</a></th>
+                <td><a href="http://webzz.tistory.com/360">background-attachment: scroll;</a></td>
+            </tr>
+            <tr>
+                <th><a href="http://webzz.tistory.com/360">적용</a></th>
+                <td><a href="http://webzz.tistory.com/360">background</a></td>
+            </tr>
+            <tr>
+                <th><a href="http://webzz.tistory.com/359">버전</a></th>
+                <td><a href="http://webzz.tistory.com/359">CSS1</a></td>
+            </tr>
+            <tr>
+                <th>사용성</th>
+                <td>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star-half-o" aria-hidden="true"></i>
+                    <i class="fa fa-star-o" aria-hidden="true"></i>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<h4 class="pt50">정의(Definition)</h4>
+<ul>
+    <li>background-attachment 속성은 배경 이미지의 고정 여부를 설정합니다.</li>
+    <li>background-attachment 속성의 multiple backgrounds는 익스플로러9 버전 이상부터 지원됩니다.</li>
+</ul>
+
+<h4 class="pt50">백그라운드와 관련된 속성(Background Related Properties)</h4>
+<ul>
+    <li>background 속성은 백그라운드 속성을 일괄적으로 설정합니다.</li>
+    <li>background-attachment 속성은 배경 이미지의 고정 여부를 설정합니다.</li>
+    <li>background-blend-mode 속성은 배경을 혼합했을 때의 상태를 설정합니다.</li>
+    <li>background-clip 속성은 백그라운드 이미지의 위치 기준점을 설정합니다.</li>
+    <li>background-color 속성은 백그라운드 색을 설정합니다.</li>
+    <li>background-image 속성은 백그라운드 이미지 및 배경 속성을 설정합니다.</li>
+    <li>background-origin 속성은 백그라운드 이미지의 위치 기준점을 설정합니다.</li>
+    <li>background-position 속성은 백그라운드 이미지의 위치 영역을 설정합니다.</li>
+    <li>background-repeat 속성은 백그라운드 이미지 반복 여부를 설정합니다.</li>
+    <li>background-size 속성은 백그라운드 이미지 사이즈를 설정합니다.</li>
+</ul>
+   
+   
+<h4 class="pt50">문법(Syntax)</h4>
+<p class="blue">background-attachment : scroll | fixed | local;</p>
+<p class="blue">
+    /* 기본 속성 */<br>
+    background-attachment : scroll;<br>
+    background-attachment : fixed;<br>
+    background-attachment : local;<br>
+</p>
+
+  
+<h4 class="pt50">속성(Property)</h4>
+<div class="table-responsive">
+    <table class="table table-bordered table-striped table-hover">
+        <colgroup>
+            <col style="width: 30%">
+            <col style="width: 70%">
+        </colgroup>
+        <thead>
+            <tr>
+                <th scope="col">속성값</th>
+                <th scope="col">설명</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th scope="row">scroll</th>
+                <td>배경이미지와 콘텐츠를 표현하는 기본값입니다.</td>
+            </tr>
+            <tr>
+                <th scope="row">fixed</th>
+                <td>배경이미지를 고정하고, 콘텐츠만 움직입니다.</td>
+            </tr>
+            <tr>
+                <th scope="row">local</th>
+                <td>배경이미지와 콘텐츠가 같이 움직입니다.</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+
+<style>
+.background-box .box {
+    background-image: url(https://tistory1.daumcdn.net/tistory/2933724/skin/images/hover07.jpg);
+    background-attachment: scroll;
+    background-repeat: repeat-x;
+    background-position: center;
+    overflow-y: scroll;
+    height: 300px;
+    color: #fff;
+    text-align: center;
+    list-style: none;
+    
+}
+.background-box .box ul {
+    list-style: none;
+    margin: 0; padding: 0;
+}
+.background-box .box ul li {
+    color: #fff;
+}
+</style>
+
+<!-- sample1 -->
+<h4 class="pt50">예제1(Sample)</h4>
+<div class="sample">
+    <h5>배경이미지의 고정여부를 설정하는 예제입니다.</h5>
+    <div class="sampleView">
+        <!-- ex -->
+        <div class="background-box">
+            <div class="box">
+                <ul>
+                    <li>background 속성은 애니메이션 속성을 설정합니다.</li>
+                    <li>background-attachment 속성은 배경 이미지의 고정 여부를 설정합니다.</li>
+                    <li>background-blend-mode 속성은 배경을 혼합했을 때의 상태를 설정합니다.</li>
+                    <li>background-clip 속성은 배경 이미지의 위치 기준점을 설정하기 위한 속성입니다.</li>
+                    <li>background-color 속성은 배경 색을 설정합니다.</li>
+                    <li>background-image 속성은 배경 이미지 및 배경 속성을 설정합니다.</li>
+                    <li>background-origin 속성은 배경 이미지의 위치 기준점을 설정하기 위한 속성입니다.</li>
+                    <li>background-position 속성은 배경 이미지의 위치 영역을 설정합니다.</li>
+                    <li>background-repeat 속성은 배경 이미지 반복 여부를 설정합니다.</li>
+                    <li>background-size 속성은 배경 이미지 사이즈를 설정합니다.</li>
+                    <li>background 속성은 애니메이션 속성을 설정합니다.</li>
+                    <li>background-attachment 속성은 배경 이미지의 고정 여부를 설정합니다.</li>
+                    <li>background-blend-mode 속성은 배경을 혼합했을 때의 상태를 설정합니다.</li>
+                    <li>background-clip 속성은 배경 이미지의 위치 기준점을 설정하기 위한 속성입니다.</li>
+                    <li>background-color 속성은 배경 색을 설정합니다.</li>
+                    <li>background-image 속성은 배경 이미지 및 배경 속성을 설정합니다.</li>
+                    <li>background-origin 속성은 배경 이미지의 위치 기준점을 설정하기 위한 속성입니다.</li>
+                    <li>background-position 속성은 배경 이미지의 위치 영역을 설정합니다.</li>
+                    <li>background-repeat 속성은 배경 이미지 반복 여부를 설정합니다.</li>
+                    <li>background-size 속성은 배경 이미지 사이즈를 설정합니다.</li>
+                </ul>
+            </div>
+        </div>
+        <!-- ex -->
+    </div>
+    <div class="sampleBtn">
+        <a href="#">background-attachment: scroll;</a>
+        <a href="#">background-attachment: fixed;</a>
+        <a href="#">background-attachment: local;</a>
+    </div>
+    <div class="sampleCode">
+        <div class="scMenu">
+            <div>HTML</div>
+            <div>CSS</div>
+            <div>SCRIPT</div>
+        </div>
+        <div class="scCont">
+            <div>
+<pre class="line-numbers"><code class="language-markup">&lt;div class="background-box"&gt;
+    &lt;div class="box"&gt;
+        &lt;ul&gt;
+            &lt;li&gt;background 속성은 애니메이션 속성을 설정합니다.&lt;/li&gt;
+            &lt;li&gt;background-attachment 속성은 배경 이미지의 고정 여부를 설정합니다.&lt;/li&gt;
+            &lt;li&gt;background-blend-mode 속성은 배경을 혼합했을 때의 상태를 설정합니다.&lt;/li&gt;
+            &lt;li&gt;background-clip 속성은 배경 이미지의 위치 기준점을 설정하기 위한 속성입니다.&lt;/li&gt;
+            &lt;li&gt;background-color 속성은 배경 색을 설정합니다.&lt;/li&gt;
+            &lt;li&gt;background-image 속성은 배경 이미지 및 배경 속성을 설정합니다.&lt;/li&gt;
+            &lt;li&gt;background-origin 속성은 배경 이미지의 위치 기준점을 설정하기 위한 속성입니다.&lt;/li&gt;
+            &lt;li&gt;background-position 속성은 배경 이미지의 위치 영역을 설정합니다.&lt;/li&gt;
+            &lt;li&gt;background-repeat 속성은 배경 이미지 반복 여부를 설정합니다.&lt;/li&gt;
+            &lt;li&gt;background-size 속성은 배경 이미지 사이즈를 설정합니다.&lt;/li&gt;
+            &lt;li&gt;background 속성은 애니메이션 속성을 설정합니다.&lt;/li&gt;
+            &lt;li&gt;background-attachment 속성은 배경 이미지의 고정 여부를 설정합니다.&lt;/li&gt;
+            &lt;li&gt;background-blend-mode 속성은 배경을 혼합했을 때의 상태를 설정합니다.&lt;/li&gt;
+            &lt;li&gt;background-clip 속성은 배경 이미지의 위치 기준점을 설정하기 위한 속성입니다.&lt;/li&gt;
+            &lt;li&gt;background-color 속성은 배경 색을 설정합니다.&lt;/li&gt;
+            &lt;li&gt;background-image 속성은 배경 이미지 및 배경 속성을 설정합니다.&lt;/li&gt;
+            &lt;li&gt;background-origin 속성은 배경 이미지의 위치 기준점을 설정하기 위한 속성입니다.&lt;/li&gt;
+            &lt;li&gt;background-position 속성은 배경 이미지의 위치 영역을 설정합니다.&lt;/li&gt;
+            &lt;li&gt;background-repeat 속성은 배경 이미지 반복 여부를 설정합니다.&lt;/li&gt;
+            &lt;li&gt;background-size 속성은 배경 이미지 사이즈를 설정합니다.&lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+            </div>
+            <div>
+<pre class="line-numbers"><code class="language-css">.background-box .box {
+    background-image: url(../images/hover07.jpg);
+    background-attachment: scroll;
+    background-repeat: repeat-x;
+    background-position: center;
+    overflow-y: scroll;
+    height: 300px;
+}
+</code></pre>
+            </div>
+            <div>
+<pre class="line-numbers"><code class="language-script">//Javascript none
+</code></pre>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- //sample -->
+<script>
+    $(".sampleBtn a").click(function (e) {
+        e.preventDefault();
+        var text = $(this).text();
+        $(this).parent().prev().children().children().attr("style", text);
+    });
+</script>
+
+
+
+  
+<h4 class="pt50"><a href="http://webzz.tistory.com/227">호환성(Compatibility)</a></h4>
+<div class="table-responsive">
+    <table class="table table-bordered table-striped table-hover compatibility">
+        <colgroup>
+            <col style="width:20%" />
+        </colgroup>
+        <thead>
+            <tr>
+                <th></th>
+                <th scope="col"><img src="https://tistory1.daumcdn.net/tistory/2933724/skin/images/icon-chrome1.png" alt="크롬 아이콘" title="크롬 브라우저"></th>
+                <th scope="col"><img src="https://tistory3.daumcdn.net/tistory/2933724/skin/images/icon-firefox1.png" alt="파이어폭스 아이콘" title="파이어폭스 브라우저"></th>
+                <th scope="col"><img src="https://tistory1.daumcdn.net/tistory/2933724/skin/images/icon-safari1.png" alt="사파리 아이콘" title="사파리 브라우저"></th>
+                <th scope="col"><img src="https://tistory3.daumcdn.net/tistory/2933724/skin/images/icon-opera1.png" alt="오페라 아이콘" title="오페라 브라우저"></th>
+                <th scope="col"><img src="https://tistory1.daumcdn.net/tistory/2933724/skin/images/icon-whale1.png" alt="네이버 웨일" title="네이버 웨일 브라우저"></th>
+                <th scope="col"><img src="https://tistory4.daumcdn.net/tistory/2933724/skin/images/icon-ie6.png" alt="익스플로러6 아이콘" title="인터넷 익스플로러6 브라우저"><em>6</em></th>
+                <th scope="col"><img src="https://tistory2.daumcdn.net/tistory/2933724/skin/images/icon-ie7.png" alt="익스플로러7 아이콘" title="인터넷 익스플로러7 브라우저"><em>7</em></th>
+                <th scope="col"><img src="https://tistory2.daumcdn.net/tistory/2933724/skin/images/icon-ie7.png" alt="익스플로러8 아이콘" title="인터넷 익스플로러8 브라우저"><em>8</em></th>
+                <th scope="col"><img src="https://tistory2.daumcdn.net/tistory/2933724/skin/images/icon-ie9.png" alt="익스플로러9 아이콘" title="인터넷 익스플로러9 브라우저"><em>9</em></th>
+                <th scope="col"><img src="https://tistory2.daumcdn.net/tistory/2933724/skin/images/icon-ie10.png" alt="익스플로러10 아이콘" title="인터넷 익스플로러10 브라우저"><em>10</em></th>
+                <th scope="col"><img src="https://tistory2.daumcdn.net/tistory/2933724/skin/images/icon-ie11.png" alt="익스플로러11 아이콘" title="인터넷 익스플로러11 브라우저"><em>11</em></th>
+                <th scope="col"><img src="https://tistory1.daumcdn.net/tistory/2933724/skin/images/icon-edge.png" alt="엣지 아이콘" title="엣지 브라우저"></th>
+                <th scope="col"><img src="https://tistory2.daumcdn.net/tistory/2933724/skin/images/icon-android.png" alt="안드로이드 아이콘" title="모바일 안드로이드 브라우저"></th>
+                <th scope="col"><img src="https://tistory2.daumcdn.net/tistory/2933724/skin/images/icon-ios.png" alt="ios 아이콘" title="모바일 아이폰 브라우저"></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td scope="row">background-attachment</td>
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 크롬 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 파이어폭스 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 사파리 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 오페라 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 네이버 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 익스플로러6 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 익스플로러7 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 익스플로러8 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 익스플로러9 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 익스플로러10 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 익스플로러11 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 엣지 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 안드로이드 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- IOS -->
+            </tr>
+            <tr>
+                <td scope="row">scroll</td>
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 크롬 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 파이어폭스 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 사파리 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 오페라 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 네이버 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 익스플로러6 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 익스플로러7 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 익스플로러8 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 익스플로러9 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 익스플로러10 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 익스플로러11 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 엣지 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 안드로이드 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- IOS -->
+            </tr>
+            <tr>
+                <td scope="row">fixed</td>
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 크롬 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 파이어폭스 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 사파리 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 오페라 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 네이버 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 익스플로러6 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 익스플로러7 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 익스플로러8 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 익스플로러9 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 익스플로러10 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 익스플로러11 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 엣지 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 안드로이드 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- IOS -->
+            </tr>
+            <tr>
+                <td scope="row">local</td>
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 크롬 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 파이어폭스 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 사파리 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 오페라 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 네이버 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 익스플로러6 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 익스플로러7 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 익스플로러8 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 익스플로러9 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 익스플로러10 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 익스플로러11 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 엣지 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 안드로이드 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- IOS -->
+            </tr>
+            <tr>
+                <td scope="row">multiple backgrounds</td>
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 크롬 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 파이어폭스 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 사파리 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 오페라 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 네이버 -->
+                <td class="no"><span title="사용 할 수 없습니다.">사용안됨</span></td><!-- 익스플로러6 -->
+                <td class="no"><span title="사용 할 수 없습니다.">사용안됨</span></td><!-- 익스플로러7 -->
+                <td class="no"><span title="사용 할 수 없습니다.">사용안됨</span></td><!-- 익스플로러8 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 익스플로러9 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 익스플로러10 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 익스플로러11 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 엣지 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 안드로이드 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- IOS -->
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+
+<h4 class="pt30">참고 사이트(Reference)</h4>
+<ul>
+    <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/background-attachment">MDN</a></li>
+    <li><a href="https://drafts.csswg.org/css-backgrounds-3/#the-background-attachment">W3</a></li>
+</ul>
+
+<hr>

@@ -1,0 +1,59 @@
+<h2>[GSAP] gsap.from()</h2>
+<p>애니메이션을 줄 때 시작점을 지정해주는 메서드입니다. 즉 gsap.to() 메서드와 반대입니다. to() 메서드는
+    시작점을 지정하지 않고 완료된 점을 지정해주면 시작에서 완료까지 애니메이션됩니다. from()은 시작점을 지정해주면,
+    시작점에서 현재점으로 이동하게 됩니다. 정확한 부분은 예제를 확인해 보면 이해하기 쉽습니다.
+</p>
+
+<hr />
+
+<h3>gsap.from()</h3>
+<p class="blue">gsap.from()은 애니메이션을 설정합니다.</p>
+
+<table class="table table-bordered table-striped table-hover">
+    <colgroup>
+        <col style="width: 30%">
+        <col style="width: 70%">
+    </colgroup>
+    <thead>
+        <tr>
+            <th>특징</th>
+            <th>설명</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <th>반환값(returns)</th>
+            <td>움직임(Tween)</td>
+        </tr>
+    </tbody>
+</table>
+
+
+<h4 class="pt50">문법(Syntax)</h4>
+<p class="blue">gsap.from("타겟", {속성: 속성값, ....});</p>
+<ul>
+    <li>타겟(targets): 애니메이션을 주고 싶은 타겟(선택자)을 설정하는 부분입니다. #id, .class를 사용할 수 있으며,
+        자바스크립트의 document.querySelectorAll()라고 생각하면 됩니다.</li>
+    <li>속성(values) : CSS의 속성과 속성 값을 주는 부분입니다. CSS 애니메이션 속성과 이름이 약간 다를 수 있지만 대부분 동일하게 사용할 수 있습니다. 여기에는 ease, duration, delay등 여러가지 메서드도 같이 사용할 수 있습니다.</li>
+</ul>
+
+
+<h4 class="pt50">정의(Definition)</h4>
+<ul>
+    <li>.from() 메서드는 시작되는 점을 지정하는 역방향 애니메이션이라고 생각하시면 됩니다.</li>
+    <li>.from() 메서드는 CSS의 애니메이션 관련된 모든 속성을 사용할 수 있습니다.</li>
+    <li>.from() 메서드를 제어하려면, 여러가지 컨트롤 메서드를 사용할 수 있습니다.</li>
+</ul>
+
+<h4 class="pt50">비교(Compare)</h4>
+<ul>
+    <li>일반적인 애니메이션은 .to() 메서드를 사용합니다.</li>
+    <li>시작점과 끝나는 애니메이션을 설정하려면 .fromTo() 메서드를 사용합니다.</li>
+    <li>CSS에서 애니메이션은 animation()으로 표현합니다.</li>
+    <li>jQuery에서 애니매이션은 .animate()으로 표현합니다.</li>
+</ul>
+
+<h4 class="pt50">참고(Reference)</h4>
+<ul>
+    <li><a href="https://greensock.com/docs/v3/GSAP/gsap.from()">GSAP</a></li>
+</ul>

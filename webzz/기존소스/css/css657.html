@@ -1,0 +1,1223 @@
+
+
+<h2>그리드 레이아웃</h2>
+<p>CSS에서 레이아웃을 작성하기 위한 새로운 속성입니다.</p>
+
+<hr>
+
+<h3>그리드 레이아웃</h3>
+
+
+
+<h5 class="pt50">Grid 속성</h5>
+<div class="table-responsive">
+    <table class="table table-bordered table-striped table-hover">
+        <colgroup>
+            <col style="width: 30%">
+            <col style="width: 70%">
+        </colgroup>
+        <thead>
+            <tr>
+                <th>속성</th>
+                <th>설명</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><a href="http://webzz.tistory.com/461">grid</a></td>
+                <td>grid 속성은 그리드 레이아웃을 정의합니다.</td>
+            </tr>
+            <tr>
+                <td><a href="http://webzz.tistory.com/462">grid-area</a></td>
+                <td>grid-area</td>
+            </tr>
+            <tr>
+                <td><a href="http://webzz.tistory.com/463">grid-auto-columns</a></td>
+                <td>grid-auto-columns는 열의 크기를 설정합니다.</td>
+            </tr>
+            <tr>
+                <td><a href="http://webzz.tistory.com/464">grid-auto-flow</a></td>
+                <td>grid-auto-flow는 자동 배치 방식을 설정합니다.</td>
+            </tr>
+            <tr>
+                <td><a href="http://webzz.tistory.com/465">grid-auto-rows</a></td>
+                <td>grid-auto-rows는 행의 크기를 설정합니다.</td>
+            </tr>
+            <tr>
+                <td><a href="http://webzz.tistory.com/466">grid-column</a></td>
+                <td>grid-column</td>
+            </tr>
+            <tr>
+                <td><a href="http://webzz.tistory.com/467">grid-column-end</a></td>
+                <td>grid-column-end</td>
+            </tr>
+            <tr>
+                <td><a href="http://webzz.tistory.com/468">grid-column-gap</a></td>
+                <td>grid-column-gap</td>
+            </tr>
+            <tr>
+                <td><a href="http://webzz.tistory.com/469">grid-column-start</a></td>
+                <td>grid-column-start</td>
+            </tr>
+            <tr>
+                <td><a href="http://webzz.tistory.com/470">grid-gap</a></td>
+                <td>grid-gap</td>
+            </tr>
+            <tr>
+                <td><a href="http://webzz.tistory.com/471">grid-row</a></td>
+                <td>grid-row는 그리드 아이템의 단축 속성을 설정합니다.</td>
+            </tr>
+            <tr>
+                <td><a href="http://webzz.tistory.com/472">grid-row-end</a></td>
+                <td>grid-row-end는 그리드 아이템 행의 끝 위치를 설정합니다.</td>
+            </tr>
+            <tr>
+                <td><a href="http://webzz.tistory.com/473">grid-row-gap</a></td>
+                <td>grid-row-gap는 그리드 아이템 행의 간격을 설정합니다.</td>
+            </tr>
+            <tr>
+                <td><a href="http://webzz.tistory.com/474">grid-row-start</a></td>
+                <td>grid-row-start는 그리드 아이템 행의 시작 위치를 설정합니다.</td>
+            </tr>
+            <tr>
+                <td><a href="http://webzz.tistory.com/475">grid-template</a></td>
+                <td>grid-template</td>
+            </tr>
+            <tr>
+                <td><a href="http://webzz.tistory.com/500">grid-template-areas</a></td>
+                <td>grid-template-areas</td>
+            </tr>
+            <tr>
+                <td><a href="http://webzz.tistory.com/476">grid-template-columns</a></td>
+                <td>grid-template-columns은 열의 크기를 설정합니다.</td>
+            </tr>
+            <tr>
+                <td><a href="http://webzz.tistory.com/477">grid-template-rows</a></td>
+                <td>grid-template-rows</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+
+
+
+
+<style>
+    /* option */
+    .grid {
+        background-color: #f7f7f7;
+        border-radius: 3px;
+        padding: 20px;
+        counter-reset: items;
+    }
+    .column {
+        border-radius: 3px;
+        background-color: #A2CBFA;
+        border: 1px solid #4390E1;
+        box-sizing: border-box;
+        box-shadow: 0 2px 2px rgba(0,90,250,0.05), 0 4px 4px rgba(0,90,250,0.05), 0 8px 8px rgba(0,90,250,0.05), 0 16px 16px rgba(0,90,250,0.05);
+        min-height: 100px; 
+        color: #fff;
+        padding: 10px;
+    }
+    .column::before {
+        counter-increment: items;
+        content: counter(items);
+    }
+    /* grid */
+    .grid1 {
+        display: grid; 
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+        /* grid-template-columns: 50px 50px 1fr 1fr 1fr 1fr 1fr 1fr; */
+        /* grid-template-columns: repeat(8, 50px); */
+        /* grid-template-columns: repeat(8, 1fr); */
+        /* grid-template-columns: repeat(auto-fill, 50px); */
+        /* grid-template-columns: 200px repeat(auto-fill, 100px) 300px; */
+        grid-gap: 2%;
+    }
+</style>
+
+
+
+<!-- Sample1 -->
+<h4 class="pt50">Sample1 <span><a href="https://webstoryboy.github.io/CSS/sample657-1.html" target="_blank"><img src="https://tistory3.daumcdn.net/tistory/2933724/skin/images/blank.gif" class="blank_icon"></a></span></h4>
+<p>콘텐츠 요소의 상하 관계 정렬 상태를 설정하는 예제입니다.</p>
+<div class="sample">
+    <h5>결과<span class="dot"><i></i><i></i><i></i></span></h5>
+    <div class="ex">
+        <!-- ex -->
+	    <div class="grid grid1">
+            <div class="column column1"></div>
+            <div class="column column1"></div>
+            <div class="column column1"></div>
+            <div class="column column1"></div>
+            <div class="column column1"></div>
+            <div class="column column1"></div>
+            <div class="column column1"></div>
+            <div class="column column1"></div>
+        </div>
+        <!-- ex -->
+    </div>
+</div>
+<!-- sample1 -->
+
+<div class="sample">
+    <h5>TOTAL<span class="dot"><i></i><i></i><i></i></span></h5>
+    <div class="script on">
+<pre class="line-numbers"><code class="language-xml">&lt;!DOCTYPE html&gt;
+&lt;html lang="ko"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;flex&lt;/title&gt;
+    &lt;style&gt;
+        /* option */
+        .grid {
+            background-color: #f7f7f7;
+            border-radius: 3px;
+            padding: 20px;
+            counter-reset: items;
+        }
+        .column {
+            border-radius: 3px;
+            background-color: #A2CBFA;
+            border: 1px solid #4390E1;
+            box-sizing: border-box;
+            box-shadow: 0 2px 2px rgba(0,90,250,0.05), 0 4px 4px rgba(0,90,250,0.05), 0 8px 8px rgba(0,90,250,0.05), 0 16px 16px rgba(0,90,250,0.05);
+            min-height: 100px; 
+            color: #fff;
+            padding: 10px;
+        }
+        .column::before {
+            counter-increment: items;
+            content: counter(items);
+        }
+        /* grid */
+        .grid1 {
+            display: grid; 
+            grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+            /* grid-template-columns: 50px 50px 1fr 1fr 1fr 1fr 1fr 1fr; */
+            /* grid-template-columns: repeat(8, 50px); */
+            /* grid-template-columns: repeat(8, 1fr); */
+            /* grid-template-columns: repeat(auto-fill, 50px); */
+            /* grid-template-columns: 200px repeat(auto-fill, 100px) 300px; */
+            grid-gap: 2%;
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div class="grid grid1"&gt;
+        &lt;div class="column column1"&gt;&lt;/div&gt;
+        &lt;div class="column column1"&gt;&lt;/div&gt;
+        &lt;div class="column column1"&gt;&lt;/div&gt;
+        &lt;div class="column column1"&gt;&lt;/div&gt;
+        &lt;div class="column column1"&gt;&lt;/div&gt;
+        &lt;div class="column column1"&gt;&lt;/div&gt;
+        &lt;div class="column column1"&gt;&lt;/div&gt;
+        &lt;div class="column column1"&gt;&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+    </div>
+</div>
+<!-- sample1 -->
+
+
+
+
+
+<style>
+    /* grid */
+    .grid2 {
+        display: grid; 
+        /* grid-template-columns: 50px 50px 50px 150px 50px 50px 50px 50px; */
+        grid-template-columns: 1fr 1fr 1fr 2fr 1fr 1fr 1fr 1fr;
+        grid-gap: 2%;
+    }
+</style>
+<!-- Sample2 -->
+<h4 class="pt50">Sample2 <span><a href="https://webstoryboy.github.io/CSS/sample657-2.html" target="_blank"><img src="https://tistory3.daumcdn.net/tistory/2933724/skin/images/blank.gif" class="blank_icon"></a></span></h4>
+<p>콘텐츠 요소의 상하 관계 정렬 상태를 설정하는 예제입니다.</p>
+<div class="sample">
+    <h5>결과<span class="dot"><i></i><i></i><i></i></span></h5>
+    <div class="ex">
+        <!-- ex -->
+	    <div class="grid grid2">
+            <div class="column column2"></div>
+            <div class="column column2"></div>
+            <div class="column column2"></div>
+            <div class="column column2"></div>
+            <div class="column column2"></div>
+            <div class="column column2"></div>
+            <div class="column column2"></div>
+            <div class="column column2"></div>
+        </div>
+        <!-- ex -->
+    </div>
+</div>
+<!-- sample2 -->
+
+<div class="sample">
+    <h5>TOTAL<span class="dot"><i></i><i></i><i></i></span></h5>
+    <div class="script on">
+<pre class="line-numbers"><code class="language-xml">&lt;!DOCTYPE html&gt;
+&lt;html lang="ko"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;flex&lt;/title&gt;
+    &lt;style&gt;
+        /* option */
+        .grid {
+            background-color: #f7f7f7;
+            border-radius: 3px;
+            padding: 20px;
+            counter-reset: items;
+        }
+        .column {
+            border-radius: 3px;
+            background-color: #A2CBFA;
+            border: 1px solid #4390E1;
+            box-sizing: border-box;
+            box-shadow: 0 2px 2px rgba(0,90,250,0.05), 0 4px 4px rgba(0,90,250,0.05), 0 8px 8px rgba(0,90,250,0.05), 0 16px 16px rgba(0,90,250,0.05);
+            min-height: 100px; 
+            color: #fff;
+            padding: 10px;
+        }
+        .column::before {
+            counter-increment: items;
+            content: counter(items);
+        }
+        /* grid */
+        .grid2 {
+            display: grid; 
+            /* grid-template-columns: 50px 50px 50px 150px 50px 50px 50px 50px; */
+            grid-template-columns: 1fr 1fr 1fr 2fr 1fr 1fr 1fr 1fr;
+            grid-gap: 2%;
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div class="grid grid2"&gt;
+        &lt;div class="column column2"&gt;&lt;/div&gt;
+        &lt;div class="column column2"&gt;&lt;/div&gt;
+        &lt;div class="column column2"&gt;&lt;/div&gt;
+        &lt;div class="column column2"&gt;&lt;/div&gt;
+        &lt;div class="column column2"&gt;&lt;/div&gt;
+        &lt;div class="column column2"&gt;&lt;/div&gt;
+        &lt;div class="column column2"&gt;&lt;/div&gt;
+        &lt;div class="column column2"&gt;&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+    </div>
+</div>
+<!-- sample2 -->
+
+
+
+
+
+<style>
+    /* grid */
+    .grid3 {
+        display: grid; 
+        grid-template-columns: repeat(8, 1fr);
+        grid-gap: 2%;
+    }
+    .column3:last-child {
+        /* grid-column-start: 1; */
+        /* grid-column-end: 9; */
+        grid-column: span 1 / 9;
+    }
+</style>
+<!-- Sample3 -->
+<h4 class="pt50">Sample3 <span><a href="https://webstoryboy.github.io/CSS/sample657-3.html" target="_blank"><img src="https://tistory3.daumcdn.net/tistory/2933724/skin/images/blank.gif" class="blank_icon"></a></span></h4>
+<p>콘텐츠 요소의 상하 관계 정렬 상태를 설정하는 예제입니다.</p>
+<div class="sample">
+    <h5>결과<span class="dot"><i></i><i></i><i></i></span></h5>
+    <div class="ex">
+        <!-- ex -->
+	    <div class="grid grid3">
+            <div class="column column3"></div>
+            <div class="column column3"></div>
+            <div class="column column3"></div>
+            <div class="column column3"></div>
+        </div>
+        <!-- ex -->
+    </div>
+</div>
+<!-- sample3 -->
+
+<div class="sample">
+    <h5>TOTAL<span class="dot"><i></i><i></i><i></i></span></h5>
+    <div class="script on">
+<pre class="line-numbers"><code class="language-xml">&lt;!DOCTYPE html&gt;
+&lt;html lang="ko"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;flex&lt;/title&gt;
+    &lt;style&gt;
+        /* option */
+        .grid {
+            background-color: #f7f7f7;
+            border-radius: 3px;
+            padding: 20px;
+            counter-reset: items;
+        }
+        .column {
+            border-radius: 3px;
+            background-color: #A2CBFA;
+            border: 1px solid #4390E1;
+            box-sizing: border-box;
+            box-shadow: 0 2px 2px rgba(0,90,250,0.05), 0 4px 4px rgba(0,90,250,0.05), 0 8px 8px rgba(0,90,250,0.05), 0 16px 16px rgba(0,90,250,0.05);
+            min-height: 100px; 
+            color: #fff;
+            padding: 10px;
+        }
+        .column::before {
+            counter-increment: items;
+            content: counter(items);
+        }
+        /* grid */
+        .grid3 {
+            display: grid; 
+            grid-template-columns: repeat(8, 1fr);
+            grid-gap: 2%;
+        }
+        .column3:last-child {
+            /* grid-column-start: 1; */
+            /* grid-column-end: 9; */
+            grid-column: span 1 / 9;
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div class="grid grid3"&gt;
+        &lt;div class="column column3"&gt;&lt;/div&gt;
+        &lt;div class="column column3"&gt;&lt;/div&gt;
+        &lt;div class="column column3"&gt;&lt;/div&gt;
+        &lt;div class="column column3"&gt;&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+    </div>
+</div>
+<!-- sample3 -->
+
+
+
+
+
+
+<style>
+    /* grid */
+    .grid4 {
+        display: grid; 
+        grid-template-columns: repeat(8, 1fr);
+        grid-gap: 2%;
+    }
+    .column4:first-child {
+        grid-column: span 1 / 6;
+    }
+</style>
+<!-- Sample4 -->
+<h4 class="pt50">Sample4 <span><a href="https://webstoryboy.github.io/CSS/sample657-4.html" target="_blank"><img src="https://tistory3.daumcdn.net/tistory/2933724/skin/images/blank.gif" class="blank_icon"></a></span></h4>
+<p>콘텐츠 요소의 상하 관계 정렬 상태를 설정하는 예제입니다.</p>
+<div class="sample">
+    <h5>결과<span class="dot"><i></i><i></i><i></i></span></h5>
+    <div class="ex">
+        <!-- ex -->
+	    <div class="grid grid4">
+            <div class="column column4"></div>
+            <div class="column column4"></div>
+            <div class="column column4"></div>
+            <div class="column column4"></div>
+        </div>
+        <!-- ex -->
+    </div>
+</div>
+<!-- sample4 -->
+
+<div class="sample">
+    <h5>TOTAL<span class="dot"><i></i><i></i><i></i></span></h5>
+    <div class="script on">
+<pre class="line-numbers"><code class="language-xml">&lt;!DOCTYPE html&gt;
+&lt;html lang="ko"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;flex&lt;/title&gt;
+    &lt;style&gt;
+        /* option */
+        .grid {
+            background-color: #f7f7f7;
+            border-radius: 3px;
+            padding: 20px;
+            counter-reset: items;
+        }
+        .column {
+            border-radius: 3px;
+            background-color: #A2CBFA;
+            border: 1px solid #4390E1;
+            box-sizing: border-box;
+            box-shadow: 0 2px 2px rgba(0,90,250,0.05), 0 4px 4px rgba(0,90,250,0.05), 0 8px 8px rgba(0,90,250,0.05), 0 16px 16px rgba(0,90,250,0.05);
+            min-height: 100px; 
+            color: #fff;
+            padding: 10px;
+        }
+        .column::before {
+            counter-increment: items;
+            content: counter(items);
+        }
+        /* grid */
+        .grid4 {
+            display: grid; 
+            grid-template-columns: repeat(8, 1fr);
+            grid-gap: 2%;
+        }
+        .column4:first-child {
+            grid-column: span 1 / 6;
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div class="grid grid4"&gt;
+        &lt;div class="column column4"&gt;&lt;/div&gt;
+        &lt;div class="column column4"&gt;&lt;/div&gt;
+        &lt;div class="column column4"&gt;&lt;/div&gt;
+        &lt;div class="column column4"&gt;&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+    </div>
+</div>
+<!-- sample4 -->
+
+
+
+
+
+
+
+<style>
+    /* grid */
+    .grid5 {
+        display: grid; 
+        grid-template-columns: repeat(8, 1fr);
+        grid-gap: 2%;
+    }
+    .column5:nth-child(2) {
+        grid-column: 2 / 4;
+    }
+    .column5:nth-child(3) {
+        grid-column: 4 / 6;
+    }
+    .column5:last-child {
+        grid-column: 8 / 9;
+    }
+</style>
+<!-- Sample5 -->
+<h4 class="pt50">Sample5 <span><a href="https://webstoryboy.github.io/CSS/sample657-5.html" target="_blank"><img src="https://tistory3.daumcdn.net/tistory/2933724/skin/images/blank.gif" class="blank_icon"></a></span></h4>
+<p>콘텐츠 요소의 상하 관계 정렬 상태를 설정하는 예제입니다.</p>
+<div class="sample">
+    <h5>결과<span class="dot"><i></i><i></i><i></i></span></h5>
+    <div class="ex">
+        <!-- ex -->
+	    <div class="grid grid5">
+            <div class="column column5"></div>
+            <div class="column column5"></div>
+            <div class="column column5"></div>
+            <div class="column column5"></div>
+        </div>
+        <!-- ex -->
+    </div>
+</div>
+<!-- sample5 -->
+
+<div class="sample">
+    <h5>TOTAL<span class="dot"><i></i><i></i><i></i></span></h5>
+    <div class="script on">
+<pre class="line-numbers"><code class="language-xml">&lt;!DOCTYPE html&gt;
+&lt;html lang="ko"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;flex&lt;/title&gt;
+    &lt;style&gt;
+        /* option */
+        .grid {
+            background-color: #f7f7f7;
+            border-radius: 3px;
+            padding: 20px;
+            counter-reset: items;
+        }
+        .column {
+            border-radius: 3px;
+            background-color: #A2CBFA;
+            border: 1px solid #4390E1;
+            box-sizing: border-box;
+            box-shadow: 0 2px 2px rgba(0,90,250,0.05), 0 4px 4px rgba(0,90,250,0.05), 0 8px 8px rgba(0,90,250,0.05), 0 16px 16px rgba(0,90,250,0.05);
+            min-height: 100px; 
+            color: #fff;
+            padding: 10px;
+        }
+        .column::before {
+            counter-increment: items;
+            content: counter(items);
+        }
+        /* grid */
+        .grid5 {
+            display: grid; 
+            grid-template-columns: repeat(8, 1fr);
+            grid-gap: 2%;
+        }
+        .column5:nth-child(2) {
+            grid-column: 2 / 4;
+        }
+        .column5:nth-child(3) {
+            grid-column: 4 / 6;
+        }
+        .column5:last-child {
+            grid-column: 8 / 9;
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div class="grid grid5"&gt;
+        &lt;div class="column column5"&gt;&lt;/div&gt;
+        &lt;div class="column column5"&gt;&lt;/div&gt;
+        &lt;div class="column column5"&gt;&lt;/div&gt;
+        &lt;div class="column column5"&gt;&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+    </div>
+</div>
+<!-- sample5 -->
+
+
+
+
+
+
+
+<style>
+    /* grid */
+    .grid6 {
+        display: grid; 
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 20px;
+    }
+    .column6:nth-child(3) {grid-column: 1 / 3;}
+</style>
+<!-- Sample6 -->
+<h4 class="pt50">Sample6 <span><a href="https://webstoryboy.github.io/CSS/sample657-6.html" target="_blank"><img src="https://tistory3.daumcdn.net/tistory/2933724/skin/images/blank.gif" class="blank_icon"></a></span></h4>
+<p>콘텐츠 요소의 상하 관계 정렬 상태를 설정하는 예제입니다.</p>
+<div class="sample">
+    <h5>결과<span class="dot"><i></i><i></i><i></i></span></h5>
+    <div class="ex">
+        <!-- ex -->
+	    <div class="grid grid6">
+            <div class="column column6"></div>
+            <div class="column column6"></div>
+            <div class="column column6"></div>
+            <div class="column column6"></div>
+            <div class="column column6"></div>
+        </div>
+        <!-- ex -->
+    </div>
+</div>
+<!-- sample6 -->
+
+<div class="sample">
+    <h5>TOTAL<span class="dot"><i></i><i></i><i></i></span></h5>
+    <div class="script on">
+<pre class="line-numbers"><code class="language-xml">&lt;!DOCTYPE html&gt;
+&lt;html lang="ko"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;flex&lt;/title&gt;
+    &lt;style&gt;
+        /* option */
+        .grid {
+            background-color: #f7f7f7;
+            border-radius: 3px;
+            padding: 20px;
+            counter-reset: items;
+        }
+        .column {
+            border-radius: 3px;
+            background-color: #A2CBFA;
+            border: 1px solid #4390E1;
+            box-sizing: border-box;
+            box-shadow: 0 2px 2px rgba(0,90,250,0.05), 0 4px 4px rgba(0,90,250,0.05), 0 8px 8px rgba(0,90,250,0.05), 0 16px 16px rgba(0,90,250,0.05);
+            min-height: 100px; 
+            color: #fff;
+            padding: 10px;
+        }
+        .column::before {
+            counter-increment: items;
+            content: counter(items);
+        }
+        /* grid */
+        .grid6 {
+            display: grid; 
+            grid-template-columns: repeat(2, 1fr);
+            grid-gap: 20px;
+        }
+        .column6:nth-child(3) {grid-column: 1 / 3;}
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div class="grid grid6"&gt;
+        &lt;div class="column column6"&gt;&lt;/div&gt;
+        &lt;div class="column column6"&gt;&lt;/div&gt;
+        &lt;div class="column column6"&gt;&lt;/div&gt;
+        &lt;div class="column column6"&gt;&lt;/div&gt;
+        &lt;div class="column column6"&gt;&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+    </div>
+</div>
+<!-- sample6 -->
+
+
+
+
+
+
+<style>
+    /* grid */
+    .grid7 {
+        display: grid; 
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        grid-gap: 20px;
+        height: 400px;
+    }
+</style>
+<!-- Sample7 -->
+<h4 class="pt50">Sample7 <span><a href="https://webstoryboy.github.io/CSS/sample657-7.html" target="_blank"><img src="https://tistory3.daumcdn.net/tistory/2933724/skin/images/blank.gif" class="blank_icon"></a></span></h4>
+<p>콘텐츠 요소의 상하 관계 정렬 상태를 설정하는 예제입니다.</p>
+<div class="sample">
+    <h5>결과<span class="dot"><i></i><i></i><i></i></span></h5>
+    <div class="ex">
+        <!-- ex -->
+	    <div class="grid grid7">
+            <div class="column column7"></div>
+            <div class="column column7"></div>
+            <div class="column column7"></div>
+            <div class="column column7"></div>
+            <div class="column column7"></div>
+            <div class="column column7"></div>
+            <div class="column column7"></div>
+            <div class="column column7"></div>
+            <div class="column column7"></div>
+        </div>
+        <!-- ex -->
+    </div>
+</div>
+<!-- sample7 -->
+
+<div class="sample">
+    <h5>TOTAL<span class="dot"><i></i><i></i><i></i></span></h5>
+    <div class="script on">
+<pre class="line-numbers"><code class="language-xml">&lt;!DOCTYPE html&gt;
+&lt;html lang="ko"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;flex&lt;/title&gt;
+    &lt;style&gt;
+        /* option */
+        .grid {
+            background-color: #f7f7f7;
+            border-radius: 3px;
+            padding: 20px;
+            counter-reset: items;
+        }
+        .column {
+            border-radius: 3px;
+            background-color: #A2CBFA;
+            border: 1px solid #4390E1;
+            box-sizing: border-box;
+            box-shadow: 0 2px 2px rgba(0,90,250,0.05), 0 4px 4px rgba(0,90,250,0.05), 0 8px 8px rgba(0,90,250,0.05), 0 16px 16px rgba(0,90,250,0.05);
+            min-height: 100px; 
+            color: #fff;
+            padding: 10px;
+        }
+        .column::before {
+            counter-increment: items;
+            content: counter(items);
+        }
+        /* grid */
+        .grid7 {
+            display: grid; 
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(3, 1fr);
+            grid-gap: 20px;
+            height: 400px;
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div class="grid grid7"&gt;
+        &lt;div class="column column7"&gt;&lt;/div&gt;
+        &lt;div class="column column7"&gt;&lt;/div&gt;
+        &lt;div class="column column7"&gt;&lt;/div&gt;
+        &lt;div class="column column7"&gt;&lt;/div&gt;
+        &lt;div class="column column7"&gt;&lt;/div&gt;
+        &lt;div class="column column7"&gt;&lt;/div&gt;
+        &lt;div class="column column7"&gt;&lt;/div&gt;
+        &lt;div class="column column7"&gt;&lt;/div&gt;
+        &lt;div class="column column7"&gt;&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+    </div>
+</div>
+<!-- sample7 -->
+
+
+
+
+
+<style>
+    /* grid */
+    .grid8 {
+        display: grid; 
+        grid-template-columns: repeat(3, 100px);
+        grid-template-rows: repeat(3, 100px);
+        grid-gap: 20px;
+    }
+</style>
+<!-- Sample8 -->
+<h4 class="pt50">Sample8 <span><a href="https://webstoryboy.github.io/CSS/sample657-8.html" target="_blank"><img src="https://tistory3.daumcdn.net/tistory/2933724/skin/images/blank.gif" class="blank_icon"></a></span></h4>
+<p>콘텐츠 요소의 상하 관계 정렬 상태를 설정하는 예제입니다.</p>
+<div class="sample">
+    <h5>결과<span class="dot"><i></i><i></i><i></i></span></h5>
+    <div class="ex">
+        <!-- ex -->
+	    <div class="grid grid8">
+            <div class="column column8"></div>
+            <div class="column column8"></div>
+            <div class="column column8"></div>
+            <div class="column column8"></div>
+            <div class="column column8"></div>
+            <div class="column column8"></div>
+            <div class="column column8"></div>
+            <div class="column column8"></div>
+            <div class="column column8"></div>
+        </div>
+        <!-- ex -->
+    </div>
+</div>
+<!-- sample8 -->
+
+<div class="sample">
+    <h5>TOTAL<span class="dot"><i></i><i></i><i></i></span></h5>
+    <div class="script on">
+<pre class="line-numbers"><code class="language-xml">&lt;!DOCTYPE html&gt;
+&lt;html lang="ko"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;flex&lt;/title&gt;
+    &lt;style&gt;
+        /* option */
+        .grid {
+            background-color: #f7f7f7;
+            border-radius: 3px;
+            padding: 20px;
+            counter-reset: items;
+        }
+        .column {
+            border-radius: 3px;
+            background-color: #A2CBFA;
+            border: 1px solid #4390E1;
+            box-sizing: border-box;
+            box-shadow: 0 2px 2px rgba(0,90,250,0.05), 0 4px 4px rgba(0,90,250,0.05), 0 8px 8px rgba(0,90,250,0.05), 0 16px 16px rgba(0,90,250,0.05);
+            min-height: 100px; 
+            color: #fff;
+            padding: 10px;
+        }
+        .column::before {
+            counter-increment: items;
+            content: counter(items);
+        }
+        /* grid */
+        .grid8 {
+            display: grid; 
+            grid-template-columns: repeat(3, 100px);
+            grid-template-rows: repeat(3, 100px);
+            grid-gap: 20px;
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div class="grid grid8"&gt;
+        &lt;div class="column column8"&gt;&lt;/div&gt;
+        &lt;div class="column column8"&gt;&lt;/div&gt;
+        &lt;div class="column column8"&gt;&lt;/div&gt;
+        &lt;div class="column column8"&gt;&lt;/div&gt;
+        &lt;div class="column column8"&gt;&lt;/div&gt;
+        &lt;div class="column column8"&gt;&lt;/div&gt;
+        &lt;div class="column column8"&gt;&lt;/div&gt;
+        &lt;div class="column column8"&gt;&lt;/div&gt;
+        &lt;div class="column column8"&gt;&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+    </div>
+</div>
+<!-- sample8 -->
+
+
+
+
+
+<style>
+    /* grid */
+    .grid9 {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        grid-gap: 20px;
+    }
+    .column9:nth-child(1) {
+        grid-column: span 2;
+        grid-row: span 2;
+    }
+    .column9:nth-child(3) {
+        grid-column: span 2;
+        grid-row: span 2;
+    }
+    .column9:last-child {
+        grid-column: span 5 / 6;
+    }
+</style>
+<!-- Sample9 -->
+<h4 class="pt50">Sample9 <span><a href="https://webstoryboy.github.io/CSS/sample657-9.html" target="_blank"><img src="https://tistory3.daumcdn.net/tistory/2933724/skin/images/blank.gif" class="blank_icon"></a></span></h4>
+<p>콘텐츠 요소의 상하 관계 정렬 상태를 설정하는 예제입니다.</p>
+<div class="sample">
+    <h5>결과<span class="dot"><i></i><i></i><i></i></span></h5>
+    <div class="ex">
+        <!-- ex -->
+	    <div class="grid grid9">
+            <div class="column column9"></div>
+            <div class="column column9"></div>
+            <div class="column column9"></div>
+            <div class="column column9"></div>
+            <div class="column column9"></div>
+            <div class="column column9"></div>
+            <div class="column column9"></div>
+            <div class="column column9"></div>
+            <div class="column column9"></div>
+            <div class="column column9"></div>
+        </div>
+        <!-- ex -->
+    </div>
+</div>
+<!-- sample9 -->
+
+<div class="sample">
+    <h5>TOTAL<span class="dot"><i></i><i></i><i></i></span></h5>
+    <div class="script on">
+<pre class="line-numbers"><code class="language-xml">&lt;!DOCTYPE html&gt;
+&lt;html lang="ko"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;flex&lt;/title&gt;
+    &lt;style&gt;
+        /* option */
+        .grid {
+            background-color: #f7f7f7;
+            border-radius: 3px;
+            padding: 20px;
+            counter-reset: items;
+        }
+        .column {
+            border-radius: 3px;
+            background-color: #A2CBFA;
+            border: 1px solid #4390E1;
+            box-sizing: border-box;
+            box-shadow: 0 2px 2px rgba(0,90,250,0.05), 0 4px 4px rgba(0,90,250,0.05), 0 8px 8px rgba(0,90,250,0.05), 0 16px 16px rgba(0,90,250,0.05);
+            min-height: 100px; 
+            color: #fff;
+            padding: 10px;
+        }
+        .column::before {
+            counter-increment: items;
+            content: counter(items);
+        }
+        /* grid */
+        .grid9 {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            grid-template-rows: repeat(3, 1fr);
+            grid-gap: 20px;
+        }
+        .column9:nth-child(1) {
+            grid-column: span 2;
+            grid-row: span 2;
+        }
+        .column9:nth-child(3) {
+            grid-column: span 2;
+            grid-row: span 2;
+        }
+        .column9:last-child {
+            grid-column: span 5 / 6;
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div class="grid grid9"&gt;
+        &lt;div class="column column9"&gt;&lt;/div&gt;
+        &lt;div class="column column9"&gt;&lt;/div&gt;
+        &lt;div class="column column9"&gt;&lt;/div&gt;
+        &lt;div class="column column9"&gt;&lt;/div&gt;
+        &lt;div class="column column9"&gt;&lt;/div&gt;
+        &lt;div class="column column9"&gt;&lt;/div&gt;
+        &lt;div class="column column9"&gt;&lt;/div&gt;
+        &lt;div class="column column9"&gt;&lt;/div&gt;
+        &lt;div class="column column9"&gt;&lt;/div&gt;
+        &lt;div class="column column9"&gt;&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+    </div>
+</div>
+<!-- sample9 -->
+
+
+
+
+
+
+
+
+<style>
+    /* grid */
+    .grid10 {
+        display: grid;
+        grid-gap: 20px;
+        grid-template-columns: repeat(3, 1fr);
+        /* grid-template-rows: repeat(3, 100px); */
+        grid-template-rows: repeat(3, minmax(100px, auto));
+        grid-template-areas:
+            "a a a"
+            "b c c"
+            "b c c"
+            "d d d";
+    } 
+    .column10:nth-child(1) {grid-area: a;}
+    .column10:nth-child(2) {grid-area: b;}
+    .column10:nth-child(3) {grid-area: c;}
+    .column10:nth-child(4) {grid-area: d;}
+</style>
+<!-- Sample10 -->
+<h4 class="pt50">Sample10 <span><a href="https://webstoryboy.github.io/CSS/sample657-10.html" target="_blank"><img src="https://tistory3.daumcdn.net/tistory/2933724/skin/images/blank.gif" class="blank_icon"></a></span></h4>
+<p>콘텐츠 요소의 상하 관계 정렬 상태를 설정하는 예제입니다.</p>
+<div class="sample">
+    <h5>결과<span class="dot"><i></i><i></i><i></i></span></h5>
+    <div class="ex">
+        <!-- ex -->
+	    <div class="grid grid10">
+            <div class="column column10"></div>
+            <div class="column column10"></div>
+            <div class="column column10"></div>
+            <div class="column column10"></div>
+        </div>
+        <!-- ex -->
+    </div>
+</div>
+<!-- sample10 -->
+
+<div class="sample">
+    <h5>TOTAL<span class="dot"><i></i><i></i><i></i></span></h5>
+    <div class="script on">
+<pre class="line-numbers"><code class="language-xml">&lt;!DOCTYPE html&gt;
+&lt;html lang="ko"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;flex&lt;/title&gt;
+    &lt;style&gt;
+        /* option */
+        .grid {
+            background-color: #f7f7f7;
+            border-radius: 3px;
+            padding: 20px;
+            counter-reset: items;
+        }
+        .column {
+            border-radius: 3px;
+            background-color: #A2CBFA;
+            border: 1px solid #4390E1;
+            box-sizing: border-box;
+            box-shadow: 0 2px 2px rgba(0,90,250,0.05), 0 4px 4px rgba(0,90,250,0.05), 0 8px 8px rgba(0,90,250,0.05), 0 16px 16px rgba(0,90,250,0.05);
+            min-height: 100px; 
+            color: #fff;
+            padding: 10px;
+        }
+        .column::before {
+            counter-increment: items;
+            content: counter(items);
+        }
+        /* grid */
+        .grid10 {
+            display: grid;
+            grid-gap: 20px;
+            grid-template-columns: repeat(3, 1fr);
+            /* grid-template-rows: repeat(3, 100px); */
+            grid-template-rows: repeat(3, minmax(100px, auto));
+            grid-template-areas:
+                "a a a"
+                "b c c"
+                "b c c"
+                "d d d";
+        } 
+        .column10:nth-child(1) {grid-area: a;}
+        .column10:nth-child(2) {grid-area: b;}
+        .column10:nth-child(3) {grid-area: c;}
+        .column10:nth-child(4) {grid-area: d;}
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div class="grid grid10"&gt;
+        &lt;div class="column column10"&gt;&lt;/div&gt;
+        &lt;div class="column column10"&gt;&lt;/div&gt;
+        &lt;div class="column column10"&gt;&lt;/div&gt;
+        &lt;div class="column column10"&gt;&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+    </div>
+</div>
+<!-- sample10 -->
+
+
+
+
+
+
+
+<style>
+    /* grid */
+    .grid11 {
+        display: grid;
+        grid-gap: 20px;
+        grid-template-columns: repeat(auto-fit, 150px);
+        grid-auto-rows: 150px;
+        grid-auto-flow: dense;
+    } 
+    .column11:nth-of-type(2) {
+        grid-column: span 2;
+    }
+    .column11:nth-of-type(5) {
+        grid-column: span 2;
+        grid-row: span 2;
+    }
+    .column11:nth-of-type(7) {
+        grid-row: span 2;
+    }
+</style>
+<!-- Sample11 -->
+<h4 class="pt50">Sample11 <span><a href="https://webstoryboy.github.io/CSS/sample657-11.html" target="_blank"><img src="https://tistory3.daumcdn.net/tistory/2933724/skin/images/blank.gif" class="blank_icon"></a></span></h4>
+<p>콘텐츠 요소의 상하 관계 정렬 상태를 설정하는 예제입니다.</p>
+<div class="sample">
+    <h5>결과<span class="dot"><i></i><i></i><i></i></span></h5>
+    <div class="ex">
+        <!-- ex -->
+	    <div class="grid grid11">
+            <div class="column column11"></div>
+            <div class="column column11"></div>
+            <div class="column column11"></div>
+            <div class="column column11"></div>
+            <div class="column column11"></div>
+            <div class="column column11"></div>
+            <div class="column column11"></div>
+            <div class="column column11"></div>
+            <div class="column column11"></div>
+            <div class="column column11"></div>
+        </div>
+        <!-- ex -->
+    </div>
+</div>
+<!-- sample11 -->
+
+<div class="sample">
+    <h5>TOTAL<span class="dot"><i></i><i></i><i></i></span></h5>
+    <div class="script on">
+<pre class="line-numbers"><code class="language-xml">&lt;!DOCTYPE html&gt;
+&lt;html lang="ko"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;flex&lt;/title&gt;
+    &lt;style&gt;
+        /* option */
+        .grid {
+            background-color: #f7f7f7;
+            border-radius: 3px;
+            padding: 20px;
+            counter-reset: items;
+        }
+        .column {
+            border-radius: 3px;
+            background-color: #A2CBFA;
+            border: 1px solid #4390E1;
+            box-sizing: border-box;
+            box-shadow: 0 2px 2px rgba(0,90,250,0.05), 0 4px 4px rgba(0,90,250,0.05), 0 8px 8px rgba(0,90,250,0.05), 0 16px 16px rgba(0,90,250,0.05);
+            min-height: 100px; 
+            color: #fff;
+            padding: 10px;
+        }
+        .column::before {
+            counter-increment: items;
+            content: counter(items);
+        }
+        /* grid */
+        .grid11 {
+            display: grid;
+            grid-gap: 20px;
+            grid-template-columns: repeat(auto-fit, 150px);
+            grid-auto-rows: 150px;
+            grid-auto-flow: dense;
+        } 
+        .column11:nth-of-type(2) {
+            grid-column: span 2;
+        }
+        .column11:nth-of-type(5) {
+            grid-column: span 2;
+            grid-row: span 2;
+        }
+        .column11:nth-of-type(7) {
+            grid-row: span 2;
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div class="grid grid11"&gt;
+        &lt;div class="column column11"&gt;&lt;/div&gt;
+        &lt;div class="column column11"&gt;&lt;/div&gt;
+        &lt;div class="column column11"&gt;&lt;/div&gt;
+        &lt;div class="column column11"&gt;&lt;/div&gt;
+        &lt;div class="column column11"&gt;&lt;/div&gt;
+        &lt;div class="column column11"&gt;&lt;/div&gt;
+        &lt;div class="column column11"&gt;&lt;/div&gt;
+        &lt;div class="column column11"&gt;&lt;/div&gt;
+        &lt;div class="column column11"&gt;&lt;/div&gt;
+        &lt;div class="column column11"&gt;&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+    </div>
+</div>
+<!-- sample11 -->

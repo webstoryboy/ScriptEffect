@@ -1,0 +1,452 @@
+
+
+<h2>.closest()</h2>
+<p>선택한 요소를 포함하면서 가장 가까운 상위 요소를 선택합니다.</p>
+
+<hr>
+
+<h3>.closest()</h3>
+<p class="blue">선택한 요소를 포함하면서 가장 가까운 상위 요소를 선택합니다.</p>
+
+<h4 class="pt50">문법(Syntax)</h4>
+<p class="blue">
+    $("선택자").closest("선택자");<br>
+    $("선택자").closest("변수");<br>
+</p>
+
+<h4 class="pt50">정의(Definition)</h4>
+<ul>
+    <li>선택한 요소 중 가장 가까운 상위 요소 선택자(태그,아이디,클래스)를 통해 선택합니다.</li>
+    <li>선택한 요소 중 가장 가까운 상위 요소 중 변수를 통해 선택합니다.</li>
+</ul>
+
+   
+
+<!-- Sample1 -->
+<h4 class="pt50">Sample1 <span><a href="https://webstoryboy.github.io/jquery/sample041-1.html" target="_blank"><img src="https://tistory3.daumcdn.net/tistory/2933724/skin/images/blank.gif" class="blank_icon"></a></span></h4>
+<p>선택한 요소 중 가장 가까운 요소를 선택합니다.</p>
+<div class="sample">
+    <h5>결과<span class="dot"><i></i><i></i><i></i></span></h5>
+    <div class="ex">
+        <!-- ex -->
+        <h3>탐색(Traversing)</h3>
+        <div class="list1">
+            <ul>
+                <li>.children() 메서드는 선택한 요소의 모든 자식을 선택합니다.
+                    <ul>
+                        <li class="select">첫번째 자식입니다.</li>
+                        <li>첫번째 자식입니다.</li>
+                    </ul>
+                </li>
+                <li>.closest() 메서드는 선택한 요소의 상위 요소 중 가장 가까운 요소를 선택합니다.
+                    <ul>
+                        <li>첫번째 자식입니다.</li>
+                        <li>첫번째 자식입니다.
+                            <ul>
+                                <li class="select">두번째 자식입니다.</li>
+                                <li>두번째 자식입니다.</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li class="select">.find() 메서드는 선택한 요소에서 조건에 맞는 요소를 다시 선택합니다.</li>
+                <li>.next() 메서드는 선택한 요소의 다음 요소를 선택합니다.</li>
+            </ul>
+        </div>
+        <!-- ex -->
+    </div>
+    
+    <div class="choice1">
+        <a href="#" class="off1">리셋</a>
+        <a href="#" class="btn1">클릭하면 <em>select</em>의 가장 가까운 상위 요소<em>li</em>를 선택합니다.</a>
+        <a href="#" class="btn2">클릭하면 <em>select</em>의 가장 가까운 상위 요소<em>ul</em>를 선택합니다.</a>
+    </div>
+</div>
+<!-- sample -->
+
+
+<div class="sample">
+    <h5>jquery<span class="dot"><i></i><i></i><i></i></span></h5>
+    <div class="script on">
+        <pre class="line-numbers"><code class="language-javascript">$("li.select").closest("li").addClass("rLine");
+$("li.select").closest("ul").addClass("rLine");</code></pre>
+    </div>
+</div>
+<!-- sample -->
+
+<div class="sample">
+    <h5>html<span class="dot"><i></i><i></i><i></i></span></h5>
+    <div class="html">
+        <pre class="line-numbers"><code class="language-markup">&lt;h3&gt;탐색(Traversing)&lt;/h3&gt;
+&lt;div class="list1"&gt;
+    &lt;ul&gt;
+        &lt;li&gt;.children() 메서드는 선택한 요소의 모든 자식을 선택합니다.
+            &lt;ul&gt;
+                &lt;li class="select"&gt;첫번째 자식입니다.&lt;/li&gt;
+                &lt;li&gt;첫번째 자식입니다.&lt;/li&gt;
+            &lt;/ul&gt;
+        &lt;/li&gt;
+        &lt;li&gt;.closest() 메서드는 선택한 요소의 상위 요소 중 가장 가까운 요소를 선택합니다.
+            &lt;ul&gt;
+                &lt;li&gt;첫번째 자식입니다.&lt;/li&gt;
+                &lt;li&gt;첫번째 자식입니다.
+                    &lt;ul&gt;
+                        &lt;li class="select"&gt;두번째 자식입니다.&lt;/li&gt;
+                        &lt;li&gt;두번째 자식입니다.&lt;/li&gt;
+                    &lt;/ul&gt;
+                &lt;/li&gt;
+            &lt;/ul&gt;
+        &lt;/li&gt;
+        &lt;li class="select"&gt;.find() 메서드는 선택한 요소에서 조건에 맞는 요소를 다시 선택합니다.&lt;/li&gt;
+        &lt;li&gt;.next() 메서드는 선택한 요소의 다음 요소를 선택합니다.&lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+</div>
+<!-- sample -->
+
+<div class="sample">
+    <h5>Total<span class="dot"><i></i><i></i><i></i></span></h5>
+    <div class="html on">
+        <pre class="line-numbers"><code class="language-markup">&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;jQuery Sample&lt;/title&gt;
+    &lt;style&gt;
+        li.select:before {content:'Select'; padding: 4px 4px 2px 4px; font-size: 90%; color: #3d90b7; white-space: nowrap; background-color: #e7f6fd; border-radius: 4px;border: 1px dashed #3d90b7;}
+        .rLine {padding: 4px 4px 2px 10px; font-size: 90%; color: #c7254e; white-space: nowrap; background-color: #f9f2f4; border-radius: 4px; border: 1px dashed #a51a3d;}
+        a {border: 1px solid #5f6368; padding: 7px 20px 5px 20px; display: inline-block; border-radius: 20px; text-decoration: none;}
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    
+    &lt;h3&gt;탐색(Traversing)&lt;/h3&gt;
+    &lt;div class="list1"&gt;
+        &lt;ul&gt;
+            &lt;li&gt;.children() 메서드는 선택한 요소의 모든 자식을 선택합니다.
+                &lt;ul&gt;
+                    &lt;li class="select"&gt;첫번째 자식입니다.&lt;/li&gt;
+                    &lt;li&gt;첫번째 자식입니다.&lt;/li&gt;
+                &lt;/ul&gt;
+            &lt;/li&gt;
+            &lt;li&gt;.closest() 메서드는 선택한 요소의 상위 요소 중 가장 가까운 요소를 선택합니다.
+                &lt;ul&gt;
+                    &lt;li&gt;첫번째 자식입니다.&lt;/li&gt;
+                    &lt;li&gt;첫번째 자식입니다.
+                        &lt;ul&gt;
+                            &lt;li class="select"&gt;두번째 자식입니다.&lt;/li&gt;
+                            &lt;li&gt;두번째 자식입니다.&lt;/li&gt;
+                        &lt;/ul&gt;
+                    &lt;/li&gt;
+                &lt;/ul&gt;
+            &lt;/li&gt;
+            &lt;li class="select"&gt;.find() 메서드는 선택한 요소에서 조건에 맞는 요소를 다시 선택합니다.&lt;/li&gt;
+            &lt;li&gt;.next() 메서드는 선택한 요소의 다음 요소를 선택합니다.&lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/div&gt;
+    
+    &lt;div class="choice1"&gt;
+        &lt;a href="#" class="off1"&gt;리셋&lt;/a&gt;
+        &lt;a href="#" class="btn1"&gt;클릭하면 &lt;em&gt;select&lt;/em&gt;의 가장 가까운 상위 요소&lt;em&gt;li&lt;/em&gt;를 선택합니다.&lt;/a&gt;
+        &lt;a href="#" class="btn2"&gt;클릭하면 &lt;em&gt;select&lt;/em&gt;의 가장 가까운 상위 요소&lt;em&gt;ul&lt;/em&gt;를 선택합니다.&lt;/a&gt;
+    &lt;/div&gt;
+    
+    &lt;script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"&gt;&lt;/script&gt;
+    &lt;script&gt;
+        $(".choice1 .off1").on("click", function(e){
+            e.preventDefault();
+            $(".list1 li, .list1 ul").removeClass("rLine");
+        });
+        $(".choice1 .btn1").on("click", function(e){
+            e.preventDefault();
+            $(".list1 li.select").closest("li").addClass("rLine");
+        });
+        $(".choice1 .btn2").on("click", function(e){
+            e.preventDefault();
+            $(".list1 li.select").closest("ul").addClass("rLine");
+        });
+    &lt;/script&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+    </div>
+</div>
+<!-- sample -->
+
+
+<script>
+    $(".choice1 .off1").on("click", function(e){
+        e.preventDefault();
+        $(".list1 li, .list1 ul").removeClass("rLine");
+    });
+    $(".choice1 .btn1").on("click", function(e){
+        e.preventDefault();
+        $(".list1 li.select").closest("li").addClass("rLine");
+    });
+    $(".choice1 .btn2").on("click", function(e){
+        e.preventDefault();
+        $(".list1 li.select").closest("ul").addClass("rLine");
+    });
+</script>
+<!-- //Sample1 -->
+
+
+
+
+
+
+
+
+<!-- Sample2 -->
+<h4 class="pt50">Sample2 <span><a href="https://webstoryboy.github.io/jquery/sample041-2.html" target="_blank"><img src="https://tistory3.daumcdn.net/tistory/2933724/skin/images/blank.gif" class="blank_icon"></a></span></h4>
+<p>선택한 요소의 가장 가까운 상위 요소를 선택합니다.</p>
+<div class="sample">
+    <h5>결과<span class="dot"><i></i><i></i><i></i></span></h5>
+    <div class="ex">
+        <!-- ex -->
+        <h3>탐색(Traversing)</h3>
+        <div class="list2">
+            <ul>
+                <li>.children() 메서드는 선택한 요소의 모든 자식을 선택합니다.</li>
+                <li>.closest() 메서드는 선택한 요소의 상위 요소 중 가장 가까운 요소를 선택합니다.</li>
+                <li>.find() 메서드는 선택한 요소에서 조건에 맞는 요소를 다시 선택합니다.</li>
+                <li>.next() 메서드는 선택한 요소의 다음 요소를 선택합니다.</li>
+            </ul>
+            <ul>
+                <li>.eq() 선택한 요소에 인덱스 번호에 해당하는 요소를 찾습니다.</li>
+                <li>.filter() 선택된 요소에서 선택하거나 함수를 사용할 수 있습니다.</li>
+                <li>.first() 선택된 요소에서 첫번째 자식 요소를 찾습니다.</li>
+                <li>.has() 선택된 요소의 자식 요소에서 주어진 선택자를 찾습니다.</li>
+            </ul>
+        </div>
+        <!-- ex -->
+    </div>
+    
+    <div class="choice2">
+        리스트를 클릭하면 가장 가까운 ul 요소에게 효과를 줍니다.
+    </div>
+</div>
+<!-- sample -->
+
+
+<div class="sample">
+    <h5>jquery<span class="dot"><i></i><i></i><i></i></span></h5>
+    <div class="script">
+        <pre class="line-numbers"><code class="language-javascript">$(".list2 li").on("click", function(event){
+  $(event.target).closest("ul").toggleClass("rLine");
+});</code></pre>
+    </div>
+</div>
+<!-- sample -->
+
+<div class="sample">
+    <h5>html<span class="dot"><i></i><i></i><i></i></span></h5>
+    <div class="html">
+        <pre class="line-numbers"><code class="language-markup">&lt;h3&gt;탐색(Traversing)&lt;/h3&gt;
+&lt;div class="list2"&gt;
+    &lt;ul&gt;
+        &lt;li&gt;.children() 메서드는 선택한 요소의 모든 자식을 선택합니다.&lt;/li&gt;
+        &lt;li&gt;.closest() 메서드는 선택한 요소의 상위 요소 중 가장 가까운 요소를 선택합니다.&lt;/li&gt;
+        &lt;li&gt;.find() 메서드는 선택한 요소에서 조건에 맞는 요소를 다시 선택합니다.&lt;/li&gt;
+        &lt;li&gt;.next() 메서드는 선택한 요소의 다음 요소를 선택합니다.&lt;/li&gt;
+    &lt;/ul&gt;
+    &lt;ul&gt;
+        &lt;li&gt;.eq() 선택한 요소에 인덱스 번호에 해당하는 요소를 찾습니다.&lt;/li&gt;
+        &lt;li&gt;.filter() 선택된 요소에서 선택하거나 함수를 사용할 수 있습니다.&lt;/li&gt;
+        &lt;li&gt;.first() 선택된 요소에서 첫번째 자식 요소를 찾습니다.&lt;/li&gt;
+        &lt;li&gt;.has() 선택된 요소의 자식 요소에서 주어진 선택자를 찾습니다.&lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+</div>
+<!-- sample -->
+
+<div class="sample">
+    <h5>Total<span class="dot"><i></i><i></i><i></i></span></h5>
+    <div class="html on">
+        <pre class="line-numbers"><code class="language-markup">&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;jQuery Sample&lt;/title&gt;
+    &lt;style&gt;
+        li.select:before {content:'Select'; padding: 4px 4px 2px 4px; font-size: 90%; color: #3d90b7; white-space: nowrap; background-color: #e7f6fd; border-radius: 4px;border: 1px dashed #3d90b7;}
+        .rLine {padding: 4px 4px 2px 10px; font-size: 90%; color: #c7254e; white-space: nowrap; background-color: #f9f2f4; border-radius: 4px; border: 1px dashed #a51a3d;}
+        a {border: 1px solid #5f6368; padding: 7px 20px 5px 20px; display: inline-block; border-radius: 20px; text-decoration: none;}
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    
+    &lt;h3&gt;탐색(Traversing)&lt;/h3&gt;
+    &lt;div class="list2"&gt;
+        &lt;ul&gt;
+            &lt;li&gt;.children() 메서드는 선택한 요소의 모든 자식을 선택합니다.&lt;/li&gt;
+            &lt;li&gt;.closest() 메서드는 선택한 요소의 상위 요소 중 가장 가까운 요소를 선택합니다.&lt;/li&gt;
+            &lt;li&gt;.find() 메서드는 선택한 요소에서 조건에 맞는 요소를 다시 선택합니다.&lt;/li&gt;
+            &lt;li&gt;.next() 메서드는 선택한 요소의 다음 요소를 선택합니다.&lt;/li&gt;
+        &lt;/ul&gt;
+        &lt;ul&gt;
+            &lt;li&gt;.eq() 선택한 요소에 인덱스 번호에 해당하는 요소를 찾습니다.&lt;/li&gt;
+            &lt;li&gt;.filter() 선택된 요소에서 선택하거나 함수를 사용할 수 있습니다.&lt;/li&gt;
+            &lt;li&gt;.first() 선택된 요소에서 첫번째 자식 요소를 찾습니다.&lt;/li&gt;
+            &lt;li&gt;.has() 선택된 요소의 자식 요소에서 주어진 선택자를 찾습니다.&lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/div&gt;
+    
+    &lt;div class="choice2"&gt;
+        리스트를 클릭하면 가장 가까운 ul 요소에게 효과를 줍니다.
+    &lt;/div&gt;
+    
+    &lt;script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"&gt;&lt;/script&gt;
+    &lt;script&gt;
+        $(".list2 li").on("click", function(event){
+          $(event.target).closest("ul").toggleClass("rLine");
+        });
+    &lt;/script&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+    </div>
+</div>
+<!-- sample -->
+
+
+<script>
+    $(".list2 li").on("click", function(event){
+      $(event.target).closest("ul").toggleClass("rLine");
+    });
+</script>
+<!-- //Sample2 -->
+
+
+
+
+
+
+
+
+<!-- Sample3 -->
+<h4 class="pt50">Sample3 <span><a href="https://webstoryboy.github.io/jquery/sample041-3.html" target="_blank"><img src="https://tistory3.daumcdn.net/tistory/2933724/skin/images/blank.gif" class="blank_icon"></a></span></h4>
+<p>선택한 요소의 가장 가까운 상위 요소를 변수를 통해 선택합니다.</p>
+<div class="sample">
+    <h5>결과<span class="dot"><i></i><i></i><i></i></span></h5>
+    <div class="ex">
+        <!-- ex -->
+        <h3>탐색(Traversing)</h3>
+        <div class="list3">
+            <ul>
+                <li>.children() 메서드는 선택한 요소의 모든 자식을 선택합니다.</li>
+                <li>.closest() 메서드는 선택한 요소의 상위 <span class="select">요소</span> 중 가장 가까운 요소를 선택합니다.</li>
+                <li>.find() 메서드는 선택한 요소에서 조건에 맞는 요소를 다시 선택합니다.</li>
+                <li>.next() 메서드는 선택한 요소의 다음 요소를 선택합니다.</li>
+            </ul>
+            <ul>
+                <li>.eq() 선택한 요소에 인덱스 번호에 해당하는 <span class="select">요소</span>를 찾습니다.</li>
+                <li>.filter() 선택된 요소에서 선택하거나 <span class="select">함수</span>를 사용할 수 있습니다.</li>
+                <li>.first() 선택된 요소에서 첫번째 자식 요소를 찾습니다.</li>
+                <li>.has() 선택된 요소의 자식 요소에서 주어진 선택자를 찾습니다.</li>
+            </ul>
+        </div>
+        <!-- ex -->
+    </div>
+    
+    <div class="choice3">
+        <em>select</em>를 클릭하면 가장 가까운 상위 요소<em>li</em>를 변수를 통해 선택합니다.
+    </div>
+</div>
+<!-- sample -->
+
+
+<div class="sample">
+    <h5>jquery<span class="dot"><i></i><i></i><i></i></span></h5>
+    <div class="script">
+        <pre class="line-numbers"><code class="language-javascript">var span = $(".list3 li");
+$(".list3 li span").on("click", function(event){
+    $(event.target).closest(span).toggleClass("rLine");
+});</code></pre>
+    </div>
+</div>
+<!-- sample -->
+
+<div class="sample">
+    <h5>html<span class="dot"><i></i><i></i><i></i></span></h5>
+    <div class="html">
+        <pre class="line-numbers"><code class="language-markup">&lt;h3&gt;탐색(Traversing)&lt;/h3&gt;
+&lt;div class="list3"&gt;
+    &lt;ul&gt;
+        &lt;li&gt;.children() 메서드는 선택한 요소의 모든 자식을 선택합니다.&lt;/li&gt;
+        &lt;li&gt;.closest() 메서드는 선택한 요소의 상위 &lt;span class="select"&gt;요소&lt;/span&gt; 중 가장 가까운 요소를 선택합니다.&lt;/li&gt;
+        &lt;li&gt;.find() 메서드는 선택한 요소에서 조건에 맞는 요소를 다시 선택합니다.&lt;/li&gt;
+        &lt;li&gt;.next() 메서드는 선택한 요소의 다음 요소를 선택합니다.&lt;/li&gt;
+    &lt;/ul&gt;
+    &lt;ul&gt;
+        &lt;li&gt;.eq() 선택한 요소에 인덱스 번호에 해당하는 &lt;span class="select"&gt;요소&lt;/span&gt;를 찾습니다.&lt;/li&gt;
+        &lt;li&gt;.filter() 선택된 요소에서 선택하거나 &lt;span class="select"&gt;함수&lt;/span&gt;를 사용할 수 있습니다.&lt;/li&gt;
+        &lt;li&gt;.first() 선택된 요소에서 첫번째 자식 요소를 찾습니다.&lt;/li&gt;
+        &lt;li&gt;.has() 선택된 요소의 자식 요소에서 주어진 선택자를 찾습니다.&lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+</div>
+<!-- sample -->
+
+<div class="sample">
+    <h5>Total<span class="dot"><i></i><i></i><i></i></span></h5>
+    <div class="html on">
+        <pre class="line-numbers"><code class="language-markup">&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;jQuery Sample&lt;/title&gt;
+    &lt;style&gt;
+        .select:before {content:'Select'; padding: 4px 4px 2px 4px; font-size: 90%; color: #3d90b7; white-space: nowrap; background-color: #e7f6fd; border-radius: 4px;border: 1px dashed #3d90b7;}
+        .rLine {padding: 4px 4px 2px 10px; font-size: 90%; color: #c7254e; white-space: nowrap; background-color: #f9f2f4; border-radius: 4px; border: 1px dashed #a51a3d;}
+        a {border: 1px solid #5f6368; padding: 7px 20px 5px 20px; display: inline-block; border-radius: 20px; text-decoration: none;}
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    
+    &lt;h3&gt;탐색(Traversing)&lt;/h3&gt;
+    &lt;div class="list3"&gt;
+        &lt;ul&gt;
+            &lt;li&gt;.children() 메서드는 선택한 요소의 모든 자식을 선택합니다.&lt;/li&gt;
+            &lt;li&gt;.closest() 메서드는 선택한 요소의 상위 &lt;span class="select"&gt;요소&lt;/span&gt; 중 가장 가까운 요소를 선택합니다.&lt;/li&gt;
+            &lt;li&gt;.find() 메서드는 선택한 요소에서 조건에 맞는 요소를 다시 선택합니다.&lt;/li&gt;
+            &lt;li&gt;.next() 메서드는 선택한 요소의 다음 요소를 선택합니다.&lt;/li&gt;
+        &lt;/ul&gt;
+        &lt;ul&gt;
+            &lt;li&gt;.eq() 선택한 요소에 인덱스 번호에 해당하는 &lt;span class="select"&gt;요소&lt;/span&gt;를 찾습니다.&lt;/li&gt;
+            &lt;li&gt;.filter() 선택된 요소에서 선택하거나 &lt;span class="select"&gt;함수&lt;/span&gt;를 사용할 수 있습니다.&lt;/li&gt;
+            &lt;li&gt;.first() 선택된 요소에서 첫번째 자식 요소를 찾습니다.&lt;/li&gt;
+            &lt;li&gt;.has() 선택된 요소의 자식 요소에서 주어진 선택자를 찾습니다.&lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/div&gt;
+    
+    &lt;div class="choice3"&gt;
+        &lt;em&gt;li&lt;/em&gt;를 클릭하면 가장 가까운 상위 요소를 선택합니다.
+    &lt;/div&gt;
+    
+    &lt;script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"&gt;&lt;/script&gt;
+    &lt;script&gt;
+        var span = $(".list3 li");
+        $(".list3 li span").on("click", function(event){
+          $(event.target).closest(span).toggleClass("rLine");
+        });
+    &lt;/script&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+    </div>
+</div>
+<!-- sample -->
+
+
+<script>
+    var span = $(".list3 li");
+    $(".list3 li span").on("click", function(event){
+      $(event.target).closest(span).toggleClass("rLine");
+    });
+</script>
+<!-- //Sample3 -->
+

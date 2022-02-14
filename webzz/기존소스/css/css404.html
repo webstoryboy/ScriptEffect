@@ -1,0 +1,912 @@
+<h2>border-radius</h2>
+<p>border-radius 속성은 모서리 굴곡을 설정합니다.</p>
+
+<hr>
+
+<h3>border-radius</h3>
+<p class="blue">border-radius 속성은 모서리 굴곡을 설정합니다.</p>
+
+<div class="table-responsive">
+    <table class="table table-bordered table-striped table-hover">
+        <colgroup>
+            <col style="width: 30%">
+            <col style="width: 70%">
+        </colgroup>
+        <thead>
+            <tr>
+                <th scope="col">특징</th>
+                <th scope="col">설명</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th scope="row"><a href="http://webzz.tistory.com/360">기본 값</a></th>
+                <td><a href="http://webzz.tistory.com/360">
+                        border-top-left-radius : 0<br>
+                        border-top-right-radius : 0<br>
+                        border-bottom-right-radius : 0<br>
+                        border-bottom-left-radius : 0
+                    </a></td>
+            </tr>
+            <tr>
+                <th scope="row"><a href="http://webzz.tistory.com/360">적용</a></th>
+                <td><a href="http://webzz.tistory.com/360">border</a></td>
+            </tr>
+            <tr>
+                <th scope="row"><a href="http://webzz.tistory.com/359">버전</a></th>
+                <td><a href="http://webzz.tistory.com/359">CSS3</a></td>
+            </tr>
+            <tr>
+                <th>사용성</th>
+                <td>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<h4 class="pt50">정의(Definition)</h4>
+<ul>
+    <li>border-radius 속성은 모서리 굴곡을 설정합니다.</li>
+</ul>
+
+<h4 class="pt50">비교(Compare)</h4>
+<ul>
+    <li>border-radius 속성은 모서리 굴곡을 설정합니다.</li>
+    <li>border-top-left-radius 속성은 윗부분 왼쪽 모서리 굴곡을 설정합니다.</li>
+    <li>border-top-right-radius 속성은 윗부분 오른쪽 모서리 굴곡을 설정합니다.</li>
+    <li>border-bottom-left-radius 속성은 아랫부분 왼쪽 모서리 굴곡을 설정합니다.</li>
+    <li>border-bottom-right-radius 속성은 아랫부분 오른쪽 모서리 굴곡을 설정합니다.</li>
+</ul>
+  
+<h4 class="pt50">테두리와 관련된 속성(Border Related Properties)</h4>
+<ul>
+    <li>border-width는 테두리 두께 속성을 설정합니다.</li>
+    <li>border-style는 테두리 스타일 속성을 설정합니다.</li>
+    <li>border-color는 테두리 색 속성을 설정합니다.</li>
+    <li>border-image는 테두리 이미지 속성을 설정합니다.</li>
+    <li>border-radius는 모서리 굴곡을 설정합니다.</li>
+    <li>outline는 아웃라인의 속성을 설정합니다.</li>
+    <li>box-shadow은 요소의 그림자를 설정합니다.</li>
+</ul>
+
+
+
+<h4 class="pt50">문법(Syntax)</h4>
+<p class="blue">border-radius : border-top-left-radius | border-top-right-radius | border-bottom-right-radius |
+    border-bottom-left-radius</p>
+
+    <style>
+        .radiusbox {
+            max-width: 700px;
+            min-height: 150px;
+            border: 1px solid #777;
+            margin: 35px auto;
+            position: relative;
+            padding: 20px;
+            background: #fff;
+            background-color: #a2cbfa;
+            border: 1px solid #4390e1;
+            border-radius: 20px 30px 40px 50px / 50px 60px 70px 80px
+        }
+        .radiusbox code {
+          display: block;
+          padding: 60px 0;
+          font-family: "Droid Sans Mono", consolas, monaco, monospace;
+        }
+        .radiusbox [data-target] {
+          -moz-box-sizing: border-box;
+          -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+          position: absolute;
+          width: 43px;
+          height: 23px;
+          text-align: center;
+          color: #777;
+          font-size: 11px;
+        }
+        .radiusbox [data-target]:before {
+          content: "";
+          position: absolute;
+          border: 1px dotted #9e9e9e;
+        }
+        .radiusbox [data-target].active {
+          font-weight: bold;
+        }
+        .radiusbox [data-target].active:before {
+          border-color: #000;
+        }
+        .radiusbox .top {
+          top: 0;
+        }
+        .radiusbox .top:before {
+          bottom: 0;
+        }
+        .radiusbox .left {
+          left: 0;
+        }
+        .radiusbox .left:before {
+          right: 0;
+        }
+        .radiusbox .right {
+          right: 0;
+        }
+        .radiusbox .right:before {
+          left: 0;
+        }
+        .radiusbox .bottom {
+          bottom: 0;
+        }
+        .radiusbox .bottom:before {
+          top: 0;
+        }
+        .radiusbox .horizontal {
+          margin: -26px 0;
+        }
+        .radiusbox .horizontal:before {
+          right: 0;
+          height: 5px;
+          left: 0;
+        }
+        .radiusbox .horizontal.top:before {
+          border-bottom: 0;
+        }
+        .radiusbox .horizontal.bottom {
+          padding-top: 5px;
+        }
+        .radiusbox .horizontal.bottom:before {
+          border-top: 0;
+        }
+        .radiusbox .horizontal.active {
+          color: #00a3da;
+        }
+        .radiusbox .vertical {
+          margin: 0 -46px;
+        }
+        .radiusbox .vertical:before {
+          bottom: 0;
+          width: 5px;
+          top: 0;
+        }
+        .radiusbox .vertical.left:before {
+          border-right: 0;
+        }
+        .radiusbox .vertical.right:before {
+          border-left: 0;
+        }
+        .radiusbox .vertical.active {
+          color: #dc3a74;
+        }
+        .radiusbox .hor, .radiusbox .ver {
+          position: relative;
+        }
+        .radiusbox .hor:before, .radiusbox .ver:before {
+          content: attr(title);
+          position: absolute;
+          top: -50px;
+          font-size: 10px;
+          font-family: "Quicksand", sans-serif;
+          text-transform: uppercase;
+          font-size: 30px;
+        }
+        .radiusbox .hor:before {
+          color: #00a3da;
+        }
+        .radiusbox .hor span:focus {
+          color: #00a3da;
+        }
+        .radiusbox .ver:before {
+          color: #dc3a74;
+        }
+        .radiusbox .ver span:focus {
+          color: #dc3a74;
+        }
+        .radiusbox [contenteditable] {
+          position: relative;
+          padding: 3px;
+          margin: 0 3px;
+          box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.2);
+          background: rgba(228, 223, 217, 0.7);
+        }
+        .radiusbox [contenteditable]:after {
+          content: attr(title);
+          position: absolute;
+          bottom: -20px;
+          left: 0;
+          line-height: 1;
+          font-size: 10px;
+          height: 10px;
+          font-family: "Open Sans", sans-serif;
+        }
+    
+    </style>
+    <div class="blue">
+        <div class="radiusbox">
+            <span data-target="tlh" class="top left horizontal" title="1st number">20px</span>
+            <span data-target="trh" class="top right horizontal" title="2nd number">30px</span>
+            <span data-target="brh" class="bottom right horizontal" title="3rd number">40px</span>
+            <span data-target="blh" class="bottom left horizontal" title="4th number">50px</span>
+            <span data-target="tlv" class="top left vertical" title="1st number after slash">50px</span>
+            <span data-target="trv" class="top right vertical" title="2nd number after slash">60px</span>
+            <span data-target="brv" class="bottom right vertical" title="3rd number after slash">70px</span>
+            <span data-target="blv" class="bottom left vertical" title="4th number after slash">80px</span>
+        </div>
+        <p style="text-align: center;">border-radius: 20px 30px 40px 50px / 50px 60px 70px 80px</p>
+    </div>
+    
+<p class="blue">
+    /* 테두리 굴곡을 위쪽, 오른쪽, 아래쪽, 왼쪽으로 설정한 경우 */ <br>
+    border-radius : 5px; <br><br>
+
+    /* 테두리 굴곡을 위쪽/아래쪽(5px), 왼쪽/오른쪽(6px)으로 설정한 경우 */ <br>
+    border-radius : 5px 6px; <br><br>
+
+    /* 테두리 굴곡을 위쪽(5px), 왼쪽/오른쪽(6px), 아래쪽(7px)으로 설정한 경우 */ <br>
+    border-radius : 5px 6px 7px; <br><br>
+
+    /* 테두리 굴곡을 위쪽(5px), 오른쪽(6px), 아래쪽(7px), 왼쪽(8px)으로 설정한 경우 */ <br>
+    border-radius : 5px 6px 7px 8px; <br><br>
+
+    /* 부모 요소로부터 속성을 상속 받은 경우 */ <br>
+    border-radius: 10px/50px;<br><br>
+
+    border-top-left-radius: 10px 50px;<br>
+    border-top-right-radius: 10px 50px;<br>
+    border-bottom-right-radius: 10px 50px;<br>
+    border-bottom-left-radius: 10px 50px;<br><br>
+
+    /* 다음의 방식은 풀어쓰면 다음과 같습니다. */<br>
+    border-radius: 120px 60px 80px 140px / 40px 100px 40px 70px;<br><br>
+
+    border-top-left-radius: 120px 40px;<br>
+    border-top-right-radius: 60px 100px;<br>
+    border-bottom-right-radius: 80px 40px;<br>
+    border-bottom-left-radius: 140px 70px;<br><br>
+
+    /* 다음의 방식은 풀어쓰면 다음과 같습니다. */<br>
+    border-radius: 200px 100px / 50px 70px; <br><br>
+
+    Vertical border radius for top-left portion is: 200px<br>
+    Vertical border radius for bottom-right portion is: 200px<br>
+    Vertical border radius for top-right portion is: 100px<br>
+    Vertical border radius for bottom-left portion is: 100px<br>
+    Horizontal border radius for top-left portion is: 50px<br>
+    Horizontal border radius for bottom-right portion is: 50px<br>
+    Horizontal border radius for top-right portion is: 70px<br>
+    Horizontal border radius for bottom-left portion is: 70px
+</p>
+
+
+<h4 class="pt50">속성(Property)</h4>
+<div class="table-responsive">
+    <table class="table table-bordered table-striped table-hover">
+        <colgroup>
+            <col style="width: 30%">
+            <col style="width: 70%">
+        </colgroup>
+        <thead>
+            <tr>
+                <th scope="col">속성값</th>
+                <th scope="col">설명</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th>border-top-left-radius</th>
+                <td>테두리 굴곡을 위부분 왼쪽에 설정합니다.</td>
+            </tr>
+            <tr>
+                <th>border-top-right-radius</th>
+                <td>테두리 굴곡을 위부분 오른쪽에 설정합니다.</td>
+            </tr>
+            <tr>
+                <th>border-bottom-right-radius</th>
+                <td>테두리 굴곡을 아래부분 오른쪽에 설정합니다.</td>
+            </tr>
+            <tr>
+                <th>border-bottom-left-radius</th>
+                <td>테두리 굴곡을 아래부분 왼쪽에 설정합니다.</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+
+<style>
+    .radius-box {
+        display: flex;
+        justify-content: space-evenly;
+    }
+    .radius-box .box {
+        border-radius: 3px;
+        background-color: #a2cbfa;
+        border: 1px solid #4390e1;
+        box-sizing: border-box;
+        box-shadow: 0 2px 2px rgb(0 90 250 / 5%), 0 4px 4px rgb(0 90 250 / 5%), 0 8px 8px rgb(0 90 250 / 5%), 0 16px 16px rgb(0 90 250 / 5%);
+        width: 200px;
+        height: 200px;
+        color: #fff;
+        padding: 10px;
+        margin: 1%;
+    }
+    @media (max-width: 800px){
+        .radius-box .box:nth-child(1){display: none;}
+        .radius-box .box:nth-child(2){display: none;}
+        .radius-box .box:nth-child(3){display: none;}
+    }
+</style>
+<!-- sample1 -->
+<h4 class="pt50">예제1(Sample)</h4>
+<div class="sample">
+    <h5>모서리 굴곡을 설정하는 예제입니다.</h5>
+    <div class="sampleView">
+        <!-- ex -->
+        <div class="radius-box">
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+        </div>
+        <!-- ex -->
+    </div>
+    <div class="sampleBtn">
+        <a href="#">border-radius: 0;</a>
+        <a href="#">border-radius: 5px;</a>
+        <a href="#">border-radius: 10px;</a>
+        <a href="#">border-radius: 10%;</a>
+        <a href="#">border-radius: 50%;</a>
+        <a href="#">border-radius: 10% 100px</a>
+        <a href="#">border-radius: 20% 50%</a>
+        <a href="#">border-radius: 20% / 50%</a>
+        <a href="#">border-radius: 10px 20px 1em / 40px 50px 30%</a>
+        <a href="#">border-radius: 120px 60px 80px 140px / 40px 100px 40px 70px;</a>
+    </div>
+    <div class="sampleCode">
+        <div class="scMenu">
+            <div>HTML</div>
+            <div>CSS</div>
+            <div>SCRIPT</div>
+        </div>
+        <div class="scCont">
+            <div>
+<pre class="line-numbers"><code class="language-markup">&lt;div class="radius-box"&gt;
+    &lt;div class="box"&gt;&lt;/div&gt;
+    &lt;div class="box"&gt;&lt;/div&gt;
+    &lt;div class="box"&gt;&lt;/div&gt;
+    &lt;div class="box"&gt;&lt;/div&gt;
+    &lt;div class="box"&gt;&lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+            </div>
+            <div>
+<pre class="line-numbers"><code class="language-css">.radius-box {
+    display: flex;
+    justify-content: space-evenly;
+}
+.radius-box .box {
+    border-radius: 3px;
+    background-color: #a2cbfa;
+    border: 1px solid #4390e1;
+    box-sizing: border-box;
+    box-shadow: 0 2px 2px rgb(0 90 250 / 5%), 0 4px 4px rgb(0 90 250 / 5%), 0 8px 8px rgb(0 90 250 / 5%), 0 16px 16px rgb(0 90 250 / 5%);
+    width: 200px;
+    height: 200px;
+    color: #fff;
+    padding: 10px;
+    margin: 1%;
+}
+</code></pre>
+            </div>
+            <div>
+<pre class="line-numbers"><code class="language-script">//Javascript none
+</code></pre>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- //sample1 -->
+
+
+
+<!-- sample2 -->
+<h4 class="pt50">예제2(Sample)</h4>
+<div class="sample">
+    <h5>모서리 굴곡을 설정하는 예제입니다.</h5>
+    <div class="sampleView">
+        <!-- ex -->
+        <div class="radius-box">
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+        </div>
+        <!-- ex -->
+    </div>
+    <div class="sampleBtn">
+        <a href="#">border-radius: 0;</a>
+        <a href="#">border-radius: 20px;</a>
+        <a href="#">border-radius: 40px;</a>
+        <a href="#">border-radius: 60px;</a>
+        <a href="#">border-radius: 80px;</a>
+        <a href="#">border-radius: 100px;</a>
+    </div>
+    <div class="sampleCode">
+        <div class="scMenu">
+            <div>HTML</div>
+            <div>CSS</div>
+            <div>SCRIPT</div>
+        </div>
+        <div class="scCont">
+            <div>
+<pre class="line-numbers"><code class="language-markup">&lt;div class="radius-box"&gt;
+    &lt;div class="box"&gt;&lt;/div&gt;
+    &lt;div class="box"&gt;&lt;/div&gt;
+    &lt;div class="box"&gt;&lt;/div&gt;
+    &lt;div class="box"&gt;&lt;/div&gt;
+    &lt;div class="box"&gt;&lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+            </div>
+            <div>
+<pre class="line-numbers"><code class="language-css">.radius-box {
+    display: flex;
+    justify-content: space-evenly;
+}
+.radius-box .box {
+    border-radius: 3px;
+    background-color: #a2cbfa;
+    border: 1px solid #4390e1;
+    box-sizing: border-box;
+    box-shadow: 0 2px 2px rgb(0 90 250 / 5%), 0 4px 4px rgb(0 90 250 / 5%), 0 8px 8px rgb(0 90 250 / 5%), 0 16px 16px rgb(0 90 250 / 5%);
+    width: 200px;
+    height: 200px;
+    color: #fff;
+    padding: 10px;
+    margin: 1%;
+}
+</code></pre>
+            </div>
+            <div>
+<pre class="line-numbers"><code class="language-script">//Javascript none
+</code></pre>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- //sample2 -->
+
+
+
+<!-- sample3 -->
+<h4 class="pt50">예제3(Sample)</h4>
+<div class="sample">
+    <h5>모서리 굴곡을 설정하는 예제입니다.</h5>
+    <div class="sampleView">
+        <!-- ex -->
+        <div class="radius-box">
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+        </div>
+        <!-- ex -->
+    </div>
+    <div class="sampleBtn">
+        <a href="#">border-radius: 0px 0px;</a>
+        <a href="#">border-radius: 30px 0px;</a>
+        <a href="#">border-radius: 60px 0px;</a>
+        <a href="#">border-radius: 90px 0px;</a>
+        <a href="#">border-radius: 120px 0px;</a>
+        <a href="#">border-radius: 150px 0px;</a>
+        <a href="#">border-radius: 180px 0px;</a>
+    </div>
+    <div class="sampleCode">
+        <div class="scMenu">
+            <div>HTML</div>
+            <div>CSS</div>
+            <div>SCRIPT</div>
+        </div>
+        <div class="scCont">
+            <div>
+<pre class="line-numbers"><code class="language-markup">&lt;div class="radius-box"&gt;
+    &lt;div class="box"&gt;&lt;/div&gt;
+    &lt;div class="box"&gt;&lt;/div&gt;
+    &lt;div class="box"&gt;&lt;/div&gt;
+    &lt;div class="box"&gt;&lt;/div&gt;
+    &lt;div class="box"&gt;&lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+            </div>
+            <div>
+<pre class="line-numbers"><code class="language-css">.radius-box {
+    display: flex;
+    justify-content: space-evenly;
+}
+.radius-box .box {
+    border-radius: 3px;
+    background-color: #a2cbfa;
+    border: 1px solid #4390e1;
+    box-sizing: border-box;
+    box-shadow: 0 2px 2px rgb(0 90 250 / 5%), 0 4px 4px rgb(0 90 250 / 5%), 0 8px 8px rgb(0 90 250 / 5%), 0 16px 16px rgb(0 90 250 / 5%);
+    width: 200px;
+    height: 200px;
+    color: #fff;
+    padding: 10px;
+    margin: 1%;
+}
+</code></pre>
+            </div>
+            <div>
+<pre class="line-numbers"><code class="language-script">//Javascript none
+</code></pre>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- //sample3 -->
+
+
+
+<!-- sample4 -->
+<h4 class="pt50">예제4(Sample)</h4>
+<div class="sample">
+    <h5>모서리 굴곡을 설정하는 예제입니다.</h5>
+    <div class="sampleView">
+        <!-- ex -->
+        <div class="radius-box">
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+        </div>
+        <!-- ex -->
+    </div>
+    <div class="sampleBtn">
+        <a href="#">border-radius: 0px / 55px;</a>
+        <a href="#">border-radius: 30px / 55px;</a>
+        <a href="#">border-radius: 60px / 55px;</a>
+        <a href="#">border-radius: 90px / 55px;</a>
+        <a href="#">border-radius: 120px / 55px;</a>
+        <a href="#">border-radius: 150px / 55px;</a>
+        <a href="#">border-radius: 180px / 55px;</a>
+    </div>
+    <div class="sampleCode">
+        <div class="scMenu">
+            <div>HTML</div>
+            <div>CSS</div>
+            <div>SCRIPT</div>
+        </div>
+        <div class="scCont">
+            <div>
+<pre class="line-numbers"><code class="language-markup">&lt;div class="radius-box"&gt;
+    &lt;div class="box"&gt;&lt;/div&gt;
+    &lt;div class="box"&gt;&lt;/div&gt;
+    &lt;div class="box"&gt;&lt;/div&gt;
+    &lt;div class="box"&gt;&lt;/div&gt;
+    &lt;div class="box"&gt;&lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+            </div>
+            <div>
+<pre class="line-numbers"><code class="language-css">.radius-box {
+    display: flex;
+    justify-content: space-evenly;
+}
+.radius-box .box {
+    border-radius: 3px;
+    background-color: #a2cbfa;
+    border: 1px solid #4390e1;
+    box-sizing: border-box;
+    box-shadow: 0 2px 2px rgb(0 90 250 / 5%), 0 4px 4px rgb(0 90 250 / 5%), 0 8px 8px rgb(0 90 250 / 5%), 0 16px 16px rgb(0 90 250 / 5%);
+    width: 200px;
+    height: 200px;
+    color: #fff;
+    padding: 10px;
+    margin: 1%;
+}
+</code></pre>
+            </div>
+            <div>
+<pre class="line-numbers"><code class="language-script">//Javascript none
+</code></pre>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- //sample4 -->
+
+
+<!-- sample5 -->
+<h4 class="pt50">예제5(Sample)</h4>
+<div class="sample">
+    <h5>모서리 굴곡을 설정하는 예제입니다.</h5>
+    <div class="sampleView">
+        <!-- ex -->
+        <div class="radius-box">
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+        </div>
+        <!-- ex -->
+    </div>
+    <div class="sampleBtn">
+        <a href="#">border-radius: 10px 10px 0px 0px;</a>
+        <a href="#">border-radius: 30px 30px 0px 0px;</a>
+        <a href="#">border-radius: 50px 50px 0px 0px;</a>
+        <a href="#">border-radius: 70px 70px 0px 0px;</a>
+        <a href="#">border-radius: 90px 90px 0px 0px;</a>
+        <a href="#">border-radius: 120px 120px 0px 0px;</a>
+    </div>
+    <div class="sampleCode">
+        <div class="scMenu">
+            <div>HTML</div>
+            <div>CSS</div>
+            <div>SCRIPT</div>
+        </div>
+        <div class="scCont">
+            <div>
+<pre class="line-numbers"><code class="language-markup">&lt;div class="radius-box"&gt;
+    &lt;div class="box"&gt;&lt;/div&gt;
+    &lt;div class="box"&gt;&lt;/div&gt;
+    &lt;div class="box"&gt;&lt;/div&gt;
+    &lt;div class="box"&gt;&lt;/div&gt;
+    &lt;div class="box"&gt;&lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+            </div>
+            <div>
+<pre class="line-numbers"><code class="language-css">.radius-box {
+    display: flex;
+    justify-content: space-evenly;
+}
+.radius-box .box {
+    border-radius: 3px;
+    background-color: #a2cbfa;
+    border: 1px solid #4390e1;
+    box-sizing: border-box;
+    box-shadow: 0 2px 2px rgb(0 90 250 / 5%), 0 4px 4px rgb(0 90 250 / 5%), 0 8px 8px rgb(0 90 250 / 5%), 0 16px 16px rgb(0 90 250 / 5%);
+    width: 200px;
+    height: 200px;
+    color: #fff;
+    padding: 10px;
+    margin: 1%;
+}
+</code></pre>
+            </div>
+            <div>
+<pre class="line-numbers"><code class="language-script">//Javascript none
+</code></pre>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- //sample5 -->
+
+
+
+
+<!-- sample6 -->
+<h4 class="pt50">예제6(Sample)</h4>
+<div class="sample">
+    <h5>모서리 굴곡을 설정하는 예제입니다.</h5>
+    <div class="sampleView">
+        <!-- ex -->
+        <div class="radius-box">
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+        </div>
+        <!-- ex -->
+    </div>
+    <div class="sampleBtn">
+        <a href="#">border-radius: 50% 70% 55% 65% / 50% 45% 60% 45%;</a>
+        <a href="#">border-radius: 40% 40% 55% 65% / 30% 45% 60% 75%;</a>
+        <a href="#">border-radius: 55% 50% 55% 65% / 50% 55% 60% 45%;</a>
+        <a href="#">border-radius: 57% 60% 35% 75% / 60% 75% 60% 75%;</a>
+        <a href="#">border-radius: 55% 70% 45% 65% / 80% 45% 70% 45%;</a>
+        <a href="#">border-radius: 30% 50% 75% 55% / 40% 45% 50% 55%;</a>
+        <a href="#">border-radius: 56% 60% 25% 65% / 50% 45% 80% 45%;</a>
+        <a href="#">border-radius: 80% 70% 45% 45% / 30% 45% 60% 85%;</a>
+        <a href="#">border-radius: 45% 40% 35% 75% / 60% 45% 90% 45%;</a>
+        <a href="#">border-radius: 56% 50% 35% 85% / 40% 45% 60% 85%;</a>
+    </div>
+    <div class="sampleCode">
+        <div class="scMenu">
+            <div>HTML</div>
+            <div>CSS</div>
+            <div>SCRIPT</div>
+        </div>
+        <div class="scCont">
+            <div>
+<pre class="line-numbers"><code class="language-markup">&lt;div class="radius-box"&gt;
+    &lt;div class="box"&gt;&lt;/div&gt;
+    &lt;div class="box"&gt;&lt;/div&gt;
+    &lt;div class="box"&gt;&lt;/div&gt;
+    &lt;div class="box"&gt;&lt;/div&gt;
+    &lt;div class="box"&gt;&lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+            </div>
+            <div>
+<pre class="line-numbers"><code class="language-css">.radius-box {
+    display: flex;
+    justify-content: space-evenly;
+}
+.radius-box .box {
+    border-radius: 3px;
+    background-color: #a2cbfa;
+    border: 1px solid #4390e1;
+    box-sizing: border-box;
+    box-shadow: 0 2px 2px rgb(0 90 250 / 5%), 0 4px 4px rgb(0 90 250 / 5%), 0 8px 8px rgb(0 90 250 / 5%), 0 16px 16px rgb(0 90 250 / 5%);
+    width: 200px;
+    height: 200px;
+    color: #fff;
+    padding: 10px;
+    margin: 1%;
+}
+</code></pre>
+            </div>
+            <div>
+<pre class="line-numbers"><code class="language-script">//Javascript none
+</code></pre>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- //sample6 -->
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script>
+    $(".sampleBtn a").click(function (e) {
+        e.preventDefault();
+        var text = $(this).text();
+        $(this).parent().prev().children().children().attr("style",text);
+    });
+</script>
+
+
+<h4 class="pt50"><a href="http://webzz.tistory.com/227">호환성(Compatibility)</a></h4>
+<div class="table-responsive">
+    <table class="table table-bordered table-striped table-hover compatibility">
+        <colgroup>
+            <col style="width:25%" />
+        </colgroup>
+        <thead>
+            <tr>
+                <th></th>
+                <th scope="col"><img src="https://tistory1.daumcdn.net/tistory/2933724/skin/images/icon-chrome1.png"
+                        alt="크롬 아이콘" title="크롬 브라우저"></th>
+                <th scope="col"><img src="https://tistory3.daumcdn.net/tistory/2933724/skin/images/icon-firefox1.png"
+                        alt="파이어폭스 아이콘" title="파이어폭스 브라우저"></th>
+                <th scope="col"><img src="https://tistory1.daumcdn.net/tistory/2933724/skin/images/icon-safari1.png"
+                        alt="사파리 아이콘" title="사파리 브라우저"></th>
+                <th scope="col"><img src="https://tistory3.daumcdn.net/tistory/2933724/skin/images/icon-opera1.png"
+                        alt="오페라 아이콘" title="오페라 브라우저"></th>
+                <th scope="col"><img src="https://tistory1.daumcdn.net/tistory/2933724/skin/images/icon-whale1.png"
+                        alt="네이버 웨일" title="네이버 웨일 브라우저"></th>
+                <th scope="col"><img src="https://tistory4.daumcdn.net/tistory/2933724/skin/images/icon-ie6.png"
+                        alt="익스플로러6 아이콘" title="인터넷 익스플로러6 브라우저"><em>6</em></th>
+                <th scope="col"><img src="https://tistory2.daumcdn.net/tistory/2933724/skin/images/icon-ie7.png"
+                        alt="익스플로러7 아이콘" title="인터넷 익스플로러7 브라우저"><em>7</em></th>
+                <th scope="col"><img src="https://tistory2.daumcdn.net/tistory/2933724/skin/images/icon-ie7.png"
+                        alt="익스플로러8 아이콘" title="인터넷 익스플로러8 브라우저"><em>8</em></th>
+                <th scope="col"><img src="https://tistory2.daumcdn.net/tistory/2933724/skin/images/icon-ie9.png"
+                        alt="익스플로러9 아이콘" title="인터넷 익스플로러9 브라우저"><em>9</em></th>
+                <th scope="col"><img src="https://tistory2.daumcdn.net/tistory/2933724/skin/images/icon-ie10.png"
+                        alt="익스플로러10 아이콘" title="인터넷 익스플로러10 브라우저"><em>10</em></th>
+                <th scope="col"><img src="https://tistory2.daumcdn.net/tistory/2933724/skin/images/icon-ie11.png"
+                        alt="익스플로러11 아이콘" title="인터넷 익스플로러11 브라우저"><em>11</em></th>
+                <th scope="col"><img src="https://tistory1.daumcdn.net/tistory/2933724/skin/images/icon-edge.png"
+                        alt="엣지 아이콘" title="엣지 브라우저"></th>
+                <th scope="col"><img src="https://tistory2.daumcdn.net/tistory/2933724/skin/images/icon-android.png"
+                        alt="안드로이드 아이콘" title="모바일 안드로이드 브라우저"></th>
+                <th scope="col"><img src="https://tistory2.daumcdn.net/tistory/2933724/skin/images/icon-ios.png"
+                        alt="ios 아이콘" title="모바일 아이폰 브라우저"></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td scope="row">border-radius</td>
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 크롬 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 파이어폭스 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 사파리 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 오페라 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 네이버 -->
+                <td class="no"><span title="사용 할 수 없습니다.">사용안됨</span></td><!-- 익스플로러6 -->
+                <td class="no"><span title="사용 할 수 없습니다.">사용안됨</span></td><!-- 익스플로러7 -->
+                <td class="no"><span title="사용 할 수 없습니다.">사용안됨</span></td><!-- 익스플로러8 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 익스플로러9 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 익스플로러10 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 익스플로러11 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 엣지 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 안드로이드 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- IOS -->
+            </tr>
+            <tr>
+                <td scope="row">border-top-left-radius</td>
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 크롬 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 파이어폭스 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 사파리 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 오페라 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 네이버 -->
+                <td class="no"><span title="사용 할 수 없습니다.">사용안됨</span></td><!-- 익스플로러6 -->
+                <td class="no"><span title="사용 할 수 없습니다.">사용안됨</span></td><!-- 익스플로러7 -->
+                <td class="no"><span title="사용 할 수 없습니다.">사용안됨</span></td><!-- 익스플로러8 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 익스플로러9 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 익스플로러10 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 익스플로러11 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 엣지 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 안드로이드 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- IOS -->
+            </tr>
+            <tr>
+                <td scope="row">border-top-right-radius</td>
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 크롬 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 파이어폭스 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 사파리 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 오페라 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 네이버 -->
+                <td class="no"><span title="사용 할 수 없습니다.">사용안됨</span></td><!-- 익스플로러6 -->
+                <td class="no"><span title="사용 할 수 없습니다.">사용안됨</span></td><!-- 익스플로러7 -->
+                <td class="no"><span title="사용 할 수 없습니다.">사용안됨</span></td><!-- 익스플로러8 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 익스플로러9 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 익스플로러10 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 익스플로러11 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 엣지 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 안드로이드 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- IOS -->
+            </tr>
+            <tr>
+                <td scope="row">border-bottom-right-radius</td>
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 크롬 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 파이어폭스 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 사파리 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 오페라 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 네이버 -->
+                <td class="no"><span title="사용 할 수 없습니다.">사용안됨</span></td><!-- 익스플로러6 -->
+                <td class="no"><span title="사용 할 수 없습니다.">사용안됨</span></td><!-- 익스플로러7 -->
+                <td class="no"><span title="사용 할 수 없습니다.">사용안됨</span></td><!-- 익스플로러8 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 익스플로러9 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 익스플로러10 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 익스플로러11 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 엣지 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 안드로이드 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- IOS -->
+            </tr>
+            <tr>
+                <td scope="row">border-bottom-left-radius</td>
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 크롬 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 파이어폭스 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 사파리 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 오페라 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 네이버 -->
+                <td class="no"><span title="사용 할 수 없습니다.">사용안됨</span></td><!-- 익스플로러6 -->
+                <td class="no"><span title="사용 할 수 없습니다.">사용안됨</span></td><!-- 익스플로러7 -->
+                <td class="no"><span title="사용 할 수 없습니다.">사용안됨</span></td><!-- 익스플로러8 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 익스플로러9 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 익스플로러10 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 익스플로러11 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 엣지 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 안드로이드 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- IOS -->
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+
+
+
+<h4 class="pt30">참고 사이트(Reference)</h4>
+<ul>
+    <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/border-radius">MDN</a></li>
+    <li><a href="https://drafts.csswg.org/css-backgrounds-3/#border-radius">w3</a></li>
+</ul>
+
+<hr>

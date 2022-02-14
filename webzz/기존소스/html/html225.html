@@ -1,0 +1,1014 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>HTML</title>
+</head>
+
+<body>
+
+
+
+<h2>HTML 요소</h2>
+<p>HTML 태그를 크게 두가지 요소로 정의할 수 있습니다.</p>
+
+<hr>
+
+<h3>HTML 요소(Content Element)</h3>
+
+<p>Content Element는 HTML을 Meta, Self-closing, Block, Inline으로 분류한 요소입니다. Meta는 정보를 표현하는 메타데이터를 의미하고, Self-closing는 닫는 태그가 없는 태그를 말하며, Block은 박스 구조의 HTML 요소를 말하며, inline은 텍스트 성질의 HTML을 말합니다. HTML 마크업에 있어 Block과 Inline만 구별해도 코딩이 훨씬 더 수월해집니다.</p>
+
+
+
+
+<div class="table-responsive">
+    <table class="table table-bordered table-striped table-hover">
+        <colgroup>
+            <col width="20%">
+            <col width="52%">
+            <col width="7%">
+            <col width="7%">
+            <col width="7%">
+            <col width="7%">
+        </colgroup>
+        <thead>
+            <tr>
+                <th>속성</th>
+                <th>설명</th>
+                <th class="ce">Meta</th>
+                <th class="ce">Closing</th>
+                <th class="ce">Inline</th>
+                <th class="ce">Block</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><a href="http://coderap.tistory.com/2">&lt;a&gt;</a></td>
+                <td>&lt;a&gt; 태그는 하이퍼 링크를 정의합니다.</td>
+                <td class="ce"><span>meta</span></td>
+                <td class="ce"><span>closing</span></td>
+                <td class="ce on"><span>inline</span></td>
+                <td class="ce on"><span>block</span></td>
+            </tr>
+            <tr>
+                <td><a href="http://coderap.tistory.com/3">&lt;abbr&gt;</a></td>
+                <td>&lt;abbr&gt; 태그는 생략된 글자나 머리글자를 표시하는데 사용합니다.</td>
+                <td class="ce"><span>meta</span></td>
+                <td class="ce"><span>closing</span></td>
+                <td class="ce on"><span>inline</span></td>
+                <td class="ce"><span>block</span></td>
+            </tr>
+            <tr>
+                <td><a href="http://coderap.tistory.com/4">&lt;acronym&gt;</a></td>
+                <td>&lt;acronym&gt; 태그는 생략된 글자나 약어를 표시하는데 사용합니다.</td>
+                <td class="ce"><span>meta</span></td>
+                <td class="ce"><span>closing</span></td>
+                <td class="ce on"><span>inline</span></td>
+                <td class="ce"><span>block</span></td>
+            </tr>
+            <tr>
+                <td><a href="http://coderap.tistory.com/5">&lt;address&gt;</a></td>
+                <td>&lt;address&gt; 태그는 페이지의 연락처 정보를 정의하는데 사용합니다.</td>
+                <td class="ce"><span>meta</span></td>
+                <td class="ce"><span>closing</span></td>
+                <td class="ce"><span>inline</span></td>
+                <td class="ce on"><span>block</span></td>
+            </tr>
+            <tr>
+                <td><a href="http://coderap.tistory.com/6">&lt;applet&gt;</a></td>
+                <td>&lt;applet&gt; 태그는 애플랫 요소를 정의합니다.</td>
+                <td class="ce"><span>meta</span></td>
+                <td class="ce"><span>closing</span></td>
+                <td class="ce"><span>inline</span></td>
+                <td class="ce"><span>block</span></td>
+            </tr>
+            <tr>
+                <td><a href="http://coderap.tistory.com/7">&lt;area&gt;</a></td>
+                <td>&lt;area&gt; 태그는 이미지 맵의 영역을 정의합니다.</td>
+                <td class="ce"><span>meta</span></td>
+                <td class="ce"><span>closing</span></td>
+                <td class="ce on"><span>inline</span></td>
+                <td class="ce"><span>block</span></td>
+            </tr>
+            <tr>
+                <td><a href="http://coderap.tistory.com/8">&lt;article&gt;</a></td>
+                <td>&lt;article&gt; 태그는 문서내에 독립적인 컨텐츠를 정의합니다.</td>
+                <td class="ce"><span>meta</span></td>
+                <td class="ce"><span>closing</span></td>
+                <td class="ce"><span>inline</span></td>
+                <td class="ce on"><span>block</span></td>
+            </tr>
+            <tr>
+                <td><a href="http://coderap.tistory.com/9">&lt;aside&gt;</a></td>
+                <td>&lt;aside&gt; 태그는 문서내에 사이드 컨텐츠를 정의합니다.</td>
+                <td class="ce"><span>meta</span></td>
+                <td class="ce"><span>closing</span></td>
+                <td class="ce"><span>inline</span></td>
+                <td class="ce on"><span>block</span></td>
+            </tr>
+            <tr>
+                <td><a href="http://coderap.tistory.com/10">&lt;audio&gt;</a></td>
+                <td>&lt;audio&gt; 태그는 오디오 파일을 정의합니다.</td>
+                <td class="ce"><span>meta</span></td>
+                <td class="ce"><span>closing</span></td>
+                <td class="ce"><span>inline</span></td>
+                <td class="ce on"><span>block</span></td>
+            </tr>
+            <tr>
+                <td><a href="http://coderap.tistory.com/11">&lt;b&gt;</a></td>
+                <td>&lt;b&gt; 태그는 글씨를 두껍게 표현할 때 사용합니다.</td>
+                <td class="ce"><span>meta</span></td>
+                <td class="ce"><span>closing</span></td>
+                <td class="ce on"><span>inline</span></td>
+                <td class="ce"><span>block</span></td>
+            </tr>
+            <tr>
+                <td><a href="http://coderap.tistory.com/12">&lt;base&gt;</a></td>
+                <td>&lt;base&gt; 태그는 문서의 모든 URL의 기본이 되는 기본 URL을 설정합니다.</td>
+                <td class="ce on"><span>meta</span></td>
+                <td class="ce on"><span>closing</span></td>
+                <td class="ce"><span>inline</span></td>
+                <td class="ce"><span>block</span></td>
+            </tr>
+            <tr>
+                <td><a href="http://coderap.tistory.com/13">&lt;basefont&gt;</a></td>
+                <td>&lt;basefont&gt; 태그는 문서의 기본 폰트, 사이즈, 종류를 설정합니다.</td>
+                <td class="ce on"><span>meta</span></td>
+                <td class="ce"><span>closing</span></td>
+                <td class="ce"><span>inline</span></td>
+                <td class="ce"><span>block</span></td>
+            </tr>
+            <tr>
+                <td><a href="http://coderap.tistory.com/14">&lt;bdi&gt;</a></td>
+                <td>&lt;bdi&gt; 태그는 텍스트의 출력 방향을 브라우저가 판단해 표현합니다.</td>
+                <td class="ce"><span>meta</span></td>
+                <td class="ce"><span>closing</span></td>
+                <td class="ce on"><span>inline</span></td>
+                <td class="ce"><span>block</span></td>
+            </tr>
+            <tr>
+                <td><a href="http://coderap.tistory.com/15">&lt;bdo&gt;</a></td>
+                <td>&lt;bdo&gt; 태그는 텍스트의 방향을 설정합니다.</td>
+                <td class="ce"><span>meta</span></td>
+                <td class="ce"><span>closing</span></td>
+                <td class="ce on"><span>inline</span></td>
+                <td class="ce"><span>block</span></td>
+            </tr>
+            <tr>
+                <td><a href="http://coderap.tistory.com/16">&lt;big&gt;</a></td>
+                <td>&lt;big&gt; 태그는 텍스트 크기를 크게해줍니다.</td>
+                <td class="ce"><span>meta</span></td>
+                <td class="ce"><span>closing</span></td>
+                <td class="ce on"><span>inline</span></td>
+                <td class="ce"><span>block</span></td>
+            </tr>
+            <tr>
+                <td><a href="http://coderap.tistory.com/17">&lt;blockquote&gt;</a></td>
+                <td>&lt;blockquote&gt; 태그는 긴 문장의 인용문을 정의합니다.</td>
+                <td class="ce"><span>meta</span></td>
+                <td class="ce"><span>closing</span></td>
+                <td class="ce"><span>inline</span></td>
+                <td class="ce on"><span>block</span></td>
+            </tr>
+            <tr>
+                <td><a href="http://coderap.tistory.com/312">&lt;blink&gt;</a></td>
+                <td>&lt;blink&gt; 태그는 텍스트를 깜박이게 합니다.</td>
+                <td class="ce"><span>meta</span></td>
+                <td class="ce"><span>closing</span></td>
+                <td class="ce on"><span>inline</span></td>
+                <td class="ce"><span>block</span></td>
+            </tr>
+            <tr>
+                <td><a href="http://coderap.tistory.com/18">&lt;body&gt;</a></td>
+                <td>&lt;body&gt; 태그는 문서 본문에 해당하는 콘텐츠를 포함하는 영역입니다.</td>
+                <td class="ce"><span>meta</span></td>
+                <td class="ce"><span>closing</span></td>
+                <td class="ce"><span>inline</span></td>
+                <td class="ce on"><span>block</span></td>
+            </tr>
+            <tr>
+                <td><a href="http://coderap.tistory.com/19">&lt;br&gt;</a></td>
+                <td>&lt;br&gt; 태그는 텍스트를 줄바꿈 할 때 사용합니다.</td>
+                <td class="ce"><span>meta</span></td>
+                <td class="ce on"><span>closing</span></td>
+                <td class="ce on"><span>inline</span></td>
+                <td class="ce"><span>block</span></td>
+            </tr>
+            <tr>
+                <td><a href="http://coderap.tistory.com/20">&lt;button&gt;</a></td>
+                <td>&lt;button&gt; 태그는 클릭 할 수 있는 버튼을 설정합니다.</td>
+                <td class="ce"><span>meta</span></td>
+                <td class="ce"><span>closing</span></td>
+                <td class="ce on"><span>inline</span></td>
+                <td class="ce"><span>block</span></td>
+            </tr>
+            <tr>
+                <td><a href="http://coderap.tistory.com/21">&lt;canvas&gt;</a></td>
+                <td>&lt;canvas&gt; 태그는 그림을 그리는 비트맵을 정의합니다.</td>
+                <td class="ce"><span>meta</span></td>
+                <td class="ce"><span>closing</span></td>
+                <td class="ce"><span>inline</span></td>
+                <td class="ce on"><span>block</span></td>
+            </tr>
+            <tr>
+                <td><a href="http://coderap.tistory.com/22">&lt;caption&gt;</a></td>
+                <td>&lt;caption&gt; 태그는 table 요소의 제목을 설정합니다.</td>
+                <td class="ce"><span>meta</span></td>
+                <td class="ce"><span>closing</span></td>
+                <td class="ce"><span>inline</span></td>
+                <td class="ce on"><span>block</span></td>
+            </tr>
+            <tr>
+                <td><a href="http://coderap.tistory.com/23">&lt;center&gt;</a></td>
+                <td>&lt;center&gt; 태그는 텍스트를 가운데 정렬합니다.</td>
+                <td class="ce"><span>meta</span></td>
+                <td class="ce"><span>closing</span></td>
+                <td class="ce on"><span>inline</span></td>
+                <td class="ce"><span>block</span></td>
+            </tr>
+            <tr>
+                <td><a href="http://coderap.tistory.com/24">&lt;cite&gt;</a></td>
+                <td>&lt;cite&gt; 태그는 작품의 제목을 정의합니다.</td>
+                <td class="ce"><span>meta</span></td>
+                <td class="ce"><span>closing</span></td>
+                <td class="ce on"><span>inline</span></td>
+                <td class="ce"><span>block</span></td>
+            </tr>
+            <tr>
+                <td><a href="http://coderap.tistory.com/25">&lt;code&gt;</a></td>
+                <td>&lt;code&gt; 태그는 컴퓨터 코드를 정의합니다.</td>
+                <td class="ce"><span>meta</span></td>
+                <td class="ce"><span>closing</span></td>
+                <td class="ce on"><span>inline</span></td>
+                <td class="ce"><span>block</span></td>
+            </tr>
+            <tr>
+                <td><a href="http://coderap.tistory.com/26">&lt;col&gt;</a></td>
+                <td>&lt;col&gt; 태그는 테이블 요소의 행을 나타냅니다.</td>
+                <td class="ce"><span>meta</span></td>
+                <td class="ce on"><span>closing</span></td>
+                <td class="ce on"><span>inline</span></td>
+                <td class="ce"><span>block</span></td>
+            </tr>
+            <tr>
+                <td><a href="http://coderap.tistory.com/27">&lt;colgroup&gt;</a></td>
+                <td>&lt;colgroup&gt; 태그는 테이블 요소의 행을 그룹화합니다.</td>
+                <td class="ce"><span>meta</span></td>
+                <td class="ce"><span>closing</span></td>
+                <td class="ce"><span>inline</span></td>
+                <td class="ce on"><span>block</span></td>
+            </tr>
+            <tr>
+                <td><a href="http://coderap.tistory.com/311">&lt;data&gt;</a></td>
+                <td>&lt;data&gt; 태그는 주어진 내용을 기계가 읽을 수 있도록 설정합니다.</td>
+                <td class="ce"><span>meta</span></td>
+                <td class="ce"><span>closing</span></td>
+                <td class="ce on"><span>inline</span></td>
+                <td class="ce"><span>block</span></td>
+            </tr>
+            <tr>
+                <td><a href="http://coderap.tistory.com/28">&lt;datalist&gt;</a></td>
+                <td>&lt;datalist&gt; 태그는 미리 정의된 옵션의 리스트를 보여줍니다.</td>
+                <td class="ce"><span>meta</span></td>
+                <td class="ce"><span>closing</span></td>
+                <td class="ce"><span>inline</span></td>
+                <td class="ce on"><span>block</span></td>
+            </tr>
+            <tr>
+                <td><a href="http://coderap.tistory.com/29">&lt;dd&gt;</a></td>
+                <td>&lt;dd&gt; 태그는 설명 목록 요소의 설명을 정의합니다.</td>
+                <td class="ce"><span>meta</span></td>
+                <td class="ce"><span>closing</span></td>
+                <td class="ce on"><span>inline</span></td>
+                <td class="ce"><span>block</span></td>
+            </tr>
+            <tr>
+                <td><a href="http://coderap.tistory.com/30">&lt;del&gt;</a></td>
+                <td>&lt;del&gt; 태그는 문서 내에 삭제된 텍스트를 설정합니다.</td>
+                <td class="ce"><span>meta</span></td>
+                <td class="ce"><span>closing</span></td>
+                <td class="ce on"><span>inline</span></td>
+                <td class="ce"><span>block</span></td>
+            </tr>
+            <tr>
+                <td><a href="http://coderap.tistory.com/31">&lt;details&gt;</a></td>
+                <td>&lt;details&gt; 태그는 추가정인 정보를 보여주거나 숨기게 할 수 있습니다.</td>
+                <td class="ce"><span>meta</span></td>
+                <td class="ce"><span>closing</span></td>
+                <td class="ce"><span>inline</span></td>
+                <td class="ce on"><span>block</span></td>
+            </tr>
+            <tr>
+                <td><a href="http://coderap.tistory.com/32">&lt;dfn&gt;</a></td>
+                <td>&lt;dfn&gt; 태그는 전문적인 용어를 정의할 때 사용합니다.</td>
+                <td class="ce"><span>meta</span></td>
+                <td class="ce"><span>closing</span></td>
+                <td class="ce on"><span>inline</span></td>
+                <td class="ce"><span>block</span></td>
+            </tr>
+            <tr>
+                <td><a href="http://coderap.tistory.com/33">&lt;dialog&gt;</a></td>
+                <td>&lt;dialog&gt; 태그는 추가정인 정보를 팝업(박스) 형식으로 보여줍니다.</td>
+                <td class="ce"><span>meta</span></td>
+                <td class="ce"><span>closing</span></td>
+                <td class="ce"><span>inline</span></td>
+                <td class="ce on"><span>block</span></td>
+            </tr>
+            <tr>
+                <td><a href="http://coderap.tistory.com/34">&lt;dir&gt;</a></td>
+                <td>&lt;dir&gt; 태그는 디렉토리 제목을 나열하는데 사용합니다.</td>
+                <td class="ce"><span>meta</span></td>
+                <td class="ce"><span>closing</span></td>
+                <td class="ce on"><span>inline</span></td>
+                <td class="ce"><span>block</span></td>
+            </tr>
+            <tr>
+                <td><a href="http://coderap.tistory.com/35">&lt;div&gt;</a></td>
+                <td>&lt;div&gt; 태그는 문서의 섹션을 만들거나 영역을 나눌 때 사용합니다.</td>
+                <td class="ce"><span>meta</span></td>
+                <td class="ce"><span>closing</span></td>
+                <td class="ce"><span>inline</span></td>
+                <td class="ce on"><span>block</span></td>
+            </tr>
+            <tr>
+                <td><a href="http://coderap.tistory.com/36">&lt;dl&gt;</a></td>
+                <td>&lt;dl&gt; 태그는 설명 목록을 정의합니다.</td>
+                <td class="ce"><span>meta</span></td>
+                <td class="ce"><span>closing</span></td>
+                <td class="ce"><span>inline</span></td>
+                <td class="ce on"><span>block</span></td>
+            </tr>
+            <tr>
+                <td><a href="http://coderap.tistory.com/37">&lt;dt&gt;</a></td>
+                <td>&lt;dt&gt; 태그는 설명 목록의 용어 및 이름을 정의합니다.</td>
+                <td class="ce"><span>meta</span></td>
+                <td class="ce"><span>closing</span></td>
+                <td class="ce"><span>inline</span></td>
+                <td class="ce on"><span>block</span></td>
+            </tr>
+            <tr>
+                <td><a href="http://coderap.tistory.com/38">&lt;em&gt;</a></td>
+                <td>&lt;em&gt; 태그는 텍스트를 강조하는데 사용합니다.</td>
+                <td class="ce"><span>meta</span></td>
+                <td class="ce"><span>closing</span></td>
+                <td class="ce on"><span>inline</span></td>
+                <td class="ce"><span>block</span></td>
+            </tr>
+            <tr>
+                <td><a href="http://coderap.tistory.com/39">&lt;embed&gt;</a></td>
+                <td>&lt;embed&gt; 태그는 외부 어플리케이션을 연결합니다.</td>
+                <td class="ce"><span>meta</span></td>
+                <td class="ce on"><span>closing</span></td>
+                <td class="ce"><span>inline</span></td>
+                <td class="ce on"><span>block</span></td>
+            </tr>
+            <tr>
+                <td><a href="http://coderap.tistory.com/40">&lt;fieldset&gt;</a></td>
+                <td>&lt;fieldset&gt; 태그는 폼 요소의 그룹 내부 영역을 설정합니다.</td>
+                <td class="ce"><span>meta</span></td>
+                <td class="ce"><span>closing</span></td>
+                <td class="ce"><span>inline</span></td>
+                <td class="ce on"><span>block</span></td>
+            </tr>
+            <tr>
+                <td><a href="http://coderap.tistory.com/41">&lt;figcaption&gt;</a></td>
+                <td>&lt;figcaption&gt; 태그는 &lt;figure&gt; 요소의 제목을 정의합니다.</td>
+                <td class="ce"><span>meta</span></td>
+                <td class="ce"><span>closing</span></td>
+                <td class="ce"><span>inline</span></td>
+                <td class="ce on"><span>block</span></td>
+            </tr>
+            <tr>
+                <td><a href="http://coderap.tistory.com/42">&lt;figure&gt;</a></td>
+                <td>&lt;figure&gt; 태그는 그림, 도표, 사진, 코드등의 주석으로 표시합니다.</td>
+                <td class="ce"><span>meta</span></td>
+                <td class="ce"><span>closing</span></td>
+                <td class="ce"><span>inline</span></td>
+                <td class="ce on"><span>block</span></td>
+            </tr>
+            <tr>
+                <td><a href="http://coderap.tistory.com/43">&lt;font&gt;</a></td>
+                <td>&lt;font&gt; 태그는 폰트의 크기, 색, 종류를 설정합니다.</td>
+                <td class="ce"><span>meta</span></td>
+                <td class="ce"><span>closing</span></td>
+                <td class="ce on"><span>inline</span></td>
+                <td class="ce"><span>block</span></td>
+            </tr>
+            <tr>
+                <td><a href="http://coderap.tistory.com/44">&lt;footer&gt;</a></td>
+                <td>&lt;footer&gt; 태그는 사이트 푸터부분을 정의합니다.</td>
+                <td class="ce"><span>meta</span></td>
+                <td class="ce"><span>closing</span></td>
+                <td class="ce"><span>inline</span></td>
+                <td class="ce on"><span>block</span></td>
+            </tr>
+            <tr>
+                <td><a href="http://coderap.tistory.com/45">&lt;form&gt;</a></td>
+                <td>&lt;form&gt; 태그는 웹 서버에 정보를 제공하는 폼 컨트롤 유형을 정의합니다.</td>
+                <td class="ce"><span>meta</span></td>
+                <td class="ce"><span>closing</span></td>
+                <td class="ce"><span>inline</span></td>
+                <td class="ce on"><span>block</span></td>
+            </tr>
+            <tr>
+                <td><a href="http://coderap.tistory.com/46">&lt;frame&gt;</a></td>
+                <td>&lt;frame&gt; 태그는 HTML문서가 표시 될 수 있는 특정 영역을 설정합니다.</td>
+                <td class="ce"><span>meta</span></td>
+                <td class="ce"><span>closing</span></td>
+                <td class="ce"><span>inline</span></td>
+                <td class="ce on"><span>block</span></td>
+            </tr>
+            <tr>
+                <td><a href="http://coderap.tistory.com/47">&lt;frameset&gt;</a></td>
+                <td>&lt;frameset&gt; 태그는 프레임을 정의합니다.</td>
+                <td class="ce"><span>meta</span></td>
+                <td class="ce"><span>closing</span></td>
+                <td class="ce"><span>inline</span></td>
+                <td class="ce on"><span>block</span></td>
+            </tr>
+            <tr>
+                <td><a href="http://coderap.tistory.com/310">&lt;h1&gt;~&lt;h6&gt;</a></td>
+                <td>&lt;h1&gt;~&lt;h6&gt; 태그는 섹션의 제목을 정의합니다.</td>
+                <td class="ce"><span>meta</span></td>
+                <td class="ce"><span>closing</span></td>
+                <td class="ce"><span>inline</span></td>
+                <td class="ce on"><span>block</span></td>
+            </tr>
+            <tr>
+                <td><a href="http://coderap.tistory.com/48">&lt;head&gt;</a></td>
+                <td>&lt;head&gt; 태그는 사이트의 헤더 요소들을 정의합니다.</td>
+                <td class="ce meta"><span>meta</span></td>
+                <td class="ce"><span>closing</span></td>
+                <td class="ce"><span>inline</span></td>
+                <td class="ce"><span>block</span></td>
+            </tr>
+            <tr>
+                <td><a href="http://coderap.tistory.com/49">&lt;header&gt;</a></td>
+                <td>&lt;header&gt; 태그는 소개 컨텐츠 및 네비게이션 링크를 포함한 섹션입니다.</td>
+                <td class="ce"><span>meta</span></td>
+                <td class="ce"><span>closing</span></td>
+                <td class="ce"><span>inline</span></td>
+                <td class="ce on"><span>block</span></td>
+            </tr>
+            <tr>
+                <td><a href="http://coderap.tistory.com/50">&lt;hgroup&gt;</a></td>
+                <td>&lt;hgroup&gt; 태그는 제목 요소 그룹화를 정의합니다.</td>
+                <td class="ce"><span>meta</span></td>
+                <td class="ce"><span>closing</span></td>
+                <td class="ce"><span>inline</span></td>
+                <td class="ce on"><span>block</span></td>
+            </tr>
+            <tr>
+                <td><a href="http://coderap.tistory.com/51">&lt;hr&gt;</a></td>
+                <td>&lt;hr&gt; 태그는 문서의 주제를 분리할 때 사용합니다.</td>
+                <td class="ce"><span>meta</span></td>
+                <td class="ce on"><span>closing</span></td>
+                <td class="ce"><span>inline</span></td>
+                <td class="ce"><span>block</span></td>
+            </tr>
+            <tr>
+                <td><a href="http://coderap.tistory.com/53">&lt;html&gt;</a></td>
+                <td>&lt;html&gt; 태그는 HTML 문서의 루트를 나타냅니다.</td>
+                <td class="ce on"><span>meta</span></td>
+                <td class="ce"><span>closing</span></td>
+                <td class="ce"><span>inline</span></td>
+                <td class="ce on"><span>block</span></td>
+            </tr>
+            <tr>
+                <td><a href="http://coderap.tistory.com/54">&lt;i&gt;</a></td>
+                <td>&lt;i&gt; 태그는 음성이나 분위기 등의 텍스트를 정의합니다.</td>
+                <td class="ce"><span>meta</span></td>
+                <td class="ce"><span>closing</span></td>
+                <td class="ce on"><span>inline</span></td>
+                <td class="ce"><span>block</span></td>
+            </tr>
+            <tr>
+                <td><a href="http://coderap.tistory.com/55">&lt;iframe&gt;</a></td>
+                <td>&lt;iframe&gt; 태그는 HTML문서 내에 다른 문서를 포함하는데 사용합니다.</td>
+                <td class="ce"><span>meta</span></td>
+                <td class="ce"><span>closing</span></td>
+                <td class="ce"><span>inline</span></td>
+                <td class="ce on"><span>block</span></td>
+            </tr>
+            <tr>
+                <td><a href="http://coderap.tistory.com/56">&lt;img&gt;</a></td>
+                <td>&lt;img&gt; 태그는 문서에 이미지를 표현할 때 사용합니다.</td>
+                <td class="ce"><span>meta</span></td>
+                <td class="ce on"><span>closing</span></td>
+                <td class="ce on"><span>inline</span></td>
+                <td class="ce"><span>block</span></td>
+            </tr>
+            <tr>
+                <td><a href="http://coderap.tistory.com/57">&lt;input&gt;</a></td>
+                <td>&lt;input&gt; 태그는 데이터를 입력할 수 있는 폼 컨트롤을 정의합니다.</td>
+                <td class="ce"><span>meta</span></td>
+                <td class="ce on"><span>closing</span></td>
+                <td class="ce on"><span>inline</span></td>
+                <td class="ce"><span>block</span></td>
+            </tr>
+            <tr>
+                <td><a href="http://coderap.tistory.com/58">&lt;ins&gt;</a></td>
+                <td>&lt;ins&gt; 태그는 문서 내에 추가된 텍스트를 정의합니다</td>
+                <td class="ce"><span>meta</span></td>
+                <td class="ce"><span>closing</span></td>
+                <td class="ce on"><span>inline</span></td>
+                <td class="ce"><span>block</span></td>
+            </tr>
+            <tr>
+                <td><a href="http://coderap.tistory.com/59">&lt;kbd&gt;</a></td>
+                <td>&lt;kbd&gt; 태그는 키보드 입력을 정의합니다.</td>
+                <td class="ce"><span>meta</span></td>
+                <td class="ce"><span>closing</span></td>
+                <td class="ce on"><span>inline</span></td>
+                <td class="ce"><span>block</span></td>
+            </tr>
+            <tr>
+                <td><a href="http://coderap.tistory.com/60">&lt;keygen&gt;</a></td>
+                <td>&lt;keygen&gt; 태그는 보안키를 생성하고 컨트롤합니다.</td>
+                <td class="ce"><span>meta</span></td>
+                <td class="ce"><span>closing</span></td>
+                <td class="ce on"><span>inline</span></td>
+                <td class="ce"><span>block</span></td>
+            </tr>
+            <tr>
+                <td><a href="http://coderap.tistory.com/61">&lt;label&gt;</a></td>
+                <td>&lt;label&gt; 태그는 &lt;input&gt; 요소의 라벨을 지정합니다.</td>
+                <td class="ce"><span>meta</span></td>
+                <td class="ce"><span>closing</span></td>
+                <td class="ce"><span>inline</span></td>
+                <td class="ce on"><span>block</span></td>
+            </tr>
+            <tr>
+                <td><a href="http://coderap.tistory.com/62">&lt;legend&gt;</a></td>
+                <td>&lt;legend&gt; 태그는 &lt;fieldset&gt; 요소의 영역 제목을 정의합니다.</td>
+                <td class="ce"><span>meta</span></td>
+                <td class="ce"><span>closing</span></td>
+                <td class="ce"><span>inline</span></td>
+                <td class="ce on"><span>block</span></td>
+            </tr>
+            <tr>
+                <td><a href="http://coderap.tistory.com/63">&lt;li&gt;</a></td>
+                <td>&lt;li&gt; 태그는 목록의 항목을 정의합니다.</td>
+                <td class="ce"><span>meta</span></td>
+                <td class="ce"><span>closing</span></td>
+                <td class="ce"><span>inline</span></td>
+                <td class="ce on"><span>block</span></td>
+            </tr>
+            <tr>
+                <td><a href="http://coderap.tistory.com/64">&lt;link&gt;</a></td>
+                <td>&lt;link&gt; 태그는 문서와 외부 파일 연결을 정의합니다.</td>
+                <td class="ce on"><span>meta</span></td>
+                <td class="ce"><span>closing</span></td>
+                <td class="ce"><span>inline</span></td>
+                <td class="ce"><span>block</span></td>
+            </tr>
+            <tr>
+                <td><a href="http://coderap.tistory.com/65">&lt;main&gt;</a></td>
+                <td>&lt;main&gt; 태그는 문서의 주요 콘텐츠를 정의합니다.</td>
+                <td class="ce"><span>meta</span></td>
+                <td class="ce"><span>closing</span></td>
+                <td class="ce"><span>inline</span></td>
+                <td class="ce on"><span>block</span></td>
+            </tr>
+            <tr>
+                <td><a href="http://coderap.tistory.com/66">&lt;map&gt;</a></td>
+                <td>&lt;map&gt; 태그는 이미지 맵을 정의합니다.</td>
+                <td class="ce"><span>meta</span></td>
+                <td class="ce"><span>closing</span></td>
+                <td class="ce"><span>inline</span></td>
+                <td class="ce on"><span>block</span></td>
+            </tr>
+            <tr>
+                <td><a href="http://coderap.tistory.com/67">&lt;mark&gt;</a></td>
+                <td>&lt;mark&gt; 태그는 참고 표시를 정의합니다.</td>
+                <td class="ce"><span>meta</span></td>
+                <td class="ce"><span>closing</span></td>
+                <td class="ce on"><span>inline</span></td>
+                <td class="ce"><span>block</span></td>
+            </tr>
+            <tr>
+                <td><a href="http://coderap.tistory.com/68">&lt;marquee&gt;</a></td>
+                <td>&lt;marquee&gt; 태그는 텍스트의 스크롤과 움직임을 정의합니다.</td>
+                <td class="ce"><span>meta</span></td>
+                <td class="ce"><span>closing</span></td>
+                <td class="ce on"><span>inline</span></td>
+                <td class="ce"><span>block</span></td>
+            </tr>
+            <tr>
+                <td><a href="http://coderap.tistory.com/69">&lt;menu&gt;</a></td>
+                <td>&lt;menu&gt; 태그는 메뉴 리스트를 정의합니다.</td>
+                <td class="ce"><span>meta</span></td>
+                <td class="ce"><span>closing</span></td>
+                <td class="ce"><span>inline</span></td>
+                <td class="ce on"><span>block</span></td>
+            </tr>
+            <tr>
+                <td><a href="http://coderap.tistory.com/70">&lt;menuitem&gt;</a></td>
+                <td>&lt;menuitem&gt; 태그는 메뉴 리스트를 항목을 정의합니다.</td>
+                <td class="ce"><span>meta</span></td>
+                <td class="ce"><span>closing</span></td>
+                <td class="ce"><span>inline</span></td>
+                <td class="ce on"><span>block</span></td>
+            </tr>
+            <tr>
+                <td><a href="http://coderap.tistory.com/71">&lt;meta&gt;</a></td>
+                <td>&lt;meta&gt; 태그는 문서에 대한 정보를 제공합니다.</td>
+                <td class="ce on"><span>meta</span></td>
+                <td class="ce"><span>closing</span></td>
+                <td class="ce"><span>inline</span></td>
+                <td class="ce"><span>block</span></td>
+            </tr>
+            <tr>
+                <td><a href="http://coderap.tistory.com/72">&lt;meter&gt;</a></td>
+                <td>&lt;meter&gt; 태그는 범위를 측정하는 게이지 정보를 정의합니다.</td>
+                <td class="ce"><span>meta</span></td>
+                <td class="ce"><span>closing</span></td>
+                <td class="ce"><span>inline</span></td>
+                <td class="ce on"><span>block</span></td>
+            </tr>
+            <tr>
+                <td><a href="http://coderap.tistory.com/73">&lt;nav&gt;</a></td>
+                <td>&lt;nav&gt; 태그는 네비게이션 링크를 정의합니다.</td>
+                <td class="ce"><span>meta</span></td>
+                <td class="ce"><span>closing</span></td>
+                <td class="ce"><span>inline</span></td>
+                <td class="ce on"><span>block</span></td>
+            </tr>
+            <tr>
+                <td><a href="http://coderap.tistory.com/74">&lt;noframes&gt;</a></td>
+                <td>&lt;noframes&gt; 태그는 프레임을 지원하지 않는 브라우저를 위한 대체 태그입니다.</td>
+                <td class="ce"><span>meta</span></td>
+                <td class="ce"><span>closing</span></td>
+                <td class="ce"><span>inline</span></td>
+                <td class="ce on"><span>block</span></td>
+            </tr>
+            <tr>
+                <td><a href="http://coderap.tistory.com/75">&lt;noscript&gt;</a></td>
+                <td>&lt;noscript&gt; 태그는 스크립트를 지원하지 않는 브라우저를 위한 대체 태그입니다.</td>
+                <td class="ce no"><span>meta</span></td>
+                <td class="ce"><span>closing</span></td>
+                <td class="ce"><span>inline</span></td>
+                <td class="ce on"><span>block</span></td>
+            </tr>
+            <tr>
+                <td><a href="http://coderap.tistory.com/76">&lt;object&gt;</a></td>
+                <td>&lt;object&gt; 태그는 문서내에 포함된 멀티미디어 요소를 정의합니다.</td>
+                <td class="ce"><span>meta</span></td>
+                <td class="ce"><span>closing</span></td>
+                <td class="ce"><span>inline</span></td>
+                <td class="ce on"><span>block</span></td>
+            </tr>
+            <tr>
+                <td><a href="http://coderap.tistory.com/77">&lt;ol&gt;</a></td>
+                <td>&lt;ol&gt; 태그는 순서가 있는 목록을 정의합니다.</td>
+                <td class="ce"><span>meta</span></td>
+                <td class="ce"><span>closing</span></td>
+                <td class="ce"><span>inline</span></td>
+                <td class="ce on"><span>block</span></td>
+            </tr>
+            <tr>
+                <td><a href="http://coderap.tistory.com/78">&lt;optgroup&gt;</a></td>
+                <td>&lt;optgroup&gt; 태그는 &lt;option&gt; 리스트를 그룹화합니다.</td>
+                <td class="ce"><span>meta</span></td>
+                <td class="ce"><span>closing</span></td>
+                <td class="ce"><span>inline</span></td>
+                <td class="ce on"><span>block</span></td>
+            </tr>
+            <tr>
+                <td><a href="http://coderap.tistory.com/79">&lt;option&gt;</a></td>
+                <td>&lt;option&gt; 태그는 &lt;select&gt; 요소의 항목을 정의합니다.</td>
+                <td class="ce"><span>meta</span></td>
+                <td class="ce"><span>closing</span></td>
+                <td class="ce"><span>inline</span></td>
+                <td class="ce"><span>block</span></td>
+            </tr>
+            <tr>
+                <td><a href="http://coderap.tistory.com/80">&lt;output&gt;</a></td>
+                <td>&lt;output&gt; 태그는 계산의 결과를 보여줍니다.</td>
+                <td class="ce"><span>meta</span></td>
+                <td class="ce"><span>closing</span></td>
+                <td class="ce on"><span>inline</span></td>
+                <td class="ce"><span>block</span></td>
+            </tr>
+            <tr>
+                <td><a href="http://coderap.tistory.com/81">&lt;p&gt;</a></td>
+                <td>&lt;p&gt; 태그는 문단을 정의합니다.</td>
+                <td class="ce"><span>meta</span></td>
+                <td class="ce"><span>closing</span></td>
+                <td class="ce"><span>inline</span></td>
+                <td class="ce on"><span>block</span></td>
+            </tr>
+            <tr>
+                <td><a href="http://coderap.tistory.com/82">&lt;param&gt;</a></td>
+                <td>&lt;param&gt; 태그는 &lt;object&gt; 의 매개변수를 정의합니다.</td>
+                <td class="ce"><span>meta</span></td>
+                <td class="ce"><span>closing</span></td>
+                <td class="ce"><span>inline</span></td>
+                <td class="ce on"><span>block</span></td>
+            </tr>
+            <tr>
+                <td><a href="http://coderap.tistory.com/83">&lt;pre&gt;</a></td>
+                <td>&lt;pre&gt; 태그는 텍스트의 포맷을 정의합니다.</td>
+                <td class="ce"><span>meta</span></td>
+                <td class="ce"><span>closing</span></td>
+                <td class="ce"><span>inline</span></td>
+                <td class="ce on"><span>block</span></td>
+            </tr>
+            <tr>
+                <td><a href="http://coderap.tistory.com/84">&lt;pregress&gt;</a></td>
+                <td>&lt;pregress&gt; 태그는 작업의 진행상태를 정의합니다.</td>
+                <td class="ce"><span>meta</span></td>
+                <td class="ce"><span>closing</span></td>
+                <td class="ce"><span>inline</span></td>
+                <td class="ce on"><span>block</span></td>
+            </tr>
+            <tr>
+                <td><a href="http://coderap.tistory.com/85">&lt;q&gt;</a></td>
+                <td>&lt;q&gt; 태그는 짧은 인용을 정의합니다</td>
+                <td class="ce"><span>meta</span></td>
+                <td class="ce"><span>closing</span></td>
+                <td class="ce on"><span>inline</span></td>
+                <td class="ce"><span>block</span></td>
+            </tr>
+            <tr>
+                <td><a href="http://coderap.tistory.com/86">&lt;rp&gt;</a></td>
+                <td>&lt;rp&gt; 태그는 루비 주석을 괄호로 표현하기 위해서 사용합니다.</td>
+                <td class="ce"><span>meta</span></td>
+                <td class="ce"><span>closing</span></td>
+                <td class="ce on"><span>inline</span></td>
+                <td class="ce"><span>block</span></td>
+            </tr>
+            <tr>
+                <td><a href="http://coderap.tistory.com/87">&lt;rt&gt;</a></td>
+                <td>&lt;rt&gt; 태그는 루비 주석에 대한 설명이나 발음을 정의합니다.</td>
+                <td class="ce"><span>meta</span></td>
+                <td class="ce"><span>closing</span></td>
+                <td class="ce on"><span>inline</span></td>
+                <td class="ce"><span>block</span></td>
+            </tr>
+            <tr>
+                <td><a href="http://coderap.tistory.com/88">&lt;rtc&gt;</a></td>
+                <td>&lt;rtc&gt; 태그는 루비 주석에 대한 설명이나 발음을 정의합니다.</td>
+                <td class="ce"><span>meta</span></td>
+                <td class="ce"><span>closing</span></td>
+                <td class="ce on"><span>inline</span></td>
+                <td class="ce"><span>block</span></td>
+            </tr>
+            <tr>
+                <td><a href="http://coderap.tistory.com/89">&lt;ruby&gt;</a></td>
+                <td>&lt;ruby&gt; 태그는 루비 주석을 정의합니다.</td>
+                <td class="ce"><span>meta</span></td>
+                <td class="ce"><span>closing</span></td>
+                <td class="ce"><span>inline</span></td>
+                <td class="ce on"><span>block</span></td>
+            </tr>
+            <tr>
+                <td><a href="http://coderap.tistory.com/90">&lt;s&gt;</a></td>
+                <td>&lt;s&gt; 태그는 정확하지 않거나 올바르지 않은 텍스트를 정의합니다.</td>
+                <td class="ce"><span>meta</span></td>
+                <td class="ce"><span>closing</span></td>
+                <td class="ce on"><span>inline</span></td>
+                <td class="ce"><span>block</span></td>
+            </tr>
+            <tr>
+                <td><a href="http://coderap.tistory.com/91">&lt;samp&gt;</a></td>
+                <td>&lt;samp&gt; 태그는 컴퓨터 프로그램의 샘플 출력을 식별하기위한 요소입니다.</td>
+                <td class="ce"><span>meta</span></td>
+                <td class="ce"><span>closing</span></td>
+                <td class="ce on"><span>inline</span></td>
+                <td class="ce"><span>block</span></td>
+            </tr>
+            <tr>
+                <td><a href="http://coderap.tistory.com/92">&lt;script&gt;</a></td>
+                <td>&lt;script&gt; 태그는 스크립트를 정의하는데 사용합니다.</td>
+                <td class="ce on"><span>meta</span></td>
+                <td class="ce"><span>closing</span></td>
+                <td class="ce"><span>inline</span></td>
+                <td class="ce"><span>block</span></td>
+            </tr>
+            <tr>
+                <td><a href="http://coderap.tistory.com/93">&lt;section&gt;</a></td>
+                <td>&lt;section&gt; 태그는 주제별 그룹의 콘텐츠 섹션을 정의합니다.</td>
+                <td class="ce"><span>meta</span></td>
+                <td class="ce"><span>closing</span></td>
+                <td class="ce"><span>inline</span></td>
+                <td class="ce on"><span>block</span></td>
+            </tr>
+            <tr>
+                <td><a href="http://coderap.tistory.com/94">&lt;select&gt;</a></td>
+                <td>&lt;select&gt; 태그는 선택 목록을 정의합니다.</td>
+                <td class="ce"><span>meta</span></td>
+                <td class="ce"><span>closing</span></td>
+                <td class="ce"><span>inline</span></td>
+                <td class="ce on"><span>block</span></td>
+            </tr>
+            <tr>
+                <td><a href="http://coderap.tistory.com/96">&lt;small&gt;</a></td>
+                <td>&lt;small&gt; 태그는 저작권 또는 법적인 텍스트를 정의합니다.</td>
+                <td class="ce"><span>meta</span></td>
+                <td class="ce"><span>closing</span></td>
+                <td class="ce on"><span>inline</span></td>
+                <td class="ce"><span>block</span></td>
+            </tr>
+            <tr>
+                <td><a href="http://coderap.tistory.com/97">&lt;source&gt;</a></td>
+                <td>&lt;source&gt; 태그는 미디어 요소에 대한 소스를 지정하는데 사용합니다.</td>
+                <td class="ce"><span>meta</span></td>
+                <td class="ce"><span>closing</span></td>
+                <td class="ce on"><span>inline</span></td>
+                <td class="ce"><span>block</span></td>
+            </tr>
+            <tr>
+                <td><a href="http://coderap.tistory.com/98">&lt;span&gt;</a></td>
+                <td>&lt;span&gt; 태그는 인라인 요소 그룹화를 정의합니다.</td>
+                <td class="ce"><span>meta</span></td>
+                <td class="ce"><span>closing</span></td>
+                <td class="ce on"><span>inline</span></td>
+                <td class="ce"><span>block</span></td>
+            </tr>
+            <tr>
+                <td><a href="http://coderap.tistory.com/99">&lt;strong&gt;</a></td>
+                <td>&lt;strong&gt; 태그는 중요한 의미를 갖는 텍스트를 정의합니다.</td>
+                <td class="ce"><span>meta</span></td>
+                <td class="ce"><span>closing</span></td>
+                <td class="ce on"><span>inline</span></td>
+                <td class="ce"><span>block</span></td>
+            </tr>
+            <tr>
+                <td><a href="http://coderap.tistory.com/100">&lt;style&gt;</a></td>
+                <td>&lt;style&gt; 태그는 문서에 대한 스타일 정보를 정의합니다.</td>
+                <td class="ce on"><span>meta</span></td>
+                <td class="ce"><span>closing</span></td>
+                <td class="ce"><span>inline</span></td>
+                <td class="ce"><span>block</span></td>
+            </tr>
+            <tr>
+                <td><a href="http://coderap.tistory.com/101">&lt;sub&gt;</a></td>
+                <td>&lt;sub&gt; 태그는 텍스트 아래첨자를 정의합니다.</td>
+                <td class="ce"><span>meta</span></td>
+                <td class="ce"><span>closing</span></td>
+                <td class="ce on"><span>inline</span></td>
+                <td class="ce"><span>block</span></td>
+            </tr>
+            <tr>
+                <td><a href="http://coderap.tistory.com/102">&lt;summary&gt;</a></td>
+                <td>&lt;summary&gt; 태그는 &lt;details&gt;요소 내용에 대한 요약 또는 제목을 정의합니다.</td>
+                <td class="ce"><span>meta</span></td>
+                <td class="ce"><span>closing</span></td>
+                <td class="ce"><span>inline</span></td>
+                <td class="ce on"><span>block</span></td>
+            </tr>
+            <tr>
+                <td><a href="http://coderap.tistory.com/103">&lt;sup&gt;</a></td>
+                <td>&lt;sup&gt; 태그는 텍스트 위첨자를 정의합니다.</td>
+                <td class="ce"><span>meta</span></td>
+                <td class="ce"><span>closing</span></td>
+                <td class="ce on"><span>inline</span></td>
+                <td class="ce"><span>block</span></td>
+            </tr>
+            <tr>
+                <td><a href="http://coderap.tistory.com/104">&lt;table&gt;</a></td>
+                <td>&lt;table&gt; 태그는 표를 정의합니다.</td>
+                <td class="ce"><span>meta</span></td>
+                <td class="ce"><span>closing</span></td>
+                <td class="ce"><span>inline</span></td>
+                <td class="ce on"><span>block</span></td>
+            </tr>
+            <tr>
+                <td><a href="http://coderap.tistory.com/105">&lt;tbody&gt;</a></td>
+                <td>&lt;tbody&gt; 태그는 표의 본문을 그룹화합니다.</td>
+                <td class="ce"><span>meta</span></td>
+                <td class="ce"><span>closing</span></td>
+                <td class="ce"><span>inline</span></td>
+                <td class="ce on"><span>block</span></td>
+            </tr>
+            <tr>
+                <td><a href="http://coderap.tistory.com/106">&lt;td&gt;</a></td>
+                <td>&lt;td&gt; 태그는 표의 셀을 정의합니다.</td>
+                <td class="ce"><span>meta</span></td>
+                <td class="ce"><span>closing</span></td>
+                <td class="ce"><span>inline</span></td>
+                <td class="ce on"><span>block</span></td>
+            </tr>
+            <tr>
+                <td><a href="http://coderap.tistory.com/107">&lt;textarea&gt;</a></td>
+                <td>&lt;textarea&gt; 태그는 여러줄의 텍스트를 편집할 수 있는 컨트롤을 정의합니다.</td>
+                <td class="ce"><span>meta</span></td>
+                <td class="ce"><span>closing</span></td>
+                <td class="ce on"><span>inline</span></td>
+                <td class="ce"><span>block</span></td>
+            </tr>
+            <tr>
+                <td><a href="http://coderap.tistory.com/108">&lt;tfoot&gt;</a></td>
+                <td>&lt;tfoot&gt; 태그는 표의 푸터를 그룹화합니다.</td>
+                <td class="ce"><span>meta</span></td>
+                <td class="ce"><span>closing</span></td>
+                <td class="ce"><span>inline</span></td>
+                <td class="ce on"><span>block</span></td>
+            </tr>
+            <tr>
+                <td><a href="http://coderap.tistory.com/109">&lt;th&gt;</a></td>
+                <td>&lt;th&gt; 태그는 표의 행이나 열에 머리말을 정의합니다.</td>
+                <td class="ce"><span>meta</span></td>
+                <td class="ce"><span>closing</span></td>
+                <td class="ce"><span>inline</span></td>
+                <td class="ce"><span>block</span></td>
+            </tr>
+            <tr>
+                <td><a href="http://coderap.tistory.com/110">&lt;thead&gt;</a></td>
+                <td>&lt;thead&gt; 태그는 표의 헤더를 그룹화합니다.</td>
+                <td class="ce"><span>meta</span></td>
+                <td class="ce"><span>closing</span></td>
+                <td class="ce"><span>inline</span></td>
+                <td class="ce on"><span>block</span></td>
+            </tr>
+            <tr>
+                <td><a href="http://coderap.tistory.com/111">&lt;time&gt;</a></td>
+                <td>&lt;time&gt; 태그는 날자와 시간을 정의합니다.</td>
+                <td class="ce"><span>meta</span></td>
+                <td class="ce"><span>closing</span></td>
+                <td class="ce on"><span>inline</span></td>
+                <td class="ce"><span>block</span></td>
+            </tr>
+            <tr>
+                <td><a href="http://coderap.tistory.com/112">&lt;title&gt;</a></td>
+                <td>&lt;title&gt; 태그는 HTML문서의 타이틀을 정의합니다.</td>
+                <td class="ce on"><span>meta</span></td>
+                <td class="ce"><span>closing</span></td>
+                <td class="ce"><span>inline</span></td>
+                <td class="ce"><span>block</span></td>
+            </tr>
+            <tr>
+                <td><a href="http://coderap.tistory.com/113">&lt;tr&gt;</a></td>
+                <td>&lt;tr&gt; 태그는 표의 행을 정의합니다.</td>
+                <td class="ce"><span>meta</span></td>
+                <td class="ce"><span>closing</span></td>
+                <td class="ce"><span>inline</span></td>
+                <td class="ce"><span>block</span></td>
+            </tr>
+            <tr>
+                <td><a href="http://coderap.tistory.com/114">&lt;track&gt;</a></td>
+                <td>&lt;track&gt; 태그는 미디어 요소의 트랙을 지정합니다.</td>
+                <td class="ce"><span>meta</span></td>
+                <td class="ce on"><span>closing</span></td>
+                <td class="ce"><span>inline</span></td>
+                <td class="ce"><span>block</span></td>
+            </tr>
+            <tr>
+                <td><a href="http://coderap.tistory.com/115">&lt;tt&gt;</a></td>
+                <td>&lt;tt&gt; 태그는 타자모양의 텍스트를 정의합니다.</td>
+                <td class="ce"><span>meta</span></td>
+                <td class="ce"><span>closing</span></td>
+                <td class="ce on"><span>inline</span></td>
+                <td class="ce"><span>block</span></td>
+            </tr>
+            <tr>
+                <td><a href="http://coderap.tistory.com/116">&lt;u&gt;</a></td>
+                <td>&lt;u&gt; 태그는 밑줄을 표시할 때 사용합니다.</td>
+                <td class="ce"><span>meta</span></td>
+                <td class="ce"><span>closing</span></td>
+                <td class="ce on"><span>inline</span></td>
+                <td class="ce"><span>block</span></td>
+            </tr>
+            <tr>
+                <td><a href="http://coderap.tistory.com/117">&lt;ul&gt;</a></td>
+                <td>&lt;ul&gt; 태그는 순서가 없는 목록을 정의합니다.</td>
+                <td class="ce"><span>meta</span></td>
+                <td class="ce"><span>closing</span></td>
+                <td class="ce"><span>inline</span></td>
+                <td class="ce on"><span>block</span></td>
+            </tr>
+            <tr>
+                <td><a href="http://coderap.tistory.com/118">&lt;var&gt;</a></td>
+                <td>&lt;var&gt; 태그는 프로그램 코드에서 변수를 정의합니다.</td>
+                <td class="ce"><span>meta</span></td>
+                <td class="ce"><span>closing</span></td>
+                <td class="ce on"><span>inline</span></td>
+                <td class="ce"><span>block</span></td>
+            </tr>
+            <tr>
+                <td><a href="http://coderap.tistory.com/119">&lt;video&gt;</a></td>
+                <td>&lt;video&gt; 태그는 미디어 영상을 재생합니다.</td>
+                <td class="ce"><span>meta</span></td>
+                <td class="ce"><span>closing</span></td>
+                <td class="ce"><span>inline</span></td>
+                <td class="ce on"><span>block</span></td>
+            </tr>
+            <tr>
+                <td><a href="http://coderap.tistory.com/120">&lt;wbr&gt;</a></td>
+                <td>&lt;wbr&gt; 태그는 줄바꿈 할 위치를 정의합니다.</td>
+                <td class="ce"><span>meta</span></td>
+                <td class="ce"><span>closing</span></td>
+                <td class="ce on"><span>inline</span></td>
+                <td class="ce"><span>block</span></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+
+
+</body>
+
+</html>

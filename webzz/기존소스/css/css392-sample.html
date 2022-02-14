@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://tistory4.daumcdn.net/tistory/2933724/skin/images/font.css">
+    <link rel="stylesheet" href="https://tistory4.daumcdn.net/tistory/2933724/skin/images/font-awesome.css">
+    <style>
+        @font-face {
+            font-family: 'S-CoreDream-3Light';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-3Light.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
+        h4 {
+            font-family: 'S-CoreDream-3Light';
+        }
+        .sample {
+            border: 1px solid #e6e6e6;
+            border-radius: 5px;
+            color: #666;
+            margin-bottom: 10px;
+            font-family: 'S-CoreDream-3Light';
+        }
+        .sample a {
+            text-decoration: none;
+            color: #666;
+        }
+        .sample h5 {
+            position: relative;
+            margin: 0;
+            border-bottom: 1px solid #e6e6e6;
+            background: #f2f2f2;
+            border-radius: 5px 5px 0 0;
+            padding: 12px 10px 10px 20px !important;
+            font-size: 16px !important;
+            text-transform: uppercase;
+        }
+        .sample h5 .dot{
+            position: absolute;
+            right: 10px;
+            top: 12px;
+        }
+        .sample h5 .fa {
+            cursor: pointer;
+            display: inline-block;
+        }
+        .sample h5 .dot i {
+            display: inline-block;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: #aaa;
+            margin: 2px;
+        }
+        .sample .sampleOption {
+            border-bottom: 1px solid #e6e6e6;
+            padding: 20px;
+        }
+        .sample .sampleOption .option {
+            display: inline-block;
+            border: 1px solid #e6e6e6;
+            border-radius: 100px;
+        }
+        .sample .sampleOption .option .one {
+            border-radius: 100px;
+            border-radius: 100px;
+            white-space: nowrap;
+            padding: 10px 20px;
+            display: inline-block;
+            color: #666;
+        }
+        .sample .sampleOption .option .left {
+            border-right: 1px solid #e6e6e6;
+            padding-right: 1px solid #e6e6e6;
+            padding: 10px 14px 8px 20px;
+            display: inline-block;
+        }
+        .sample .sampleOption .option .right {
+            padding: 6px 20px 2px 10px;
+            display: inline-block;
+            vertical-align: -2px;
+        }
+        .sample .sampleOption .option .right i {
+            display: inline-block;
+            cursor: pointer;
+            font-size: 20px;
+            margin: 3px;
+        }
+        .sample .sampleView {
+            border-bottom: 1px solid #e6e6e6;
+            padding: 20px;
+        }
+        .entry-content .sample .sampleView p {
+            padding: 0 !important; margin: 0 !important;
+        }
+        .sample .sampleBtn {
+            border-bottom: 1px solid #e6e6e6;
+            padding: 20px 20px 10px 20px;
+        }
+        .sample .sampleBtn a {
+            border: 1px solid #e6e6e6;
+            border-radius: 100px;
+            white-space: nowrap;
+            padding: 10px 20px;
+            display: inline-block;
+            margin-bottom: 10px;
+            transition: all 0.2s
+        }
+        .sample .sampleBtn a:hover {
+            border-color: #FF4B4B;
+        }
+        .sample .sampleCode .scMenu > div.active {color: #FF4B49; }
+        .sample .sampleCode .scMenu > div {display: inline-block; border-right: 1px solid #e6e6e6; padding: 13px 20px 10px 20px; cursor:pointer}
+        .sample .sampleCode .scCont > div {display: none}
+
+        /* start */
+        .border-box {
+            display: flex;
+        }
+        .border-box > div {
+            flex: 1 1 20%;
+            border-radius: 3px;
+            background-color: #a2cbfa;
+            border: 1px solid #4390e1;
+            box-sizing: border-box;
+            box-shadow: 0 2px 2px rgb(0 90 250 / 5%), 0 4px 4px rgb(0 90 250 / 5%), 0 8px 8px rgb(0 90 250 / 5%), 0 16px 16px rgb(0 90 250 / 5%);
+            color: #fff;
+            padding: 10px;
+            margin: 1%;
+            min-height: 100px;
+        }
+    </style>
+</head>
+<body>
+
+<style>
+    .sample-table th {
+        border: 1px solid #ccc;
+        padding: 10px;
+        background: #ffdddd;
+    }
+    .sample-table td {
+        border: 1px solid #ccc;
+        padding: 10px;
+        background: #deeeff;
+    }
+</style>
+<!-- Sample1 -->
+<h4 class="pt50">예제1(Sample)</h4>
+<div class="sample">
+    <h5>표 테두리를 설정하는 예제입니다. <span class="dot"><i></i><i></i><i></i></span></h5>
+    <div class="sampleView">
+        <!-- ex -->
+        <div>
+            <table class="sample-table">
+                <caption>표 제목 설정</caption>
+                <thead>
+                    <tr>
+                        <th>표 제목1</th>
+                        <th>표 제목2</th>
+                        <th>표 제목3</th>
+                        <th>표 제목4</th>
+                        <th>표 제목5</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>표 내용1</td>
+                        <td>표 내용1</td>
+                        <td>표 내용1</td>
+                        <td>표 내용1</td>
+                        <td>표 내용1</td>
+                    </tr>
+                    <tr>
+                        <td>표 내용2</td>
+                        <td>표 내용2</td>
+                        <td>표 내용2</td>
+                        <td>표 내용2</td>
+                        <td>표 내용2</td>
+                    </tr>
+                    <tr>
+                        <td>표 내용3</td>
+                        <td>표 내용3</td>
+                        <td>표 내용3</td>
+                        <td>표 내용3</td>
+                        <td>표 내용3</td>
+                    </tr>
+                    <tr>
+                        <td>표 내용4</td>
+                        <td>표 내용4</td>
+                        <td>표 내용4</td>
+                        <td>표 내용4</td>
+                        <td>표 내용4</td>
+                    </tr>
+                    <tr>
+                        <td>표 내용5</td>
+                        <td>표 내용5</td>
+                        <td>표 내용5</td>
+                        <td>표 내용5</td>
+                        <td>표 내용5</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <!-- ex -->
+    </div>
+    <div class="sampleBtn">
+        <a href="#">border-collapse : separate;</a>
+        <a href="#">border-collapse : collapse;</a>
+    </div>
+    <div class="sampleCode">
+        <div class="scMenu">
+            <div>HTML</div>
+            <div>CSS</div>
+            <div>SCRIPT</div>
+        </div>
+        <div class="scCont">
+            <div class="active">
+<pre class="line-numbers"><code class="language-markup">&lt;table class="sample-table"&gt;
+    &lt;caption&gt;표 제목 설정&lt;/caption&gt;
+    &lt;thead&gt;
+        &lt;tr&gt;
+            &lt;th&gt;표 제목1&lt;/th&gt;
+            &lt;th&gt;표 제목2&lt;/th&gt;
+            &lt;th&gt;표 제목3&lt;/th&gt;
+            &lt;th&gt;표 제목4&lt;/th&gt;
+            &lt;th&gt;표 제목5&lt;/th&gt;
+        &lt;/tr&gt;
+    &lt;/thead&gt;
+    &lt;tbody&gt;
+        &lt;tr&gt;
+            &lt;td&gt;표 내용1&lt;/td&gt;
+            &lt;td&gt;표 내용1&lt;/td&gt;
+            &lt;td&gt;표 내용1&lt;/td&gt;
+            &lt;td&gt;표 내용1&lt;/td&gt;
+            &lt;td&gt;표 내용1&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;표 내용2&lt;/td&gt;
+            &lt;td&gt;표 내용2&lt;/td&gt;
+            &lt;td&gt;표 내용2&lt;/td&gt;
+            &lt;td&gt;표 내용2&lt;/td&gt;
+            &lt;td&gt;표 내용2&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;표 내용3&lt;/td&gt;
+            &lt;td&gt;표 내용3&lt;/td&gt;
+            &lt;td&gt;표 내용3&lt;/td&gt;
+            &lt;td&gt;표 내용3&lt;/td&gt;
+            &lt;td&gt;표 내용3&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;표 내용4&lt;/td&gt;
+            &lt;td&gt;표 내용4&lt;/td&gt;
+            &lt;td&gt;표 내용4&lt;/td&gt;
+            &lt;td&gt;표 내용4&lt;/td&gt;
+            &lt;td&gt;표 내용4&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;표 내용5&lt;/td&gt;
+            &lt;td&gt;표 내용5&lt;/td&gt;
+            &lt;td&gt;표 내용5&lt;/td&gt;
+            &lt;td&gt;표 내용5&lt;/td&gt;
+            &lt;td&gt;표 내용5&lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/tbody&gt;
+&lt;/table&gt;
+</code></pre>
+            </div>
+            <div>
+<pre class="line-numbers"><code class="language-css">table th {
+    border: 1px solid #ccc;
+    padding: 10px;
+    background: #ffdddd;
+}
+table td {
+    border: 1px solid #ccc;
+    padding: 10px;
+    background: #deeeff;
+}
+</code></pre>
+            </div>
+            <div>
+<pre class="line-numbers"><code class="language-js">//javascript none
+</code></pre>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- //Sample1 -->
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script>
+    $(".sampleBtn a").click(function (e) {
+        e.preventDefault();
+        var text = $(this).text();
+        $(this).parent().prev().children().children().attr("style",text);
+    });
+    $(".fa-plus-circle.opt1").click(function (e) {
+        e.preventDefault();
+        $(this).parent().parent().parent().parent().prev().prev().children().append("<div class='box'></div>");
+    });
+    $(".fa-minus-circle.opt1").click(function (e) {
+        e.preventDefault();
+        $(this).parent().parent().parent().parent().prev().prev().children().find(".box:last-child").remove();
+    });
+</script>
+    
+</body>
+</html>

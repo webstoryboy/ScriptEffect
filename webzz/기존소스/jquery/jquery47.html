@@ -1,0 +1,631 @@
+
+<h2>.parents()</h2>
+<p>선택한 요소의 모든 부모 요소를 선택합니다.</p>
+
+<hr>
+
+<h3>.parents()</h3>
+<p class="blue">선택한 요소의 모든 부모 요소를 선택합니다.</p>
+
+<h4 class="pt50">문법(Syntax)</h4>
+<p class="blue">
+    $("선택자").parents();<br>
+    $("선택자").parents("선택자");
+</p>
+
+<h4 class="pt50">정의(Definition)</h4>
+<ul>
+    <li>선택한 요소의 모든 부모 요소를 선택합니다.</li>
+    <li>선택한 요소의 모든 부모 요소를 선택자(태그,아이디,클래스)를 통해 선택합니다.</li>
+</ul>
+
+<h4 class="pt50">비교(Compare)</h4>
+<ul>
+    <li>.parent() : 선택한 요소의 부모 요소만 선택합니다.</li>
+    <li>.parents() : 선택한 요소의 모든 부모 요소를 선택합니다.</li>
+    <li>.parentUntil() : 선택한 요소의 부모 요소 중 조건에 맞을 때까지 찾습니다.</li>
+</ul>
+
+   
+
+<!-- Sample1 -->
+<h4 class="pt50">Sample1 <span><a href="https://webstoryboy.github.io/jquery/sample047-1.html" target="_blank"><img src="https://tistory3.daumcdn.net/tistory/2933724/skin/images/blank.gif" class="blank_icon"></a></span></h4>
+<p>선택한 요소의 모든 부모를 선택합니다.</p>
+<div class="sample">
+    <h5>결과<span class="dot"><i></i><i></i><i></i></span></h5>
+    <div class="ex">
+        <!-- ex -->
+        <h3>탐색(Traversing)</h3>
+        <div class="list1">
+            <ul>
+                <li>.children() 메서드는 선택한 요소의 모든 자식을 선택합니다.
+                    <ul>
+                        <li class="select">첫번째 자식입니다.</li>
+                        <li>첫번째 자식입니다.</li>
+                    </ul>
+                </li>
+                <li>.closest() 메서드는 선택한 요소의 상위 요소 중 가장 가까운 요소를 선택합니다.
+                    <ul>
+                        <li>첫번째 자식입니다.</li>
+                        <li>첫번째 자식입니다.
+                            <ul>
+                                <li class="select">두번째 자식입니다.</li>
+                                <li>두번째 자식입니다.</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li>.find() 메서드는 선택한 요소에서 조건에 맞는 요소를 다시 선택합니다.</li>
+                <li>.next() 메서드는 선택한 요소의 다음 요소를 선택합니다.</li>
+            </ul>
+        </div>
+        <!-- ex -->
+    </div>
+    
+    <div class="choice1">
+        <a href="#" class="off1">리셋</a>
+        <a href="#" class="btn1">클릭하면 <em>선택자</em>의 모든 부모 요소를 선택합니다.</a>
+    </div>
+</div>
+<!-- sample -->
+
+
+<div class="sample">
+    <h5>jquery<span class="dot"><i></i><i></i><i></i></span></h5>
+    <div class="script">
+        <pre class="line-numbers"><code class="language-javascript">$("li.select").parents().addClass("rLine");</code></pre>
+    </div>
+</div>
+<!-- sample -->
+
+<div class="sample">
+    <h5>html<span class="dot"><i></i><i></i><i></i></span></h5>
+    <div class="html">
+        <pre class="line-numbers"><code class="language-markup">&lt;h3&gt;탐색(Traversing)&lt;/h3&gt;
+&lt;div class="list1"&gt;
+    &lt;ul&gt;
+        &lt;li&gt;.children() 메서드는 선택한 요소의 모든 자식을 선택합니다.
+            &lt;ul&gt;
+                &lt;li class="select"&gt;첫번째 자식입니다.&lt;/li&gt;
+                &lt;li&gt;첫번째 자식입니다.&lt;/li&gt;
+            &lt;/ul&gt;
+        &lt;/li&gt;
+        &lt;li&gt;.closest() 메서드는 선택한 요소의 상위 요소 중 가장 가까운 요소를 선택합니다.
+            &lt;ul&gt;
+                &lt;li&gt;첫번째 자식입니다.&lt;/li&gt;
+                &lt;li&gt;첫번째 자식입니다.
+                    &lt;ul&gt;
+                        &lt;li class="select"&gt;두번째 자식입니다.&lt;/li&gt;
+                        &lt;li&gt;두번째 자식입니다.&lt;/li&gt;
+                    &lt;/ul&gt;
+                &lt;/li&gt;
+            &lt;/ul&gt;
+        &lt;/li&gt;
+        &lt;li&gt;.find() 메서드는 선택한 요소에서 조건에 맞는 요소를 다시 선택합니다.&lt;/li&gt;
+        &lt;li&gt;.next() 메서드는 선택한 요소의 다음 요소를 선택합니다.&lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+</div>
+<!-- sample -->
+
+<div class="sample">
+    <h5>Total<span class="dot"><i></i><i></i><i></i></span></h5>
+    <div class="html on">
+        <pre class="line-numbers"><code class="language-markup">&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;jQuery Sample&lt;/title&gt;
+    &lt;style&gt;
+        li.select:before {content:'Select'; padding: 4px 4px 2px 4px; font-size: 90%; color: #3d90b7; white-space: nowrap; background-color: #e7f6fd; border-radius: 4px;border: 1px dashed #3d90b7;}
+        .rLine {padding: 4px 4px 2px 10px; font-size: 90%; color: #c7254e; white-space: nowrap; background-color: #f9f2f4; border-radius: 4px; border: 1px dashed #a51a3d;}
+        a {border: 1px solid #5f6368; padding: 7px 20px 5px 20px; display: inline-block; border-radius: 20px; text-decoration: none;}
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    
+    &lt;h3&gt;탐색(Traversing)&lt;/h3&gt;
+    &lt;div class="list1"&gt;
+        &lt;ul&gt;
+            &lt;li&gt;.children() 메서드는 선택한 요소의 모든 자식을 선택합니다.
+                &lt;ul&gt;
+                    &lt;li class="select"&gt;첫번째 자식입니다.&lt;/li&gt;
+                    &lt;li&gt;첫번째 자식입니다.&lt;/li&gt;
+                &lt;/ul&gt;
+            &lt;/li&gt;
+            &lt;li&gt;.closest() 메서드는 선택한 요소의 상위 요소 중 가장 가까운 요소를 선택합니다.
+                &lt;ul&gt;
+                    &lt;li&gt;첫번째 자식입니다.&lt;/li&gt;
+                    &lt;li&gt;첫번째 자식입니다.
+                        &lt;ul&gt;
+                            &lt;li class="select"&gt;두번째 자식입니다.&lt;/li&gt;
+                            &lt;li&gt;두번째 자식입니다.&lt;/li&gt;
+                        &lt;/ul&gt;
+                    &lt;/li&gt;
+                &lt;/ul&gt;
+            &lt;/li&gt;
+            &lt;li&gt;.find() 메서드는 선택한 요소에서 조건에 맞는 요소를 다시 선택합니다.&lt;/li&gt;
+            &lt;li&gt;.next() 메서드는 선택한 요소의 다음 요소를 선택합니다.&lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/div&gt;
+    
+    &lt;div class="choice1"&gt;
+        &lt;a href="#" class="off1"&gt;리셋&lt;/a&gt;
+        &lt;a href="#" class="btn1"&gt;클릭하면 &lt;em&gt;선택자&lt;/em&gt;의 모든 부모 요소를 선택합니다.&lt;/a&gt;
+    &lt;/div&gt;
+    
+    &lt;script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"&gt;&lt;/script&gt;
+    &lt;script&gt;
+        $(".choice1 .off1").on("click", function(e){
+            e.preventDefault();
+            $("*").removeClass("rLine");
+        });
+        $(".choice1 .btn1").on("click", function(e){
+            e.preventDefault();
+            $(".list1 li.select").parents().addClass("rLine");
+        });
+    &lt;/script&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+    </div>
+</div>
+<!-- sample -->
+
+
+<script>
+    $(".choice1 .off1").on("click", function(e){
+        e.preventDefault();
+        $("*").removeClass("rLine");
+    });
+    $(".choice1 .btn1").on("click", function(e){
+        e.preventDefault();
+        $(".list1 li.select").parents().addClass("rLine");
+    });
+</script>
+<!-- //Sample1 -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Sample2 -->
+<h4 class="pt50">Sample2 <span><a href="https://webstoryboy.github.io/jquery/sample047-2.html" target="_blank"><img src="https://tistory3.daumcdn.net/tistory/2933724/skin/images/blank.gif" class="blank_icon"></a></span></h4>
+<p>선택한 요소의 부모 요소 하나만 선택합니다. 부모 요소 중 조건(선택자)으로 선택할 수 있습니다.</p>
+<div class="sample">
+    <h5>결과<span class="dot"><i></i><i></i><i></i></span></h5>
+    <div class="ex">
+        <!-- ex -->
+        <h3>탐색(Traversing)</h3>
+        <div class="list2">
+            <ul>
+                <li class="p">.children() 메서드는 선택한 요소의 모든 자식을 선택합니다.
+                    <ul>
+                        <li class="select">첫번째 자식입니다.</li>
+                        <li>첫번째 자식입니다.</li>
+                    </ul>
+                </li>
+                <li class="p">.closest() 메서드는 선택한 요소의 상위 요소 중 가장 가까운 요소를 선택합니다.
+                    <ul>
+                        <li>첫번째 자식입니다.</li>
+                        <li>첫번째 자식입니다.
+                            <ul>
+                                <li class="select">두번째 자식입니다.</li>
+                                <li>두번째 자식입니다.</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li>.find() 메서드는 선택한 요소에서 조건에 맞는 요소를 다시 선택합니다.</li>
+                <li>.next() 메서드는 선택한 요소의 다음 요소를 선택합니다.</li>
+            </ul>
+        </div>
+        <!-- ex -->
+    </div>
+    
+    <div class="choice2">
+        <a href="#" class="off1">리셋</a>
+        <a href="#" class="btn1">클릭하면 <em>select</em>의 모든 부모 요소 중 원하는 <em>p</em>까지만 선택합니다.</a>
+    </div>
+</div>
+<!-- sample -->
+
+
+<div class="sample">
+    <h5>jquery<span class="dot"><i></i><i></i><i></i></span></h5>
+    <div class="script">
+        <pre class="line-numbers"><code class="language-javascript">$("li.select").parents(".p").addClass("rLine");</code></pre>
+    </div>
+</div>
+<!-- sample -->
+
+<div class="sample">
+    <h5>html<span class="dot"><i></i><i></i><i></i></span></h5>
+    <div class="html">
+        <pre class="line-numbers"><code class="language-markup">&lt;h3&gt;탐색(Traversing)&lt;/h3&gt;
+&lt;div class="list2"&gt;
+    &lt;ul&gt;
+        &lt;li class="p"&gt;.children() 메서드는 선택한 요소의 모든 자식을 선택합니다.
+            &lt;ul&gt;
+                &lt;li class="select"&gt;첫번째 자식입니다.&lt;/li&gt;
+                &lt;li&gt;첫번째 자식입니다.&lt;/li&gt;
+            &lt;/ul&gt;
+        &lt;/li&gt;
+        &lt;li class="p"&gt;.closest() 메서드는 선택한 요소의 상위 요소 중 가장 가까운 요소를 선택합니다.
+            &lt;ul&gt;
+                &lt;li&gt;첫번째 자식입니다.&lt;/li&gt;
+                &lt;li&gt;첫번째 자식입니다.
+                    &lt;ul&gt;
+                        &lt;li class="select"&gt;두번째 자식입니다.&lt;/li&gt;
+                        &lt;li&gt;두번째 자식입니다.&lt;/li&gt;
+                    &lt;/ul&gt;
+                &lt;/li&gt;
+            &lt;/ul&gt;
+        &lt;/li&gt;
+        &lt;li&gt;.find() 메서드는 선택한 요소에서 조건에 맞는 요소를 다시 선택합니다.&lt;/li&gt;
+        &lt;li&gt;.next() 메서드는 선택한 요소의 다음 요소를 선택합니다.&lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+</div>
+<!-- sample -->
+
+<div class="sample">
+    <h5>Total<span class="dot"><i></i><i></i><i></i></span></h5>
+    <div class="html on">
+        <pre class="line-numbers"><code class="language-markup">&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;jQuery Sample&lt;/title&gt;
+    &lt;style&gt;
+        li.select:before {content:'Select'; padding: 4px 4px 2px 4px; font-size: 90%; color: #3d90b7; white-space: nowrap; background-color: #e7f6fd; border-radius: 4px;border: 1px dashed #3d90b7;}
+        .rLine {padding: 4px 4px 2px 10px; font-size: 90%; color: #c7254e; white-space: nowrap; background-color: #f9f2f4; border-radius: 4px; border: 1px dashed #a51a3d;}
+        a {border: 1px solid #5f6368; padding: 7px 20px 5px 20px; display: inline-block; border-radius: 20px; text-decoration: none;}
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    
+    &lt;h3&gt;탐색(Traversing)&lt;/h3&gt;
+    &lt;div class="list2"&gt;
+        &lt;ul&gt;
+            &lt;li class="p"&gt;.children() 메서드는 선택한 요소의 모든 자식을 선택합니다.
+                &lt;ul&gt;
+                    &lt;li class="select"&gt;첫번째 자식입니다.&lt;/li&gt;
+                    &lt;li&gt;첫번째 자식입니다.&lt;/li&gt;
+                &lt;/ul&gt;
+            &lt;/li&gt;
+            &lt;li class="p"&gt;.closest() 메서드는 선택한 요소의 상위 요소 중 가장 가까운 요소를 선택합니다.
+                &lt;ul&gt;
+                    &lt;li&gt;첫번째 자식입니다.&lt;/li&gt;
+                    &lt;li&gt;첫번째 자식입니다.
+                        &lt;ul&gt;
+                            &lt;li class="select"&gt;두번째 자식입니다.&lt;/li&gt;
+                            &lt;li&gt;두번째 자식입니다.&lt;/li&gt;
+                        &lt;/ul&gt;
+                    &lt;/li&gt;
+                &lt;/ul&gt;
+            &lt;/li&gt;
+            &lt;li&gt;.find() 메서드는 선택한 요소에서 조건에 맞는 요소를 다시 선택합니다.&lt;/li&gt;
+            &lt;li&gt;.next() 메서드는 선택한 요소의 다음 요소를 선택합니다.&lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/div&gt;
+    
+    &lt;div class="choice2"&gt;
+        &lt;a href="#" class="off1"&gt;리셋&lt;/a&gt;
+        &lt;a href="#" class="btn1"&gt;클릭하면 &lt;em&gt;선택자&lt;/em&gt;의 모든 부모 요소 중 원하는 선택자만 선택합니다.&lt;/a&gt;
+    &lt;/div&gt;
+    
+    &lt;script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"&gt;&lt;/script&gt;
+    &lt;script&gt;
+        $(".choice2 .off1").on("click", function(e){
+            e.preventDefault();
+            $("*").removeClass("rLine");
+        });
+        $(".choice2 .btn1").on("click", function(e){
+            e.preventDefault();
+            $(".list2 li.select").parents(".p").addClass("rLine");
+        });
+    &lt;/script&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+    </div>
+</div>
+<!-- sample -->
+
+
+<script>
+    $(".choice2 .off1").on("click", function(e){
+        e.preventDefault();
+        $("*").removeClass("rLine");
+    });
+    $(".choice2 .btn1").on("click", function(e){
+        e.preventDefault();
+        $(".list2 li.select").parents(".p").addClass("rLine");
+    });
+</script>
+<!-- //Sample2 -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Sample3 -->
+<h4 class="pt50">Sample3 <span><a href="https://webstoryboy.github.io/jquery/sample047-3.html" target="_blank"><img src="https://tistory3.daumcdn.net/tistory/2933724/skin/images/blank.gif" class="blank_icon"></a></span></h4>
+<p>선택한 요소의 부모 요소의 태그를 알아냅니다.</p>
+<div class="sample">
+    <h5>결과<span class="dot"><i></i><i></i><i></i></span></h5>
+    <div class="ex">
+        <!-- ex -->
+        <h3>탐색(Traversing)</h3>
+        <div class="list3">
+            <ul>
+                <li>.children() 메서드는 선택한 요소의 모든 자식을 선택합니다.
+                    <ul>
+                        <li>첫번째 자식입니다.</li>
+                        <li>첫번째 자식입니다.</li>
+                    </ul>
+                </li>
+                <li>.closest() 메서드는 선택한 요소의 상위 요소 중 가장 가까운 요소를 선택합니다.
+                    <ul>
+                        <li>첫번째 자식입니다.</li>
+                        <li>첫번째 자식입니다.
+                            <ul>
+                                <li class="select">두번째 자식입니다.</li>
+                                <li>두번째 자식입니다.</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li>.find() 메서드는 선택한 요소에서 조건에 맞는 요소를 다시 선택합니다.</li>
+                <li>.next() 메서드는 선택한 요소의 다음 요소를 선택합니다.</li>
+            </ul>
+        </div>
+        <!-- ex -->
+    </div>
+    
+    <div class="choice3">
+        <a href="#" class="off1">리셋</a>
+        <a href="#" class="btn1">클릭하면 <em>선택자</em>의 모든 부모 태그는 : </a>
+    </div>
+</div>
+<!-- sample -->
+
+
+<div class="sample">
+    <h5>jquery<span class="dot"><i></i><i></i><i></i></span></h5>
+    <div class="script">
+        <pre class="line-numbers"><code class="language-javascript">var parent = $(".select").parents().map(function() {
+    return this.tagName;
+}).get().join( ", " );
+
+$(".choice3 .btn1").on("click", function(e){
+    e.preventDefault();
+    $( ".choice3 .btn1" ).append("<span class='rLine'>" + parent + "</span>");
+});</code></pre>
+    </div>
+</div>
+<!-- sample -->
+
+<div class="sample">
+    <h5>html<span class="dot"><i></i><i></i><i></i></span></h5>
+    <div class="html">
+        <pre class="line-numbers"><code class="language-markup">&lt;h3&gt;탐색(Traversing)&lt;/h3&gt;
+&lt;div class="list3"&gt;
+    &lt;ul&gt;
+        &lt;li&gt;.children() 메서드는 선택한 요소의 모든 자식을 선택합니다.
+            &lt;ul&gt;
+                &lt;li&gt;첫번째 자식입니다.&lt;/li&gt;
+                &lt;li&gt;첫번째 자식입니다.&lt;/li&gt;
+            &lt;/ul&gt;
+        &lt;/li&gt;
+        &lt;li&gt;.closest() 메서드는 선택한 요소의 상위 요소 중 가장 가까운 요소를 선택합니다.
+            &lt;ul&gt;
+                &lt;li&gt;첫번째 자식입니다.&lt;/li&gt;
+                &lt;li&gt;첫번째 자식입니다.
+                    &lt;ul&gt;
+                        &lt;li class="select"&gt;두번째 자식입니다.&lt;/li&gt;
+                        &lt;li&gt;두번째 자식입니다.&lt;/li&gt;
+                    &lt;/ul&gt;
+                &lt;/li&gt;
+            &lt;/ul&gt;
+        &lt;/li&gt;
+        &lt;li&gt;.find() 메서드는 선택한 요소에서 조건에 맞는 요소를 다시 선택합니다.&lt;/li&gt;
+        &lt;li&gt;.next() 메서드는 선택한 요소의 다음 요소를 선택합니다.&lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+</div>
+<!-- sample -->
+
+<div class="sample">
+    <h5>Total<span class="dot"><i></i><i></i><i></i></span></h5>
+    <div class="html on">
+        <pre class="line-numbers"><code class="language-markup">&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;jQuery Sample&lt;/title&gt;
+    &lt;style&gt;
+        li.select:before {content:'Select'; padding: 4px 4px 2px 4px; font-size: 90%; color: #3d90b7; white-space: nowrap; background-color: #e7f6fd; border-radius: 4px;border: 1px dashed #3d90b7;}
+        .rLine {padding: 4px 6px 2px 6px; font-size: 90%; color: #c7254e; white-space: nowrap; background-color: #f9f2f4; border-radius: 4px; border: 1px dashed #a51a3d;}
+        a {border: 1px solid #5f6368; padding: 7px 20px 5px 20px; display: inline-block; border-radius: 20px; text-decoration: none;}
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    
+    &lt;h3&gt;탐색(Traversing)&lt;/h3&gt;
+    &lt;div class="list3"&gt;
+        &lt;ul&gt;
+            &lt;li&gt;.children() 메서드는 선택한 요소의 모든 자식을 선택합니다.
+                &lt;ul&gt;
+                    &lt;li&gt;첫번째 자식입니다.&lt;/li&gt;
+                    &lt;li&gt;첫번째 자식입니다.&lt;/li&gt;
+                &lt;/ul&gt;
+            &lt;/li&gt;
+            &lt;li&gt;.closest() 메서드는 선택한 요소의 상위 요소 중 가장 가까운 요소를 선택합니다.
+                &lt;ul&gt;
+                    &lt;li&gt;첫번째 자식입니다.&lt;/li&gt;
+                    &lt;li&gt;첫번째 자식입니다.
+                        &lt;ul&gt;
+                            &lt;li class="select"&gt;두번째 자식입니다.&lt;/li&gt;
+                            &lt;li&gt;두번째 자식입니다.&lt;/li&gt;
+                        &lt;/ul&gt;
+                    &lt;/li&gt;
+                &lt;/ul&gt;
+            &lt;/li&gt;
+            &lt;li&gt;.find() 메서드는 선택한 요소에서 조건에 맞는 요소를 다시 선택합니다.&lt;/li&gt;
+            &lt;li&gt;.next() 메서드는 선택한 요소의 다음 요소를 선택합니다.&lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/div&gt;
+    
+    &lt;div class="choice3"&gt;
+        &lt;a href="#" class="off1"&gt;리셋&lt;/a&gt;
+        &lt;a href="#" class="btn1"&gt;클릭하면 &lt;em&gt;선택자&lt;/em&gt;의 모든 부모 태그는 : &lt;/a&gt;
+    &lt;/div&gt;
+    
+    &lt;script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"&gt;&lt;/script&gt;
+    &lt;script&gt;
+        $(".choice3 .off1").on("click", function(e){
+            e.preventDefault();
+            $(".choice3 .btn1").find("span").remove();
+        });
+        
+        var parent = $(".list3 .select").parents()
+              .map(function() {
+                return this.tagName;
+              }).get().join( ", " );
+        
+        $(".choice3 .btn1").on("click", function(e){
+            e.preventDefault();
+            $( ".choice3 .btn1" ).append( "&lt;span class='rLine'&gt;" + parent + "&lt;/span&gt;" );
+        });
+    &lt;/script&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+    </div>
+</div>
+<!-- sample -->
+
+
+<script>
+    $(".choice3 .off1").on("click", function(e){
+        e.preventDefault();
+        $(".choice3 .btn1").find("span").remove();
+    });
+
+    var parent = $(".list3 .select").parents()
+          .map(function() {
+            return this.tagName;
+          }).get().join( ", " );
+
+    $(".choice3 .btn1").on("click", function(e){
+        e.preventDefault();
+        $( ".choice3 .btn1" ).append( "<span class='rLine'>" + parent + "</span>");
+    });
+</script>
+<!-- //Sample3 -->
+
+
+
+
+
+
+<h4 class="pt50">호환성(Compatibility)</h4>
+<div class="table-responsive">
+    <table class="table table-bordered table-striped table-hover compatibility">
+        <thead>
+            <tr>
+                <th class="ce">메서드</th>
+                <th class="ce">버전</th>
+                <th scope="col"><img src="https://tistory1.daumcdn.net/tistory/2933724/skin/images/icon-chrome1.png" alt="크롬 아이콘" title="크롬 브라우저"></th>
+                <th scope="col"><img src="https://tistory3.daumcdn.net/tistory/2933724/skin/images/icon-firefox1.png" alt="파이어폭스 아이콘" title="파이어폭스 브라우저"></th>
+                <th scope="col"><img src="https://tistory1.daumcdn.net/tistory/2933724/skin/images/icon-safari1.png" alt="사파리 아이콘" title="사파리 브라우저"></th>
+                <th scope="col"><img src="https://tistory3.daumcdn.net/tistory/2933724/skin/images/icon-opera1.png" alt="오페라 아이콘" title="오페라 브라우저"></th>
+                <th scope="col"><img src="https://tistory1.daumcdn.net/tistory/2933724/skin/images/icon-whale1.png" alt="네이버 웨일" title="네이버 웨일 브라우저"></th>
+                <th scope="col"><img src="https://tistory4.daumcdn.net/tistory/2933724/skin/images/icon-ie6.png" alt="익스플로러6 아이콘" title="인터넷 익스플로러6 브라우저"><em>6</em></th>
+                <th scope="col"><img src="https://tistory2.daumcdn.net/tistory/2933724/skin/images/icon-ie7.png" alt="익스플로러7 아이콘" title="인터넷 익스플로러7 브라우저"><em>7</em></th>
+                <th scope="col"><img src="https://tistory2.daumcdn.net/tistory/2933724/skin/images/icon-ie7.png" alt="익스플로러8 아이콘" title="인터넷 익스플로러8 브라우저"><em>8</em></th>
+                <th scope="col"><img src="https://tistory2.daumcdn.net/tistory/2933724/skin/images/icon-ie9.png" alt="익스플로러9 아이콘" title="인터넷 익스플로러9 브라우저"><em>9</em></th>
+                <th scope="col"><img src="https://tistory2.daumcdn.net/tistory/2933724/skin/images/icon-ie10.png" alt="익스플로러10 아이콘" title="인터넷 익스플로러10 브라우저"><em>10</em></th>
+                <th scope="col"><img src="https://tistory2.daumcdn.net/tistory/2933724/skin/images/icon-ie11.png" alt="익스플로러11 아이콘" title="인터넷 익스플로러11 브라우저"><em>11</em></th>
+                <th scope="col"><img src="https://tistory1.daumcdn.net/tistory/2933724/skin/images/icon-edge.png" alt="엣지 아이콘" title="엣지 브라우저"></th>
+                <th scope="col"><img src="https://tistory2.daumcdn.net/tistory/2933724/skin/images/icon-android.png" alt="안드로이드 아이콘" title="모바일 안드로이드 브라우저"></th>
+                <th scope="col"><img src="https://tistory2.daumcdn.net/tistory/2933724/skin/images/icon-ios.png" alt="ios 아이콘" title="모바일 아이폰 브라우저"></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="ce" scope="row" rowspan="3">children()</td>
+                <td class="ce">jQeury 1.x 버전</td>
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 크롬 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 파이어폭스 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 사파리 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 오페라 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 네이버 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 익스플로러6 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 익스플로러7 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 익스플로러8 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 익스플로러9 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 익스플로러10 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 익스플로러11 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 엣지 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 안드로이드 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- IOS -->
+            </tr>
+            <tr>
+                <td class="ce">jQeury 2.x 버전</td>
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 크롬 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 파이어폭스 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 사파리 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 오페라 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 네이버 -->
+                <td class="no"><span title="사용 할 수 없습니다.">사용안됨</span></td><!-- 익스플로러6 -->
+                <td class="no"><span title="사용 할 수 없습니다.">사용안됨</span></td><!-- 익스플로러7 -->
+                <td class="no"><span title="사용 할 수 없습니다.">사용안됨</span></td><!-- 익스플로러8 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 익스플로러9 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 익스플로러10 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 익스플로러11 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 엣지 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 안드로이드 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- IOS -->
+            </tr>
+            <tr>
+                <td class="ce">jQeury 3.x 버전</td>
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 크롬 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 파이어폭스 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 사파리 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 오페라 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 네이버 -->
+                <td class="no"><span title="사용 할 수 없습니다.">사용안됨</span></td><!-- 익스플로러6 -->
+                <td class="no"><span title="사용 할 수 없습니다.">사용안됨</span></td><!-- 익스플로러7 -->
+                <td class="no"><span title="사용 할 수 없습니다.">사용안됨</span></td><!-- 익스플로러8 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 익스플로러9 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 익스플로러10 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 익스플로러11 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 엣지 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 안드로이드 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- IOS -->
+            </tr>
+        </tbody>
+    </table>
+</div>

@@ -1,0 +1,1094 @@
+
+    
+<h2>제이쿼리 기초</h2>    
+<p>제이쿼리를 사용하기 위한 기본 사용방법입니다.</p>
+
+<hr>
+
+<h3>제이쿼리 사용방법</h3>
+<p>제이쿼리를 사용하기 위해서는 자바스크립트 라이브러리 파일이 필요합니다. jQuery 라이브러리는 jQuery 공식사이트에서 다운 받을 수 있습니다. jQuery는 1.x, 2.x, 3.x 버전이 있습니다. 1.x 버젼은 IE6, IE7, IE8 버젼을 지원합니다.</p>
+
+<h3 class="pt50">제이쿼리 다운로드</h3>
+<p>제이쿼리를 사용하기 위해서는 제이쿼리 파일을 다운 받아야 합니다. <a href="https://jquery.com/" target="_blank">다운 받기</a></p>
+<!-- Sample1 -->
+<div class="sample">
+    <h5>Script<span class="dot"><i></i><i></i><i></i></span></h5>
+    <div class="html">
+<pre class="line-numbers"><code class="language-markup">&lt;!DOCTYPE html&gt;
+&lt;html lang="ko"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;jquery&lt;/title&gt;
+    &lt;script type="text/javascript" src="assets/js/jquery-1.10.2.min.js"&gt;&lt;/script&gt;
+    &lt;script&gt;
+        //제이쿼리 소스
+    &lt;/script&gt; 
+&lt;/head&gt;
+&lt;body&gt;
+    
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+    </div>
+</div>
+<!-- sample1 -->
+
+<h3 class="pt50">CDN 사용하기</h3>
+<p>CDN(Content Distribution Network)는 전 세계적으로 분산되어 있는 서버 네트워크를 사용하는 시스템입니다. 콘텐츠를 효율적으로 사용하기 위한 네트워크 시스템을 의미합니다. 다음은 구글에서 제공하는 CDN입니다.</p>
+<!-- Sample1 -->
+<div class="sample">
+    <h5>Script<span class="dot"><i></i><i></i><i></i></span></h5>
+    <div class="html">
+<pre class="line-numbers"><code class="language-markup">&lt;!DOCTYPE html&gt;
+&lt;html lang="ko"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;jQuery&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;!-- 3.x --&gt;
+    &lt;script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"&gt;&lt;/script&gt;
+
+    &lt;!-- 2.x --&gt;
+    &lt;script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"&gt;&lt;/script&gt;
+
+    &lt;!-- 1.x --&gt;
+    &lt;script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"&gt;&lt;/script&gt;
+
+    &lt;!-- jQuery UI 1.x --&gt;
+    &lt;script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"&gt;&lt;/script&gt;  
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+    </div>
+</div>
+<!-- sample1 -->
+
+
+
+<h3 class="pt50">제이쿼리 준비</h3>
+<p>제이쿼리를 사용하기 위해서 다음과 같이 준비합니다.</p>
+<p class="blue">
+jQuery(document).ready(function(){<br>
+&nbsp;&nbsp;&nbsp;&nbsp; //실행코드<br>
+});
+</p>
+<p class="blue">
+$(document).ready(function(){ <br>
+&nbsp;&nbsp;&nbsp;&nbsp; //실행코드<br>
+});
+</p>
+<p>jQuery를 $로 치환하여 사용할 수 있습니다.</p>
+<p class="blue">
+$(function(){ <br>
+&nbsp;&nbsp;&nbsp;&nbsp; //실행코드<br>
+});
+</p>
+<p>간단한 형태로도 단축해서 사용할 수 있습니다.</p>
+
+<p>자바스크립트 사용방법</p>
+<p class="blue">
+window.onload = function(){<br>
+&nbsp;&nbsp;&nbsp;&nbsp; //실행코드<br>
+};
+</p>
+<!-- Sample1 -->
+<div class="sample">
+    <h5>Script<span class="dot"><i></i><i></i><i></i></span></h5>
+    <div class="html">
+<pre class="line-numbers"><code class="language-markup">&lt;!DOCTYPE html&gt;
+&lt;html lang="ko"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;jquery&lt;/title&gt;
+    &lt;script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"&gt;&lt;/script&gt;
+    &lt;script&gt;
+        $(document).ready(function(){<br>
+            //실행할 코드<br>
+        });
+    &lt;/script&gt; 
+&lt;/head&gt;
+&lt;body&gt;
+    
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+    </div>
+</div>
+<!-- sample1 -->
+
+
+
+
+<h3 class="pt50">제이쿼리 메서드</h3>
+<h5>기본 선택자</h5>
+<div class="table-responsive">
+    <table class="table table-bordered table-striped">
+        <colgroup>
+            <col style="width:20%">
+            <col style="width:20%">
+            <col style="width:60%">
+        </colgroup>
+        <thead>
+            <tr>
+                <th>종류</th>
+                <th>예시</th>
+                <th>설명</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="bg" rowspan="5">기본 선택자</td>
+                <td>태그 선택자</td>
+                <td>기본 태그를 선택합니다.</td>
+            </tr>
+            <tr>
+                <td>클래스 선택자</td>
+                <td>클래스 태그를 선택합니다.</td>
+            </tr>
+            <tr>
+                <td>아이디 선택자</td>
+                <td>아이디 태그를 선택합니다.</td>
+            </tr>
+            <tr>
+                <td>그룹 선택자</td>
+                <td>여러가지 태그를 선택합니다.</td>
+            </tr>
+            <tr>
+                <td>전체(*) 선택자</td>
+                <td>전체 태그를 선택합니다.</td>
+            </tr>
+
+            <tr>
+                <td class="bg" rowspan="4">계층 선택자</td>
+                <td>자손 선택자</td>
+                <td>자식(하위) 태그 모두 선택합니다.</td>
+            </tr>
+            <tr>
+                <td>child(>) 선택자</td>
+                <td>자식(하위) 태그만 선택합니다.(자손은 포함안됨)</td>
+            </tr>
+            <tr>
+                <td>sibling(+) 선택자</td>
+                <td>자식 태그 다음 형제 태그를 선택합니다.</td>
+            </tr>
+            <tr>
+                <td>siblings(~) 선택자</td>
+                <td>자식 태그 다음 모든 형제태그를 선택합니다.</td>
+            </tr>
+
+            <tr>
+                <td class="bg" rowspan="8">속성 선택자</td>
+                <td>[name="value"]</td>
+                <td>속성 중에 '#page'와 일치하는 태그를 선택합니다.</td>
+            </tr>
+            <tr>
+                <td>[name^="value"]</td>
+                <td>속성 중에 'http'로 시작하는 태그를 선택합니다.</td>
+            </tr>
+            <tr>
+                <td>[name$="value"]</td>
+                <td>속성 중에 '.com'로 끝나는 태그를 선택합니다.</td>
+            </tr>
+            <tr>
+                <td>[name~="value"]</td>
+                <td>속성 중에 '.com'이 포함되는 바로 옆 형제 태그를 선택합니다.</td>
+            </tr>
+            <tr>
+                <td>[name*="value"]</td>
+                <td>속성 중에 'web'가 포함되어 있는 태그를 선택합니다.</td>
+            </tr>
+            <tr>
+                <td>[name|="value"]</td>
+                <td>속성 중에 'web'으로 시작하는 속성의 태그를 선택합니다.</td>
+            </tr>
+            <tr>
+                <td>[name!="value"]</td>
+                <td>속성 중에 'naver.com'와 일치하지 않는 태그를 선택합니다.</td>
+            </tr>
+            <tr>
+                <td>[name="value"][name="value"]</td>
+                <td>속성 중에 'href' 속성과 'class' 속성이 모두 있는 태그를 선택합니다.</td>
+            </tr>
+
+            <tr>
+                <td class="bg" rowspan="12">기본 필터 선택자</td>
+                <td>:animated</td>
+                <td>show, hide, slideDown, slideUp등의 애니메이션 태그를 선택합니다.</td>
+            </tr>
+            <tr>
+                <td>:eq(index)</td>
+                <td>선택된 태그들의 인덱스 번호를 통해 선택합니다.</td>
+            </tr>
+            <tr>
+                <td>:gt(index)</td>
+                <td>선택된 집합에서 인덱스보다 큰 인덱스를 가지고 있는 태그들을 선택합니다.</td>
+            </tr>
+            <tr>
+                <td>:lt(index)</td>
+                <td>선택된 집합에서 인덱스보다 작은 인덱스를 가지고 있는 태그들을 선택합니다.</td>
+            </tr>
+            <tr>
+                <td>:header</td>
+                <td>제목 요소(h1~h6) 태그들을 선택합니다.</td>
+            </tr>
+            <tr>
+                <td>:first</td>
+                <td>선택된 요소 중에서 첫 번째 요소를 찾아 선택합니다.</td>
+            </tr>
+            <tr>
+                <td>:last</td>
+                <td>선택된 요소 중에서 마지막 번째 요소를 찾아 선택합니다.</td>
+            </tr>
+            <tr>
+                <td>:odd</td>
+                <td>선택된 요소 중에서 홀수 번째 요소를 찾아 선택합니다.</td>
+            </tr>
+            <tr>
+                <td>:even</td>
+                <td>선택된 요소 중에서 짝수 번째 요소를 찾아 선택합니다.</td>
+            </tr>
+            <tr>
+                <td>:not()</td>
+                <td>현재 선택한 요소의 반대 요소를 선택합니다.</td>
+            </tr>
+            <tr>
+                <td>:root()</td>
+                <td>문서의 가장 기본 루트 태그를 선택합니다.</td>
+            </tr>
+            <tr>
+                <td>:lang()</td>
+                <td>선택된 요소 중에서 언어 속성을 선택합니다.</td>
+            </tr>
+
+            <tr>
+                <td class="bg" rowspan="4">내용 필터 선택자</td>
+                <td>:contains()</td>
+                <td>()안의 텍스트와 일치하는 문자열이 요소의 내용 중에 있을 때 그 요소를 반환합니다.</td>
+            </tr>
+            <tr>
+                <td>:empty</td>
+                <td>요소에 텍스트 없을 때 선택됩니다.</td>
+            </tr>
+            <tr>
+                <td>:has()</td>
+                <td>요소 내부에서 찾고 싶은 태그를 후손 요소까지 살펴본 후 요소가 있으면 반환합니다.</td>
+            </tr>
+            <tr>
+                <td>:parent</td>
+                <td>empty와 반대로 요소에 텍스트가 존재할 때에 선택됩니다.</td>
+            </tr>
+
+            <tr>
+                <td class="bg" rowspan="2">보임 필터 선택자</td>
+                <td>:hidden</td>
+                <td>보이지 않는 요소를 선택합니다.</td>
+            </tr>
+            <tr>
+                <td>:visible</td>
+                <td>보이는 요소를 선택합니다.</td>
+            </tr>
+
+            <tr>
+                <td class="bg" rowspan="10">자식 요소 필터 선택자</td>
+                <td>:first-child</td>
+                <td>첫 번째 자식 요소를 선택합니다.</td>
+            </tr>
+            <tr>
+                <td>:last-child</td>
+                <td>마지막 번째 자식 요소를 선택합니다.</td>
+            </tr>
+            <tr>
+                <td>:first-of-type</td>
+                <td>자식 중 첫 번째 유형의 자식 요소를 선택합니다.</td>
+            </tr>
+            <tr>
+                <td>:last-of-type</td>
+                <td>자식 중 마지막 번째 유형의 자식 요소를 선택합니다.</td>
+            </tr>
+            <tr>
+                <td>:nth-child()</td>
+                <td>index번째에 있는 자식 요소를 선택합니다.</td>
+            </tr>
+            <tr>
+                <td>:nth-last-child()</td>
+                <td>index번째에 있는 마지막 자식 요소를 선택합니다.</td>
+            </tr>
+            <tr>
+                <td>:nth-last-of-type()</td>
+                <td>index번째에 있는 마지막 유형의 자식 요소를 선택합니다.</td>
+            </tr>
+            <tr>
+                <td>:nth-of-type()</td>
+                <td>index번째에 있는 유형의 자식 요소를 선택합니다.</td>
+            </tr>
+            <tr>
+                <td>:only-child</td>
+                <td>자식 요소가 오직 하나인 요소를 선택합니다.</td>
+            </tr>
+            <tr>
+                <td>:only-of-type()</td>
+                <td>자식 요소 중 오직 하나 유형인 요소를 선택합니다.</td>
+            </tr>
+
+
+            <tr>
+                 <td class="bg" rowspan="15">폼 선택자</td>
+                <td>:button</td>
+                <td>버튼 입력 양식을 선택합니다.</td>
+            </tr>
+            <tr>
+                <td>:checkbox</td>
+                <td>체크박스 입력 양식을 선택합니다.</td>
+            </tr>
+            <tr>
+                <td>:checked</td>
+                <td>:checked된 입력 양식을 선택합니다.</td>
+            </tr>
+            <tr>
+                <td>:disabled</td>
+                <td>:disabled된 입력 양식을 선택합니다.</td>
+            </tr>
+            <tr>
+                <td>:enabled</td>
+                <td>:enabled된 입력 양식을 선택합니다.</td>
+            </tr>
+            <tr>
+                <td>:focus</td>
+                <td>입력 양식에 포커스된 태그를 선택합니다.</td>
+            </tr>
+            <tr>
+                <td>:file</td>
+                <td>파일 업로드 양식을 선택합니다.</td>
+            </tr>
+            <tr>
+                <td>:image</td>
+                <td>이미지 입력 양식을 선택합니다.</td>
+            </tr>
+            <tr>
+                <td>:input</td>
+                <td>모든 입력 양식을 선택합니다.</td>
+            </tr>
+            <tr>
+                <td>:password</td>
+                <td>암호 입력 양식을 선택합니다.</td>
+            </tr>
+            <tr>
+                <td>:radio</td>
+                <td>라디오 버튼 입력 양식을 선택합니다.</td>
+            </tr>
+            <tr>
+                <td>:reset</td>
+                <td>리셋 입력 양식을 선택합니다.</td>
+            </tr>
+            <tr>
+                <td>:selected</td>
+                <td>:selected된 입력 양식을 선택합니다.</td>
+            </tr>
+            <tr>
+                <td>:submit</td>
+                <td>데이터 보내기 입력 양식을 선택합니다.</td>
+            </tr>
+            <tr>
+                <td>:text</td>
+                <td>텍스트 박스 양식을 선택합니다.</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+
+
+
+
+
+
+
+<h3 class="pt50">탐색(Traversing)</h3>
+<div class="table-responsive">
+    <table class="table table-bordered table-striped">
+        <colgroup>
+            <col style="width:20%">
+            <col style="width:20%">
+            <col style="width:60%">
+        </colgroup>
+        <thead>
+            <tr>
+                <th>유형</th>
+                <th>메서드</th>
+                <th>설명</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="bg" rowspan="13">트리구조 탐색(Tree Traversal)</td>
+                <td><a href="http://webzz.tistory.com/40">.children()</a></td>
+                <td>선택한 요소의 바로 아래 자식 요소만 선택합니다.</td>
+            </tr>
+            <tr>
+                <td><a href="http://webzz.tistory.com/41">.closest()</a></td>
+                <td>선택한 요소를 포함하면서 가장 가까운 상위 요소를 선택합니다.</td>
+            </tr>
+            <tr>
+                <td><a href="http://webzz.tistory.com/42">.find()</a></td>
+                <td>선택한 요소의 자식 요소 중 조건에 맞는 요소를 선택합니다.</td>
+            </tr>
+            <tr>
+                <td><a href="http://webzz.tistory.com/43">.next()</a></td>
+                <td>선택한 요소의 다음 요소를 선택합니다.</td>
+            </tr>
+            <tr>
+                <td><a href="http://webzz.tistory.com/44">.nextAll()</a></td>
+                <td>선택한 요소의 다음 모든 요소를 선택합니다.</td>
+            </tr>
+            <tr>
+                <td><a href="http://webzz.tistory.com/45">.nextUntil()</a></td>
+                <td>선택한 요소의 다음 요소 중 조건에 맞을 때까지 찾습니다.</td>
+            </tr>
+            <tr>
+                <td><a href="http://webzz.tistory.com/46">.parent()</a></td>
+                <td>선택한 요소의 부모 요소를 선택합니다.</td>
+            </tr>
+            <tr>
+                <td><a href="http://webzz.tistory.com/47">.parents()</a></td>
+                <td>선택한 요소의 모든 부모 요소를 선택합니다.</td>
+            </tr>
+            <tr>
+                <td><a href="http://webzz.tistory.com/48">.parentsUntil()</a></td>
+                <td>선택한 요소의 부모 요소 중 조건에 맞을 때까지 찾습니다.</td>
+            </tr>
+            <tr>
+                <td><a href="http://webzz.tistory.com/49">.prev()</a></td>
+                <td>선택한 요소의 이전 요소를 선택합니다.</td>
+            </tr>
+            <tr>
+                <td><a href="http://webzz.tistory.com/50">.prevAll()</a></td>
+                <td>선택한 요소의 이전 모든 요소를 선택합니다.</td>
+            </tr>
+            <tr>
+                <td><a href="http://webzz.tistory.com/88">.prevUntil()</a></td>
+                <td>선택한 요소의 이전 요소 중 조건에 맞을 때까지 찾습니다.</td>
+            </tr>
+            <tr>
+                <td><a href="http://webzz.tistory.com/89">.siblings()</a></td>
+                <td>선택한 요소의 형제 요소를 모두 찾습니다.</td>
+            </tr>
+            <tr>
+                <td rowspan="9">필터링(Filtering)</td>
+                <td><a href="http://webzz.tistory.com/90">.eq()</a></td>
+                <td>선택한 요소에 인덱스 번호에 해당하는 요소를 찾습니다.</td>
+            </tr>
+            <tr>
+                <td><a href="http://webzz.tistory.com/91">.filter()</a></td>
+                <td>선택된 요소에서 선택하거나 함수를 사용할 수 있습니다.</td>
+            </tr>
+            <tr>
+                <td><a href="http://webzz.tistory.com/92">.first()</a></td>
+                <td>선택된 요소에서 첫번째 자식 요소를 찾습니다.</td>
+            </tr>
+            <tr>
+                <td><a href="http://webzz.tistory.com/93">.has()</a></td>
+                <td>선택된 요소의 자식 요소에서 주어진 선택자를 찾습니다.</td>
+            </tr>
+            <tr>
+                <td><a href="http://webzz.tistory.com/94">.is()</a></td>
+                <td>선택된 요소 객체의 특징을 판별합니다.</td>
+            </tr>
+            <tr>
+                <td><a href="http://webzz.tistory.com/95">.last()</a></td>
+                <td>선택된 요소에서 마지막번째 자식 요소를 찾습니다.</td>
+            </tr>
+            <tr>
+                <td><a href="http://webzz.tistory.com/96">.map()</a></td>
+                <td>선택된 요소의 배열 집합을 새롭게 변경합니다.</td>
+            </tr>
+            <tr>
+                <td><a href="http://webzz.tistory.com/97">.not()</a></td>
+                <td>선택된 요소에서 조건에 맞지 않는 것을 선택합니다.</td>
+            </tr>
+            <tr>
+                <td><a href="http://webzz.tistory.com/98">.slice()</a></td>
+                <td>선택된 요소에서 조건의 범위로 재선택합니다.</td>
+            </tr>
+            <tr>
+                <td class="bg" rowspan="5">기타(Miscellaneous Traversing)</td>
+                <td><a href="http://webzz.tistory.com/99">.add()</a></td>
+                <td>선택한 요소에 새로운 요소를 추가합니다.</td>
+            </tr>
+            <tr>
+                <td><a href="http://webzz.tistory.com/100">.addBack()</a></td>
+                <td>선택한 요소의 상위 요소도 같이 선택합니다.</td>
+            </tr>
+            <tr>
+                <td><a href="http://webzz.tistory.com/101">.contents()</a></td>
+                <td>선택한 요소와 일치하는 콘텐츠 요소를 선택합니다.</td>
+            </tr>
+            <tr>
+                <td><a href="http://webzz.tistory.com/102">.each()</a></td>
+                <td>선택한 여러 요소들을 각각 순차적으로 실행합니다.</td>
+            </tr>
+            <tr>
+                <td><a href="http://webzz.tistory.com/103">.end()</a></td>
+                <td>선택한 요소의 필터링이 일어나기 이전의 요소를 선택합니다.</td>
+            </tr>
+        </tbody>
+    </table>
+</div>  
+
+
+
+
+
+<h3 class="pt50">속성(Attributes)</h3>
+<div class="table-responsive">
+    <table class="table table-bordered table-striped">
+        <colgroup>
+            <col style="width:20%">
+            <col style="width:20%">
+            <col style="width:60%">
+        </colgroup>
+        <thead>
+            <tr>
+                <th>유형</th>
+                <th>메서드</th>
+                <th>설명</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="bg" rowspan="5">속성(Attributes)</td>
+                <td><a href="http://webzz.tistory.com/106">.attr()</a></td>
+                <td>선택한 HTML 요소의 속성 값을 설정하거나 반환합니다.</td>
+            </tr>
+            <tr>
+                <td><a href="http://webzz.tistory.com/107">.prop()</a></td>
+                <td>선택한 JavaScript 요소의 속성 값을 설정하거나 반환합니다.</td>
+            </tr>
+            <tr>
+                <td><a href="http://webzz.tistory.com/108">.removeAttr()</a></td>
+                <td>선택한 HTML 요소에서 하나 이상의 속성을 제거합니다.</td>
+            </tr>
+            <tr>
+                <td><a href="http://webzz.tistory.com/109">.removeProp()</a></td>
+                <td>선택한 JavaScript 요소에서 하나 이상의 속성을 제거합니다.</td>
+            </tr>
+            <tr>
+                <td><a href="http://webzz.tistory.com/110">.val()</a></td>
+                <td>선택한 폼 요소의 속성 값을 설정하거나 반환합니다.</td>
+            </tr>
+
+            <tr>
+                <td class="bg" rowspan="5">스타일(CSS)</td>
+                <td><a href="http://webzz.tistory.com/112">.addClass()</a></td>
+                <td>선택한 요소에 클래스를 추가합니다.</td>
+            </tr>
+            <tr>
+                <td><a href="http://webzz.tistory.com/113">.css()</a></td>
+                <td>선택한 요소에 CSS 속성 값을 설정하거나 변경합니다.</td>
+            </tr>
+            <tr>
+                <td><a href="http://webzz.tistory.com/114">.hasClass()</a></td>
+                <td>선택한 요소에 클래스가 있는지를 찾습니다.</td>
+            </tr>
+            <tr>
+                <td><a href="http://webzz.tistory.com/115">.removeClass()</a></td>
+                <td>선택한 요소에 클래스를 삭제합니다.</td>
+            </tr>
+            <tr>
+                <td><a href="http://webzz.tistory.com/116">.toggleClass()</a></td>
+                <td>선택한 요소에 클래스의 추가/제거를 연속하여 사용 할 수 있습니다.</td>
+            </tr>
+
+            <tr>
+                <td class="bg" rowspan="6">디멘션(Dimensions)</td>
+                <td><a href="http://webzz.tistory.com/118">.height()</a></td>
+                <td>선택한 요소의 높이(패딩/마진/보더 불포함)를 설정하거나 반환합니다.</td>
+            </tr>
+            <tr>
+                <td><a href="http://webzz.tistory.com/119">.innerHeight()</a></td>
+                <td>선택한 요소의 높이(패딩 포함, 보더/마진 불포함)를 설정하거나 반환합니다.</td>
+            </tr>
+            <tr>
+                <td><a href="http://webzz.tistory.com/120">.innerWidth()</a></td>
+                <td>선택한 요소의 가로(패딩 포함, 보더/마진 불포함)를 설정하거나 반환합니다.</td>
+            </tr>
+            <tr>
+                <td><a href="http://webzz.tistory.com/121">.outerHeight()</a></td>
+                <td>선택한 요소의 높이(패딩/보더 포함, 마진 불포함)를 설정하거나 반환합니다.</td>
+            </tr>
+            <tr>
+                <td><a href="http://webzz.tistory.com/122">.outerWidth()</a></td>
+                <td>선택한 요소의 가로(패딩/보더 포함, 마진 불포함)를 설정하거나 반환합니다.</td>
+            </tr>
+            <tr>
+                <td><a href="http://webzz.tistory.com/123">.width()</a></td>
+                <td>선택한 요소의 가로(패딩/마진/보더 불포함)를 설정하거나 반환합니다.</td>
+            </tr>
+
+            <tr>
+                <td class="bg" rowspan="5">오프셋(offset)</td>
+                <td><a href="https://webzz.tistory.com/125">.offset()</a></td>
+                <td>선택한 요소의 위치 좌표 값(문서 기준)을 설정하거나 반환합니다.</td>
+            </tr>
+            <tr>
+                <td><a href="https://webzz.tistory.com/126">.offsetParent()</a></td>
+                <td>선택한 요소의 부모 위치 좌표 값(문서 기준)을 설정하거나 반환합니다.</td>
+            </tr>
+            <tr>
+                <td><a href="https://webzz.tistory.com/127">.position()</a></td>
+                <td>선택한 요소의 위치 좌표 값(기준점 기준)을 설정하거나 반환합니다.</td>
+            </tr>
+            <tr>
+                <td><a href="https://webzz.tistory.com/128">.scrollLeft()</a></td>
+                <td>선택한 요소의 가로 스크롤 값을 설정하거나 반환합니다.</td>
+            </tr>
+            <tr>
+                <td><a href="https://webzz.tistory.com/129">.scrollTop()</a></td>
+                <td>선택한 요소의 세로 스크롤 값을 설정하거나 반환합니다.</td>
+            </tr>
+        </tbody>
+    </table>
+</div>  
+
+
+
+<h3 class="pt50">변경(Manipulation)</h3>
+<div class="table-responsive">
+    <table class="table table-bordered table-striped">
+        <colgroup>
+            <col style="width:20%">
+            <col style="width:20%">
+            <col style="width:60%">
+        </colgroup>
+        <thead>
+            <tr>
+                <th>유형</th>
+                <th>메서드</th>
+                <th>설명</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="bg">Copying</td>
+                <td><a href="http://webzz.tistory.com/135">.clone()</a></td>
+                <td>선택한 요소 본사본을 만듭니다</td>
+            </tr>
+            <tr>
+                <td class="bg" rowspan="3">DOM Insertion, Around</td>
+                <td><a href="http://webzz.tistory.com/141">.wrap()</a></td>
+                <td>선택한 요소에 새로운 태그를 추가합니다.</td>
+            </tr>
+            <tr>
+                <td><a href="http://webzz.tistory.com/142">.wrapAll()</a></td>
+                <td>선택한 요소에 새로운 태그를 추가합니다.</td>
+            </tr>
+            <tr>
+                <td><a href="http://webzz.tistory.com/143">.wrapInner()</a></td>
+                <td>선택한 각각의 요소에 각각 새로운 태그를 추가합니다.</td>
+            </tr>
+
+            <tr>
+                <td class="bg" rowspan="6">DOM Insertion, Around</td>
+                <td><a href="http://webzz.tistory.com/144">.append()</a></td>
+                <td>선택한 요소 마지막 위치에 새로운 요소를 추가합니다.</td>
+            </tr>
+            <tr>
+                <td><a href="http://webzz.tistory.com/145">.appendTo()</a></td>
+                <td>선택한 타겟 마지막 위치에 새로운 요소를 추가합니다.</td>
+            </tr>
+            <tr>
+                <td><a href="http://webzz.tistory.com/146">.html()</a></td>
+                <td>선택한 요소 내부의 HTML을 읽거나 변경합니다.</td>
+            </tr>
+            <tr>
+                <td><a href="http://webzz.tistory.com/147">.prepend()</a></td>
+                <td>선택한 요소 처음 위치에 새로운 요소를 추가합니다..</td>
+            </tr>
+            <tr>
+                <td><a href="http://webzz.tistory.com/148">.prependTo()</a></td>
+                <td>선택한 타겟 처음 위치에 새로운 요소를 추가합니다.</td>
+            </tr>
+            <tr>
+                <td><a href="http://webzz.tistory.com/149">.text()</a></td>
+                <td>선택한 요소 내부의 텍스트를 읽거나 변경합니다.</td>
+            </tr>
+            
+            <tr>
+                <td class="bg" rowspan="4">DOM Insertion, Outside</td>
+                <td><a href="http://webzz.tistory.com/150">.after()</a></td>
+                <td>선택한 요소 다음에 새로운 요소를 추가합니다.</td>
+            </tr>
+            <tr>
+                <td><a href="http://webzz.tistory.com/151">.before()</a></td>
+                <td>선택한 요소 이전에 새로운 요소를 추가합니다.</td>
+            </tr>
+            <tr>
+                <td><a href="http://webzz.tistory.com/152">.insertAfter()</a></td>
+                <td>선택한 타겟 요소 다음에 새로운 요소를 추가합니다.</td>
+            </tr>
+            <tr>
+                <td><a href="http://webzz.tistory.com/153">.insertBefore()</a></td>
+                <td>선택한 타겟 요소 이전에 새로운 요소를 추가합니다.</td>
+            </tr>
+
+            <tr>
+                <td class="bg" rowspan="4">DOM Removal</td>
+                <td><a href="http://webzz.tistory.com/154">.detach()</a></td>
+                <td>선택한 요소(데이터 및 이벤트 불포함)를 제거합니다.</td>
+            </tr>
+            <tr>
+                <td><a href="http://webzz.tistory.com/155">.empty()</a></td>
+                <td>선택한 요소의 하위 요소를 제거합니다.</td>
+            </tr>
+            <tr>
+                <td><a href="http://webzz.tistory.com/156">.remove()</a></td>
+                <td>선택한 요소(데이터 및 이벤트 포함)를 제거합니다.</td>
+            </tr>
+            <tr>
+                <td><a href="http://webzz.tistory.com/157">.unwrap()</a></td>
+                <td>선택한 요소의 부모요소를 제거합니다.</td>
+            </tr>
+
+            <tr>
+                <td class="bg" rowspan="2">DOM Replacement</td>
+                <td><a href="http://webzz.tistory.com/158">.replaceAll()</a></td>
+                <td>선택한 요소를 새로운 요소로 바꿉니다.</td>
+            </tr>
+            <tr>
+                <td><a href="http://webzz.tistory.com/159">.replaceWith()</a></td>
+                <td>선택한 요소를 새로운 컨텐츠로 바꿉니다.</td>
+            </tr>
+
+        </tbody>
+    </table>
+</div>  
+
+
+
+
+
+
+<h3 class="pt50">효과(Effect)</h3>
+<div class="table-responsive">
+    <table class="table table-bordered table-striped">
+        <colgroup>
+            <col style="width:20%">
+            <col style="width:20%">
+            <col style="width:60%">
+        </colgroup>
+        <thead>
+            <tr>
+                <th>유형</th>
+                <th>메서드</th>
+                <th>설명</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="bg" rowspan="2">Basic</td>
+                <td><a href="http://webzz.tistory.com/162">.hide()</a></td>
+                <td>선택한 요소를 숨김니다.</td>
+            </tr>
+            <tr>
+                <td><a href="http://webzz.tistory.com/163">.show()</a></td>
+                <td>선택한 요소를 보여줍니다.</td>
+            </tr>
+            <tr>
+                <td><a href="http://webzz.tistory.com/164">.toggle()</a></td>
+                <td>선택한 요소를 숨김/노출합니다.</td>
+            </tr>
+
+            <tr>
+                <td class="bg" rowspan="4">Basic</td>
+                <td><a href="http://webzz.tistory.com/166">.fadeIn()</a></td>
+                <td>선택한 요소를 천천히 보여줍니다.</td>
+            </tr>
+            <tr>
+                <td><a href="http://webzz.tistory.com/167">.fadeOut()</a></td>
+                <td>선택한 요소를 천천히 숨김니다.</td>
+            </tr>
+            <tr>
+                <td><a href="http://webzz.tistory.com/168">.fadeTo()</a></td>
+                <td>선택한 요소의 투명도를 조절합니다.</td>
+            </tr>
+            <tr>
+                <td><a href="http://webzz.tistory.com/169">.fadeToggle()</a></td>
+                <td>선택한 요소를 숨김/노출을 천천히 합니다.</td>
+            </tr>
+
+            <tr>
+                <td class="bg" rowspan="4">Fading</td>
+                <td><a href="http://webzz.tistory.com/166">.fadeIn()</a></td>
+                <td>선택한 요소를 천천히 보여줍니다.</td>
+            </tr>
+            <tr>
+                <td><a href="http://webzz.tistory.com/167">.fadeOut()</a></td>
+                <td>선택한 요소를 천천히 숨김니다.</td>
+            </tr>
+            <tr>
+                <td><a href="http://webzz.tistory.com/168">.fadeTo()</a></td>
+                <td>선택한 요소의 투명도를 조절합니다.</td>
+            </tr>
+            <tr>
+                <td><a href="http://webzz.tistory.com/169">.fadeToggle()</a></td>
+                <td>선택한 요소를 숨김/노출을 천천히 합니다.</td>
+            </tr>
+
+            <tr>
+                <td class="bg" rowspan="3">Sliding</td>
+                <td><a href="http://webzz.tistory.com/171">.slideDown()</a></td>
+                <td>선택한 요소를 슬라이딩으로 보여줍니다.</td>
+            </tr>
+            <tr>
+                <td><a href="http://webzz.tistory.com/172">.slideToggle()</a></td>
+                <td>선택한 요소를 슬라이딩으로 숨김/노출합니다.</td>
+            </tr>
+            <tr>
+                <td><a href="http://webzz.tistory.com/173">.slideUp()</a></td>
+                <td>선택한 요소를 슬라이딩으로 숨깁니다.</td>
+            </tr>
+
+
+            <tr>
+                <td class="bg" rowspan="7">Custom</td>
+                <td><a href="http://webzz.tistory.com/175">.animate()</a></td>
+                <td>선택한 요소에 애니메이션을 적용합니다.</td>
+            </tr>
+            <tr>
+                <td><a href="http://webzz.tistory.com/176">.clearQueue()</a></td>
+                <td>선택한 요소에 첫 번째 큐만 실행하고 나머지 대기 중인 큐는 모두 삭제합니다.</td>
+            </tr>
+            <tr>
+                <td><a href="http://webzz.tistory.com/177">.delay()</a></td>
+                <td>선택한 요소의 애니메이션를 효과를 지연합니다.</td>
+            </tr>
+            <tr>
+                <td><a href="http://webzz.tistory.com/178">.dequeue()</a></td>
+                <td>선택한 요소 스택에 쌓인 큐를 모두 제거합니다.</td>
+            </tr>
+            <tr>
+                <td><a href="http://webzz.tistory.com/179">.finish()</a></td>
+                <td>선택한 요소의 진행중인 애니메이션을 강제로 종료합니다.</td>
+            </tr>
+            <tr>
+                <td><a href="http://webzz.tistory.com/180">.queue()</a></td>
+                <td>선택한 요소 스택에 대기 중인 큐를 반환하거나 추가할 수 있습니다.</td>
+            </tr>
+            <tr>
+                <td><a href="http://webzz.tistory.com/181">.stop()</a></td>
+                <td>선택한 요소의 실행중인 애니메이션을 정지합니다.</td>
+            </tr>
+        </tbody>
+    </table>
+</div>  
+
+
+
+
+<h3 class="pt50">이벤트(Event)</h3>
+<div class="table-responsive">
+    <table class="table table-bordered table-striped">
+        <colgroup>
+            <col style="width:20%">
+            <col style="width:20%">
+            <col style="width:60%">
+        </colgroup>
+        <thead>
+            <tr>
+                <th>유형</th>
+                <th>메서드</th>
+                <th>설명</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="bg" rowspan="3">Browser Events</td>
+                <td><a href="http://webzz.tistory.com/184">.resize()</a></td>
+                <td>웹 브라우저 사이즈의 변화가 있을 때 이벤트가 발생합니다.</td>
+            </tr>
+            <tr>
+                <td><a href="http://webzz.tistory.com/185">.scroll()</a></td>
+                <td>웹 브라우저 스크롤의 변화가 있을 때 이벤트가 발생합니다.</td>
+            </tr>
+            <tr>
+                <td><a href="http://webzz.tistory.com/186">.ready()</a></td>
+                <td>웹 페이지가 로딩 되었을 때 이벤트가 발생합니다.</td>
+            </tr>
+
+
+
+            <tr>
+                <td class="bg" rowspan="9">Browser Events</td>
+                <td><a href="http://webzz.tistory.com/188">.bind()</a></td>
+                <td>선택한 요소에 한 개 이상의 이벤트를 등록합니다.</td>
+            </tr>
+            <tr>
+                <td><a href="http://webzz.tistory.com/189">.delegate()</a></td>
+                <td>선택한 요소 하위 요소에 이벤트를 등록합니다.</td>
+            </tr>
+            <tr>
+                <td><a href="http://webzz.tistory.com/190">.off()</a></td>
+                <td>선택한 요소의 이벤트를 제거합니다.</td>
+            </tr>
+            <tr>
+                <td><a href="http://webzz.tistory.com/191">.on()</a></td>
+                <td>선택한 요소의 이벤트를 설정합니다.</td>
+            </tr>
+            <tr>
+                <td><a href="http://webzz.tistory.com/192">.one()</a></td>
+                <td>선택한 요소의 이벤트 처리를 한번만 설정합니다.</td>
+            </tr>
+            <tr>
+                <td><a href="http://webzz.tistory.com/193">.trigger()</a></td>
+                <td>선택한 요소의 이벤트를 수동으로 발생시킵니다.</td>
+            </tr>
+            <tr>
+                <td><a href="http://webzz.tistory.com/194">.triggerHandler()</a></td>
+                <td>선택한 요소의 이벤트를 수동으로 발생시킵니다.</td>
+            </tr>
+            <tr>
+                <td><a href="http://webzz.tistory.com/195">.unbind()</a></td>
+                <td>선택한 요소의 이벤트를 제거합니다.</td>
+            </tr>
+            <tr>
+                <td><a href="http://webzz.tistory.com/196">.undelegate()</a></td>
+                <td>선택한 요소 하위 요소에 이벤트를 제거합니다.</td>
+            </tr>
+
+
+            <tr>
+                <td class="bg" rowspan="9">Browser Events</td>
+                <td><a href="http://webzz.tistory.com/188">.bind()</a></td>
+                <td>선택한 요소에 한 개 이상의 이벤트를 등록합니다.</td>
+            </tr>
+            <tr>
+                <td><a href="http://webzz.tistory.com/189">.delegate()</a></td>
+                <td>선택한 요소 하위 요소에 이벤트를 등록합니다.</td>
+            </tr>
+            <tr>
+                <td><a href="http://webzz.tistory.com/190">.off()</a></td>
+                <td>선택한 요소의 이벤트를 제거합니다.</td>
+            </tr>
+            <tr>
+                <td><a href="http://webzz.tistory.com/191">.on()</a></td>
+                <td>선택한 요소의 이벤트를 설정합니다.</td>
+            </tr>
+            <tr>
+                <td><a href="http://webzz.tistory.com/192">.one()</a></td>
+                <td>선택한 요소의 이벤트 처리를 한번만 설정합니다.</td>
+            </tr>
+            <tr>
+                <td><a href="http://webzz.tistory.com/193">.trigger()</a></td>
+                <td>선택한 요소의 이벤트를 수동으로 발생시킵니다.</td>
+            </tr>
+            <tr>
+                <td><a href="http://webzz.tistory.com/194">.triggerHandler()</a></td>
+                <td>선택한 요소의 이벤트를 수동으로 발생시킵니다.</td>
+            </tr>
+            <tr>
+                <td><a href="http://webzz.tistory.com/195">.unbind()</a></td>
+                <td>선택한 요소의 이벤트를 제거합니다.</td>
+            </tr>
+            <tr>
+                <td><a href="http://webzz.tistory.com/196">.undelegate()</a></td>
+                <td>선택한 요소 하위 요소에 이벤트를 제거합니다.</td>
+            </tr>
+
+
+            <tr>
+                <td class="bg" rowspan="7">Form Events</td>
+                <td><a href="http://webzz.tistory.com/198">.blur()</a></td>
+                <td>선택한 요소에 포커스가 떠날 때 이벤트가 발생합니다.</td>
+            </tr>
+            <tr>
+                <td><a href="http://webzz.tistory.com/199">.change()</a></td>
+                <td>선택한 요소에서 값이 변경될 때 이벤트가 발생합니다.</td>
+            </tr>
+            <tr>
+                <td><a href="http://webzz.tistory.com/200">.focus()</a></td>
+                <td>선택한 요소에 포커스를 획득했을 때 이벤트가 발생합니다.</td>
+            </tr>
+            <tr>
+                <td><a href="http://webzz.tistory.com/201">.focusin()</a></td>
+                <td>선택한 요소에 포커스가 마주어지기 바로 전에 발생합니다.</td>
+            </tr>
+            <tr>
+                <td><a href="http://webzz.tistory.com/202">.focusout()</a></td>
+                <td>선택한 요소에 포커스가 사라지기 바로 전에 발생합니다.</td>
+            </tr>
+            <tr>
+                <td><a href="http://webzz.tistory.com/203">.select()</a></td>
+                <td>선택한 요소 입력 양식의 텍스트를 선택했을 때 이벤트가 발생합니다.</td>
+            </tr>
+            <tr>
+                <td><a href="http://webzz.tistory.com/204">.submit()</a></td>
+                <td>선택한 요소의 submit 버튼을 누르면 이벤트가 발생합니다.</td>
+            </tr>
+
+            <tr>
+                <td class="bg" rowspan="3">Keyboard Events</td>
+                <td><a href="http://webzz.tistory.com/206">.keydown()</a></td>
+                <td>선택한 요소에서 키보드를 눌렀을 때 이벤트가 발생합니다.</td>
+            </tr>
+            <tr>
+                <td><a href="http://webzz.tistory.com/207">.keypress()</a></td>
+                <td>선택한 요소에서 키보드를 계속 누르고 있을 때 이벤트가 발생합니다.</td>
+            </tr>
+            <tr>
+                <td><a href="http://webzz.tistory.com/208">.keyup()</a></td>
+                <td>선택한 요소에서 키보드를 눌렀다가 떼었을 때 이벤트가 발생합니다.</td>
+            </tr>
+
+
+            <tr>
+                <td class="bg" rowspan="11">Mouse Events</td>
+                <td><a href="http://webzz.tistory.com/210">.click()</a></td>
+                <td>선택한 요소를 클릭했을 때 이벤트가 발생합니다.</td>
+            </tr>
+            <tr>
+                <td><a href="http://webzz.tistory.com/211">.contextMenu()</a></td>
+                <td>선택한 요소에서 마우스 오른쪽 버튼을 클릭하면 이벤트가 발생합니다.</td>
+            </tr>
+            <tr>
+                <td><a href="http://webzz.tistory.com/212">.dblclick()</a></td>
+                <td>선택한 요소에서 선택한 요소를 더블 클릭했을 때 이벤트가 발생합니다.</td>
+            </tr>
+            <tr>
+                <td><a href="http://webzz.tistory.com/213">.hover()</a></td>
+                <td>선택한 요소에서 마우스를 올렸을 때와 벗어 났을 때 각각 이벤트가 발생합니다.</td>
+            </tr>
+            <tr>
+                <td><a href="http://webzz.tistory.com/214">.mousedown()</a></td>
+                <td>선택한 요소에서 마우스 버튼을 놀렀을 때 이벤트가 발생합니다.</td>
+            </tr>
+            <tr>
+                <td><a href="http://webzz.tistory.com/215">.mouseenter()</a></td>
+                <td>선택한 요소 범위 내에서 마우스를 올렸을 때 이벤트가 발생합니다.</td>
+            </tr>
+            <tr>
+                <td><a href="http://webzz.tistory.com/216">.mouseleave()</a></td>
+                <td>선택한 요소 범위 내에서 마우스가 벗어 났을 때 이벤트가 발생합니다.</td>
+            </tr>
+            <tr>
+                <td><a href="http://webzz.tistory.com/217">.mousemove()</a></td>
+                <td>선택한 요소 범위 내에서 마우스를 움직였을 때 이벤트가 발생합니다.</td>
+            </tr>
+            <tr>
+                <td><a href="http://webzz.tistory.com/218">.mouseout()</a></td>
+                <td>선택한 요소에서 마우스가 벗어 났을 때 이벤트가 발생합니다.</td>
+            </tr>
+            <tr>
+                <td><a href="http://webzz.tistory.com/219">.mouseover()</a></td>
+                <td>선택한 요소에서 마우스를 올렸을 때 이벤트가 발생합니다.</td>
+            </tr>
+            <tr>
+                <td><a href="http://webzz.tistory.com/220">.mouseup()</a></td>
+                <td>선택한 요소에서 마우스를 눌렀다가 떼었을 때 이벤트가 발생합니다.</td>
+            </tr>
+        </tbody>
+    </table>
+</div>  
+
+
+   
+

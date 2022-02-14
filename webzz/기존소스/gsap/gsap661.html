@@ -1,0 +1,58 @@
+<h2>[GSAP] gsap.to()</h2>
+<p>가장 일반적인 애니메이션 방식입니다. 만약 CSS 애니메이션 처럼 또는 제이쿼리의 애니메이션 처럼 애니메이션을 주고 
+    싶다면 GSAP에서는 .to() 메서드를 사용합니다.
+</p>
+
+<hr />
+
+<h3>gsap.to()</h3>
+<p class="blue">gsap.to()은 애니메이션을 설정합니다.</p>
+ 
+<table class="table table-bordered table-striped table-hover">
+    <colgroup>
+        <col style="width: 30%">
+        <col style="width: 70%">
+    </colgroup>
+    <thead>
+        <tr>
+            <th>특징</th>
+            <th>설명</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <th>반환값(returns)</th>
+            <td>움직임(Tween)</td>
+        </tr>
+    </tbody>
+</table>
+
+
+<h4 class="pt50">문법(Syntax)</h4>
+<p class="blue">gsap.to("타겟", {속성: 속성값, ....});</p>
+<ul>
+    <li>타겟(targets): 애니메이션을 주고 싶은 타겟(선택자)을 설정하는 부분입니다. #id, .class를 사용할 수 있으며,
+        자바스크립트의 document.querySelectorAll()라고 생각하면 됩니다.</li>
+    <li>속성(values) : CSS의 속성과 속성 값을 주는 부분입니다. CSS 애니메이션 속성과 이름이 약간 다를 수 있지만 대부분 동일하게 사용할 수 있습니다. 여기에는 ease, duration, delay등 여러가지 메서드도 같이 사용할 수 있습니다.</li>
+</ul>
+
+
+<h4 class="pt50">정의(Definition)</h4>
+<ul>
+    <li>.to() 메서드는 현재 값을 자동으로 인식합니다. fromTo() 메서드 처럼 시작 값을 설정 할 필요가 없습니다.</li>
+    <li>.to() 메서드는 CSS의 애니메이션 관련된 모든 속성을 사용할 수 있습니다.</li>
+</ul>
+
+<h4 class="pt50">비교(Compare)</h4>
+<ul>
+    <li>CSS에서 애니메이션은 animation()으로 표현합니다.</li>
+    <li>jQuery에서 애니매이션은 .animate()으로 표현합니다.</li>
+</ul>
+
+
+
+<h4 class="pt50">참고(Reference)</h4>
+<ul>
+    <li><a href="https://greensock.com/docs/v3/GSAP/gsap.to()">GSAP</a></li>
+</ul>
+

@@ -1,0 +1,648 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>HTML</title>
+</head>
+
+<body>
+
+
+
+
+<h2>HTML 이벤트</h2>
+<p>HTML 이벤트(HTML Event)은 HTML에 자바스크립트 함수를 호출하기 위한 명령어입니다. 이벤트 처리는 자바스크립트와 같이 이루어져야 하는 부분입니다. </p>
+
+<hr>
+
+
+<h3>HTML 이벤트</h3>
+<p class="blue">HTML 이벤트에는 Window Event, Form Event, Keyboard Event, Mouse Event, Clipboard Event, Media Event, Misc Event으로 나눌 수 있으며, HTML5에 추가된 기능이 있습니다.</p>
+
+
+
+
+<h4 class="pt50">Window Event Attributes</h4>
+<div class="table-responsive">
+    <table class="table table-bordered table-striped table-hover">
+        <colgroup>
+            <col width="">
+            <col width="">
+            <col width="">
+            <col width="7%">
+        </colgroup>
+        <thead>
+            <tr>
+                <th>속성</th>
+                <th>값(예)</th>
+                <th>설명</th>
+                <th class="ce">버전</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>onafterprint</td>
+                <td>onafterprint="function()" </td>
+                <td>문서가 인쇄된 후 스크립 이벤트를 설정합니다.</td>
+                <td class="ce"><img src="https://tistory3.daumcdn.net/tistory/2933724/skin/images/icon-html5.png" class="icon" alt="html5" title="html5 기능입니다."></td>
+            </tr>
+            <tr>
+                <td>onbeforeprint</td>
+                <td>onbeforeprint="function()" </td>
+                <td>문서가 인쇄되기 전에 스크립 이벤트를 설정합니다.</td>
+                <td class="ce"><img src="https://tistory3.daumcdn.net/tistory/2933724/skin/images/icon-html5.png" class="icon" alt="html5" title="html5 기능입니다."></td>
+            </tr>
+            <tr>
+                <td>onbeforeunload</td>
+                <td>onbeforeunload="function()"</td>
+                <td>사용자가 현재 페이지에서 떠나기 전에 이벤트를 설정합니다.</td>
+                <td class="ce"><img src="https://tistory3.daumcdn.net/tistory/2933724/skin/images/icon-html5.png" class="icon" alt="html5" title="html5 기능입니다."></td>
+            </tr>
+            <tr>
+                <td>onerror</td>
+                <td>onerror="function()"</td>
+                <td>페이지가 오류 났을 때 이벤트를 설정합니다.</td>
+                <td class="ce"><img src="https://tistory3.daumcdn.net/tistory/2933724/skin/images/icon-html5.png" class="icon" alt="html5" title="html5 기능입니다."></td>
+            </tr>
+            <tr>
+                <td>onhashchange</td>
+                <td>onhashchange="function()"</td>
+                <td>URL 앵커 부분의 변화가 있을 때 이벤트를 설정합니다.</td>
+                <td class="ce"><img src="https://tistory3.daumcdn.net/tistory/2933724/skin/images/icon-html5.png" class="icon" alt="html5" title="html5 기능입니다."></td>
+            </tr>
+            <tr>
+                <td>onload</td>
+                <td>onload="function()"</td>
+                <td>페이지가 로드되면 이벤트를 설정합니다.</td>
+                <td class="ce">-</td>
+            </tr>
+            <tr>
+                <td>onmessage</td>
+                <td>onmessage="function()"</td>
+                <td>메세지가 작동되면 이벤트를 설정합니다.</td>
+                <td class="ce"><img src="https://tistory3.daumcdn.net/tistory/2933724/skin/images/icon-html5.png" class="icon" alt="html5" title="html5 기능입니다."></td>
+            </tr>
+            <tr>
+                <td>onoffline</td>
+                <td>onoffline="function()"</td>
+                <td>브라우저가 오프라인 일 때 이벤트를 설정합니다.</td>
+                <td class="ce"><img src="https://tistory3.daumcdn.net/tistory/2933724/skin/images/icon-html5.png" class="icon" alt="html5" title="html5 기능입니다."></td>
+            </tr>
+            <tr>
+                <td>ononline</td>
+                <td>ononline="function()"</td>
+                <td>브라우저가 온라인 일 때 이벤트를 설정합니다.</td>
+                <td class="ce"><img src="https://tistory3.daumcdn.net/tistory/2933724/skin/images/icon-html5.png" class="icon" alt="html5" title="html5 기능입니다."></td>
+            </tr>
+            <tr>
+                <td>onpagehide </td>
+                <td>onpagehide ="function()"</td>
+                <td>사용자가 다른 페이지로 이동 할 때 이벤트를 설정합니다.</td>
+                <td class="ce"><img src="https://tistory3.daumcdn.net/tistory/2933724/skin/images/icon-html5.png" class="icon" alt="html5" title="html5 기능입니다."></td>
+            </tr>
+            <tr>
+                <td>onpageshow </td>
+                <td>onpageshow ="function()"</td>
+                <td>사용자가 다른 페이지로 탐색 할 때 이벤트를 설정합니다.</td>
+                <td class="ce"><img src="https://tistory3.daumcdn.net/tistory/2933724/skin/images/icon-html5.png" class="icon" alt="html5" title="html5 기능입니다."></td>
+            </tr>
+            <tr>
+                <td>onpopstate </td>
+                <td>onpopstate ="function()"</td>
+                <td>브라우저 히스토리가 변경될 때 이벤트를 설정합니다.</td>
+                <td class="ce"><img src="https://tistory3.daumcdn.net/tistory/2933724/skin/images/icon-html5.png" class="icon" alt="html5" title="html5 기능입니다."></td>
+            </tr>
+            <tr>
+                <td>onresize </td>
+                <td>onresize ="function()"</td>
+                <td>브라우저 크기가 변경될 때 이벤트를 설정합니다.</td>
+                <td class="ce"><img src="https://tistory3.daumcdn.net/tistory/2933724/skin/images/icon-html5.png" class="icon" alt="html5" title="html5 기능입니다."></td>
+            </tr>
+            <tr>
+                <td>onstorage </td>
+                <td>onstorage ="function()"</td>
+                <td>브라우저 저장소가 업데이트 될 때 이벤트를 설정합니다.</td>
+                <td class="ce"><img src="https://tistory3.daumcdn.net/tistory/2933724/skin/images/icon-html5.png" class="icon" alt="html5" title="html5 기능입니다."></td>
+            </tr>
+            <tr>
+                <td>onunload </td>
+                <td>onunload ="function()"</td>
+                <td>페이지가 로드되지 않거나 닫혔을 때 이벤트를 설정합니다.</td>
+                <td class="ce"><img src="https://tistory3.daumcdn.net/tistory/2933724/skin/images/icon-html5.png" class="icon" alt="html5" title="html5 기능입니다."></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+
+
+<h4 class="pt50">Form Event Attributes</h4>
+<div class="table-responsive">
+    <table class="table table-bordered table-striped table-hover">
+        <colgroup>
+            <col width="">
+            <col width="">
+            <col width="">
+            <col width="7%">
+        </colgroup>
+        <thead>
+            <tr>
+                <th>속성</th>
+                <th>값(예)</th>
+                <th>설명</th>
+                <th class="ce">버전</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>onblur</td>
+                <td>onblur="function()"</td>
+                <td>요소에 포커스를 잃었을 때 이벤트를 발생합니다.</td>
+                <td class="ce">-</td>
+            </tr>
+            <tr>
+                <td>onchange</td>
+                <td>onchange="function()"</td>
+                <td>요소의 값이 변경되었을 때 이벤트를 발생합니다.</td>
+                <td class="ce">-</td>
+            </tr>
+            <tr>
+                <td>oncontextmenu</td>
+                <td>oncontextmenu="function()"</td>
+                <td>요쇼의 메뉴가 펼쳐졌을 때 이벤트를 발생합니다.</td>
+                <td class="ce"><img src="https://tistory3.daumcdn.net/tistory/2933724/skin/images/icon-html5.png" class="icon" alt="html5" title="html5 기능입니다."></td>
+            </tr>
+            <tr>
+                <td>onfocus</td>
+                <td>onfocus="function()"</td>
+                <td>요소에 포커스 되었을 때 이벤트를 발생합니다.</td>
+                <td class="ce">-</td>
+            </tr>
+            <tr>
+                <td>oninput</td>
+                <td>oninput="function()"</td>
+                <td>사용자가 요소에 입력했을 때 이벤트가 발생합니다.</td>
+                <td class="ce"><img src="https://tistory3.daumcdn.net/tistory/2933724/skin/images/icon-html5.png" class="icon" alt="html5" title="html5 기능입니다."></td>
+            </tr>
+            <tr>
+                <td>oninvalid</td>
+                <td>oninvalid="function()"</td>
+                <td>사용자가 입력한 요소가 유효하지 않을 때 이벤트가 발생합니다.</td>
+                <td class="ce"><img src="https://tistory3.daumcdn.net/tistory/2933724/skin/images/icon-html5.png" class="icon" alt="html5" title="html5 기능입니다."></td>
+            </tr>
+            <tr>
+                <td>onreset</td>
+                <td>onreset="function()"</td>
+                <td>사용자가 리셋 버튼을 눌렀을 경우 이벤트가 발생합니다.</td>
+                <td class="ce"><img src="https://tistory3.daumcdn.net/tistory/2933724/skin/images/icon-html5.png" class="icon" alt="html5" title="html5 기능입니다."></td>
+            </tr>
+            <tr>
+                <td>onsearch</td>
+                <td>onsearch="function()"</td>
+                <td>사용자가 검색 영역에 입력할 때 이벤트가 발생합니다.</td>
+                <td class="ce">-</td>
+            </tr>
+            <tr>
+                <td>onselect</td>
+                <td>onselect="function()"</td>
+                <td>사용자가 셀렉트 메뉴를 선택했을 때 이벤트가 발생합니다.</td>
+                <td class="ce">-</td>
+            </tr>
+            <tr>
+                <td>onsubmit</td>
+                <td>onsubmit="function()"</td>
+                <td>사용자가 입력양식을 보낼 때 이벤트가 발생합니다.</td>
+                <td class="ce">-</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+
+
+
+
+<h4 class="pt50">Keyboard Event Attributes</h4>
+<div class="table-responsive">
+    <table class="table table-bordered table-striped table-hover">
+        <colgroup>
+            <col width="">
+            <col width="">
+            <col width="">
+            <col width="7%">
+        </colgroup>
+        <thead>
+            <tr>
+                <th>속성</th>
+                <th>값(예)</th>
+                <th>설명</th>
+                <th class="ce">버전</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>onkeydown</td>
+                <td>onkeydown="function()"</td>
+                <td>사용자가 키를 눌렀을 때 이벤트를 설정합니다.</td>
+                <td class="ce">-</td>
+            </tr>
+            <tr>
+                <td>onkeypress</td>
+                <td>onkeypress="function()"</td>
+                <td>사용자가 키를 누르고 있을 때 이벤트를 설정합니다.</td>
+                <td class="ce">-</td>
+            </tr>
+            <tr>
+                <td>onkeyup</td>
+                <td>onkeyup="function()"</td>
+                <td>사용자가 키를 눌렀다 뗐을 때 이벤트를 설정합니다.</td>
+                <td class="ce">-</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+
+
+<h4 class="pt50">Mouse Event Attributes</h4>
+<div class="table-responsive">
+    <table class="table table-bordered table-striped table-hover">
+        <colgroup>
+            <col width="">
+            <col width="">
+            <col width="">
+            <col width="7%">
+        </colgroup>
+        <thead>
+            <tr>
+                <th>속성</th>
+                <th>값(예)</th>
+                <th>설명</th>
+                <th class="ce">버전</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>onclick</td>
+                <td>onclick="function()"</td>
+                <td>요소를 클릭했을 때 이벤트를 설정합니다.</td>
+                <td class="ce">-</td>
+            </tr>
+            <tr>
+                <td>ondblclick</td>
+                <td>ondblclick="function()"</td>
+                <td>요소를 더블 클릭했을 때 이벤트를 설정합니다.</td>
+                <td class="ce">-</td>
+            </tr>
+            <tr>
+                <td>ondrag</td>
+                <td>ondrag="function()"</td>
+                <td>요소를 드래그 했을 때 이벤트를 설정합니다.</td>
+                <td class="ce"><img src="https://tistory3.daumcdn.net/tistory/2933724/skin/images/icon-html5.png" class="icon" alt="html5" title="html5 기능입니다."></td>
+            </tr>
+            <tr>
+                <td>ondragend</td>
+                <td>ondragend="function()"</td>
+                <td>요소를 드래그하고 끝났을 때 이벤트를 설정합니다.</td>
+                <td class="ce"><img src="https://tistory3.daumcdn.net/tistory/2933724/skin/images/icon-html5.png" class="icon" alt="html5" title="html5 기능입니다."></td>
+            </tr>
+            <tr>
+                <td>ondragenter</td>
+                <td>ondragenter="function()"</td>
+                <td>요소를 드래그 하고 있을 때 이벤트를 설정합니다.</td>
+                <td class="ce"><img src="https://tistory3.daumcdn.net/tistory/2933724/skin/images/icon-html5.png" class="icon" alt="html5" title="html5 기능입니다."></td>
+            </tr>
+            <tr>
+                <td>ondragleave</td>
+                <td>ondragleave="function()"</td>
+                <td>요소를 드래그 하고 떠났을 때 이벤트를 설정합니다.</td>
+                <td class="ce"><img src="https://tistory3.daumcdn.net/tistory/2933724/skin/images/icon-html5.png" class="icon" alt="html5" title="html5 기능입니다."></td>
+            </tr>
+            <tr>
+                <td>ondragover</td>
+                <td>ondragover="function()"</td>
+                <td>타겟 요소 위에 드래그 했을 때 이벤트를 설정합니다.</td>
+                <td class="ce"><img src="https://tistory3.daumcdn.net/tistory/2933724/skin/images/icon-html5.png" class="icon" alt="html5" title="html5 기능입니다."></td>
+            </tr>
+            <tr>
+                <td>ondragstart</td>
+                <td>ondragstart="function()"</td>
+                <td>타겟 요소에게 드래그를 시작했을 때 이벤트를 설정합니다.</td>
+                <td class="ce"><img src="https://tistory3.daumcdn.net/tistory/2933724/skin/images/icon-html5.png" class="icon" alt="html5" title="html5 기능입니다."></td>
+            </tr>
+            <tr>
+                <td>ondrop</td>
+                <td>ondrop="function()"</td>
+                <td>타겟 요소에 떨어트렸을 때 이벤트를 설정합니다.</td>
+                <td class="ce"><img src="https://tistory3.daumcdn.net/tistory/2933724/skin/images/icon-html5.png" class="icon" alt="html5" title="html5 기능입니다."></td>
+            </tr>
+            <tr>
+                <td>onmousedown</td>
+                <td>onmousedown="function()"</td>
+                <td>요소에 마우스를 클릭했을 때 이벤트를 설정합니다.</td>
+                <td class="ce">-</td>
+            </tr>
+            <tr>
+                <td>onmousemove</td>
+                <td>onmousemove="function()"</td>
+                <td>타겟 요소에 마우스를 움직였을 때 이벤트를 설정합니다.</td>
+                <td class="ce">-</td>
+            </tr>
+            <tr>
+                <td>onmouseout</td>
+                <td>onmouseout="function()"</td>
+                <td>타겟 요소에서 마우스가 벗어 났을 때 이벤트를 설정합니다.</td>
+                <td class="ce">-</td>
+            </tr>
+            <tr>
+                <td>onmouseover</td>
+                <td>onmouseover="function()"</td>
+                <td>타겟 요소에 마우스가 오버했을 때 이벤트를 설정합니다.</td>
+                <td class="ce">-</td>
+            </tr>
+            <tr>
+                <td>onmouseup</td>
+                <td>onmouseup="function()"</td>
+                <td>타겟 요소에 마우스를 클릭하고 놓았을 때 이벤트를 설정합니다.</td>
+                <td class="ce">-</td>
+            </tr>
+            <tr>
+                <td>onmousewheel</td>
+                <td>onmousewheel="function()"</td>
+                <td>마우스 휠을 사용할 때 이벤트를 설정합니다. 현재는 onwheel을 사용합니다. </td>
+                <td class="ce">-</td>
+            </tr>
+            <tr>
+                <td>onscroll</td>
+                <td>onscroll="function()"</td>
+                <td>스크롤 했을 때 이벤트를 설정합니다.</td>
+                <td class="ce"><img src="https://tistory3.daumcdn.net/tistory/2933724/skin/images/icon-html5.png" class="icon" alt="html5" title="html5 기능입니다."></td>
+            </tr>
+            <tr>
+                <td>onwheel</td>
+                <td>onwheel="function()"</td>
+                <td>마우스 휠을 사용했을 때 이벤트를 설정합니다.</td>
+                <td class="ce"><img src="https://tistory3.daumcdn.net/tistory/2933724/skin/images/icon-html5.png" class="icon" alt="html5" title="html5 기능입니다."></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+
+
+
+
+<h4 class="pt50">Clipboard Event Attributes</h4>
+<div class="table-responsive">
+    <table class="table table-bordered table-striped table-hover">
+        <colgroup>
+            <col width="">
+            <col width="">
+            <col width="">
+            <col width="7%">
+        </colgroup>
+        <thead>
+            <tr>
+                <th>속성</th>
+                <th>값(예)</th>
+                <th>설명</th>
+                <th class="ce">버전</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>oncopy</td>
+                <td>oncopy="function()"</td>
+                <td>사용자가 요소를 복사 했을 때 이벤트를 설정합니다.</td>
+                <td class="ce">-</td>
+            </tr>
+            <tr>
+                <td>oncut</td>
+                <td>oncut="function()"</td>
+                <td>사용자가 요소를 잘라내기 했을 때 이벤트를 설정합니다.</td>
+                <td class="ce">-</td>
+            </tr>
+            <tr>
+                <td>onpaste</td>
+                <td>onpaste="function()"</td>
+                <td>사용자가 요소를 붙여넣기 했을 때 이벤트를 설정합니다.</td>
+                <td class="ce">-</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+
+
+
+
+
+<h4 class="pt50">Media Event Attributes</h4>
+<div class="table-responsive">
+    <table class="table table-bordered table-striped table-hover">
+        <colgroup>
+            <col width="">
+            <col width="">
+            <col width="">
+            <col width="7%">
+        </colgroup>
+        <thead>
+            <tr>
+                <th>속성</th>
+                <th>값(예)</th>
+                <th>설명</th>
+                <th class="ce">버전</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>onabort</td>
+                <td>onabort="function()"</td>
+                <td>미디어가 중단되었을 때 이벤트를 발생합니다.</td>
+                <td class="ce">-</td>
+            </tr>
+            <tr>
+                <td>oncanplay</td>
+                <td>oncanplay="function()"</td>
+                <td>미디어가 플레이 준비되었을 때 이벤트를 발생합니다.</td>
+                <td class="ce"><img src="https://tistory3.daumcdn.net/tistory/2933724/skin/images/icon-html5.png" class="icon" alt="html5" title="html5 기능입니다."></td>
+            </tr>
+            <tr>
+                <td>oncanplaythrough</td>
+                <td>oncanplaythrough="function()"</td>
+                <td>미디어가 버퍼링 되는 동안 이벤트를 발생합니다.</td>
+                <td class="ce"><img src="https://tistory3.daumcdn.net/tistory/2933724/skin/images/icon-html5.png" class="icon" alt="html5" title="html5 기능입니다."></td>
+            </tr>
+            <tr>
+                <td>oncuechange</td>
+                <td>oncuechange="function()"</td>
+                <td>트랙 요소가 변경 되었을 때 이벤트를 발생합니다.</td>
+                <td class="ce"><img src="https://tistory3.daumcdn.net/tistory/2933724/skin/images/icon-html5.png" class="icon" alt="html5" title="html5 기능입니다."></td>
+            </tr>
+            <tr>
+                <td>ondurationchange</td>
+                <td>ondurationchange="function()"</td>
+                <td>미디어의 길이가 변할 때 이벤트를 발생합니다.</td>
+                <td class="ce"><img src="https://tistory3.daumcdn.net/tistory/2933724/skin/images/icon-html5.png" class="icon" alt="html5" title="html5 기능입니다."></td>
+            </tr>
+            <tr>
+                <td>onemptied </td>
+                <td>onemptied="function()"</td>
+                <td>미디어 파일이 갑자기 사용할 수 없을 때 이벤트를 발생합니다.</td>
+                <td class="ce"><img src="https://tistory3.daumcdn.net/tistory/2933724/skin/images/icon-html5.png" class="icon" alt="html5" title="html5 기능입니다."></td>
+            </tr>
+            <tr>
+                <td>onended </td>
+                <td>onended="function()"</td>
+                <td>미디어 재생이 끝났을 때 이벤트를 발생합니다.</td>
+                <td class="ce"><img src="https://tistory3.daumcdn.net/tistory/2933724/skin/images/icon-html5.png" class="icon" alt="html5" title="html5 기능입니다."></td>
+            </tr>
+            <tr>
+                <td>onerror </td>
+                <td>onerror="function()"</td>
+                <td>미디어 파일이 오류가 발생하면 이벤트를 발생합니다..</td>
+                <td class="ce"><img src="https://tistory3.daumcdn.net/tistory/2933724/skin/images/icon-html5.png" class="icon" alt="html5" title="html5 기능입니다."></td>
+            </tr>
+            <tr>
+                <td>onloadeddata </td>
+                <td>onloadeddata="function()"</td>
+                <td>미디어 파일이 로드될 때 이벤트를 발생합니다.</td>
+                <td class="ce"><img src="https://tistory3.daumcdn.net/tistory/2933724/skin/images/icon-html5.png" class="icon" alt="html5" title="html5 기능입니다."></td>
+            </tr>
+            <tr>
+                <td>onloadedmetadata</td>
+                <td>onloadedmetadata="function()"</td>
+                <td>메다데이터를 로드할 때 이벤트를 발생합니다.</td>
+                <td class="ce"><img src="https://tistory3.daumcdn.net/tistory/2933724/skin/images/icon-html5.png" class="icon" alt="html5" title="html5 기능입니다."></td>
+            </tr>
+            <tr>
+                <td>onloadstart </td>
+                <td>onloadstart="function()"</td>
+                <td>미디어 파일이 로드되기 전 시작될 때 이벤트를 발생합니다.</td>
+                <td class="ce"><img src="https://tistory3.daumcdn.net/tistory/2933724/skin/images/icon-html5.png" class="icon" alt="html5" title="html5 기능입니다."></td>
+            </tr>
+            <tr>
+                <td>onpause </td>
+                <td>onpause="function()"</td>
+                <td>미디어 사용자가 일시 중지시켰을 때 이벤트를 발생합니다.</td>
+                <td class="ce"><img src="https://tistory3.daumcdn.net/tistory/2933724/skin/images/icon-html5.png" class="icon" alt="html5" title="html5 기능입니다."></td>
+            </tr>
+            <tr>
+                <td>onplay </td>
+                <td>onplay="function()"</td>
+                <td>미디어가 재생 준비가 되었을 때 이벤트를 발생합니다.</td>
+                <td class="ce"><img src="https://tistory3.daumcdn.net/tistory/2933724/skin/images/icon-html5.png" class="icon" alt="html5" title="html5 기능입니다."></td>
+            </tr>
+            <tr>
+                <td>onplaying </td>
+                <td>onplaying="function()"</td>
+                <td>미디어가 실제로 재생하고 있을 때 이벤트를 발생합니다.</td>
+                <td class="ce"><img src="https://tistory3.daumcdn.net/tistory/2933724/skin/images/icon-html5.png" class="icon" alt="html5" title="html5 기능입니다."></td>
+            </tr>
+            <tr>
+                <td>onprogress </td>
+                <td>onprogress="function()"</td>
+                <td>브라우저가 미디어 파일을 얻고 있는 과정에 있을 때 이벤트를 발생합니다.</td>
+                <td class="ce"><img src="https://tistory3.daumcdn.net/tistory/2933724/skin/images/icon-html5.png" class="icon" alt="html5" title="html5 기능입니다."></td>
+            </tr>
+            <tr>
+                <td>onratechange </td>
+                <td>onratechange="function()"</td>
+                <td>사용자가 미디어 재생 속도(빨리감기,슬로우모션)를 변경했을 때 이벤트를 발생합니다.</td>
+                <td class="ce"><img src="https://tistory3.daumcdn.net/tistory/2933724/skin/images/icon-html5.png" class="icon" alt="html5" title="html5 기능입니다."></td>
+            </tr>
+            <tr>
+                <td>onseeked </td>
+                <td>onseeked="function()"</td>
+                <td>미디어의 속성 변경이 끝났을 때 이벤트를 발생합니다.</td>
+                <td class="ce"><img src="https://tistory3.daumcdn.net/tistory/2933724/skin/images/icon-html5.png" class="icon" alt="html5" title="html5 기능입니다."></td>
+            </tr>
+            <tr>
+                <td>onseeking </td>
+                <td>onseeking="function()"</td>
+                <td>미디어의 속성 변경이 시작했을 때 이벤트를 발생합니다.</td>
+                <td class="ce"><img src="https://tistory3.daumcdn.net/tistory/2933724/skin/images/icon-html5.png" class="icon" alt="html5" title="html5 기능입니다."></td>
+            </tr>
+            <tr>
+                <td>onstalled </td>
+                <td>onstalled="function()"</td>
+                <td>브라우저가 어떠한 이유로 미디어 파일을 가져올 수 없을 때 이벤트를 발생합니다.</td>
+                <td class="ce"><img src="https://tistory3.daumcdn.net/tistory/2933724/skin/images/icon-html5.png" class="icon" alt="html5" title="html5 기능입니다."></td>
+            </tr>
+            <tr>
+                <td>onsuspend </td>
+                <td>onsuspend="function()"</td>
+                <td>브라우저가 어떠한 이유로 미디어 파일을 가져오는 것이 중단 됐을 때 이벤트를 발생합니다.</td>
+                <td class="ce"><img src="https://tistory3.daumcdn.net/tistory/2933724/skin/images/icon-html5.png" class="icon" alt="html5" title="html5 기능입니다."></td>
+            </tr>
+            <tr>
+                <td>ontimeupdate </td>
+                <td>ontimeupdate="function()"</td>
+                <td>미디어의 재생위치가 사용자에 의해 변경 되었을 때 이벤트를 발생합니다.</td>
+                <td class="ce"><img src="https://tistory3.daumcdn.net/tistory/2933724/skin/images/icon-html5.png" class="icon" alt="html5" title="html5 기능입니다."></td>
+            </tr>
+            <tr>
+                <td>onvolumechange </td>
+                <td>onvolumechange="function()"</td>
+                <td>미디어 파일의 볼륨이 변경(무소음도 포함) 되었을 때 이벤트를 발생합니다.</td>
+                <td class="ce"><img src="https://tistory3.daumcdn.net/tistory/2933724/skin/images/icon-html5.png" class="icon" alt="html5" title="html5 기능입니다."></td>
+            </tr>
+            <tr>
+                <td>onwaiting </td>
+                <td>onwaiting="function()"</td>
+                <td>미디어가 재생되고 있는 도중 버퍼링 현상이 생겼을 때 이벤트를 발생합니다.</td>
+                <td class="ce"><img src="https://tistory3.daumcdn.net/tistory/2933724/skin/images/icon-html5.png" class="icon" alt="html5" title="html5 기능입니다."></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+
+
+
+
+<h4 class="pt50">Misc Event Attributes</h4>
+<div class="table-responsive">
+    <table class="table table-bordered table-striped table-hover">
+        <colgroup>
+            <col width="">
+            <col width="">
+            <col width="">
+            <col width="7%">
+        </colgroup>
+        <thead>
+            <tr>
+                <th>속성</th>
+                <th>값(예)</th>
+                <th>설명</th>
+                <th class="ce">버전</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>onerror</td>
+                <td>onerror="function()"</td>
+                <td>외부 파일을 로드하는 동안 에러가 발생할 경우 이벤트를 발생합니다.</td>
+                <td class="ce"><img src="https://tistory3.daumcdn.net/tistory/2933724/skin/images/icon-html5.png" class="icon" alt="html5" title="html5 기능입니다."></td>
+            </tr>
+            <tr>
+                <td>onshow</td>
+                <td>onshow="function()"</td>
+                <td>menu 태그에서 메뉴가 보여졌을 때 이벤트를 발생합니다.</td>
+                <td class="ce"><img src="https://tistory3.daumcdn.net/tistory/2933724/skin/images/icon-html5.png" class="icon" alt="html5" title="html5 기능입니다."></td>
+            </tr>
+            <tr>
+                <td>ontoggle</td>
+                <td>ontoggle="function()"</td>
+                <td>details 태그에서 요소가 열리고 닫힐 때 이벤트를 발생합니다.</td>
+                <td class="ce"><img src="https://tistory3.daumcdn.net/tistory/2933724/skin/images/icon-html5.png" class="icon" alt="html5" title="html5 기능입니다."></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+
+
+</body>
+</html>

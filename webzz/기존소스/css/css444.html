@@ -1,0 +1,1037 @@
+ 
+<h2>filter</h2>
+<p>filter 속성은 그래픽 효과를 설정합니다.</p>
+
+<hr>
+
+<h3>filter</h3>
+<p class="blue">filter 속성은 그래픽 효과를 설정합니다.</p>
+
+<div class="table-responsive">
+    <table class="table table-bordered table-striped table-hover">
+        <colgroup>
+            <col style="width: 30%">
+            <col style="width: 70%">
+        </colgroup>
+        <thead>
+            <tr>
+                <th scope="col">특징</th>
+                <th scope="col">설명</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th scope="row"><a href="http://webzz.tistory.com/360">기본 값</a></th>
+                <td><a href="http://webzz.tistory.com/360">filter : none</a></td>
+            </tr>
+            <tr>
+                <th scope="row"><a href="http://webzz.tistory.com/359">버전</a></th>
+                <td><a href="http://webzz.tistory.com/359">CSS3</a></td>
+            </tr>
+            <tr>
+                <th>사용성</th>
+                <td>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star-o" aria-hidden="true"></i>
+                    <i class="fa fa-star-o" aria-hidden="true"></i>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<h4 class="pt50">정의(Definition)</h4>
+<ul>
+    <li>filter 속성은 그래픽 효과를 설정합니다.</li>
+    <li>hue-rotate()는 0deg~360deg까지 표현합니다.</li>
+</ul>
+
+<h4 class="pt50">그래픽 효과와 관련된 속성(Graphic Related Properties)</h4>
+<ul>
+    <li>filter 속성은 그래픽 효과를 설정합니다.</li>
+    <li>backdrop-filter 속성은 배경에 그래픽 효과를 설정합니다.</li>
+    <li>background-blend-mode 속성은 배경을 혼합했을 때 그래픽 효과를 설정합니다.</li>
+    <li>mix-blend-mode 속성은 요소를 혼합했을 때 그래픽 효과를 설정합니다.</li>
+</ul>
+  
+   
+   
+<h4 class="pt50">문법(Syntax)</h4>
+<p class="blue">filter : none | blur() | brightness() | contrast() | drop-shadow() | grayscale() | hue-rotate() | invert() | opacity() | saturate() | sepia() | url() </p>
+<p class="blue">
+    /* 기본 속성 */<br>
+    filter : none;<br>
+    filter : blur();<br>
+    filter : brightness();<br>
+    filter : contrast();<br>
+    filter : drop-shadow();<br>
+    filter : grayscale();<br>
+    filter : hue-rotate();<br>
+    filter : invert();<br>
+    filter : opacity();<br>
+    filter : saturate();<br>
+    filter : sepia(); <br>
+    filter : url(); <br><br>
+
+    /* 다중 속성 */<br>
+    filter : hue-rotate(20deg) contrast(50%);<br>
+</p>
+
+
+
+  
+<h4 class="pt50">속성(Property)</h4>
+<div class="table-responsive">
+    <table class="table table-bordered table-striped table-hover">
+        <colgroup>
+            <col style="width: 30%">
+            <col style="width: 70%">
+        </colgroup>
+        <thead>
+            <tr>
+                <th scope="col">속성값</th>
+                <th scope="col">설명</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th>none</th>
+                <td>이미지의 아무런 효과를 주지 않습니다.</td>
+            </tr>
+            <tr>
+                <th>blur(px)</th>
+                <td>이미지의 블러 효과를 설정합니다.</td>
+            </tr>
+            <tr>
+                <th>brightness(%)</th>
+                <td>이미지의 밝고 어두움 정도를 설정합니다.</td>
+            </tr>
+            <tr>
+                <th>contrast(%)</th>
+                <td>이미지의 대비를 설정합니다.</td>
+            </tr>
+            <tr>
+                <th>drop-shadow()</th>
+                <td>이미지의 그림자를 설정합니다.</td>
+            </tr>
+            <tr>
+                <th>grayscale(%)</th>
+                <td>이미지의 그레이스케일를 설정합니다.</td>
+            </tr>
+            <tr>
+                <th>hue-rotate(deg)</th>
+                <td>이미지의 색조를 설정합니다.</td>
+            </tr>
+            <tr>
+                <th>invert(%)</th>
+                <td>이미지를 반전합니다.</td>
+            </tr>
+            <tr>
+                <th>opacity(%)</th>
+                <td>이미지의 투명도를 설정합니다.</td>
+            </tr>
+            <tr>
+                <th>saturate(%)</th>
+                <td>이미지의 채도를 설정합니다.</td>
+            </tr>
+            <tr>
+                <th>sepia(%)</th>
+                <td>이미지의 세피아 효과를 설정합니다.</td>
+            </tr>
+            <tr>
+                <th>url()</th>
+                <td>이미지의 경로를 설정합니다.</td>
+            </tr>
+            <tr>
+                <th>inherit</th>
+                <td>상위 요소의 속성 값을 상속받습니다.</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<style>
+.filter-box {overflow: hidden;}
+.filter-box img {width: 20%; display: block; float: left; border-radius: 0;}
+.filter-box.blur img:nth-child(1) {filter: blur(0)}
+.filter-box.blur img:nth-child(2) {filter: blur(1px)}
+.filter-box.blur img:nth-child(3) {filter: blur(3px)}
+.filter-box.blur img:nth-child(4) {filter: blur(5px)}
+.filter-box.blur img:nth-child(5) {filter: blur(10px)}
+
+.filter-box.brightness img:nth-child(1) {filter: brightness(100%)}
+.filter-box.brightness img:nth-child(2) {filter: brightness(75%)}
+.filter-box.brightness img:nth-child(3) {filter: brightness(50%)}
+.filter-box.brightness img:nth-child(4) {filter: brightness(25%)}
+.filter-box.brightness img:nth-child(5) {filter: brightness(0%)}
+
+.filter-box.contrast img:nth-child(1) {filter: contrast(100%)}
+.filter-box.contrast img:nth-child(2) {filter: contrast(75%)}
+.filter-box.contrast img:nth-child(3) {filter: contrast(50%)}
+.filter-box.contrast img:nth-child(4) {filter: contrast(25%)}
+.filter-box.contrast img:nth-child(5) {filter: contrast(0%)}
+
+.filter-box.grayscale img:nth-child(1) {filter: grayscale(0%)}
+.filter-box.grayscale img:nth-child(2) {filter: grayscale(25%)}
+.filter-box.grayscale img:nth-child(3) {filter: grayscale(50%)}
+.filter-box.grayscale img:nth-child(4) {filter: grayscale(75%)}
+.filter-box.grayscale img:nth-child(5) {filter: grayscale(100%)}
+
+.filter-box.hue-rotate img:nth-child(1) {filter: hue-rotate(0deg)}
+.filter-box.hue-rotate img:nth-child(2) {filter: hue-rotate(30deg)}
+.filter-box.hue-rotate img:nth-child(3) {filter: hue-rotate(60deg)}
+.filter-box.hue-rotate img:nth-child(4) {filter: hue-rotate(90deg)}
+.filter-box.hue-rotate img:nth-child(5) {filter: hue-rotate(120deg)}
+
+.filter-box.invert img:nth-child(1) {filter: invert(0%)}
+.filter-box.invert img:nth-child(2) {filter: invert(25%)}
+.filter-box.invert img:nth-child(3) {filter: invert(50%)}
+.filter-box.invert img:nth-child(4) {filter: invert(75%)}
+.filter-box.invert img:nth-child(5) {filter: invert(100%)}
+
+.filter-box.opacity img:nth-child(1) {filter: opacity(100%)}
+.filter-box.opacity img:nth-child(2) {filter: opacity(75%)}
+.filter-box.opacity img:nth-child(3) {filter: opacity(50%)}
+.filter-box.opacity img:nth-child(4) {filter: opacity(25%)}
+.filter-box.opacity img:nth-child(5) {filter: opacity(0%)}
+
+.filter-box.saturate img:nth-child(1) {filter: saturate(0%)}
+.filter-box.saturate img:nth-child(2) {filter: saturate(50%)}
+.filter-box.saturate img:nth-child(3) {filter: saturate(100%)}
+.filter-box.saturate img:nth-child(4) {filter: saturate(150%)}
+.filter-box.saturate img:nth-child(5) {filter: saturate(200%)}
+
+.filter-box.sepia img:nth-child(1) {filter: sepia(0%)}
+.filter-box.sepia img:nth-child(2) {filter: sepia(20%)}
+.filter-box.sepia img:nth-child(3) {filter: sepia(60%)}
+.filter-box.sepia img:nth-child(4) {filter: sepia(100%)}
+.filter-box.sepia img:nth-child(5) {filter: sepia(140%)}
+
+.filter-box.drop-shadow img:nth-child(1) {filter: drop-shadow(0px 0px 0px black)}
+.filter-box.drop-shadow img:nth-child(2) {filter: drop-shadow(2px 2px 2px black)}
+.filter-box.drop-shadow img:nth-child(3) {filter: drop-shadow(4px 4px 4px black)}
+.filter-box.drop-shadow img:nth-child(4) {filter: drop-shadow(6px 6px 6px black)}
+.filter-box.drop-shadow img:nth-child(5) {filter: drop-shadow(8px 8px 8px black)}
+
+.sampleView.drop img {margin: 2%; width: 16%}
+
+.sampleOption a {
+    width: 41px; height: 41px;
+    border-radius: 50%;
+    display: inline-block;
+    text-align: center;
+    line-height: 41px;
+    background-position: center;
+    background-size: cover;
+}
+.sampleOption a:nth-child(1){background-image: url(https://tistory1.daumcdn.net/tistory/2933724/skin/images/hover04.jpg);}
+.sampleOption a:nth-child(2){background-image: url(https://tistory1.daumcdn.net/tistory/2933724/skin/images/hover05.jpg);}
+.sampleOption a:nth-child(3){background-image: url(https://tistory1.daumcdn.net/tistory/2933724/skin/images/hover06.jpg);}
+.sampleOption a:nth-child(4){background-image: url(https://tistory1.daumcdn.net/tistory/2933724/skin/images/hover07.jpg);}
+</style>
+  
+<!-- sample1 -->
+<h4 class="pt50">예제1(Sample)</h4>
+<div class="sample">
+    <h5>blur의 이미지 효과 예제입니다.</h5>
+    <div class="sampleView">
+        <!-- ex -->
+        <div class="filter-box">
+            <div class="box">
+                <img src="https://tistory1.daumcdn.net/tistory/2933724/skin/images/hover04.jpg" alt="fiter 효과">
+                <img src="https://tistory1.daumcdn.net/tistory/2933724/skin/images/hover04.jpg" alt="fiter 효과">
+                <img src="https://tistory1.daumcdn.net/tistory/2933724/skin/images/hover04.jpg" alt="fiter 효과">
+                <img src="https://tistory1.daumcdn.net/tistory/2933724/skin/images/hover04.jpg" alt="fiter 효과">
+                <img src="https://tistory1.daumcdn.net/tistory/2933724/skin/images/hover04.jpg" alt="fiter 효과">
+            </div>
+        </div>
+        <!-- ex -->
+    </div>
+    <div class="sampleBtn blur">
+        <a href="#">효과 없애기</a>
+        <a href="#" class="blur">효과 주기</a>
+    </div>
+    <div class="sampleOption">
+        <a href="#" data-value="hover04"></a>
+        <a href="#" data-value="hover05"></a>
+        <a href="#" data-value="hover06"></a>
+        <a href="#" data-value="hover07"></a>
+    </div>
+    <div class="sampleCode">
+        <div class="scMenu">
+            <div>HTML</div>
+            <div>CSS</div>
+            <div>SCRIPT</div>
+        </div>
+        <div class="scCont">
+            <div>
+<pre class="line-numbers"><code class="language-markup">&lt;div class="filter-box"&gt;
+    &lt;div class="box"&gt;
+        &lt;img src="../images/hover04.jpg" alt="fiter 효과"&gt;
+        &lt;img src="../images/hover04.jpg" alt="fiter 효과"&gt;
+        &lt;img src="../images/hover04.jpg" alt="fiter 효과"&gt;
+        &lt;img src="../images/hover04.jpg" alt="fiter 효과"&gt;
+        &lt;img src="../images/hover04.jpg" alt="fiter 효과"&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+            </div>
+            <div>
+<pre class="line-numbers"><code class="language-css">img:nth-child(1) {filter: blur(0)}
+img:nth-child(2) {filter: blur(1px)}
+img:nth-child(3) {filter: blur(3px)}
+img:nth-child(4) {filter: blur(5px)}
+img:nth-child(5) {filter: blur(10px)}
+</code></pre>
+            </div>
+            <div>
+<pre class="line-numbers"><code class="language-script">//Javascript none
+</code></pre>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- //sample1 -->
+
+<!-- sample2 -->
+<h4 class="pt50">예제2(Sample)</h4>
+<div class="sample">
+    <h5>brightness의 이미지 효과 예제입니다.</h5>
+    <div class="sampleView">
+        <!-- ex -->
+        <div class="filter-box">
+            <div class="box">
+                <img src="https://tistory1.daumcdn.net/tistory/2933724/skin/images/hover05.jpg" alt="fiter 효과">
+                <img src="https://tistory1.daumcdn.net/tistory/2933724/skin/images/hover05.jpg" alt="fiter 효과">
+                <img src="https://tistory1.daumcdn.net/tistory/2933724/skin/images/hover05.jpg" alt="fiter 효과">
+                <img src="https://tistory1.daumcdn.net/tistory/2933724/skin/images/hover05.jpg" alt="fiter 효과">
+                <img src="https://tistory1.daumcdn.net/tistory/2933724/skin/images/hover05.jpg" alt="fiter 효과">
+            </div>
+        </div>
+        <!-- ex -->
+    </div>
+    <div class="sampleBtn brightness">
+        <a href="#">효과 없애기</a>
+        <a href="#" class="brightness">효과 주기</a>
+    </div>
+    <div class="sampleOption">
+        <a href="#" data-value="hover04"></a>
+        <a href="#" data-value="hover05"></a>
+        <a href="#" data-value="hover06"></a>
+        <a href="#" data-value="hover07"></a>
+    </div>
+    <div class="sampleCode">
+        <div class="scMenu">
+            <div>HTML</div>
+            <div>CSS</div>
+            <div>SCRIPT</div>
+        </div>
+        <div class="scCont">
+            <div>
+<pre class="line-numbers"><code class="language-markup">&lt;div class="filter-box"&gt;
+    &lt;div class="box"&gt;
+        &lt;img src="../images/hover04.jpg" alt="fiter 효과"&gt;
+        &lt;img src="../images/hover04.jpg" alt="fiter 효과"&gt;
+        &lt;img src="../images/hover04.jpg" alt="fiter 효과"&gt;
+        &lt;img src="../images/hover04.jpg" alt="fiter 효과"&gt;
+        &lt;img src="../images/hover04.jpg" alt="fiter 효과"&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+            </div>
+            <div>
+<pre class="line-numbers"><code class="language-css">img:nth-child(1) {filter: brightness(100%)}
+img:nth-child(2) {filter: brightness(75%)}
+img:nth-child(3) {filter: brightness(50%)}
+img:nth-child(4) {filter: brightness(25%)}
+img:nth-child(5) {filter: brightness(0%)}
+</code></pre>
+            </div>
+            <div>
+<pre class="line-numbers"><code class="language-script">//Javascript none
+</code></pre>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- //sample2 -->
+
+
+<!-- sample3 -->
+<h4 class="pt50">예제3(Sample)</h4>
+<div class="sample">
+    <h5>contrast 이미지 효과 예제입니다.</h5>
+    <div class="sampleView">
+        <!-- ex -->
+        <div class="filter-box">
+            <div class="box">
+                <img src="https://tistory1.daumcdn.net/tistory/2933724/skin/images/hover06.jpg" alt="fiter 효과">
+                <img src="https://tistory1.daumcdn.net/tistory/2933724/skin/images/hover06.jpg" alt="fiter 효과">
+                <img src="https://tistory1.daumcdn.net/tistory/2933724/skin/images/hover06.jpg" alt="fiter 효과">
+                <img src="https://tistory1.daumcdn.net/tistory/2933724/skin/images/hover06.jpg" alt="fiter 효과">
+                <img src="https://tistory1.daumcdn.net/tistory/2933724/skin/images/hover06.jpg" alt="fiter 효과">
+            </div>
+        </div>
+        <!-- ex -->
+    </div>
+    <div class="sampleBtn contrast">
+        <a href="#">효과 없애기</a>
+        <a href="#" class="contrast">효과 주기</a>
+    </div>
+    <div class="sampleOption">
+        <a href="#" data-value="hover04"></a>
+        <a href="#" data-value="hover05"></a>
+        <a href="#" data-value="hover06"></a>
+        <a href="#" data-value="hover07"></a>
+    </div>
+    <div class="sampleCode">
+        <div class="scMenu">
+            <div>HTML</div>
+            <div>CSS</div>
+            <div>SCRIPT</div>
+        </div>
+        <div class="scCont">
+            <div>
+<pre class="line-numbers"><code class="language-markup">&lt;div class="filter-box"&gt;
+    &lt;div class="box"&gt;
+        &lt;img src="../images/hover04.jpg" alt="fiter 효과"&gt;
+        &lt;img src="../images/hover04.jpg" alt="fiter 효과"&gt;
+        &lt;img src="../images/hover04.jpg" alt="fiter 효과"&gt;
+        &lt;img src="../images/hover04.jpg" alt="fiter 효과"&gt;
+        &lt;img src="../images/hover04.jpg" alt="fiter 효과"&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+            </div>
+            <div>
+<pre class="line-numbers"><code class="language-css">img:nth-child(1) {filter: contrast(100%)}
+img:nth-child(2) {filter: contrast(75%)}
+img:nth-child(3) {filter: contrast(50%)}
+img:nth-child(4) {filter: contrast(25%)}
+img:nth-child(5) {filter: contrast(0%)}
+</code></pre>
+            </div>
+            <div>
+<pre class="line-numbers"><code class="language-script">//Javascript none
+</code></pre>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- //sample3 -->
+
+
+<!-- sample4 -->
+<h4 class="pt50">예제4(Sample)</h4>
+<div class="sample">
+    <h5>grayscale 이미지 효과 예제입니다.</h5>
+    <div class="sampleView">
+        <!-- ex -->
+        <div class="filter-box">
+            <div class="box">
+                <img src="https://tistory1.daumcdn.net/tistory/2933724/skin/images/hover07.jpg" alt="fiter 효과">
+                <img src="https://tistory1.daumcdn.net/tistory/2933724/skin/images/hover07.jpg" alt="fiter 효과">
+                <img src="https://tistory1.daumcdn.net/tistory/2933724/skin/images/hover07.jpg" alt="fiter 효과">
+                <img src="https://tistory1.daumcdn.net/tistory/2933724/skin/images/hover07.jpg" alt="fiter 효과">
+                <img src="https://tistory1.daumcdn.net/tistory/2933724/skin/images/hover07.jpg" alt="fiter 효과">
+            </div>
+        </div>
+        <!-- ex -->
+    </div>
+    <div class="sampleBtn grayscale">
+        <a href="#">효과 없애기</a>
+        <a href="#" class="grayscale">효과 주기</a>
+    </div>
+    <div class="sampleOption">
+        <a href="#" data-value="hover04"></a>
+        <a href="#" data-value="hover05"></a>
+        <a href="#" data-value="hover06"></a>
+        <a href="#" data-value="hover07"></a>
+    </div>
+    <div class="sampleCode">
+        <div class="scMenu">
+            <div>HTML</div>
+            <div>CSS</div>
+            <div>SCRIPT</div>
+        </div>
+        <div class="scCont">
+            <div>
+<pre class="line-numbers"><code class="language-markup">&lt;div class="filter-box"&gt;
+    &lt;div class="box"&gt;
+        &lt;img src="../images/hover04.jpg" alt="fiter 효과"&gt;
+        &lt;img src="../images/hover04.jpg" alt="fiter 효과"&gt;
+        &lt;img src="../images/hover04.jpg" alt="fiter 효과"&gt;
+        &lt;img src="../images/hover04.jpg" alt="fiter 효과"&gt;
+        &lt;img src="../images/hover04.jpg" alt="fiter 효과"&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+            </div>
+            <div>
+<pre class="line-numbers"><code class="language-css">img:nth-child(1) {filter: grayscale(0%)}
+img:nth-child(2) {filter: grayscale(25%)}
+img:nth-child(3) {filter: grayscale(50%)}
+img:nth-child(4) {filter: grayscale(75%)}
+img:nth-child(5) {filter: grayscale(100%)}
+</code></pre>
+            </div>
+            <div>
+<pre class="line-numbers"><code class="language-script">//Javascript none
+</code></pre>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- //sample4 -->
+
+
+<!-- sample5 -->
+<h4 class="pt50">예제5(Sample)</h4>
+<div class="sample">
+    <h5>hue-rotate 이미지 효과 예제입니다.</h5>
+    <div class="sampleView">
+        <!-- ex -->
+        <div class="filter-box">
+            <div class="box">
+                <img src="https://tistory1.daumcdn.net/tistory/2933724/skin/images/hover08.jpg" alt="fiter 효과">
+                <img src="https://tistory1.daumcdn.net/tistory/2933724/skin/images/hover08.jpg" alt="fiter 효과">
+                <img src="https://tistory1.daumcdn.net/tistory/2933724/skin/images/hover08.jpg" alt="fiter 효과">
+                <img src="https://tistory1.daumcdn.net/tistory/2933724/skin/images/hover08.jpg" alt="fiter 효과">
+                <img src="https://tistory1.daumcdn.net/tistory/2933724/skin/images/hover08.jpg" alt="fiter 효과">
+            </div>
+        </div>
+        <!-- ex -->
+    </div>
+    <div class="sampleBtn hue-rotate">
+        <a href="#">효과 없애기</a>
+        <a href="#" class="hue-rotate">효과 주기</a>
+    </div>
+    <div class="sampleOption">
+        <a href="#" data-value="hover04"></a>
+        <a href="#" data-value="hover05"></a>
+        <a href="#" data-value="hover06"></a>
+        <a href="#" data-value="hover07"></a>
+    </div>
+    <div class="sampleCode">
+        <div class="scMenu">
+            <div>HTML</div>
+            <div>CSS</div>
+            <div>SCRIPT</div>
+        </div>
+        <div class="scCont">
+            <div>
+<pre class="line-numbers"><code class="language-markup">&lt;div class="filter-box"&gt;
+    &lt;div class="box"&gt;
+        &lt;img src="../images/hover04.jpg" alt="fiter 효과"&gt;
+        &lt;img src="../images/hover04.jpg" alt="fiter 효과"&gt;
+        &lt;img src="../images/hover04.jpg" alt="fiter 효과"&gt;
+        &lt;img src="../images/hover04.jpg" alt="fiter 효과"&gt;
+        &lt;img src="../images/hover04.jpg" alt="fiter 효과"&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+            </div>
+            <div>
+<pre class="line-numbers"><code class="language-css">img:nth-child(1) {filter: hue-rotate(0deg)}
+img:nth-child(2) {filter: hue-rotate(30deg)}
+img:nth-child(3) {filter: hue-rotate(60deg)}
+img:nth-child(4) {filter: hue-rotate(90deg)}
+img:nth-child(5) {filter: hue-rotate(12deg)}
+</code></pre>
+            </div>
+            <div>
+<pre class="line-numbers"><code class="language-script">//Javascript none
+</code></pre>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- //sample5 -->
+
+
+
+
+
+
+<!-- sample6 -->
+<h4 class="pt50">예제6(Sample)</h4>
+<div class="sample">
+    <h5>invert 이미지 효과 예제입니다.</h5>
+    <div class="sampleView">
+        <!-- ex -->
+        <div class="filter-box">
+            <div class="box">
+                <img src="https://tistory1.daumcdn.net/tistory/2933724/skin/images/hover09.jpg" alt="fiter 효과">
+                <img src="https://tistory1.daumcdn.net/tistory/2933724/skin/images/hover09.jpg" alt="fiter 효과">
+                <img src="https://tistory1.daumcdn.net/tistory/2933724/skin/images/hover09.jpg" alt="fiter 효과">
+                <img src="https://tistory1.daumcdn.net/tistory/2933724/skin/images/hover09.jpg" alt="fiter 효과">
+                <img src="https://tistory1.daumcdn.net/tistory/2933724/skin/images/hover09.jpg" alt="fiter 효과">
+            </div>
+        </div>
+        <!-- ex -->
+    </div>
+    <div class="sampleBtn invert">
+        <a href="#">효과 없애기</a>
+        <a href="#" class="invert">효과 주기</a>
+    </div>
+    <div class="sampleOption">
+        <a href="#" data-value="hover04"></a>
+        <a href="#" data-value="hover05"></a>
+        <a href="#" data-value="hover06"></a>
+        <a href="#" data-value="hover07"></a>
+    </div>
+    <div class="sampleCode">
+        <div class="scMenu">
+            <div>HTML</div>
+            <div>CSS</div>
+            <div>SCRIPT</div>
+        </div>
+        <div class="scCont">
+            <div>
+<pre class="line-numbers"><code class="language-markup">&lt;div class="filter-box"&gt;
+    &lt;div class="box"&gt;
+        &lt;img src="../images/hover04.jpg" alt="fiter 효과"&gt;
+        &lt;img src="../images/hover04.jpg" alt="fiter 효과"&gt;
+        &lt;img src="../images/hover04.jpg" alt="fiter 효과"&gt;
+        &lt;img src="../images/hover04.jpg" alt="fiter 효과"&gt;
+        &lt;img src="../images/hover04.jpg" alt="fiter 효과"&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+            </div>
+            <div>
+<pre class="line-numbers"><code class="language-css">img:nth-child(1) {filter: invert(0%)}
+img:nth-child(2) {filter: invert(25%)}
+img:nth-child(3) {filter: invert(50%)}
+img:nth-child(4) {filter: invert(75%)}
+img:nth-child(5) {filter: invert(100%)}
+</code></pre>
+            </div>
+            <div>
+<pre class="line-numbers"><code class="language-script">//Javascript none
+</code></pre>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- //sample6 -->
+
+
+
+
+
+<!-- sample7 -->
+<h4 class="pt50">예제7(Sample)</h4>
+<div class="sample">
+    <h5>opacity 이미지 효과 예제입니다.</h5>
+    <div class="sampleView">
+        <!-- ex -->
+        <div class="filter-box">
+            <div class="box">
+                <img src="https://tistory1.daumcdn.net/tistory/2933724/skin/images/hover10.jpg" alt="fiter 효과">
+                <img src="https://tistory1.daumcdn.net/tistory/2933724/skin/images/hover10.jpg" alt="fiter 효과">
+                <img src="https://tistory1.daumcdn.net/tistory/2933724/skin/images/hover10.jpg" alt="fiter 효과">
+                <img src="https://tistory1.daumcdn.net/tistory/2933724/skin/images/hover10.jpg" alt="fiter 효과">
+                <img src="https://tistory1.daumcdn.net/tistory/2933724/skin/images/hover10.jpg" alt="fiter 효과">
+            </div>
+        </div>
+        <!-- ex -->
+    </div>
+    <div class="sampleBtn opacity">
+        <a href="#">효과 없애기</a>
+        <a href="#" class="opacity">효과 주기</a>
+    </div>
+    <div class="sampleOption">
+        <a href="#" data-value="hover04"></a>
+        <a href="#" data-value="hover05"></a>
+        <a href="#" data-value="hover06"></a>
+        <a href="#" data-value="hover07"></a>
+    </div>
+    <div class="sampleCode">
+        <div class="scMenu">
+            <div>HTML</div>
+            <div>CSS</div>
+            <div>SCRIPT</div>
+        </div>
+        <div class="scCont">
+            <div>
+<pre class="line-numbers"><code class="language-markup">&lt;div class="filter-box"&gt;
+    &lt;div class="box"&gt;
+        &lt;img src="../images/hover04.jpg" alt="fiter 효과"&gt;
+        &lt;img src="../images/hover04.jpg" alt="fiter 효과"&gt;
+        &lt;img src="../images/hover04.jpg" alt="fiter 효과"&gt;
+        &lt;img src="../images/hover04.jpg" alt="fiter 효과"&gt;
+        &lt;img src="../images/hover04.jpg" alt="fiter 효과"&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+            </div>
+            <div>
+<pre class="line-numbers"><code class="language-css">img:nth-child(1) {filter: opacity(100%)}
+img:nth-child(2) {filter: opacity(75%)}
+img:nth-child(3) {filter: opacity(50%)}
+img:nth-child(4) {filter: opacity(25%)}
+img:nth-child(5) {filter: opacity(0%)}
+</code></pre>
+            </div>
+            <div>
+<pre class="line-numbers"><code class="language-script">//Javascript none
+</code></pre>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- //sample7 -->
+
+
+
+
+
+<!-- sample8 -->
+<h4 class="pt50">예제8(Sample)</h4>
+<div class="sample">
+    <h5>saturate 이미지 효과 예제입니다.</h5>
+    <div class="sampleView">
+        <!-- ex -->
+        <div class="filter-box">
+            <div class="box">
+                <img src="https://tistory1.daumcdn.net/tistory/2933724/skin/images/hover11.jpg" alt="fiter 효과">
+                <img src="https://tistory1.daumcdn.net/tistory/2933724/skin/images/hover11.jpg" alt="fiter 효과">
+                <img src="https://tistory1.daumcdn.net/tistory/2933724/skin/images/hover11.jpg" alt="fiter 효과">
+                <img src="https://tistory1.daumcdn.net/tistory/2933724/skin/images/hover11.jpg" alt="fiter 효과">
+                <img src="https://tistory1.daumcdn.net/tistory/2933724/skin/images/hover11.jpg" alt="fiter 효과">
+            </div>
+        </div>
+        <!-- ex -->
+    </div>
+    <div class="sampleBtn saturate">
+        <a href="#">효과 없애기</a>
+        <a href="#" class="saturate">효과 주기</a>
+    </div>
+    <div class="sampleOption">
+        <a href="#" data-value="hover04"></a>
+        <a href="#" data-value="hover05"></a>
+        <a href="#" data-value="hover06"></a>
+        <a href="#" data-value="hover07"></a>
+    </div>
+    <div class="sampleCode">
+        <div class="scMenu">
+            <div>HTML</div>
+            <div>CSS</div>
+            <div>SCRIPT</div>
+        </div>
+        <div class="scCont">
+            <div>
+<pre class="line-numbers"><code class="language-markup">&lt;div class="filter-box"&gt;
+    &lt;div class="box"&gt;
+        &lt;img src="../images/hover04.jpg" alt="fiter 효과"&gt;
+        &lt;img src="../images/hover04.jpg" alt="fiter 효과"&gt;
+        &lt;img src="../images/hover04.jpg" alt="fiter 효과"&gt;
+        &lt;img src="../images/hover04.jpg" alt="fiter 효과"&gt;
+        &lt;img src="../images/hover04.jpg" alt="fiter 효과"&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+            </div>
+            <div>
+<pre class="line-numbers"><code class="language-css">img:nth-child(1) {filter: saturate(0%)}
+img:nth-child(2) {filter: saturate(50%)}
+img:nth-child(3) {filter: saturate(100%)}
+img:nth-child(4) {filter: saturate(150%)}
+img:nth-child(5) {filter: saturate(200%)}
+</code></pre>
+            </div>
+            <div>
+<pre class="line-numbers"><code class="language-script">//Javascript none
+</code></pre>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- //sample8 -->
+
+
+
+<!-- sample9 -->
+<h4 class="pt50">예제9(Sample)</h4>
+<div class="sample">
+    <h5>sepia 이미지 효과 예제입니다.</h5>
+    <div class="sampleView">
+        <!-- ex -->
+        <div class="filter-box">
+            <div class="box">
+                <img src="https://tistory1.daumcdn.net/tistory/2933724/skin/images/hover12.jpg" alt="fiter 효과">
+                <img src="https://tistory1.daumcdn.net/tistory/2933724/skin/images/hover12.jpg" alt="fiter 효과">
+                <img src="https://tistory1.daumcdn.net/tistory/2933724/skin/images/hover12.jpg" alt="fiter 효과">
+                <img src="https://tistory1.daumcdn.net/tistory/2933724/skin/images/hover12.jpg" alt="fiter 효과">
+                <img src="https://tistory1.daumcdn.net/tistory/2933724/skin/images/hover12.jpg" alt="fiter 효과">
+            </div>
+        </div>
+        <!-- ex -->
+    </div>
+    <div class="sampleBtn sepia">
+        <a href="#">효과 없애기</a>
+        <a href="#" class="sepia">효과 주기</a>
+    </div>
+    <div class="sampleOption">
+        <a href="#" data-value="hover04"></a>
+        <a href="#" data-value="hover05"></a>
+        <a href="#" data-value="hover06"></a>
+        <a href="#" data-value="hover07"></a>
+    </div>
+    <div class="sampleCode">
+        <div class="scMenu">
+            <div>HTML</div>
+            <div>CSS</div>
+            <div>SCRIPT</div>
+        </div>
+        <div class="scCont">
+            <div>
+<pre class="line-numbers"><code class="language-markup">&lt;div class="filter-box"&gt;
+    &lt;div class="box"&gt;
+        &lt;img src="../images/hover04.jpg" alt="fiter 효과"&gt;
+        &lt;img src="../images/hover04.jpg" alt="fiter 효과"&gt;
+        &lt;img src="../images/hover04.jpg" alt="fiter 효과"&gt;
+        &lt;img src="../images/hover04.jpg" alt="fiter 효과"&gt;
+        &lt;img src="../images/hover04.jpg" alt="fiter 효과"&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+            </div>
+            <div>
+<pre class="line-numbers"><code class="language-css">img:nth-child(1) {filter: sepia(0%)}
+img:nth-child(2) {filter: sepia(20%)}
+img:nth-child(3) {filter: sepia(60%)}
+img:nth-child(4) {filter: sepia(100%)}
+img:nth-child(5) {filter: sepia(140%)}
+</code></pre>
+            </div>
+            <div>
+<pre class="line-numbers"><code class="language-script">//Javascript none
+</code></pre>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- //sample9 -->
+
+<!-- sample10 -->
+<h4 class="pt50">예제10(Sample)</h4>
+<div class="sample">
+    <h5>drop-shadow 이미지 효과 예제입니다.</h5>
+    <div class="sampleView drop">
+        <!-- ex -->
+        <div class="filter-box">
+            <div class="box">
+                <img src="https://tistory1.daumcdn.net/tistory/2933724/skin/images/hover13.jpg" alt="fiter 효과">
+                <img src="https://tistory1.daumcdn.net/tistory/2933724/skin/images/hover13.jpg" alt="fiter 효과">
+                <img src="https://tistory1.daumcdn.net/tistory/2933724/skin/images/hover13.jpg" alt="fiter 효과">
+                <img src="https://tistory1.daumcdn.net/tistory/2933724/skin/images/hover13.jpg" alt="fiter 효과">
+                <img src="https://tistory1.daumcdn.net/tistory/2933724/skin/images/hover13.jpg" alt="fiter 효과">
+            </div>
+        </div>
+        <!-- ex -->
+    </div>
+    <div class="sampleBtn drop-shadow">
+        <a href="#">효과 없애기</a>
+        <a href="#" class="drop-shadow">효과 주기</a>
+    </div>
+    <div class="sampleOption">
+        <a href="#" data-value="hover04"></a>
+        <a href="#" data-value="hover05"></a>
+        <a href="#" data-value="hover06"></a>
+        <a href="#" data-value="hover07"></a>
+    </div>
+    <div class="sampleCode">
+        <div class="scMenu">
+            <div>HTML</div>
+            <div>CSS</div>
+            <div>SCRIPT</div>
+        </div>
+        <div class="scCont">
+            <div>
+<pre class="line-numbers"><code class="language-markup">&lt;div class="filter-box"&gt;
+    &lt;div class="box"&gt;
+        &lt;img src="../images/hover04.jpg" alt="fiter 효과"&gt;
+        &lt;img src="../images/hover04.jpg" alt="fiter 효과"&gt;
+        &lt;img src="../images/hover04.jpg" alt="fiter 효과"&gt;
+        &lt;img src="../images/hover04.jpg" alt="fiter 효과"&gt;
+        &lt;img src="../images/hover04.jpg" alt="fiter 효과"&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+            </div>
+            <div>
+<pre class="line-numbers"><code class="language-css">img:nth-child(1) {filter: drop-shadow(0px 0px 0px black)}
+img:nth-child(2) {filter: drop-shadow(2px 2px 2px black)}
+img:nth-child(3) {filter: drop-shadow(4px 4px 4px black)}
+img:nth-child(4) {filter: drop-shadow(6px 6px 6px black)}
+img:nth-child(5) {filter: drop-shadow(8px 8px 8px black)}
+</code></pre>
+            </div>
+            <div>
+<pre class="line-numbers"><code class="language-script">//Javascript none
+</code></pre>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- //sample10 -->
+
+
+<script>
+    $(".sampleBtn.blur a").eq(0).click(function (e) {
+        e.preventDefault();
+        $(this).parent().prev().children().removeClass().addClass("filter-box");
+    });
+    $(".sampleBtn.blur a").eq(1).click(function (e) {
+        e.preventDefault();
+        var cla = $(this).attr("class");
+        $(this).parent().prev().children().addClass(cla);
+    });
+    $(".sampleBtn.brightness a").eq(0).click(function (e) {
+        e.preventDefault();
+        $(this).parent().prev().children().removeClass().addClass("filter-box");
+    });
+    $(".sampleBtn.brightness a").eq(1).click(function (e) {
+        e.preventDefault();
+        var cla = $(this).attr("class");
+        $(this).parent().prev().children().addClass(cla);
+    });
+    $(".sampleBtn.contrast a").eq(0).click(function (e) {
+        e.preventDefault();
+        $(this).parent().prev().children().removeClass().addClass("filter-box");
+    });
+    $(".sampleBtn.contrast a").eq(1).click(function (e) {
+        e.preventDefault();
+        var cla = $(this).attr("class");
+        $(this).parent().prev().children().addClass(cla);
+    });
+    $(".sampleBtn.grayscale a").eq(0).click(function (e) {
+        e.preventDefault();
+        $(this).parent().prev().children().removeClass().addClass("filter-box");
+    });
+    $(".sampleBtn.grayscale a").eq(1).click(function (e) {
+        e.preventDefault();
+        var cla = $(this).attr("class");
+        $(this).parent().prev().children().addClass(cla);
+    });
+    $(".sampleBtn.hue-rotate a").eq(0).click(function (e) {
+        e.preventDefault();
+        $(this).parent().prev().children().removeClass().addClass("filter-box");
+    });
+    $(".sampleBtn.hue-rotate a").eq(1).click(function (e) {
+        e.preventDefault();
+        var cla = $(this).attr("class");
+        $(this).parent().prev().children().addClass(cla);
+    });
+    $(".sampleBtn.invert a").eq(0).click(function (e) {
+        e.preventDefault();
+        $(this).parent().prev().children().removeClass().addClass("filter-box");
+    });
+    $(".sampleBtn.invert a").eq(1).click(function (e) {
+        e.preventDefault();
+        var cla = $(this).attr("class");
+        $(this).parent().prev().children().addClass(cla);
+    });
+    $(".sampleBtn.opacity a").eq(0).click(function (e) {
+        e.preventDefault();
+        $(this).parent().prev().children().removeClass().addClass("filter-box");
+    });
+    $(".sampleBtn.opacity a").eq(1).click(function (e) {
+        e.preventDefault();
+        var cla = $(this).attr("class");
+        $(this).parent().prev().children().addClass(cla);
+    });
+    $(".sampleBtn.saturate a").eq(0).click(function (e) {
+        e.preventDefault();
+        $(this).parent().prev().children().removeClass().addClass("filter-box");
+    });
+    $(".sampleBtn.saturate a").eq(1).click(function (e) {
+        e.preventDefault();
+        var cla = $(this).attr("class");
+        $(this).parent().prev().children().addClass(cla);
+    });
+    $(".sampleBtn.sepia a").eq(0).click(function (e) {
+        e.preventDefault();
+        $(this).parent().prev().children().removeClass().addClass("filter-box");
+    });
+    $(".sampleBtn.sepia a").eq(1).click(function (e) {
+        e.preventDefault();
+        var cla = $(this).attr("class");
+        $(this).parent().prev().children().addClass(cla);
+    });
+    $(".sampleBtn.drop-shadow a").eq(0).click(function (e) {
+        e.preventDefault();
+        $(this).parent().prev().children().removeClass().addClass("filter-box");
+    });
+    $(".sampleBtn.drop-shadow a").eq(1).click(function (e) {
+        e.preventDefault();
+        var cla = $(this).attr("class");
+        $(this).parent().prev().children().addClass(cla);
+    });
+    
+    $(".sampleOption a").click(function (e) {
+        e.preventDefault();
+        var attr = $(this).attr("data-value");
+        $(".sampleView > div").removeClass().addClass("filter-box");
+        $(this).parent().prev().prev().children().children().children().attr("src","https://tistory1.daumcdn.net/tistory/2933724/skin/images/"+attr+".jpg");
+    });
+</script>
+
+  
+  
+<h4 class="pt50"><a href="http://webzz.tistory.com/227">호환성(Compatibility)</a></h4>
+<div class="table-responsive">
+    <table class="table table-bordered table-striped table-hover compatibility">
+        <colgroup>
+            <col style="width:20%" />
+        </colgroup>
+        <thead>
+            <tr>
+                <th></th>
+                <th scope="col"><img src="https://tistory1.daumcdn.net/tistory/2933724/skin/images/icon-chrome1.png" alt="크롬 아이콘" title="크롬 브라우저"></th>
+                <th scope="col"><img src="https://tistory3.daumcdn.net/tistory/2933724/skin/images/icon-firefox1.png" alt="파이어폭스 아이콘" title="파이어폭스 브라우저"></th>
+                <th scope="col"><img src="https://tistory1.daumcdn.net/tistory/2933724/skin/images/icon-safari1.png" alt="사파리 아이콘" title="사파리 브라우저"></th>
+                <th scope="col"><img src="https://tistory3.daumcdn.net/tistory/2933724/skin/images/icon-opera1.png" alt="오페라 아이콘" title="오페라 브라우저"></th>
+                <th scope="col"><img src="https://tistory1.daumcdn.net/tistory/2933724/skin/images/icon-whale1.png" alt="네이버 웨일" title="네이버 웨일 브라우저"></th>
+                <th scope="col"><img src="https://tistory4.daumcdn.net/tistory/2933724/skin/images/icon-ie6.png" alt="익스플로러6 아이콘" title="인터넷 익스플로러6 브라우저"><em>6</em></th>
+                <th scope="col"><img src="https://tistory2.daumcdn.net/tistory/2933724/skin/images/icon-ie7.png" alt="익스플로러7 아이콘" title="인터넷 익스플로러7 브라우저"><em>7</em></th>
+                <th scope="col"><img src="https://tistory2.daumcdn.net/tistory/2933724/skin/images/icon-ie7.png" alt="익스플로러8 아이콘" title="인터넷 익스플로러8 브라우저"><em>8</em></th>
+                <th scope="col"><img src="https://tistory2.daumcdn.net/tistory/2933724/skin/images/icon-ie9.png" alt="익스플로러9 아이콘" title="인터넷 익스플로러9 브라우저"><em>9</em></th>
+                <th scope="col"><img src="https://tistory2.daumcdn.net/tistory/2933724/skin/images/icon-ie10.png" alt="익스플로러10 아이콘" title="인터넷 익스플로러10 브라우저"><em>10</em></th>
+                <th scope="col"><img src="https://tistory2.daumcdn.net/tistory/2933724/skin/images/icon-ie11.png" alt="익스플로러11 아이콘" title="인터넷 익스플로러11 브라우저"><em>11</em></th>
+                <th scope="col"><img src="https://tistory1.daumcdn.net/tistory/2933724/skin/images/icon-edge.png" alt="엣지 아이콘" title="엣지 브라우저"></th>
+                <th scope="col"><img src="https://tistory2.daumcdn.net/tistory/2933724/skin/images/icon-android.png" alt="안드로이드 아이콘" title="모바일 안드로이드 브라우저"></th>
+                <th scope="col"><img src="https://tistory2.daumcdn.net/tistory/2933724/skin/images/icon-ios.png" alt="ios 아이콘" title="모바일 아이폰 브라우저"></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td scope="row" class="ce">filter</td>
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 크롬 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 파이어폭스 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 사파리 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 오페라 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 네이버 -->
+                <td class="no"><span title="사용 할 수 없습니다.">사용안됨</span></td><!-- 익스플로러6 -->
+                <td class="no"><span title="사용 할 수 없습니다.">사용안됨</span></td><!-- 익스플로러7 -->
+                <td class="no"><span title="사용 할 수 없습니다.">사용안됨</span></td><!-- 익스플로러8 -->
+                <td class="no"><span title="사용 할 수 없습니다.">사용안됨</span></td><!-- 익스플로러9 -->
+                <td class="no"><span title="사용 할 수 없습니다.">사용안됨</span></td><!-- 익스플로러10 -->
+                <td class="no"><span title="사용 할 수 없습니다.">사용안됨</span></td><!-- 익스플로러11 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 엣지 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 안드로이드 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- IOS -->
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<h4 class="pt30">참고 사이트(Reference)</h4>
+<ul>
+    <li><a href="https://developer.mozilla.org/ko/docs/Web/CSS/filter">MDN</a></li>
+    <li><a href="https://drafts.fxtf.org/filter-effects/#FilterProperty">w3</a></li>
+</ul>
+
+<hr>

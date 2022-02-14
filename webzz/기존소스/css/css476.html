@@ -1,0 +1,280 @@
+
+    
+
+<h2>grid-template-columns</h2>
+<p>grid-template-columns 속성은 가로 컬럼의 크기와 위치를 설정합니다.</p>
+
+<hr>
+
+<h3>grid-template-columns</h3>
+<p class="blue">grid-template-columns 속성은 가로 컬럼의 크기와 위치를 설정합니다.</p>
+
+<div class="table-responsive">
+    <table class="table table-bordered table-striped table-hover">
+        <colgroup>
+            <col width="width: 30%">
+            <col width="width: 70%">
+        </colgroup>
+        <thead>
+            <tr>
+                <th scope="col">특징</th>
+                <th scope="col">설명</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th scope="row"><a href="http://webzz.tistory.com/360">기본 값</a></th>
+                <td><a href="http://webzz.tistory.com/360">
+                    grid-template-columns : 0
+                </a></td>
+            </tr>
+            <tr>
+                <th scope="row"><a href="http://webzz.tistory.com/360">적용</a></th>
+                <td><a href="http://webzz.tistory.com/360">Grid</a></td>
+            </tr>
+            <tr>
+                <th scope="row"><a href="http://webzz.tistory.com/359">버전</a></th>
+                <td><a href="http://webzz.tistory.com/359">CSS3</a></td>
+            </tr>
+            <tr>
+                <th>사용성</th>
+                <td>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star-o" aria-hidden="true"></i>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<h4 class="pt50">정의(Definition)</h4>
+<ul>
+    <li>grid-template-columns 속성은 가로 컬럼의 크기와 위치를 설정합니다.</li>
+    <li>fr(fraction)은 유연한 공간을 의미하며, 그리드 컨테이너 내의 공간 비율을 나타냅니다.
+
+</ul>
+
+<h4 class="pt50">그리드와 관련된 속성(Grid Related Properties)</h4>
+<ul>
+    <li>grid 속성은 그리드 레이아웃 속성을 설정합니다.</li>
+    <li>grid-area 속성은</li>
+    <li>grid-auto-columns 속성은 </li>
+    <li>grid-auto-flow 속성은 </li>
+    <li>grid-auto-rows 속성은  </li>
+    <li>grid-column 속성은</li>
+    <li>grid-column-end 속성은</li>
+    <li>grid-column-gap 속성은</li>
+    <li>grid-column-start 속성은</li>
+    <li>grid-gap 속성은 컬럼의 간격을 설정합니다.</li>
+    <li>grid-row 속성은 </li>
+    <li>grid-row-end 속성은 </li>
+    <li>grid-row-gap 속성은 </li>
+    <li>grid-row-start 속성은  </li>
+    <li>grid-template 속성은 컬럼의 속성을 설정합니다.</li>
+    <li>grid-template-areas 속성은 컬럼의 영역을 설정합니다.</li>
+    <li>grid-template-columns 속성은 가로 컬럼의 크기와 위치를 설정합니다.</li>
+    <li>grid-template-rows 속성은 세로 컬럼의 크기와 위치를 설정합니다.</li>
+</ul>
+  
+   
+   
+<h4 class="pt50">문법(Syntax)</h4>
+<p class="blue">grid-template-columns: none | values</p>
+<p class="blue">
+    <!-- 속성 --><br>
+    grid-template-columns: none <br>
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;<br>
+    grid-template-columns: 1fr 1fr 1fr 1fr;<br>
+    grid-template-columns: 1fr 1fr 1fr;<br>
+    grid-template-columns: 1fr 1fr;<br>
+    grid-template-columns: 1fr 2fr;<br>
+    grid-template-columns: 1fr 2fr 3fr;<br>
+    grid-template-columns: 100px 100px 100px;<br>
+    grid-template-columns: 100px 2fr;<br>
+    grid-template-columns: 200px 100px auto;<br>
+    grid-template-columns: repeat(3, 1fr);<br>
+</p>
+
+
+<!-- <h4 class="pt50">속성(Property)</h4>
+<div class="table-responsive">
+    <table class="table table-bordered table-striped table-hover">
+        <colgroup>
+            <col width="width: 30%">
+            <col width="width: 70%">
+        </colgroup>
+        <thead>
+            <tr>
+                <th scope="col">속성값</th>
+                <th scope="col">설명</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th>-</th>
+                <td>-</td>
+            </tr>
+        </tbody>
+    </table>
+</div> -->
+
+<style>
+    /* start */
+
+    .sampleView .grid-box {
+        min-height: 200px;
+        counter-reset: items;
+    }
+    .sampleView .grid-box .column {
+        border-radius: 3px;
+        background-color: #a2cbfa;
+        border: 1px solid #4390e1;
+        box-sizing: border-box;
+        box-shadow: 0 2px 2px rgb(0 90 250 / 5%), 0 4px 4px rgb(0 90 250 / 5%), 0 8px 8px rgb(0 90 250 / 5%), 0 16px 16px rgb(0 90 250 / 5%);
+        color: #fff;
+        padding: 10px;
+    }
+    .sampleView .grid-box .column::before {
+        counter-increment: items;
+        content: counter(items);
+    }
+    @media (max-width: 800px) {
+        .sampleView .grid-box .column {
+            width: 50px;
+            height: 50px;
+        }
+    }
+    .sampleView .grid-box {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+        grid-gap: 10px;
+    }
+    .sampleView .grid-box .column {
+        min-width: 100px;
+        min-height: 100px;
+    }
+</style>
+<!-- sample1 -->
+<h4 class="pt50">예제1(Sample)</h4>
+<div class="sample">
+    <h5>가로 컬럼의 크기와 위치를 설정하는 예제입니다.</h5>
+    <div class="sampleView">
+        <!-- ex -->
+        <div class="grid-box">
+            <div class="column"></div>
+            <div class="column"></div>
+            <div class="column"></div>
+            <div class="column"></div>
+            <div class="column"></div>
+            <div class="column"></div>
+            <div class="column"></div>
+            <div class="column"></div>
+            <div class="column"></div>
+            <div class="column"></div>
+        </div>
+        <!-- ex -->
+    </div>
+    <div class="sampleBtn">
+        <a href="#">grid-template-columns: 1fr 1fr 1fr 1fr 1fr;</a>
+        <a href="#">grid-template-columns: 1fr 1fr 1fr 1fr;</a>
+        <a href="#">grid-template-columns: 1fr 1fr 1fr;</a>
+        <a href="#">grid-template-columns: 1fr 1fr;</a>
+        <a href="#">grid-template-columns: 1fr 2fr;</a>
+        <a href="#">grid-template-columns: 1fr 2fr 3fr;</a>
+        <a href="#">grid-template-columns: 100px 100px 100px;</a>
+        <a href="#">grid-template-columns: 100px 2fr;</a>
+        <a href="#">grid-template-columns: 200px 100px auto;</a>
+        <a href="#">grid-template-columns: repeat(3, 1fr);</a>
+    </div>
+    <div class="sampleOption">
+        <div class="option">
+            <span class="left">아이템</span>
+            <span class="right">
+                <i class="fa fa-plus-circle opt1" aria-hidden="true"></i>
+                <i class="fa fa-minus-circle opt1" aria-hidden="true"></i>
+            </span>
+        </div>
+    </div>
+</div>
+<!-- //sample1 -->
+<script>
+    $(".sampleBtn a").click(function (e) {
+        e.preventDefault();
+        var text = $(this).text();
+        $(this).parent().prev().children().attr("style", text);
+    });
+    $(".fa-plus-circle.opt1").click(function (e) {
+        e.preventDefault();
+        $(this).parent().parent().parent().prev().prev().children().append("<div class='column'></div>");
+    });
+    $(".fa-minus-circle.opt1").click(function (e) {
+        e.preventDefault();
+        $(this).parent().parent().parent().prev().prev().children().find(".column:last-child").remove();
+    });
+</script>
+
+
+
+
+
+<h4 class="pt50"><a href="http://webzz.tistory.com/227">호환성(Compatibility)</a></h4>
+<div class="table-responsive">
+    <table class="table table-bordered table-striped table-hover compatibility">
+        <colgroup>
+            <col style="width:20%" />
+        </colgroup>
+        <thead>
+            <tr>
+                <th></th>
+                <th scope="col"><img src="https://tistory1.daumcdn.net/tistory/2933724/skin/images/icon-chrome1.png" alt="크롬 아이콘" title="크롬 브라우저"></th>
+                <th scope="col"><img src="https://tistory3.daumcdn.net/tistory/2933724/skin/images/icon-firefox1.png" alt="파이어폭스 아이콘" title="파이어폭스 브라우저"></th>
+                <th scope="col"><img src="https://tistory1.daumcdn.net/tistory/2933724/skin/images/icon-safari1.png" alt="사파리 아이콘" title="사파리 브라우저"></th>
+                <th scope="col"><img src="https://tistory3.daumcdn.net/tistory/2933724/skin/images/icon-opera1.png" alt="오페라 아이콘" title="오페라 브라우저"></th>
+                <th scope="col"><img src="https://tistory1.daumcdn.net/tistory/2933724/skin/images/icon-whale1.png" alt="네이버 웨일" title="네이버 웨일 브라우저"></th>
+                <th scope="col"><img src="https://tistory4.daumcdn.net/tistory/2933724/skin/images/icon-ie6.png" alt="익스플로러6 아이콘" title="인터넷 익스플로러6 브라우저"><em>6</em></th>
+                <th scope="col"><img src="https://tistory2.daumcdn.net/tistory/2933724/skin/images/icon-ie7.png" alt="익스플로러7 아이콘" title="인터넷 익스플로러7 브라우저"><em>7</em></th>
+                <th scope="col"><img src="https://tistory2.daumcdn.net/tistory/2933724/skin/images/icon-ie7.png" alt="익스플로러8 아이콘" title="인터넷 익스플로러8 브라우저"><em>8</em></th>
+                <th scope="col"><img src="https://tistory2.daumcdn.net/tistory/2933724/skin/images/icon-ie9.png" alt="익스플로러9 아이콘" title="인터넷 익스플로러9 브라우저"><em>9</em></th>
+                <th scope="col"><img src="https://tistory2.daumcdn.net/tistory/2933724/skin/images/icon-ie10.png" alt="익스플로러10 아이콘" title="인터넷 익스플로러10 브라우저"><em>10</em></th>
+                <th scope="col"><img src="https://tistory2.daumcdn.net/tistory/2933724/skin/images/icon-ie11.png" alt="익스플로러11 아이콘" title="인터넷 익스플로러11 브라우저"><em>11</em></th>
+                <th scope="col"><img src="https://tistory1.daumcdn.net/tistory/2933724/skin/images/icon-edge.png" alt="엣지 아이콘" title="엣지 브라우저"></th>
+                <th scope="col"><img src="https://tistory2.daumcdn.net/tistory/2933724/skin/images/icon-android.png" alt="안드로이드 아이콘" title="모바일 안드로이드 브라우저"></th>
+                <th scope="col"><img src="https://tistory2.daumcdn.net/tistory/2933724/skin/images/icon-ios.png" alt="ios 아이콘" title="모바일 아이폰 브라우저"></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td scope="row" class="ce">grid-template-columns</td>
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 크롬 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 파이어폭스 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 사파리 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 오페라 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 네이버 -->
+                <td class="no"><span title="사용 할 수 없습니다.">사용안됨</span></td><!-- 익스플로러6 -->
+                <td class="no"><span title="사용 할 수 없습니다.">사용안됨</span></td><!-- 익스플로러7 -->
+                <td class="no"><span title="사용 할 수 없습니다.">사용안됨</span></td><!-- 익스플로러8 -->
+                <td class="no"><span title="사용 할 수 없습니다.">사용안됨</span></td><!-- 익스플로러9 -->
+                <td class="no"><span title="사용 할 수 없습니다.">사용안됨</span></td><!-- 익스플로러10 -->
+                <td class="no"><span title="사용 할 수 없습니다.">사용안됨</span></td><!-- 익스플로러11 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 엣지 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 안드로이드 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- IOS -->
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+
+<h4 class="pt30">참고 사이트(Reference)</h4>
+<ul>
+    <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/grid-template-columns">MDN</a></li>
+    <li><a href="https://drafts.csswg.org/css-grid/#propdef-grid-template-columns">w3</a></li>
+</ul>
+
+
+<hr>
+
+
+   
+ 

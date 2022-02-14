@@ -1,0 +1,168 @@
+
+
+<h2>.show()</h2>
+<p>선택한 요소를 선택한 요소를 보여줍니다.</p>
+
+<hr>
+
+<h3>.show()</h3>
+<p class="blue">선택한 요소를 선택한 요소를 보여줍니다.</p>
+
+
+<h4 class="pt50">문법(Syntax)</h4>
+<p class="blue">
+$("선택자").show();<br>
+$("선택자").show("시간");<br>
+$("선택자").show("시간", 함수);<br>
+</p>
+
+
+<h4 class="pt50">정의(Definition)</h4>
+<ul>
+    <li>.show() 메서드는 선택한 요소를 보여줍니다.</li>
+    <li>.show("시간") 메서드는 선택한 요소를 시간동안 보여줍니다.</li>
+    <li>.show("시간", 함수) 메서드는 선택한 요소를 시간동안 보여주고 함수를 설정합니다.</li>
+    <li>시간은 milliseconds 단위로 설정합니다.</li>
+    <li>시간은 문자(slow, fast)로도 표현 할 수 있습니다.</li>
+</ul>
+
+
+  
+<!-- Sample1 -->
+<h4 class="pt50">Sample1 <span><a href="https://webstoryboy.github.io/jquery/sample163-1.html" target="_blank"><img src="https://tistory3.daumcdn.net/tistory/2933724/skin/images/blank.gif" class="blank_icon"></a></span></h4>
+<p>.show() 메서드를 이용하여 요소를 보여주는 예제입니다.</p>
+<div class="sample">
+    <h5>결과<span class="dot"><i></i><i></i><i></i></span></h5>
+    <div class="ex">
+        <!-- ex -->
+        <h3>속성(Attributes)</h3>
+	    <div class="list1" style="display: none">
+	        <ul>
+	            <li>.closest() 메서드는 선택한 요소의 상위 요소 중 가장 가까운 요소를 선택합니다.</li>
+	            <li>.find() 메서드는 선택한 요소에서 조건에 맞는 요소를 다시 선택합니다.</li>
+	            <li>.next() 메서드는 선택한 요소의 다음 요소를 선택합니다.</li>
+	            <li>.nextAll() 메서드는 선택한 요소의 다음 요소를 선택합니다.</li>
+	        </ul>
+	    </div>
+        <!-- ex -->
+    </div>
+    
+    <div class="choice1">
+        <a href="#" class="off1">리셋</a>
+        <a href="#" class="btn1">클릭하면 리스트를 <em>.show()</em> 보여줍니다.</a>
+        <a href="#" class="btn2">클릭하면 리스트를 <em>.show(2000)</em> 보여줍니다.</a>
+        <a href="#" class="btn3">클릭하면 리스트를 <em>.show("fast")</em> 보여줍니다.</a>
+    </div>
+</div>
+<!-- sample -->
+
+
+<div class="sample">
+    <h5>jquery<span class="dot"><i></i><i></i><i></i></span></h5>
+    <div class="script">
+        <pre class="line-numbers"><code class="language-javascript">$(".choice1 .btn1").on("click", function(e){
+    $(".list1").show();
+});
+$(".choice1 .btn2").on("click", function(e){
+    $(".list1").show(2000);
+});
+$(".choice1 .btn3").on("click", function(e){
+    $(".list1").show("fast");
+});</code></pre>
+    </div>
+</div>
+<!-- sample -->
+
+<div class="sample">
+    <h5>html<span class="dot"><i></i><i></i><i></i></span></h5>
+    <div class="html">
+        <pre class="line-numbers"><code class="language-markup">&lt;h3&gt;속성(Attributes)&lt;/h3&gt;
+&lt;div class="list1"&gt;
+    &lt;ul&gt;
+        &lt;li&gt;.closest() 메서드는 선택한 요소의 상위 요소 중 가장 가까운 요소를 선택합니다.&lt;/li&gt;
+        &lt;li&gt;.find() 메서드는 선택한 요소에서 조건에 맞는 요소를 다시 선택합니다.&lt;/li&gt;
+        &lt;li&gt;.next() 메서드는 선택한 요소의 다음 요소를 선택합니다.&lt;/li&gt;
+        &lt;li&gt;.nextAll() 메서드는 선택한 요소의 다음 요소를 선택합니다.&lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+</div>
+<!-- sample -->
+
+<div class="sample">
+    <h5>Total<span class="dot"><i></i><i></i><i></i></span></h5>
+    <div class="html on">
+        <pre class="line-numbers"><code class="language-markup">&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;jQuery Sample&lt;/title&gt;
+    &lt;style&gt;
+        a {border: 1px solid #5f6368; padding: 7px 20px 5px 20px; display: inline-block; border-radius: 20px; text-decoration: none;}
+        .list1 {display: none;}
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    
+    &lt;h3&gt;속성(Attributes)&lt;/h3&gt;
+    &lt;div class="list1"&gt;
+        &lt;ul&gt;
+            &lt;li&gt;.closest() 메서드는 선택한 요소의 상위 요소 중 가장 가까운 요소를 선택합니다.&lt;/li&gt;
+            &lt;li&gt;.find() 메서드는 선택한 요소에서 조건에 맞는 요소를 다시 선택합니다.&lt;/li&gt;
+            &lt;li&gt;.next() 메서드는 선택한 요소의 다음 요소를 선택합니다.&lt;/li&gt;
+            &lt;li&gt;.nextAll() 메서드는 선택한 요소의 다음 요소를 선택합니다.&lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/div&gt;
+    
+    &lt;div class="choice1"&gt;
+        &lt;a href="#" class="off1"&gt;리셋&lt;/a&gt;
+        &lt;a href="#" class="btn1"&gt;클릭하면 리스트를 &lt;em&gt;.show()&lt;/em&gt; 보여줍니다.&lt;/a&gt;
+        &lt;a href="#" class="btn2"&gt;클릭하면 리스트를 &lt;em&gt;.show(2000)&lt;/em&gt; 보여줍니다.&lt;/a&gt;
+        &lt;a href="#" class="btn3"&gt;클릭하면 리스트를 &lt;em&gt;.show("fast")&lt;/em&gt; 보여줍니다.&lt;/a&gt;
+    &lt;/div&gt;
+    
+    &lt;script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"&gt;&lt;/script&gt;
+    &lt;script&gt;
+        $(".choice1 .off1").on("click", function(e){
+            e.preventDefault();
+            $(".list1").hide();
+        });
+        $(".choice1 .btn1").on("click", function(e){
+            e.preventDefault();
+            $(".list1").show();
+        });
+        $(".choice1 .btn2").on("click", function(e){
+            e.preventDefault();
+            $(".list1").show(2000);
+        });
+        $(".choice1 .btn3").on("click", function(e){
+            e.preventDefault();
+            $(".list1").show("fast");
+        });
+    &lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+    </div>
+</div>
+<!-- sample -->
+
+
+<script>
+    $(".choice1 .off1").on("click", function(e){
+        e.preventDefault();
+        $(".list1").hide();
+    });
+    $(".choice1 .btn1").on("click", function(e){
+        e.preventDefault();
+        $(".list1").show();
+    });
+    $(".choice1 .btn2").on("click", function(e){
+        e.preventDefault();
+        $(".list1").show(2000);
+    });
+    $(".choice1 .btn3").on("click", function(e){
+        e.preventDefault();
+        $(".list1").show("fast");
+    });
+</script>
+<!-- //Sample1 -->

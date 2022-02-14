@@ -1,0 +1,180 @@
+
+
+<h2>CSS</h2>
+<p>CSS 캐스케이딩 스타일 시트(Cascading Style Sheets) 언어입니다.</p>
+
+<hr>
+
+<h3>CSS란?</h3>
+<p>CSS(Cascading Style Sheets)은 HTML을 꾸며주는 디자인 언어입니다.</p>
+
+
+<h3 class="pt50">상속</h3>
+<p>상속(inherit)이란 상위 요소에 적용된 속성들이 하위 요소까지 상속 받는 것을 말합니다. CSS 속성에는 상속이 되는 속성도 있고 그렇지 않은 속성도 있습니다.</p>
+
+<h3 class="pt50">주석</h3>
+<p>주석 표시는 프로그램에 영향을 미치지 않으며, 설명이나 메모를 목적으로 사용합니다.</p>
+<p class="blue">/* 주석 */</p>
+
+
+<h3 class="pt50">스타일 선언</h3>
+<p>HTML 문서에 스타일을 선언하는 방법은 여러가지가 있습니다.</p>
+<ul>
+    <li>내부 스타일 : head 태그 안에 설정하는 방법입니다.</li>
+    <li>외부 스타일 : 외부 파일을 연결하는 방법입니다.</li>
+    <li>인라인 스타일 : 요소에 직접 설정하는 방법입니다.</li>
+</ul>
+<!-- Sample1 -->
+<div class="sample" style="margin-top: 5px;">
+    <h5>HTML<span class="dot"><i></i><i></i><i></i></span></h5>
+    <div class="html">
+<pre class="line-numbers"><code class="language-markup">&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;타이틀&lt;/title&gt;
+    &lt;!-- 내부 스타일 --&gt;
+    &lt;style&gt;
+        h1 {color: #fff}
+    &lt;/style&gt;
+
+    &lt;!-- 외부 스타일 --&gt;
+    &lt;link href="경로" rel="stylesheet"&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;!-- 내부 스타일 --&gt;
+    &lt;h1 style="color: #fff"&gt;&lt;/h1&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+    </div>
+</div>
+<!-- sample1 -->
+
+<!-- Sample1 -->
+<div class="sample">
+    <h5>CSS<span class="dot"><i></i><i></i><i></i></span></h5>
+    <div class="html">
+<pre class="line-numbers"><code class="language-css">/* 외부 스타일 */
+@import url(경로)
+</code></pre>
+    </div>
+</div>
+<!-- sample1 -->
+    
+
+
+
+
+<h3 class="pt50">벤더 프리픽스(Prefix)</h3>
+<p>CSS3는 현재 완료된 속성도 있지만 개발을 하고 있는 속성도 있습니다. 최신 속성은 브라우저마다 다른 방식으로 지원하기 때문에 접두사(Prefix)를 붙여 호환성을 맞추어 줍니다. 
+    시간이 지나고 표준화가 되면 접두사를 쓰지 않아도 됩니다.
+</p>
+<div class="table-responsive">
+    <table class="table table-bordered table-striped table-hover">
+        <colgroup>
+            <col style="width: 30%">
+            <col style="width: 70%">
+        </colgroup>
+        <thead>
+            <tr>
+                <th>접두사</th>
+                <th>설명</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>-webkit-</td>
+                <td>웹킷 방식의 브라우저(크롬, 사파리, 웨일, 오페라)</td>
+            </tr>
+            <tr>
+                <td>-moz-</td>
+                <td>게코 방식의 브라우저(파이어 폭스)</td>
+            </tr>
+            <tr>
+                <td>-o-</td>
+                <td>오페라 브라우저(12버전 이하), 12버전 이상은 -webkit-으로 표현</td>
+            </tr>
+            <tr>
+                <td>-ms-</td>
+                <td>마이크로소프트 인터넷 익스플러러</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+
+<h3 class="pt50">이미지 형식</h3>
+<p>웹에서 사용하는 이미지 형식입니다.</p>
+
+<div class="table-responsive">
+    <table class="table table-bordered table-striped table-hover compatibility">
+        <colgroup>
+            <col>
+            <col>
+            <col>
+            <col>
+            <col>
+        </colgroup>
+        <thead>
+            <tr>
+                <th>형식</th>
+                <th>GIF</th>
+                <th>JPEG</th>
+                <th>PNG-8</th>
+                <th>PNG-24</th>
+                <th>SVG</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th>색상수</th>
+                <td>256색</td>
+                <td>모든 색상</td>
+                <td>256색</td>
+                <td>모든 색상</td>
+                <td>모든 색상</td>
+            </tr>
+            <tr>
+                <th>압축률</th>
+                <td>중</td>
+                <td>고</td>
+                <td>고</td>
+                <td>저</td>
+                <td>-</td>
+            </tr>
+            <tr>
+                <th>투명도</th>
+                <td>사용 가능</td>
+                <td>사용 안됨</td>
+                <td>사용 가능</td>
+                <td>사용 가능</td>
+                <td>사용 가능</td>
+            </tr>
+            <tr>
+                <th>애니메이션</th>
+                <td>사용 가능</td>
+                <td>사용 안됨</td>
+                <td>사용 안됨</td>
+                <td>사용 안됨</td>
+                <td>사용 가능</td>
+            </tr>
+            <tr>
+                <th>방식</th>
+                <td>비트맵</td>
+                <td>비트맵</td>
+                <td>비트맵</td>
+                <td>비트맵</td>
+                <td>벡터</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+
+<h3 class="pt50">크로스브라우징</h3>
+<p>사용자마다 사용하는 브라우저가 다르고 OS가 다릅니다. 그래서 보이는 화면이 다를 수 있습니다. 
+    사용자가 어떤 브라우저를 사용하더라도 사용자가 어떤 운영체제를 사용하더라도 웹 문서를 동일하게 나올 수 있도록 하는 기법입니다.</p>
+
+<h3 class="pt50">웹표준</h3>
+<p>웹 문서를 제작하는 기본 표준을 말합니다.</p>

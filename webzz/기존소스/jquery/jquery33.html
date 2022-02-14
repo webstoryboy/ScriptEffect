@@ -1,0 +1,195 @@
+
+    
+
+<h2>보임 필터 선택자</h2>
+<p>화면에 보이거나 보이지 않는 요소를 찾습니다.</p>
+
+<hr>
+
+<h3>보임 필터 선택자(Visibility Filters)</h3>
+<p>visibility:hidden;이나 opacity:0;은 위치가 제거되지 않았기 때문에 :hidden 선택자에게 선택되지 않습니다.</p>
+
+<h5>컨텐츠를 보이지 않게 하는 방법</h5>
+<ul>
+    <li>display:none;</li>
+    <li>visibility:hidden;</li>
+    <li>opacity:0;</li>
+    <li>width:0; height:0;</li>
+    <li>form 요소 중에 type="hidden"</li>
+    <li>부모 요소가 보이지 않거나 숨겨져 있을 때</li>
+</ul>
+
+<h5>보임 필터 선택자</h5>
+<div class="table-responsive">
+    <table class="table table-bordered table-striped">
+        <thead>
+            <tr>
+                <th>종류</th>
+                <th>설명</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>:hidden</td>
+                <td>보이지 않는 요소를 선택합니다.</td>
+            </tr>
+            <tr>
+                <td>:visible</td>
+                <td>보이는 요소를 선택합니다.</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+   
+
+
+<!-- Sample1 -->
+<h4 class="pt50">Sample1</h4>
+<p>내용 필터 선택자 예제입니다.</p>
+<div class="sample">
+    <h5>결과<span class="dot"><i></i><i></i><i></i></span></h5>
+    <div class="ex">
+        <!-- ex -->
+        <h3>속성 선택자</h3>
+        <div>
+            <ul class="list">
+                <li>기본 선택자</li>
+                <li>계층 선택자</li>
+                <li>속성 선택자</li>
+                <li>기본 필터 선택자</li>
+                <li>내용 필터 선택자</li>
+                <li>보임 필터 선택자
+                    <ul>
+                        <li style="display: none;">:hidden</li>
+                        <li style="display: none;">:visible</li>
+                    </ul>
+                </li>
+                <li>자식요소 필터 선택자</li>
+                <li>폼 필터 선택자</li>
+            </ul>
+        </div>
+        <!-- ex -->
+    </div>
+    
+    <div class="choice">
+        <a href="#" class="off1">리셋</a>
+        <a href="#" class="btn1">클릭하면 <em>:hidden</em>를 보이게 합니다.</a>
+        <a href="#" class="btn2">클릭하면 <em>:visible</em>를 선택합니다.</a>
+    </div>
+</div>
+<!-- sample -->
+
+<div class="sample">
+    <h5>jquery<span class="dot"><i></i><i></i><i></i></span></h5>
+    <div class="script on">
+<pre class="line-numbers"><code class="language-javascript">$(".list li:hidden").show().addClass("rLine");
+$(".list li:visible").addClass("rLine");</code></pre>
+    </div>
+</div>
+<!-- sample -->
+
+<div class="sample">
+    <h5>html<span class="dot"><i></i><i></i><i></i></span></h5>
+    <div class="html">
+        <pre class="line-numbers"><code class="language-markup">&lt;h3&gt;속성 선택자&lt;/h3&gt;
+&lt;div&gt;
+    &lt;ul class="list"&gt;
+        &lt;li&gt;기본 선택자&lt;/li&gt;
+        &lt;li&gt;계층 선택자&lt;/li&gt;
+        &lt;li&gt;속성 선택자&lt;/li&gt;
+        &lt;li&gt;기본 필터 선택자&lt;/li&gt;
+        &lt;li&gt;내용 필터 선택자&lt;/li&gt;
+        &lt;li&gt;보임 필터 선택자
+            &lt;ul&gt;
+                &lt;li style="display: none;"&gt;:hidden&lt;/li&gt;
+                &lt;li style="display: none;"&gt;:visible&lt;/li&gt;
+            &lt;/ul&gt;
+        &lt;/li&gt;
+        &lt;li&gt;자식요소 필터 선택자&lt;/li&gt;
+        &lt;li&gt;폼 필터 선택자&lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+</div>
+<!-- sample -->
+
+<div class="sample">
+    <h5>Total<span class="dot"><i></i><i></i><i></i></span></h5>
+    <div class="html on">
+        <pre class="line-numbers"><code class="language-markup">&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;jQuery Sample&lt;/title&gt;
+    &lt;style&gt;
+        li.select:before {content:'Select'; padding: 4px 4px 2px 4px; font-size: 90%; color: #3d90b7; white-space: nowrap; background-color: #e7f6fd; border-radius: 4px;border: 1px dashed #3d90b7;}
+        .rLine {padding: 4px 4px 2px 10px; font-size: 90%; color: #c7254e; white-space: nowrap; background-color: #f9f2f4; border-radius: 4px; border: 1px dashed #a51a3d;}
+        .choice a {border: 1px solid #5f6368; padding: 7px 20px 5px 20px; display: inline-block; border-radius: 20px; text-decoration: none;}
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h3&gt;속성 선택자&lt;/h3&gt;
+    &lt;div&gt;
+        &lt;ul class="list"&gt;
+            &lt;li&gt;기본 선택자&lt;/li&gt;
+            &lt;li&gt;계층 선택자&lt;/li&gt;
+            &lt;li&gt;속성 선택자&lt;/li&gt;
+            &lt;li&gt;기본 필터 선택자&lt;/li&gt;
+            &lt;li&gt;내용 필터 선택자&lt;/li&gt;
+            &lt;li&gt;보임 필터 선택자
+                &lt;ul&gt;
+                    &lt;li style="display: none;"&gt;:hidden&lt;/li&gt;
+                    &lt;li style="display: none;"&gt;:visible&lt;/li&gt;
+                &lt;/ul&gt;
+            &lt;/li&gt;
+            &lt;li&gt;자식요소 필터 선택자&lt;/li&gt;
+            &lt;li&gt;폼 필터 선택자&lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/div&gt;
+
+    &lt;div class="choice"&gt;
+        &lt;a href="#" class="off1"&gt;리셋&lt;/a&gt;
+        &lt;a href="#" class="btn1"&gt;클릭하면 &lt;em&gt;:hidden&lt;/em&gt;를 보이게 합니다.&lt;/a&gt;
+        &lt;a href="#" class="btn2"&gt;클릭하면 &lt;em&gt;:visible&lt;/em&gt;를 선택합니다.&lt;/a&gt;
+    &lt;/div&gt;
+    
+    &lt;script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"&gt;&lt;/script&gt;
+    &lt;script&gt;
+        $(".choice .off1").on("click", function(e){
+            e.preventDefault();
+            $(".list li").removeClass("rLine");
+            $(".list li ul li").css("display","none");
+        });
+        $(".choice .btn1").on("click", function(e){
+            e.preventDefault();
+            $(".list li:hidden").show().addClass("rLine");
+        });
+        $(".choice .btn2").on("click", function(e){
+            e.preventDefault();
+            $(".list li:visible").addClass("rLine");
+        });
+    &lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+    </div>
+</div>
+<!-- sample1 -->
+
+
+<script>
+    $(".choice .off1").on("click", function(e){
+        e.preventDefault();
+        $(".list li").removeClass("rLine");
+        $(".list li ul li").css("display","none");
+    });
+    $(".choice .btn1").on("click", function(e){
+        e.preventDefault();
+        $(".list li:hidden").show().addClass("rLine");
+    });
+    $(".choice .btn2").on("click", function(e){
+        e.preventDefault();
+        $(".list li:visible").addClass("rLine");
+    });
+</script>
+<!-- //Sample1 -->
+

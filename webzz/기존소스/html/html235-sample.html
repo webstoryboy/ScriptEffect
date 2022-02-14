@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @font-face {
+            font-family: 'S-CoreDream-3Light';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-3Light.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
+        * {margin: 0; padding: 0; box-sizing: border-box; font-family: 'S-CoreDream-3Light';}
+        h1,h2,h3 {text-align: center; font-size: 20px;} 
+
+        #header {
+            background-color: #ecf5ff;
+            border: 1px solid #4390E1;
+            color: #4390E1;
+            padding: 20px;
+            margin: 1%;
+        }
+        #nav {
+            background-color: #ecf5ff;
+            border: 1px solid #4390E1;
+            color: #4390E1;
+            padding: 20px;
+            margin: 1%;
+            margin-bottom: 0;
+        }
+        main {overflow: hidden;}
+        #section {
+            width: 60%;
+            background-color: #ecf5ff;
+            border: 1px solid #4390E1;
+            color: #4390E1;
+            padding: 20px;
+            float: left;
+            margin: 1%;
+            margin-right: 0;
+            height: 240px;
+        }
+        
+        #article {
+            background-color: #ecf5ff;
+            border: 1px dashed #fff;
+            color: #4390E1;
+            padding: 20px;
+            margin: 1%;
+        }
+        #article2 {
+            background-color: #ecf5ff;
+            border: 1px solid #4390E1;
+            color: #4390E1;
+            padding: 20px;
+            margin: 1%;
+            margin-top: 0;
+        }
+        .article {
+            background-color: #ecf5ff;
+            border: 1px dashed #4390E1;
+            color: #4390E1;
+            padding: 20px;
+            margin: 1%;
+        }
+        #aside {
+            width: 37%;
+            background-color: #ecf5ff;
+            border: 1px solid #4390E1;
+            color: #4390E1;
+            padding: 20px;
+            float: left;
+            box-sizing: border-box;
+            margin: 1%;
+            height: 240px;
+        }
+        #footer {
+            background-color: #ecf5ff;
+            border: 1px solid #4390E1;
+            color: #4390E1;
+            padding: 20px;
+            clear: both;
+            margin: 1%;
+        }
+    </style>
+</head>
+<body>
+    <header id="header">
+        <h1>header</h1>
+    </header>
+    <nav id="nav">
+        <h2>nav</h2>
+    </nav>
+    <main>
+        <section id="section">
+            <h2>section</h2>
+            <article class="article">
+                <h3>article</h3>
+            </article>
+            <article class="article">
+                <h3>article</h3>
+            </article>
+        </section>
+        <aside id="aside">
+            <h2>aside</h2>
+        </aside>
+    </main>
+
+    <article id="article2">
+        <h2>article</h2>
+        <header class="article">
+            <h3>header</h3>
+        </header>
+        <section class="article">
+            <h3>section</h3>
+        </section>
+        <footer class="article">
+            <h3>footer</h3>
+        </footer>
+    </article>
+
+    <footer id="footer">
+        <h2>footer</h2>
+    </footer>
+</body>
+</html>

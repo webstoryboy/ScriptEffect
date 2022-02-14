@@ -1,0 +1,208 @@
+
+
+<h2>CSS 색상</h2>
+<p>CSS를 통해 색을 표현하는 방법입니다.</p>
+<hr>
+
+<h3>CSS</h3>
+<p>CSS는 색상을 표현하는 방법이 다양합니다.</p>
+
+
+
+<h4 class="pt50">16진수 표기법</h4>
+<p>웹 문서에서 색상을 표현하는 방법은 16진수로 표현하는 방법입니다. 두자리씩 묶어서 #RRGGBB 형식으로 표현하며, RR은 빨간색, GG는 초록색, BB는 파란색의 
+    양을 표현합니다. 각 색상의 하나도 섞이지 않았음은 00부터 가득 썩였음은 FF까지 사용할 수 있습니다. </p>
+
+<div class="table-responsive">
+    <table class="table table-bordered table-striped table-hover">
+        <colgroup>
+            <col width="">
+            <col width="">
+        </colgroup>
+        <tbody>
+            <tr>
+                <th>십진수</th>
+                <td class="ce">0</td>
+                <td class="ce">1</td>
+                <td class="ce">2</td>
+                <td class="ce">3</td>
+                <td class="ce">4</td>
+                <td class="ce">5</td>
+                <td class="ce">6</td>
+                <td class="ce">7</td>
+                <td class="ce">8</td>
+                <td class="ce">9</td>
+                <td class="ce">10</td>
+                <td class="ce">11</td>
+                <td class="ce">12</td>
+                <td class="ce">13</td>
+                <td class="ce">14</td>
+                <td class="ce">15</td>
+            </tr>
+            <tr>
+                <th>16진수</th>
+                <td class="ce">0</td>
+                <td class="ce">1</td>
+                <td class="ce">2</td>
+                <td class="ce">3</td>
+                <td class="ce">4</td>
+                <td class="ce">5</td>
+                <td class="ce">6</td>
+                <td class="ce">7</td>
+                <td class="ce">8</td>
+                <td class="ce">9</td>
+                <td class="ce">a</td>
+                <td class="ce">b</td>
+                <td class="ce">c</td>
+                <td class="ce">d</td>
+                <td class="ce">e</td>
+                <td class="ce">f</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+
+<h4 class="pt50">RGB와 RGBA</h4>
+<p>웹 문서에서 색상을 표현하는 rgb(255,255,255)는 십진수를 이용하여 표현합니다. 색이 하나도 석이지 않았을 때에는 0으로 표시하고
+    가득섞였을 때에는 255로 표현합니다. 숫자는 색상의 양을 나타내고 a는 투명도(alpha)를 나태냅니다. 투명도는 0과 1사이 값으로 표현합니다.
+</p>
+<p class="blue">
+    rgb(red 값, green 값, blue 값);<br>
+    rgba(red 값, green 값, blue 값, alpha 값);
+</p>
+
+
+<h4 class="pt50">HSL와 HSLA</h4>
+<p>웹 문서에서 색상을 표현하는 HSL은 색상(hue), 채도(saturation), 밝기(lightness)를 나타냅니다. 색상은 둥글게 배치한 색상환으로 표시하고
+    0도와 360에는 빨간색, 120도에서는 초록색, 240도에서는 파란색이 배치됩니다. 채도가 0%이면 회색톤, 100%이면 순색으로 표시됩니다. 밝기는 0%에서는
+    가장 어둡고 100%에서는 가장 밝습니다.
+</p>
+<p class="blue">
+    hsl(hue 값, saturation 값, lightness 값);<br>
+    hsla(hue 값, saturation 값, lightness 값, alpha 값);
+</p>
+
+<h4 class="pt50">색상 이름 표기법</h4>
+<p>색상 이름을 이용하여 색을 표현 할 수 있습니다. 가장 기본적인 16가지를 포함하여 216가지의 색상 이름 표기법이 있습니다.</p>
+<p class="blue">aqua, black, blue, fnchsia, gray, green, lime, maroon, navy, olive, purple, red, silver, teal, white, yellow</p>
+
+
+<h4 class="pt50">CSS 색상</h4>
+<div class="table-responsive">
+    <table class="table table-bordered table-striped table-hover">
+        <colgroup>
+            <col width="">
+            <col width="">
+        </colgroup>
+        <thead>
+            <tr>
+                <th>속성값</th>
+                <th>설명</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th>#RRGGBB</th>
+                <td>빨강, 초록, 파랑의 색상을 16진법 두자리로 지정한 색상 표현 방법입니다. 각 요소별로 256단계로 표현합니다.</td>
+            </tr>
+            <tr>
+                <th>#RGB</th>
+                <td>빨강, 초록, 파랑의 색상은 16진수 한자리로 지정한 색상 표현 방법입니다. 각 요소별 16단계로 표현합니다.</td>
+            </tr>
+            <tr>
+                <th>rgb(r,g,b)</th>
+                <td>빨강, 초록, 파랑의 색상을 표현합니다.</td>
+            </tr>
+            <tr>
+                <th>rgba(r,g,b,a)</th>
+                <td>빨강, 초록, 파랑의 색상과 투명도로 색상을 표현합니다. </td>
+            </tr>
+            <tr>
+                <th>hsl(h,s,l)</th>
+                <td>색상, 채도, 명도로 색상을 표현합니다.</td>
+            </tr>
+            <tr>
+                <th>hsla(h,s,l,a)</th>
+                <td>색상, 채도, 명도로 색상과 투명도로 색상을 표현합니다.</td>
+            </tr>
+            <tr>
+                <th>색상 이름</th>
+                <td>미리 정의된 색상이름을 사용합니다.(red, blue...)</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+    
+
+
+<h4 class="pt50">색상 이름</h4>
+<div class="table-responsive">
+    <table class="table table-bordered table-striped table-hover">
+        <colgroup>
+            <col width="">
+            <col width="">
+            <col width="">
+            <col width="">
+        </colgroup>
+        <thead>
+            <tr>
+                <th>이름</th>
+                <th>색상 값</th>
+                <th>이름</th>
+                <th>색상 값</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td style="background-color: #000">Black</td>
+                <td>#000000</td>
+                <td style="background-color: #000080">Navy</td>
+                <td>#000080</td>
+            </tr>
+            <tr>
+                <td style="background-color: #808000">Olive</td>
+                <td>#808000</td>
+                <td style="background-color: #800000">Marron</td>
+                <td>#800000</td>
+            </tr>
+            <tr>
+                <td style="background-color: #808080">Gray</td>
+                <td>#808080</td>
+                <td style="background-color: #008080">teal</td>
+                <td>#008080</td>
+            </tr>
+            <tr>
+                <td style="background-color: #008000">Green</td>
+                <td>#008000</td>
+                <td style="background-color: #800080">Purple</td>
+                <td>#800080</td>
+            </tr>
+            <tr>
+                <td style="background-color: #c0c0c0">Silver</td>
+                <td>#c0c0c0</td>
+                <td style="background-color: #00ffff">aqua</td>
+                <td>#00ffff</td>
+            </tr>
+            <tr>
+                <td style="background-color: #00ff00">Lime</td>
+                <td>#00ff00</td>
+                <td style="background-color: #ff00ff">Fuchsia</td>
+                <td>#ff00ff</td>
+            </tr>
+            <tr>
+                <td style="background-color: #ffffff">White</td>
+                <td>#ffffff</td>
+                <td style="background-color: #0000ff">Blue</td>
+                <td>#0000ff</td>
+            </tr>
+            <tr>
+                <td style="background-color: #ffff00">Yellow</td>
+                <td>#ffff00</td>
+                <td style="background-color: #ff0000">red</td>
+                <td>#ff0000</td>
+            </tr>
+        </tbody>
+    </table>
+</div>

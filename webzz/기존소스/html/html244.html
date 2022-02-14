@@ -1,0 +1,287 @@
+
+<h2>&lt;blockquote&gt;</h2>
+<p>&lt;blockquote&gt; 태그는 긴 문장의 인용문을 설정합니다. 인용된 정보 출처는 cite 속성을 통해 설정합니다.</p>
+
+<hr>
+
+<h3>&lt;blockquote&gt;</h3>
+<p class="blue">&lt;blockquote&gt; 태그는 긴 문장의 인용문을 설정합니다.</p>
+
+<div class="table-responsive">
+    <table class="table table-bordered table-striped table-hover">
+        <colgroup>
+            <col style="width: 30%">
+            <col style="width: 70%">
+        </colgroup>
+        <thead>
+            <tr>
+                <th>특징</th>
+                <th>설명</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th><a href="http://webzz.tistory.com/225">요소</a></th>
+                <td><a href="http://webzz.tistory.com/225">블록 요소(block Element)</a></td>
+            </tr>
+            <tr>
+                <th><a href="http://webzz.tistory.com/225">닫는 태그</a></th>
+                <td>닫는 태그 사용(&lt;blockquote&gt; ~ &lt;/blockquote&gt;)</td>
+            </tr>
+            <tr>
+                <th><a href="http://webzz.tistory.com/228">버전</a></th>
+                <td>HTML4</td>
+            </tr>
+            <tr>
+                <th>시각적 표현</th>
+                <td>여백이 생김</td>
+            </tr>
+            <tr>
+                <th>사용성</th>
+                <td>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star-o" aria-hidden="true"></i>
+                    <i class="fa fa-star-o" aria-hidden="true"></i>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+
+<h4 class="pt50">정의(Definition)</h4>
+<ul>
+    <li>인용(quotation)을 표현하는 태그는 &lt;blockquote&gt; 태그와 <a href="http://webzz.tistory.com/315">&lt;q&gt;</a> 태그가 있습니다.</li>
+    <li>&lt;blockquote&gt; 태그는 전체 문장에 해당하는 긴 인용문에 사용합니다.</li>
+    <li>&lt;blockquote&gt; 태그는 인용된 정보 출처는 cite 속성을 통해 설정합니다.</li>
+    <li>&lt;blockquote&gt; 태그를 사용하면 자동으로 여백이 생깁니다. 여백이 목적이라면 CSS를 사용합니다.</li>
+    <li>&lt;blockquote&gt; 태그는 블록 요소이며, <a href="http://webzz.tistory.com/315">&lt;q&gt;</a> 태그는 인라인 요소입니다.</li>
+    <li>&lt;figure&gt;, &lt;figcaption&gt; 태그를 같이 사용하여, 인용문을 더 정확하게 사용할 수 있습니다.</li>
+</ul>
+
+<h4 class="pt50">비교(Compare)</h4>
+<ul>
+    <li>짧은 인용문을 설정 한다면 <a href="http://webzz.tistory.com/315">&lt;q&gt;</a> 태그를 사용합니다.</li>
+    <li>긴 인용문을 설정 한다면 <a href="http://webzz.tistory.com/244">&lt;blockquote&gt;</a> 태그를 사용합니다.</li>
+    <li>인용한 작품의 출처를 설정 한다면 <a href="http://webzz.tistory.com/252">&lt;cite&gt;</a> 태그를 사용합니다.</li>
+</ul>
+
+
+<h4 class="pt50">속성(Property)</h4>
+<div class="table-responsive">
+    <table class="table table-bordered table-striped table-hover">
+        <colgroup>
+            <col style="width:15%">
+            <col style="width:25%">
+            <col>
+            <col style="width:7%">
+        </colgroup>
+        <thead>
+            <tr>
+                <th>속성</th>
+                <th>값(예)</th>
+                <th>설명</th>
+                <th class="ce">버전</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>cite</td>
+                <td>cite="URL"</td>
+                <td>인용된 사이트 주소를 설정합니다.</td>
+                <td class="ce">-</td>
+            </tr>
+    </table>
+</div>
+
+
+<style>
+    #tt-body-page blockquote {
+        margin: 0 !important;
+        margin-bottom: 10px;
+    }
+    blockquote {
+        background: #f4f8fa;
+        padding: 10px;
+        margin-bottom: 10px;
+    }
+</style>
+
+<!-- Sample1 -->
+<h4 class="pt50">예제1(Sample)</h4>
+<div class="sample">
+    <h5>인용문을 설정하는 예제입니다. <span class="dot"><i></i><i></i><i></i></span></h5>
+    <div class="sampleView">
+        <!-- ex -->
+        <div>
+            <blockquote class="https://webzz.tistory.com/659">
+                <p>
+                    정직은 다른 사람보다 나에게 큰 의미를 부여해야 한다. 
+                    자신이 정직하지 않으면 진정으로 원하는 일을 열정적으로 밀고 나갈 수 없다. 
+                    마음에서 우러나오는 일을 해야 정직해지며 삶을 더 즐길 줄 알게 된다. 
+                    다름 사람에게도 정직해야 하지만 그 무엇보다 나 자신한테 정직해야 한다.
+                </p>
+            </blockquote>
+            <p>- 웹스토리보이 포트폴리오 중에 -</p>
+        </div>
+        <!-- ex -->
+    </div>
+    <div class="sampleCode">
+        <div class="scMenu">
+            <div>HTML</div>
+            <div>CSS</div>
+            <div>SCRIPT</div>
+        </div>
+        <div class="scCont">
+            <div class="active">
+<pre class="line-numbers"><code class="language-markup">&lt;div&gt;
+    &lt;blockquote class="https://webzz.tistory.com/659"&gt;
+        &lt;p&gt;
+            정직은 다른 사람보다 나에게 큰 의미를 부여해야 한다. 
+            자신이 정직하지 않으면 진정으로 원하는 일을 열정적으로 밀고 나갈 수 없다. 
+            마음에서 우러나오는 일을 해야 정직해지며 삶을 더 즐길 줄 알게 된다. 
+            다름 사람에게도 정직해야 하지만 그 무엇보다 나 자신한테 정직해야 한다.
+        &lt;/p&gt;
+    &lt;/blockquote&gt;
+    &lt;p&gt;- 웹스토리보이 티스토리 중에 -&lt;/p&gt;
+&lt;/div&gt;
+</code></pre>
+            </div>
+            <div>
+<pre class="line-numbers"><code class="language-css">blockquote {
+    background: #f4f8fa;
+    padding: 10px;
+}
+</code></pre>
+            </div>
+            <div>
+<pre class="line-numbers"><code class="language-script">//Javascript none
+</code></pre>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- //Sample1 -->
+
+
+
+<!-- Sample2 -->
+<h4 class="pt50">예제2(Sample)</h4>
+<div class="sample">
+    <h5>figure 태그와 인용문을 같이 설정하는 예제입니다. <span class="dot"><i></i><i></i><i></i></span></h5>
+    <div class="sampleView">
+        <!-- ex -->
+        <div>
+            <figure>
+                <blockquote cite="https://webzz.tistory.com">
+                    <p>
+                        운이 좋은 사람은 없다. 단지 운을 만들 뿐이다. 
+                        운을 만들기 위해서는 내가 좋아하는 일이나 내가 하고 싶은 일에 몰두하면 된다. 
+                        몰두 하다보면 길이 보이고 방향이 보이게 된다. 
+                        운이란 고된 노동과 노력을 통해 스스로 만들어 내는 것이다. 
+                        복권에 당첨되는 사람들은 금방 돈을 허비하게 된다. 
+                        단지 행운만 좋았기 때문이다. 운을 만든 사람은 돈을 날려먹거나 헛되게 쓰지 않는다. 
+                        열심히 할수록 운은 나에게 온다.
+                    </p>
+                </blockquote>
+                <figcaption>- 웹스토리보이 <cite>홈페이지</cite> 중에 -</figcaption>
+            </figure>
+        </div>
+        <!-- ex -->
+    </div>
+    <div class="sampleCode">
+        <div class="scMenu">
+            <div>HTML</div>
+            <div>CSS</div>
+            <div>SCRIPT</div>
+        </div>
+        <div class="scCont">
+            <div class="active">
+<pre class="line-numbers"><code class="language-markup">&lt;figure&gt;
+    &lt;blockquote cite="https://webzz.tistory.com"&gt;
+        &lt;p&gt;
+            운이 좋은 사람은 없다. 단지 운을 만들 뿐이다. 
+            운을 만들기 위해서는 내가 좋아하는 일이나 내가 하고 싶은 일에 몰두하면 된다. 
+            몰두 하다보면 길이 보이고 방향이 보이게 된다. 
+            운이란 고된 노동과 노력을 통해 스스로 만들어 내는 것이다. 
+            복권에 당첨되는 사람들은 금방 돈을 허비하게 된다. 
+            단지 행운만 좋았기 때문이다. 운을 만든 사람은 돈을 날려먹거나 헛되게 쓰지 않는다. 
+            열심히 할수록 운은 나에게 온다.
+        &lt;/p&gt;
+    &lt;/blockquote&gt;
+    &lt;figcaption&gt;- 웹스토리보이 &lt;cite&gt;&lt;a href="https://webzz.tistory.com"&gt;홈페이지&lt;/a&gt;&lt;/cite&gt; 중에 -&lt;/figcaption&gt;
+&lt;/figure&gt;
+</code></pre>
+            </div>
+            <div>
+<pre class="line-numbers"><code class="language-css">blockquote {
+    background: #f4f8fa;
+    padding: 10px;
+}
+</code></pre>
+            </div>
+            <div>
+<pre class="line-numbers"><code class="language-script">//Javascript none
+</code></pre>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- //Sample2 -->
+
+<h4 class="pt50"><a href="http://webzz.tistory.com/227">호환성(Compatibility)</a></h4>
+<div class="table-responsive">
+    <table class="table table-bordered table-striped table-hover compatibility">
+        <colgroup>
+            <col style="width:20%" />
+        </colgroup>
+        <thead>
+            <tr>
+                <th></th>
+                <th scope="col"><img src="https://tistory1.daumcdn.net/tistory/2933724/skin/images/icon-chrome1.png" alt="크롬 아이콘" title="크롬 브라우저"></th>
+                <th scope="col"><img src="https://tistory3.daumcdn.net/tistory/2933724/skin/images/icon-firefox1.png" alt="파이어폭스 아이콘" title="파이어폭스 브라우저"></th>
+                <th scope="col"><img src="https://tistory1.daumcdn.net/tistory/2933724/skin/images/icon-safari1.png" alt="사파리 아이콘" title="사파리 브라우저"></th>
+                <th scope="col"><img src="https://tistory3.daumcdn.net/tistory/2933724/skin/images/icon-opera1.png" alt="오페라 아이콘" title="오페라 브라우저"></th>
+                <th scope="col"><img src="https://tistory1.daumcdn.net/tistory/2933724/skin/images/icon-whale1.png" alt="네이버 웨일" title="네이버 웨일 브라우저"></th>
+                <th scope="col"><img src="https://tistory4.daumcdn.net/tistory/2933724/skin/images/icon-ie6.png" alt="익스플로러6 아이콘" title="인터넷 익스플로러6 브라우저"><em>6</em></th>
+                <th scope="col"><img src="https://tistory2.daumcdn.net/tistory/2933724/skin/images/icon-ie7.png" alt="익스플로러7 아이콘" title="인터넷 익스플로러7 브라우저"><em>7</em></th>
+                <th scope="col"><img src="https://tistory2.daumcdn.net/tistory/2933724/skin/images/icon-ie7.png" alt="익스플로러8 아이콘" title="인터넷 익스플로러8 브라우저"><em>8</em></th>
+                <th scope="col"><img src="https://tistory2.daumcdn.net/tistory/2933724/skin/images/icon-ie9.png" alt="익스플로러9 아이콘" title="인터넷 익스플로러9 브라우저"><em>9</em></th>
+                <th scope="col"><img src="https://tistory2.daumcdn.net/tistory/2933724/skin/images/icon-ie10.png" alt="익스플로러10 아이콘" title="인터넷 익스플로러10 브라우저"><em>10</em></th>
+                <th scope="col"><img src="https://tistory2.daumcdn.net/tistory/2933724/skin/images/icon-ie11.png" alt="익스플로러11 아이콘" title="인터넷 익스플로러11 브라우저"><em>11</em></th>
+                <th scope="col"><img src="https://tistory1.daumcdn.net/tistory/2933724/skin/images/icon-edge.png" alt="엣지 아이콘" title="엣지 브라우저"></th>
+                <th scope="col"><img src="https://tistory2.daumcdn.net/tistory/2933724/skin/images/icon-android.png" alt="안드로이드 아이콘" title="모바일 안드로이드 브라우저"></th>
+                <th scope="col"><img src="https://tistory2.daumcdn.net/tistory/2933724/skin/images/icon-ios.png" alt="ios 아이콘" title="모바일 아이폰 브라우저"></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td scope="row" class="ce">&lt;blockquote&gt;</td>
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 크롬 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 파이어폭스 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 사파리 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 오페라 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 네이버 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 익스플로러6 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 익스플로러7 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 익스플로러8 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 익스플로러9 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 익스플로러10 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 익스플로러11 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 엣지 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 안드로이드 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- IOS -->
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+
+<h4 class="pt30">참고 사이트(Reference)</h4>
+<ul>
+    <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/blockquote">MDN</a></li>
+    <li><a href="https://html.spec.whatwg.org/multipage/grouping-content.html#the-blockquote-element">W3</a></li>
+</ul>
+
+
+<hr>

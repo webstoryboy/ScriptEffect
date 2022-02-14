@@ -1,0 +1,579 @@
+
+
+
+<h2>.width()</h2>
+<p>선택한 요소에 가로 값을 설정합니다.</p>
+
+<hr>
+
+<h3>.width()</h3>
+<p class="blue">.width() 메서드는 선택한 요소의 높이(패딩/마진/보더 불포함)를 설정합니다.</p>
+
+<h4 class="pt50">문법(Syntax)</h4>
+<p class="blue">
+    $("선택자").width();<br>
+    $("선택자").width("속성");<br>
+    $("선택자").width(함수);
+</p>
+
+<h4 class="pt50">정의(Definition)</h4>
+<ul>
+    <li>박스 요소의 높이 값은 패딩, 마진, 보더 값을 포함한 값이기 때문에 .width()는 패딩, 마진, 보더 값을 포함하지 않는 값을 가져옵니다.</li>
+    <li>.width() 메서드와 .css() 메서드는 높이 값을 똑같이 가져옵니다. 하지만 .css() 메서드는 단위까지 출력이 된다는 차이점이 있습니다. 수학적인 계산이 필요한 부분에서는 .width() 메서드를 추천하며, 샘플 1번을 참고하면 됩니다.</li>
+    <li>.width() 메서드는 선택한 요소의 높이 값을 가져옵니다.</li>
+    <li>.width("속성") 메서드는 선택한 요소의 높이 값을 변경합니다.</li>
+    <li>.width(함수) 메서드는 선택한 요소의 함수를 이용하여 높이 값을 설정합니다.</li>
+</ul>
+
+
+
+<!-- Sample1 -->
+<h4 class="pt50">Sample1 <span><a href="https://webstoryboy.github.io/jquery/sample123-1.html" target="_blank"><img src="https://tistory3.daumcdn.net/tistory/2933724/skin/images/blank.gif" class="blank_icon"></a></span></h4>
+<p>.width() : 원하는 요소의 가로 값을 출력하는 예제입니다. .width()와 .css()메서드는 단위 출력 유무에 따라 차이점이 있습니다.</p>
+<div class="sample">
+    <h5>결과<span class="dot"><i></i><i></i><i></i></span></h5>
+    <div class="ex">
+        <!-- ex -->
+        <h3>탐색(Traversing)</h3>
+        <div class="list1">
+            <ul class="rLine">
+                <li>.eq() 메서드는 선택한 요소에 인덱스 번호에 해당하는 요소를 찾습니다.</li>
+                <li>.filter() 메서드는 선택된 요소에서 선택하거나 함수를 사용할 수 있습니다.</li>
+                <li>.first() 메서드는 선택된 요소에서 첫번째 자식 요소를 찾습니다.</li>
+                <li>.has() 메서드는 선택된 요소의 자식 요소에서 주어진 선택자를 찾습니다.</li>
+                <li>.is() 메서드는 선택된 요소 객체의 특징을 판별합니다.</li>
+                <li>.last() 메서드는 선택된 요소에서 마지막 번째 자식 요소를 찾습니다.</li>
+            </ul>
+            <p></p>
+        </div>
+        <!-- ex -->
+    </div>
+    
+    <div class="choice1">
+        <a href="#" class="off1">리셋</a><br>
+        <a href="#" class="btn1">클릭하면 리스트의 가로 값(<em>.width()</em>)을 구합니다.</a><br>
+        <a href="#" class="btn2">클릭하면 리스트의 가로 값(<em>.css("width")</em>)을 구합니다.</a><br>
+        <a href="#" class="btn3">클릭하면 이 <em>문서</em>의 가로 값을 구합니다.</a><br>
+        <a href="#" class="btn4">클릭하면 <em>브라우저</em>의 가로 값을 구합니다.</a>
+    </div>
+</div>
+<!-- sample -->
+
+
+<div class="sample">
+    <h5>jquery<span class="dot"><i></i><i></i><i></i></span></h5>
+    <div class="script">
+        <pre class="line-numbers"><code class="language-javascript">function showWidth(element, width){
+    $(".list1 p").text( element + "의 가로 값은 " + width + "px.");
+}
+$( ".choice1 .btn1" ).click(function(){
+    showWidth("리스트(.height())", $(".list1").width());
+});
+$( ".choice1 .btn2" ).click(function(){
+    showWidth("리스트(.css())", $(".list1").css("width"));
+});
+$( ".choice1 .btn3" ).click(function(){
+    showWidth("문서", $(document).width());
+});
+$( ".choice1 .btn4" ).click(function(){
+    showWidth("브라우저", $(window).width());
+});</code></pre>
+    </div>
+</div>
+<!-- sample -->
+
+<div class="sample">
+    <h5>html<span class="dot"><i></i><i></i><i></i></span></h5>
+    <div class="html">
+        <pre class="line-numbers"><code class="language-markup">&lt;h3&gt;탐색(Traversing)&lt;/h3&gt;
+&lt;div class="list1"&gt;
+    &lt;ul&gt;
+        &lt;li&gt;.eq() 메서드는 선택한 요소에 인덱스 번호에 해당하는 요소를 찾습니다.&lt;/li&gt;
+        &lt;li&gt;.filter() 메서드는 선택된 요소에서 선택하거나 함수를 사용할 수 있습니다.&lt;/li&gt;
+        &lt;li&gt;.first() 메서드는 선택된 요소에서 첫번째 자식 요소를 찾습니다.&lt;/li&gt;
+        &lt;li&gt;.has() 메서드는 선택된 요소의 자식 요소에서 주어진 선택자를 찾습니다.&lt;/li&gt;
+        &lt;li&gt;.is() 메서드는 선택된 요소 객체의 특징을 판별합니다.&lt;/li&gt;
+        &lt;li&gt;.last() 메서드는 선택된 요소에서 마지막 번째 자식 요소를 찾습니다.&lt;/li&gt;
+    &lt;/ul&gt;
+    &lt;p&gt;&lt;/p&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+</div>
+<!-- sample -->
+
+<div class="sample">
+    <h5>Total<span class="dot"><i></i><i></i><i></i></span></h5>
+    <div class="html on">
+        <pre class="line-numbers"><code class="language-markup">&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;jQuery Sample&lt;/title&gt;
+    &lt;style&gt;
+        .select:before {padding: 4px 6px 2px 6px; font-size: 90%; color: #3d90b7; white-space: nowrap; background-color: #e7f6fd; border-radius: 4px;border: 1px dashed #3d90b7;}
+        .rLine {padding: 4px 4px 2px 10px; font-size: 90%; color: #c7254e; white-space: nowrap; background-color: #f9f2f4; border-radius: 4px; border: 1px dashed #a51a3d;}
+        a {border: 1px solid #5f6368; padding: 7px 20px 5px 20px; display: inline-block; border-radius: 20px; text-decoration: none;}
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    
+    &lt;h3&gt;탐색(Traversing)&lt;/h3&gt;
+    &lt;div class="list1"&gt;
+        &lt;ul&gt;
+            &lt;li&gt;.eq() 메서드는 선택한 요소에 인덱스 번호에 해당하는 요소를 찾습니다.&lt;/li&gt;
+            &lt;li&gt;.filter() 메서드는 선택된 요소에서 선택하거나 함수를 사용할 수 있습니다.&lt;/li&gt;
+            &lt;li&gt;.first() 메서드는 선택된 요소에서 첫번째 자식 요소를 찾습니다.&lt;/li&gt;
+            &lt;li&gt;.has() 메서드는 선택된 요소의 자식 요소에서 주어진 선택자를 찾습니다.&lt;/li&gt;
+            &lt;li&gt;.is() 메서드는 선택된 요소 객체의 특징을 판별합니다.&lt;/li&gt;
+            &lt;li&gt;.last() 메서드는 선택된 요소에서 마지막 번째 자식 요소를 찾습니다.&lt;/li&gt;
+        &lt;/ul&gt;
+        &lt;p&gt;&lt;/p&gt;
+    &lt;/div&gt;
+    
+    &lt;div class="choice1"&gt;
+        &lt;a href="#" class="off1"&gt;리셋&lt;/a&gt;
+        &lt;a href="#" class="btn1"&gt;클릭하면 리스트의 가로 값(.width())을 구합니다.&lt;/a&gt;
+        &lt;a href="#" class="btn2"&gt;클릭하면 브라우저의 가로 값(.css("width"))을 구합니다.&lt;/a&gt;
+        &lt;a href="#" class="btn3"&gt;클릭하면 이 문서의 가로 값을 구합니다.&lt;/a&gt;
+        &lt;a href="#" class="btn4"&gt;클릭하면 브라우저의 가로 값을 구합니다.&lt;/a&gt;
+    &lt;/div&gt;
+    
+    &lt;script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"&gt;&lt;/script&gt;
+    &lt;script&gt;
+        $(".choice1 .off1").on("click", function(e){
+            e.preventDefault();
+            $(".list1 p").text("");
+        });
+        
+        function showWidth(element, width){
+            $(".list1 p").text( element + "의 높이 값은 " + width + "px.");
+        }
+        $( ".choice1 .btn1" ).click(function(){
+            showWidth("리스트(.height())", $(".list1").width());
+        });
+        $( ".choice1 .btn2" ).click(function(){
+            showWidth("리스트(.css())", $(".list1").css("width"));
+        });
+        $( ".choice1 .btn3" ).click(function(){
+            showWidth("문서", $(document).width());
+        });
+        $( ".choice1 .btn4" ).click(function(){
+            showWidth("브라우저", $(window).width());
+        });
+    &lt;/script&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+    </div>
+</div>
+<!-- sample -->
+
+
+<script>
+    $(".choice1 .off1").on("click", function(e){
+        e.preventDefault();
+        $(".list1 p").text("");
+    });
+
+    function showWidth(element, width){
+        $(".list1 p").text( element + "의 높이 값은 " + width + "px.");
+    }
+    $( ".choice1 .btn1" ).click(function(e){
+        e.preventDefault();
+        showWidth("리스트(.height())", $(".list1").width());
+    });
+    $( ".choice1 .btn2" ).click(function(e){
+        e.preventDefault();
+        showWidth("리스트(.css())", $(".list1").css("width"));
+    });
+    $( ".choice1 .btn3" ).click(function(e){
+        e.preventDefault();
+        showWidth("문서", $(document).width());
+    });
+    $( ".choice1 .btn4" ).click(function(e){
+        e.preventDefault();
+        showWidth("브라우저", $(window).width());
+    });
+</script>
+<!-- //Sample1 -->
+
+
+
+
+
+
+
+
+<!-- Sample2 -->
+<h4 class="pt50">Sample2 <span><a href="https://webstoryboy.github.io/jquery/sample123-2.html" target="_blank"><img src="https://tistory3.daumcdn.net/tistory/2933724/skin/images/blank.gif" class="blank_icon"></a></span></h4>
+<p>.width(value) : 원하는 요소의 가로 값을 변경하는 예제입니다.</p>
+<div class="sample">
+    <h5>결과<span class="dot"><i></i><i></i><i></i></span></h5>
+    <div class="ex">
+        <!-- ex -->
+        <h3>탐색(Traversing)</h3>
+        <div class="list2">
+            <ul class="rLine">
+                <li>.eq() 메서드는 선택한 요소에 인덱스 번호에 해당하는 요소를 찾습니다.</li>
+                <li>.filter() 메서드는 선택된 요소에서 선택하거나 함수를 사용할 수 있습니다.</li>
+                <li>.first() 메서드는 선택된 요소에서 첫번째 자식 요소를 찾습니다.</li>
+                <li>.has() 메서드는 선택된 요소의 자식 요소에서 주어진 선택자를 찾습니다.</li>
+                <li>.is() 메서드는 선택된 요소 객체의 특징을 판별합니다.</li>
+                <li>.last() 메서드는 선택된 요소에서 마지막 번째 자식 요소를 찾습니다.</li>
+            </ul>
+            <p></p>
+        </div>
+        <!-- ex -->
+    </div>
+    
+    <div class="choice2">
+        <a href="#" class="off1">리셋</a><br>
+        <a href="#" class="btn1">클릭하면 리스트의 가로 값을 <em>280px</em>로 변경합니다.</a><br>
+        <a href="#" class="btn2">클릭하면 리스트의 가로 값을 <em>450px</em>로 변경합니다.</a>
+    </div>
+</div>
+<!-- sample -->
+
+
+<div class="sample">
+    <h5>jquery<span class="dot"><i></i><i></i><i></i></span></h5>
+    <div class="script on">
+        <pre class="line-numbers"><code class="language-javascript">$(".list2 p").text("현재 리스트의 가로 값은 " + $(".list2").width() + "px 입니다.");
+$(".choice2 .btn1").on("click", function(e){
+    e.preventDefault();
+    $(".list2 ul").width("280");
+});
+$(".choice2 .btn2").on("click", function(e){
+    e.preventDefault();
+    $(".list2 ul").width("450");
+});</code></pre>
+    </div>
+</div>
+<!-- sample -->
+
+<div class="sample">
+    <h5>html<span class="dot"><i></i><i></i><i></i></span></h5>
+    <div class="html">
+        <pre class="line-numbers"><code class="language-markup">&lt;h3&gt;탐색(Traversing)&lt;/h3&gt;
+&lt;div class="list2"&gt;
+    &lt;ul class="rLine"&gt;
+        &lt;li&gt;.eq() 메서드는 선택한 요소에 인덱스 번호에 해당하는 요소를 찾습니다.&lt;/li&gt;
+        &lt;li&gt;.filter() 메서드는 선택된 요소에서 선택하거나 함수를 사용할 수 있습니다.&lt;/li&gt;
+        &lt;li&gt;.first() 메서드는 선택된 요소에서 첫번째 자식 요소를 찾습니다.&lt;/li&gt;
+        &lt;li&gt;.has() 메서드는 선택된 요소의 자식 요소에서 주어진 선택자를 찾습니다.&lt;/li&gt;
+        &lt;li&gt;.is() 메서드는 선택된 요소 객체의 특징을 판별합니다.&lt;/li&gt;
+        &lt;li&gt;.last() 메서드는 선택된 요소에서 마지막 번째 자식 요소를 찾습니다.&lt;/li&gt;
+    &lt;/ul&gt;
+    &lt;p&gt;&lt;/p&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+</div>
+<!-- sample -->
+
+<div class="sample">
+    <h5>Total<span class="dot"><i></i><i></i><i></i></span></h5>
+    <div class="html on">
+        <pre class="line-numbers"><code class="language-markup">&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;jQuery Sample&lt;/title&gt;
+    &lt;style&gt;
+        .select:before {padding: 4px 6px 2px 6px; font-size: 90%; color: #3d90b7; white-space: nowrap; background-color: #e7f6fd; border-radius: 4px;border: 1px dashed #3d90b7;}
+        .rLine {padding: 4px 4px 2px 10px; font-size: 90%; color: #c7254e; white-space: nowrap; background-color: #f9f2f4; border-radius: 4px; border: 1px dashed #a51a3d;}
+        a {border: 1px solid #5f6368; padding: 7px 20px 5px 20px; display: inline-block; border-radius: 20px; text-decoration: none;}
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    
+    &lt;h3&gt;탐색(Traversing)&lt;/h3&gt;
+    &lt;div class="list2"&gt;
+        &lt;ul class="rLine"&gt;
+            &lt;li&gt;.eq() 메서드는 선택한 요소에 인덱스 번호에 해당하는 요소를 찾습니다.&lt;/li&gt;
+            &lt;li&gt;.filter() 메서드는 선택된 요소에서 선택하거나 함수를 사용할 수 있습니다.&lt;/li&gt;
+            &lt;li&gt;.first() 메서드는 선택된 요소에서 첫번째 자식 요소를 찾습니다.&lt;/li&gt;
+            &lt;li&gt;.has() 메서드는 선택된 요소의 자식 요소에서 주어진 선택자를 찾습니다.&lt;/li&gt;
+            &lt;li&gt;.is() 메서드는 선택된 요소 객체의 특징을 판별합니다.&lt;/li&gt;
+            &lt;li&gt;.last() 메서드는 선택된 요소에서 마지막 번째 자식 요소를 찾습니다.&lt;/li&gt;
+        &lt;/ul&gt;
+        &lt;p&gt;&lt;/p&gt;
+    &lt;/div&gt;
+    
+    &lt;div class="choice2"&gt;
+        &lt;a href="#" class="off1"&gt;리셋&lt;/a&gt;
+        &lt;a href="#" class="btn1"&gt;클릭하면 리스트의 가로 값을 280px로 변경합니다.&lt;/a&gt;
+        &lt;a href="#" class="btn2"&gt;클릭하면 리스트의 가로 값을 450px로 변경합니다.&lt;/a&gt;
+    &lt;/div&gt;
+    
+    &lt;script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"&gt;&lt;/script&gt;
+    &lt;script&gt;
+        $(".choice2 .off1").on("click", function(e){
+            e.preventDefault();
+            $(".list2 ul").width("");
+        });
+        
+        $(".list2 p").text("현재 리스트의 높이 값은 " + $(".list2").width() + "px 입니다.");
+        
+        $(".choice2 .btn1").on("click", function(e){
+            e.preventDefault();
+            $(".list2 ul").width("280");
+        });
+        $(".choice2 .btn2").on("click", function(e){
+            e.preventDefault();
+            $(".list2 ul").width("450");
+        });
+    &lt;/script&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+    </div>
+</div>
+<!-- sample -->
+
+
+<script>
+    $(".choice2 .off1").on("click", function(e){
+        e.preventDefault();
+        $(".list2 ul").width("");
+    });
+
+    $(".list2 p").text("현재 리스트의 가로 값은 " + $(".list2").width() + "px 입니다.");
+
+    $(".choice2 .btn1").on("click", function(e){
+        e.preventDefault();
+        $(".list2 ul").width("280");
+    });
+    $(".choice2 .btn2").on("click", function(e){
+        e.preventDefault();
+        $(".list2 ul").width("450");
+    });
+</script>
+<!-- //Sample2 -->
+
+
+
+
+
+
+
+
+
+<!-- Sample3 -->
+<h4 class="pt50">Sample3 <span><a href="https://webstoryboy.github.io/jquery/sample123-3.html" target="_blank"><img src="https://tistory3.daumcdn.net/tistory/2933724/skin/images/blank.gif" class="blank_icon"></a></span></h4>
+<p>.width(function) : 원하는 요소의 가로 값을 함수를 이용하여 순차적으로 적용한 예제입니다.</p>
+<div class="sample">
+    <h5>결과<span class="dot"><i></i><i></i><i></i></span></h5>
+    <div class="ex">
+        <!-- ex -->
+        <h3>Dimensions</h3>
+        <div class="list3 img">
+            <img src="https://tistory3.daumcdn.net/tistory/2933724/skin/images/watch01.jpg" alt="">
+            <img src="https://tistory3.daumcdn.net/tistory/2933724/skin/images/watch02.jpg" alt="">
+            <img src="https://tistory3.daumcdn.net/tistory/2933724/skin/images/watch03.jpg" alt="">
+            <img src="https://tistory3.daumcdn.net/tistory/2933724/skin/images/watch04.jpg" alt="">
+            <img src="https://tistory3.daumcdn.net/tistory/2933724/skin/images/watch05.jpg" alt="">
+            <img src="https://tistory3.daumcdn.net/tistory/2933724/skin/images/watch06.jpg" alt="">
+        </div>
+        <!-- ex -->
+    </div>
+    
+    <div class="choice3">
+        <a href="#" class="off1">리셋</a>
+        <a href="#" class="btn1">클릭하면 사진의 크기를 순차적으로 합니다.</a>
+    </div>
+</div>
+<!-- sample -->
+
+
+<div class="sample">
+    <h5>jquery<span class="dot"><i></i><i></i><i></i></span></h5>
+    <div class="script on">
+        <pre class="line-numbers"><code class="language-javascript">$(".choice3 .btn1").on("click", function(e){
+    e.preventDefault();
+    $(".list3 img").height(function(index){
+        return (index + 1) * 30;
+    });
+    $(".list3 img").width(function(index){
+        return (index + 1) * 30;
+    });
+});</code></pre>
+    </div>
+</div>
+<!-- sample -->
+
+<div class="sample">
+    <h5>html<span class="dot"><i></i><i></i><i></i></span></h5>
+    <div class="html">
+        <pre class="line-numbers"><code class="language-markup">&lt;h3&gt;Dimensions&lt;/h3&gt;
+&lt;div class="list3 img"&gt;
+    &lt;img src="https://tistory3.daumcdn.net/tistory/2933724/skin/images/watch01.jpg" alt=""&gt;
+    &lt;img src="https://tistory3.daumcdn.net/tistory/2933724/skin/images/watch02.jpg" alt=""&gt;
+    &lt;img src="https://tistory3.daumcdn.net/tistory/2933724/skin/images/watch03.jpg" alt=""&gt;
+    &lt;img src="https://tistory3.daumcdn.net/tistory/2933724/skin/images/watch04.jpg" alt=""&gt;
+    &lt;img src="https://tistory3.daumcdn.net/tistory/2933724/skin/images/watch05.jpg" alt=""&gt;
+    &lt;img src="https://tistory3.daumcdn.net/tistory/2933724/skin/images/watch06.jpg" alt=""&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+</div>
+<!-- sample -->
+
+<div class="sample">
+    <h5>Total<span class="dot"><i></i><i></i><i></i></span></h5>
+    <div class="html on">
+        <pre class="line-numbers"><code class="language-markup">&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;jQuery Sample&lt;/title&gt;
+    &lt;style&gt;
+        .select:before {padding: 4px 6px 2px 6px; font-size: 90%; color: #3d90b7; white-space: nowrap; background-color: #e7f6fd; border-radius: 4px;border: 1px dashed #3d90b7;}
+        .rLine {padding: 4px 4px 2px 10px; font-size: 90%; color: #c7254e; white-space: nowrap; background-color: #f9f2f4; border-radius: 4px; border: 1px dashed #a51a3d;}
+        a {border: 1px solid #5f6368; padding: 7px 20px 5px 20px; display: inline-block; border-radius: 20px; text-decoration: none;}
+        .list3.img {padding: 10px 0;}
+        .list3.img img {width: 100px;}
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    
+    &lt;h3&gt;Dimensions&lt;/h3&gt;
+    &lt;div class="list3 img"&gt;
+        &lt;img src="https://tistory3.daumcdn.net/tistory/2933724/skin/images/watch01.jpg" alt=""&gt;
+        &lt;img src="https://tistory3.daumcdn.net/tistory/2933724/skin/images/watch02.jpg" alt=""&gt;
+        &lt;img src="https://tistory3.daumcdn.net/tistory/2933724/skin/images/watch03.jpg" alt=""&gt;
+        &lt;img src="https://tistory3.daumcdn.net/tistory/2933724/skin/images/watch04.jpg" alt=""&gt;
+        &lt;img src="https://tistory3.daumcdn.net/tistory/2933724/skin/images/watch05.jpg" alt=""&gt;
+        &lt;img src="https://tistory3.daumcdn.net/tistory/2933724/skin/images/watch06.jpg" alt=""&gt;
+    &lt;/div&gt;
+    
+    &lt;div class="choice3"&gt;
+        &lt;a href="#" class="off1"&gt;리셋&lt;/a&gt;
+        &lt;a href="#" class="btn1"&gt;클릭하면 사진의 크기를 순차적으로 합니다.&lt;/a&gt;
+    &lt;/div&gt;
+    
+    &lt;script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"&gt;&lt;/script&gt;
+    &lt;script&gt;
+        $(".choice3 .off1").on("click", function(e){
+            e.preventDefault();
+            $(".list3 img").height("").width("");
+        });
+        
+        $(".choice3 .btn1").on("click", function(e){
+            e.preventDefault();
+            $(".list3 img").height(function(index){
+                return (index + 1) * 30;
+            });
+            $(".list3 img").width(function(index){
+                return (index + 1) * 30;
+            });
+        });
+    &lt;/script&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+    </div>
+</div>
+<!-- sample -->
+
+
+<script>
+    $(".choice3 .off1").on("click", function(e){
+        e.preventDefault();
+        $(".list3 img").height("").width("");
+    });
+
+    $(".choice3 .btn1").on("click", function(e){
+        e.preventDefault();
+        $(".list3 img").height(function(index){
+            return (index + 1) * 30;
+        });
+        $(".list3 img").width(function(index){
+            return (index + 1) * 30;
+        });
+    });
+</script>
+<!-- //Sample3 -->
+
+
+
+
+   
+   
+<h4 class="pt50">호환성(Compatibility)</h4>
+<div class="table-responsive">
+    <table class="table table-bordered table-striped table-hover compatibility">
+        <thead>
+            <tr>
+                <th class="ce">메서드</th>
+                <th class="ce">버전</th>
+                <th scope="col"><img src="https://tistory1.daumcdn.net/tistory/2933724/skin/images/icon-chrome1.png" alt="크롬 아이콘" title="크롬 브라우저"></th>
+                <th scope="col"><img src="https://tistory3.daumcdn.net/tistory/2933724/skin/images/icon-firefox1.png" alt="파이어폭스 아이콘" title="파이어폭스 브라우저"></th>
+                <th scope="col"><img src="https://tistory1.daumcdn.net/tistory/2933724/skin/images/icon-safari1.png" alt="사파리 아이콘" title="사파리 브라우저"></th>
+                <th scope="col"><img src="https://tistory3.daumcdn.net/tistory/2933724/skin/images/icon-opera1.png" alt="오페라 아이콘" title="오페라 브라우저"></th>
+                <th scope="col"><img src="https://tistory1.daumcdn.net/tistory/2933724/skin/images/icon-whale1.png" alt="네이버 웨일" title="네이버 웨일 브라우저"></th>
+                <th scope="col"><img src="https://tistory4.daumcdn.net/tistory/2933724/skin/images/icon-ie6.png" alt="익스플로러6 아이콘" title="인터넷 익스플로러6 브라우저"><em>6</em></th>
+                <th scope="col"><img src="https://tistory2.daumcdn.net/tistory/2933724/skin/images/icon-ie7.png" alt="익스플로러7 아이콘" title="인터넷 익스플로러7 브라우저"><em>7</em></th>
+                <th scope="col"><img src="https://tistory2.daumcdn.net/tistory/2933724/skin/images/icon-ie7.png" alt="익스플로러8 아이콘" title="인터넷 익스플로러8 브라우저"><em>8</em></th>
+                <th scope="col"><img src="https://tistory2.daumcdn.net/tistory/2933724/skin/images/icon-ie9.png" alt="익스플로러9 아이콘" title="인터넷 익스플로러9 브라우저"><em>9</em></th>
+                <th scope="col"><img src="https://tistory2.daumcdn.net/tistory/2933724/skin/images/icon-ie10.png" alt="익스플로러10 아이콘" title="인터넷 익스플로러10 브라우저"><em>10</em></th>
+                <th scope="col"><img src="https://tistory2.daumcdn.net/tistory/2933724/skin/images/icon-ie11.png" alt="익스플로러11 아이콘" title="인터넷 익스플로러11 브라우저"><em>11</em></th>
+                <th scope="col"><img src="https://tistory1.daumcdn.net/tistory/2933724/skin/images/icon-edge.png" alt="엣지 아이콘" title="엣지 브라우저"></th>
+                <th scope="col"><img src="https://tistory2.daumcdn.net/tistory/2933724/skin/images/icon-android.png" alt="안드로이드 아이콘" title="모바일 안드로이드 브라우저"></th>
+                <th scope="col"><img src="https://tistory2.daumcdn.net/tistory/2933724/skin/images/icon-ios.png" alt="ios 아이콘" title="모바일 아이폰 브라우저"></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="ce" scope="row" rowspan="3">width()</td>
+                <td class="ce">jQeury 1.x 버전</td>
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 크롬 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 파이어폭스 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 사파리 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 오페라 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 네이버 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 익스플로러6 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 익스플로러7 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 익스플로러8 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 익스플로러9 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 익스플로러10 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 익스플로러11 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 엣지 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 안드로이드 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- IOS -->
+            </tr>
+            <tr>
+                <td class="ce">jQeury 2.x 버전</td>
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 크롬 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 파이어폭스 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 사파리 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 오페라 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 네이버 -->
+                <td class="no"><span title="사용 할 수 없습니다.">사용안됨</span></td><!-- 익스플로러6 -->
+                <td class="no"><span title="사용 할 수 없습니다.">사용안됨</span></td><!-- 익스플로러7 -->
+                <td class="no"><span title="사용 할 수 없습니다.">사용안됨</span></td><!-- 익스플로러8 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 익스플로러9 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 익스플로러10 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 익스플로러11 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 엣지 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 안드로이드 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- IOS -->
+            </tr>
+            <tr>
+                <td class="ce">jQeury 3.x 버전</td>
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 크롬 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 파이어폭스 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 사파리 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 오페라 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 네이버 -->
+                <td class="no"><span title="사용 할 수 없습니다.">사용안됨</span></td><!-- 익스플로러6 -->
+                <td class="no"><span title="사용 할 수 없습니다.">사용안됨</span></td><!-- 익스플로러7 -->
+                <td class="no"><span title="사용 할 수 없습니다.">사용안됨</span></td><!-- 익스플로러8 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 익스플로러9 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 익스플로러10 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 익스플로러11 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 엣지 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 안드로이드 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- IOS -->
+            </tr>
+        </tbody>
+    </table>
+</div>

@@ -1,0 +1,256 @@
+
+<h2>&lt;code&gt;</h2>
+<p>&lt;code&gt; 태그는 코드를 나타내는 텍스트를 설정합니다.</p>
+
+<hr>
+
+<h3>&lt;code&gt;</h3>
+<p class="blue">&lt;code&gt; 태그는 코드를 나타내는 텍스트를 설정합니다.</p>
+
+<div class="table-responsive">
+    <table class="table table-bordered table-striped table-hover">
+        <colgroup>
+            <col style="width: 30%">
+            <col style="width: 70%">
+        </colgroup>
+        <thead>
+            <tr>
+                <th>특징</th>
+                <th>설명</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th><a href="http://webzz.tistory.com/225">요소</a></th>
+                <td><a href="http://webzz.tistory.com/225">인라인 요소(Inline Element)</a></td>
+            </tr>
+            <tr>
+                <th><a href="http://webzz.tistory.com/225">닫는 태그</a></th>
+                <td>닫는 태그 사용(&lt;code&gt; ~ &lt;/code&gt;)</td>
+            </tr>
+            <tr>
+                <th><a href="http://webzz.tistory.com/228">버전</a></th>
+                <td>HTML4</td>
+            </tr>
+            <tr>
+                <th>시각적 표현</th>
+                <td>monospace 글꼴</td>
+            </tr>
+            <tr>
+                <th>사용성</th>
+                <td>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star-o" aria-hidden="true"></i>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+
+<h4 class="pt50">정의(Definition)</h4>
+<ul>
+    <li>&lt;code&gt; 태그는 코드를 나타내는 텍스트를 설정합니다.</li>
+    <li>&lt;code&gt; 태그는 브라우저의 기본 글꼴 및 고정 폭으로 표현됩니다. CSS를 설정하면 기본 글꼴은 무시됩니다.</li>
+    <li>&lt;code&gt; 태그는 사용시 화면 여백을 그대로 표현하기 위해서 <a href="http://webzz.tistory.com/313">&lt;pre&gt;</a> 태그를 같이 사용합니다.</li>
+</ul>
+
+<h4 class="pt50">비교(Compare)</h4>
+<ul>
+    <li>컴퓨터 소스 코드를 나타내는 텍스트는 <a href="http://webzz.tistory.com/253">&lt;code&gt;</a> 태그를 사용합니다.</li>
+    <li>수학적인 변수나 프로그램의 변수를 나타내는 텍스트는 <a href="http://webzz.tistory.com/350">&lt;var&gt;</a> 태그를 사용합니다.</li>
+    <li>컴퓨터 프로그램으로 출력된 결과물을 나타내는 텍스트는 <a href="http://webzz.tistory.com/321">&lt;samp&gt;</a> 태그를 사용합니다.</li>
+    <li>키보드 입력요소를 나타내는 텍스트는 <a href="http://webzz.tistory.com/288">&lt;kbd&gt;</a> 태그를 사용합니다.</li>
+</ul>
+
+<style>
+    .sampleView .code {
+        color: #FF4B4C;
+        border-bottom: 1px solid #FF4B4C;
+    }
+</style>
+<!-- Sample1 -->
+<h4 class="pt50">예제1(Sample)</h4>
+<div class="sample">
+    <h5>코드를 표현하는 예제입니다. <span class="dot"><i></i><i></i><i></i></span></h5>
+    <div class="sampleView">
+        <!-- ex -->
+        <div>
+            <p><code class="code">.add()</code> 메서드는 선택된 요소와 새로운 요소를 추가적으로 효과를 줍니다. <code class="code">add()</code>는 선택자, 객체, HTML 요소 등을 선택할 수 있습니다.</p>
+        </div>
+        <!-- ex -->
+    </div>
+    <div class="sampleCode">
+        <div class="scMenu">
+            <div>HTML</div>
+            <div>CSS</div>
+            <div>SCRIPT</div>
+        </div>
+        <div class="scCont">
+            <div class="active">
+<pre class="line-numbers"><code class="language-markup">&lt;p&gt;&lt;code&gt;.add()&lt;/code&gt; 메서드는 선택된 요소와 새로운 요소를 추가적으로 효과를 줍니다. &lt;code&gt;add()&lt;/code&gt;는 선택자, 객체, HTML 요소 등을 선택할 수 있습니다.&lt;/p&gt;
+</code></pre>
+            </div>
+            <div>
+<pre class="line-numbers"><code class="language-css">
+</code></pre>
+            </div>
+            <div>
+<pre class="line-numbers"><code class="language-script">//Javascript none
+</code></pre>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- //Sample1 -->
+
+
+
+
+<!-- Sample2 -->
+<h4 class="pt50">예제2(Sample)</h4>
+<div class="sample">
+    <h5>&lt;pre&gt; 태그와 소스 코드를 표현하는 예제입니다. <span class="dot"><i></i><i></i><i></i></span></h5>
+    <div class="sampleView">
+        <!-- ex -->
+        <div>
+<pre><code>&lt;pre&gt;&lt;code&gt;    
+    &lt;h3&gt;소스 코드 표현 방법&lt;/h3&gt;
+    &lt;p&gt;&lt;code&gt;.add()&lt;/code&gt; 메서드는 선택된 요소와 새로운 요소를 추가적으로 효과를 줍니다. &lt;code&gt;add()&lt;/code&gt;는 선택자, 객체, HTML 요소 등을 선택할 수 있습니다.&lt;/p&gt;
+&lt;/pre&gt;&lt;/code&gt;
+</code></pre>  
+        </div>
+        <!-- ex -->
+    </div>
+    <div class="sampleCode">
+        <div class="scMenu">
+            <div>HTML</div>
+            <div>CSS</div>
+            <div>SCRIPT</div>
+        </div>
+        <div class="scCont">
+            <div class="active">
+<pre class="line-numbers"><code class="language-markup">&lt;pre&gt;&lt;code&gt;    
+    &lt;h3&gt;소스 코드 표현 방법&lt;/h3&gt;
+    &lt;p&gt;&lt;code&gt;.add()&lt;/code&gt; 메서드는 선택된 요소와 새로운 요소를 추가적으로 효과를 줍니다. &lt;code&gt;add()&lt;/code&gt;는 선택자, 객체, HTML 요소 등을 선택할 수 있습니다.&lt;/p&gt;
+&lt;/pre&gt;&lt;/code&gt;
+</code></pre>
+            </div>
+            <div>
+<pre class="line-numbers"><code class="language-css">//css none
+</code></pre>
+            </div>
+            <div>
+<pre class="line-numbers"><code class="language-script">//Javascript none
+</code></pre>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- //Sample2 -->
+
+
+<!-- Sample3 -->
+<h4 class="pt50">예제3(Sample)</h4>
+<div class="sample">
+    <h5>&lt;pre&gt; 태그와 플러그인(prismjs.com)을 이용한 소스 코드를 표현하는 예제입니다. <span class="dot"><i></i><i></i><i></i></span></h5>
+    <div class="sampleView p0">
+        <!-- ex -->
+        <div>
+<pre class="line-numbers"><code class="language-markup">&lt;pre&gt;&lt;code&gt;    
+    &lt;h3&gt;소스 코드 표현 방법&lt;/h3&gt;
+    &lt;p&gt;&lt;code&gt;.add()&lt;/code&gt; 메서드는 선택된 요소와 새로운 요소를 추가적으로 효과를 줍니다. &lt;code&gt;add()&lt;/code&gt;는 선택자, 객체, HTML 요소 등을 선택할 수 있습니다.&lt;/p&gt;
+&lt;/pre&gt;&lt;/code&gt;
+</code></pre>  
+        </div>
+        <!-- ex -->
+    </div>
+    <div class="sampleCode">
+        <div class="scMenu">
+            <div>HTML</div>
+            <div>CSS</div>
+            <div>SCRIPT</div>
+        </div>
+        <div class="scCont">
+            <div class="active">
+<pre class="line-numbers"><code class="language-markup">&lt;pre class="line-numbers"&gt;&lt;code class="language-markup"&gt;    
+    &lt;h3&gt;소스 코드 표현 방법&lt;/h3&gt;
+    &lt;p&gt;&lt;code&gt;.add()&lt;/code&gt; 메서드는 선택된 요소와 새로운 요소를 추가적으로 효과를 줍니다. &lt;code&gt;add()&lt;/code&gt;는 선택자, 객체, HTML 요소 등을 선택할 수 있습니다.&lt;/p&gt;
+&lt;/pre&gt;&lt;/code&gt;
+</code></pre>
+            </div>
+            <div>
+<pre class="line-numbers"><code class="language-css">//css none
+</code></pre>
+            </div>
+            <div>
+<pre class="line-numbers"><code class="language-script">//Javascript none
+</code></pre>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- //Sample3 -->
+
+
+
+
+
+
+<h4 class="pt50"><a href="http://webzz.tistory.com/227">호환성(Compatibility)</a></h4>
+<div class="table-responsive">
+    <table class="table table-bordered table-striped table-hover compatibility">
+        <colgroup>
+            <col style="width:20%" />
+        </colgroup>
+        <thead>
+            <tr>
+                <th></th>
+                <th scope="col"><img src="https://tistory1.daumcdn.net/tistory/2933724/skin/images/icon-chrome1.png" alt="크롬 아이콘" title="크롬 브라우저"></th>
+                <th scope="col"><img src="https://tistory3.daumcdn.net/tistory/2933724/skin/images/icon-firefox1.png" alt="파이어폭스 아이콘" title="파이어폭스 브라우저"></th>
+                <th scope="col"><img src="https://tistory1.daumcdn.net/tistory/2933724/skin/images/icon-safari1.png" alt="사파리 아이콘" title="사파리 브라우저"></th>
+                <th scope="col"><img src="https://tistory3.daumcdn.net/tistory/2933724/skin/images/icon-opera1.png" alt="오페라 아이콘" title="오페라 브라우저"></th>
+                <th scope="col"><img src="https://tistory1.daumcdn.net/tistory/2933724/skin/images/icon-whale1.png" alt="네이버 웨일" title="네이버 웨일 브라우저"></th>
+                <th scope="col"><img src="https://tistory4.daumcdn.net/tistory/2933724/skin/images/icon-ie6.png" alt="익스플로러6 아이콘" title="인터넷 익스플로러6 브라우저"><em>6</em></th>
+                <th scope="col"><img src="https://tistory2.daumcdn.net/tistory/2933724/skin/images/icon-ie7.png" alt="익스플로러7 아이콘" title="인터넷 익스플로러7 브라우저"><em>7</em></th>
+                <th scope="col"><img src="https://tistory2.daumcdn.net/tistory/2933724/skin/images/icon-ie7.png" alt="익스플로러8 아이콘" title="인터넷 익스플로러8 브라우저"><em>8</em></th>
+                <th scope="col"><img src="https://tistory2.daumcdn.net/tistory/2933724/skin/images/icon-ie9.png" alt="익스플로러9 아이콘" title="인터넷 익스플로러9 브라우저"><em>9</em></th>
+                <th scope="col"><img src="https://tistory2.daumcdn.net/tistory/2933724/skin/images/icon-ie10.png" alt="익스플로러10 아이콘" title="인터넷 익스플로러10 브라우저"><em>10</em></th>
+                <th scope="col"><img src="https://tistory2.daumcdn.net/tistory/2933724/skin/images/icon-ie11.png" alt="익스플로러11 아이콘" title="인터넷 익스플로러11 브라우저"><em>11</em></th>
+                <th scope="col"><img src="https://tistory1.daumcdn.net/tistory/2933724/skin/images/icon-edge.png" alt="엣지 아이콘" title="엣지 브라우저"></th>
+                <th scope="col"><img src="https://tistory2.daumcdn.net/tistory/2933724/skin/images/icon-android.png" alt="안드로이드 아이콘" title="모바일 안드로이드 브라우저"></th>
+                <th scope="col"><img src="https://tistory2.daumcdn.net/tistory/2933724/skin/images/icon-ios.png" alt="ios 아이콘" title="모바일 아이폰 브라우저"></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td scope="row" class="ce">&lt;code&gt;</td>
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 크롬 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 파이어폭스 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 사파리 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 오페라 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 네이버 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 익스플로러6 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 익스플로러7 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 익스플로러8 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 익스플로러9 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 익스플로러10 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 익스플로러11 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 엣지 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 안드로이드 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- IOS -->
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+
+<h4 class="pt30">참고 사이트(Reference)</h4>
+<ul>
+    <li><a href="https://developer.mozilla.org/ko/docs/Web/HTML/Element/code">MDN</a></li>
+    <li><a href="https://www.w3.org/TR/html52/textlevel-semantics.html#the-code-element">w3</a></li>
+</ul>
+
+
+<hr>

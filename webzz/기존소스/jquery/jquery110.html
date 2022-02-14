@@ -1,0 +1,746 @@
+
+        
+<style>
+    .select {color: #fff;height: 36px;min-width: 250px;margin-bottom: 10px;white-space: nowrap;font-size: inherit;border: 0 none;background: #444;}
+    .form_inline .form_group {display: inline-block; vertical-align: middle;}
+    .ui_input {border: 1px solid #d9d9d9; width: 200px; height: 26px; font-size: 13px; text-indent: 14px; background: #f8f8f8; vertical-align: middle;}
+    .ui_select {background: #F8F8F8; height: 32px; border: 1px solid #d9d9d9; padding: 0 5px; border-radius: 0; font-size: 13px;}
+    .ir_su {overflow: hidden; position: absolute; width: 0; height: 0; line-height: 0; text-indent: -9999px;}
+</style>  
+
+<h2>.val()</h2>
+<p>선택한 폼 요소의 속성 값을 설정하거나 반환합니다.</p>
+
+<hr>
+
+<h3>.val()</h3>
+<p class="blue">선택한 폼 요소의 속성 값을 설정하거나 반환합니다.</p>
+
+<h5>문법</h5>
+<p class="blue">
+$("선택자").val();<br>
+$("선택자").val("속성");<br>
+$("선택자").val("함수");<br>
+</p>
+
+<h5>정의</h5>
+<ul>
+    <li>.val() 메서드는 선택한 요소의 속성 값을 가져옵니다.</li>
+    <li>.val() 메서드는 선택한 요소의 속성 값을 변경합니다.</li>
+    <li>.val() 메서드는 선택한 요소의 함수를 설정합니다.</li>
+</ul>
+
+<style>
+.input {min-width: 300px; height: 20px; padding: 5px 10px; margin: 10px; background: #f9f9f9; border:1px solid #dbdbdb; font-size: 14px; }    
+.select {color: #fff; height: 36px; min-width: 250px; margin-bottom: 10px; white-space: nowrap; font-size: inherit; border: 0 none; background: #444;}
+</style>
+
+<!-- Sample1 -->
+<h4 class="pt50">Sample1 <span><a href="https://webstoryboy.github.io/jquery/sample110-1.html" target="_blank"><img src="https://tistory3.daumcdn.net/tistory/2933724/skin/images/blank.gif" class="blank_icon"></a></span></h4>
+<p>input의 속성 값에 텍스트를 넣어주는 예제입니다.</p>
+<div class="sample">
+    <h5>결과<span class="dot"><i></i><i></i><i></i></span></h5>
+    <div class="ex">
+        <!-- ex -->
+        <h3>속성(Attributes)</h3>
+        <div class="list1">
+            INPUT :<input type="text" value="클릭하세요!" class="input">
+        </div>
+        <!-- ex -->
+    </div>
+    
+    <div class="choice1">
+        <a href="#" class="off1">리셋</a>
+        <a href="#" class="btn1">클릭하면 input 박스에 글씨를 넣어줍니다.</a>
+        <a href="#" class="btn2">클릭하면 input 박스에 두번 째 글씨를 넣어줍니다.</a>
+    </div>
+</div>
+<!-- sample -->
+
+
+<div class="sample">
+    <h5>jquery<span class="dot"><i></i><i></i><i></i></span></h5>
+    <div class="script">
+        <pre class="line-numbers"><code class="language-javascript">$(".choice1 .btn1").click(function() {
+    $(".list1 .input").val( $( this ).text() );
+});
+$(".choice1 .btn2").click(function() {
+    $(".list1 .input").val( $( this ).text() );
+});</code></pre>
+    </div>
+</div>
+<!-- sample -->
+
+<div class="sample">
+    <h5>html<span class="dot"><i></i><i></i><i></i></span></h5>
+    <div class="html">
+        <pre class="line-numbers"><code class="language-markup">&lt;h3&gt;속성(Attributes)&lt;/h3&gt;
+&lt;div class="list1"&gt;
+    INPUT :&lt;input type="text" value="클릭하세요!" class="input"&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+</div>
+<!-- sample -->
+
+<div class="sample">
+    <h5>Total<span class="dot"><i></i><i></i><i></i></span></h5>
+    <div class="html on">
+        <pre class="line-numbers"><code class="language-markup">&lt;!DOCTYPE html&gt;
+&lt;html lang="ko"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;jQuery Sample&lt;/title&gt;
+    &lt;style&gt;
+        .input {min-width: 300px; height: 20px; padding: 5px 10px; margin: 10px; background: #f9f9f9; border:1px solid #dbdbdb; font-size: 14px; }
+        a {border: 1px solid #5f6368; padding: 7px 20px 5px 20px; display: inline-block; border-radius: 20px; text-decoration: none;}
+&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+   
+    &lt;h3&gt;속성(Attributes)&lt;/h3&gt;
+    &lt;div class="list1"&gt;
+        INPUT :&lt;input type="text" value="클릭하세요!" class="input"&gt;
+    &lt;/div&gt;
+    
+    &lt;div class="choice1"&gt;
+        &lt;a href="#" class="off1"&gt;리셋&lt;/a&gt;
+        &lt;a href="#" class="btn1"&gt;클릭하면 input 박스에 글씨를 넣어줍니다.&lt;/a&gt;
+        &lt;a href="#" class="btn2"&gt;클릭하면 input 박스에 두번 째 글씨를 넣어줍니다.&lt;/a&gt;
+    &lt;/div&gt;
+    
+    &lt;script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"&gt;&lt;/script&gt;
+    &lt;script&gt;
+        $(".choice1 .off1").click(function() {
+            $(".list1 .input").val( "클릭하세요!" );
+        });
+        $(".choice1 .btn1").click(function() {
+            $(".list1 .input").val( $( this ).text() );
+        });
+        $(".choice1 .btn2").click(function() {
+            $(".list1 .input").val( $( this ).text() );
+        });
+    &lt;/script&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+    </div>
+</div>
+<!-- sample -->
+
+
+<script>
+    $(".choice1 .off1").click(function(e) {
+        e.preventDefault();
+        $(".list1 .input").val( "클릭하세요!" );
+    });
+    $(".choice1 .btn1").click(function(e) {
+        e.preventDefault();
+        $(".list1 .input").val( $( this ).text() );
+    });
+    $(".choice1 .btn2").click(function(e) {
+        e.preventDefault();
+        $(".list1 .input").val( $( this ).text() );
+    });
+</script>
+<!-- //Sample1 -->
+
+
+
+
+<!-- Sample2 -->
+<h4 class="pt50">Sample2 <span><a href="https://webstoryboy.github.io/jquery/sample110-2.html" target="_blank"><img src="https://tistory3.daumcdn.net/tistory/2933724/skin/images/blank.gif" class="blank_icon"></a></span></h4>
+<p>셀렉트 메뉴를 선택하고 속성 값을 출력하는 예제입니다.</p>
+<div class="sample">
+    <h5>결과<span class="dot"><i></i><i></i><i></i></span></h5>
+    <div class="ex">
+        <!-- ex -->
+        <h3>속성(Attributes)</h3>
+        <div class="list2">
+            SELECT :
+            <select name="select1" id="select1" class="select">
+                <option>.attr()</option>
+                <option>.prop()</option>
+                <option>.removeAttr()</option>
+                <option>.removeProp()</option>
+                <option>.val()</option>
+            </select>
+            <p class="desc"></p>
+        </div>
+        <!-- ex -->
+    </div>
+    
+    <div class="choice2">
+        <a href="#" class="off1">리셋</a>
+        <a href="#" class="btn1">셀렉트 메뉴를 선택하고 클릭하면 select 박스의 값을 가져옵니다.</a>
+    </div>
+</div>
+<!-- sample -->
+
+
+<div class="sample">
+    <h5>jquery<span class="dot"><i></i><i></i><i></i></span></h5>
+    <div class="script on">
+        <pre class="line-numbers"><code class="language-javascript">$(".choice2 .btn1").click(function() {
+    $(".list2 .desc").text( $( "#select1" ).val() );
+});</code></pre>
+    </div>
+</div>
+<!-- sample -->
+
+<div class="sample">
+    <h5>html<span class="dot"><i></i><i></i><i></i></span></h5>
+    <div class="html">
+        <pre class="line-numbers"><code class="language-markup">&lt;h3&gt;속성(Attributes)&lt;/h3&gt;
+&lt;div class="list2"&gt;
+    SELECT :
+    &lt;select name="select1" id="select1" class="select"&gt;
+        &lt;option&gt;.attr()&lt;/option&gt;
+        &lt;option&gt;.prop()&lt;/option&gt;
+        &lt;option&gt;.removeAttr()&lt;/option&gt;
+        &lt;option&gt;.removeProp()&lt;/option&gt;
+        &lt;option&gt;.val()&lt;/option&gt;
+    &lt;/select&gt;
+    &lt;p class="desc"&gt;&lt;/p&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+</div>
+<!-- sample -->
+
+<div class="sample">
+    <h5>Total<span class="dot"><i></i><i></i><i></i></span></h5>
+    <div class="html on">
+        <pre class="line-numbers"><code class="language-markup">&lt;!DOCTYPE html&gt;
+&lt;html lang="ko"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;jQuery Sample&lt;/title&gt;
+    &lt;style&gt;
+        .select {color: #fff; height: 36px; min-width: 250px; margin-bottom: 10px; white-space: nowrap; font-size: inherit; border: 0 none; background: #444;}
+        a {border: 1px solid #5f6368; padding: 7px 20px 5px 20px; display: inline-block; border-radius: 20px; text-decoration: none;}
+&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+   
+    &lt;h3&gt;속성(Attributes)&lt;/h3&gt;
+    &lt;div class="list2"&gt;
+        SELECT :
+        &lt;select name="select1" id="select1" class="select"&gt;
+            &lt;option&gt;.attr()&lt;/option&gt;
+            &lt;option&gt;.prop()&lt;/option&gt;
+            &lt;option&gt;.removeAttr()&lt;/option&gt;
+            &lt;option&gt;.removeProp()&lt;/option&gt;
+            &lt;option&gt;.val()&lt;/option&gt;
+        &lt;/select&gt;
+        &lt;p class="desc"&gt;&lt;/p&gt;
+    &lt;/div&gt;
+    
+    &lt;div class="choice2"&gt;
+        &lt;a href="#" class="off1"&gt;리셋&lt;/a&gt;
+        &lt;a href="#" class="btn1"&gt;셀렉트 메뉴를 선택하고 클릭하면 select 박스의 값을 가져옵니다.&lt;/a&gt;
+    &lt;/div&gt;
+    
+    &lt;script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"&gt;&lt;/script&gt;
+    &lt;script&gt;
+        $(".list2 .desc").text( $( "#select1" ).val() );
+        
+        $(".choice2 .off1").click(function() {
+            $(".list2 .desc").text( $( "#select1" ).val() );
+        });
+        $(".choice2 .btn1").click(function() {
+            $(".list2 .desc").text( $( "#select1" ).val() );
+        });
+    &lt;/script&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+    </div>
+</div>
+<!-- sample -->
+
+
+<script>
+    $(".list2 .desc").text( $( "#select1" ).val() );
+
+    $(".choice2 .off1").click(function(e) {
+        e.preventDefault();
+        $(".list2 .desc").text( $( "#select1" ).val() );
+    });
+    $(".choice2 .btn1").click(function(e) {
+        e.preventDefault();
+        $(".list2 .desc").text( $( "#select1" ).val() );
+    });
+</script>
+<!-- //Sample2 -->
+
+
+
+
+
+
+
+<!-- Sample3 -->
+<h4 class="pt50">Sample3 <span><a href="https://webstoryboy.github.io/jquery/sample110-3.html" target="_blank"><img src="https://tistory3.daumcdn.net/tistory/2933724/skin/images/blank.gif" class="blank_icon"></a></span></h4>
+<p>이메일을 선택하면 텍스트를 넣어주는 예제입니다.</p>
+<div class="sample">
+    <h5>Sample3<span class="dot"><i></i><i></i><i></i></span></h5>
+    <div class="ex">
+        <!-- ex -->
+        <h3>이메일주소 입력하기</h3>
+        <div class="form_inline">
+            <div class="form_group">
+                <label for="user_email1" class="ir_su">이메일 아이디</label>
+                <input type="text" id="user_email1" name="user_email1" class="ui_input">
+            </div>
+            <div class="form_group"> @ </div>
+            <div class="form_group">
+                <label for="user_email2" class="ir_su">이메일 주소</label>
+                <input type="text" id="user_email2" name="user_email2" class="ui_input">
+            </div>
+            <div class="form_group">
+                <label for="user_email3" class="ir_su">메일 선택</label>
+                <select id="user_email3" name="user_email3" title="이메일 주소 선택" class="ui_select">
+                    <option value=""> :: 이메일주소 직접입력 :: </option>
+                    <option value="naver.com">naver.com</option>
+                    <option value="nate.com">nate.com</option>
+                    <option value="gmail.com">gmail.com</option>
+                    <option value="yahoo.com">yahoo.com</option>
+                    <option value="hanmail.net">hanmail.net</option>
+                </select>
+            </div>
+        </div>
+        <!-- ex -->
+    </div>
+</div>
+<!-- sample -->
+
+
+<div class="sample">
+    <h5>jquery<span class="dot"><i></i><i></i><i></i></span></h5>
+    <div class="script on">
+        <pre class="line-numbers"><code class="language-javascript">$( "#user_email3" ).change(function(){
+    $("#user_email2").val( $("#user_email3").val() );
+});</code></pre>
+    </div>
+</div>
+<!-- sample -->
+
+<div class="sample">
+    <h5>html<span class="dot"><i></i><i></i><i></i></span></h5>
+    <div class="html">
+        <pre class="line-numbers"><code class="language-markup">&lt;h3&gt;이메일주소 입력하기&lt;/h3&gt;
+&lt;div class="form_inline"&gt;
+    &lt;div class="form_group"&gt;
+        &lt;label for="user_email1" class="ir_su"&gt;이메일 아이디&lt;/label&gt;
+        &lt;input type="text" id="user_email1" name="user_email1" class="ui_input"&gt;
+    &lt;/div&gt;
+    &lt;div class="form_group"&gt; @ &lt;/div&gt;
+    &lt;div class="form_group"&gt;
+        &lt;label for="user_email2" class="ir_su"&gt;이메일 주소&lt;/label&gt;
+        &lt;input type="text" id="user_email2" name="user_email2" class="ui_input"&gt;
+    &lt;/div&gt;
+    &lt;div class="form_group"&gt;
+        &lt;label for="user_email3" class="ir_su"&gt;메일 선택&lt;/label&gt;
+        &lt;select id="user_email3" name="user_email3" title="이메일 주소 선택" class="ui_select"&gt;
+            &lt;option value=""&gt; :: 이메일주소 직접입력 :: &lt;/option&gt;
+            &lt;option value="naver.com"&gt;naver.com&lt;/option&gt;
+            &lt;option value="nate.com"&gt;nate.com&lt;/option&gt;
+            &lt;option value="gmail.com"&gt;gmail.com&lt;/option&gt;
+            &lt;option value="yahoo.com"&gt;yahoo.com&lt;/option&gt;
+            &lt;option value="hanmail.net"&gt;hanmail.net&lt;/option&gt;
+        &lt;/select&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+</div>
+<!-- sample -->
+
+<div class="sample">
+    <h5>css<span class="dot"><i></i><i></i><i></i></span></h5>
+    <div class="html">
+        <pre class="line-numbers"><code class="language-css">.select {color: #fff; height: 36px; min-width: 250px; margin-bottom: 10px; white-space: nowrap; font-size: inherit; border: 0 none; background: #444;}
+.form_inline .form_group {display: inline-block; vertical-align: middle;}
+.ui_input {border: 1px solid #d9d9d9; width: 200px; height: 26px; font-size: 13px; text-indent: 14px; background: #f8f8f8; vertical-align: middle;}
+.ui_select {background: #F8F8F8; height: 32px; border: 1px solid #d9d9d9; padding: 0 5px; border-radius: 0; font-size: 13px;}
+.ir_su {overflow: hidden; position: absolute; width: 0; height: 0; line-height: 0; text-indent: -9999px;}</code></pre>
+    </div>
+</div>
+<!-- sample -->
+
+<div class="sample">
+    <h5>Total<span class="dot"><i></i><i></i><i></i></span></h5>
+    <div class="html on">
+        <pre class="line-numbers"><code class="language-markup">&lt;!DOCTYPE html&gt;
+&lt;html lang="ko"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;jQuery Sample&lt;/title&gt;
+    &lt;style&gt;
+        .select {color: #fff;height: 36px;min-width: 250px;margin-bottom: 10px;white-space: nowrap;font-size: inherit;border: 0 none;background: #444;}
+        .form_inline .form_group {display: inline-block; vertical-align: middle;}
+        .ui_input {border: 1px solid #d9d9d9; width: 200px; height: 26px; font-size: 13px; text-indent: 14px; background: #f8f8f8; vertical-align: middle;}
+        .ui_select {background: #F8F8F8; height: 32px; border: 1px solid #d9d9d9; padding: 0 5px; border-radius: 0; font-size: 13px;}
+        .ir_su {overflow: hidden; position: absolute; width: 0; height: 0; line-height: 0; text-indent: -9999px;}
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+   
+    &lt;h3&gt;이메일주소 입력하기&lt;/h3&gt;
+    &lt;div class="form_inline"&gt;
+        &lt;div class="form_group"&gt;
+            &lt;label for="user_email1" class="ir_su"&gt;이메일 아이디&lt;/label&gt;
+            &lt;input type="text" id="user_email1" name="user_email1" class="ui_input"&gt;
+        &lt;/div&gt;
+        &lt;div class="form_group"&gt; @ &lt;/div&gt;
+        &lt;div class="form_group"&gt;
+            &lt;label for="user_email2" class="ir_su"&gt;이메일 주소&lt;/label&gt;
+            &lt;input type="text" id="user_email2" name="user_email2" class="ui_input"&gt;
+        &lt;/div&gt;
+        &lt;div class="form_group"&gt;
+            &lt;label for="user_email3" class="ir_su"&gt;메일 선택&lt;/label&gt;
+            &lt;select id="user_email3" name="user_email3" title="이메일 주소 선택" class="ui_select"&gt;
+                &lt;option value=""&gt; :: 이메일주소 직접입력 :: &lt;/option&gt;
+                &lt;option value="naver.com"&gt;naver.com&lt;/option&gt;
+                &lt;option value="nate.com"&gt;nate.com&lt;/option&gt;
+                &lt;option value="gmail.com"&gt;gmail.com&lt;/option&gt;
+                &lt;option value="yahoo.com"&gt;yahoo.com&lt;/option&gt;
+                &lt;option value="hanmail.net"&gt;hanmail.net&lt;/option&gt;
+            &lt;/select&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    
+    &lt;script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"&gt;&lt;/script&gt;
+    &lt;script&gt;
+        $( "#user_email3" ).change(function(){
+            $("#user_email2").val( $("#user_email3").val() );
+        });
+    &lt;/script&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+    </div>
+</div>
+<!-- sample -->
+
+
+<script>
+    $( "#user_email3" ).change(function(){
+        $("#user_email2").val( $("#user_email3").val() );
+    });
+</script>
+<!-- //Sample3 -->
+
+
+
+<!-- Sample4 -->
+<h4 class="pt50">Sample4 <span><a href="https://webstoryboy.github.io/jquery/sample110-4.html" target="_blank"><img src="https://tistory3.daumcdn.net/tistory/2933724/skin/images/blank.gif" class="blank_icon"></a></span></h4>
+<p>셀렉트 메뉴 선택하면 해당 주소로 이동하는 예제입니다.</p>
+<div class="sample">
+    <h5>결과<span class="dot"><i></i><i></i><i></i></span></h5>
+    <div class="ex">
+        <!-- ex -->
+        <h3>셀렉트 메뉴 선택하기</h3>
+        <div class="address">
+            <select name="select1" id="address" class="select">
+                <option value="https://www.naver.com/">네이버</option>
+                <option value="https://www.daum.net/">다음</option>
+                <option value="https://www.nate.com/">네이트</option>
+                <option value="https://www.google.co.kr/">구글</option>
+            </select>
+        </div>
+        <!-- ex -->
+    </div>
+</div>
+<!-- sample -->
+
+
+<div class="sample">
+    <h5>jquery<span class="dot"><i></i><i></i><i></i></span></h5>
+    <div class="script on">
+        <pre class="line-numbers"><code class="language-javascript"> $("#address").change(function(){
+    var url = $(this).val();
+    if(url){
+        location.href= url;
+    }
+});</code></pre>
+    </div>
+</div>
+<!-- sample -->
+
+<div class="sample">
+    <h5>html<span class="dot"><i></i><i></i><i></i></span></h5>
+    <div class="html">
+        <pre class="line-numbers"><code class="language-markup">&lt;h3&gt;셀렉트 메뉴 주소로 바로 이동하기&lt;/h3&gt;
+&lt;div class="address"&gt;
+    &lt;select name="select1" id="address" class="select"&gt;
+        &lt;option value="https://www.naver.com/"&gt;네이버&lt;/option&gt;
+        &lt;option value="https://www.daum.net/"&gt;다음&lt;/option&gt;
+        &lt;option value="https://www.nate.com/"&gt;네이트&lt;/option&gt;
+        &lt;option value="https://www.google.co.kr/"&gt;구글&lt;/option&gt;
+    &lt;/select&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+</div>
+<!-- sample -->
+
+<div class="sample">
+    <h5>css<span class="dot"><i></i><i></i><i></i></span></h5>
+    <div class="html">
+        <pre class="line-numbers"><code class="language-css">.select {color: #fff;height: 36px;min-width: 250px;margin-bottom: 10px;white-space: nowrap;font-size: inherit;border: 0 none;background: #444;}
+a {border: 1px solid #5f6368; padding: 7px 20px 5px 20px; display: inline-block; border-radius: 20px; text-decoration: none;}</code></pre>
+    </div>
+</div>
+<!-- sample -->
+
+<div class="sample">
+    <h5>Total<span class="dot"><i></i><i></i><i></i></span></h5>
+    <div class="html on">
+        <pre class="line-numbers"><code class="language-markup">&lt;!DOCTYPE html&gt;
+&lt;html lang="ko"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;jQuery Sample&lt;/title&gt;
+    &lt;style&gt;
+        .select {color: #fff; height: 36px; min-width: 250px; margin-bottom: 10px; white-space: nowrap; font-size: inherit; border: 0 none; background: #444;}
+        a {border: 1px solid #5f6368; padding: 7px 20px 5px 20px; display: inline-block; border-radius: 20px; text-decoration: none;}
+&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+   
+    &lt;h3&gt;셀렉트 메뉴 주소로 바로 이동하기&lt;/h3&gt;
+    &lt;div class="address"&gt;
+        &lt;select name="select1" id="address" class="select"&gt;
+            &lt;option value="https://www.naver.com/"&gt;네이버&lt;/option&gt;
+            &lt;option value="https://www.daum.net/"&gt;다음&lt;/option&gt;
+            &lt;option value="https://www.nate.com/"&gt;네이트&lt;/option&gt;
+            &lt;option value="https://www.google.co.kr/"&gt;구글&lt;/option&gt;
+        &lt;/select&gt;
+    &lt;/div&gt;
+    
+    &lt;script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"&gt;&lt;/script&gt;
+    &lt;script&gt;
+        $("#address").change(function(){
+            var url = $(this).val();
+            if(url){
+                location.href= url;
+            }
+        });
+&lt;/script&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+    </div>
+</div>
+<!-- sample -->
+
+
+<script>
+    $("#address").change(function(){
+        var url = $(this).val();
+        if(url){
+            location.href= url;
+        }
+    });
+</script>
+<!-- //Sample4 -->
+
+
+
+   
+   
+<!-- Sample5 -->
+<h4 class="pt50">Sample5 <span><a href="https://webstoryboy.github.io/jquery/sample110-5.html" target="_blank"><img src="https://tistory3.daumcdn.net/tistory/2933724/skin/images/blank.gif" class="blank_icon"></a></span></h4>
+<p>폰트를 선택하는 예제입니다.</p>
+<div class="sample">
+    <h5>결과<span class="dot"><i></i><i></i><i></i></span></h5>
+    <div class="ex">
+        <!-- ex -->
+        <div class="font">
+            <select name="select1" id="font" class="select">
+                <option value="'Nanum Gothic','나눔고딕'">나눔고딕</option>
+                <option value="'Nanum Myeongjo','나눔명조'">나눔명조</option>
+                <option value="'Malgun Gothic','맑은고딕'">맑은고딕</option>
+                <option value="dotum,'돋움'">돋움</option>
+                <option value="gulim,'굴림'">굴림</option>
+                <option value="Gungsuh,'궁서'">궁서</option>
+            </select>
+            <p class="desc">금속을 활용한 기획 및 디자인 굿즈를 주로 제작하지만 다양한 분야와의 협업 및 프로젝트를 진행하기도 한다. 2016년 을지로에 자리 잡은 이후에는 직접 디자인한 제품들을 지역 내 소공장에서 제작하는 '을지생산'이라는 제품 디자인 프로젝트를 진행하고 있다. <br>
+            Design is the creation of a plan or convention for the construction of an object, system or measurable human interaction (as in architectural blueprints, engineering drawings, business processes, circuit diagrams, and sewing patterns).[1] Design has different connotations in different fields (see design disciplines below). In some cases, the direct construction of an object (as in pottery, engineering, management, coding, and graphic design) is also considered to use design thinking.</p>
+        </div>
+        <!-- ex -->
+    </div>
+</div>
+<!-- sample -->
+
+
+<div class="sample">
+    <h5>jquery<span class="dot"><i></i><i></i><i></i></span></h5>
+    <div class="script on">
+        <pre class="line-numbers"><code class="language-javascript">$("#font").change(function(){
+    $(".font .desc").css("font-family",$(this).val());
+});</code></pre>
+    </div>
+</div>
+<!-- sample -->
+
+<div class="sample">
+    <h5>html<span class="dot"><i></i><i></i><i></i></span></h5>
+    <div class="html">
+        <pre class="line-numbers"><code class="language-markup">&lt;h3&gt;폰트 선택하기&lt;/h3&gt;
+&lt;div class="font"&gt;
+    &lt;select name="select1" id="font" class="select"&gt;
+        &lt;option value="'Nanum Gothic','나눔고딕'"&gt;나눔고딕&lt;/option&gt;
+        &lt;option value="'Nanum Myeongjo','나눔명조'"&gt;나눔명조&lt;/option&gt;
+        &lt;option value="'Malgun Gothic','맑은고딕'"&gt;맑은고딕&lt;/option&gt;
+        &lt;option value="dotum,'돋움'"&gt;돋움&lt;/option&gt;
+        &lt;option value="gulim,'굴림'"&gt;굴림&lt;/option&gt;
+        &lt;option value="Gungsuh,'궁서'"&gt;궁서&lt;/option&gt;
+    &lt;/select&gt;
+    &lt;p class="desc"&gt;금속을 활용한 기획 및 디자인 굿즈를 주로 제작하지만 다양한 분야와의 협업 및 프로젝트를 진행하기도 한다. 2016년 을지로에 자리 잡은 이후에는 직접 디자인한 제품들을 지역 내 소공장에서 제작하는 '을지생산'이라는 제품 디자인 프로젝트를 진행하고 있다. &lt;br&gt;
+    Design is the creation of a plan or convention for the construction of an object, system or measurable human interaction (as in architectural blueprints, engineering drawings, business processes, circuit diagrams, and sewing patterns).[1] Design has different connotations in different fields (see design disciplines below). In some cases, the direct construction of an object (as in pottery, engineering, management, coding, and graphic design) is also considered to use design thinking.&lt;/p&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+</div>
+<!-- sample -->
+
+<div class="sample">
+    <h5>css<span class="dot"><i></i><i></i><i></i></span></h5>
+    <div class="html">
+        <pre class="line-numbers"><code class="language-css">.select {color: #fff;height: 36px; min-width: 250px; margin-bottom: 10px; white-space: nowrap; font-size: inherit; border: 0 none; background: #444;}
+a {border: 1px solid #5f6368; padding: 7px 20px 5px 20px; display: inline-block; border-radius: 20px; text-decoration: none;}</code></pre>
+    </div>
+</div>
+<!-- sample -->
+
+<div class="sample">
+    <h5>Total<span class="dot"><i></i><i></i><i></i></span></h5>
+    <div class="html on">
+        <pre class="line-numbers"><code class="language-markup">&lt;!DOCTYPE html&gt;
+&lt;html lang="ko"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;jQuery Sample&lt;/title&gt;
+    &lt;style&gt;
+        .select {color: #fff; height: 36px; min-width: 250px; margin-bottom: 10px; white-space: nowrap; font-size: inherit; border: 0 none; background: #444;}
+        a {border: 1px solid #5f6368; padding: 7px 20px 5px 20px; display: inline-block; border-radius: 20px; text-decoration: none;}
+&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+   
+    &lt;h3&gt;폰트 선택하기&lt;/h3&gt;
+    &lt;div class="font"&gt;
+        &lt;select name="select1" id="font" class="select"&gt;
+            &lt;option value="'Nanum Gothic','나눔고딕'"&gt;나눔고딕&lt;/option&gt;
+            &lt;option value="'Nanum Myeongjo','나눔명조'"&gt;나눔명조&lt;/option&gt;
+            &lt;option value="'Malgun Gothic','맑은고딕'"&gt;맑은고딕&lt;/option&gt;
+            &lt;option value="dotum,'돋움'"&gt;돋움&lt;/option&gt;
+            &lt;option value="gulim,'굴림'"&gt;굴림&lt;/option&gt;
+            &lt;option value="Gungsuh,'궁서'"&gt;궁서&lt;/option&gt;
+        &lt;/select&gt;
+        &lt;p class="desc"&gt;금속을 활용한 기획 및 디자인 굿즈를 주로 제작하지만 다양한 분야와의 협업 및 프로젝트를 진행하기도 한다. 2016년 을지로에 자리 잡은 이후에는 직접 디자인한 제품들을 지역 내 소공장에서 제작하는 '을지생산'이라는 제품 디자인 프로젝트를 진행하고 있다. &lt;br&gt;
+        Design is the creation of a plan or convention for the construction of an object, system or measurable human interaction (as in architectural blueprints, engineering drawings, business processes, circuit diagrams, and sewing patterns).[1] Design has different connotations in different fields (see design disciplines below). In some cases, the direct construction of an object (as in pottery, engineering, management, coding, and graphic design) is also considered to use design thinking.&lt;/p&gt;
+    &lt;/div&gt;
+    
+    &lt;script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"&gt;&lt;/script&gt;
+    &lt;script&gt;
+        $("#font").change(function(){
+            $(".font .desc").css("font-family",$(this).val());
+        });
+    &lt;/script&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+    </div>
+</div>
+<!-- sample -->
+
+
+<script>
+    $("#font").change(function(){
+        $(".font .desc").css("font-family",$(this).val());
+    });
+</script>
+<!-- //Sample5 -->
+
+
+  
+
+
+<h4 class="pt50">호환성(Compatibility)</h4>
+<div class="table-responsive">
+    <table class="table table-bordered table-striped table-hover compatibility">
+        <thead>
+            <tr>
+                <th class="ce">메서드</th>
+                <th class="ce">버전</th>
+                <th scope="col"><img src="https://tistory1.daumcdn.net/tistory/2933724/skin/images/icon-chrome1.png" alt="크롬 아이콘" title="크롬 브라우저"></th>
+                <th scope="col"><img src="https://tistory3.daumcdn.net/tistory/2933724/skin/images/icon-firefox1.png" alt="파이어폭스 아이콘" title="파이어폭스 브라우저"></th>
+                <th scope="col"><img src="https://tistory1.daumcdn.net/tistory/2933724/skin/images/icon-safari1.png" alt="사파리 아이콘" title="사파리 브라우저"></th>
+                <th scope="col"><img src="https://tistory3.daumcdn.net/tistory/2933724/skin/images/icon-opera1.png" alt="오페라 아이콘" title="오페라 브라우저"></th>
+                <th scope="col"><img src="https://tistory1.daumcdn.net/tistory/2933724/skin/images/icon-whale1.png" alt="네이버 웨일" title="네이버 웨일 브라우저"></th>
+                <th scope="col"><img src="https://tistory4.daumcdn.net/tistory/2933724/skin/images/icon-ie6.png" alt="익스플로러6 아이콘" title="인터넷 익스플로러6 브라우저"><em>6</em></th>
+                <th scope="col"><img src="https://tistory2.daumcdn.net/tistory/2933724/skin/images/icon-ie7.png" alt="익스플로러7 아이콘" title="인터넷 익스플로러7 브라우저"><em>7</em></th>
+                <th scope="col"><img src="https://tistory2.daumcdn.net/tistory/2933724/skin/images/icon-ie7.png" alt="익스플로러8 아이콘" title="인터넷 익스플로러8 브라우저"><em>8</em></th>
+                <th scope="col"><img src="https://tistory2.daumcdn.net/tistory/2933724/skin/images/icon-ie9.png" alt="익스플로러9 아이콘" title="인터넷 익스플로러9 브라우저"><em>9</em></th>
+                <th scope="col"><img src="https://tistory2.daumcdn.net/tistory/2933724/skin/images/icon-ie10.png" alt="익스플로러10 아이콘" title="인터넷 익스플로러10 브라우저"><em>10</em></th>
+                <th scope="col"><img src="https://tistory2.daumcdn.net/tistory/2933724/skin/images/icon-ie11.png" alt="익스플로러11 아이콘" title="인터넷 익스플로러11 브라우저"><em>11</em></th>
+                <th scope="col"><img src="https://tistory1.daumcdn.net/tistory/2933724/skin/images/icon-edge.png" alt="엣지 아이콘" title="엣지 브라우저"></th>
+                <th scope="col"><img src="https://tistory2.daumcdn.net/tistory/2933724/skin/images/icon-android.png" alt="안드로이드 아이콘" title="모바일 안드로이드 브라우저"></th>
+                <th scope="col"><img src="https://tistory2.daumcdn.net/tistory/2933724/skin/images/icon-ios.png" alt="ios 아이콘" title="모바일 아이폰 브라우저"></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="ce" scope="row" rowspan="3">val()</td>
+                <td class="ce">jQeury 1.x 버전</td>
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 크롬 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 파이어폭스 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 사파리 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 오페라 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 네이버 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 익스플로러6 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 익스플로러7 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 익스플로러8 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 익스플로러9 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 익스플로러10 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 익스플로러11 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 엣지 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 안드로이드 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- IOS -->
+            </tr>
+            <tr>
+                <td class="ce">jQeury 2.x 버전</td>
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 크롬 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 파이어폭스 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 사파리 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 오페라 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 네이버 -->
+                <td class="no"><span title="사용 할 수 없습니다.">사용안됨</span></td><!-- 익스플로러6 -->
+                <td class="no"><span title="사용 할 수 없습니다.">사용안됨</span></td><!-- 익스플로러7 -->
+                <td class="no"><span title="사용 할 수 없습니다.">사용안됨</span></td><!-- 익스플로러8 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 익스플로러9 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 익스플로러10 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 익스플로러11 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 엣지 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 안드로이드 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- IOS -->
+            </tr>
+            <tr>
+                <td class="ce">jQeury 3.x 버전</td>
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 크롬 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 파이어폭스 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 사파리 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 오페라 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 네이버 -->
+                <td class="no"><span title="사용 할 수 없습니다.">사용안됨</span></td><!-- 익스플로러6 -->
+                <td class="no"><span title="사용 할 수 없습니다.">사용안됨</span></td><!-- 익스플로러7 -->
+                <td class="no"><span title="사용 할 수 없습니다.">사용안됨</span></td><!-- 익스플로러8 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 익스플로러9 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 익스플로러10 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 익스플로러11 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 엣지 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 안드로이드 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- IOS -->
+            </tr>
+        </tbody>
+    </table>
+</div>

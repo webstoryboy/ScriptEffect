@@ -1,0 +1,998 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://tistory4.daumcdn.net/tistory/2933724/skin/images/font.css">
+    <link rel="stylesheet" href="https://tistory4.daumcdn.net/tistory/2933724/skin/images/font-awesome.css">
+    <style>
+        @font-face {
+            font-family: 'S-CoreDream-3Light';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-3Light.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
+        h4 {
+            font-family: 'S-CoreDream-3Light';
+        }
+        .sample {
+            border: 1px solid #e6e6e6;
+            border-radius: 5px;
+            color: #666;
+            margin-bottom: 10px;
+            font-family: 'S-CoreDream-3Light';
+        }
+        .sample a {
+            text-decoration: none;
+            color: #666;
+        }
+        .sample h5 {
+            position: relative;
+            margin: 0;
+            border-bottom: 1px solid #e6e6e6;
+            background: #f2f2f2;
+            border-radius: 5px 5px 0 0;
+            padding: 12px 10px 10px 20px !important;
+            font-size: 16px !important;
+        }
+        .sample h5 .dot{
+            position: absolute;
+            right: 10px;
+            top: 12px;
+        }
+        .sample h5 .fa {
+            cursor: pointer;
+            display: inline-block;
+        }
+        .sample h5 .dot i {
+            display: inline-block;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: #aaa;
+            margin: 2px;
+        }
+        .sample .sampleOption {
+            border-bottom: 1px solid #e6e6e6;
+            padding: 20px;
+        }
+        .sample .sampleOption .option {
+            display: inline-block;
+            border: 1px solid #e6e6e6;
+            border-radius: 100px;
+        }
+        .sample .sampleOption .option .one {
+            border-radius: 100px;
+            border-radius: 100px;
+            white-space: nowrap;
+            padding: 10px 20px;
+            display: inline-block;
+            color: #666;
+        }
+        .sample .sampleOption .option .left {
+            border-right: 1px solid #e6e6e6;
+            padding-right: 1px solid #e6e6e6;
+            padding: 10px 14px 8px 20px;
+            display: inline-block;
+        }
+        .sample .sampleOption .option .right {
+            padding: 6px 20px 2px 10px;
+            display: inline-block;
+            vertical-align: -2px;
+        }
+        .sample .sampleOption .option .right i {
+            display: inline-block;
+            cursor: pointer;
+            font-size: 20px;
+            margin: 3px;
+        }
+        .sample .sampleView {
+            border-bottom: 1px solid #e6e6e6;
+            padding: 20px;
+        }
+        .entry-content .sample .sampleView p {
+            padding: 0 !important; margin: 0 !important;
+        }
+        .sample .sampleBtn {
+            border-bottom: 1px solid #e6e6e6;
+            padding: 20px 20px 10px 20px;
+        }
+        .sample .sampleDesc {
+            border-bottom: 1px solid #e6e6e6;
+            padding: 20px 20px 10px 20px;
+        }
+        .sample .sampleDesc span {
+            border: 1px solid #e6e6e6;
+            border-radius: 100px;
+            white-space: nowrap;
+            padding: 10px 20px;
+            display: inline-block;
+            margin-bottom: 10px;
+        }
+        .sample .sampleBtn a {
+            border: 1px solid #e6e6e6;
+            border-radius: 100px;
+            white-space: nowrap;
+            padding: 10px 20px;
+            display: inline-block;
+            margin-bottom: 10px;
+            transition: all 0.2s
+        }
+        .sample .sampleBtn a:hover {
+            border-color: #FF4B4B;
+        }
+        
+        .sample .sampleCode .scMenu > div.active {color: #FF4B49; }
+        .sample .sampleCode .scMenu > div {display: inline-block; border-right: 1px solid #e6e6e6; padding: 13px 20px 10px 20px; cursor:pointer}
+        .sample .sampleCode .scCont > div {display: none}
+        
+       
+        /* start */
+        .animation-box {
+            counter-reset: items;
+        }
+        .animation-box .box {
+            width: 60px;
+            height: 60px;
+            line-height: 60px;
+            text-align: center;
+            border-radius: 50%;
+            color: #fff;
+            position: relative;
+            font-size: 12px;
+            overflow: hidden;
+            margin: 10px;
+            background-color: #A2CBFA;
+            border: 1px solid #4390E1;
+            box-shadow: 0 2px 2px rgba(0,90,250,0.05), 0 4px 4px rgba(0,90,250,0.05), 0 8px 8px rgba(0,90,250,0.05), 0 16px 16px rgba(0,90,250,0.05);
+        }
+        .animation-box .box::before {
+            counter-increment: items;
+            content: counter(items);
+        }
+        .sampleBtn.show a {pointer-events: none; user-select: none;}
+
+        /* start */
+        .filter-box {overflow: hidden;}
+        .filter-box img {width: 20%; display: block; float: left;}
+        .filter-box.blur img:nth-child(1) {filter: blur(0)}
+        .filter-box.blur img:nth-child(2) {filter: blur(1px)}
+        .filter-box.blur img:nth-child(3) {filter: blur(3px)}
+        .filter-box.blur img:nth-child(4) {filter: blur(5px)}
+        .filter-box.blur img:nth-child(5) {filter: blur(10px)}
+
+        .filter-box.brightness img:nth-child(1) {filter: brightness(100%)}
+        .filter-box.brightness img:nth-child(2) {filter: brightness(75%)}
+        .filter-box.brightness img:nth-child(3) {filter: brightness(50%)}
+        .filter-box.brightness img:nth-child(4) {filter: brightness(25%)}
+        .filter-box.brightness img:nth-child(5) {filter: brightness(0%)}
+
+        .filter-box.contrast img:nth-child(1) {filter: contrast(100%)}
+        .filter-box.contrast img:nth-child(2) {filter: contrast(75%)}
+        .filter-box.contrast img:nth-child(3) {filter: contrast(50%)}
+        .filter-box.contrast img:nth-child(4) {filter: contrast(25%)}
+        .filter-box.contrast img:nth-child(5) {filter: contrast(0%)}
+
+        .filter-box.grayscale img:nth-child(1) {filter: grayscale(0%)}
+        .filter-box.grayscale img:nth-child(2) {filter: grayscale(25%)}
+        .filter-box.grayscale img:nth-child(3) {filter: grayscale(50%)}
+        .filter-box.grayscale img:nth-child(4) {filter: grayscale(75%)}
+        .filter-box.grayscale img:nth-child(5) {filter: grayscale(100%)}
+
+        .filter-box.hue-rotate img:nth-child(1) {filter: hue-rotate(0deg)}
+        .filter-box.hue-rotate img:nth-child(2) {filter: hue-rotate(30deg)}
+        .filter-box.hue-rotate img:nth-child(3) {filter: hue-rotate(60deg)}
+        .filter-box.hue-rotate img:nth-child(4) {filter: hue-rotate(90deg)}
+        .filter-box.hue-rotate img:nth-child(5) {filter: hue-rotate(120deg)}
+
+        .filter-box.invert img:nth-child(1) {filter: invert(0%)}
+        .filter-box.invert img:nth-child(2) {filter: invert(25%)}
+        .filter-box.invert img:nth-child(3) {filter: invert(50%)}
+        .filter-box.invert img:nth-child(4) {filter: invert(75%)}
+        .filter-box.invert img:nth-child(5) {filter: invert(100%)}
+
+        .filter-box.opacity img:nth-child(1) {filter: opacity(100%)}
+        .filter-box.opacity img:nth-child(2) {filter: opacity(75%)}
+        .filter-box.opacity img:nth-child(3) {filter: opacity(50%)}
+        .filter-box.opacity img:nth-child(4) {filter: opacity(25%)}
+        .filter-box.opacity img:nth-child(5) {filter: opacity(0%)}
+
+        .filter-box.saturate img:nth-child(1) {filter: saturate(0%)}
+        .filter-box.saturate img:nth-child(2) {filter: saturate(50%)}
+        .filter-box.saturate img:nth-child(3) {filter: saturate(100%)}
+        .filter-box.saturate img:nth-child(4) {filter: saturate(150%)}
+        .filter-box.saturate img:nth-child(5) {filter: saturate(200%)}
+
+        .filter-box.sepia img:nth-child(1) {filter: sepia(0%)}
+        .filter-box.sepia img:nth-child(2) {filter: sepia(20%)}
+        .filter-box.sepia img:nth-child(3) {filter: sepia(60%)}
+        .filter-box.sepia img:nth-child(4) {filter: sepia(100%)}
+        .filter-box.sepia img:nth-child(5) {filter: sepia(140%)}
+
+        .filter-box.drop-shadow img:nth-child(1) {filter: drop-shadow(0px 0px 0px black)}
+        .filter-box.drop-shadow img:nth-child(2) {filter: drop-shadow(2px 2px 2px black)}
+        .filter-box.drop-shadow img:nth-child(3) {filter: drop-shadow(4px 4px 4px black)}
+        .filter-box.drop-shadow img:nth-child(4) {filter: drop-shadow(6px 6px 6px black)}
+        .filter-box.drop-shadow img:nth-child(5) {filter: drop-shadow(8px 8px 8px black)}
+
+        .sampleView.drop img {margin: 2%; width: 16%}
+        
+        
+        .sampleOption a {
+            width: 41px; height: 41px;
+            border-radius: 50%;
+            display: inline-block;
+            text-align: center;
+            line-height: 41px;
+            background-position: center;
+            background-size: cover;
+        }
+        .sampleOption a:nth-child(1){background-image: url(https://tistory1.daumcdn.net/tistory/2933724/skin/images/hover04.jpg);}
+        .sampleOption a:nth-child(2){background-image: url(https://tistory1.daumcdn.net/tistory/2933724/skin/images/hover05.jpg);}
+        .sampleOption a:nth-child(3){background-image: url(https://tistory1.daumcdn.net/tistory/2933724/skin/images/hover06.jpg);}
+        .sampleOption a:nth-child(4){background-image: url(https://tistory1.daumcdn.net/tistory/2933724/skin/images/hover07.jpg);}
+    </style>
+</head>
+<body>
+
+<!-- sample1 -->
+<h4 class="pt50">예제1(Sample)</h4>
+<div class="sample">
+    <h5>blur의 이미지 효과 예제입니다.</h5>
+    <div class="sampleView">
+        <!-- ex -->
+        <div class="filter-box">
+            <div class="box">
+                <img src="https://tistory1.daumcdn.net/tistory/2933724/skin/images/hover04.jpg" alt="fiter 효과">
+                <img src="https://tistory1.daumcdn.net/tistory/2933724/skin/images/hover04.jpg" alt="fiter 효과">
+                <img src="https://tistory1.daumcdn.net/tistory/2933724/skin/images/hover04.jpg" alt="fiter 효과">
+                <img src="https://tistory1.daumcdn.net/tistory/2933724/skin/images/hover04.jpg" alt="fiter 효과">
+                <img src="https://tistory1.daumcdn.net/tistory/2933724/skin/images/hover04.jpg" alt="fiter 효과">
+            </div>
+        </div>
+        <!-- ex -->
+    </div>
+    <div class="sampleBtn blur">
+        <a href="#">효과 없애기</a>
+        <a href="#" class="blur">효과 주기</a>
+    </div>
+    <div class="sampleOption">
+        <a href="#" data-value="hover04"></a>
+        <a href="#" data-value="hover05"></a>
+        <a href="#" data-value="hover06"></a>
+        <a href="#" data-value="hover07"></a>
+    </div>
+    <div class="sampleCode">
+        <div class="scMenu">
+            <div>HTML</div>
+            <div>CSS</div>
+            <div>SCRIPT</div>
+        </div>
+        <div class="scCont">
+            <div>
+<pre class="line-numbers"><code class="language-markup">&&lt;div class="filter-box"&gt;
+    &lt;div class="box"&gt;
+        &lt;img src="../images/hover04.jpg" alt="fiter 효과"&gt;
+        &lt;img src="../images/hover04.jpg" alt="fiter 효과"&gt;
+        &lt;img src="../images/hover04.jpg" alt="fiter 효과"&gt;
+        &lt;img src="../images/hover04.jpg" alt="fiter 효과"&gt;
+        &lt;img src="../images/hover04.jpg" alt="fiter 효과"&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+            </div>
+            <div>
+<pre class="line-numbers"><code class="language-css">img:nth-child(1) {filter: blur(0)}
+img:nth-child(2) {filter: blur(1px)}
+img:nth-child(3) {filter: blur(3px)}
+img:nth-child(4) {filter: blur(5px)}
+img:nth-child(5) {filter: blur(10px)}
+</code></pre>
+            </div>
+            <div>
+<pre class="line-numbers"><code class="language-script">//Javascript none
+</code></pre>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- //sample1 -->
+
+
+<!-- sample2 -->
+<h4 class="pt50">예제2(Sample)</h4>
+<div class="sample">
+    <h5>brightness의 이미지 효과 예제입니다.</h5>
+    <div class="sampleView">
+        <!-- ex -->
+        <div class="filter-box">
+            <div class="box">
+                <img src="https://tistory1.daumcdn.net/tistory/2933724/skin/images/hover05.jpg" alt="fiter 효과">
+                <img src="https://tistory1.daumcdn.net/tistory/2933724/skin/images/hover05.jpg" alt="fiter 효과">
+                <img src="https://tistory1.daumcdn.net/tistory/2933724/skin/images/hover05.jpg" alt="fiter 효과">
+                <img src="https://tistory1.daumcdn.net/tistory/2933724/skin/images/hover05.jpg" alt="fiter 효과">
+                <img src="https://tistory1.daumcdn.net/tistory/2933724/skin/images/hover05.jpg" alt="fiter 효과">
+            </div>
+        </div>
+        <!-- ex -->
+    </div>
+    <div class="sampleBtn brightness">
+        <a href="#">효과 없애기</a>
+        <a href="#" class="brightness">효과 주기</a>
+    </div>
+    <div class="sampleOption">
+        <a href="#" data-value="hover04"></a>
+        <a href="#" data-value="hover05"></a>
+        <a href="#" data-value="hover06"></a>
+        <a href="#" data-value="hover07"></a>
+    </div>
+    <div class="sampleCode">
+        <div class="scMenu">
+            <div>HTML</div>
+            <div>CSS</div>
+            <div>SCRIPT</div>
+        </div>
+        <div class="scCont">
+            <div>
+<pre class="line-numbers"><code class="language-markup">&lt;div class="filter-box"&gt;
+    &lt;div class="box"&gt;
+        &lt;img src="../images/hover04.jpg" alt="fiter 효과"&gt;
+        &lt;img src="../images/hover04.jpg" alt="fiter 효과"&gt;
+        &lt;img src="../images/hover04.jpg" alt="fiter 효과"&gt;
+        &lt;img src="../images/hover04.jpg" alt="fiter 효과"&gt;
+        &lt;img src="../images/hover04.jpg" alt="fiter 효과"&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+            </div>
+            <div>
+<pre class="line-numbers"><code class="language-css">img:nth-child(1) {filter: brightness(100%)}
+img:nth-child(2) {filter: brightness(75%)}
+img:nth-child(3) {filter: brightness(50%)}
+img:nth-child(4) {filter: brightness(25%)}
+img:nth-child(5) {filter: brightness(0%)}
+</code></pre>
+            </div>
+            <div>
+<pre class="line-numbers"><code class="language-script">//Javascript none
+</code></pre>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- //sample2 -->
+
+
+<!-- sample3 -->
+<h4 class="pt50">예제3(Sample)</h4>
+<div class="sample">
+    <h5>contrast 이미지 효과 예제입니다.</h5>
+    <div class="sampleView">
+        <!-- ex -->
+        <div class="filter-box">
+            <div class="box">
+                <img src="https://tistory1.daumcdn.net/tistory/2933724/skin/images/hover06.jpg" alt="fiter 효과">
+                <img src="https://tistory1.daumcdn.net/tistory/2933724/skin/images/hover06.jpg" alt="fiter 효과">
+                <img src="https://tistory1.daumcdn.net/tistory/2933724/skin/images/hover06.jpg" alt="fiter 효과">
+                <img src="https://tistory1.daumcdn.net/tistory/2933724/skin/images/hover06.jpg" alt="fiter 효과">
+                <img src="https://tistory1.daumcdn.net/tistory/2933724/skin/images/hover06.jpg" alt="fiter 효과">
+            </div>
+        </div>
+        <!-- ex -->
+    </div>
+    <div class="sampleBtn contrast">
+        <a href="#">효과 없애기</a>
+        <a href="#" class="contrast">효과 주기</a>
+    </div>
+    <div class="sampleOption">
+        <a href="#" data-value="hover04"></a>
+        <a href="#" data-value="hover05"></a>
+        <a href="#" data-value="hover06"></a>
+        <a href="#" data-value="hover07"></a>
+    </div>
+    <div class="sampleCode">
+        <div class="scMenu">
+            <div>HTML</div>
+            <div>CSS</div>
+            <div>SCRIPT</div>
+        </div>
+        <div class="scCont">
+            <div>
+<pre class="line-numbers"><code class="language-markup">&lt;div class="filter-box"&gt;
+    &lt;div class="box"&gt;
+        &lt;img src="../images/hover04.jpg" alt="fiter 효과"&gt;
+        &lt;img src="../images/hover04.jpg" alt="fiter 효과"&gt;
+        &lt;img src="../images/hover04.jpg" alt="fiter 효과"&gt;
+        &lt;img src="../images/hover04.jpg" alt="fiter 효과"&gt;
+        &lt;img src="../images/hover04.jpg" alt="fiter 효과"&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+            </div>
+            <div>
+<pre class="line-numbers"><code class="language-css">img:nth-child(1) {filter: contrast(100%)}
+img:nth-child(2) {filter: contrast(75%)}
+img:nth-child(3) {filter: contrast(50%)}
+img:nth-child(4) {filter: contrast(25%)}
+img:nth-child(5) {filter: contrast(0%)}
+</code></pre>
+            </div>
+            <div>
+<pre class="line-numbers"><code class="language-script">//Javascript none
+</code></pre>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- //sample3 -->
+
+
+<!-- sample4 -->
+<h4 class="pt50">예제4(Sample)</h4>
+<div class="sample">
+    <h5>grayscale 이미지 효과 예제입니다.</h5>
+    <div class="sampleView">
+        <!-- ex -->
+        <div class="filter-box">
+            <div class="box">
+                <img src="https://tistory1.daumcdn.net/tistory/2933724/skin/images/hover07.jpg" alt="fiter 효과">
+                <img src="https://tistory1.daumcdn.net/tistory/2933724/skin/images/hover07.jpg" alt="fiter 효과">
+                <img src="https://tistory1.daumcdn.net/tistory/2933724/skin/images/hover07.jpg" alt="fiter 효과">
+                <img src="https://tistory1.daumcdn.net/tistory/2933724/skin/images/hover07.jpg" alt="fiter 효과">
+                <img src="https://tistory1.daumcdn.net/tistory/2933724/skin/images/hover07.jpg" alt="fiter 효과">
+            </div>
+        </div>
+        <!-- ex -->
+    </div>
+    <div class="sampleBtn grayscale">
+        <a href="#">효과 없애기</a>
+        <a href="#" class="grayscale">효과 주기</a>
+    </div>
+    <div class="sampleOption">
+        <a href="#" data-value="hover04"></a>
+        <a href="#" data-value="hover05"></a>
+        <a href="#" data-value="hover06"></a>
+        <a href="#" data-value="hover07"></a>
+    </div>
+    <div class="sampleCode">
+        <div class="scMenu">
+            <div>HTML</div>
+            <div>CSS</div>
+            <div>SCRIPT</div>
+        </div>
+        <div class="scCont">
+            <div>
+<pre class="line-numbers"><code class="language-markup">&lt;div class="filter-box"&gt;
+    &lt;div class="box"&gt;
+        &lt;img src="../images/hover04.jpg" alt="fiter 효과"&gt;
+        &lt;img src="../images/hover04.jpg" alt="fiter 효과"&gt;
+        &lt;img src="../images/hover04.jpg" alt="fiter 효과"&gt;
+        &lt;img src="../images/hover04.jpg" alt="fiter 효과"&gt;
+        &lt;img src="../images/hover04.jpg" alt="fiter 효과"&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+            </div>
+            <div>
+<pre class="line-numbers"><code class="language-css">img:nth-child(1) {filter: grayscale(0%)}
+img:nth-child(2) {filter: grayscale(75%)}
+img:nth-child(3) {filter: grayscale(50%)}
+img:nth-child(4) {filter: grayscale(25%)}
+img:nth-child(5) {filter: grayscale(0%)}
+</code></pre>
+            </div>
+            <div>
+<pre class="line-numbers"><code class="language-script">//Javascript none
+</code></pre>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- //sample4 -->
+
+
+<!-- sample5 -->
+<h4 class="pt50">예제5(Sample)</h4>
+<div class="sample">
+    <h5>hue-rotate 이미지 효과 예제입니다.</h5>
+    <div class="sampleView">
+        <!-- ex -->
+        <div class="filter-box">
+            <div class="box">
+                <img src="https://tistory1.daumcdn.net/tistory/2933724/skin/images/hover08.jpg" alt="fiter 효과">
+                <img src="https://tistory1.daumcdn.net/tistory/2933724/skin/images/hover08.jpg" alt="fiter 효과">
+                <img src="https://tistory1.daumcdn.net/tistory/2933724/skin/images/hover08.jpg" alt="fiter 효과">
+                <img src="https://tistory1.daumcdn.net/tistory/2933724/skin/images/hover08.jpg" alt="fiter 효과">
+                <img src="https://tistory1.daumcdn.net/tistory/2933724/skin/images/hover08.jpg" alt="fiter 효과">
+            </div>
+        </div>
+        <!-- ex -->
+    </div>
+    <div class="sampleBtn hue-rotate">
+        <a href="#">효과 없애기</a>
+        <a href="#" class="hue-rotate">효과 주기</a>
+    </div>
+    <div class="sampleOption">
+        <a href="#" data-value="hover04"></a>
+        <a href="#" data-value="hover05"></a>
+        <a href="#" data-value="hover06"></a>
+        <a href="#" data-value="hover07"></a>
+    </div>
+    <div class="sampleCode">
+        <div class="scMenu">
+            <div>HTML</div>
+            <div>CSS</div>
+            <div>SCRIPT</div>
+        </div>
+        <div class="scCont">
+            <div>
+<pre class="line-numbers"><code class="language-markup">&lt;div class="filter-box"&gt;
+    &lt;div class="box"&gt;
+        &lt;img src="../images/hover04.jpg" alt="fiter 효과"&gt;
+        &lt;img src="../images/hover04.jpg" alt="fiter 효과"&gt;
+        &lt;img src="../images/hover04.jpg" alt="fiter 효과"&gt;
+        &lt;img src="../images/hover04.jpg" alt="fiter 효과"&gt;
+        &lt;img src="../images/hover04.jpg" alt="fiter 효과"&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+            </div>
+            <div>
+<pre class="line-numbers"><code class="language-css">img:nth-child(1) {filter: hue-rotate(0deg)}
+img:nth-child(2) {filter: hue-rotate(30deg)}
+img:nth-child(3) {filter: hue-rotate(60deg)}
+img:nth-child(4) {filter: hue-rotate(90deg)}
+img:nth-child(5) {filter: hue-rotate(12deg)}
+</code></pre>
+            </div>
+            <div>
+<pre class="line-numbers"><code class="language-script">//Javascript none
+</code></pre>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- //sample5 -->
+
+
+
+
+
+
+<!-- sample6 -->
+<h4 class="pt50">예제6(Sample)</h4>
+<div class="sample">
+    <h5>invert 이미지 효과 예제입니다.</h5>
+    <div class="sampleView">
+        <!-- ex -->
+        <div class="filter-box">
+            <div class="box">
+                <img src="https://tistory1.daumcdn.net/tistory/2933724/skin/images/hover09.jpg" alt="fiter 효과">
+                <img src="https://tistory1.daumcdn.net/tistory/2933724/skin/images/hover09.jpg" alt="fiter 효과">
+                <img src="https://tistory1.daumcdn.net/tistory/2933724/skin/images/hover09.jpg" alt="fiter 효과">
+                <img src="https://tistory1.daumcdn.net/tistory/2933724/skin/images/hover09.jpg" alt="fiter 효과">
+                <img src="https://tistory1.daumcdn.net/tistory/2933724/skin/images/hover09.jpg" alt="fiter 효과">
+            </div>
+        </div>
+        <!-- ex -->
+    </div>
+    <div class="sampleBtn invert">
+        <a href="#">효과 없애기</a>
+        <a href="#" class="invert">효과 주기</a>
+    </div>
+    <div class="sampleOption">
+        <a href="#" data-value="hover04"></a>
+        <a href="#" data-value="hover05"></a>
+        <a href="#" data-value="hover06"></a>
+        <a href="#" data-value="hover07"></a>
+    </div>
+    <div class="sampleCode">
+        <div class="scMenu">
+            <div>HTML</div>
+            <div>CSS</div>
+            <div>SCRIPT</div>
+        </div>
+        <div class="scCont">
+            <div>
+<pre class="line-numbers"><code class="language-markup">&lt;div class="filter-box"&gt;
+    &lt;div class="box"&gt;
+        &lt;img src="../images/hover04.jpg" alt="fiter 효과"&gt;
+        &lt;img src="../images/hover04.jpg" alt="fiter 효과"&gt;
+        &lt;img src="../images/hover04.jpg" alt="fiter 효과"&gt;
+        &lt;img src="../images/hover04.jpg" alt="fiter 효과"&gt;
+        &lt;img src="../images/hover04.jpg" alt="fiter 효과"&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+            </div>
+            <div>
+<pre class="line-numbers"><code class="language-css">img:nth-child(1) {filter: invert(0%)}
+img:nth-child(2) {filter: invert(25%)}
+img:nth-child(3) {filter: invert(50%)}
+img:nth-child(4) {filter: invert(75%)}
+img:nth-child(5) {filter: invert(100%)}
+</code></pre>
+            </div>
+            <div>
+<pre class="line-numbers"><code class="language-script">//Javascript none
+</code></pre>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- //sample6 -->
+
+
+
+
+
+<!-- sample7 -->
+<h4 class="pt50">예제7(Sample)</h4>
+<div class="sample">
+    <h5>opacity 이미지 효과 예제입니다.</h5>
+    <div class="sampleView">
+        <!-- ex -->
+        <div class="filter-box">
+            <div class="box">
+                <img src="https://tistory1.daumcdn.net/tistory/2933724/skin/images/hover10.jpg" alt="fiter 효과">
+                <img src="https://tistory1.daumcdn.net/tistory/2933724/skin/images/hover10.jpg" alt="fiter 효과">
+                <img src="https://tistory1.daumcdn.net/tistory/2933724/skin/images/hover10.jpg" alt="fiter 효과">
+                <img src="https://tistory1.daumcdn.net/tistory/2933724/skin/images/hover10.jpg" alt="fiter 효과">
+                <img src="https://tistory1.daumcdn.net/tistory/2933724/skin/images/hover10.jpg" alt="fiter 효과">
+            </div>
+        </div>
+        <!-- ex -->
+    </div>
+    <div class="sampleBtn opacity">
+        <a href="#">효과 없애기</a>
+        <a href="#" class="opacity">효과 주기</a>
+    </div>
+    <div class="sampleOption">
+        <a href="#" data-value="hover04"></a>
+        <a href="#" data-value="hover05"></a>
+        <a href="#" data-value="hover06"></a>
+        <a href="#" data-value="hover07"></a>
+    </div>
+    <div class="sampleCode">
+        <div class="scMenu">
+            <div>HTML</div>
+            <div>CSS</div>
+            <div>SCRIPT</div>
+        </div>
+        <div class="scCont">
+            <div>
+<pre class="line-numbers"><code class="language-markup">&lt;div class="filter-box"&gt;
+    &lt;div class="box"&gt;
+        &lt;img src="../images/hover04.jpg" alt="fiter 효과"&gt;
+        &lt;img src="../images/hover04.jpg" alt="fiter 효과"&gt;
+        &lt;img src="../images/hover04.jpg" alt="fiter 효과"&gt;
+        &lt;img src="../images/hover04.jpg" alt="fiter 효과"&gt;
+        &lt;img src="../images/hover04.jpg" alt="fiter 효과"&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+            </div>
+            <div>
+<pre class="line-numbers"><code class="language-css">img:nth-child(1) {filter: opacity(100%)}
+img:nth-child(2) {filter: opacity(75%)}
+img:nth-child(3) {filter: opacity(50%)}
+img:nth-child(4) {filter: opacity(25%)}
+img:nth-child(5) {filter: opacity(0%)}
+</code></pre>
+            </div>
+            <div>
+<pre class="line-numbers"><code class="language-script">//Javascript none
+</code></pre>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- //sample7 -->
+
+
+
+
+
+<!-- sample8 -->
+<h4 class="pt50">예제8(Sample)</h4>
+<div class="sample">
+    <h5>saturate 이미지 효과 예제입니다.</h5>
+    <div class="sampleView">
+        <!-- ex -->
+        <div class="filter-box">
+            <div class="box">
+                <img src="https://tistory1.daumcdn.net/tistory/2933724/skin/images/hover11.jpg" alt="fiter 효과">
+                <img src="https://tistory1.daumcdn.net/tistory/2933724/skin/images/hover11.jpg" alt="fiter 효과">
+                <img src="https://tistory1.daumcdn.net/tistory/2933724/skin/images/hover11.jpg" alt="fiter 효과">
+                <img src="https://tistory1.daumcdn.net/tistory/2933724/skin/images/hover11.jpg" alt="fiter 효과">
+                <img src="https://tistory1.daumcdn.net/tistory/2933724/skin/images/hover11.jpg" alt="fiter 효과">
+            </div>
+        </div>
+        <!-- ex -->
+    </div>
+    <div class="sampleBtn saturate">
+        <a href="#">효과 없애기</a>
+        <a href="#" class="saturate">효과 주기</a>
+    </div>
+    <div class="sampleOption">
+        <a href="#" data-value="hover04"></a>
+        <a href="#" data-value="hover05"></a>
+        <a href="#" data-value="hover06"></a>
+        <a href="#" data-value="hover07"></a>
+    </div>
+    <div class="sampleCode">
+        <div class="scMenu">
+            <div>HTML</div>
+            <div>CSS</div>
+            <div>SCRIPT</div>
+        </div>
+        <div class="scCont">
+            <div>
+<pre class="line-numbers"><code class="language-markup">&lt;div class="filter-box"&gt;
+    &lt;div class="box"&gt;
+        &lt;img src="../images/hover04.jpg" alt="fiter 효과"&gt;
+        &lt;img src="../images/hover04.jpg" alt="fiter 효과"&gt;
+        &lt;img src="../images/hover04.jpg" alt="fiter 효과"&gt;
+        &lt;img src="../images/hover04.jpg" alt="fiter 효과"&gt;
+        &lt;img src="../images/hover04.jpg" alt="fiter 효과"&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+            </div>
+            <div>
+<pre class="line-numbers"><code class="language-css">img:nth-child(1) {filter: saturate(0%)}
+img:nth-child(2) {filter: saturate(50%)}
+img:nth-child(3) {filter: saturate(100%)}
+img:nth-child(4) {filter: saturate(150%)}
+img:nth-child(5) {filter: saturate(200%)}
+</code></pre>
+            </div>
+            <div>
+<pre class="line-numbers"><code class="language-script">//Javascript none
+</code></pre>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- //sample8 -->
+
+
+
+<!-- sample9 -->
+<h4 class="pt50">예제9(Sample)</h4>
+<div class="sample">
+    <h5>sepia 이미지 효과 예제입니다.</h5>
+    <div class="sampleView">
+        <!-- ex -->
+        <div class="filter-box">
+            <div class="box">
+                <img src="https://tistory1.daumcdn.net/tistory/2933724/skin/images/hover12.jpg" alt="fiter 효과">
+                <img src="https://tistory1.daumcdn.net/tistory/2933724/skin/images/hover12.jpg" alt="fiter 효과">
+                <img src="https://tistory1.daumcdn.net/tistory/2933724/skin/images/hover12.jpg" alt="fiter 효과">
+                <img src="https://tistory1.daumcdn.net/tistory/2933724/skin/images/hover12.jpg" alt="fiter 효과">
+                <img src="https://tistory1.daumcdn.net/tistory/2933724/skin/images/hover12.jpg" alt="fiter 효과">
+            </div>
+        </div>
+        <!-- ex -->
+    </div>
+    <div class="sampleBtn sepia">
+        <a href="#">효과 없애기</a>
+        <a href="#" class="sepia">효과 주기</a>
+    </div>
+    <div class="sampleOption">
+        <a href="#" data-value="hover04"></a>
+        <a href="#" data-value="hover05"></a>
+        <a href="#" data-value="hover06"></a>
+        <a href="#" data-value="hover07"></a>
+    </div>
+    <div class="sampleCode">
+        <div class="scMenu">
+            <div>HTML</div>
+            <div>CSS</div>
+            <div>SCRIPT</div>
+        </div>
+        <div class="scCont">
+            <div>
+<pre class="line-numbers"><code class="language-markup">&lt;div class="filter-box"&gt;
+    &lt;div class="box"&gt;
+        &lt;img src="../images/hover04.jpg" alt="fiter 효과"&gt;
+        &lt;img src="../images/hover04.jpg" alt="fiter 효과"&gt;
+        &lt;img src="../images/hover04.jpg" alt="fiter 효과"&gt;
+        &lt;img src="../images/hover04.jpg" alt="fiter 효과"&gt;
+        &lt;img src="../images/hover04.jpg" alt="fiter 효과"&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+            </div>
+            <div>
+<pre class="line-numbers"><code class="language-css">img:nth-child(1) {filter: sepia(0%)}
+img:nth-child(2) {filter: sepia(20%)}
+img:nth-child(3) {filter: sepia(60%)}
+img:nth-child(4) {filter: sepia(100%)}
+img:nth-child(5) {filter: sepia(140%)}
+</code></pre>
+            </div>
+            <div>
+<pre class="line-numbers"><code class="language-script">//Javascript none
+</code></pre>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- //sample9 -->
+
+
+<!-- sample10 -->
+<h4 class="pt50">예제10(Sample)</h4>
+<div class="sample">
+    <h5>drop-shadow 이미지 효과 예제입니다.</h5>
+    <div class="sampleView drop">
+        <!-- ex -->
+        <div class="filter-box">
+            <div class="box">
+                <img src="https://tistory1.daumcdn.net/tistory/2933724/skin/images/hover13.jpg" alt="fiter 효과">
+                <img src="https://tistory1.daumcdn.net/tistory/2933724/skin/images/hover13.jpg" alt="fiter 효과">
+                <img src="https://tistory1.daumcdn.net/tistory/2933724/skin/images/hover13.jpg" alt="fiter 효과">
+                <img src="https://tistory1.daumcdn.net/tistory/2933724/skin/images/hover13.jpg" alt="fiter 효과">
+                <img src="https://tistory1.daumcdn.net/tistory/2933724/skin/images/hover13.jpg" alt="fiter 효과">
+            </div>
+        </div>
+        <!-- ex -->
+    </div>
+    <div class="sampleBtn drop-shadow">
+        <a href="#">효과 없애기</a>
+        <a href="#" class="drop-shadow">효과 주기</a>
+    </div>
+    <div class="sampleOption">
+        <a href="#" data-value="hover04"></a>
+        <a href="#" data-value="hover05"></a>
+        <a href="#" data-value="hover06"></a>
+        <a href="#" data-value="hover07"></a>
+    </div>
+    <div class="sampleCode">
+        <div class="scMenu">
+            <div>HTML</div>
+            <div>CSS</div>
+            <div>SCRIPT</div>
+        </div>
+        <div class="scCont">
+            <div>
+<pre class="line-numbers"><code class="language-markup">&lt;div class="filter-box"&gt;
+    &lt;div class="box"&gt;
+        &lt;img src="../images/hover04.jpg" alt="fiter 효과"&gt;
+        &lt;img src="../images/hover04.jpg" alt="fiter 효과"&gt;
+        &lt;img src="../images/hover04.jpg" alt="fiter 효과"&gt;
+        &lt;img src="../images/hover04.jpg" alt="fiter 효과"&gt;
+        &lt;img src="../images/hover04.jpg" alt="fiter 효과"&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+            </div>
+            <div>
+<pre class="line-numbers"><code class="language-css">img:nth-child(1) {filter: drop-shadow(0px 0px 0px black)}
+img:nth-child(2) {filter: drop-shadow(2px 2px 2px black)}
+img:nth-child(3) {filter: drop-shadow(4px 4px 4px black)}
+img:nth-child(4) {filter: drop-shadow(6px 6px 6px black)}
+img:nth-child(5) {filter: drop-shadow(8px 8px 8px black)}
+</code></pre>
+            </div>
+            <div>
+<pre class="line-numbers"><code class="language-script">//Javascript none
+</code></pre>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- //sample10 -->
+
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script>
+    $(".sampleBtn.blur a").eq(0).click(function (e) {
+        e.preventDefault();
+        $(this).parent().prev().children().removeClass().addClass("filter-box");
+    });
+    $(".sampleBtn.blur a").eq(1).click(function (e) {
+        e.preventDefault();
+        var cla = $(this).attr("class");
+        $(this).parent().prev().children().addClass(cla);
+    });
+    $(".sampleBtn.brightness a").eq(0).click(function (e) {
+        e.preventDefault();
+        $(this).parent().prev().children().removeClass().addClass("filter-box");
+    });
+    $(".sampleBtn.brightness a").eq(1).click(function (e) {
+        e.preventDefault();
+        var cla = $(this).attr("class");
+        $(this).parent().prev().children().addClass(cla);
+    });
+    $(".sampleBtn.contrast a").eq(0).click(function (e) {
+        e.preventDefault();
+        $(this).parent().prev().children().removeClass().addClass("filter-box");
+    });
+    $(".sampleBtn.contrast a").eq(1).click(function (e) {
+        e.preventDefault();
+        var cla = $(this).attr("class");
+        $(this).parent().prev().children().addClass(cla);
+    });
+    $(".sampleBtn.grayscale a").eq(0).click(function (e) {
+        e.preventDefault();
+        $(this).parent().prev().children().removeClass().addClass("filter-box");
+    });
+    $(".sampleBtn.grayscale a").eq(1).click(function (e) {
+        e.preventDefault();
+        var cla = $(this).attr("class");
+        $(this).parent().prev().children().addClass(cla);
+    });
+    $(".sampleBtn.hue-rotate a").eq(0).click(function (e) {
+        e.preventDefault();
+        $(this).parent().prev().children().removeClass().addClass("filter-box");
+    });
+    $(".sampleBtn.hue-rotate a").eq(1).click(function (e) {
+        e.preventDefault();
+        var cla = $(this).attr("class");
+        $(this).parent().prev().children().addClass(cla);
+    });
+    $(".sampleBtn.invert a").eq(0).click(function (e) {
+        e.preventDefault();
+        $(this).parent().prev().children().removeClass().addClass("filter-box");
+    });
+    $(".sampleBtn.invert a").eq(1).click(function (e) {
+        e.preventDefault();
+        var cla = $(this).attr("class");
+        $(this).parent().prev().children().addClass(cla);
+    });
+    $(".sampleBtn.opacity a").eq(0).click(function (e) {
+        e.preventDefault();
+        $(this).parent().prev().children().removeClass().addClass("filter-box");
+    });
+    $(".sampleBtn.opacity a").eq(1).click(function (e) {
+        e.preventDefault();
+        var cla = $(this).attr("class");
+        $(this).parent().prev().children().addClass(cla);
+    });
+    $(".sampleBtn.saturate a").eq(0).click(function (e) {
+        e.preventDefault();
+        $(this).parent().prev().children().removeClass().addClass("filter-box");
+    });
+    $(".sampleBtn.saturate a").eq(1).click(function (e) {
+        e.preventDefault();
+        var cla = $(this).attr("class");
+        $(this).parent().prev().children().addClass(cla);
+    });
+    $(".sampleBtn.sepia a").eq(0).click(function (e) {
+        e.preventDefault();
+        $(this).parent().prev().children().removeClass().addClass("filter-box");
+    });
+    $(".sampleBtn.sepia a").eq(1).click(function (e) {
+        e.preventDefault();
+        var cla = $(this).attr("class");
+        $(this).parent().prev().children().addClass(cla);
+    });
+    $(".sampleBtn.drop-shadow a").eq(0).click(function (e) {
+        e.preventDefault();
+        $(this).parent().prev().children().removeClass().addClass("filter-box");
+    });
+    $(".sampleBtn.drop-shadow a").eq(1).click(function (e) {
+        e.preventDefault();
+        var cla = $(this).attr("class");
+        $(this).parent().prev().children().addClass(cla);
+    });
+
+    
+    
+    
+    $(".sampleOption a").click(function (e) {
+        e.preventDefault();
+        var attr = $(this).attr("data-value");
+        $(".sampleView > div").removeClass().addClass("filter-box");
+        $(this).parent().prev().prev().children().children().children().attr("src","https://tistory1.daumcdn.net/tistory/2933724/skin/images/"+attr+".jpg");
+    });
+</script>
+    
+</body>
+</html>

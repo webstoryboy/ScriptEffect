@@ -1,0 +1,295 @@
+<h2>.removeClass()</h2>
+<p>선택한 요소의 클래스를 삭제합니다.</p>
+
+<hr>
+
+<h3>.removeClass()</h3>
+<p class="blue">.removeClass() 메서드는 선택한 요소의 클래스를 삭제합니다.</p>
+<div class="table-responsive">
+    <table class="table table-bordered table-striped table-hover">
+        <colgroup>
+            <col style="width: 30%">
+            <col style="width: 70%">
+        </colgroup>
+        <thead>
+            <tr>
+                <th scope="col">특징</th>
+                <th scope="col">설명</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th scope="row">리턴 값</a></th>
+                <td>클래스 삭제</td>
+            </tr>
+            <tr>
+                <th scope="row">버전</a></th>
+                <td>1.x</td>
+            </tr>
+            <tr>
+                <th>사용성</th>
+                <td>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<h4 class="pt50">문법(Syntax)</h4>
+<p class="blue">
+    $("선택자").removeClass();<br />
+    $("선택자").removeClass("클래스이름");<br />
+    $("선택자").removeClass("함수");
+</p>
+
+<h4 class="pt50">정의(Definition)</h4>
+<ul>
+    <li>.removeClass() 메서드는 선택한 요소의 클래스를 삭제합니다.</li>
+    <li>.removeClass() 메서드에 선택한 요소를 설정하지 않으면, 모든 클래스가 삭제됩니다.</li>
+    <li>.removeClass() 메서드는 선택한 요소의 클래스 이름을 설정한 경우, 해당 클래스만 지웁니다.</li>
+    <li>.removeClass() 메서드는 콜백함수를 사용할 수 있습니다.</li>
+</ul>
+
+<h4 class="pt50">비교(Compare)</h4>
+<ul>
+    <li>.addClass() 메서드는 선택한 요소의 클래스를 추가합니다.</li>
+    <li>.removeClass() 메서드는 선택한 요소의 클래스를 삭제합니다.</li>
+    <li>.toggleClass() 메서드는 선택한 요소의 클래스를 추기/삭제합니다.</li>
+    <li>.hasClass() 메서드는 선택한 요소의 클래스가 있는지 확인합니다.</li>
+</ul>
+
+
+<style>
+    .jsample {
+        overflow: hidden;
+    }
+    .jsample > div {
+        float: left;
+        width: 18%;
+        margin: 1%;
+        border: 5px solid transparent;
+        box-sizing: border-box;
+    }
+    .jsample > div img {
+        width: 100%;
+        margin: 0;
+    }
+    .jsample > div.selected {
+        border: 5px solid #7d0f2a;
+        position: relative;
+        box-sizing: border-box;
+        border-radius: 10px;
+        background: #b02b4c;
+    }
+    .jsample > div.selected img {
+        opacity: 0.2;
+    }
+    .jsample > div.selected::before {
+        content: 'selected';
+        position: absolute;
+        left: 50%; top: 50%;
+        color: #fff;
+        transform: translate(-50%, -50%);
+    }
+</style>
+<!-- sample1 -->
+<h4 class="pt50">예제1(Sample)</h4>
+<div class="sample">
+    <h5>클래스를 삭제하는 예제입니다.</h5>
+    <div class="sampleView">
+        <!-- ex -->
+        <div class="jsample">
+            <div class="selected"><img src="https://tistory4.daumcdn.net/tistory/2933724/skin/images/hover01.jpg" alt="샘플이미지1"></div>
+            <div class="selected"><img src="https://tistory4.daumcdn.net/tistory/2933724/skin/images/hover02.jpg" alt="샘플이미지2"></div>
+            <div class="selected"><img src="https://tistory4.daumcdn.net/tistory/2933724/skin/images/hover03.jpg" alt="샘플이미지3"></div>
+            <div class="selected"><img src="https://tistory4.daumcdn.net/tistory/2933724/skin/images/hover04.jpg" alt="샘플이미지4"></div>
+            <div class="selected"><img src="https://tistory4.daumcdn.net/tistory/2933724/skin/images/hover05.jpg" alt="샘플이미지5"></div>
+        </div>
+        <!-- ex -->
+    </div>
+    <div class="sampleBtn">
+        <a href="#" class="reset">리셋</a>
+        <a href="#" class="btn1">버튼을 클릭하면 클래스가 삭제되어 이미지 효과가 없어집니다.</a>
+    </div>
+    <div class="sampleCode">
+        <div class="scMenu">
+            <div>HTML</div>
+            <div>CSS</div>
+            <div class="active">SCRIPT</div>
+        </div>
+        <div class="scCont">
+            <div>
+<pre class="line-numbers"><code class="language-markup">&lt;div class="jsample"&gt;
+    &lt;div class="selected"&gt;&lt;img src="https://tistory4.daumcdn.net/tistory/2933724/skin/images/hover01.jpg" alt="샘플이미지1"&gt;&lt;/div&gt;
+    &lt;div class="selected"&gt;&lt;img src="https://tistory4.daumcdn.net/tistory/2933724/skin/images/hover02.jpg" alt="샘플이미지2"&gt;&lt;/div&gt;
+    &lt;div class="selected"&gt;&lt;img src="https://tistory4.daumcdn.net/tistory/2933724/skin/images/hover03.jpg" alt="샘플이미지3"&gt;&lt;/div&gt;
+    &lt;div class="selected"&gt;&lt;img src="https://tistory4.daumcdn.net/tistory/2933724/skin/images/hover04.jpg" alt="샘플이미지4"&gt;&lt;/div&gt;
+    &lt;div class="selected"&gt;&lt;img src="https://tistory4.daumcdn.net/tistory/2933724/skin/images/hover05.jpg" alt="샘플이미지5"&gt;&lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+            </div>
+            <div>
+<pre class="line-numbers"><code class="language-css">.jsample {
+    overflow: hidden;
+}
+.jsample > div {
+    float: left;
+    width: 18%;
+    margin: 1%;
+    border: 5px solid transparent;
+    box-sizing: border-box;
+}
+.jsample > div img {
+    width: 100%;
+    margin: 0;
+}
+.jsample > div.selected {
+    border: 5px solid #7d0f2a;
+    position: relative;
+    box-sizing: border-box;
+    border-radius: 10px;
+    background: #b02b4c;
+}
+.jsample > div.selected img {
+    opacity: 0.2;
+}
+.jsample > div.selected::before {
+    content: 'selected';
+    position: absolute;
+    left: 50%; top: 50%;
+    color: #fff;
+    transform: translate(-50%, -50%);
+}
+</code></pre>
+            </div>
+            <div style="display: block;">
+<pre class="line-numbers"><code class="language-js">$(".sampleBtn .reset").click(function(){
+    $(".jsample > div").addClass("selected");
+});
+$(".sampleBtn .btn1").click(function(){
+    $(".jsample > div").removeClass("selected");
+});
+</code></pre>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(".sampleBtn .reset").click(function(){
+        $(".jsample > div").addClass("selected");
+    });
+    $(".sampleBtn .btn1").click(function(){
+        $(".jsample > div").removeClass("selected");
+    });
+</script>
+<!-- //sample1 -->
+
+
+
+
+
+<h4 class="pt50">호환성(Compatibility)</h4>
+<div class="table-responsive">
+    <table class="table table-bordered table-striped table-hover compatibility">
+        <thead>
+            <tr>
+                <th class="ce">메서드</th>
+                <th class="ce">버전</th>
+                <th scope="col"><img src="https://tistory1.daumcdn.net/tistory/2933724/skin/images/icon-chrome1.png"
+                        alt="크롬 아이콘" title="크롬 브라우저"></th>
+                <th scope="col"><img src="https://tistory3.daumcdn.net/tistory/2933724/skin/images/icon-firefox1.png"
+                        alt="파이어폭스 아이콘" title="파이어폭스 브라우저"></th>
+                <th scope="col"><img src="https://tistory1.daumcdn.net/tistory/2933724/skin/images/icon-safari1.png"
+                        alt="사파리 아이콘" title="사파리 브라우저"></th>
+                <th scope="col"><img src="https://tistory3.daumcdn.net/tistory/2933724/skin/images/icon-opera1.png"
+                        alt="오페라 아이콘" title="오페라 브라우저"></th>
+                <th scope="col"><img src="https://tistory1.daumcdn.net/tistory/2933724/skin/images/icon-whale1.png"
+                        alt="네이버 웨일" title="네이버 웨일 브라우저"></th>
+                <th scope="col"><img src="https://tistory4.daumcdn.net/tistory/2933724/skin/images/icon-ie6.png"
+                        alt="익스플로러6 아이콘" title="인터넷 익스플로러6 브라우저"><em>6</em></th>
+                <th scope="col"><img src="https://tistory2.daumcdn.net/tistory/2933724/skin/images/icon-ie7.png"
+                        alt="익스플로러7 아이콘" title="인터넷 익스플로러7 브라우저"><em>7</em></th>
+                <th scope="col"><img src="https://tistory2.daumcdn.net/tistory/2933724/skin/images/icon-ie7.png"
+                        alt="익스플로러8 아이콘" title="인터넷 익스플로러8 브라우저"><em>8</em></th>
+                <th scope="col"><img src="https://tistory2.daumcdn.net/tistory/2933724/skin/images/icon-ie9.png"
+                        alt="익스플로러9 아이콘" title="인터넷 익스플로러9 브라우저"><em>9</em></th>
+                <th scope="col"><img src="https://tistory2.daumcdn.net/tistory/2933724/skin/images/icon-ie10.png"
+                        alt="익스플로러10 아이콘" title="인터넷 익스플로러10 브라우저"><em>10</em></th>
+                <th scope="col"><img src="https://tistory2.daumcdn.net/tistory/2933724/skin/images/icon-ie11.png"
+                        alt="익스플로러11 아이콘" title="인터넷 익스플로러11 브라우저"><em>11</em></th>
+                <th scope="col"><img src="https://tistory1.daumcdn.net/tistory/2933724/skin/images/icon-edge.png"
+                        alt="엣지 아이콘" title="엣지 브라우저"></th>
+                <th scope="col"><img src="https://tistory2.daumcdn.net/tistory/2933724/skin/images/icon-android.png"
+                        alt="안드로이드 아이콘" title="모바일 안드로이드 브라우저"></th>
+                <th scope="col"><img src="https://tistory2.daumcdn.net/tistory/2933724/skin/images/icon-ios.png"
+                        alt="ios 아이콘" title="모바일 아이폰 브라우저"></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="ce" scope="row" rowspan="3">removeClass()</td>
+                <td class="ce">jQeury 1.x 버전</td>
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 크롬 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 파이어폭스 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 사파리 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 오페라 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 네이버 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 익스플로러6 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 익스플로러7 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 익스플로러8 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 익스플로러9 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 익스플로러10 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 익스플로러11 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 엣지 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 안드로이드 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- IOS -->
+            </tr>
+            <tr>
+                <td class="ce">jQeury 2.x 버전</td>
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 크롬 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 파이어폭스 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 사파리 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 오페라 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 네이버 -->
+                <td class="no"><span title="사용 할 수 없습니다.">사용안됨</span></td><!-- 익스플로러6 -->
+                <td class="no"><span title="사용 할 수 없습니다.">사용안됨</span></td><!-- 익스플로러7 -->
+                <td class="no"><span title="사용 할 수 없습니다.">사용안됨</span></td><!-- 익스플로러8 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 익스플로러9 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 익스플로러10 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 익스플로러11 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 엣지 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 안드로이드 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- IOS -->
+            </tr>
+            <tr>
+                <td class="ce">jQeury 3.x 버전</td>
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 크롬 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 파이어폭스 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 사파리 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 오페라 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 네이버 -->
+                <td class="no"><span title="사용 할 수 없습니다.">사용안됨</span></td><!-- 익스플로러6 -->
+                <td class="no"><span title="사용 할 수 없습니다.">사용안됨</span></td><!-- 익스플로러7 -->
+                <td class="no"><span title="사용 할 수 없습니다.">사용안됨</span></td><!-- 익스플로러8 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 익스플로러9 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 익스플로러10 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 익스플로러11 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 엣지 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 안드로이드 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- IOS -->
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+
+<h4 class="pt30">참고 사이트(Reference)</h4>
+<ul>
+    <li><a href="https://api.jquery.com/removeClass/#removeClass-className">jQuery.com</a></li>
+</ul>
+
+<hr>

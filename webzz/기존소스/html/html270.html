@@ -1,0 +1,301 @@
+<h2>&lt;figcaption&gt;</h2>
+<p>&lt;figcaption&gt; 태그는 &lt;figure&gt; 요소의 설명 또는 제목을 설정합니다.</p>
+
+<hr>
+
+<h3>&lt;figcaption&gt;</h3>
+<p class="blue">&lt;figcaption&gt; 태그는 &lt;figure&gt; 요소의 설명 또는 제목을 설정합니다.</p>
+
+<div class="table-responsive">
+    <table class="table table-bordered table-striped table-hover">
+        <colgroup>
+            <col style="width: 30%">
+            <col style="width: 70%">
+        </colgroup>
+        <thead>
+            <tr>
+                <th>특징</th>
+                <th>설명</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th><a href="http://webzz.tistory.com/225">요소</a></th>
+                <td><a href="http://webzz.tistory.com/225">인라인 요소(Inline Element)</a></td>
+            </tr>
+            <tr>
+                <th><a href="http://webzz.tistory.com/225">닫는 태그</a></th>
+                <td>닫는 태그 사용(&lt;figcaption&gt; ~ &lt;/figcaption&gt;)</td>
+            </tr>
+            <tr>
+                <th><a href="http://webzz.tistory.com/228">버전</a></th>
+                <td>HTML5</td>
+            </tr>
+            <tr>
+                <th>시각적 표현</th>
+                <td>-</td>
+            </tr>
+            <tr>
+                <th>사용성</th>
+                <td>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star-o" aria-hidden="true"></i>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+
+<h4 class="pt50">정의(Definition)</h4>
+<ul>
+    <li>&lt;figcaption&gt; 태그는 &lt;figure&gt; 요소의 설명 또는 제목을 설정합니다.</li>
+    <li>&lt;figcaption&gt; 태그는 &lt;figure&gt; 요소의 처음 또는 마지막에 설정합니다.</li>
+</ul>
+
+
+
+<style>
+    .figure-box {text-align: center;}
+    .figure-box img {max-width: 400px;}
+</style>
+<!-- Sample1 -->
+<h4 class="pt50">예제1(Sample)</h4>
+<div class="sample">
+    <h5>이미지를 사용할 때 설정하는 예제입니다. <span class="dot"><i></i><i></i><i></i></span></h5>
+    <div class="sampleView">
+        <!-- ex -->
+        <div class="figure-box">
+            <figure>
+                <img src="https://tistory3.daumcdn.net/tistory/2933724/skin/images/blend03.jpg" alt="기린">
+                <figcaption>기린을 찍은 사진</figcaption>
+            </figure>
+        </div>
+        <!-- ex -->
+    </div>
+    <div class="sampleCode">
+        <div class="scMenu">
+            <div>HTML</div>
+            <div>CSS</div>
+            <div>SCRIPT</div>
+        </div>
+        <div class="scCont">
+            <div class="active">
+<pre class="line-numbers"><code class="language-markup">&lt;figure&gt;
+    &lt;img src="https://tistory3.daumcdn.net/tistory/2933724/skin/images/blend03.jpg" alt="기린"&gt;
+    &lt;figcaption&gt;기린을 찍은 사진&lt;/figcaption&gt;
+&lt;/figure&gt;
+</code></pre>
+            </div>
+            <div>
+                <pre class="line-numbers"><code class="language-css">//CSS none
+</code></pre>
+            </div>
+            <div>
+                <pre class="line-numbers"><code class="language-script">//Javascript none
+</code></pre>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- //Sample1 -->
+
+
+<!-- Sample2 -->
+<h4 class="pt50">예제2(Sample)</h4>
+<div class="sample">
+    <h5>코드를 사용할 때 설정하는 예제입니다. <span class="dot"><i></i><i></i><i></i></span></h5>
+    <div class="sampleView">
+        <!-- ex -->
+        <div class="form-box">
+            <figure>
+                <figcaption>제이쿼리를 이용한 애니메이션 소스입니다.</figcaption>
+<pre><code class="language-script">$(".sampleOption a").click(function (e) {
+    e.preventDefault();
+    var attr = $(this).attr("data-value");
+    $(".sampleView > div").removeClass().addClass("filter-box");
+});
+</code></pre>
+            </figure>
+        </div>
+        <!-- ex -->
+    </div>
+    <div class="sampleCode">
+        <div class="scMenu">
+            <div>HTML</div>
+            <div>CSS</div>
+            <div>SCRIPT</div>
+        </div>
+        <div class="scCont">
+            <div class="active">
+<pre class="line-numbers"><code class="language-markup">&lt;figure&gt;
+    &lt;figcaption&gt;제이쿼리를 이용한 애니메이션&lt;/figcaption&gt;
+        &lt;pre&gt;&lt;code&gt;$(".sampleOption a").click(function (e) {
+            e.preventDefault();
+            var attr = $(this).attr("data-value");
+            $(".sampleView &gt; div").removeClass().addClass("filter-box");
+        });
+        &lt;/code&gt;&lt;/pre&gt;
+&lt;/figure&gt;
+</code></pre>
+            </div>
+            <div>
+                <pre class="line-numbers"><code class="language-css">//CSS none
+</code></pre>
+            </div>
+            <div>
+                <pre class="line-numbers"><code class="language-script">//Javascript none
+</code></pre>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- //Sample2 -->
+
+
+<style>
+    #tt-body-page blockquote {
+        margin: 0 !important;
+        margin-bottom: 10px;
+    }
+    blockquote {
+        background: #f4f8fa;
+        padding: 10px;
+        margin-bottom: 10px;
+    }
+</style>
+<!-- Sample3 -->
+<h4 class="pt50">예제3(Sample)</h4>
+<div class="sample">
+    <h5>figure 태그와 인용문을 같이 설정하는 예제입니다. <span class="dot"><i></i><i></i><i></i></span></h5>
+    <div class="sampleView">
+        <!-- ex -->
+        <div>
+            <figure>
+                <blockquote cite="https://webzz.tistory.com">
+                    <p>
+                        운이 좋은 사람은 없다. 단지 운을 만들 뿐이다. <br>
+                        운을 만들기 위해서는 내가 좋아하는 일이나 내가 하고 싶은 일에 몰두하면 된다. <br>
+                        몰두 하다보면 길이 보이고 방향이 보이게 된다. <br>
+                        운이란 고된 노동과 노력을 통해 스스로 만들어 내는 것이다. <br>
+                        복권에 당첨되는 사람들은 금방 돈을 허비하게 된다. <br>
+                        단지 행운만 좋았기 때문이다. 운을 만든 사람은 돈을 날려먹거나 헛되게 쓰지 않는다. <br>
+                        열심히 할수록 운은 나에게 온다.
+                    </p>
+                </blockquote>
+                <figcaption>- 웹스토리보이 <cite>홈페이지</cite> 중에 -</figcaption>
+            </figure>
+        </div>
+        <!-- ex -->
+    </div>
+    <div class="sampleCode">
+        <div class="scMenu">
+            <div>HTML</div>
+            <div>CSS</div>
+            <div>SCRIPT</div>
+        </div>
+        <div class="scCont">
+            <div class="active">
+<pre class="line-numbers"><code class="language-markup">&lt;figure&gt;
+    &lt;blockquote cite="https://webzz.tistory.com"&gt;
+        &lt;p&gt;
+            운이 좋은 사람은 없다. 단지 운을 만들 뿐이다. 
+            운을 만들기 위해서는 내가 좋아하는 일이나 내가 하고 싶은 일에 몰두하면 된다. 
+            몰두 하다보면 길이 보이고 방향이 보이게 된다. 
+            운이란 고된 노동과 노력을 통해 스스로 만들어 내는 것이다. 
+            복권에 당첨되는 사람들은 금방 돈을 허비하게 된다. 
+            단지 행운만 좋았기 때문이다. 운을 만든 사람은 돈을 날려먹거나 헛되게 쓰지 않는다. 
+            열심히 할수록 운은 나에게 온다.
+        &lt;/p&gt;
+    &lt;/blockquote&gt;
+    &lt;figcaption&gt;- 웹스토리보이 &lt;cite&gt;&lt;a href="https://webzz.tistory.com"&gt;홈페이지&lt;/a&gt;&lt;/cite&gt; 중에 -&lt;/figcaption&gt;
+&lt;/figure&gt;
+</code></pre>
+            </div>
+            <div>
+<pre class="line-numbers"><code class="language-css">blockquote {
+    background: #f4f8fa;
+    padding: 10px;
+}
+</code></pre>
+            </div>
+            <div>
+<pre class="line-numbers"><code class="language-script">//Javascript none
+</code></pre>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- //Sample3 -->
+
+
+
+<h4 class="pt50"><a href="http://webzz.tistory.com/227">호환성(Compatibility)</a></h4>
+<div class="table-responsive">
+    <table class="table table-bordered table-striped table-hover compatibility">
+        <colgroup>
+            <col style="width:20%" />
+        </colgroup>
+        <thead>
+            <tr>
+                <th></th>
+                <th scope="col"><img src="https://tistory1.daumcdn.net/tistory/2933724/skin/images/icon-chrome1.png"
+                        alt="크롬 아이콘" title="크롬 브라우저"></th>
+                <th scope="col"><img src="https://tistory3.daumcdn.net/tistory/2933724/skin/images/icon-firefox1.png"
+                        alt="파이어폭스 아이콘" title="파이어폭스 브라우저"></th>
+                <th scope="col"><img src="https://tistory1.daumcdn.net/tistory/2933724/skin/images/icon-safari1.png"
+                        alt="사파리 아이콘" title="사파리 브라우저"></th>
+                <th scope="col"><img src="https://tistory3.daumcdn.net/tistory/2933724/skin/images/icon-opera1.png"
+                        alt="오페라 아이콘" title="오페라 브라우저"></th>
+                <th scope="col"><img src="https://tistory1.daumcdn.net/tistory/2933724/skin/images/icon-whale1.png"
+                        alt="네이버 웨일" title="네이버 웨일 브라우저"></th>
+                <th scope="col"><img src="https://tistory4.daumcdn.net/tistory/2933724/skin/images/icon-ie6.png"
+                        alt="익스플로러6 아이콘" title="인터넷 익스플로러6 브라우저"><em>6</em></th>
+                <th scope="col"><img src="https://tistory2.daumcdn.net/tistory/2933724/skin/images/icon-ie7.png"
+                        alt="익스플로러7 아이콘" title="인터넷 익스플로러7 브라우저"><em>7</em></th>
+                <th scope="col"><img src="https://tistory2.daumcdn.net/tistory/2933724/skin/images/icon-ie7.png"
+                        alt="익스플로러8 아이콘" title="인터넷 익스플로러8 브라우저"><em>8</em></th>
+                <th scope="col"><img src="https://tistory2.daumcdn.net/tistory/2933724/skin/images/icon-ie9.png"
+                        alt="익스플로러9 아이콘" title="인터넷 익스플로러9 브라우저"><em>9</em></th>
+                <th scope="col"><img src="https://tistory2.daumcdn.net/tistory/2933724/skin/images/icon-ie10.png"
+                        alt="익스플로러10 아이콘" title="인터넷 익스플로러10 브라우저"><em>10</em></th>
+                <th scope="col"><img src="https://tistory2.daumcdn.net/tistory/2933724/skin/images/icon-ie11.png"
+                        alt="익스플로러11 아이콘" title="인터넷 익스플로러11 브라우저"><em>11</em></th>
+                <th scope="col"><img src="https://tistory1.daumcdn.net/tistory/2933724/skin/images/icon-edge.png"
+                        alt="엣지 아이콘" title="엣지 브라우저"></th>
+                <th scope="col"><img src="https://tistory2.daumcdn.net/tistory/2933724/skin/images/icon-android.png"
+                        alt="안드로이드 아이콘" title="모바일 안드로이드 브라우저"></th>
+                <th scope="col"><img src="https://tistory2.daumcdn.net/tistory/2933724/skin/images/icon-ios.png"
+                        alt="ios 아이콘" title="모바일 아이폰 브라우저"></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td scope="row">&lt;figcaption&gt;</td>
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 크롬 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 파이어폭스 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 사파리 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 오페라 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 네이버 -->
+                <td class="no"><span title="사용 할 수 없습니다.">사용안됨</span></td><!-- 익스플로러6 -->
+                <td class="no"><span title="사용 할 수 없습니다.">사용안됨</span></td><!-- 익스플로러7 -->
+                <td class="no"><span title="사용 할 수 없습니다.">사용안됨</span></td><!-- 익스플로러8 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 익스플로러9 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 익스플로러10 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 익스플로러11 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 엣지 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 안드로이드 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- IOS -->
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<h4 class="pt30">참고 사이트(Reference)</h4>
+<ul>
+    <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/figcaption">MDN</a></li>
+    <li><a href="https://html.spec.whatwg.org/multipage/grouping-content.html#the-figcaption-element">w3</a></li>
+</ul>
+
+<hr />

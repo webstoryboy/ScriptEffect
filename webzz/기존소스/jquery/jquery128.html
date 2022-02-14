@@ -1,0 +1,393 @@
+
+    
+
+<h2>.scrollLeft()</h2>
+<p>선택한 요소의 가로 스크롤 값을 설정하거나 반환합니다.</p>
+
+<hr>
+
+<h3>.scrollLeft()</h3>
+<p class="blue">선택한 요소의 가로 스크롤 값을 설정하거나 반환합니다.</p>
+
+
+<h4 class="pt50">문법(Syntax)</h4>
+<p class="blue">
+$("선택자").scrollLeft();<br>
+$("선택자").scrollLeft("속성값");
+</p>
+
+
+<h4 class="pt50">정의(Definition)</h4>
+<ul>
+    <li>.scrollLeft() 메서드는 선택한 요소에 가로 스크롤 값을 가져옵니다.</li>
+    <li>.scrollLeft("속성값") 메서드는 선택한 요소에 가로 스크롤 값을 변경합니다.</li>
+</ul>
+
+
+<!-- Sample1 -->
+<h4 class="pt50">Sample1 <span><a href="https://webstoryboy.github.io/jquery/sample128-1.html" target="_blank"><img src="https://tistory3.daumcdn.net/tistory/2933724/skin/images/blank.gif" class="blank_icon"></a></span></h4>
+<p>.scrollLeft() : Div 박스의 스크롤 값과 브라우저의 스크롤 값을 구하는 예제입니다.</p>
+<div class="sample">
+    <h5>Sample1<span class="dot"><i></i><i></i><i></i></span></h5>
+    <div class="ex">
+        <!-- ex -->
+        <h3>속성(ATTRIBUTES)</h3>
+        <div class="list1">
+            <div class="square">square</div>
+            <p class="desc">
+                <span>"square" scrollLeft() = </span><span class="sl">0</span><br>
+                <span>"square" scrollTop() = </span><span class="st">0</span><br>
+                <span>"브라우저" scrollLeft() = </span><span class="bl">0</span><br>
+                <span>"브라우저" scrollTop() = </span><span class="bt">0</span><br>
+            </p>
+        </div>
+        <!-- ex -->
+    </div>
+    
+    <div class="choice1">
+        <a href="#" class="off1">리셋</a><br>
+        <a href="#" class="btn1">클릭하면 원의 square의 <em>scrollLeft()</em> 좌표값을 표현합니다.</a>
+        <a href="#" class="btn2">클릭하면 원의 square의 <em>scrollTop()</em> 좌표값을 표현합니다.</a><br>
+        <a href="#" class="btn3">클릭하면 원의 브라우저의 <em>scrollLeft()</em> 좌표값을 표현합니다.</a>
+        <a href="#" class="btn4">클릭하면 원의 브라우저의 <em>scrollTop()</em> 좌표값을 표현합니다.</a>
+    </div>
+</div>
+<!-- sample -->
+
+
+<div class="sample">
+    <h5>jquery<span class="dot"><i></i><i></i><i></i></span></h5>
+    <div class="script">
+        <pre class="line-numbers"><code class="language-javascript">$(".choice1 .btn1").click(function(e){
+    e.preventDefault();
+    $(".list1 .desc .sl").text( $(".list1 .square").scrollLeft() + "px" );
+});
+$(".choice1 .btn2").click(function(e){
+    e.preventDefault();
+    $(".list1 .desc .st").text( $(".list1 .square").scrollTop() + "px" );
+});
+$(".choice1 .btn3").click(function(e){
+    e.preventDefault();
+    $(".list1 .desc .bl").text( $(window).scrollLeft() + "px" );
+});
+$(".choice1 .btn4").click(function(e){
+    e.preventDefault();
+    $(".list1 .desc .bt").text( $(window).scrollTop() + "px" );
+});</code></pre>
+    </div>
+</div>
+<!-- sample -->
+
+<div class="sample">
+    <h5>html<span class="dot"><i></i><i></i><i></i></span></h5>
+    <div class="html">
+        <pre class="line-numbers"><code class="language-markup">&lt;h3&gt;속성(ATTRIBUTES)&lt;/h3&gt;
+&lt;div class="list1"&gt;
+    &lt;div class="square"&gt;square&lt;/div&gt;
+    &lt;p class="desc"&gt;
+        &lt;span&gt;scrollLeft() = &lt;/span&gt;&lt;span class="sl"&gt;0&lt;/span&gt;&lt;br&gt;
+        &lt;span&gt;scrollTop() = &lt;/span&gt;&lt;span class="st"&gt;0&lt;/span&gt;&lt;br&gt;
+        &lt;span&gt;scrollLeft() = &lt;/span&gt;&lt;span class="bl"&gt;0&lt;/span&gt;&lt;br&gt;
+        &lt;span&gt;scrollTop() = &lt;/span&gt;&lt;span class="bt"&gt;0&lt;/span&gt;&lt;br&gt;
+    &lt;/p&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+</div>
+<!-- sample -->
+
+<div class="sample">
+    <h5>Total<span class="dot"><i></i><i></i><i></i></span></h5>
+    <div class="html on">
+        <pre class="line-numbers"><code class="language-markup">&lt;!DOCTYPE html&gt;
+&lt;html lang="ko"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;jQuery Sample&lt;/title&gt;
+    &lt;style&gt;
+        .square {width: 100%; height: 300px; line-height: 300px; text-align: center; color: #c7254e; background-color: #f9f2f4; border-radius: 3px; border: 1px dashed #a51a3d;}
+        a {border: 1px solid #5f6368; padding: 7px 20px 5px 20px; display: inline-block; border-radius: 20px; text-decoration: none;}
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    
+    &lt;h3&gt;속성(ATTRIBUTES)&lt;/h3&gt;
+    &lt;div class="list1"&gt;
+        &lt;div class="square"&gt;square&lt;/div&gt;
+        &lt;p class="desc"&gt;
+            &lt;span&gt;scrollLeft() = &lt;/span&gt;&lt;span class="sl"&gt;0&lt;/span&gt;&lt;br&gt;
+            &lt;span&gt;scrollTop() = &lt;/span&gt;&lt;span class="st"&gt;0&lt;/span&gt;&lt;br&gt;
+            &lt;span&gt;scrollLeft() = &lt;/span&gt;&lt;span class="bl"&gt;0&lt;/span&gt;&lt;br&gt;
+            &lt;span&gt;scrollTop() = &lt;/span&gt;&lt;span class="bt"&gt;0&lt;/span&gt;&lt;br&gt;
+        &lt;/p&gt;
+    &lt;/div&gt;
+    
+    &lt;div class="choice1"&gt;
+        &lt;a href="#" class="off1"&gt;리셋&lt;/a&gt;&lt;br&gt;
+        &lt;a href="#" class="btn1"&gt;클릭하면 원의 square의 &lt;em&gt;scrollLeft()&lt;/em&gt; 좌표값을 표현합니다.&lt;/a&gt;
+        &lt;a href="#" class="btn2"&gt;클릭하면 원의 square의 &lt;em&gt;scrollTop()&lt;/em&gt; 좌표값을 표현합니다.&lt;/a&gt;&lt;br&gt;
+        &lt;a href="#" class="btn3"&gt;클릭하면 원의 브라우저의 &lt;em&gt;scrollLeft()&lt;/em&gt; 좌표값을 표현합니다.&lt;/a&gt;
+        &lt;a href="#" class="btn4"&gt;클릭하면 원의 브라우저의 &lt;em&gt;scrollTop()&lt;/em&gt; 좌표값을 표현합니다.&lt;/a&gt;
+    &lt;/div&gt;
+    
+    &lt;script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"&gt;&lt;/script&gt;
+    &lt;script&gt;
+        $(".choice1 .off1").click(function(e){
+            e.preventDefault();
+            $(".sl,.st,.bl,.bt").text("0");
+        });
+        $(".choice1 .btn1").click(function(e){
+            e.preventDefault();
+            $(".list1 .desc .sl").text( $(".list1 .square").scrollLeft() + "px" );
+        });
+        $(".choice1 .btn2").click(function(e){
+            e.preventDefault();
+            $(".list1 .desc .st").text( $(".list1 .square").scrollTop() + "px" );
+        });
+        $(".choice1 .btn3").click(function(e){
+            e.preventDefault();
+            $(".list1 .desc .bl").text( $(window).scrollLeft() + "px" );
+        });
+        $(".choice1 .btn4").click(function(e){
+            e.preventDefault();
+            $(".list1 .desc .bt").text( $(window).scrollTop() + "px" );
+        });
+    &lt;/script&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+    </div>
+</div>
+<!-- sample -->
+
+
+<script>
+    $(".choice1 .off1").click(function(e){
+        e.preventDefault();
+        $(".sl,.st,.bl,.bt").text("0");
+    });
+    $(".choice1 .btn1").click(function(e){
+        e.preventDefault();
+        $(".list1 .desc .sl").text( $(".list1 .square").scrollLeft() + "px" );
+    });
+    $(".choice1 .btn2").click(function(e){
+        e.preventDefault();
+        $(".list1 .desc .st").text( $(".list1 .square").scrollTop() + "px" );
+    });
+    $(".choice1 .btn3").click(function(e){
+        e.preventDefault();
+        $(".list1 .desc .bl").text( $(window).scrollLeft() + "px" );
+    });
+    $(".choice1 .btn4").click(function(e){
+        e.preventDefault();
+        $(".list1 .desc .bt").text( $(window).scrollTop() + "px" );
+    });
+</script>
+<!-- //Sample1 -->
+
+
+
+
+
+<style>
+    .list2 .circle {width: 100px; height: 100px; color: #c7254e; background-color: #f9f2f4; border-radius: 50%; border: 1px dashed #a51a3d; text-align: center; line-height: 100px; display: inline-block;}
+</style>
+
+<!-- Sample2 -->
+<h4 class="pt50">Sample2 <span><a href="https://webstoryboy.github.io/jquery/sample128-2.html" target="_blank"><img src="https://tistory3.daumcdn.net/tistory/2933724/skin/images/blank.gif" class="blank_icon"></a></span></h4>
+<p>.scrollLeft() : 브라우저의 스크롤 값을 구하는 예제입니다.</p>
+<div class="sample">
+    <h5>결과<span class="dot"><i></i><i></i><i></i></span></h5>
+    <div class="ex">
+        <!-- ex -->
+        <h3>속성(ATTRIBUTES)</h3>
+        <div class="list2">
+            <div class="circle">
+                <span class="scroll_left">0</span> px
+            </div>
+            <div class="circle">
+                <span class="scroll_top">0</span> px
+            </div>
+        </div>
+        <!-- ex -->
+    </div>
+    
+    <div class="choice2">
+        스크롤을 하면 <em>scrollLeft()</em>, <em>scrollTop()</em> 좌표값을 표현합니다.
+    </div>
+</div>
+<!-- sample -->
+
+
+<div class="sample">
+    <h5>jquery<span class="dot"><i></i><i></i><i></i></span></h5>
+    <div class="script on">
+        <pre class="line-numbers"><code class="language-javascript">$(window).scroll(function(){
+    var lScroll = $(this).scrollLeft();
+    $(".scroll_left").text(lScroll);
+});
+$(window).scroll(function(){
+    var tScroll = $(this).scrollTop();
+    $(".scroll_top").text(tScroll);
+});</code></pre>
+    </div>
+</div>
+<!-- sample -->
+
+<div class="sample">
+    <h5>html<span class="dot"><i></i><i></i><i></i></span></h5>
+    <div class="html">
+        <pre class="line-numbers"><code class="language-markup">&lt;h3&gt;속성(ATTRIBUTES)&lt;/h3&gt;
+&lt;div class="list2"&gt;
+    &lt;div class="circle"&gt;
+        &lt;span class="scroll_left"&gt;0&lt;/span&gt; px
+    &lt;/div&gt;
+    &lt;div class="circle"&gt;
+        &lt;span class="scroll_top"&gt;0&lt;/span&gt; px
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+</div>
+<!-- sample -->
+
+<div class="sample">
+    <h5>Total<span class="dot"><i></i><i></i><i></i></span></h5>
+    <div class="html on">
+        <pre class="line-numbers"><code class="language-markup">&lt;!DOCTYPE html&gt;
+&lt;html lang="ko"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;jQuery Sample&lt;/title&gt;
+    &lt;style&gt;
+        .circle {width: 100px; height: 100px; color: #c7254e; background-color: #f9f2f4; border-radius: 50%; border: 1px dashed #a51a3d; text-align: center; line-height: 100px; display: inline-block;}
+        a {border: 1px solid #5f6368; padding: 7px 20px 5px 20px; display: inline-block; border-radius: 20px; text-decoration: none;}
+        body {width: 5000px; height: 5000px;}
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    
+    &lt;h3&gt;속성(ATTRIBUTES)&lt;/h3&gt;
+    &lt;div class="list2"&gt;
+        &lt;div class="circle"&gt;
+            &lt;span class="scroll_left"&gt;0&lt;/span&gt; px
+        &lt;/div&gt;
+        &lt;div class="circle"&gt;
+            &lt;span class="scroll_top"&gt;0&lt;/span&gt; px
+        &lt;/div&gt;
+    &lt;/div&gt;
+    
+    &lt;div class="choice2"&gt;
+        스크롤을 하면 &lt;em&gt;scrollLeft()&lt;/em&gt;, &lt;em&gt;scrollTop()&lt;/em&gt; 좌표값을 표현합니다.
+    &lt;/div&gt;
+    
+    &lt;script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"&gt;&lt;/script&gt;
+    &lt;script&gt;
+        $(window).scroll(function(){
+            var lScroll = $(this).scrollLeft();
+            $(".scroll_left").text(lScroll);
+        });
+        $(window).scroll(function(){
+            var tScroll = $(this).scrollTop();
+            $(".scroll_top").text(tScroll);
+        });
+    &lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+    </div>
+</div>
+<!-- sample -->
+
+
+<script>
+    $(window).scroll(function(){
+        var lScroll = $(this).scrollLeft();
+        $(".scroll_left").text(lScroll);
+    });
+    $(window).scroll(function(){
+        var tScroll = $(this).scrollTop();
+        $(".scroll_top").text(tScroll);
+    });
+</script>
+<!-- //Sample2 -->
+
+
+<h4 class="pt50">호환성(Compatibility)</h4>
+<div class="table-responsive">
+    <table class="table table-bordered table-striped table-hover compatibility">
+        <thead>
+            <tr>
+                <th class="ce">메서드</th>
+                <th class="ce">버전</th>
+                <th scope="col"><img src="https://tistory1.daumcdn.net/tistory/2933724/skin/images/icon-chrome1.png" alt="크롬 아이콘" title="크롬 브라우저"></th>
+                <th scope="col"><img src="https://tistory3.daumcdn.net/tistory/2933724/skin/images/icon-firefox1.png" alt="파이어폭스 아이콘" title="파이어폭스 브라우저"></th>
+                <th scope="col"><img src="https://tistory1.daumcdn.net/tistory/2933724/skin/images/icon-safari1.png" alt="사파리 아이콘" title="사파리 브라우저"></th>
+                <th scope="col"><img src="https://tistory3.daumcdn.net/tistory/2933724/skin/images/icon-opera1.png" alt="오페라 아이콘" title="오페라 브라우저"></th>
+                <th scope="col"><img src="https://tistory1.daumcdn.net/tistory/2933724/skin/images/icon-whale1.png" alt="네이버 웨일" title="네이버 웨일 브라우저"></th>
+                <th scope="col"><img src="https://tistory4.daumcdn.net/tistory/2933724/skin/images/icon-ie6.png" alt="익스플로러6 아이콘" title="인터넷 익스플로러6 브라우저"><em>6</em></th>
+                <th scope="col"><img src="https://tistory2.daumcdn.net/tistory/2933724/skin/images/icon-ie7.png" alt="익스플로러7 아이콘" title="인터넷 익스플로러7 브라우저"><em>7</em></th>
+                <th scope="col"><img src="https://tistory2.daumcdn.net/tistory/2933724/skin/images/icon-ie7.png" alt="익스플로러8 아이콘" title="인터넷 익스플로러8 브라우저"><em>8</em></th>
+                <th scope="col"><img src="https://tistory2.daumcdn.net/tistory/2933724/skin/images/icon-ie9.png" alt="익스플로러9 아이콘" title="인터넷 익스플로러9 브라우저"><em>9</em></th>
+                <th scope="col"><img src="https://tistory2.daumcdn.net/tistory/2933724/skin/images/icon-ie10.png" alt="익스플로러10 아이콘" title="인터넷 익스플로러10 브라우저"><em>10</em></th>
+                <th scope="col"><img src="https://tistory2.daumcdn.net/tistory/2933724/skin/images/icon-ie11.png" alt="익스플로러11 아이콘" title="인터넷 익스플로러11 브라우저"><em>11</em></th>
+                <th scope="col"><img src="https://tistory1.daumcdn.net/tistory/2933724/skin/images/icon-edge.png" alt="엣지 아이콘" title="엣지 브라우저"></th>
+                <th scope="col"><img src="https://tistory2.daumcdn.net/tistory/2933724/skin/images/icon-android.png" alt="안드로이드 아이콘" title="모바일 안드로이드 브라우저"></th>
+                <th scope="col"><img src="https://tistory2.daumcdn.net/tistory/2933724/skin/images/icon-ios.png" alt="ios 아이콘" title="모바일 아이폰 브라우저"></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="ce" scope="row" rowspan="3">scrollLeft()</td>
+                <td class="ce">jQeury 1.x 버전</td>
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 크롬 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 파이어폭스 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 사파리 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 오페라 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 네이버 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 익스플로러6 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 익스플로러7 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 익스플로러8 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 익스플로러9 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 익스플로러10 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 익스플로러11 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 엣지 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 안드로이드 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- IOS -->
+            </tr>
+            <tr>
+                <td class="ce">jQeury 2.x 버전</td>
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 크롬 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 파이어폭스 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 사파리 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 오페라 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 네이버 -->
+                <td class="no"><span title="사용 할 수 없습니다.">사용안됨</span></td><!-- 익스플로러6 -->
+                <td class="no"><span title="사용 할 수 없습니다.">사용안됨</span></td><!-- 익스플로러7 -->
+                <td class="no"><span title="사용 할 수 없습니다.">사용안됨</span></td><!-- 익스플로러8 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 익스플로러9 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 익스플로러10 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 익스플로러11 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 엣지 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 안드로이드 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- IOS -->
+            </tr>
+            <tr>
+                <td class="ce">jQeury 3.x 버전</td>
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 크롬 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 파이어폭스 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 사파리 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 오페라 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 네이버 -->
+                <td class="no"><span title="사용 할 수 없습니다.">사용안됨</span></td><!-- 익스플로러6 -->
+                <td class="no"><span title="사용 할 수 없습니다.">사용안됨</span></td><!-- 익스플로러7 -->
+                <td class="no"><span title="사용 할 수 없습니다.">사용안됨</span></td><!-- 익스플로러8 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 익스플로러9 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 익스플로러10 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 익스플로러11 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 엣지 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 안드로이드 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- IOS -->
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+   

@@ -1,0 +1,266 @@
+
+<h2>background-position</h2>
+<p>background-position 속성은 백그라운드 이미지의 위치 영역을 설정합니다.</p>
+
+<hr>
+
+<h3>background-position</h3>
+<p class="blue">background-position 속성은 백그라운드 이미지의 위치 영역을 설정합니다.</p>
+
+<div class="table-responsive">
+    <table class="table table-bordered table-striped table-hover">
+        <colgroup>
+            <col style="width: 30%">
+            <col style="width: 70%">
+        </colgroup>
+        <thead>
+            <tr>
+                <th scope="col">특징</th>
+                <th scope="col">설명</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th scope="row"><a href="http://webzz.tistory.com/360">기본 값</a></th>
+                <td><a href="http://webzz.tistory.com/360">background-position : 0% 0%</a></td>
+            </tr>
+            <tr>
+                <th scope="row"><a href="http://webzz.tistory.com/360">적용</a></th>
+                <td><a href="http://webzz.tistory.com/360">background</a></td>
+            </tr>
+            <tr>
+                <th scope="row"><a href="http://webzz.tistory.com/359">버전</a></th>
+                <td><a href="http://webzz.tistory.com/359">CSS1</a></td>
+            </tr>
+            <tr>
+                <th>사용성</th>
+                <td>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<h4 class="pt50">정의(Definition)</h4>
+<ul>
+    <li>background-position 속성은 백그라운드 이미지의 위치 영역을 설정합니다.</li>
+</ul>
+
+<h4 class="pt50">백그라운드와 관련된 속성(Background Related Properties)</h4>
+<ul>
+    <li>background 속성은 백그라운드 속성을 일괄적으로 설정합니다.</li>
+    <li>background-attachment 속성은 배경 이미지의 고정 여부를 설정합니다.</li>
+    <li>background-blend-mode 속성은 배경을 혼합했을 때의 상태를 설정합니다.</li>
+    <li>background-clip 속성은 백그라운드 이미지의 위치 기준점을 설정합니다.</li>
+    <li>background-color 속성은 백그라운드 색을 설정합니다.</li>
+    <li>background-image 속성은 백그라운드 이미지 및 배경 속성을 설정합니다.</li>
+    <li>background-origin 속성은 백그라운드 이미지의 위치 기준점을 설정합니다.</li>
+    <li>background-position 속성은 백그라운드 이미지의 위치 영역을 설정합니다.</li>
+    <li>background-repeat 속성은 백그라운드 이미지 반복 여부를 설정합니다.</li>
+    <li>background-size 속성은 백그라운드 이미지 사이즈를 설정합니다.</li>
+</ul>
+  
+   
+<h4 class="pt50">문법(Syntax)</h4>
+<p class="blue">background-position : left | center | right | bottom | top | percentage | length</p>
+<p class="blue">
+    /* 기본 속성 */<br>
+    background-position : left;<br>
+    background-position : center; <br>
+    background-position : right; <br>
+    background-position : bottom; <br>
+    background-position : top; <br><br>
+
+    /* x축과 y축을 length 및 percentage로 설정한 경우 */<br>
+    background-position : 10%;<br>ㄴ
+    background-position : 100px;<br><br>
+
+    /* x축과 y축을 키워드와 퍼센트로 설정한 경우 */<br>
+    background-position : top right;<br>
+    background-position : 100px 20%;<br><br>
+
+    /* x축과 x축 여백을 설정하고 y축과 y축 여백을 설정한 경우 */<br>
+    background-position : right 100px top 200px; <br>
+    background-position : top 100% right 10em; 
+</p>
+
+  
+<h4 class="pt50">속성(Property)</h4>
+<div class="table-responsive">
+    <table class="table table-bordered table-striped table-hover">
+        <colgroup>
+            <col style="width: 30%">
+            <col style="width: 70%">
+        </colgroup>
+        <thead>
+            <tr>
+                <th scope="col">속성값</th>
+                <th scope="col">설명</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>left</td>
+                <td>배경 이미지의 위치를 왼쪽으로 설정합니다.</td>
+            </tr>
+            <tr>
+                <td>center</td>
+                <td>배경 이미지의 위치를 가운데로 설정합니다.</td>
+            </tr>
+            <tr>
+                <td>right</td>
+                <td>배경 이미지의 위치를 오른쪽으로 설정합니다</td>
+            </tr>
+            <tr>
+                <td>bottom</td>
+                <td>배경 이미지의 위치를 밑으로 설정합니다</td>
+            </tr>
+            <tr>
+                <td>top</td>
+                <td>배경 이미지의 위치를 위로 설정합니다</td>
+            </tr>
+            <tr>
+                <td>percentage</td>
+                <td>배경 이미지의 위치를 퍼센트로 설정합니다</td>
+            </tr>
+            <tr>
+                <td>length</td>
+                <td>배경 이미지의 위치를 길이로 설정합니다</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+
+
+<style>
+    .background-box {
+        background-image: url(https://tistory1.daumcdn.net/tistory/2933724/skin/images/hover18.jpg);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 300px;
+        height: 400px;
+    }
+</style>
+
+<!-- sample1 -->
+<h4 class="pt50">예제1(Sample)</h4>
+<div class="sample">
+    <h5>백그라운드 위치를 설정하는 예제입니다.</h5>
+    <div class="sampleView">
+        <!-- ex -->
+        <div class="background-box">
+
+        </div>
+        <!-- ex -->
+    </div>
+    <div class="sampleBtn">
+        <a href="#">background-position : center</a>
+        <a href="#">background-position : left;</a>
+        <a href="#">background-position : right;</a>
+        <a href="#">background-position : bottom;</a>
+        <a href="#">background-position : top;</a>
+        <a href="#">background-position : 10%;</a>
+        <a href="#">background-position : 20% 30%</a>
+        <a href="#">background-position : right 20%;</a>
+        <a href="#">background-position : right 100px top 100px;</a>
+    </div>
+    <div class="sampleCode">
+        <div class="scMenu">
+            <div>HTML</div>
+            <div>CSS</div>
+            <div>SCRIPT</div>
+        </div>
+        <div class="scCont">
+            <div>
+<pre class="line-numbers"><code class="language-markup">&lt;div class="background-box"&gt;
+&lt;/div&gt;
+</code></pre>
+            </div>
+            <div>
+<pre class="line-numbers"><code class="language-css">.background-box {
+    background-image: url(https://tistory1.daumcdn.net/tistory/2933724/skin/images/hover18.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 300px;
+    height: 400px;
+}
+</code></pre>
+            </div>
+            <div>
+<pre class="line-numbers"><code class="language-script">//Javascript none
+</code></pre>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- //sample1 -->
+
+<script>
+    $(".sampleBtn a").click(function (e) {
+        e.preventDefault();
+        var text = $(this).text();
+        $(this).parent().prev().children().attr("style",text);
+    });
+</script>
+
+  
+<h4 class="pt50"><a href="http://webzz.tistory.com/227">호환성(Compatibility)</a></h4>
+<div class="table-responsive">
+    <table class="table table-bordered table-striped table-hover compatibility">
+        <colgroup>
+            <col style="width:20%" />
+        </colgroup>
+        <thead>
+            <tr>
+                <th></th>
+                <th scope="col"><img src="https://tistory1.daumcdn.net/tistory/2933724/skin/images/icon-chrome1.png" alt="크롬 아이콘" title="크롬 브라우저"></th>
+                <th scope="col"><img src="https://tistory3.daumcdn.net/tistory/2933724/skin/images/icon-firefox1.png" alt="파이어폭스 아이콘" title="파이어폭스 브라우저"></th>
+                <th scope="col"><img src="https://tistory1.daumcdn.net/tistory/2933724/skin/images/icon-safari1.png" alt="사파리 아이콘" title="사파리 브라우저"></th>
+                <th scope="col"><img src="https://tistory3.daumcdn.net/tistory/2933724/skin/images/icon-opera1.png" alt="오페라 아이콘" title="오페라 브라우저"></th>
+                <th scope="col"><img src="https://tistory1.daumcdn.net/tistory/2933724/skin/images/icon-whale1.png" alt="네이버 웨일" title="네이버 웨일 브라우저"></th>
+                <th scope="col"><img src="https://tistory4.daumcdn.net/tistory/2933724/skin/images/icon-ie6.png" alt="익스플로러6 아이콘" title="인터넷 익스플로러6 브라우저"><em>6</em></th>
+                <th scope="col"><img src="https://tistory2.daumcdn.net/tistory/2933724/skin/images/icon-ie7.png" alt="익스플로러7 아이콘" title="인터넷 익스플로러7 브라우저"><em>7</em></th>
+                <th scope="col"><img src="https://tistory2.daumcdn.net/tistory/2933724/skin/images/icon-ie7.png" alt="익스플로러8 아이콘" title="인터넷 익스플로러8 브라우저"><em>8</em></th>
+                <th scope="col"><img src="https://tistory2.daumcdn.net/tistory/2933724/skin/images/icon-ie9.png" alt="익스플로러9 아이콘" title="인터넷 익스플로러9 브라우저"><em>9</em></th>
+                <th scope="col"><img src="https://tistory2.daumcdn.net/tistory/2933724/skin/images/icon-ie10.png" alt="익스플로러10 아이콘" title="인터넷 익스플로러10 브라우저"><em>10</em></th>
+                <th scope="col"><img src="https://tistory2.daumcdn.net/tistory/2933724/skin/images/icon-ie11.png" alt="익스플로러11 아이콘" title="인터넷 익스플로러11 브라우저"><em>11</em></th>
+                <th scope="col"><img src="https://tistory1.daumcdn.net/tistory/2933724/skin/images/icon-edge.png" alt="엣지 아이콘" title="엣지 브라우저"></th>
+                <th scope="col"><img src="https://tistory2.daumcdn.net/tistory/2933724/skin/images/icon-android.png" alt="안드로이드 아이콘" title="모바일 안드로이드 브라우저"></th>
+                <th scope="col"><img src="https://tistory2.daumcdn.net/tistory/2933724/skin/images/icon-ios.png" alt="ios 아이콘" title="모바일 아이폰 브라우저"></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td scope="row">background-position</td>
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 크롬 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 파이어폭스 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 사파리 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 오페라 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 네이버 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 익스플로러6 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 익스플로러7 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 익스플로러8 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 익스플로러9 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 익스플로러10 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 익스플로러11 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 엣지 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 안드로이드 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- IOS -->
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+
+<h4 class="pt30">참고 사이트(Reference)</h4>
+<ul>
+    <li><a href="https://developer.mozilla.org/ko/docs/Web/CSS/background-image">MDN</a></li>
+    <li><a href="https://drafts.csswg.org/css-backgrounds-3/#background-image">w3</a></li>
+</ul>
+
+
+<hr>

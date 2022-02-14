@@ -1,0 +1,677 @@
+
+
+<h2>CSS 선택자</h2>
+<p>CSS는 선택자를 통해 요소를 선택할 수 있습니다.</p>
+
+<hr>
+
+<h3>CSS</h3>
+<p>CSS는 선택자를 통해 요소를 선택할 수 있습니다.</p>
+
+
+<h4 class="pt50">기본 선택자</h4>
+<div class="table-responsive">
+    <table class="table table-bordered table-striped table-hover">
+        <thead>
+            <tr>
+                <th>종류</th>
+                <th>예시</th>
+                <th>이름</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>태그 선택자</td>
+                <td>p {color:#fff;}</td>
+                <td>p 태그를 선택하여 글씨 색을 하얀색으로 변경합니다.</td>
+            </tr>
+            <tr>
+                <td>클래스 선택자</td>
+                <td>.class {color:#fff;}</td>
+                <td>class 클래스를 선택하여 글씨 색을 하얀색으로 변경합니다.</td>
+            </tr>
+            <tr>
+                <td>아이디 선택자</td>
+                <td>#id {color:#fff;}</td>
+                <td>id 아이드를 선택하여 글씨 색을 하얀색으로 변경합니다.</td>
+            </tr>
+            <tr>
+                <td>그룹 선택자</td>
+                <td>p, div {color:#fff;}</td>
+                <td>p 태그와 div 태그를 선택하여 글씨 색을 하얀색으로 변경합니다.</td>
+            </tr>
+            <tr>
+                <td>전체 선택자</td>
+                <td>* {color:#fff;}</td>
+                <td>전체 태그를 선택하여 글씨 색을 하얀색으로 변경합니다.</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+
+
+<h4 class="pt50">계층 선택자</h4>
+<div class="table-responsive">
+    <table class="table table-bordered table-striped table-hover">
+        <thead>
+            <tr>
+                <th>종류</th>
+                <th>예시</th>
+                <th>이름</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>하위 선택자(Descendant Selector)</td>
+                <td>div p {color:#fff;}</td>
+                <td>div 태그의 모든 자식 중 p 태그를 모두 선택하여 글씨 색을 하얀색으로 변경합니다.</td>
+            </tr>
+            <tr>
+                <td>자식 선택자(Child Selector)</td>
+                <td>div &gt; p {color:#fff;}</td>
+                <td>div 태그의 모든 자식 중 첫번째 자식 p 태그를 선택하여 글씨 색을 하얀색으로 변경합니다.</td>
+            </tr>
+            <tr>
+                <td>형제 선택자(sibling Selector)</td>
+                <td>div ~ p {color:#fff;}</td>
+                <td>div 태그의 인접한 형제 p 태그를 모두 선택하여 글씨 색을 하얀색으로 변경합니다.</td>
+            </tr>
+            <tr>
+                <td>인접 형제 선택자(Adjacent Sibling Selector)</td>
+                <td>div + p {color:#fff;}</td>
+                <td>div 태그의 인접한 형제 첫번째 p 태그를 선택하여 글씨 색을 하얀색으로 변경합니다.</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+
+
+
+<h4 class="pt50">속성 선택자</h4>
+<div class="table-responsive">
+    <table class="table table-bordered table-striped table-hover">
+        <thead>
+            <tr>
+                <th>종류</th>
+                <th>예시</th>
+                <th>이름</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>[name]</td>
+                <td>a[href]</td>
+                <td>a 태그 속성 중에 href가 있으면 선택합니다.</td>
+            </tr>
+            <tr>
+                <td>[name="value"]</td>
+                <td>a[href="#header"]</td>
+                <td>a 태그 href 속성의 값이 '#header'이면 선택합니다. </td>
+            </tr>
+            <tr>
+                <td>[name~="value"]</td>
+                <td>a[href~="web"]</td>
+                <td>a 태그 href 속성의 값이 'web'을 포함한 요소를 선택합니다.</td>
+            </tr>  
+            <tr>
+                <td>[name|="value"]</td>
+                <td>a[href|="web"]</td>
+                <td>a 태그 href 속성의 값이 'web'이거나 'web'으로 시작하는 요소를 선택합니다.</td>
+            </tr> 
+            <tr>
+                <td>[name^="value"]</td>
+                <td>a[href^="web"]</td>
+                <td>a 태그 href 속성의 값이 'web'으로 시작하는 태그를 선택합니다.</td>
+            </tr>  
+            <tr>
+                <td>[name*="value"]</td>
+                <td>a[href*="web"]</td>
+                <td>a 태그 href 속성의 값이 'web'이 포함되어 있는 태그를 선택합니다.</td>
+            </tr>  
+            <tr>
+                <td>[name$="value"]</td>
+                <td>a[href$="com"]</td>
+                <td>a 태그 href 속성의 값이 'com'으로 끝나는 태그를 선택합니다.</td>
+            </tr> 
+        </tbody>
+    </table>
+</div>
+
+
+
+<h4 class="pt50">가상 요소</h4>
+<div class="table-responsive">
+    <table class="table table-bordered table-striped table-hover">
+        <thead>
+            <tr>
+                <th>종류</th>
+                <th>예시</th>
+                <th>이름</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>::first-line</td>
+                <td>p:first-line {color:#fff;}</td>
+                <td>문단의 첫 줄에 컬러색을 하얀색으로 변경합니다.</td>
+            </tr>
+            <tr>
+                <td>::first-letter</td>
+                <td>p:first-letter {color:#fff;}</td>
+                <td>문단의 첫 글자에 컬러색을 하얀색으로 변경합니다.</td>
+            </tr>
+            <tr>
+                <td>::before</td>
+                <td>p:before {content:"시작"}</td>
+                <td>문단 시작 부분에 '시작'이라는 요소를 추가합니다.</td>
+            </tr>
+            <tr>
+                <td>::after</td>
+                <td>p:after {content:"끝"}</td>
+                <td>문단 끝 부분에 '끝'이라는 요소를 추가합니다.</td>
+            </tr>
+            <tr>
+                <td>::selection</td>
+                <td>p:selection {color:#fff;}</td>
+                <td>드래그로 선택하였을 경우 글씨 색을 하얀색으로 변경합니다.</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+
+<h4 class="pt50">가상 클래스</h4>
+<div class="table-responsive">
+    <table class="table table-bordered table-striped table-hover">
+        <thead>
+            <tr>
+                <th>종류</th>
+                <th>예시</th>
+                <th>이름</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>:first-child</td>
+                <td>li:first-line {color:#fff;}</td>
+                <td>li 자식 요소 중 첫 번째 자식 요소에게 컬러를 하얀색으로 변경합니다.</td>
+            </tr>
+            <tr>
+                <td>:last-child</td>
+                <td>li:last-line {color:#fff;}</td>
+                <td>li 자식 요소 중 마지막 번째 자식 요소에게 컬러를 하얀색으로 변경합니다.</td>
+            </tr>
+            <tr>
+                <td>:first-of-type</td>
+                <td>p:first-of-type {color:#fff;}</td>
+                <td>자식 요소 중 p 태그 첫 번째 자식 요소에게 컬러를 하얀색으로 변경합니다.</td>
+            </tr>
+            <tr>
+                <td>:last-of-type</td>
+                <td>p:last-of-type {color:#fff;}</td>
+                <td>자식 요소 중 p 태그 마지막 번째 자식 요소에게 컬러를 하얀색으로 변경합니다.</td>
+            </tr>
+            <tr>
+                <td>:nth-child()</td>
+                <td>li:nth-child(2) {color:#fff;}</td>
+                <td>li 자식 요소 중 2번째 자식 요소에게 컬러를 하얀색으로 변경합니다.</td>
+            </tr>
+            <tr>
+                <td>:nth-last-child()</td>
+                <td>li:nth-last-child(2) {color:#fff;}</td>
+                <td>li 자식 요소 중 뒤에서 2번째 자식 요소에게 컬러를 하얀색으로 변경합니다.</td>
+            </tr>
+            <tr>
+                <td>:nth-of-type()</td>
+                <td>p:nth-of-type(2) {color:#fff;}</td>
+                <td>자식 요소 중 p 태그 2번째 자식 요소에게 컬러를 하얀색으로 변경합니다.</td>
+            </tr>
+            <tr>
+                <td>:nth-last-of-type()</td>
+                <td>p:nth-last-of-type(2) {color:#fff;}</td>
+                <td>자식 요소 중 p 태그 뒤에서 2번째 자식 요소에게 컬러를 하얀색으로 변경합니다.</td>
+            </tr>
+            <tr>
+                <td>:only-child</td>
+                <td>:only-child {color:#fff;}</td>
+                <td>자식 요소 중 유일한 태그 자식 요소에게 컬러를 하얀색으로 변경합니다.</td>
+                <td class="ce">CSS3</td>
+            </tr>
+            <tr>
+                <td>:only-of-type</td>
+                <td>p:only-of-type {color:#fff;}</td>
+                <td>자식 요소 중 유일한 p 태그 자식 요소에게 컬러를 하얀색으로 변경합니다.</td>
+                <td class="ce">CSS3</td>
+            </tr>
+            <tr>
+                <td>:not()</td>
+                <td>li:not(:nth-child(2)) {color:#fff;}</td>
+                <td>li 자식 요소 중 2번째 자식 요소를 제외하고 컬러를 하얀색으로 변경합니다.</td>
+            </tr>
+            <tr>
+                <td>:root</td>
+                <td>:root {color:#fff;}</td>
+                <td>기본 루트 요소의 컬러를 하얀색으로 변경합니다.</td>
+            </tr>
+            <tr>
+                <td>:empty</td>
+                <td>:empty {color:#fff;}</td>
+                <td>컨텐츠 요소가 없는 요소의 컬러를 하얀색으로 변경합니다.</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<h4 class="pt50">링크 가상 클래스</h4>
+<div class="table-responsive">
+    <table class="table table-bordered table-striped table-hover">
+        <thead>
+            <tr>
+                <th>종류</th>
+                <th>예시</th>
+                <th>이름</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>:link</td>
+                <td>a:link {color:#fff;}</td>
+                <td>방문하지 않는 링크의 글씨 색을 하얀색으로 설정합니다.</td>
+            </tr>
+            <tr>
+                <td>:visited</td>
+                <td>a:visited {color:#fff;}</td>
+                <td>방문한 링크의 글씨 색을 하얀색으로 설정합니다.</td>
+            </tr>
+            <tr>
+                <td>:hover</td>
+                <td>a:hover {color:#fff;}</td>
+                <td>링크 위에 마우스를 올려 놓았을 경우 글씨 색을 하얀색으로 설정합니다.</td>
+            </tr>
+            <tr>
+                <td>:active</td>
+                <td>a:active {color:#fff;}</td>
+                <td>링크가 활성화되었을 경우 글씨 색을 하얀색으로 변경합니다.</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+
+<h4 class="pt50">폼 관련 선택자</h4>
+<div class="table-responsive">
+    <table class="table table-bordered table-striped table-hover">
+        <thead>
+            <tr>
+                <th>종류</th>
+                <th>예시</th>
+                <th>이름</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>:checked</td>
+                <td>input:checked {color:#fff;}</td>
+                <td>input 태그가 체크되었을 때 글씨 색을 하얀색으로 변경합니다.</td>
+            </tr>
+            <tr>
+                <td>:focus</td>
+                <td>input:link {color:#fff;}</td>
+                <td>input 태그에 초점이 맞추어졌을 때 글씨 색을 하얀색으로 변경합니다.</td>
+            </tr>
+            <tr>
+                <td>:enabled</td>
+                <td>input:enabled {color:#fff;}</td>
+                <td>input 태그가 사용 가능하면 글씨 색을 하얀색으로 변경합니다.</td>
+            </tr>
+            <tr>
+                <td>:disabled</td>
+                <td>input:disabled {color:#fff;}</td>
+                <td>input 태그가 사용 가능하지 않으면 글씨 색을 하얀색으로 변경합니다.</td>
+            </tr>
+            
+        </tbody>
+    </table>
+</div>
+
+
+
+<br><br><br><br><br><br>
+<h4 class="pt50">CSS Selector</h4>
+<div class="table-responsive">
+    <table class="table table-bordered table-striped table-hover">
+        <thead>
+            <tr>
+                <th>태그</th>
+                <th>유형</th>
+                <th>설명</th>
+                <th  class="ce">버전</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>.</td>
+                <td>.class {color:#fff;}</td>
+                <td>클래스 선택자</td>
+                <td class="ce">CSS1</td>
+            </tr>
+            <tr>
+                <td>#</td>
+                <td>.id {color:#fff;}</td>
+                <td>아이디 선택자</td>
+                <td class="ce">CSS1</td>
+            </tr>
+            <tr>
+                <td>*</td>
+                <td>* {color:#fff;}</td>
+                <td>전체 선택자</td>
+                <td class="ce">CSS2</td>
+            </tr>
+            <tr>
+                <td>element</td>
+                <td>p {color:#fff;}</td>
+                <td>요소 선택자</td>
+                <td class="ce">CSS1</td>
+            </tr>
+            <tr>
+                <td>element, element</td>
+                <td>p, div {color:#fff;}</td>
+                <td>그룹 선택자</td>
+                <td class="ce">CSS1</td>
+            </tr>
+            <tr>
+                <td>element element</td>
+                <td>div p {color:#fff;}</td>
+                <td>후손 선택자</td>
+                <td class="ce">CSS1</td>
+            </tr>
+            <tr>
+                <td>element &gt; element</td>
+                <td>div &gt; p {color:#fff;}</td>
+                <td>이웃 선택자</td>
+                <td class="ce">CSS2</td>
+            </tr>
+            <tr>
+                <td>element + element</td>
+                <td>div &gt; p {color:#fff;}</td>
+                <td>자식 선택자</td>
+                <td class="ce">CSS2</td>
+            </tr>
+            <tr>
+                <td>element ~ element</td>
+                <td>div ~ p {color:#fff;}</td>
+                <td>형제 선택자</td>
+                <td class="ce">CSS3</td>
+            </tr>
+            <tr>
+                <td>[attribute]</td>
+                <td>p [class] {color:#fff;}</td>
+                <td>속성 선택자</td>
+                <td class="ce">CSS2</td>
+            </tr>
+            <tr>
+                <td>[attribute=value]</td>
+                <td>p [class="white"] {color:#fff;}</td>
+                <td>속성 선택자</td>
+                <td class="ce">CSS2</td>
+            </tr>
+            <tr>
+                <td>[attribute~=value]</td>
+                <td>p [class~="white"] {color:#fff;}</td>
+                <td>속성 선택자</td>
+                <td class="ce">CSS2</td>
+            </tr>
+            <tr>
+                <td>[attribute^=value]</td>
+                <td>p [attr^="w"] {color:#fff;}</td>
+                <td>속성 선택자</td>
+                <td class="ce">CSS3</td>
+            </tr>
+            <tr>
+                <td>[attribute*=value]</td>
+                <td>p [attr*="white"] {color:#fff;}</td>
+                <td>속성 선택자</td>
+                <td class="ce">CSS3</td>
+            </tr>
+            <tr>
+                <td>[attribute$=value]</td>
+                <td>p [attr$="w"] {color:#fff;}</td>
+                <td>속성 선택자</td>
+                <td class="ce">CSS3</td>
+            </tr>
+            <tr>
+                <td>:link</td>
+                <td>a:link {color:#fff;}</td>
+                <td>방문하지 않은 링크</td>
+                <td class="ce">CSS1</td>
+            </tr>
+            <tr>
+                <td>:visited</td>
+                <td>a:visited {color:#fff;}</td>
+                <td>방문한 링크</td>
+                <td class="ce">CSS1</td>
+            </tr>
+            <tr>
+                <td>:hover</td>
+                <td>a:hover {color:#fff;}</td>
+                <td>마우스 오버 링크</td>
+                <td class="ce">CSS1</td>
+            </tr>
+            <tr>
+                <td>:active</td>
+                <td>a:active {color:#fff;}</td>
+                <td>활성화된 링크</td>
+                <td class="ce">CSS1</td>
+            </tr>
+            <tr>
+                <td>:focus</td>
+                <td>a:focus {color:#fff;}</td>
+                <td>포커스된 링크</td>
+                <td class="ce">CSS2</td>
+            </tr>
+            <tr>
+                <td>:root</td>
+                <td>a:root {color:#fff;}</td>
+                <td>문서의 루트 요소</td>
+                <td class="ce">CSS3</td>
+            </tr>
+            <tr>
+                <td>:nth-child(n)</td>
+                <td>p:nth-child(3) {color:#fff;}</td>
+                <td>n번째 스타일 적용</td>
+                <td class="ce">CSS3</td>
+            </tr>
+            <tr>
+                <td>:nth-last-child(n)</td>
+                <td>p:nth-last-child(n) {color:#fff;}</td>
+                <td>끝에서 n번째 스타일 적용</td>
+                <td class="ce">CSS3</td>
+            </tr>
+            <tr>
+                <td>:nth-of-type(n)</td>
+                <td>p:nth-of-type(n) {color:#fff;}</td>
+                <td>n번째 스타일 적용</td>
+                <td class="ce">CSS3</td>
+            </tr>
+            <tr>
+                <td>:nth-last-of-type(n)</td>
+                <td>p:nth-last-of-type(n) {color:#fff;}</td>
+                <td>끝에서 n번째 스타일 적용</td>
+                <td class="ce">CSS3</td>
+            </tr>
+
+            <tr>
+                <td>::first-letter</td>
+                <td>p::first-letter {color:#fff;}</td>
+                <td>첫 번째 문장</td>
+                <td class="ce">CSS1</td>
+            </tr>
+            <tr>
+                <td>::first-line</td>
+                <td>p::first-line {color:#fff;}</td>
+                <td>첫 번째 줄</td>
+                <td class="ce">CSS1</td>
+            </tr>
+
+            <tr>
+                <td>:first-of-type</td>
+                <td>p:first-of-type {color:#fff;}</td>
+                <td>첫 번째 요소의 선택자</td>
+                <td class="ce">CSS3</td>
+            </tr>
+            <tr>
+                <td>:last-of-type</td>
+                <td>p:last-of-type {color:#fff;}</td>
+                <td>마지막 번째 요소의 선택자</td>
+                <td class="ce">CSS3</td>
+            </tr>
+            <tr>
+                <td>:only-of-type</td>
+                <td>p:only-of-type {color:#fff;}</td>
+                <td>해당 요소가 유일한 요소의 선택자</td>
+                <td class="ce">CSS3</td>
+            </tr>
+
+            <tr>
+                <td>:first-child</td>
+                <td>p:first-child {color:#fff;}</td>
+                <td>첫 번째 자식요소</td>
+                <td class="ce">CSS3</td>
+            </tr>
+            <tr>
+                <td>:last-child</td>
+                <td>p:last-child {color:#fff;}</td>
+                <td>마지막 자식요소</td>
+                <td class="ce">CSS3</td>
+            </tr>
+            <tr>
+                <td>:only-child</td>
+                <td>p:only-child {color:#fff;}</td>
+                <td>자식요소가 유일하게 하나일 때</td>
+                <td class="ce">CSS3</td>
+            </tr>
+            <tr>
+                <td>:only-of-child</td>
+                <td>p:only-of-child {color:#fff;}</td>
+                <td>해당 요소가 유일한 요소 일 때</td>
+                <td class="ce">CSS3</td>
+            </tr>
+            <tr>
+                <td>:target</td>
+                <td>:target {color:#fff;}</td>
+                <td>연결</td>
+                <td class="ce">CSS3</td>
+            </tr>
+            <tr>
+                <td>:enabled</td>
+                <td>input[type="text"]:enabled {color:#fff;}</td>
+                <td>사용할 수 있는 상태</td>
+                <td class="ce">CSS3</td>
+            </tr>
+            <tr>
+                <td>:disabled</td>
+                <td>input[type="text"]:disabled {color:#fff;}</td>
+                <td>사용할 수 없는 상태</td>
+                <td class="ce">CSS3</td>
+            </tr>
+            <tr>
+                <td>:checked</td>
+                <td>input:checked {color:#fff;}</td>
+                <td>체크된 상태</td>
+                <td class="ce">CSS3</td>
+            </tr>
+            <tr>
+                <td>:in-range</td>
+                <td>input:in-range {color:#fff;}</td>
+                <td>인풋 요소의 라인을 설정합니다.</td>
+                <td class="ce">CSS3</td>
+            </tr>
+            <tr>
+                <td>:out-of-range</td>
+                <td>input:out-of-range {color:#fff;}</td>
+                <td>인풋 요소의 아웃라인을 설정합니다.</td>
+                <td class="ce">CSS3</td>
+            </tr>
+            <tr>
+                <td>:valid</td>
+                <td>input:valid {color:#fff;}</td>
+                <td>인풋 요소가 유효할 때 설정됩니다.</td>
+                <td class="ce">CSS3</td>
+            </tr>
+            <tr>
+                <td>:invalid</td>
+                <td>input:invalid {color:#fff;}</td>
+                <td>인풋 요소가 유효하지 않을 때 설정됩니다.</td>
+                <td class="ce">CSS3</td>
+            </tr>
+            <tr>
+                <td>:optional</td>
+                <td>input:optional {color:#fff;}</td>
+                <td>인풋 요소의 옵션에 설정됩니다.</td>
+                <td class="ce">CSS3</td>
+            </tr>
+            <tr>
+                <td>:read-only</td>
+                <td>input:read-only {color:#fff;}</td>
+                <td>인풋 요소를 읽었을 때 설정됩니다.</td>
+                <td class="ce">CSS3</td>
+            </tr>
+            <tr>
+                <td>:read-write</td>
+                <td>input:read-write {color:#fff;}</td>
+                <td>인풋 요소를 쓸 때 설정됩니다.</td>
+                <td class="ce">CSS3</td>
+            </tr>
+            <tr>
+                <td>:input:required</td>
+                <td>input:required {color:#fff;}</td>
+                <td>인풋 요소가 필수 일 때 설정됩니다.</td>
+                <td class="ce">CSS3</td>
+            </tr>
+            <tr>
+                <td>:lang(language)</td>
+                <td>p:lang(it) {color:#fff;}</td>
+                <td>언어설정에 따라 설정됩니다.</td>
+                <td class="ce">CSS2</td>
+            </tr>
+            <tr>
+                <td>:empty</td>
+                <td>p:empty {color:#fff;}</td>
+                <td>빈 상태</td>
+                <td class="ce">CSS3</td>
+            </tr>
+            <tr>
+                <td>::before</td>
+                <td>p::before {content: "content";}</td>
+                <td>요소 앞에 내용 추가</td>
+                <td class="ce">CSS3</td>
+            </tr>
+            <tr>
+                <td>::after</td>
+                <td>p::after {content: "content";}</td>
+                <td>요소 뒤에 내용 추가</td>
+                <td class="ce">CSS3</td>
+            </tr>
+            <tr>
+                <td>::selection</td>
+                <td>::selection {color:#fff;}</td>
+                <td>마우스로 선택했을 때</td>
+                <td class="ce">CSS3</td>
+            </tr>
+            <tr>
+                <td>:not(seletor)</td>
+                <td>:not(p) {color:#fff;}</td>
+                <td>제외한</td>
+                <td class="ce">CSS3</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+
+<h4 class="pt40">참고(Reference)</h4>
+<ul>
+    <li>CSS <a href="https://www.w3.org/TR/selectors-3/" target="_blank"><img src="https://tistory3.daumcdn.net/tistory/2933724/skin/images/blank.gif" class="blank_icon"></a></li>
+</ul>

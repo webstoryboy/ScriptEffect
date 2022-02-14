@@ -1,0 +1,321 @@
+
+    
+
+<h2>grid-row-gap(row-gap)</h2>
+<p>grid-row-gap 속성은 </p>
+
+<hr>
+
+<h3>grid-row-gap</h3>
+<p class="blue">grid-row-gap</p>
+
+<div class="table-responsive">
+    <table class="table table-bordered table-striped table-hover">
+        <colgroup>
+            <col width="width: 30%">
+            <col width="width: 70%">
+        </colgroup>
+        <thead>
+            <tr>
+                <th scope="col">특징</th>
+                <th scope="col">설명</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th scope="row"><a href="http://webzz.tistory.com/360">기본 값</a></th>
+                <td><a href="http://webzz.tistory.com/360">
+                    grid-row-gap : normal
+                </a></td>
+            </tr>
+            <tr>
+                <th scope="row"><a href="http://webzz.tistory.com/360">상속</a></th>
+                <td><a href="http://webzz.tistory.com/360">안됨</a></td>
+            </tr>
+            <tr>
+                <th scope="row"><a href="http://webzz.tistory.com/360">애니메이션</a></th>
+                <td><a href="http://webzz.tistory.com/360">가능</a></td>
+            </tr>
+            <tr>
+                <th scope="row"><a href="http://webzz.tistory.com/360">적용</a></th>
+                <td><a href="http://webzz.tistory.com/360">Grid</a></td>
+            </tr>
+            <tr>
+                <th scope="row"><a href="http://webzz.tistory.com/359">버전</a></th>
+                <td><a href="http://webzz.tistory.com/359">CSS3</a></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<h4 class="pt50">정의(Definition)</h4>
+<ul>
+    <li>grid-row-gap 속성은</li>
+</ul>
+  
+   
+   
+<h4 class="pt50">문법(Syntax)</h4>
+<p class="blue">grid-row-gap</p>
+<p class="blue">
+    /* 단위 속성 */
+</p>
+
+
+<!-- <h4 class="pt50">속성(Property)</h4>
+<div class="table-responsive">
+    <table class="table table-bordered table-striped table-hover">
+        <colgroup>
+            <col width="width: 30%">
+            <col width="width: 70%">
+        </colgroup>
+        <thead>
+            <tr>
+                <th scope="col">속성값</th>
+                <th scope="col">설명</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th>-</th>
+                <td>-</td>
+            </tr>
+        </tbody>
+    </table>
+</div> -->
+
+
+
+
+<style>
+.choice a {border: 1px solid #5f6368; padding: 7px 20px 5px 20px; display: inline-block; border-radius: 20px; text-decoration: none;}
+.grid {
+    background: #f3e5f5;
+    padding: 20px;
+    border-radius: 5px;
+
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: 200px 200px 200px;
+    grid-template-rows: 100px 100px
+}
+.grid > div {
+    background: #ce93d8;
+    color: #fff;
+    border-radius: 3px;
+    text-align: center;
+    display: flex; 
+    align-items: center; 
+    justify-content: center;
+}
+</style>
+
+
+<!-- Sample1 -->
+<h4 class="pt50">Sample1 <span><a href="https://webstoryboy.github.io/CSS/sample473-1.html" target="_blank"><img src="https://tistory3.daumcdn.net/tistory/2933724/skin/images/blank.gif" class="blank_icon"></a></span></h4>
+<p>콘텐츠 내부 요소의 정렬 상태를 설정하는 예제입니다.</p>
+<div class="sample">
+    <h5>결과<span class="dot"><i></i><i></i><i></i></span></h5>
+    <div class="ex">
+        <!-- ex -->
+        <div class="grid">
+            <div>box1</div>
+            <div>box2</div>
+            <div>box3</div>
+            <div>box4</div>
+            <div>box5</div>
+            <div>box6</div>
+        </div>
+        <!-- ex -->
+    </div>
+
+    <div class="choice">
+        <a href="#">reset</a>
+        <a href="#">grid-row-gap: 0;</a>
+        <a href="#">grid-row-gap: 10px;</a>
+        <a href="#">grid-row-gap: 2em;</a>
+        <a href="#">grid-row-gap: 1%;</a>
+    </div>
+</div>
+<!-- sample -->
+<div class="sample">
+    <h5>HTML<span class="dot"><i></i><i></i><i></i></span></h5>
+    <div class="script">
+<pre class="line-numbers"><code class="language-xml">&lt;div class="grid"&gt;
+    &lt;div&gt;box1&lt;/div&gt;
+    &lt;div&gt;box2&lt;/div&gt;
+    &lt;div&gt;box3&lt;/div&gt;
+    &lt;div&gt;box4&lt;/div&gt;
+    &lt;div&gt;box5&lt;/div&gt;
+    &lt;div&gt;box6&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+</div>
+<!-- sample -->
+
+<div class="sample">
+<h5>CSS<span class="dot"><i></i><i></i><i></i></span></h5>
+    <div class="script">
+<pre class="line-numbers"><code class="language-css">.grid {
+    background: #f3e5f5;
+    padding: 20px;
+    border-radius: 5px;
+
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: 200px 200px 200px;
+    grid-template-rows: 100px 100px
+}
+.grid &gt; div {
+    background: #ce93d8;
+    color: #fff;
+    border-radius: 3px;
+    text-align: center;
+    display: flex; 
+    align-items: center; 
+    justify-content: center;
+}</code></pre>
+    </div>
+</div>
+<!-- sample -->
+
+<div class="sample">
+    <h5>TOTAL<span class="dot"><i></i><i></i><i></i></span></h5>
+    <div class="script on">
+<pre class="line-numbers"><code class="language-javascript">&lt;!DOCTYPE html&gt;
+&lt;html lang="ko"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;Grid&lt;/title&gt;
+    &lt;style&gt;
+        .choice a {border: 1px solid #5f6368; padding: 7px 20px 5px 20px; display: inline-block; border-radius: 20px; text-decoration: none;}
+        .grid {
+            background: #f3e5f5;
+            padding: 20px;
+            border-radius: 5px;
+
+            display: grid;
+            grid-gap: 10px;
+            grid-template-columns: 200px 200px 200px;
+            grid-template-rows: 100px 100px
+        }
+        .grid &gt; div {
+            background: #ce93d8;
+            color: #fff;
+            border-radius: 3px;
+            text-align: center;
+            display: flex; 
+            align-items: center; 
+            justify-content: center;
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div class="grid"&gt;
+        &lt;div&gt;box1&lt;/div&gt;
+        &lt;div&gt;box2&lt;/div&gt;
+        &lt;div&gt;box3&lt;/div&gt;
+        &lt;div&gt;box4&lt;/div&gt;
+        &lt;div&gt;box5&lt;/div&gt;
+        &lt;div&gt;box6&lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;div class="choice"&gt;
+        &lt;a href="#"&gt;reset&lt;/a&gt;
+        &lt;a href="#"&gt;grid-row-gap: 0;&lt;/a&gt;
+        &lt;a href="#"&gt;grid-row-gap: 10px;&lt;/a&gt;
+        &lt;a href="#"&gt;grid-row-gap: 2em;&lt;/a&gt;
+        &lt;a href="#"&gt;grid-row-gap: 1%;&lt;/a&gt;
+    &lt;/div&gt;
+
+    &lt;script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"&gt;&lt;/script&gt;
+    &lt;script&gt;
+        $(".choice a").on("click",function(e){
+            e.preventDefault();
+        });
+
+        $(".choice a").click(function(){
+            var ass = $(this).text();
+            $(".grid").attr("style",ass);
+        });
+    &lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+    </div>
+</div>
+<!-- sample -->
+
+
+
+<script>
+$(".choice a").on("click",function(e){
+    e.preventDefault();
+});
+
+$(".choice a").click(function(){
+    var ass = $(this).text();
+    $(".grid").attr("style",ass);
+});
+</script>
+<!-- //Sample1 -->
+
+
+
+
+
+
+
+
+
+
+
+
+<h4 class="pt50">호환성(Compatibility) <a href="http://webzz.tistory.com/359" class="link"><img src="https://tistory3.daumcdn.net/tistory/2933724/skin/images/link.png"><span class="ir_pm">더보기</span></a></h4>
+<div class="table-responsive">
+    <table class="table table-bordered table-striped table-hover compatibility">
+        <thead>
+            <tr>
+                <th></th>
+                <th scope="col"><img src="https://tistory1.daumcdn.net/tistory/2933724/skin/images/icon-chrome1.png" alt="크롬 아이콘" title="크롬 브라우저"></th>
+                <th scope="col"><img src="https://tistory3.daumcdn.net/tistory/2933724/skin/images/icon-firefox1.png" alt="파이어폭스 아이콘" title="파이어폭스 브라우저"></th>
+                <th scope="col"><img src="https://tistory1.daumcdn.net/tistory/2933724/skin/images/icon-safari1.png" alt="사파리 아이콘" title="사파리 브라우저"></th>
+                <th scope="col"><img src="https://tistory3.daumcdn.net/tistory/2933724/skin/images/icon-opera1.png" alt="오페라 아이콘" title="오페라 브라우저"></th>
+                <th scope="col"><img src="https://tistory1.daumcdn.net/tistory/2933724/skin/images/icon-whale1.png" alt="네이버 웨일" title="네이버 웨일 브라우저"></th>
+                <th scope="col"><img src="https://tistory4.daumcdn.net/tistory/2933724/skin/images/icon-ie6.png" alt="익스플로러6 아이콘" title="인터넷 익스플로러6 브라우저"><em>6</em></th>
+                <th scope="col"><img src="https://tistory2.daumcdn.net/tistory/2933724/skin/images/icon-ie7.png" alt="익스플로러7 아이콘" title="인터넷 익스플로러7 브라우저"><em>7</em></th>
+                <th scope="col"><img src="https://tistory2.daumcdn.net/tistory/2933724/skin/images/icon-ie7.png" alt="익스플로러8 아이콘" title="인터넷 익스플로러8 브라우저"><em>8</em></th>
+                <th scope="col"><img src="https://tistory2.daumcdn.net/tistory/2933724/skin/images/icon-ie9.png" alt="익스플로러9 아이콘" title="인터넷 익스플로러9 브라우저"><em>9</em></th>
+                <th scope="col"><img src="https://tistory2.daumcdn.net/tistory/2933724/skin/images/icon-ie10.png" alt="익스플로러10 아이콘" title="인터넷 익스플로러10 브라우저"><em>10</em></th>
+                <th scope="col"><img src="https://tistory2.daumcdn.net/tistory/2933724/skin/images/icon-ie11.png" alt="익스플로러11 아이콘" title="인터넷 익스플로러11 브라우저"><em>11</em></th>
+                <th scope="col"><img src="https://tistory1.daumcdn.net/tistory/2933724/skin/images/icon-edge.png" alt="엣지 아이콘" title="엣지 브라우저"></th>
+                <th scope="col"><img src="https://tistory2.daumcdn.net/tistory/2933724/skin/images/icon-android.png" alt="안드로이드 아이콘" title="모바일 안드로이드 브라우저"></th>
+                <th scope="col"><img src="https://tistory2.daumcdn.net/tistory/2933724/skin/images/icon-ios.png" alt="ios 아이콘" title="모바일 아이폰 브라우저"></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td scope="row" class="ce">grid-template-rows</td>
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 크롬 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 파이어폭스 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 사파리 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 오페라 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 네이버 -->
+                <td class="no"><span title="사용 할 수 없습니다.">사용안됨</span></td><!-- 익스플로러6 -->
+                <td class="no"><span title="사용 할 수 없습니다.">사용안됨</span></td><!-- 익스플로러7 -->
+                <td class="no"><span title="사용 할 수 없습니다.">사용안됨</span></td><!-- 익스플로러8 -->
+                <td class="no"><span title="사용 할 수 없습니다.">사용안됨</span></td><!-- 익스플로러9 -->
+                <td class="no"><span title="사용 할 수 없습니다.">사용안됨</span></td><!-- 익스플로러10 -->
+                <td class="no"><span title="사용 할 수 없습니다.">사용안됨</span></td><!-- 익스플로러11 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 엣지 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 안드로이드 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- IOS -->
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+
+
+   
+ 

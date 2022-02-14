@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://tistory4.daumcdn.net/tistory/2933724/skin/images/font.css">
+    <link rel="stylesheet" href="https://tistory4.daumcdn.net/tistory/2933724/skin/images/font-awesome.css">
+    <style>
+        @font-face {
+            font-family: 'S-CoreDream-3Light';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-3Light.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
+        h4 {
+            font-family: 'S-CoreDream-3Light';
+        }
+        .sample {
+            border: 1px solid #e6e6e6;
+            border-radius: 5px;
+            color: #666;
+            margin-bottom: 10px;
+            font-family: 'S-CoreDream-3Light';
+        }
+        .sample a {
+            text-decoration: none;
+            color: #666;
+        }
+        .sample h5 {
+            position: relative;
+            margin: 0;
+            border-bottom: 1px solid #e6e6e6;
+            background: #f2f2f2;
+            border-radius: 5px 5px 0 0;
+            padding: 12px 10px 10px 20px !important;
+            font-size: 16px !important;
+            text-transform: uppercase;
+        }
+        .sample h5 .dot{
+            position: absolute;
+            right: 10px;
+            top: 12px;
+        }
+        .sample h5 .fa {
+            cursor: pointer;
+            display: inline-block;
+        }
+        .sample h5 .dot i {
+            display: inline-block;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: #aaa;
+            margin: 2px;
+        }
+        .sample .sampleOption {
+            border-bottom: 1px solid #e6e6e6;
+            padding: 20px;
+        }
+        .sample .sampleOption .option {
+            display: inline-block;
+            border: 1px solid #e6e6e6;
+            border-radius: 100px;
+        }
+        .sample .sampleOption .option .one {
+            border-radius: 100px;
+            border-radius: 100px;
+            white-space: nowrap;
+            padding: 10px 20px;
+            display: inline-block;
+            color: #666;
+        }
+        .sample .sampleOption .option .left {
+            border-right: 1px solid #e6e6e6;
+            padding-right: 1px solid #e6e6e6;
+            padding: 10px 14px 8px 20px;
+            display: inline-block;
+        }
+        .sample .sampleOption .option .right {
+            padding: 6px 20px 2px 10px;
+            display: inline-block;
+            vertical-align: -2px;
+        }
+        .sample .sampleOption .option .right i {
+            display: inline-block;
+            cursor: pointer;
+            font-size: 20px;
+            margin: 3px;
+        }
+        .sample .sampleView {
+            border-bottom: 1px solid #e6e6e6;
+            padding: 20px;
+        }
+        .entry-content .sample .sampleView p {
+            padding: 0 !important; margin: 0 !important;
+        }
+        .sample .sampleBtn {
+            border-bottom: 1px solid #e6e6e6;
+            padding: 20px 20px 10px 20px;
+        }
+        .sample .sampleBtn a {
+            border: 1px solid #e6e6e6;
+            border-radius: 100px;
+            white-space: nowrap;
+            padding: 10px 20px;
+            display: inline-block;
+            margin-bottom: 10px;
+            transition: all 0.2s
+        }
+        .sample .sampleBtn a:hover {
+            border-color: #FF4B4B;
+        }
+        .sample .sampleCode .scMenu > div.active {color: #FF4B49; }
+        .sample .sampleCode .scMenu > div {display: inline-block; border-right: 1px solid #e6e6e6; padding: 13px 20px 10px 20px; cursor:pointer}
+        .sample .sampleCode .scCont > div {display: none}
+
+       
+        /* start */
+        .animation-box {
+            counter-reset: items;
+        }
+        .animation-box .box {
+            width: 60px;
+            height: 60px;
+            line-height: 60px;
+            text-align: center;
+            border-radius: 50%;
+            color: #fff;
+            position: relative;
+            font-size: 12px;
+            overflow: hidden;
+            margin: 10px;
+            background-color: #A2CBFA;
+            border: 1px solid #4390E1;
+            box-shadow: 0 2px 2px rgba(0,90,250,0.05), 0 4px 4px rgba(0,90,250,0.05), 0 8px 8px rgba(0,90,250,0.05), 0 16px 16px rgba(0,90,250,0.05);
+        }
+        .animation-box .box::before {
+            counter-increment: items;
+            content: counter(items);
+        }
+        .sampleBtn.show a {pointer-events: none; user-select: none;}
+
+        /* start */
+        .animation-box {height: 200px;}
+        .animation-box.show1 .box {animation: move 2s 2;}
+        .animation-box.show2 .box {animation: move 2s 2 reverse;}
+        .animation-box.show3 .box {animation: move 2s 2 alternate;}
+        .animation-box.show4 .box {animation: move 2s 2 alternate-reverse;}
+
+
+        @keyframes move {
+          0%   {left: 0; top: 0;}
+          25%  {left: calc(100% - 80px); top: 0;}
+          50%  {left: calc(100% - 80px); top: calc(100% - 80px);}
+          75%  {left: 0; top: calc(100% - 80px);}
+          100% {left: 0; top: 0;}
+        }
+        
+    </style>
+</head>
+<body>
+    <h4 class="pt50">예제1(Sample)</h4>
+    <div class="sample">
+        <h5>애니메이션 예제입니다.</h5>
+        <div class="sampleView">
+            <!-- ex -->
+            <div class="animation-box">
+                <div class="box"></div>
+            </div>
+            <!-- ex -->
+        </div>
+        <div class="sampleBtn">
+            <a href="#" data-value="show1">animation-direction : normal</a>
+            <a href="#" data-value="show2">animation-direction : reverse</a>
+            <a href="#" data-value="show3">animation-direction : alternate</a>
+            <a href="#" data-value="show4">animation-direction : alternate-reverse</a>
+        </div>
+    </div>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script>
+        $(".sampleBtn a").click(function (e) {
+            e.preventDefault();
+            $(this).parent().addClass("show");
+            var attr = $(this).attr("data-value");
+            $(this).parent().prev().children().addClass(attr);
+            
+            if( $(".animation-box").hasClass(attr) ) {
+                setTimeout(function(){
+                    $(".sampleView > div").removeClass(attr);
+                    $(".sampleBtn").removeClass("show");
+                }, 4100)
+            }
+        });
+    </script>
+    
+</body>
+</html>

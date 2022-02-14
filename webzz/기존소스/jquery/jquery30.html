@@ -1,0 +1,316 @@
+
+
+<h2>속성 선택자</h2>
+<p>태그의 속성을 사용하여 선택하는 방법입니다.</p>
+
+<hr>
+
+<h3>속성 선택자(Hierarchy)</h3>
+
+<h5>속성 선택자</h5>
+<div class="table-responsive">
+    <table class="table table-bordered table-striped">
+        <thead>
+            <tr>
+                <th>종류</th>
+                <th>예시</th>
+                <th>설명</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>[name|="value"]</td>
+                <td>$("li a[href|='web']")</td>
+                <td>속성 중에 'web'과 같은 속성 값을 선택합니다.</td>
+            </tr>
+            <tr>
+                <td>[name*="value"]</td>
+                <td>$("li a[href*='web']")</td>
+                <td>속성 중에 'web'가 <strong>포함</strong>되어 있는 태그를 선택합니다.</td>
+            </tr>
+            <tr>
+                <td>[name~="value"]</td>
+                <td>$("li a[href~='web']")</td>
+                <td>속성 중에 'web'으로 <strong>시작</strong>하는 태그를 선택합니다.</td>
+            </tr>
+            <tr>
+                <td>[name$="value"]</td>
+                <td>$("li a[href$='web']")</td>
+                <td>속성 중에 'web'으로 <strong>끝</strong>나는 태그를 선택합니다.</td>
+            </tr>
+            <tr>
+                <td>[name="value"]</td>
+                <td>$("li a[href='web']")</td>
+                <td>속성 중에 'web'와 일치하는 속성 값을 선택합니다.</td>
+            </tr>
+            <tr>
+                <td>[name!="value"]</td>
+                <td>$("li a[href!='web']")</td>
+                <td>속성 중에 'web'와 일치하지 않는 태그를 선택합니다.</td>
+            </tr>
+            <tr>
+                <td>[name^="value"]</td>
+                <td>$("li a[href^='web']")</td>
+                <td>속성 중에 'web'로 <strong>시작</strong>하는 태그를 선택합니다.</td>
+            </tr>
+            <tr>
+                <td>[name]</td>
+                <td>$("li a[href]")</td>
+                <td>속성 중에 일치하는 속성을 선택합니다.</td>
+            </tr>
+            <tr>
+                <td>[name="value"][name="value"]</td>
+                <td>$("li a[href][class]")</td>
+                <td>속성 중에 'href' 속성과 'class' 속성이 모두 있는 태그를 선택합니다.</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+  
+  
+  
+  
+  
+  
+
+
+<!-- Sample1 -->
+<h4 class="pt50">Sample1</h4>
+<p>속성 선택자 예제입니다.</p>
+<div class="sample">
+    <h5>결과<span class="dot"><i></i><i></i><i></i></span></h5>
+    <div class="ex">
+        <!-- ex -->
+        <h3>속성 선택자</h3>
+        <div>
+            <ul class="list">
+                <li>기본 선택자</li>
+                <li>계층 선택자</li>
+                <li>속성 선택자
+                    <ul>
+                        <li><a href="#webs">#webs</a></li>
+                        <li><a href="#webstorybory">#webstorybory</a></li>
+                        <li><a href="webs">webs</a></li>
+                        <li><a href="webs-troyboy">webs-troyboy</a></li>
+                        <li><a href="webstroyboy">webstroyboy</a></li>
+                        <li><a href="https://webstoryboy.co.kr/">https://webstoryboy.co.kr/</a></li>
+                        <li><a href="#" class="webs" id="webs">class="webs", id="webs"</a></li>
+                    </ul>
+                </li>
+                <li>기본 필터 선택자</li>
+                <li>내용 필터 선택자</li>
+                <li>보임 필터 선택자</li>
+                <li>자식요소 필터 선택자</li>
+                <li>폼 필터 선택자</li>
+            </ul>
+        </div>
+        <!-- ex -->
+    </div>
+    
+    <div class="choice">
+        <a href="#" class="off1">리셋</a>
+        <a href="#" class="btn1">클릭하면 <em>li a[href|='webs']</em>를 선택합니다.</a>
+        <a href="#" class="btn2">클릭하면 <em>li a[href*='webs']</em>를 선택합니다.</a>
+        <a href="#" class="btn3">클릭하면 <em>li a[href~='webs']</em>를 선택합니다.</a>
+        <a href="#" class="btn4">클릭하면 <em>li a[href$='webs']</em>를 선택합니다.</a>
+        <a href="#" class="btn5">클릭하면 <em>li a[href='webs']</em>를 선택합니다.</a>
+        <a href="#" class="btn6">클릭하면 <em>li a[href!='webs']</em>를 선택합니다.</a>
+        <a href="#" class="btn7">클릭하면 <em>li a[href^='webs']</em>를 선택합니다.</a>
+        <a href="#" class="btn8">클릭하면 <em>li a[href]</em>를 선택합니다.</a>
+        <a href="#" class="btn9">클릭하면 <em>li a[class][id]</em>를 선택합니다.</a>
+    </div>
+</div>
+<!-- sample -->
+
+<div class="sample">
+    <h5>jquery<span class="dot"><i></i><i></i><i></i></span></h5>
+    <div class="script on">
+<pre class="line-numbers"><code class="language-javascript">$("li a[href|='webs']").addClass("rLine");
+$("li a[href*='webs']").addClass("rLine");
+$("li a[href~='webs']").addClass("rLine");
+$("li a[href$='webs']").addClass("rLine");
+$("li a[href='webs']").addClass("rLine");
+$("li a[href!='webs']").addClass("rLine");
+$("li a[href^='webs']").addClass("rLine");
+$("li a[href]").addClass("rLine");
+$("li a[class][id]").addClass("rLine");</code></pre>
+    </div>
+</div>
+<!-- sample -->
+
+<div class="sample">
+    <h5>html<span class="dot"><i></i><i></i><i></i></span></h5>
+    <div class="html">
+        <pre class="line-numbers"><code class="language-markup">&lt;h3&gt;계층 선택자&lt;/h3&gt;
+&lt;div&gt;
+    &lt;ul class="list"&gt;
+        &lt;li&gt;기본 선택자&lt;/li&gt;
+        &lt;li&gt;계층 선택자&lt;/li&gt;
+        &lt;li&gt;속성 선택자
+            &lt;ul&gt;
+                &lt;li&gt;&lt;a href="#webs"&gt;#webs&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href="#webstorybory"&gt;#webstorybory&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href="webs"&gt;webs&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href="webs-troyboy"&gt;webs-troyboy&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href="webstroyboy"&gt;webstroyboy&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href="https://webstoryboy.co.kr/"&gt;https://webstoryboy.co.kr/&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href="#" class="webs" id="webs"&gt;class="webs", id="webs"&lt;/a&gt;&lt;/li&gt;
+            &lt;/ul&gt;
+        &lt;/li&gt;
+        &lt;li&gt;기본 필터 선택자&lt;/li&gt;
+        &lt;li&gt;내용 필터 선택자&lt;/li&gt;
+        &lt;li&gt;보임 필터 선택자&lt;/li&gt;
+        &lt;li&gt;자식요소 필터 선택자&lt;/li&gt;
+        &lt;li&gt;폼 필터 선택자&lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+</div>
+<!-- sample -->
+
+<div class="sample">
+    <h5>Total<span class="dot"><i></i><i></i><i></i></span></h5>
+    <div class="html on">
+        <pre class="line-numbers"><code class="language-markup">&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;jQuery Sample&lt;/title&gt;
+    &lt;style&gt;
+        li.select:before {content:'Select'; padding: 4px 4px 2px 4px; font-size: 90%; color: #3d90b7; white-space: nowrap; background-color: #e7f6fd; border-radius: 4px;border: 1px dashed #3d90b7;}
+        .rLine {padding: 4px 4px 2px 10px; font-size: 90%; color: #c7254e; white-space: nowrap; background-color: #f9f2f4; border-radius: 4px; border: 1px dashed #a51a3d;}
+        .choice a {border: 1px solid #5f6368; padding: 7px 20px 5px 20px; display: inline-block; border-radius: 20px; text-decoration: none;}
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    
+    &lt;h3&gt;계층 선택자&lt;/h3&gt;
+    &lt;div&gt;
+        &lt;ul class="list"&gt;
+            &lt;li&gt;기본 선택자&lt;/li&gt;
+            &lt;li&gt;계층 선택자&lt;/li&gt;
+            &lt;li&gt;속성 선택자
+                &lt;ul&gt;
+                    &lt;li&gt;&lt;a href="#webs"&gt;#webs&lt;/a&gt;&lt;/li&gt;
+                    &lt;li&gt;&lt;a href="#webstorybory"&gt;#webstorybory&lt;/a&gt;&lt;/li&gt;
+                    &lt;li&gt;&lt;a href="webs"&gt;webs&lt;/a&gt;&lt;/li&gt;
+                    &lt;li&gt;&lt;a href="webs-troyboy"&gt;webs-troyboy&lt;/a&gt;&lt;/li&gt;
+                    &lt;li&gt;&lt;a href="webstroyboy"&gt;webstroyboy&lt;/a&gt;&lt;/li&gt;
+                    &lt;li&gt;&lt;a href="https://webstoryboy.co.kr/"&gt;https://webstoryboy.co.kr/&lt;/a&gt;&lt;/li&gt;
+                    &lt;li&gt;&lt;a href="#" class="webs" id="webs"&gt;class="webs", id="webs"&lt;/a&gt;&lt;/li&gt;
+                &lt;/ul&gt;
+            &lt;/li&gt;
+            &lt;li&gt;기본 필터 선택자&lt;/li&gt;
+            &lt;li&gt;내용 필터 선택자&lt;/li&gt;
+            &lt;li&gt;보임 필터 선택자&lt;/li&gt;
+            &lt;li&gt;자식요소 필터 선택자&lt;/li&gt;
+            &lt;li&gt;폼 필터 선택자&lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/div&gt;
+    
+    &lt;div class="choice"&gt;
+        &lt;a href="#" class="off1"&gt;리셋&lt;/a&gt;
+        &lt;a href="#" class="btn1"&gt;클릭하면 &lt;em&gt;li a[href|='webs']&lt;/em&gt;를 선택합니다.&lt;/a&gt;
+        &lt;a href="#" class="btn2"&gt;클릭하면 &lt;em&gt;li a[href*='webs']&lt;/em&gt;를 선택합니다.&lt;/a&gt;
+        &lt;a href="#" class="btn3"&gt;클릭하면 &lt;em&gt;li a[href~='webs']&lt;/em&gt;를 선택합니다.&lt;/a&gt;
+        &lt;a href="#" class="btn4"&gt;클릭하면 &lt;em&gt;li a[href$='webs']&lt;/em&gt;를 선택합니다.&lt;/a&gt;
+        &lt;a href="#" class="btn5"&gt;클릭하면 &lt;em&gt;li a[href='webs']&lt;/em&gt;를 선택합니다.&lt;/a&gt;
+        &lt;a href="#" class="btn6"&gt;클릭하면 &lt;em&gt;li a[href!='webs']&lt;/em&gt;를 선택합니다.&lt;/a&gt;
+        &lt;a href="#" class="btn7"&gt;클릭하면 &lt;em&gt;li a[href^='webs']&lt;/em&gt;를 선택합니다.&lt;/a&gt;
+        &lt;a href="#" class="btn8"&gt;클릭하면 &lt;em&gt;li a[href]&lt;/em&gt;를 선택합니다.&lt;/a&gt;
+        &lt;a href="#" class="btn9"&gt;클릭하면 &lt;em&gt;li a[class][id]&lt;/em&gt;를 선택합니다.&lt;/a&gt;
+    &lt;/div&gt;
+    
+    &lt;script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"&gt;&lt;/script&gt;
+    &lt;script&gt;
+        $(".choice .off1").on("click", function(e){
+            e.preventDefault();
+            $(".list li a").removeClass("rLine");
+        });
+        $(".choice .btn1").on("click", function(e){
+            e.preventDefault();
+            $("li a[href|='webs']").addClass("rLine");
+        });
+        $(".choice .btn2").on("click", function(e){
+            e.preventDefault();
+            $("li a[href*='webs']").addClass("rLine");
+        });
+        $(".choice .btn3").on("click", function(e){
+            e.preventDefault();
+            $("li a[href~='webs']").addClass("rLine");
+        });
+        $(".choice .btn4").on("click", function(e){
+            e.preventDefault();
+            $("li a[href$='webs']").addClass("rLine");
+        });
+        $(".choice .btn5").on("click", function(e){
+            e.preventDefault();
+            $("li a[href='webs']").addClass("rLine");
+        });
+        $(".choice .btn6").on("click", function(e){
+            e.preventDefault();
+            $("li a[href!='webs']").addClass("rLine");
+        });
+        $(".choice .btn7").on("click", function(e){
+            e.preventDefault();
+            $("li a[href^='webs']").addClass("rLine");
+        });
+        $(".choice .btn8").on("click", function(e){
+            e.preventDefault();
+            $("li a[href]").addClass("rLine");
+        });
+        $(".choice .btn9").on("click", function(e){
+            e.preventDefault();
+            $("li a[class][id]").addClass("rLine");
+        });
+    &lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+    </div>
+</div>
+<!-- sample1 -->
+
+
+<script>
+    $(".choice .off1").on("click", function(e){
+        e.preventDefault();
+        $(".list li a").removeClass("rLine");
+    });
+    $(".choice .btn1").on("click", function(e){
+        e.preventDefault();
+        $("li a[href|='webs']").addClass("rLine");
+    });
+    $(".choice .btn2").on("click", function(e){
+        e.preventDefault();
+        $("li a[href*='webs']").addClass("rLine");
+    });
+    $(".choice .btn3").on("click", function(e){
+        e.preventDefault();
+        $("li a[href~='webs']").addClass("rLine");
+    });
+    $(".choice .btn4").on("click", function(e){
+        e.preventDefault();
+        $("li a[href$='webs']").addClass("rLine");
+    });
+    $(".choice .btn5").on("click", function(e){
+        e.preventDefault();
+        $("li a[href='webs']").addClass("rLine");
+    });
+    $(".choice .btn6").on("click", function(e){
+        e.preventDefault();
+        $("li a[href!='webs']").addClass("rLine");
+    });
+    $(".choice .btn7").on("click", function(e){
+        e.preventDefault();
+        $("li a[href^='webs']").addClass("rLine");
+    });
+    $(".choice .btn8").on("click", function(e){
+        e.preventDefault();
+        $("li a[href]").addClass("rLine");
+    });
+    $(".choice .btn9").on("click", function(e){
+        e.preventDefault();
+        $("li a[class][id]").addClass("rLine");
+    });
+</script>
+<!-- //Sample1 -->

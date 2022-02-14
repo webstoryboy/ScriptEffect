@@ -1,0 +1,446 @@
+
+
+<h2>레이아웃</h2>
+<p>다양한 디바이스에 따라 다양한 레이아웃의 유형을 배웁니다.</p>
+
+<hr>
+
+<h3>레이아웃의 종류</h3>
+
+<h4 class="pt50">고정형 레이아웃(Fixed Layouts)</h4>
+<p>사이즈가 정해져 있는 고정형 레이아웃입니다. 사이즈가 정해져 있기 때문에 브라우저의 너비를 줄이면 스크롤바가 나타납니다.</p>
+
+<h4 class="pt50">유동형 레이아웃(Fluid Layouts)</h4>
+<p>사이즈가 화면 크기에 따라 변하는 레이아웃입니다. 화면 크기에 따라 변하지만 브라우저 너비가 작아지면 가독성에 문제가 생깁니다.</p>
+
+<h4 class="pt50">적응형 레이아웃(Adaptive Layouts)</h4>
+<p>특정한 디바이스에 따라 고정된 레이아웃을 설정하는 레이아웃입니다. 즉 각각의 디바이스에 따라 고정된 레이아웃 형태로 레이아웃이 변경됩니다.</p>
+
+<h4 class="pt50">반응형 레이아웃(Responsive Layouts)</h4>
+<p>화면 크기에 따라 레이아웃을 유연하게 조정하고 CSS 미디어쿼리를 사용한 복합적인 레이아웃입니다.</p>
+
+
+<style>
+    
+</style>
+
+
+
+<!-- Sample1 -->
+<h4 class="pt50">Sample1 <span><a href="https://webstoryboy.github.io/CSS/sample651-1.html" target="_blank"><img src="https://tistory3.daumcdn.net/tistory/2933724/skin/images/blank.gif" class="blank_icon"></a></span></h4>
+<p>콘텐츠 요소의 상하 관계 정렬 상태를 설정하는 예제입니다.</p>
+<div class="sample">
+    <h5>결과<span class="dot"><i></i><i></i><i></i></span></h5>
+    <div class="ex">
+        <!-- ex -->
+	    <div class="grid grid1">
+            <div class="column column1"></div>
+            <div class="column column1"></div>
+            <div class="column column1"></div>
+            <div class="column column1"></div>
+            <div class="column column1"></div>
+            <div class="column column1"></div>
+            <div class="column column1"></div>
+            <div class="column column1"></div>
+        </div>
+        <!-- ex -->
+    </div>
+</div>
+<!-- sample1 -->
+
+<div class="sample">
+    <h5>TOTAL<span class="dot"><i></i><i></i><i></i></span></h5>
+    <div class="script on">
+<pre class="line-numbers"><code class="language-xml">&lt;!DOCTYPE html&gt;
+&lt;html lang="ko"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;meta http-equiv="X-UA-Compatible" content="ie=edge"&gt;
+    &lt;title&gt;Layout 방식1&lt;/title&gt;
+    &lt;link href="https://fonts.googleapis.com/css?family=Lato:100,300,700,900&display=swap" rel="stylesheet"&gt;
+    &lt;style&gt;
+        *, *::after, *::before {box-sizing: border-box;}
+        * {margin: 0; padding: 0;}
+        body {
+            background-color: #111;
+            color : #000;
+            font-family: 'Lato';
+        }
+        .wrap h1 {
+            font-size: 75px;
+            padding: 5%;
+            color : #dc6e25;
+        }
+        .contents {
+            width: 100%;
+            margin: 20% 0 30%;
+        }
+        .content-item { 
+            width: 1000px; 
+            margin: 0 auto;
+            max-width: 90%;
+            position: relative;
+            margin: 10% 0 20%;
+        }
+        .content-item:nth-child(even){
+            margin-left: auto;
+        }
+        .content-item-title {
+            text-align: right;
+            font-weight: 300;
+            text-transform: capitalize;
+            color: #999;
+        }
+        .content-item:nth-child(even) .content-item-title {
+            text-align: left;
+        }
+        .content-item-num {
+            position: absolute; top: -250px; right: -10vw; 
+            font-size: 25vw; opacity: 0.03; line-height: 1;
+            font-weight: 100; 
+            color: #fff;
+        }
+        .content-item:nth-child(even) .content-item-num {
+            right: auto; left: -150px;
+        }
+        .content-item-imgWrap {
+            position: relative;
+            overflow: hidden;
+            width: 1000px;
+            padding-bottom: 57%;
+            z-index: 10;
+        }
+        .content-item-img {
+            height: 500px;
+            position: absolute;
+            width: 100%;
+            background-size: cover; 
+            background-position: 50% 0;
+        }
+        .content-item-desc { 
+            margin-top: -120px;
+            margin-right: -100px;
+            font-size: 80px; line-height: 1.2;
+            font-weight: 600;
+            text-transform: uppercase;
+            color: #fff;
+            text-align: right;
+            word-break: keep-all;
+            position: relative; z-index: 20;
+        }
+        .content-item:nth-child(even) .content-item-desc {
+            text-align: left; margin-right: 0; margin-left: -100px;
+        }
+        #section1 .content-item-img {background-image: url(http://flairgale.cafe24.com/para/images/so01.jpg);}
+        #section2 .content-item-img {background-image: url(http://flairgale.cafe24.com/para/images/so02.jpg);}
+        #section3 .content-item-img {background-image: url(http://flairgale.cafe24.com/para/images/so03.jpg);}
+        #section4 .content-item-img {background-image: url(http://flairgale.cafe24.com/para/images/so04.jpg);}
+        #section5 .content-item-img {background-image: url(http://flairgale.cafe24.com/para/images/so05.jpg);}
+        #section6 .content-item-img {background-image: url(http://flairgale.cafe24.com/para/images/so06.jpg);}
+        #section7 .content-item-img {background-image: url(http://flairgale.cafe24.com/para/images/so07.jpg);}
+        #section8 .content-item-img {background-image: url(http://flairgale.cafe24.com/para/images/so08.jpg);}
+        #section9 .content-item-img {background-image: url(http://flairgale.cafe24.com/para/images/so09.jpg);}
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div class="wrap"&gt;
+        &lt;h1&gt;Parallax Scrolling&lt;/h1&gt;
+        &lt;div class="contents"&gt;
+            &lt;section id="section1" class="content-item"&gt;
+                &lt;span class="content-item-num"&gt;01&lt;/span&gt;
+                &lt;h2 class="content-item-title"&gt;advice&lt;/h2&gt;
+                &lt;div class="content-item-imgWrap"&gt;
+                    &lt;div class="content-item-img"&gt;&lt;/div&gt;
+                &lt;/div&gt;
+                &lt;p class="content-item-desc"&gt;높은 목표를 세우고, 스스로 채직찔한다.&lt;/p&gt;
+            &lt;/section&gt;
+            &lt;section id="section2" class="content-item"&gt;
+                &lt;span class="content-item-num"&gt;02&lt;/span&gt;
+                &lt;h2 class="content-item-title"&gt;advice&lt;/h2&gt;
+                &lt;div class="content-item-imgWrap"&gt;
+                    &lt;div class="content-item-img"&gt;&lt;/div&gt;
+                &lt;/div&gt;
+                &lt;p class="content-item-desc"&gt;결과도 중요하지만, 과정을 더 중요하게 생각한다.&lt;/p&gt;
+            &lt;/section&gt;
+            &lt;section id="section3" class="content-item"&gt;
+                &lt;span class="content-item-num"&gt;03&lt;/span&gt;
+                &lt;h2 class="content-item-title"&gt;advice&lt;/h2&gt;
+                &lt;div class="content-item-imgWrap"&gt;
+                    &lt;div class="content-item-img"&gt;&lt;/div&gt;
+                &lt;/div&gt;
+                &lt;p class="content-item-desc"&gt;매 순간에 최선을 다하고, 끊임없이 변화한다.&lt;/p&gt;
+            &lt;/section&gt;
+            &lt;section id="section4" class="content-item"&gt;
+                &lt;span class="content-item-num"&gt;04&lt;/span&gt;
+                &lt;h2 class="content-item-title"&gt;advice&lt;/h2&gt;
+                &lt;div class="content-item-imgWrap"&gt;
+                    &lt;div class="content-item-img"&gt;&lt;/div&gt;
+                &lt;/div&gt;
+                &lt;p class="content-item-desc"&gt;기본을 중요하게 생각한다.&lt;/p&gt;
+            &lt;/section&gt;
+            &lt;section id="section5" class="content-item"&gt;
+                &lt;span class="content-item-num"&gt;05&lt;/span&gt;
+                &lt;h2 class="content-item-title"&gt;advice&lt;/h2&gt;
+                &lt;div class="content-item-imgWrap"&gt;
+                    &lt;div class="content-item-img"&gt;&lt;/div&gt;
+                &lt;/div&gt;
+                &lt;p class="content-item-desc"&gt;천 마디의 말보다 하나의 행동이 더 값지다.&lt;/p&gt;
+            &lt;/section&gt;
+            &lt;section id="section6" class="content-item"&gt;
+                &lt;span class="content-item-num"&gt;06&lt;/span&gt;
+                &lt;h2 class="content-item-title"&gt;advice&lt;/h2&gt;
+                &lt;div class="content-item-imgWrap"&gt;
+                    &lt;div class="content-item-img"&gt;&lt;/div&gt;
+                &lt;/div&gt;
+                &lt;p class="content-item-desc"&gt;조그만 성공에 만족하지 않으며, 방심을 경계한다.&lt;/p&gt;
+            &lt;/section&gt;
+            &lt;section id="section7" class="content-item"&gt;
+                &lt;span class="content-item-num"&gt;07&lt;/span&gt;
+                &lt;h2 class="content-item-title"&gt;advice&lt;/h2&gt;
+                &lt;div class="content-item-imgWrap"&gt;
+                    &lt;div class="content-item-img"&gt;&lt;/div&gt;
+                &lt;/div&gt;
+                &lt;p class="content-item-desc"&gt;내 스타일을 다른 사람에게 강요하지 않는다.&lt;/p&gt;
+            &lt;/section&gt;
+            &lt;section id="section8" class="content-item"&gt;
+                &lt;span class="content-item-num"&gt;08&lt;/span&gt;
+                &lt;h2 class="content-item-title"&gt;advice&lt;/h2&gt;
+                &lt;div class="content-item-imgWrap"&gt;
+                    &lt;div class="content-item-img"&gt;&lt;/div&gt;
+                &lt;/div&gt;
+                &lt;p class="content-item-desc"&gt;나 자신의 이익을 위해 다른 사람을 이용하지 않는다.&lt;/p&gt;
+            &lt;/section&gt;
+            &lt;section id="section9" class="content-item"&gt;
+                &lt;span class="content-item-num"&gt;09&lt;/span&gt;
+                &lt;h2 class="content-item-title"&gt;advice&lt;/h2&gt;
+                &lt;div class="content-item-imgWrap"&gt;
+                    &lt;div class="content-item-img"&gt;&lt;/div&gt;
+                &lt;/div&gt;
+                &lt;p class="content-item-desc"&gt;다른 사람의 의견도 존중한다.&lt;/p&gt;
+            &lt;/section&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+    </div>
+</div>
+<!-- sample1 -->
+
+
+
+
+
+<!-- Sample2 -->
+<h4 class="pt50">Sample2 <span><a href="https://webstoryboy.github.io/CSS/sample651-2.html" target="_blank"><img src="https://tistory3.daumcdn.net/tistory/2933724/skin/images/blank.gif" class="blank_icon"></a></span></h4>
+<p>콘텐츠 요소의 상하 관계 정렬 상태를 설정하는 예제입니다.</p>
+<div class="sample">
+    <h5>결과<span class="dot"><i></i><i></i><i></i></span></h5>
+    <div class="ex">
+        <!-- ex -->
+	    <div class="grid grid1">
+            <div class="column column1"></div>
+            <div class="column column1"></div>
+            <div class="column column1"></div>
+            <div class="column column1"></div>
+            <div class="column column1"></div>
+            <div class="column column1"></div>
+            <div class="column column1"></div>
+            <div class="column column1"></div>
+        </div>
+        <!-- ex -->
+    </div>
+</div>
+<!-- sample2 -->
+
+<div class="sample">
+    <h5>TOTAL<span class="dot"><i></i><i></i><i></i></span></h5>
+    <div class="script on">
+<pre class="line-numbers"><code class="language-xml">&lt;!DOCTYPE html&gt;
+&lt;html lang="ko"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;meta http-equiv="X-UA-Compatible" content="ie=edge"&gt;
+    &lt;title&gt;Layout 방식2&lt;/title&gt;
+    &lt;link href="https://fonts.googleapis.com/css?family=Lato:100,300,700,900&display=swap" rel="stylesheet"&gt;
+    &lt;style&gt;
+        *, *::after, *::before {box-sizing: border-box;}
+        :root {font-size: 16px;}
+        body {
+            margin: 0;
+            --color-text : #dc6e25;
+            --color-link : #000;
+            --color-bg : #111;
+            --imgwidthmax: 550px;
+            --aspect-ratio: 32/17;
+            color: var(--color-link);
+            background-color: var(--color-bg);
+            font-family: 'Lato', sans-serif;;
+        }
+        .wrap h1 {
+            font-size: 5rem;
+            padding: 3rem;
+            color: var(--color-text);
+        }
+        .contents {
+            width: 100vw;
+            margin: 25vh 0 30vh;
+        }
+        .content-item { 
+            --imgwidth: calc(var(--imgwidthmax) * var(--aspect-ratio));
+            width: var(--imgwidth);
+            margin: 0 auto;
+            max-width: 90vw;
+            position: relative;
+            margin: 10% 0 20%;
+            will-change: transform;
+        }
+        .content-item:nth-child(even){
+            margin-left: auto;
+        }
+        .content-item-num {
+            position: absolute; top: -13vw; right: -10vw; 
+            font-size: 25vw; opacity: 0.03; line-height: 1;
+            font-weight: 100; 
+            color: #fff;
+        }
+        .content-item:nth-child(even) .content-item-num {
+            right: auto; left: -7vw;
+        }
+        .content-item-title {
+            text-align: right; font-weight: 300; text-transform: capitalize;
+            color: #999;
+        }
+        .content-item:nth-child(even) .content-item-title {
+            text-align: left;
+        }
+        .content-item-imgWrap {
+            position: relative;
+            --imgwidth: 100%;
+            margin: 0 auto;
+            overflow: hidden;
+            width: var(--imgwidth);
+            padding-bottom: calc(var(--imgwidth) / (var(--aspect-ratio)));
+            will-change: transform;
+        }
+        .content-item-img {
+            --overflow: 40px;
+            height: calc(100% + (2 * var(--overflow)));
+            position: absolute;
+            top: calc( -1 * var(--overflow));
+            width: 100%;
+            background-size: cover; 
+            background-position: 50% 0;
+            will-change: transform;
+        }
+        .content-item-desc { 
+            margin-top: -8vw;
+            margin-right: -10vw;
+            padding: 3vw;
+            font-size: 6vw; line-height: 1.2;
+            font-weight: 600;
+            text-transform: uppercase;
+            color: #fff;
+            text-align: right;
+            word-break: keep-all;
+            position: relative; z-index: 20;
+        }
+        .content-item:nth-child(even) .content-item-desc {
+            text-align: left; margin-right: 0; margin-left: -10vw;
+        }
+        
+        #section1 .content-item-img {background-image: url(http://flairgale.cafe24.com/para/images/so01.jpg);}
+        #section2 .content-item-img {background-image: url(http://flairgale.cafe24.com/para/images/so02.jpg);}
+        #section3 .content-item-img {background-image: url(http://flairgale.cafe24.com/para/images/so03.jpg);}
+        #section4 .content-item-img {background-image: url(http://flairgale.cafe24.com/para/images/so04.jpg);}
+        #section5 .content-item-img {background-image: url(http://flairgale.cafe24.com/para/images/so05.jpg);}
+        #section6 .content-item-img {background-image: url(http://flairgale.cafe24.com/para/images/so06.jpg);}
+        #section7 .content-item-img {background-image: url(http://flairgale.cafe24.com/para/images/so07.jpg);}
+        #section8 .content-item-img {background-image: url(http://flairgale.cafe24.com/para/images/so08.jpg);}
+        #section9 .content-item-img {background-image: url(http://flairgale.cafe24.com/para/images/so09.jpg);}
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div class="wrap"&gt;
+        &lt;h1&gt;Parallax Scrolling&lt;/h1&gt;
+        &lt;div class="contents"&gt;
+            &lt;section id="section1" class="content-item"&gt;
+                &lt;span class="content-item-num"&gt;01&lt;/span&gt;
+                &lt;h2 class="content-item-title"&gt;advice&lt;/h2&gt;
+                &lt;div class="content-item-imgWrap"&gt;
+                    &lt;div class="content-item-img"&gt;&lt;/div&gt;
+                &lt;/div&gt;
+                &lt;p class="content-item-desc"&gt;높은 목표를 세우고, 스스로 채직찔한다.&lt;/p&gt;
+            &lt;/section&gt;
+            &lt;section id="section2" class="content-item"&gt;
+                &lt;span class="content-item-num"&gt;02&lt;/span&gt;
+                &lt;h2 class="content-item-title"&gt;advice&lt;/h2&gt;
+                &lt;div class="content-item-imgWrap"&gt;
+                    &lt;div class="content-item-img"&gt;&lt;/div&gt;
+                &lt;/div&gt;
+                &lt;p class="content-item-desc"&gt;결과도 중요하지만, 과정을 더 중요하게 생각한다.&lt;/p&gt;
+            &lt;/section&gt;
+            &lt;section id="section3" class="content-item"&gt;
+                &lt;span class="content-item-num"&gt;03&lt;/span&gt;
+                &lt;h2 class="content-item-title"&gt;advice&lt;/h2&gt;
+                &lt;div class="content-item-imgWrap"&gt;
+                    &lt;div class="content-item-img"&gt;&lt;/div&gt;
+                &lt;/div&gt;
+                &lt;p class="content-item-desc"&gt;매 순간에 최선을 다하고, 끊임없이 변화한다.&lt;/p&gt;
+            &lt;/section&gt;
+            &lt;section id="section4" class="content-item"&gt;
+                &lt;span class="content-item-num"&gt;04&lt;/span&gt;
+                &lt;h2 class="content-item-title"&gt;advice&lt;/h2&gt;
+                &lt;div class="content-item-imgWrap"&gt;
+                    &lt;div class="content-item-img"&gt;&lt;/div&gt;
+                &lt;/div&gt;
+                &lt;p class="content-item-desc"&gt;기본을 중요하게 생각한다.&lt;/p&gt;
+            &lt;/section&gt;
+            &lt;section id="section5" class="content-item"&gt;
+                &lt;span class="content-item-num"&gt;05&lt;/span&gt;
+                &lt;h2 class="content-item-title"&gt;advice&lt;/h2&gt;
+                &lt;div class="content-item-imgWrap"&gt;
+                    &lt;div class="content-item-img"&gt;&lt;/div&gt;
+                &lt;/div&gt;
+                &lt;p class="content-item-desc"&gt;천 마디의 말보다 하나의 행동이 더 값지다.&lt;/p&gt;
+            &lt;/section&gt;
+            &lt;section id="section6" class="content-item"&gt;
+                &lt;span class="content-item-num"&gt;06&lt;/span&gt;
+                &lt;h2 class="content-item-title"&gt;advice&lt;/h2&gt;
+                &lt;div class="content-item-imgWrap"&gt;
+                    &lt;div class="content-item-img"&gt;&lt;/div&gt;
+                &lt;/div&gt;
+                &lt;p class="content-item-desc"&gt;조그만 성공에 만족하지 않으며, 방심을 경계한다.&lt;/p&gt;
+            &lt;/section&gt;
+            &lt;section id="section7" class="content-item"&gt;
+                &lt;span class="content-item-num"&gt;07&lt;/span&gt;
+                &lt;h2 class="content-item-title"&gt;advice&lt;/h2&gt;
+                &lt;div class="content-item-imgWrap"&gt;
+                    &lt;div class="content-item-img"&gt;&lt;/div&gt;
+                &lt;/div&gt;
+                &lt;p class="content-item-desc"&gt;내 스타일을 다른 사람에게 강요하지 않는다.&lt;/p&gt;
+            &lt;/section&gt;
+            &lt;section id="section8" class="content-item"&gt;
+                &lt;span class="content-item-num"&gt;08&lt;/span&gt;
+                &lt;h2 class="content-item-title"&gt;advice&lt;/h2&gt;
+                &lt;div class="content-item-imgWrap"&gt;
+                    &lt;div class="content-item-img"&gt;&lt;/div&gt;
+                &lt;/div&gt;
+                &lt;p class="content-item-desc"&gt;나 자신의 이익을 위해 다른 사람을 이용하지 않는다.&lt;/p&gt;
+            &lt;/section&gt;
+            &lt;section id="section9" class="content-item"&gt;
+                &lt;span class="content-item-num"&gt;09&lt;/span&gt;
+                &lt;h2 class="content-item-title"&gt;advice&lt;/h2&gt;
+                &lt;div class="content-item-imgWrap"&gt;
+                    &lt;div class="content-item-img"&gt;&lt;/div&gt;
+                &lt;/div&gt;
+                &lt;p class="content-item-desc"&gt;다른 사람의 의견도 존중한다.&lt;/p&gt;
+            &lt;/section&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+    </div>
+</div>
+<!-- sample2 -->

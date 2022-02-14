@@ -1,0 +1,278 @@
+
+
+<h2>&lt;rtc&gt;</h2>
+<p>&lt;ruby&gt; 태그는 루비 문자를 정의합니다. 루비 문자란 한자에 대한 읽는 법이나 일반적인 읽기 방법과 다르게 읽을 때 작은 글씨로 표현해주는 문자를 의미합니다. &lt;ruby&gt; 태그는 루비 문자를 정의하며, &lt;rt&gt; 태그는 상단에 작은 주석 글씨를 나타내며, &lt;rp&gt; 태그는 루비 태그가 지원되지 않을 경우 괄호('(')를 표현해주는 역할을 합니다. &lt;rb&gt; 태그는 발음을 나타내며, &lt;rtc&gt; 태그는 텍스트 컨테이너 역할을 합니다.</p>
+<hr>
+
+<h3>&lt;rtc&gt;</h3>
+<p class="blue">&lt;rtc&gt; 태그는 루비 문자의 텍스트 영역을 정의합니다.</p>
+
+<div class="table-responsive">
+    <table class="table table-bordered table-striped table-hover">
+        <colgroup>
+            <col style="width: 30%">
+            <col style="width: 70%">
+        </colgroup>
+        <thead>
+            <tr>
+                <th>특징</th>
+                <th>설명</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th><a href="http://webzz.tistory.com/225">요소</a></th>
+                <td><a href="http://webzz.tistory.com/225">인라인 요소(Inline Element)</a></td>
+            </tr>
+            <tr>
+                <th><a href="http://webzz.tistory.com/225">닫는 태그</a></th>
+                <td><a href="http://webzz.tistory.com/225">닫는 태그 사용(&lt;rtc&gt; ~ &lt;/rtc&gt;)</a></td>
+            </tr>
+            <tr>
+                <th><a href="http://webzz.tistory.com/228">버전</a></th>
+                <td><a href="http://webzz.tistory.com/228">HTML5</a></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+
+<h4 class="pt50">정의(Definition)</h4>
+<ul>
+    <li>&lt;rtc&gt; 태그는 루비 문자의 텍스트 영역을 정의합니다.</li>
+</ul>
+
+
+<h4 class="pt50">비교(Compare)</h4>
+<ul>
+    <li>루비 문자를 정의한다면 <a href="https://webzz.tistory.com/319" target="_blank">&lt;ruby&gt;</a> 태그를 사용합니다.</li>
+    <li>루비 문자의 상단 주석을 표현하려면 <a href="https://webzz.tistory.com/317" target="_blank">&lt;rt&gt;</a> 태그를 사용합니다.</li>
+    <li>루비 문자가 지원되지 않을 경우 괄호를 표현하려면 <a href="https://webzz.tistory.com/316" target="_blank">&lt;rp&gt;</a> 태그를 사용합니다.</li>
+    <li>루비 문자의 발음을 표현하려면 <a href="#" target="_blank">&lt;rb&gt;</a> 태그를 사용합니다.</li>
+    <li>루비 문자의 텍스트 영역을 표현하려면 <a href="https://webzz.tistory.com/318" target="_blank">&lt;rtc&gt;</a> 태그를 사용합니다.</li>
+</ul>
+
+
+
+<!-- Sample1 -->
+<h4 class="pt50">Sample1</h4>
+<p>루비 문자를 표현하기 위한 가장 기본적인 예제입니다.</p>
+<div class="sample">
+    <h5>결과<span class="dot"><i></i><i></i><i></i></span></h5>
+    <div class="ex">
+        <!-- ex -->
+        <div class="none">
+            <ruby>
+                語不成說 <rp>(</rp><rt>eobulseongseol</rt><rp>)</rp>
+            </ruby>
+        </div>
+        <!-- ex -->
+    </div>
+</div>
+<div class="sample">
+    <h5>html<span class="dot"><i></i><i></i><i></i></span></h5>
+    <div class="html">
+<pre class="line-numbers"><code class="language-markup">&lt;ruby&gt;
+    語不成說 &lt;rp&gt;(&lt;/rp&gt;&lt;rt&gt;eobulseongseol&lt;/rt&gt;&lt;rp&gt;)&lt;/rp&gt;
+&lt;/ruby&gt;
+</code></pre>
+    </div>
+</div>
+<!-- sample1 -->
+
+<!-- Sample2 -->
+<h4 class="pt50">Sample2</h4>
+<p>만약 루비 문자가 지원되지 않는다면 &lt;rp&gt; 태그가 표현되는 예제입니다.</p>
+<div class="sample">
+    <h5>결과<span class="dot"><i></i><i></i><i></i></span></h5>
+    <div class="ex">
+        <!-- ex -->
+        <div class="none">
+            <ruby>
+                語不成說(eobulseongseol)
+            </ruby>
+        </div>
+        <!-- ex -->
+    </div>
+</div>
+<div class="sample">
+    <h5>html<span class="dot"><i></i><i></i><i></i></span></h5>
+    <div class="html">
+<pre class="line-numbers"><code class="language-markup">&lt;ruby&gt;
+    語不成說 &lt;rp&gt;(&lt;/rp&gt;&lt;rt&gt;eobulseongseol&lt;/rt&gt;&lt;rp&gt;)&lt;/rp&gt;
+&lt;/ruby&gt;
+</code></pre>
+    </div>
+</div>
+<!-- sample1 -->
+
+
+
+<!-- Sample3 -->
+<h4 class="pt50">Sample3</h4>
+<p>글자와 발음에 맞게 설정한 루비 문자 표현 예제입니다.</p>
+<div class="sample">
+    <h5>결과<span class="dot"><i></i><i></i><i></i></span></h5>
+    <div class="ex">
+        <!-- ex -->
+        <div class="none">
+            <ruby>
+                <rb>語</rb><rp>(</rp><rt>eo</rt><rp>)</rp>
+                <rb>不</rb><rp>(</rp><rt>bul</rt><rp>)</rp>
+                <rb>成</rb><rp>(</rp><rt>seong</rt><rp>)</rp>
+                <rb>說</rb><rp>(</rp><rt>seol</rt><rp>)</rp>
+            </ruby>
+        </div>
+        <!-- ex -->
+    </div>
+</div>
+<div class="sample">
+    <h5>html<span class="dot"><i></i><i></i><i></i></span></h5>
+    <div class="html">
+<pre class="line-numbers"><code class="language-markup">&lt;ruby&gt;
+    &lt;rb&gt;語&lt;/rb&gt;&lt;rp&gt;(&lt;/rp&gt;&lt;rt&gt;eo&lt;/rt&gt;&lt;rp&gt;)&lt;/rp&gt;
+    &lt;rb&gt;不&lt;/rb&gt;&lt;rp&gt;(&lt;/rp&gt;&lt;rt&gt;bul&lt;/rt&gt;&lt;rp&gt;)&lt;/rp&gt;
+    &lt;rb&gt;成&lt;/rb&gt;&lt;rp&gt;(&lt;/rp&gt;&lt;rt&gt;seong&lt;/rt&gt;&lt;rp&gt;)&lt;/rp&gt;
+    &lt;rb&gt;說&lt;/rb&gt;&lt;rp&gt;(&lt;/rp&gt;&lt;rt&gt;seol&lt;/rt&gt;&lt;rp&gt;)&lt;/rp&gt;
+&lt;/ruby&gt;
+</code></pre>
+    </div>
+</div>
+<!-- sample3 -->
+
+
+
+<!-- Sample4 -->
+<h4 class="pt50">Sample4</h4>
+<p>발음 영역과 문자영역을 표현한 예제입니다.</p>
+<div class="sample">
+    <h5>결과<span class="dot"><i></i><i></i><i></i></span></h5>
+    <div class="ex">
+        <!-- ex -->
+        <div class="none">
+            <ruby>
+                <rb>語</rb><rp>(</rp><rt>eo</rt><rp>)</rp>
+                <rb>不</rb><rp>(</rp><rt>bul</rt><rp>)</rp>
+                <rb>成</rb><rp>(</rp><rt>seong</rt><rp>)</rp>
+                <rb>說</rb><rp>(</rp><rt>seol</rt><rp>)</rp>
+                <rtc><rp>(</rp><rt>어불성설</rt><rp>)</rp></rtc>
+            </ruby>
+        </div>
+        <!-- ex -->
+    </div>
+</div>
+<div class="sample">
+    <h5>html<span class="dot"><i></i><i></i><i></i></span></h5>
+    <div class="html">
+<pre class="line-numbers"><code class="language-markup">&lt;ruby&gt;
+    &lt;rb&gt;語&lt;/rb&gt;&lt;rp&gt;(&lt;/rp&gt;&lt;rt&gt;eo&lt;/rt&gt;&lt;rp&gt;)&lt;/rp&gt;
+    &lt;rb&gt;不&lt;/rb&gt;&lt;rp&gt;(&lt;/rp&gt;&lt;rt&gt;bul&lt;/rt&gt;&lt;rp&gt;)&lt;/rp&gt;
+    &lt;rb&gt;成&lt;/rb&gt;&lt;rp&gt;(&lt;/rp&gt;&lt;rt&gt;seong&lt;/rt&gt;&lt;rp&gt;)&lt;/rp&gt;
+    &lt;rb&gt;說&lt;/rb&gt;&lt;rp&gt;(&lt;/rp&gt;&lt;rt&gt;seol&lt;/rt&gt;&lt;rp&gt;)&lt;/rp&gt;
+    &lt;rtc&gt;&lt;rp&gt;(&lt;/rp&gt;&lt;rt&gt;어불성설&lt;/rt&gt;&lt;rp&gt;)&lt;/rp&gt;&lt;/rtc&gt;
+&lt;/ruby&gt;
+</code></pre>
+    </div>
+</div>
+<!-- sample4 -->
+
+<h4 class="pt50"><a href="http://webzz.tistory.com/227">호환성(Compatibility)</a></h4>
+<div class="table-responsive">
+    <table class="table table-bordered table-striped table-hover compatibility">
+        <colgroup>
+            <col style="width:20%" />
+        </colgroup>
+        <thead>
+            <tr>
+                <th></th>
+                <th scope="col"><img src="https://tistory1.daumcdn.net/tistory/2933724/skin/images/icon-chrome1.png" alt="크롬 아이콘" title="크롬 브라우저"></th>
+                <th scope="col"><img src="https://tistory3.daumcdn.net/tistory/2933724/skin/images/icon-firefox1.png" alt="파이어폭스 아이콘" title="파이어폭스 브라우저"></th>
+                <th scope="col"><img src="https://tistory1.daumcdn.net/tistory/2933724/skin/images/icon-safari1.png" alt="사파리 아이콘" title="사파리 브라우저"></th>
+                <th scope="col"><img src="https://tistory3.daumcdn.net/tistory/2933724/skin/images/icon-opera1.png" alt="오페라 아이콘" title="오페라 브라우저"></th>
+                <th scope="col"><img src="https://tistory1.daumcdn.net/tistory/2933724/skin/images/icon-whale1.png" alt="네이버 웨일" title="네이버 웨일 브라우저"></th>
+                <th scope="col"><img src="https://tistory4.daumcdn.net/tistory/2933724/skin/images/icon-ie6.png" alt="익스플로러6 아이콘" title="인터넷 익스플로러6 브라우저"><em>6</em></th>
+                <th scope="col"><img src="https://tistory2.daumcdn.net/tistory/2933724/skin/images/icon-ie7.png" alt="익스플로러7 아이콘" title="인터넷 익스플로러7 브라우저"><em>7</em></th>
+                <th scope="col"><img src="https://tistory2.daumcdn.net/tistory/2933724/skin/images/icon-ie7.png" alt="익스플로러8 아이콘" title="인터넷 익스플로러8 브라우저"><em>8</em></th>
+                <th scope="col"><img src="https://tistory2.daumcdn.net/tistory/2933724/skin/images/icon-ie9.png" alt="익스플로러9 아이콘" title="인터넷 익스플로러9 브라우저"><em>9</em></th>
+                <th scope="col"><img src="https://tistory2.daumcdn.net/tistory/2933724/skin/images/icon-ie10.png" alt="익스플로러10 아이콘" title="인터넷 익스플로러10 브라우저"><em>10</em></th>
+                <th scope="col"><img src="https://tistory2.daumcdn.net/tistory/2933724/skin/images/icon-ie11.png" alt="익스플로러11 아이콘" title="인터넷 익스플로러11 브라우저"><em>11</em></th>
+                <th scope="col"><img src="https://tistory1.daumcdn.net/tistory/2933724/skin/images/icon-edge.png" alt="엣지 아이콘" title="엣지 브라우저"></th>
+                <th scope="col"><img src="https://tistory2.daumcdn.net/tistory/2933724/skin/images/icon-android.png" alt="안드로이드 아이콘" title="모바일 안드로이드 브라우저"></th>
+                <th scope="col"><img src="https://tistory2.daumcdn.net/tistory/2933724/skin/images/icon-ios.png" alt="ios 아이콘" title="모바일 아이폰 브라우저"></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td scope="row" class="ce">&lt;ruby&gt;</td>
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 크롬 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 파이어폭스 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 사파리 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 오페라 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 네이버 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 익스플로러6 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 익스플로러7 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 익스플로러8 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 익스플로러9 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 익스플로러10 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 익스플로러11 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 엣지 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 안드로이드 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- IOS -->
+            </tr>
+            <tr>
+                <td scope="row" class="ce">&lt;rp&gt;</td>
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 크롬 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 파이어폭스 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 사파리 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 오페라 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 네이버 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 익스플로러6 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 익스플로러7 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 익스플로러8 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 익스플로러9 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 익스플로러10 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 익스플로러11 -->
+                <td class="no"><span title="사용 할 수 없습니다.">사용안됨</span></td><!-- 엣지 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 안드로이드 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- IOS -->
+            </tr>
+            <tr>
+                <td scope="row" class="ce">&lt;rt&gt;</td>
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 크롬 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 파이어폭스 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 사파리 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 오페라 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 네이버 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 익스플로러6 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 익스플로러7 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 익스플로러8 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 익스플로러9 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 익스플로러10 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 익스플로러11 -->
+                <td class="no"><span title="사용 할 수 없습니다.">사용안됨</span></td><!-- 엣지 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 안드로이드 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- IOS -->
+            </tr>
+            <tr>
+                <td scope="row" class="ce">&lt;rtc&gt;</td>
+                <td class="no"><span title="사용 할 수 없습니다.">사용안됨</span></td><!-- 크롬 -->
+                <td><span title="사용가능합니다.">사용가능</span></td><!-- 파이어폭스 -->
+                <td class="no"><span title="사용 할 수 없습니다.">사용안됨</span></td><!-- 사파리 -->
+                <td class="no"><span title="사용 할 수 없습니다.">사용안됨</span></td><!-- 오페라 -->
+                <td class="no"><span title="사용 할 수 없습니다.">사용안됨</span></td><!-- 네이버 -->
+                <td class="no"><span title="사용 할 수 없습니다.">사용안됨</span></td><!-- 익스플로러6 -->
+                <td class="no"><span title="사용 할 수 없습니다.">사용안됨</span></td><!-- 익스플로러7 -->
+                <td class="no"><span title="사용 할 수 없습니다.">사용안됨</span></td><!-- 익스플로러8 -->
+                <td class="no"><span title="사용 할 수 없습니다.">사용안됨</span></td><!-- 익스플로러9 -->
+                <td class="no"><span title="사용 할 수 없습니다.">사용안됨</span></td><!-- 익스플로러10 -->
+                <td class="no"><span title="사용 할 수 없습니다.">사용안됨</span></td><!-- 익스플로러11 -->
+                <td class="no"><span title="사용 할 수 없습니다.">사용안됨</span></td><!-- 엣지 -->
+                <td class="no"><span title="사용 할 수 없습니다.">사용안됨</span></td><!-- 안드로이드 -->
+                <td class="no"><span title="사용 할 수 없습니다.">사용안됨</span></td><!-- IOS -->
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<hr>
+

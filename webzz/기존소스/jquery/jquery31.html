@@ -1,0 +1,290 @@
+
+
+<h2>기본 필터 선택자</h2>
+<p>필터는 선태자 앞에 :(콜론)을 붙어 표현을 하며, 필터를 사용해 다양한 조건에 따라 선택할 수 있습니다.</p>
+
+<hr>
+
+<h3>기본 필터 선택자(Basic Filters)</h3>
+
+<h5>기본 필터 선택자</h5>
+<div class="table-responsive">
+    <table class="table table-bordered table-striped">
+        <thead>
+            <tr>
+                <th>종류</th>
+                <th>설명</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>:animated</td>
+                <td>선택된 집합에서 show, hide, slideDown, slideUp등의 애니메이션 태그를 선택합니다.</td>
+            </tr>
+            <tr>
+                <td>:eq(index)</td>
+                <td>선택된 태그들의 인덱스 번호를 통해 선택합니다.</td>
+            </tr>
+            <tr>
+                <td>:gt(index)</td>
+                <td>선택된 집합에서 인덱스보다 큰 인덱스를 가지고 있는 태그들을 선택합니다.</td>
+            </tr>
+            <tr>
+                <td>:lt(index)</td>
+                <td>선택된 집합에서 인덱스보다 작은 인덱스를 가지고 있는 태그들을 선택합니다.</td>
+            </tr>
+            <tr>
+                <td>:header</td>
+                <td>선택된 집합에서 제목 요소(h1~h6)들을 선택합니다.</td>
+            </tr>
+            <tr>
+                <td>:first</td>
+                <td>선택된 요소 중에서 첫 번째 요소를 찾아 선택합니다.</td>
+            </tr>
+            <tr>
+                <td>:last</td>
+                <td>선택된 요소 중에서 마지막 번째 요소를 찾아 선택합니다.</td>
+            </tr>
+            <tr>
+                <td>:odd</td>
+                <td>선택된 요소 중에서 홀수 번째 요소를 찾아 선택합니다.</td>
+            </tr>
+            <tr>
+                <td>:even</td>
+                <td>선택된 요소 중에서 짝수 번째 요소를 찾아 선택합니다.</td>
+            </tr>
+            <tr>
+                <td>:not()</td>
+                <td>선택된 요소 중에서 현재 선택한 요소의 반대 요소를 선택합니다.</td>
+            </tr>
+            <tr>
+                <td>:root()</td>
+                <td>문서의 가장 기본 루트 요소를 선택합니다.</td>
+            </tr>
+            <tr>
+                <td>:lang()</td>
+                <td>선택된 요소 중에서 언어 속성 요소를 선택합니다.</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+   
+
+
+
+
+
+
+<!-- Sample1 -->
+<h4 class="pt50">Sample1</h4>
+<p>기본 필터 선택자 예제입니다.</p>
+<div class="sample">
+    <h5>결과<span class="dot"><i></i><i></i><i></i></span></h5>
+    <div class="ex">
+        <!-- ex -->
+        <h3>기본 필터 선택자</h3>
+        <div class="list">
+            <ul>
+                <li>:eq()</li>
+                <li>:gt()</li>
+                <li>:lt()</li>
+                <li>:header</li>
+                <li>:first</li>
+                <li>:last</li>
+                <li>:odd</li>
+                <li>:even</li>
+                <li>:not()</li>
+                <li>:root()</li>
+                <li>:lang()</li>
+            </ul>
+        </div>
+        <!-- ex -->
+    </div>
+    
+    <div class="choice">
+        <a href="#" class="off1">리셋</a>
+        <a href="#" class="btn1">클릭하면 <em>:eq(4)</em>를 선택합니다.</a>
+        <a href="#" class="btn2">클릭하면 <em>:gt(4)</em>를 선택합니다.</a>
+        <a href="#" class="btn3">클릭하면 <em>:lt(4)</em>를 선택합니다.</a>
+        <a href="#" class="btn4">클릭하면 <em>:header</em>를 선택합니다.</a>
+        <a href="#" class="btn5">클릭하면 <em>:first</em>를 선택합니다.</a>
+        <a href="#" class="btn6">클릭하면 <em>:last</em>를 선택합니다.</a>
+        <a href="#" class="btn7">클릭하면 <em>:odd</em>를 선택합니다.</a>
+        <a href="#" class="btn8">클릭하면 <em>:even</em>를 선택합니다.</a>
+        <a href="#" class="btn9">클릭하면 <em>:not</em>를 선택합니다.</a>
+    </div>
+</div>
+<!-- sample -->
+
+<div class="sample">
+    <h5>jquery<span class="dot"><i></i><i></i><i></i></span></h5>
+    <div class="script on">
+<pre class="line-numbers"><code class="language-javascript">$(".list li:eq(4)").addClass("rLine");
+$(".list li:gt(4)").addClass("rLine");
+$(".list li:lt(4)").addClass("rLine");
+$(".list li:first").addClass("rLine");
+$(".list li:odd").addClass("rLine");
+$(".list li:even").addClass("rLine");
+$(".list li:not(:eq(4))").addClass("rLine");
+</code></pre>
+    </div>
+</div>
+<!-- sample -->
+
+<div class="sample">
+    <h5>html<span class="dot"><i></i><i></i><i></i></span></h5>
+    <div class="html">
+        <pre class="line-numbers"><code class="language-markup">&lt;h3&gt;기본 필터 선택자&lt;/h3&gt;
+&lt;div class="list"&gt;
+    &lt;ul&gt;
+        &lt;li&gt;:eq()&lt;/li&gt;
+        &lt;li&gt;:gt()&lt;/li&gt;
+        &lt;li&gt;:lt()&lt;/li&gt;
+        &lt;li&gt;:header&lt;/li&gt;
+        &lt;li&gt;:first&lt;/li&gt;
+        &lt;li&gt;:last&lt;/li&gt;
+        &lt;li&gt;:odd&lt;/li&gt;
+        &lt;li&gt;:even&lt;/li&gt;
+        &lt;li&gt;:not()&lt;/li&gt;
+        &lt;li&gt;:root()&lt;/li&gt;
+        &lt;li&gt;:lang()&lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+</div>
+<!-- sample -->
+
+<div class="sample">
+    <h5>Total<span class="dot"><i></i><i></i><i></i></span></h5>
+    <div class="html on">
+        <pre class="line-numbers"><code class="language-markup">&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;jQuery Sample&lt;/title&gt;
+    &lt;style&gt;
+        li.select:before {content:'Select'; padding: 4px 4px 2px 4px; font-size: 90%; color: #3d90b7; white-space: nowrap; background-color: #e7f6fd; border-radius: 4px;border: 1px dashed #3d90b7;}
+        .rLine {padding: 4px 4px 2px 10px; font-size: 90%; color: #c7254e; white-space: nowrap; background-color: #f9f2f4; border-radius: 4px; border: 1px dashed #a51a3d;}
+        .choice a {border: 1px solid #5f6368; padding: 7px 20px 5px 20px; display: inline-block; border-radius: 20px; text-decoration: none;}
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    
+    &lt;h3&gt;기본 필터 선택자&lt;/h3&gt;
+    &lt;div class="list"&gt;
+        &lt;ul&gt;
+            &lt;li&gt;:eq()&lt;/li&gt;
+            &lt;li&gt;:gt()&lt;/li&gt;
+            &lt;li&gt;:lt()&lt;/li&gt;
+            &lt;li&gt;:header&lt;/li&gt;
+            &lt;li&gt;:first&lt;/li&gt;
+            &lt;li&gt;:last&lt;/li&gt;
+            &lt;li&gt;:odd&lt;/li&gt;
+            &lt;li&gt;:even&lt;/li&gt;
+            &lt;li&gt;:not()&lt;/li&gt;
+            &lt;li&gt;:root()&lt;/li&gt;
+            &lt;li&gt;:lang()&lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/div&gt;
+    
+    &lt;div class="choice"&gt;
+        &lt;a href="#" class="off1"&gt;리셋&lt;/a&gt;
+        &lt;a href="#" class="btn1"&gt;클릭하면 &lt;em&gt;:eq(4)&lt;/em&gt;를 선택합니다.&lt;/a&gt;
+        &lt;a href="#" class="btn2"&gt;클릭하면 &lt;em&gt;:gt(4)&lt;/em&gt;를 선택합니다.&lt;/a&gt;
+        &lt;a href="#" class="btn3"&gt;클릭하면 &lt;em&gt;:lt(4)&lt;/em&gt;를 선택합니다.&lt;/a&gt;
+        &lt;a href="#" class="btn4"&gt;클릭하면 &lt;em&gt;:first&lt;/em&gt;를 선택합니다.&lt;/a&gt;
+        &lt;a href="#" class="btn5"&gt;클릭하면 &lt;em&gt;:last&lt;/em&gt;를 선택합니다.&lt;/a&gt;
+        &lt;a href="#" class="btn6"&gt;클릭하면 &lt;em&gt;:odd&lt;/em&gt;를 선택합니다.&lt;/a&gt;
+        &lt;a href="#" class="btn7"&gt;클릭하면 &lt;em&gt;:even&lt;/em&gt;를 선택합니다.&lt;/a&gt;
+        &lt;a href="#" class="btn8`"&gt;클릭하면 &lt;em&gt;:not&lt;/em&gt;를 선택합니다.&lt;/a&gt;
+    &lt;/div&gt;
+    
+    &lt;script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"&gt;&lt;/script&gt;
+    &lt;script&gt;
+        $(".choice .off1").on("click", function(e){
+            e.preventDefault();
+            $(".list li").removeClass("rLine");
+        });
+        $(".choice .btn1").on("click", function(e){
+            e.preventDefault();
+            $(".list li:eq(4)").addClass("rLine");
+        });
+        $(".choice .btn2").on("click", function(e){
+            e.preventDefault();
+            $(".list li:gt(4)").addClass("rLine");
+        });
+        $(".choice .btn3").on("click", function(e){
+            e.preventDefault();
+            $(".list li:lt(4)").addClass("rLine");
+        });
+        $(".choice .btn4").on("click", function(e){
+            e.preventDefault();
+            $(".list li:first").addClass("rLine");
+        });
+        $(".choice .btn5").on("click", function(e){
+            e.preventDefault();
+            $(".list li:last").addClass("rLine");
+        });
+        $(".choice .btn6").on("click", function(e){
+            e.preventDefault();
+            $(".list li:odd").addClass("rLine");
+        });
+        $(".choice .btn7").on("click", function(e){
+            e.preventDefault();
+            $(".list li:even").addClass("rLine");
+        });
+        $(".choice .btn8").on("click", function(e){
+            e.preventDefault();
+            $(".list li:not(:eq(4))").addClass("rLine");
+        });
+    &lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+    </div>
+</div>
+<!-- sample1 -->
+
+
+<script>
+    $(".choice .off1").on("click", function(e){
+        e.preventDefault();
+        $(".list li").removeClass("rLine");
+    });
+    $(".choice .btn1").on("click", function(e){
+        e.preventDefault();
+        $(".list li:eq(4)").addClass("rLine");
+    });
+    $(".choice .btn2").on("click", function(e){
+        e.preventDefault();
+        $(".list li:gt(4)").addClass("rLine");
+    });
+    $(".choice .btn3").on("click", function(e){
+        e.preventDefault();
+        $(".list li:lt(4)").addClass("rLine");
+    });
+    $(".choice .btn4").on("click", function(e){
+        e.preventDefault();
+        $("header").addClass("rLine");
+    });
+    $(".choice .btn5").on("click", function(e){
+        e.preventDefault();
+        $(".list li:first").addClass("rLine");
+    });
+    $(".choice .btn6").on("click", function(e){
+        e.preventDefault();
+        $(".list li:last").addClass("rLine");
+    });
+    $(".choice .btn7").on("click", function(e){
+        e.preventDefault();
+        $(".list li:odd").addClass("rLine");
+    });
+    $(".choice .btn8").on("click", function(e){
+        e.preventDefault();
+        $(".list li:even").addClass("rLine");
+    });
+    $(".choice .btn9").on("click", function(e){
+        e.preventDefault();
+        $(".list li:not(:eq(4))").addClass("rLine");
+    });
+</script>
+<!-- //Sample1 -->

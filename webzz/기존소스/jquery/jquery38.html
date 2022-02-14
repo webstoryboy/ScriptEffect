@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    
+<h2>필터링</h2>    
+<p>선택된 집합에서 다시 조건에 맞는 집합을 선택합니다.</p>
+
+<hr>
+
+
+<h3>필터링(Filtering)</h3>
+
+<div class="table-responsive">
+    <table class="table table-bordered table-striped">
+        <thead>
+            <tr>
+                <th>메서드</th>
+                <th>설명</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><a href="http://webzz.tistory.com/90">.eq()</a></td>
+                <td>선택한 요소에 인덱스 번호에 해당하는 요소를 찾습니다.</td>
+            </tr>
+            <tr>
+                <td><a href="http://webzz.tistory.com/91">.filter()</a></td>
+                <td>선택된 요소에서 선택하거나 함수를 사용할 수 있습니다.</td>
+            </tr>
+            <tr>
+                <td><a href="http://webzz.tistory.com/92">.first()</a></td>
+                <td>선택된 요소에서 첫번째 자식 요소를 찾습니다.</td>
+            </tr>
+            <tr>
+                <td><a href="http://webzz.tistory.com/93">.has()</a></td>
+                <td>선택된 요소의 자식 요소에서 주어진 선택자를 찾습니다.</td>
+            </tr>
+            <tr>
+                <td><a href="http://webzz.tistory.com/94">.is()</a></td>
+                <td>선택된 요소 객체의 특징을 판별합니다.</td>
+            </tr>
+            <tr>
+                <td><a href="http://webzz.tistory.com/95">.last()</a></td>
+                <td>선택된 요소에서 마지막번째 자식 요소를 찾습니다.</td>
+            </tr>
+            <tr>
+                <td><a href="http://webzz.tistory.com/96">.map()</a></td>
+                <td>선택된 요소의 배열 집합을 새롭게 변경합니다.</td>
+            </tr>
+            <tr>
+                <td><a href="http://webzz.tistory.com/97">.not()</a></td>
+                <td>선택된 요소에서 조건에 맞지 않는 것을 선택합니다.</td>
+            </tr>
+            <tr>
+                <td><a href="http://webzz.tistory.com/98">.slice()</a></td>
+                <td>선택된 요소에서 조건의 범위로 재선택합니다.</td>
+            </tr>
+        </tbody>
+    </table>
+</div>	
+   
+   
+   
+<h5>Sample : 필터링</h5>
+<pre class="line-numbers"><code class="language-markup">&lt;!DOCTYPE html&gt;
+&lt;html lang="ko"&gt;
+    &lt;head&gt;
+        &lt;meta charset="UTF-8"&gt;
+        &lt;title&gt;제이쿼리(jQuery)&lt;/title&gt;
+        &lt;script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"&gt;&lt;/script&gt;
+        &lt;script type="text/javascript"&gt;
+				$(document).ready(function(){
+				//$(".list li").eq(2).css({ backgroundColor:"#9ab92e", border:"1px dashed #01584d" });
+				//$(".list li:eq(2)").css({ backgroundColor:"#9ab92e", border:"1px dashed #01584d" });
+				//$(".list li").filter(".one5").css({ backgroundColor:"#9ab92e", border:"1px dashed #01584d" });
+				//$(".list li").first().css({ backgroundColor:"#9ab92e", border:"1px dashed #01584d" });
+				//$(".list li").last().css({ backgroundColor:"#9ab92e", border:"1px dashed #01584d" });
+				//$(".list li").has("ul").css({ backgroundColor:"#9ab92e", border:"1px dashed #01584d" });
+				//$(".list li").not(".one5").css({ backgroundColor:"#9ab92e", border:"1px dashed #01584d" });
+				//$(".list li").slice(1,5).css({ backgroundColor:"#9ab92e", border:"1px dashed #01584d" });
+				$(".list li").is(".one5").css({ backgroundColor:"#9ab92e", border:"1px dashed #01584d" });
+			});
+        &lt;/script&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+		&lt;h3&gt;기본 태그를 선택하는 방법&lt;/h3&gt;
+		&lt;div class="list"&gt;
+			&lt;ul&gt;
+				&lt;li class="one1"&gt;one1&lt;/li&gt;
+				&lt;li class="one2"&gt;one2&lt;/li&gt;
+				&lt;li class="one3"&gt;one3&lt;/li&gt;
+				&lt;li class="one4"&gt;one4&lt;/li&gt;
+				&lt;li class="one5"&gt;one5&lt;/li&gt;
+				&lt;li class="one6"&gt;one6&lt;/li&gt;				
+				&lt;li class="one7"&gt;one7&lt;/li&gt;
+				&lt;li class="one8"&gt;one8&lt;/li&gt;
+				&lt;li class="one9"&gt;one9&lt;/li&gt;
+				&lt;li id="one10"&gt;one10
+					&lt;ul&gt;
+						&lt;li&gt;one10-1&lt;img src="../css.png" alt="이미지"&gt;&lt;/li&gt;
+						&lt;li&gt;one10-2&lt;img src="../html5.png"&gt;&lt;/li&gt;
+						&lt;li&gt;one10-1&lt;/li&gt;
+					&lt;/ul&gt;
+				&lt;/li&gt;
+			&lt;/ul&gt;
+		&lt;/div&gt;
+	&lt;/body&gt;
+&lt;/html&gt; 
+</code></pre>
+   
+
+</body>
+</html>

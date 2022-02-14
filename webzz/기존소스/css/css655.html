@@ -1,0 +1,1446 @@
+
+
+<h2>플렉스 레이아웃</h2>
+<p>다양한 디바이스에 따라 다양한 레이아웃의 유형을 배웁니다.</p>
+
+<hr>
+
+<h3>플렉스 레이아웃</h3>
+
+<p>flexbox는 뷰포트나 요소의 크기가 불명확하거나 동적으로 변할 때에도 효율적으로 요소를 배치, 정렬, 분산할 수 있는 방법을 제공하는 CSS3의 새로운 레이아웃 방식입니다. flexbox의 장점을 한 마디로 표현하면 '복잡한 계산 없이 요소의 크기와 순서를 유연하게 배치할 수 있다'라고 할 수 있다. 정렬, 방향, 순서, 크기 등을 유연하게 조절할 수 있기 때문에 별도의 분기 처리를 줄일 수 있고, CSS만으로 다양한 레이아웃을 구현할 수 있습니다.</p>
+
+<p>flexbox는 복수의 자식 요소인 flex item과 그 상위 부모 요소인 flex container로 구성됩니다.</p>
+
+<h4>부모 요소와 자식 요소에 정의하는 속성 구분</h4>
+<p>flexbox에서 사용하는 속성은 부모 요소인 flex container에 정의하는 속성과 자식 요소인 flex item에 정의하는 속성으로 나누어집니다.. 전체적인 정렬이나 흐름에 관련된 속성은 flex container에 정의하고, 자식 요소의 크기나 순서에 관련된 속성은 flex item에 정의합니다. 이를 분리해 적용하는 것이 중요합니다.</p>
+
+<ul>
+    <li>flex container 속성: flex-direction, flex-wrap, justify-content, align-items, align-content</li>
+    <li>flex item 속성: flex, flex-grow, flex-shrink, flex-basis, order</li>
+</ul>
+
+
+<h4>flexbox 지원 범위</h4>
+<p>flexbox는 Internet Explorer 10 이상이 지원합니다. 하지만 Internet Explorer 10 이상이 완전히 지원하지는 않아 Internet Explorer 10과 Internet Explorer 11에서 버그가 발견되기도 합니다. 그래서 PC용 서비스에 flexbox를 적용하기에는 아직 이른 감이 있으며, 만약 Internet Explorer를 지원하지 않는 서비스를 운영한다면 flexbox를 적용해 봐도 좋습니다.</p>
+
+
+
+
+
+
+
+<h5 class="pt50">flex 관련 속성</h5>
+<div class="table-responsive">
+    <table class="table table-bordered table-striped table-hover">
+        <colgroup>
+            <col style="width: 30%">
+            <col style="width: 70%">
+        </colgroup>
+        <thead>
+            <tr>
+                <th>속성</th>
+                <th>설명</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><a href="http://webzz.tistory.com/361">align-content</a></td>
+                <td>align-content 속성은 콘텐츠의 상하관계 정렬 상태를 정의합니다.</td>
+            </tr>
+            <tr>
+                <td><a href="http://webzz.tistory.com/362">align-items</a></td>
+                <td>align-items 속성은 콘텐츠 내부의 정렬 상태를 정의합니다.</td>
+            </tr>
+            <tr>
+                <td><a href="http://webzz.tistory.com/363">align-self</a></td>
+                <td>align-self 속성은 콘텐츠의 정렬 상태를 정의합니다.</td>
+            </tr>
+            <tr>
+                <td><a href="http://webzz.tistory.com/445">flex</a></td>
+                <td>flex 속성은 콘텐츠의 성질을 flex로 정의합니다.</td>
+            </tr>
+            <tr>
+                <td><a href="http://webzz.tistory.com/446">flex-basis</a></td>
+                <td>flex-basis 속성은 요소의 기본 단위를 정의합니다.</td>
+            </tr>
+            <tr>
+                <td><a href="http://webzz.tistory.com/447">flex-direction</a></td>
+                <td>flex-direction 속성은 요소의 정렬 방향을 정의합니다.</td>
+            </tr>
+            <tr>
+                <td><a href="http://webzz.tistory.com/448">flex-flow</a></td>
+                <td>flex-flow 속성은 요소의 정렬 방향과 줄 속성을 설정합니다.</td>
+            </tr>
+            <tr>
+                <td><a href="http://webzz.tistory.com/449">flex-grow</a></td>
+                <td>flex-grow 속성은 요소의 크기를 숫자를 통해 정의합니다.</td>
+            </tr>
+            <tr>
+                <td><a href="http://webzz.tistory.com/450">flex-shrink</a></td>
+                <td>flex-shrink 속성은 요소의 크기를 숫자를 통해 줄여줍니다.</td>
+            </tr>
+            <tr>
+                <td><a href="http://webzz.tistory.com/451">flex-wrap</a></td>
+                <td>flex-wrap 속성은 요소의 줄 속성을 설정합니다.</td>
+            </tr>
+            <tr>
+                <td><a href="http://webzz.tistory.com/482">justify-content</a></td>
+                <td>justify-content 속성은 콘텐츠의 좌우 관계 정렬 상태를 정의합니다.</td>
+            </tr>
+            <tr>
+                <td><a href="http://webzz.tistory.com/508">order</a></td>
+                <td>order 속성은 flex 콘텐츠의 순서를 정의합니다.</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+
+<style>
+    /* option */
+    .flex {
+        background-color: #f7f7f7;
+        border-radius: 3px;
+        padding: 20px;
+        counter-reset: items;
+    }
+    .item {
+        border-radius: 3px;
+        background-color: #A2CBFA;
+        border: 1px solid #4390E1;
+        box-sizing: border-box;
+        box-shadow: 0 2px 2px rgba(0,90,250,0.05), 0 4px 4px rgba(0,90,250,0.05), 0 8px 8px rgba(0,90,250,0.05), 0 16px 16px rgba(0,90,250,0.05);
+        min-height: 100px; 
+        color: #fff;
+        padding: 10px;
+    }
+    .item::before {
+        counter-increment: items;
+        content: counter(items);
+    }
+    /* flex */
+    .flex1 {display: flex;}
+    .item1 {flex-grow: 1;}
+    .item1 + .item1 {margin-left: 2%;}
+</style>
+
+
+
+<!-- Sample1 -->
+<h4 class="pt50">Sample1 <span><a href="https://webstoryboy.github.io/jquery/sample655-2.html" target="_blank"><img src="https://tistory3.daumcdn.net/tistory/2933724/skin/images/blank.gif" class="blank_icon"></a></span></h4>
+<p>콘텐츠 요소의 상하 관계 정렬 상태를 설정하는 예제입니다.</p>
+<div class="sample">
+    <h5>결과<span class="dot"><i></i><i></i><i></i></span></h5>
+    <div class="ex">
+        <!-- ex -->
+	    <div class="flex flex1">
+            <div class="item item1"></div>
+            <div class="item item1"></div>
+            <div class="item item1"></div>
+            <div class="item item1"></div>
+            <div class="item item1"></div>
+            <div class="item item1"></div>
+            <div class="item item1"></div>
+            <div class="item item1"></div>
+        </div>
+        <!-- ex -->
+    </div>
+</div>
+<!-- sample1 -->
+
+<div class="sample">
+    <h5>TOTAL<span class="dot"><i></i><i></i><i></i></span></h5>
+    <div class="script on">
+<pre class="line-numbers"><code class="language-xml">&lt;!DOCTYPE html&gt;
+&lt;html lang="ko"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;flex&lt;/title&gt;
+    &lt;style&gt;
+        /* option */
+        .flex {
+            background-color: #f7f7f7;
+            border-radius: 3px;
+            padding: 20px;
+            counter-reset: items;
+        }
+        .item {
+            border-radius: 3px;
+            background-color: #A2CBFA;
+            border: 1px solid #4390E1;
+            box-sizing: border-box;
+            box-shadow: 0 2px 2px rgba(0,90,250,0.05), 0 4px 4px rgba(0,90,250,0.05), 0 8px 8px rgba(0,90,250,0.05), 0 16px 16px rgba(0,90,250,0.05);
+            min-height: 100px; 
+            color: #fff;
+            padding: 10px;
+        }
+        .item::before {
+            counter-increment: items;
+            content: counter(items);
+        }
+        /* flex */
+        .flex1 {display: flex;}
+        .item1 {flex-grow: 1;}
+        .item1 + .item1 {margin-left: 2%;}
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div class="flex flex1"&gt;
+        &lt;div class="item item1"&gt;&lt;/div&gt;
+        &lt;div class="item item1"&gt;&lt;/div&gt;
+        &lt;div class="item item1"&gt;&lt;/div&gt;
+        &lt;div class="item item1"&gt;&lt;/div&gt;
+        &lt;div class="item item1"&gt;&lt;/div&gt;
+        &lt;div class="item item1"&gt;&lt;/div&gt;
+        &lt;div class="item item1"&gt;&lt;/div&gt;
+        &lt;div class="item item1"&gt;&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+    </div>
+</div>
+<!-- sample1 -->
+
+
+<style>
+.flex2 {display: flex;}
+.item2 {flex-grow: 1;}
+.item2:nth-child(4) {flex-grow: 2;}
+.item2 + .item2 {margin-left: 2%;}
+</style>
+
+<!-- Sample2 -->
+<h4 class="pt50">Sample2 <span><a href="https://webstoryboy.github.io/jquery/sample655-3.html" target="_blank"><img src="https://tistory3.daumcdn.net/tistory/2933724/skin/images/blank.gif" class="blank_icon"></a></span></h4>
+<p>콘텐츠 요소의 상하 관계 정렬 상태를 설정하는 예제입니다.</p>
+<div class="sample">
+    <h5>결과<span class="dot"><i></i><i></i><i></i></span></h5>
+    <div class="ex">
+        <!-- ex -->
+	    <div class="flex flex2">
+            <div class="item item2"></div>
+            <div class="item item2"></div>
+            <div class="item item2"></div>
+            <div class="item item2"></div>
+            <div class="item item2"></div>
+            <div class="item item2"></div>
+            <div class="item item2"></div>
+            <div class="item item2"></div>
+        </div>
+        <!-- ex -->
+    </div>
+</div>
+<!-- sample2 -->
+
+<div class="sample">
+    <h5>TOTAL<span class="dot"><i></i><i></i><i></i></span></h5>
+    <div class="script on">
+<pre class="line-numbers"><code class="language-xml">&lt;!DOCTYPE html&gt;
+&lt;html lang="ko"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;flex&lt;/title&gt;
+    &lt;style&gt;
+        /* option */
+        .flex {
+            background-color: #f7f7f7;
+            border-radius: 3px;
+            padding: 20px;
+            counter-reset: items;
+        }
+        .item {
+            border-radius: 3px;
+            background-color: #A2CBFA;
+            border: 1px solid #4390E1;
+            box-sizing: border-box;
+            box-shadow: 0 2px 2px rgba(0,90,250,0.05), 0 4px 4px rgba(0,90,250,0.05), 0 8px 8px rgba(0,90,250,0.05), 0 16px 16px rgba(0,90,250,0.05);
+            min-height: 100px; 
+            color: #fff;
+            padding: 10px;
+        }
+        .item::before {
+            counter-increment: items;
+            content: counter(items);
+        }
+        /* flex */
+        .flex2 {display: flex;}
+        .item2 {flex-grow: 1;}
+        .item2:nth-child(4) {flex-grow: 2;}
+        .item2 + .item2 {margin-left: 2%;}
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div class="flex flex2"&gt;
+        &lt;div class="item item2"&gt;&lt;/div&gt;
+        &lt;div class="item item2"&gt;&lt;/div&gt;
+        &lt;div class="item item2"&gt;&lt;/div&gt;
+        &lt;div class="item item2"&gt;&lt;/div&gt;
+        &lt;div class="item item2"&gt;&lt;/div&gt;
+        &lt;div class="item item2"&gt;&lt;/div&gt;
+        &lt;div class="item item2"&gt;&lt;/div&gt;
+        &lt;div class="item item2"&gt;&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+    </div>
+</div>
+<!-- //sample2 -->
+
+
+
+
+<style>
+/* flex */
+.flex22 {display: flex; flex-direction: row-reverse;}
+.item22 {width: 100px; margin-left: 2%;}
+</style>
+
+<!-- Sample22 -->
+<h4 class="pt50">Sample22 <span><a href="https://webstoryboy.github.io/CSS/sample655-22.html" target="_blank"><img src="https://tistory3.daumcdn.net/tistory/2933724/skin/images/blank.gif" class="blank_icon"></a></span></h4>
+<p>콘텐츠 요소의 상하 관계 정렬 상태를 설정하는 예제입니다.</p>
+<div class="sample">
+    <h5>결과<span class="dot"><i></i><i></i><i></i></span></h5>
+    <div class="ex">
+        <!-- ex -->
+        <div class="flex flex22">
+            <div class="item item22"></div>
+            <div class="item item22"></div>
+            <div class="item item22"></div>
+            <div class="item item22"></div>
+        </div>
+        <!-- ex -->
+    </div>
+</div>
+<!-- sample22 -->
+
+<div class="sample">
+    <h5>TOTAL<span class="dot"><i></i><i></i><i></i></span></h5>
+    <div class="script on">
+<pre class="line-numbers"><code class="language-xml">&lt;!DOCTYPE html&gt;
+&lt;html lang="ko"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;flex&lt;/title&gt;
+    &lt;style&gt;
+        /* option */
+        .flex {
+            background-color: #f7f7f7;
+            border-radius: 3px;
+            padding: 20px;
+            counter-reset: items;
+        }
+        .item {
+            border-radius: 3px;
+            background-color: #A2CBFA;
+            border: 1px solid #4390E1;
+            box-sizing: border-box;
+            box-shadow: 0 2px 2px rgba(0,90,250,0.05), 0 4px 4px rgba(0,90,250,0.05), 0 8px 8px rgba(0,90,250,0.05), 0 16px 16px rgba(0,90,250,0.05);
+            min-height: 100px; 
+            color: #fff;
+            padding: 10px;
+        }
+        .item::before {
+            counter-increment: items;
+            content: counter(items);
+        }
+        /* flex */
+        .flex22 {display: flex; flex-direction: row-reverse;}
+        .item22 {width: 100px; margin-left: 2%;}
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div class="flex flex22"&gt;
+        &lt;div class="item item22"&gt;&lt;/div&gt;
+        &lt;div class="item item22"&gt;&lt;/div&gt;
+        &lt;div class="item item22"&gt;&lt;/div&gt;
+        &lt;div class="item item22"&gt;&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+    </div>
+</div>
+<!-- //sample22 -->
+
+
+
+
+
+
+<style>
+/* flex */
+.flex23 {display: flex;}
+.item23 {width: 100px;}
+.item23 + .item23 {margin-left: 2%;}
+.item23:last-child {margin-left: auto;}
+</style>
+
+<!-- Sample23 -->
+<h4 class="pt50">Sample23 <span><a href="https://webstoryboy.github.io/CSS/sample655-23.html" target="_blank"><img src="https://tistory3.daumcdn.net/tistory/2933724/skin/images/blank.gif" class="blank_icon"></a></span></h4>
+<p>콘텐츠 요소의 상하 관계 정렬 상태를 설정하는 예제입니다.</p>
+<div class="sample">
+    <h5>결과<span class="dot"><i></i><i></i><i></i></span></h5>
+    <div class="ex">
+        <!-- ex -->
+        <div class="flex flex23">
+            <div class="item item23"></div>
+            <div class="item item23"></div>
+            <div class="item item23"></div>
+            <div class="item item23"></div>
+        </div>
+        <!-- ex -->
+    </div>
+</div>
+<!-- sample23 -->
+
+<div class="sample">
+    <h5>TOTAL<span class="dot"><i></i><i></i><i></i></span></h5>
+    <div class="script on">
+<pre class="line-numbers"><code class="language-xml">&lt;!DOCTYPE html&gt;
+&lt;html lang="ko"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;flex&lt;/title&gt;
+    &lt;style&gt;
+        /* option */
+        .flex {
+            background-color: #f7f7f7;
+            border-radius: 3px;
+            padding: 20px;
+            counter-reset: items;
+        }
+        .item {
+            border-radius: 3px;
+            background-color: #A2CBFA;
+            border: 1px solid #4390E1;
+            box-sizing: border-box;
+            box-shadow: 0 2px 2px rgba(0,90,250,0.05), 0 4px 4px rgba(0,90,250,0.05), 0 8px 8px rgba(0,90,250,0.05), 0 16px 16px rgba(0,90,250,0.05);
+            min-height: 100px; 
+            color: #fff;
+            padding: 10px;
+        }
+        .item::before {
+            counter-increment: items;
+            content: counter(items);
+        }
+        /* flex */
+        .flex23 {display: flex;}
+        .item23 {width: 100px;}
+        .item23 + .item23 {margin-left: 2%;}
+        .item23:last-child {margin-left: auto;}
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div class="flex flex23"&gt;
+        &lt;div class="item item23"&gt;&lt;/div&gt;
+        &lt;div class="item item23"&gt;&lt;/div&gt;
+        &lt;div class="item item23"&gt;&lt;/div&gt;
+        &lt;div class="item item23"&gt;&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+    </div>
+</div>
+<!-- //sample23 -->
+
+
+
+
+<style>
+.flex3 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.item3 {
+    width: 49%;
+    height: 100px;
+    margin-bottom: 2%;
+}
+.item3:nth-child(3n) {
+    width: 100%;
+}
+</style>
+
+<!-- Sample3 -->
+<h4 class="pt50">Sample3 <span><a href="https://webstoryboy.github.io/jquery/sample655-4.html" target="_blank"><img src="https://tistory3.daumcdn.net/tistory/2933724/skin/images/blank.gif" class="blank_icon"></a></span></h4>
+<p>콘텐츠 요소의 상하 관계 정렬 상태를 설정하는 예제입니다.</p>
+<div class="sample">
+    <h5>결과<span class="dot"><i></i><i></i><i></i></span></h5>
+    <div class="ex">
+        <!-- ex -->
+        <div class="flex flex3">
+            <div class="item item3"></div>
+            <div class="item item3"></div>
+            <div class="item item3"></div>
+            <div class="item item3"></div>
+            <div class="item item3"></div>
+        </div>
+        <!-- ex -->
+    </div>
+</div>
+<!-- sample3 -->
+
+<div class="sample">
+    <h5>TOTAL<span class="dot"><i></i><i></i><i></i></span></h5>
+    <div class="script on">
+<pre class="line-numbers"><code class="language-xml">&lt;!DOCTYPE html&gt;
+&lt;html lang="ko"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;flex&lt;/title&gt;
+    &lt;style&gt;
+        /* option */
+        .flex {
+            background-color: #f7f7f7;
+            border-radius: 3px;
+            padding: 20px;
+            counter-reset: items;
+        }
+        .item {
+            border-radius: 3px;
+            background-color: #A2CBFA;
+            border: 1px solid #4390E1;
+            box-sizing: border-box;
+            box-shadow: 0 2px 2px rgba(0,90,250,0.05), 0 4px 4px rgba(0,90,250,0.05), 0 8px 8px rgba(0,90,250,0.05), 0 16px 16px rgba(0,90,250,0.05);
+            min-height: 100px; 
+            color: #fff;
+            padding: 10px;
+        }
+        .item::before {
+            counter-increment: items;
+            content: counter(items);
+        }
+        /* flex */
+        .flex3 {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        .item3 {
+            width: 49%;
+            height: 100px;
+            margin-bottom: 2%;
+        }
+        .item3:nth-child(3n) {
+            width: 100%;
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div class="flex flex3"&gt;
+        &lt;div class="item item3"&gt;&lt;/div&gt;
+        &lt;div class="item item3"&gt;&lt;/div&gt;
+        &lt;div class="item item3"&gt;&lt;/div&gt;
+        &lt;div class="item item3"&gt;&lt;/div&gt;
+        &lt;div class="item item3"&gt;&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+    </div>
+</div>
+<!-- //sample3 -->
+
+
+
+
+
+<style>
+/* flex */
+.flex4 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.item4 {
+    /* flex: 0 32%;  flex-grow / flex-basis */
+    flex-basis: 32%;
+    height: 100px;
+    margin-bottom: 2%;
+}
+</style>
+
+<!-- Sample4 -->
+<h4 class="pt50">Sample4 <span><a href="https://webstoryboy.github.io/jquery/sample655-5.html" target="_blank"><img src="https://tistory3.daumcdn.net/tistory/2933724/skin/images/blank.gif" class="blank_icon"></a></span></h4>
+<p>콘텐츠 요소의 상하 관계 정렬 상태를 설정하는 예제입니다.</p>
+<div class="sample">
+    <h5>결과<span class="dot"><i></i><i></i><i></i></span></h5>
+    <div class="ex">
+        <!-- ex -->
+        <div class="flex flex4">
+            <div class="item item4"></div>
+            <div class="item item4"></div>
+            <div class="item item4"></div>
+            <div class="item item4"></div>
+            <div class="item item4"></div>
+            <div class="item item4"></div>
+            <div class="item item4"></div>
+            <div class="item item4"></div>
+            <div class="item item4"></div>
+        </div>
+        <!-- ex -->
+    </div>
+</div>
+<!-- sample4 -->
+
+<div class="sample">
+    <h5>TOTAL<span class="dot"><i></i><i></i><i></i></span></h5>
+    <div class="script on">
+<pre class="line-numbers"><code class="language-xml">&lt;!DOCTYPE html&gt;
+&lt;html lang="ko"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;flex&lt;/title&gt;
+    &lt;style&gt;
+        /* option */
+        .flex {
+            background-color: #f7f7f7;
+            border-radius: 3px;
+            padding: 20px;
+            counter-reset: items;
+        }
+        .item {
+            border-radius: 3px;
+            background-color: #A2CBFA;
+            border: 1px solid #4390E1;
+            box-sizing: border-box;
+            box-shadow: 0 2px 2px rgba(0,90,250,0.05), 0 4px 4px rgba(0,90,250,0.05), 0 8px 8px rgba(0,90,250,0.05), 0 16px 16px rgba(0,90,250,0.05);
+            min-height: 100px; 
+            color: #fff;
+            padding: 10px;
+        }
+        .item::before {
+            counter-increment: items;
+            content: counter(items);
+        }
+        /* flex */
+        .flex4 {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        .item4 {
+            /* flex: 0 32%;  flex-grow / flex-basis */
+            flex-basis: 32%;
+            height: 100px;
+            margin-bottom: 2%;
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div class="flex flex4"&gt;
+        &lt;div class="item item4"&gt;&lt;/div&gt;
+        &lt;div class="item item4"&gt;&lt;/div&gt;
+        &lt;div class="item item4"&gt;&lt;/div&gt;
+        &lt;div class="item item4"&gt;&lt;/div&gt;
+        &lt;div class="item item4"&gt;&lt;/div&gt;
+        &lt;div class="item item4"&gt;&lt;/div&gt;
+        &lt;div class="item item4"&gt;&lt;/div&gt;
+        &lt;div class="item item4"&gt;&lt;/div&gt;
+        &lt;div class="item item4"&gt;&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+    </div>
+</div>
+<!-- //sample4 -->
+    
+
+
+
+
+
+
+
+
+<style>
+/* flex */
+.flex5 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.item5 {
+    flex-basis: 32%;
+    padding-bottom: 28%;
+    margin-bottom: 2%;
+}
+</style>
+
+<!-- Sample5 -->
+<h4 class="pt50">Sample5 <span><a href="https://webstoryboy.github.io/jquery/sample655-6.html" target="_blank"><img src="https://tistory3.daumcdn.net/tistory/2933724/skin/images/blank.gif" class="blank_icon"></a></span></h4>
+<p>콘텐츠 요소의 상하 관계 정렬 상태를 설정하는 예제입니다.</p>
+<div class="sample">
+    <h5>결과<span class="dot"><i></i><i></i><i></i></span></h5>
+    <div class="ex">
+        <!-- ex -->
+        <div class="flex flex5">
+            <div class="item item5"></div>
+            <div class="item item5"></div>
+            <div class="item item5"></div>
+            <div class="item item5"></div>
+            <div class="item item5"></div>
+            <div class="item item5"></div>
+            <div class="item item5"></div>
+            <div class="item item5"></div>
+            <div class="item item5"></div>
+        </div>
+        <!-- ex -->
+    </div>
+</div>
+<!-- sample5 -->
+
+<div class="sample">
+    <h5>TOTAL<span class="dot"><i></i><i></i><i></i></span></h5>
+    <div class="script on">
+<pre class="line-numbers"><code class="language-xml">&lt;!DOCTYPE html&gt;
+&lt;html lang="ko"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;flex&lt;/title&gt;
+    &lt;style&gt;
+        /* option */
+        .flex {
+            background-color: #f7f7f7;
+            border-radius: 3px;
+            padding: 20px;
+            counter-reset: items;
+        }
+        .item {
+            border-radius: 3px;
+            background-color: #A2CBFA;
+            border: 1px solid #4390E1;
+            box-sizing: border-box;
+            box-shadow: 0 2px 2px rgba(0,90,250,0.05), 0 4px 4px rgba(0,90,250,0.05), 0 8px 8px rgba(0,90,250,0.05), 0 16px 16px rgba(0,90,250,0.05);
+            min-height: 100px; 
+            color: #fff;
+            padding: 10px;
+        }
+        .item::before {
+            counter-increment: items;
+            content: counter(items);
+        }
+        /* flex */
+        .flex5 {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        .item5 {
+            flex-basis: 32%;
+            padding-bottom: 30%;
+            margin-bottom: 2%;
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div class="flex flex5"&gt;
+        &lt;div class="item item5"&gt;&lt;/div&gt;
+        &lt;div class="item item5"&gt;&lt;/div&gt;
+        &lt;div class="item item5"&gt;&lt;/div&gt;
+        &lt;div class="item item5"&gt;&lt;/div&gt;
+        &lt;div class="item item5"&gt;&lt;/div&gt;
+        &lt;div class="item item5"&gt;&lt;/div&gt;
+        &lt;div class="item item5"&gt;&lt;/div&gt;
+        &lt;div class="item item5"&gt;&lt;/div&gt;
+        &lt;div class="item item5"&gt;&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+    </div>
+</div>
+<!-- //sample5 -->
+    
+
+
+
+
+
+
+<style>
+/* flex */
+.flex6 {
+    display: flex;
+    justify-content: space-between;
+    /* align-items: flex-start;
+    align-items: center; */
+    align-items: flex-end;
+    height: 300px;
+}
+.item6 {
+    flex-basis: 10%;
+    margin-bottom: 2%;
+}
+.item6:nth-child(1) { height: 20%; }
+.item6:nth-child(2) { height: 40%; }
+.item6:nth-child(3) { height: 50%; }
+.item6:nth-child(4) { height: 80%; }
+.item6:nth-child(5) { height: 40%; }
+.item6:nth-child(6) { height: 30%; }
+.item6:nth-child(7) { height: 20%; }
+</style>
+
+<!-- Sample6 -->
+<h4 class="pt50">Sample6 <span><a href="https://webstoryboy.github.io/jquery/sample655-7.html" target="_blank"><img src="https://tistory3.daumcdn.net/tistory/2933724/skin/images/blank.gif" class="blank_icon"></a></span></h4>
+<p>콘텐츠 요소의 상하 관계 정렬 상태를 설정하는 예제입니다.</p>
+<div class="sample">
+    <h5>결과<span class="dot"><i></i><i></i><i></i></span></h5>
+    <div class="ex">
+        <!-- ex -->
+        <div class="flex flex6">
+            <div class="item item6"></div>
+            <div class="item item6"></div>
+            <div class="item item6"></div>
+            <div class="item item6"></div>
+            <div class="item item6"></div>
+            <div class="item item6"></div>
+            <div class="item item6"></div>
+        </div>
+        <!-- ex -->
+    </div>
+</div>
+<!-- sample5 -->
+
+<div class="sample">
+    <h5>TOTAL<span class="dot"><i></i><i></i><i></i></span></h5>
+    <div class="script on">
+<pre class="line-numbers"><code class="language-xml">&lt;!DOCTYPE html&gt;
+&lt;html lang="ko"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;flex&lt;/title&gt;
+    &lt;style&gt;
+        /* option */
+        .flex {
+            background-color: #f7f7f7;
+            border-radius: 3px;
+            padding: 20px;
+            counter-reset: items;
+        }
+        .item {
+            border-radius: 3px;
+            background-color: #A2CBFA;
+            border: 1px solid #4390E1;
+            box-sizing: border-box;
+            box-shadow: 0 2px 2px rgba(0,90,250,0.05), 0 4px 4px rgba(0,90,250,0.05), 0 8px 8px rgba(0,90,250,0.05), 0 16px 16px rgba(0,90,250,0.05);
+            color: #fff;
+            padding: 10px;
+        }
+        .item::before {
+            counter-increment: items;
+            content: counter(items);
+        }
+        /* flex */
+        .flex6 {
+            display: flex;
+            justify-content: space-between;
+            /* align-items: flex-start;
+            align-items: center; */
+            align-items: flex-end;
+            height: 300px;
+        }
+        .item6 {
+            flex-basis: 10%;
+            margin-bottom: 2%;
+        }
+        .item6:nth-child(1) { height: 20%; }
+        .item6:nth-child(2) { height: 40%; }
+        .item6:nth-child(3) { height: 50%; }
+        .item6:nth-child(4) { height: 80%; }
+        .item6:nth-child(5) { height: 40%; }
+        .item6:nth-child(6) { height: 30%; }
+        .item6:nth-child(7) { height: 20%; }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div class="flex flex6"&gt;
+        &lt;div class="item item6"&gt;&lt;/div&gt;
+        &lt;div class="item item6"&gt;&lt;/div&gt;
+        &lt;div class="item item6"&gt;&lt;/div&gt;
+        &lt;div class="item item6"&gt;&lt;/div&gt;
+        &lt;div class="item item6"&gt;&lt;/div&gt;
+        &lt;div class="item item6"&gt;&lt;/div&gt;
+        &lt;div class="item item6"&gt;&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+    </div>
+</div>
+<!-- //sample6 -->
+
+
+
+
+
+
+
+
+<style>
+.flex7 {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+.item7 {
+    margin-bottom: 1%;
+    min-height: auto;
+}
+.item7:nth-child(1) { width: 20%; }
+.item7:nth-child(2) { width: 40%; }
+.item7:nth-child(3) { width: 50%; }
+.item7:nth-child(4) { width: 80%; }
+.item7:nth-child(5) { width: 40%; }
+.item7:nth-child(6) { width: 30%; }
+.item7:nth-child(7) { width: 20%; }
+</style>
+
+<!-- Sample7 -->
+<h4 class="pt50">Sample7 <span><a href="https://webstoryboy.github.io/jquery/sample655-8.html" target="_blank"><img src="https://tistory3.daumcdn.net/tistory/2933724/skin/images/blank.gif" class="blank_icon"></a></span></h4>
+<p>콘텐츠 요소의 상하 관계 정렬 상태를 설정하는 예제입니다.</p>
+<div class="sample">
+    <h5>결과<span class="dot"><i></i><i></i><i></i></span></h5>
+    <div class="ex">
+        <!-- ex -->
+        <div class="flex flex7">
+            <div class="item item7"></div>
+            <div class="item item7"></div>
+            <div class="item item7"></div>
+            <div class="item item7"></div>
+            <div class="item item7"></div>
+            <div class="item item7"></div>
+            <div class="item item7"></div>
+        </div>
+        <!-- ex -->
+    </div>
+</div>
+<!-- sample7 -->
+
+<div class="sample">
+    <h5>TOTAL<span class="dot"><i></i><i></i><i></i></span></h5>
+    <div class="script on">
+<pre class="line-numbers"><code class="language-xml">&lt;!DOCTYPE html&gt;
+&lt;html lang="ko"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;flex&lt;/title&gt;
+    &lt;style&gt;
+        /* option */
+        .flex {
+            background-color: #f7f7f7;
+            border-radius: 3px;
+            padding: 20px;
+            counter-reset: items;
+        }
+        .item {
+            border-radius: 3px;
+            background-color: #A2CBFA;
+            border: 1px solid #4390E1;
+            box-sizing: border-box;
+            box-shadow: 0 2px 2px rgba(0,90,250,0.05), 0 4px 4px rgba(0,90,250,0.05), 0 8px 8px rgba(0,90,250,0.05), 0 16px 16px rgba(0,90,250,0.05);
+            color: #fff;
+            padding: 10px;
+        }
+        .item::before {
+            counter-increment: items;
+            content: counter(items);
+        }
+        /* flex */
+        .flex7 {
+            display: flex;
+            justify-content: space-between;
+            flex-direction: column;
+        }
+        .item7 {
+            margin-bottom: 1%;
+            height: 14%;
+        }
+        .item7:nth-child(1) { width: 20%; }
+        .item7:nth-child(2) { width: 40%; }
+        .item7:nth-child(3) { width: 50%; }
+        .item7:nth-child(4) { width: 80%; }
+        .item7:nth-child(5) { width: 40%; }
+        .item7:nth-child(6) { width: 30%; }
+        .item7:nth-child(7) { width: 20%; }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div class="flex flex7"&gt;
+        &lt;div class="item item7"&gt;&lt;/div&gt;
+        &lt;div class="item item7"&gt;&lt;/div&gt;
+        &lt;div class="item item7"&gt;&lt;/div&gt;
+        &lt;div class="item item7"&gt;&lt;/div&gt;
+        &lt;div class="item item7"&gt;&lt;/div&gt;
+        &lt;div class="item item7"&gt;&lt;/div&gt;
+        &lt;div class="item item7"&gt;&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+    </div>
+</div>
+<!-- //sample7 -->
+
+
+
+
+
+
+<style>
+/* flex */
+.flex8 {
+    display: flex;
+    flex-flow: column wrap;
+    align-content: space-between;
+    height: 700px;
+}
+.item8 {
+    width: 32%;
+    margin-bottom: 2%;
+}
+.flex8::before,
+.flex8::after {
+    content: "";
+    flex-basis: 100%;
+    width: 0;
+    order: 2;
+    border: 1px solid #ddd;
+}
+.item8:nth-child(1) { height: 100px; }
+.item8:nth-child(2) { height: 200px; }
+.item8:nth-child(3) { height: 300px; }
+.item8:nth-child(4) { height: 200px; }
+.item8:nth-child(5) { height: 200px; }
+.item8:nth-child(6) { height: 200px; }
+.item8:nth-child(7) { height: 300px; }
+.item8:nth-child(8) { height: 200px; }
+.item8:nth-child(9) { height: 100px; }
+.item8:nth-child(3n+1) { order: 1; }
+.item8:nth-child(3n+2) { order: 2; }
+.item8:nth-child(3n)   { order: 3; }
+</style>
+
+<!-- Sample7 -->
+<h4 class="pt50">Sample8 <span><a href="https://webstoryboy.github.io/jquery/sample655-9.html" target="_blank"><img src="https://tistory3.daumcdn.net/tistory/2933724/skin/images/blank.gif" class="blank_icon"></a></span></h4>
+<p>콘텐츠 요소의 상하 관계 정렬 상태를 설정하는 예제입니다.</p>
+<div class="sample">
+    <h5>결과<span class="dot"><i></i><i></i><i></i></span></h5>
+    <div class="ex">
+        <!-- ex -->
+        <div class="flex flex8">
+            <div class="item item8"></div>
+            <div class="item item8"></div>
+            <div class="item item8"></div>
+            <div class="item item8"></div>
+            <div class="item item8"></div>
+            <div class="item item8"></div>
+            <div class="item item8"></div>
+            <div class="item item8"></div>
+            <div class="item item8"></div>
+        </div>
+        <!-- ex -->
+    </div>
+</div>
+<!-- sample7 -->
+
+<div class="sample">
+    <h5>TOTAL<span class="dot"><i></i><i></i><i></i></span></h5>
+    <div class="script on">
+<pre class="line-numbers"><code class="language-xml">&lt;!DOCTYPE html&gt;
+&lt;html lang="ko"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;flex&lt;/title&gt;
+    &lt;style&gt;
+        /* option */
+        .flex {
+            background-color: #f7f7f7;
+            border-radius: 3px;
+            padding: 20px;
+            counter-reset: items;
+        }
+        .item {
+            border-radius: 3px;
+            background-color: #A2CBFA;
+            border: 1px solid #4390E1;
+            box-sizing: border-box;
+            box-shadow: 0 2px 2px rgba(0,90,250,0.05), 0 4px 4px rgba(0,90,250,0.05), 0 8px 8px rgba(0,90,250,0.05), 0 16px 16px rgba(0,90,250,0.05);
+            min-height: 100px;;
+            color: #fff;
+            padding: 10px;
+        }
+        .item::before {
+            counter-increment: items;
+            content: counter(items);
+        }
+        /* flex */
+        .flex8 {
+            display: flex;
+            flex-flow: column wrap;
+            align-content: space-between;
+            height: 700px;
+        }
+        .item8 {
+            width: 32%;
+            margin-bottom: 2%;
+        }
+        .flex8::before,
+        .flex8::after {
+            content: "";
+            flex-basis: 100%;
+            width: 0;
+            order: 2;
+            border: 1px solid #ddd;
+        }
+        .item8:nth-child(1) { height: 100px; }
+        .item8:nth-child(2) { height: 200px; }
+        .item8:nth-child(3) { height: 300px; }
+        .item8:nth-child(4) { height: 200px; }
+        .item8:nth-child(5) { height: 200px; }
+        .item8:nth-child(6) { height: 200px; }
+        .item8:nth-child(7) { height: 300px; }
+        .item8:nth-child(8) { height: 200px; }
+        .item8:nth-child(9) { height: 100px; }
+        .item8:nth-child(3n+1) { order: 1; }
+        .item8:nth-child(3n+2) { order: 2; }
+        .item8:nth-child(3n)   { order: 3; }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div class="flex flex8"&gt;
+        &lt;div class="item item8"&gt;&lt;/div&gt;
+        &lt;div class="item item8"&gt;&lt;/div&gt;
+        &lt;div class="item item8"&gt;&lt;/div&gt;
+        &lt;div class="item item8"&gt;&lt;/div&gt;
+        &lt;div class="item item8"&gt;&lt;/div&gt;
+        &lt;div class="item item8"&gt;&lt;/div&gt;
+        &lt;div class="item item8"&gt;&lt;/div&gt;
+        &lt;div class="item item8"&gt;&lt;/div&gt;
+        &lt;div class="item item8"&gt;&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+    </div>
+</div>
+<!-- //sample7 -->
+
+
+
+
+
+
+
+
+<style>
+/* flex */
+.flex9 {
+    display: flex;
+    flex-flow: column wrap;
+    align-content: space-between;
+    height: 780px;
+}
+.item9 {
+    width: 24%;
+    margin-bottom: 1%;
+}
+.item9:nth-of-type(1) { height: 100px; }
+.item9:nth-of-type(2) { height: 200px; }
+.item9:nth-of-type(3) { height: 300px; }
+.item9:nth-of-type(4) { height: 200px; }
+.item9:nth-of-type(5) { height: 200px; }
+.item9:nth-of-type(6) { height: 200px; }
+.item9:nth-of-type(7) { height: 200px; }
+.item9:nth-of-type(8) { height: 100px; }
+.item9:nth-of-type(9) { height: 100px; }
+.item9:nth-of-type(10){ height: 100px; }
+.item9:nth-of-type(11){ height: 100px; }
+.item9:nth-of-type(12){ height: 300px; }
+.item9:nth-of-type(13){ height: 300px; }
+.item9:nth-of-type(14){ height: 200px; }
+.item9:nth-of-type(4n+1) { order: 1; }
+.item9:nth-of-type(4n+2) { order: 2; }
+.item9:nth-of-type(4n+3) { order: 3; }
+.item9:nth-of-type(4n)   { order: 4; }
+
+.item9.break {
+    flex-basis: 100%;
+    width: 0;
+    border: 1px solid #ddd;
+    margin: 0;
+    content: "";
+    padding: 0;
+    font-size: 0;
+}
+</style>
+
+<!-- Sample8 -->
+<h4 class="pt50">Sample9 <span><a href="https://webstoryboy.github.io/jquery/sample655-10.html" target="_blank"><img src="https://tistory3.daumcdn.net/tistory/2933724/skin/images/blank.gif" class="blank_icon"></a></span></h4>
+<p>콘텐츠 요소의 상하 관계 정렬 상태를 설정하는 예제입니다.</p>
+<div class="sample">
+    <h5>결과<span class="dot"><i></i><i></i><i></i></span></h5>
+    <div class="ex">
+        <!-- ex -->
+        <div class="flex flex9">
+            <div class="item item9"></div>
+            <div class="item item9"></div>
+            <div class="item item9"></div>
+            <div class="item item9"></div>
+            <div class="item item9"></div>
+            <div class="item item9"></div>
+            <div class="item item9"></div>
+            <div class="item item9"></div>
+            <div class="item item9"></div>
+            <div class="item item9"></div>
+            <div class="item item9"></div>
+            <div class="item item9"></div>
+            <div class="item item9"></div>
+            <div class="item item9"></div>
+            <div class="item item9"></div>
+            <div class="item item9"></div>
+    
+            <span class="item item9 break"></span>
+            <span class="item item9 break"></span>
+            <span class="item item9 break"></span>
+        </div>
+        <!-- ex -->
+    </div>
+</div>
+<!-- sample8 -->
+
+<div class="sample">
+    <h5>TOTAL<span class="dot"><i></i><i></i><i></i></span></h5>
+    <div class="script on">
+<pre class="line-numbers"><code class="language-xml">&lt;!DOCTYPE html&gt;
+&lt;html lang="ko"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;flex&lt;/title&gt;
+    &lt;style&gt;
+        /* option */
+        .flex {
+            background-color: #f7f7f7;
+            border-radius: 3px;
+            padding: 20px;
+            counter-reset: items;
+        }
+        .item {
+            border-radius: 3px;
+            background-color: #A2CBFA;
+            border: 1px solid #4390E1;
+            box-sizing: border-box;
+            box-shadow: 0 2px 2px rgba(0,90,250,0.05), 0 4px 4px rgba(0,90,250,0.05), 0 8px 8px rgba(0,90,250,0.05), 0 16px 16px rgba(0,90,250,0.05);
+            min-height: 100px;;
+            color: #fff;
+            padding: 10px;
+        }
+        .item::before {
+            counter-increment: items;
+            content: counter(items);
+        }
+        /* flex */
+        .flex9 {
+            display: flex;
+            flex-flow: column wrap;
+            align-content: space-between;
+            height: 780px;
+        }
+        .item9 {
+            width: 24%;
+            margin-bottom: 1%;
+        }
+        .item9:nth-of-type(1) { height: 100px; }
+        .item9:nth-of-type(2) { height: 200px; }
+        .item9:nth-of-type(3) { height: 300px; }
+        .item9:nth-of-type(4) { height: 200px; }
+        .item9:nth-of-type(5) { height: 200px; }
+        .item9:nth-of-type(6) { height: 200px; }
+        .item9:nth-of-type(7) { height: 200px; }
+        .item9:nth-of-type(8) { height: 100px; }
+        .item9:nth-of-type(9) { height: 100px; }
+        .item9:nth-of-type(10){ height: 100px; }
+        .item9:nth-of-type(11){ height: 100px; }
+        .item9:nth-of-type(12){ height: 300px; }
+        .item9:nth-of-type(13){ height: 300px; }
+        .item9:nth-of-type(14){ height: 200px; }
+        .item9:nth-of-type(4n+1) { order: 1; }
+        .item9:nth-of-type(4n+2) { order: 2; }
+        .item9:nth-of-type(4n+3) { order: 3; }
+        .item9:nth-of-type(4n)   { order: 4; }
+
+        .item9.break {
+            flex-basis: 100%;
+            width: 0;
+            border: 1px solid #ddd;
+            margin: 0;
+            content: "";
+            padding: 0;
+            font-size: 0;
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div class="flex flex9"&gt;
+        &lt;div class="item item9"&gt;&lt;/div&gt;
+        &lt;div class="item item9"&gt;&lt;/div&gt;
+        &lt;div class="item item9"&gt;&lt;/div&gt;
+        &lt;div class="item item9"&gt;&lt;/div&gt;
+        &lt;div class="item item9"&gt;&lt;/div&gt;
+        &lt;div class="item item9"&gt;&lt;/div&gt;
+        &lt;div class="item item9"&gt;&lt;/div&gt;
+        &lt;div class="item item9"&gt;&lt;/div&gt;
+        &lt;div class="item item9"&gt;&lt;/div&gt;
+        &lt;div class="item item9"&gt;&lt;/div&gt;
+        &lt;div class="item item9"&gt;&lt;/div&gt;
+        &lt;div class="item item9"&gt;&lt;/div&gt;
+        &lt;div class="item item9"&gt;&lt;/div&gt;
+        &lt;div class="item item9"&gt;&lt;/div&gt;
+        &lt;div class="item item9"&gt;&lt;/div&gt;
+        &lt;div class="item item9"&gt;&lt;/div&gt;
+
+        &lt;span class="item item9 break"&gt;&lt;/span&gt;
+        &lt;span class="item item9 break"&gt;&lt;/span&gt;
+        &lt;span class="item item9 break"&gt;&lt;/span&gt;
+    &lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+    </div>
+</div>
+<!-- //sample8 -->
+
+
+
+
+
+<style>
+.flex11 {
+    display: flex; 
+    flex-flow: row wrap;
+    justify-content: space-between;
+}
+.item11 {margin-bottom: 2%;}
+.item11:nth-child(1) {
+    /* flex-grow / flex-shrink / flex-basis : auto */
+    flex: 1 100%;
+}
+.item11:nth-child(2) {
+    flex: 1 0 0;
+}
+.item11:nth-child(3) {
+    flex: 3 0 0;
+    margin-left: 2%;
+}
+.item11:nth-child(4) {
+    flex: 1 0 0;
+    margin-left: 2%;
+}
+.item11:nth-child(5) {
+    flex: 1 100%;
+}
+/* mediaquery */
+@media (max-width: 600px){
+    .item11:nth-child(3) {flex: 1 0 100%; margin-left: 0;}
+    .item11:nth-child(4) {margin-left: 0;}
+}
+</style>
+<!-- Sample11 -->
+<h4 class="pt50">Sample11 <span><a href="https://webstoryboy.github.io/jquery/sample655-11.html" target="_blank"><img src="https://tistory3.daumcdn.net/tistory/2933724/skin/images/blank.gif" class="blank_icon"></a></span></h4>
+<p>콘텐츠 요소의 상하 관계 정렬 상태를 설정하는 예제입니다.</p>
+<div class="sample">
+    <h5>결과<span class="dot"><i></i><i></i><i></i></span></h5>
+    <div class="ex">
+        <!-- ex -->
+        <div class="flex flex11">
+            <div class="item item11"></div>
+            <div class="item item11"></div>
+            <div class="item item11"></div>
+            <div class="item item11"></div>
+            <div class="item item11"></div>
+        </div>
+        <!-- ex -->
+    </div>
+</div>
+<!-- sample11 -->
+
+<div class="sample">
+    <h5>TOTAL<span class="dot"><i></i><i></i><i></i></span></h5>
+    <div class="script on">
+<pre class="line-numbers"><code class="language-xml">&lt;!DOCTYPE html&gt;
+&lt;html lang="ko"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;flex&lt;/title&gt;
+    &lt;style&gt;
+        /* option */
+        .flex {
+            background-color: #f7f7f7;
+            border-radius: 3px;
+            padding: 20px;
+            counter-reset: items;
+        }
+        .item {
+            border-radius: 3px;
+            background-color: #A2CBFA;
+            border: 1px solid #4390E1;
+            box-sizing: border-box;
+            box-shadow: 0 2px 2px rgba(0,90,250,0.05), 0 4px 4px rgba(0,90,250,0.05), 0 8px 8px rgba(0,90,250,0.05), 0 16px 16px rgba(0,90,250,0.05);
+            min-height: 100px;;
+            color: #fff;
+            padding: 10px;
+        }
+        .item::before {
+            counter-increment: items;
+            content: counter(items);
+        }
+        /* flex */
+        .flex11 {
+            display: flex; 
+            flex-flow: row wrap;
+            justify-content: space-between;
+        }
+        .item11 {margin-bottom: 2%;}
+        .item11:nth-child(1) {
+            /* flex-grow / flex-shrink / flex-basis : auto */
+            flex: 1 100%;
+        }
+        .item11:nth-child(2) {
+            flex: 1 0 0;
+        }
+        .item11:nth-child(3) {
+            flex: 3 0 0;
+            margin-left: 2%;
+        }
+        .item11:nth-child(4) {
+            flex: 1 0 0;
+            margin-left: 2%;
+        }
+        .item11:nth-child(5) {
+            flex: 1 100%;
+        }
+        /* mediaquery */
+        @media (max-width: 600px){
+            .item11:nth-child(3) {flex: 1 0 100%; margin-left: 0;}
+            .item11:nth-child(4) {margin-left: 0;}
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div class="flex flex11"&gt;
+        &lt;div class="item item11"&gt;&lt;/div&gt;
+        &lt;div class="item item11"&gt;&lt;/div&gt;
+        &lt;div class="item item11"&gt;&lt;/div&gt;
+        &lt;div class="item item11"&gt;&lt;/div&gt;
+        &lt;div class="item item11"&gt;&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+    </div>
+</div>
+<!-- //sample11 -->

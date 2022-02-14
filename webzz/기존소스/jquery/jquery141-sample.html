@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://tistory4.daumcdn.net/tistory/2933724/skin/images/font.css">
+    <link rel="stylesheet" href="https://tistory4.daumcdn.net/tistory/2933724/skin/images/font-awesome.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <style>
+        @font-face {
+            font-family: 'S-CoreDream-3Light';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-3Light.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
+        h4 {
+            font-family: 'S-CoreDream-3Light';
+        }
+        .sample {
+            border: 1px solid #e6e6e6;
+            border-radius: 5px;
+            color: #666;
+            margin-bottom: 10px;
+            font-family: 'S-CoreDream-3Light';
+        }
+        .sample a {
+            text-decoration: none;
+            color: #666;
+        }
+        .sample h5 {
+            position: relative;
+            margin: 0;
+            border-bottom: 1px solid #e6e6e6;
+            background: #f2f2f2;
+            border-radius: 5px 5px 0 0;
+            padding: 12px 10px 10px 20px !important;
+            font-size: 16px !important;
+            text-transform: uppercase;
+        }
+        .sample h5 .dot{
+            position: absolute;
+            right: 10px;
+            top: 12px;
+        }
+        .sample h5 .fa {
+            cursor: pointer;
+            display: inline-block;
+        }
+        .sample h5 .dot i {
+            display: inline-block;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: #aaa;
+            margin: 2px;
+        }
+        .sample .sampleOption {
+            border-bottom: 1px solid #e6e6e6;
+            padding: 20px;
+        }
+        .sample .sampleOption .option {
+            display: inline-block;
+            border: 1px solid #e6e6e6;
+            border-radius: 100px;
+        }
+        .sample .sampleOption .option .one {
+            border-radius: 100px;
+            border-radius: 100px;
+            white-space: nowrap;
+            padding: 10px 20px;
+            display: inline-block;
+            color: #666;
+        }
+        .sample .sampleOption .option .left {
+            border-right: 1px solid #e6e6e6;
+            padding-right: 1px solid #e6e6e6;
+            padding: 10px 14px 8px 20px;
+            display: inline-block;
+        }
+        .sample .sampleOption .option .right {
+            padding: 6px 20px 2px 10px;
+            display: inline-block;
+            vertical-align: -2px;
+        }
+        .sample .sampleOption .option .right i {
+            display: inline-block;
+            cursor: pointer;
+            font-size: 20px;
+            margin: 3px;
+        }
+        .sample .sampleView {
+            border-bottom: 1px solid #e6e6e6;
+            padding: 20px;
+        }
+        .entry-content .sample .sampleView p {
+            padding: 0 !important; margin: 0 !important;
+        }
+        .sample .sampleBtn {
+            border-bottom: 1px solid #e6e6e6;
+            padding: 20px 20px 10px 20px;
+        }
+        .sample .sampleBtn a {
+            border: 1px solid #e6e6e6;
+            border-radius: 100px;
+            white-space: nowrap;
+            padding: 10px 20px;
+            display: inline-block;
+            margin-bottom: 10px;
+            transition: all 0.2s
+        }
+        .sample .sampleBtn a:hover {
+            border-color: #FF4B4B;
+        }
+        .sample .sampleCode .scMenu > div.active {color: #FF4B49; }
+        .sample .sampleCode .scMenu > div {display: inline-block; border-right: 1px solid #e6e6e6; padding: 13px 20px 10px 20px; cursor:pointer}
+        .sample .sampleCode .scCont > div {display: none}
+    </style>
+</head>
+<body>
+    
+<style>
+.wrap-box {
+    display: flex;
+    flex-wrap: wrap;
+}
+.new {
+    border: 1px solid #4390E1;
+    margin: 2px;
+}
+.box {
+    width: 100px;
+    height: 100px;
+    margin: 10px;
+    background-color: #A2CBFA;
+    border: 1px solid #4390E1;
+    box-shadow: 0 2px 2px rgba(0,90,250,0.05), 0 4px 4px rgba(0,90,250,0.05), 0 8px 8px rgba(0,90,250,0.05), 0 16px 16px rgba(0,90,250,0.05);
+}
+</style>
+<!-- sample1 -->
+<h4 class="pt50">예제1(Sample)</h4>
+<div class="sample">
+    <h5>선택한 요소에 새로운 요소를 감싸는 예제입니다.</h5>
+    <div class="sampleView">
+        <!-- ex -->
+        <div class="wrap-box">
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+        </div>
+        <!-- ex -->
+    </div>
+    <div class="sampleBtn">
+        <a href="#" class="reset">리셋</a>
+        <a href="#" class="btn1">버튼을 클릭하면 각 박스에 새로운 요소를 추가합니다.</a>
+    </div>
+    <div class="sampleCode">
+        <div class="scMenu">
+            <div>HTML</div>
+            <div>CSS</div>
+            <div class="active">SCRIPT</div>
+        </div>
+        <div class="scCont">
+            <div>
+<pre class="line-numbers"><code class="language-markup">
+</code></pre>
+            </div>
+            <div>
+<pre class="line-numbers"><code class="language-css">
+</code></pre>
+            </div>
+            <div>
+<pre class="line-numbers"><code class="language-script">
+</code></pre>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- //sample1 -->
+
+<script>
+    $(".sampleBtn .reset").click(function(){
+        $(".wrap-box").find(".new").remove();
+        $(".wrap-box").append("<div class='box'></div><div class='box'></div><div class='box'></div>")
+    });
+    $(".sampleBtn .btn1").click(function(){
+        $( ".wrap-box .box" ).wrapInner( "<div class='new'></div>" );
+    });
+</script>
+    
+</body>
+</html>

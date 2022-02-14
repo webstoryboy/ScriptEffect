@@ -1,0 +1,139 @@
+
+    
+
+<h2>기초</h2>
+<p>HTML를 배우기 위한 기초적인 내용입니다.</p>
+
+<hr>
+
+
+<h3>HTML(HyperText Markup Language)</h3>
+<p class="blue">HTML은 웹 문서를 표현하기 위한 하이퍼텍스트 마크업 언어입니다. </p>
+<p>하이퍼텍스트란 웹 문서에서 다른 문서로 이동하는 것을 말하며, 마크업이란 태그를 사용하여 콘텐츠의 의미를 부여하는 것을 말합니다. HTML은 제목, 단락, 목록 등과 같은 본문을 위한 구조적 의미를 나타내는 것뿐만 아니라 링크, 인용과 그 밖의 항목으로 구조적 문서를 만들 수 있는 방법을 제공합니다. </p>
+
+
+<h3 class="pt50">태그(tag)</h3>
+<p class="blue">태그란 HTML에서 정보를 전달하는 방식을 의미합니다.</p>
+<ul>
+    <li>태그는 열린태그와 닫는태그가 있습니다.</li>
+    <li>닫는 태그에는 "/" 있어야 합니다.</li>
+    <li>닫는 태그가 필요 없는 것도 있습니다.(br, hr, img, input, meta)</li>
+    <li>HTML5에서는 "/"가 생략이 가능합니다.</li>
+</ul>
+
+
+<h3 class="pt50">속성(Attribute)</h3>
+<p class="blue">속성은 요소에 정보를 추가하거나 다양한 기능을 설정합니다..</p>
+<p>속성은 여러가지 태그에 공통적으로 사용할 수 있는 속성도 있으며, 특정한 태그에만 사용하는 속성도 있습니다.</p>
+
+
+<h3 class="pt50">요소(Element)</h3>
+<p>요소란 HTML를 구성하는 가장 기본적인 단위입니다. 태그의 시작태그와 끝나는 태그 사이의 범위를 요소라고 합니다.</p>
+
+
+<h3 class="pt50">주석</h3>
+<p>주석 표시는 프로그램에 영향을 미치지 않으며, 설명이나 메모를 목적으로 사용합니다.</p>
+<p class="blue">&lt;!-- 주석 -- &gt;</p>
+
+
+<h3 class="pt50">HTML 구조</h3>
+<p>HTML구조는 html 요소 안에 head와 body 요소로 이루어져 있으며, 독타입 선언을 해주어야 하나의 웹 문서가 완성됩니다.</p>
+<!-- Sample1 -->
+<div class="sample">
+    <h5>HTML<span class="dot"><i></i><i></i><i></i></span></h5>
+    <div class="html">
+<pre class="line-numbers"><code class="language-markup">&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;타이틀&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+    </div>
+</div>
+<!-- sample1 -->
+
+<h3 class="pt50">HTML 문서 구조</h3>
+<p>HTML 문서는 상하 관계가 존재하는 계층적인 구조로 되어 있습니다. 상위에 있는 요소와 하위에 있는 요소는 부모 자식 관계로 표현하며, 이러한 구조를 DOM 구조라고 합니다.</p>
+<p>이미지</p>
+
+<h3 class="pt50">블럭요소와 인라인 요소</h3>
+<p>HTML태그는 크게 두가지 유형으로 나눌 수 있습니다. 블록 요소는 박스, 인라인 요소는 텍스트를 의미합니다.</p>
+<ul>
+    <li>블록 엘리먼트(Block Element)
+        <ul>
+            <li>독립된 박스 영역으로, 한 줄에 하나에 블록 요소만 표현 할 수 있습니다.</li>
+            <li>블록 요소에는 블록 요소와 인라인 요소를 포함 할 수 있습니다.</li>
+            <li>&lt;div&gt;, &lt;p&gt;, &lt;ul&gt;, &lt;li&gt;, &lt;hr&gt;, &lt;address&gt;</li>
+        </ul>
+    </li>
+    <li>인라인 엘리먼트(Inline Element)
+        <ul>
+            <li>독립된 테스트 영역으로, 한 줄에 여러 개의 인라인 요소를 표현할 수 있습니다.</li>
+            <li>인라인 요소에는 블록 요소가 포함 될 수 없지만, 인라인 요소는 포함 할 수 있습니다.</li>
+            <li>&lt;span&gt;, &lt;img&gt;, &lt;a&gt;, &lt;input&gt;, &lt;button&gt;, &lt;br&gt;</li>
+        </ul>
+    </li>
+</ul>
+
+
+<h3 class="pt50">절대경로와 상대경로</h3>
+<p>이미지의 경로 또는 파일의 경로를 지정하는 방법입니다.</p>
+
+<h4>절대경로</h4>
+<p>웹 사이트의 전체 주소를 이용한 경로 지정 방법입니다.</p>
+
+<h4>상대경로</h4>
+<p>현재 내 파일의 위치를 기준으로 이용한 경로 지정 방법입니다.</p>
+
+<h3 class="pt50">유효성 검사 <a href="http://validator.w3.org/" target="_blank" class="link"><img src="https://tistory3.daumcdn.net/tistory/2933724/skin/images/link.png"></a></h3>
+<p>HTML 문법을 검사하는 <a href="http://validator.w3.org/" target="_blank">W3C HTML Validator Service</a>입니다. </p>
+
+
+<h3 class="pt50">HTML의 분류</h3>
+<p>HTML은 크게 콘텐츠 카테고리, 콘텐츠 속성, 콘텐츠 요소로 나눌 수 있습니다.</p>
+<h4>콘텐츠 카테고리(Content categories) <a href="http://webzz.tistory.com/223" class="link"><img src="https://tistory3.daumcdn.net/tistory/2933724/skin/images/link.png"></a></h4>
+<p>HTML 태그를 콘텐츠의 종류에 따라 Metadata Content, Flow Content, Section Conetnt, Heading Content, Phrasing Content, Embedded Content, Interactive Content, Palpable Content를 적용 할 수 있습니다.</p>
+
+<h4>콘텐츠 속성(Content properties) <a href="http://webzz.tistory.com/224" class="link"><img src="https://tistory3.daumcdn.net/tistory/2933724/skin/images/link.png"></a></h4>
+<p>HTML 태그에 글로벌 속성과 이벤트 속성을 적용 할 수 있습니다.</p>
+
+<h4>콘텐츠 요소(Content element) <a href="http://webzz.tistory.com/225" class="link"><img src="https://tistory3.daumcdn.net/tistory/2933724/skin/images/link.png"></a></h4>    
+<p>HTML 태그를 요소에 따라 블록요소와 인라인 요소로 적용할 수 있습니다.</p>
+
+
+
+
+
+<br><br><br>
+<br><br><br>
+<h5 class="pt50">오래되고 사용되지 않는 태그</h5>
+<p>acronym, applet, basefont, bgsound, big, blink, center, dir, font, frame, frameset, hgroup,isindex, listing, marquee, multicol, nextid, nobr, noembed, noframes, plaintext, spacer, strike, tt</p>
+
+
+<h5 class="pt50">모든 브라우저에서 사용할 수 있는 태그</h5>
+a, abbr, address, area, b, base, basefont, bdo, blockquote, body, br, button, caption, cite, code, col, colgroup, dd, del, dfn, div, dl, dt, em, fieldset, form, h1, h2, h3, h4, h5, h6, head, hr, html, i, iframe, img, input, ins, kbd, label, legend, li, link, map, menu, meta, noscript, object, ol, optgroup, option, p, param, pre, q, s, samp, script, select, small, span ,strong ,style ,sub ,sup ,table ,tbody ,td ,textarea ,tfoot
+
+<br><br><br>
+<h5>텍스트와 관련된 태그</h5>
+<ul>
+    <li>문서에서 삭제된 텍스트틀 표시하려면 <a href="http://webzz.tistory.com/259">&lt;del&gt;</a> 태그를 사용합니다.</li>
+    <li>문서에서 삽입된 텍스트를 표시하려면 <a href="http://webzz.tistory.com/287">&lt;ins&gt;</a> 태그를 사용합니다.</li>
+    <li>정확하지 않고, 관련성이 없는 텍스트를 표시하려면 <a href="http://webzz.tistory.com/320">&lt;s&gt;</a> 태그를 사용합니다.</li>
+    <li>글씨를 특별한 이유로 평범한 글자와 구분하기 위해서는 <a href="http://webzz.tistory.com/283">&lt;i&gt;</a> 태그를 사용합니다.</li>
+    <li>글씨를 중요성과 관련성을 전달하지 않고, 다른 텍스트와 구별 할 때 <a href="http://webzz.tistory.com/238">&lt;b&gt;</a> 태그를 사용합니다.</li>
+    <li>글씨를 강조하고 싶다면 <a href="http://webzz.tistory.com/267">&lt;em&gt;</a> 태그를 사용합니다.</li>
+    <li>글씨의 중요성을 강조하고 싶다면 <a href="http://webzz.tistory.com/329">&lt;strong&gt;</a> 태그를 사용합니다.</li>
+    <li>글씨의 중요성과 강조를 고려하지 않는 단순 참고용 표시를 사용한다면 <a href="http://webzz.tistory.com/296">&lt;mark&gt;</a> 태그를 사용합니다.</li>
+    <li>글씨의 전문적인 용어를 정의할 때는 <a href="http://webzz.tistory.com/261">&lt;dfn&gt;</a> 태그를 사용합니다.</li>
+    <li>글씨를 위첨자로 표현하고 싶다면 <a href="http://webzz.tistory.com/333">&lt;sup&gt;</a> 태그를 사용합니다.</li>
+    <li>글씨를 아래첨자로 표현하고 싶다면 <a href="http://webzz.tistory.com/331">&lt;sub&gt;</a> 태그를 사용합니다.</li>
+    <li>글씨의 맞춤법이 틀린 단어를 표현하고 싶다면 <a href="http://webzz.tistory.com/348">&lt;u&gt;</a> 태그를 사용합니다</li>
+</ul>
+
+
+

@@ -1,0 +1,439 @@
+
+    
+    
+
+<h2>자식 요소 필터 선택자</h2>
+<p>자식 요소들을 선택 하는 방법입니다.</p>
+
+<hr>
+
+<h3>자식 요소 필터 선택자(Child Filters)</h3>
+
+
+
+<h5>자식 요소 필터 선택자</h5>
+<div class="table-responsive">
+    <table class="table table-bordered table-striped">
+        <thead>
+            <tr>
+                <th>종류</th>
+                <th>설명</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>:first-child</td>
+                <td>첫 번째 자식 요소를 선택합니다.</td>
+            </tr>
+            <tr>
+                <td>:first-of-type</td>
+                <td>자식 중 첫 번째 유형의 자식 요소를 선택합니다.</td>
+            </tr>
+            <tr>
+                <td>:last-child</td>
+                <td>마지막 번째 자식 요소를 선택합니다.</td>
+            </tr>
+            <tr>
+                <td>:last-of-type</td>
+                <td>자식 중 마지막 번째 유형의 자식 요소를 선택합니다.</td>
+            </tr>
+            <tr>
+                <td>:nth-child()</td>
+                <td>index번째에 있는 자식 요소를 선택합니다.</td>
+            </tr>
+            <tr>
+                <td>:nth-last-child()</td>
+                <td>index번째에 있는 마지막 자식 요소를 선택합니다.</td>
+            </tr>
+            <tr>
+                <td>:nth-last-of-type()</td>
+                <td>index번째에 있는 마지막 유형의 자식 요소를 선택합니다.</td>
+            </tr>
+            <tr>
+                <td>:nth-of-type()</td>
+                <td>index번째에 있는 유형의 자식 요소를 선택합니다.</td>
+            </tr>
+            <tr>
+                <td>:only-child</td>
+                <td>자식 요소가 오직 하나인 요소를 선택합니다.</td>
+            </tr>
+            <tr>
+                <td>:only-of-type()</td>
+                <td>자식 요소 중 오직 하나 유형인 요소를 선택합니다.</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+   
+
+
+
+<!-- Sample1 -->
+<h4 class="pt50">Sample1</h4>
+<p>자식요소 필터 선택자 예제입니다.</p>
+<div class="sample">
+    <h5>결과<span class="dot"><i></i><i></i><i></i></span></h5>
+    <div class="ex">
+        <!-- ex -->
+        <h3>자식요소 필터 선택자</h3>
+        <div class="list bLine">
+            <p>기본 선택자</p>
+            <p>계층 선택자</p>
+            <div>속성 선택자</div>
+            <div>기본 필터 선택자</div>
+        </div>
+        <div class="list bLine">
+            <p>내용 필터 선택자</p>
+            <p>보임 필터 선택자</p>
+        </div>
+        <div class="list bLine">
+            <span>자식요소 필터 선택자</span>
+        </div>
+        <div class="list bLine">
+            <div>폼 요소 필터 선택자</div>
+        </div>
+        <!-- ex -->
+    </div>
+    
+    <div class="choice">
+        <a href="#" class="off1">리셋</a>
+        <a href="#" class="btn1">클릭하면 <em>:first-child</em>를 보이게 합니다.</a>
+        <a href="#" class="btn2">클릭하면 <em>div:first-of-type</em>를 선택합니다.</a>
+        <a href="#" class="btn3">클릭하면 <em>:last-child</em>를 선택합니다.</a>
+        <a href="#" class="btn4">클릭하면 <em>div:last-child</em>를 선택합니다.</a>
+        <a href="#" class="btn5">클릭하면 <em>only-child</em>를 선택합니다.</a>
+        <a href="#" class="btn6">클릭하면 <em>div:only-of-type</em>를 선택합니다.</a>
+    </div>
+</div>
+<!-- sample -->
+
+<div class="sample">
+    <h5>jquery<span class="dot"><i></i><i></i><i></i></span></h5>
+    <div class="script on">
+<pre class="line-numbers"><code class="language-javascript">$(".list :first-child").addClass("rLine");
+$(".list div:first-of-type").addClass("rLine");
+$(".list :last-child").addClass("rLine");
+$(".list div:last-of-type").addClass("rLine");
+$(".list :only-child").addClass("rLine");
+$(".list div:only-of-type").addClass("rLine");</code></pre>
+    </div>
+</div>
+<!-- sample -->
+
+<div class="sample">
+    <h5>html<span class="dot"><i></i><i></i><i></i></span></h5>
+    <div class="html">
+        <pre class="line-numbers"><code class="language-markup">&lt;h3&gt;자식요소 필터 선택자&lt;/h3&gt;
+&lt;div class="list"&gt;
+    &lt;p&gt;기본 선택자&lt;/p&gt;
+    &lt;p&gt;계층 선택자&lt;/p&gt;
+    &lt;div&gt;:first-child&lt;/div&gt;
+    &lt;div&gt;:first-of-type&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="list"&gt;
+    &lt;p&gt;last-child&lt;/p&gt;
+    &lt;p&gt;last-child&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="list"&gt;
+    &lt;span&gt;only-child&lt;/span&gt;
+&lt;/div&gt;
+&lt;div class="list"&gt;
+    &lt;div&gt;only-of-type&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+</div>
+<!-- sample -->
+
+<div class="sample">
+    <h5>Total<span class="dot"><i></i><i></i><i></i></span></h5>
+    <div class="html on">
+        <pre class="line-numbers"><code class="language-markup">&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;jQuery Sample&lt;/title&gt;
+    &lt;style&gt;
+        li.select:before {content:'Select'; padding: 4px 4px 2px 4px; font-size: 90%; color: #3d90b7; white-space: nowrap; background-color: #e7f6fd; border-radius: 4px;border: 1px dashed #3d90b7;}
+        .rLine {padding: 4px 4px 2px 10px; font-size: 90%; color: #c7254e; white-space: nowrap; background-color: #f9f2f4; border-radius: 4px; border: 1px dashed #a51a3d;}
+        .choice a {border: 1px solid #5f6368; padding: 7px 20px 5px 20px; display: inline-block; border-radius: 20px; text-decoration: none;}
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h3&gt;자식요소 필터 선택자&lt;/h3&gt;
+    &lt;div class="list"&gt;
+        &lt;p&gt;기본 선택자&lt;/p&gt;
+        &lt;p&gt;계층 선택자&lt;/p&gt;
+        &lt;div&gt;:first-child&lt;/div&gt;
+        &lt;div&gt;:first-of-type&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class="list"&gt;
+        &lt;p&gt;last-child&lt;/p&gt;
+        &lt;p&gt;last-child&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div class="list"&gt;
+        &lt;span&gt;only-child&lt;/span&gt;
+    &lt;/div&gt;
+    &lt;div class="list"&gt;
+        &lt;div&gt;only-of-type&lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;div class="choice"&gt;
+        &lt;a href="#" class="off1"&gt;리셋&lt;/a&gt;
+        &lt;a href="#" class="btn1"&gt;클릭하면 &lt;em&gt;:first-child&lt;/em&gt;를 보이게 합니다.&lt;/a&gt;
+        &lt;a href="#" class="btn2"&gt;클릭하면 &lt;em&gt;div:first-of-type&lt;/em&gt;를 선택합니다.&lt;/a&gt;
+        &lt;a href="#" class="btn3"&gt;클릭하면 &lt;em&gt;:last-child&lt;/em&gt;를 선택합니다.&lt;/a&gt;
+        &lt;a href="#" class="btn4"&gt;클릭하면 &lt;em&gt;div:last-child&lt;/em&gt;를 선택합니다.&lt;/a&gt;
+        &lt;a href="#" class="btn5"&gt;클릭하면 &lt;em&gt;only-child&lt;/em&gt;를 선택합니다.&lt;/a&gt;
+        &lt;a href="#" class="btn6"&gt;클릭하면 &lt;em&gt;div:only-of-type&lt;/em&gt;를 선택합니다.&lt;/a&gt;
+    &lt;/div&gt;
+    
+    &lt;script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"&gt;&lt;/script&gt;
+    &lt;script&gt;
+        $(".choice .off1").on("click", function(e){
+            e.preventDefault();
+            $(".list p, .list div, .list span").removeClass("rLine");
+        });
+        $(".choice .btn1").on("click", function(e){
+            e.preventDefault();
+            $(".list :first-child").addClass("rLine");
+        });
+        $(".choice .btn2").on("click", function(e){
+            e.preventDefault();
+            $(".list div:first-of-type").addClass("rLine");
+        });
+        $(".choice .btn3").on("click", function(e){
+            e.preventDefault();
+            $(".list :last-child").addClass("rLine");
+        });
+        $(".choice .btn4").on("click", function(e){
+            e.preventDefault();
+            $(".list div:last-of-type").addClass("rLine");
+        });
+        $(".choice .btn5").on("click", function(e){
+            e.preventDefault();
+            $(".list :only-child").addClass("rLine");
+        });
+        $(".choice .btn6").on("click", function(e){
+            e.preventDefault();
+            $(".list div:only-of-type").addClass("rLine");
+        });
+    &lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+    </div>
+</div>
+<!-- sample1 -->
+
+
+<script>
+    $(".choice .off1").on("click", function(e){
+        e.preventDefault();
+        $(".list p, .list div, .list span").removeClass("rLine");
+    });
+    $(".choice .btn1").on("click", function(e){
+        e.preventDefault();
+        $(".list :first-child").addClass("rLine");
+    });
+    $(".choice .btn2").on("click", function(e){
+        e.preventDefault();
+        $(".list div:first-of-type").addClass("rLine");
+    });
+    $(".choice .btn3").on("click", function(e){
+        e.preventDefault();
+        $(".list :last-child").addClass("rLine");
+    });
+    $(".choice .btn4").on("click", function(e){
+        e.preventDefault();
+        $(".list div:last-of-type").addClass("rLine");
+    });
+    $(".choice .btn5").on("click", function(e){
+        e.preventDefault();
+        $(".list :only-child").addClass("rLine");
+    });
+    $(".choice .btn6").on("click", function(e){
+        e.preventDefault();
+        $(".list div:only-of-type").addClass("rLine");
+    });
+</script>
+<!-- //Sample1 -->
+
+
+
+
+
+
+
+
+
+<!-- Sample2 -->
+<h4 class="pt50">Sample2</h4>
+<p>자식요소 필터 선택자 예제입니다.</p>
+<div class="sample">
+    <h5>결과<span class="dot"><i></i><i></i><i></i></span></h5>
+    <div class="ex">
+        <!-- ex -->
+        <h3>자식요소 필터 선택자</h3>
+        <div class="list2">
+            <p>기본 선택자</p>
+            <p>계층 선택자</p>
+            <p>속성 선택자</p>
+            <p>기본 필터 선택자</p>
+            <div>내용 필터 선택자</div>
+            <div>보임 필터 선택자</div>
+            <div>자식요소 필터 선택자</div>
+            <div>폼 필터 선택자</div>
+        </div>
+        <!-- ex -->
+    </div>
+    
+    <div class="choice2">
+        <a href="#" class="off1">리셋</a>
+        <a href="#" class="btn1">클릭하면 <em>:nth-child(3)</em>를 보이게 합니다.</a>
+        <a href="#" class="btn2">클릭하면 <em>:nth-child(3n+1)</em>를 보이게 합니다.</a>
+        <a href="#" class="btn3">클릭하면 <em>:nth-last-child(1)</em>를 보이게 합니다.</a>
+        <a href="#" class="btn4">클릭하면 <em>:nth-last-child(3)</em>를 보이게 합니다.</a>
+        <a href="#" class="btn5">클릭하면 <em>div:nth-last-of-type(1)</em>를 보이게 합니다.</a>
+        <a href="#" class="btn6">클릭하면 <em>div:nth-of-type(1)</em>를 보이게 합니다.</a>
+    </div>
+</div>
+<!-- sample -->
+
+<div class="sample">
+    <h5>jquery<span class="dot"><i></i><i></i><i></i></span></h5>
+    <div class="script on">
+<pre class="line-numbers"><code class="language-javascript">$(".list2 :nth-child(3)").addClass("rLine");
+$(".list2 :nth-child(3n+1)").addClass("rLine");
+$(".list2 :nth-last-child(1)").addClass("rLine");
+$(".list2 :nth-last-child(3)").addClass("rLine");
+$(".list2 div:nth-last-of-type(1)").addClass("rLine");
+$(".list2 div:nth-of-type(1)").addClass("rLine");</code></pre>
+    </div>
+</div>
+<!-- sample -->
+
+<div class="sample">
+    <h5>html<span class="dot"><i></i><i></i><i></i></span></h5>
+    <div class="html">
+        <pre class="line-numbers"><code class="language-markup">&lt;div class="list2"&gt;
+    &lt;p&gt;기본 선택자&lt;/p&gt;
+    &lt;p&gt;계층 선택자&lt;/p&gt;
+    &lt;p&gt;속성 선택자&lt;/p&gt;
+    &lt;p&gt;기본 필터 선택자&lt;/p&gt;
+    &lt;div&gt;내용 필터 선택자&lt;/div&gt;
+    &lt;div&gt;보임 필터 선택자&lt;/div&gt;
+    &lt;div&gt;자식요소 필터 선택자&lt;/div&gt;
+    &lt;div&gt;폼 필터 선택자&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+</div>
+<!-- sample -->
+
+<div class="sample">
+    <h5>Total<span class="dot"><i></i><i></i><i></i></span></h5>
+    <div class="html on">
+        <pre class="line-numbers"><code class="language-markup">&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;jQuery Sample&lt;/title&gt;
+    &lt;style&gt;
+        li.select:before {content:'Select'; padding: 4px 4px 2px 4px; font-size: 90%; color: #3d90b7; white-space: nowrap; background-color: #e7f6fd; border-radius: 4px;border: 1px dashed #3d90b7;}
+        .rLine {padding: 4px 4px 2px 10px; font-size: 90%; color: #c7254e; white-space: nowrap; background-color: #f9f2f4; border-radius: 4px; border: 1px dashed #a51a3d;}
+        .choice a {border: 1px solid #5f6368; padding: 7px 20px 5px 20px; display: inline-block; border-radius: 20px; text-decoration: none;}
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h3&gt;자식요소 필터 선택자&lt;/h3&gt;
+    &lt;div class="list2"&gt;
+        &lt;p&gt;기본 선택자&lt;/p&gt;
+        &lt;p&gt;계층 선택자&lt;/p&gt;
+        &lt;p&gt;속성 선택자&lt;/p&gt;
+        &lt;p&gt;기본 필터 선택자&lt;/p&gt;
+        &lt;div&gt;내용 필터 선택자&lt;/div&gt;
+        &lt;div&gt;보임 필터 선택자&lt;/div&gt;
+        &lt;div&gt;자식요소 필터 선택자&lt;/div&gt;
+        &lt;div&gt;폼 필터 선택자&lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;div class="choice2"&gt;
+        &lt;a href="#" class="off1"&gt;리셋&lt;/a&gt;
+        &lt;a href="#" class="btn1"&gt;클릭하면 &lt;em&gt;:nth-child(3)&lt;/em&gt;를 보이게 합니다.&lt;/a&gt;
+        &lt;a href="#" class="btn2"&gt;클릭하면 &lt;em&gt;:nth-child(3n+1)&lt;/em&gt;를 보이게 합니다.&lt;/a&gt;
+        &lt;a href="#" class="btn3"&gt;클릭하면 &lt;em&gt;:nth-last-child(1)&lt;/em&gt;를 보이게 합니다.&lt;/a&gt;
+        &lt;a href="#" class="btn4"&gt;클릭하면 &lt;em&gt;:nth-last-child(3)&lt;/em&gt;를 보이게 합니다.&lt;/a&gt;
+        &lt;a href="#" class="btn5"&gt;클릭하면 &lt;em&gt;div:nth-last-of-type(1)&lt;/em&gt;를 보이게 합니다.&lt;/a&gt;
+        &lt;a href="#" class="btn6"&gt;클릭하면 &lt;em&gt;div:nth-of-type(1)&lt;/em&gt;를 보이게 합니다.&lt;/a&gt;
+    &lt;/div&gt;
+    
+    &lt;script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"&gt;&lt;/script&gt;
+    &lt;script&gt;
+        $(".choice2 .off1").on("click", function(e){
+            e.preventDefault();
+            $(".list2 p, .list2 div").removeClass("rLine");
+        });
+        $(".choice2 .btn1").on("click", function(e){
+            e.preventDefault();
+            $(".list2 :nth-child(3)").addClass("rLine");
+        });
+        $(".choice2 .btn2").on("click", function(e){
+            e.preventDefault();
+            $(".list2 :nth-child(3n+1)").addClass("rLine");
+        });
+        $(".choice2 .btn2").on("click", function(e){
+            e.preventDefault();
+            $(".list2 :nth-last-child(1)").addClass("rLine");
+        });
+        $(".choice2 .btn3").on("click", function(e){
+            e.preventDefault();
+            $(".list2 :nth-last-child(3)").addClass("rLine");
+        });
+        $(".choice2 .btn4").on("click", function(e){
+            e.preventDefault();
+            $(".list2 div:nth-last-of-type(1)").addClass("rLine");
+        });
+        $(".choice2 .btn5").on("click", function(e){
+            e.preventDefault();
+            $(".list2 div:nth-of-type(1)").addClass("rLine");
+        });
+    &lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+    </div>
+</div>
+<!-- sample1 -->
+
+
+<script>
+    $(".choice2 .off1").on("click", function(e){
+        e.preventDefault();
+        $(".list2 p, .list2 div").removeClass("rLine");
+    });
+    $(".choice2 .btn1").on("click", function(e){
+        e.preventDefault();
+        $(".list2 :nth-child(3)").addClass("rLine");
+    });
+    $(".choice2 .btn2").on("click", function(e){
+        e.preventDefault();
+        $(".list2 :nth-child(3n+1)").addClass("rLine");
+    });
+    $(".choice2 .btn3").on("click", function(e){
+        e.preventDefault();
+        $(".list2 :nth-last-child(1)").addClass("rLine");
+    });
+    $(".choice2 .btn4").on("click", function(e){
+        e.preventDefault();
+        $(".list2 :nth-last-child(3)").addClass("rLine");
+    });
+    $(".choice2 .btn5").on("click", function(e){
+        e.preventDefault();
+        $(".list2 div:nth-last-of-type(1)").addClass("rLine");
+    });
+    $(".choice2 .btn6").on("click", function(e){
+        e.preventDefault();
+        $(".list2 div:nth-of-type(1)").addClass("rLine");
+    });
+</script>
+<!-- //Sample2 -->
+
+
+ 
