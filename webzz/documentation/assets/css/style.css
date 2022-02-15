@@ -17,6 +17,7 @@
     border-right: 1px solid rgba(0,0,0,.65);
 }
 #menu {
+    position: relative;
     width: 260px;
     height: 100%;
     border-right: 1px solid rgba(0,0,0,.65);
@@ -122,3 +123,64 @@
 .category__sub__list li.active::before {
     background: #FF4B4B;
 }
+
+/* menu */
+.menu__title {
+    position: absolute;
+    left: 0; 
+    top: 0;
+    width: 100%;
+    z-index: 10;
+    background-color: #252423;
+}
+.menu__list {
+    padding: 20px;
+    color: #fff;
+    font-weight: 200;
+    height: 100vh;
+    overflow-y: scroll;
+    padding-top: 80px;
+}
+.menu__list h3 {
+    color: #FF4B4B;
+    margin-bottom: 5px;
+    font-size: 16px;
+    font-weight: 200;
+}
+.menu__list > ul {}
+.menu__list > ul > li {}
+.menu__list > ul > li > a {
+    color: #fff;
+}
+.menu__list > ul > li > span {
+    font-size: 18px;
+    margin-top: 5px;
+    font-weight: 300;
+}
+.menu__list > ul > li > ul {}
+.menu__list > ul > li > ul > li {
+    position: relative;
+}
+.menu__list > ul > li > ul > li::before {
+    content: '';
+    width: 1px;
+    height: 12px;
+    background: #fff;
+    position: absolute;
+    left: 0; 
+    top: 6px;
+    transition: all 0.3s;
+    opacity: 0.6;
+}
+.menu__list > ul > li > ul > li > a {
+    font-size: 16px;
+    color: #fff;
+    padding-left: 8px;
+    transition: all 0.3s;
+    opacity: 0.6;
+}
+.menu__list > ul > li > ul > li:hover > a,
+.menu__list > ul > li > ul > li:hover::before {
+    opacity: 1;
+}
+
