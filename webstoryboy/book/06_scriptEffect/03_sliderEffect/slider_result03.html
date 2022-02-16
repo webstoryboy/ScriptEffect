@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>슬라이드 이펙트</title>
+    <link href="https://webfontworld.github.io/NexonLv1Gothic/NexonLv1Gothic.css" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            width: 100%;
+            height: 100vh;
+            background-image: url(../img/images11@2.jpg);
+            background-size: cover;
+            background-position: center center;
+            overflow: hidden;
+            color: #fff;
+        }
+        body::before {
+            content: '';
+            position: absolute;
+            left: 0; 
+            top: 0;
+            width: 100%; 
+            height: 100vh;
+            background: rgba(8,31,36,.8);
+            z-index: -1;
+        }
+        img {
+            width: 100%;
+            vertical-align: top;
+        }
+        .nexon {
+            font-family: 'NexonLv1Gothic';
+        }
+        
+        /* slider */
+        .slider__wrap {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+        .slider__img {
+            position: relative;
+            width: 800px;
+            height: 480px;
+            margin: 16px;
+            overflow: hidden;
+        }
+        .slider__inner {            /* 이미지 움직이는 부분 */
+            position: relative;
+            width: 4800px;  /* 이미지 총 6개 */
+            height: 480px;
+        }
+        .slider {
+            float: left;
+            width: 800px;
+            height: 480px;
+            position: relative;
+        }
+        .slider::before {
+            position: absolute;
+            left: 5px;
+            top: 5px;
+            background: rgba(0,0,0,0.4);
+            color: #fff;
+            padding: 5px 10px 3px;
+        }
+        .slider:nth-child(1)::before {content: '이미지1';}
+        .slider:nth-child(2)::before {content: '이미지2';}
+        .slider:nth-child(3)::before {content: '이미지3';}
+        .slider:nth-child(4)::before {content: '이미지4';}
+        .slider:nth-child(5)::before {content: '이미지5';}
+        .slider:nth-child(6)::before {content: '이미지1';}
+    </style>
+</head>
+<body>
+    <!-- main -->
+    <main>
+        <section id="sliderType03" class="nexon">
+            <div class="slider__wrap">
+                <div class="slider__img">
+                    <div class="slider__inner">
+                        <div class="slider"><img src="../img/images11.jpg" alt="이미지1"></div>
+                        <div class="slider"><img src="../img/images12.jpg" alt="이미지2"></div>
+                        <div class="slider"><img src="../img/images13.jpg" alt="이미지3"></div>
+                        <div class="slider"><img src="../img/images14.jpg" alt="이미지4"></div>
+                        <div class="slider"><img src="../img/images15.jpg" alt="이미지5"></div>
+                    </div>
+                </div> 
+            </div>
+        </section>
+    </main>
+    <!-- //main -->
+
+    <!-- script -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js"></script>
+    <script>
+        const sliderWrap = document.querySelector(".slider__wrap");
+        const sliderImg = document.querySelector(".slider__img");
+        const sliderInner = document.querySelector(".slider__inner");
+        const slider = document.querySelectorAll(".slider");
+
+        let currentIndex = 0;   
+        let sliderCount = slider.length;                                    //이미지 갯수
+        let sliderWidth = sliderImg.offsetWidth;                            //이미지 가로 값
+        let sliderClone = sliderInner.firstElementChild.cloneNode(true);    //첫번째 이미지 복사
+        sliderInner.appendChild(sliderClone);                               //첫 번재 이미지를 마지막에 넣어줌
+
+        function sliderEffect(){
+            currentIndex++;
+            sliderInner.style.transition = "all 0.6s";
+            sliderInner.style.transform = "translateX(-"+ sliderWidth * currentIndex +"px)";
+
+            // sliderInner.style.transform = "translateX(-800px)";            
+            // sliderInner.style.transform = "translateX(-1600px)";            
+            // sliderInner.style.transform = "translateX(-2400px)";            
+            // sliderInner.style.transform = "translateX(-3200px)";            
+            // sliderInner.style.transform = "translateX(-4000px)";            
+            // sliderInner.style.transform = "translateX(-4800px)";    
+            
+            //마지막 사진에 위치했을 때
+            if(currentIndex == sliderCount){
+                setTimeout(() => {
+                    //이미지 초기화
+                    sliderInner.style.transition = "0s";
+                    sliderInner.style.transform = "translateX(0px)";
+
+                }, 700);
+                currentIndex = 0;
+            }
+        }
+        setInterval(sliderEffect, 2000);
+    </script>
+</body>
+</html>

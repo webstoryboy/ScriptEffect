@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>슬라이드 이펙트</title>
+    <link href="https://webfontworld.github.io/NexonLv1Gothic/NexonLv1Gothic.css" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            width: 100%;
+            height: 100vh;
+            background-image: url(../img/images09@2.jpg);
+            background-size: cover;
+            background-position: center center;
+            overflow: hidden;
+            color: #fff;
+        }
+        body::before {
+            content: '';
+            position: absolute;
+            left: 0; 
+            top: 0;
+            width: 100%; 
+            height: 100vh;
+            background: rgba(8,31,36,.8);
+            z-index: -1;
+        }
+        img {
+            width: 100%;
+            vertical-align: top;
+        }
+        .nexon {
+            font-family: 'NexonLv1Gothic';
+        }
+        
+        /* slider */
+        .slider__wrap {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+        .slider__img {
+            position: relative;
+            width: 800px;
+            height: 480px;
+            margin: 16px;
+        }
+        .slider {
+            position: absolute;
+            left: 0; 
+            top: 0;
+            overflow: hidden;
+        }
+        .slider::before {
+            position: absolute;
+            left: 5px;
+            top: 5px;
+            background: rgba(0,0,0,0.4);
+            color: #fff;
+            padding: 5px 10px 3px;
+        }
+        .slider:nth-child(1)::before {content: '이미지1';}
+        .slider:nth-child(2)::before {content: '이미지2';}
+        .slider:nth-child(3)::before {content: '이미지3';}
+        .slider:nth-child(4)::before {content: '이미지4';}
+        .slider:nth-child(5)::before {content: '이미지5';}
+        .slider:nth-child(1) {z-index: 5;}
+        .slider:nth-child(2) {z-index: 4;}
+        .slider:nth-child(3) {z-index: 3;}
+        .slider:nth-child(4) {z-index: 2;}
+        .slider:nth-child(5) {z-index: 1;}
+    </style>
+</head>
+<body>
+    <!-- main -->
+    <main>
+        <section id="sliderType01" class="nexon">
+            <div class="slider__wrap">
+                <div class="slider__img">
+                    <div class="slider"><img src="../img/images01.jpg" alt="이미지1"></div>
+                    <div class="slider"><img src="../img/images02.jpg" alt="이미지2"></div>
+                    <div class="slider"><img src="../img/images03.jpg" alt="이미지3"></div>
+                    <div class="slider"><img src="../img/images04.jpg" alt="이미지4"></div>
+                    <div class="slider"><img src="../img/images05.jpg" alt="이미지5"></div>
+                </div> 
+            </div>
+        </section>
+    </main>
+    <!-- //main -->
+
+    <!-- script -->
+    <script>
+        const sliderWrap = document.querySelector(".slider__wrap");
+        const sliderImg = document.querySelector(".slider__img");
+        const slider = document.querySelectorAll(".slider");
+
+        let currentIndex = 0;               //현재 보이는 이미지
+        let sliderCount = slider.length;    //이미지 갯수
+
+        setInterval(() => {
+            let nextIndex = (currentIndex + 1) % 5;   //1 2 3 4 0 1 2 3 4 0 1 2 3 4 0
+            
+            slider[currentIndex].style.opacity = "0";    //첫 번째 이미지를 안보이게
+            slider[nextIndex].style.opacity = "1";       //두 번째 이미지를 보이게
+
+            // console.log("currentIndex :" + currentIndex)
+            // console.log("nextIndex : " + nextIndex)
+
+            slider.forEach(slider => slider.style.transition = "all 0.3s");
+
+            currentIndex = nextIndex;
+        }, 5000);
+    </script>
+</body>
+</html>

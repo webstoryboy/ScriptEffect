@@ -1,0 +1,104 @@
+&lt;!DOCTYPE html&gt;
+&lt;html lang="ko"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta http-equiv="X-UA-Compatible" content="IE=edge"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;슬라이드 이펙트&lt;/title&gt;
+    &lt;link href="https://webfontworld.github.io/NexonLv1Gothic/NexonLv1Gothic.css" rel="stylesheet"&gt;
+    &lt;style&gt;
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            width: 100%;
+            height: 100vh;
+            background-image: url(../img/images09@2.jpg);
+            background-size: cover;
+            background-position: center center;
+            overflow: hidden;
+            color: #fff;
+        }
+        body::before {
+            content: '';
+            position: absolute;
+            left: 0; 
+            top: 0;
+            width: 100%; 
+            height: 100vh;
+            background: rgba(8,31,36,.8);
+            z-index: -1;
+        }
+        img {
+            width: 100%;
+            vertical-align: top;
+        }
+        .nexon {
+            font-family: 'NexonLv1Gothic';
+        }
+        
+        /* slider */
+        .slider__wrap {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+        .slider__img {
+            position: relative;
+            width: 800px;
+            height: 480px;
+            margin: 16px;
+        }
+        .slider {
+            position: absolute;
+            left: 0; 
+            top: 0;
+            border-radius: 5px;
+            overflow: hidden;
+        }
+        .slider::before {
+            position: absolute;
+            left: 5px;
+            top: 5px;
+            background: rgba(0,0,0,0.4);
+            color: #fff;
+            padding: 5px 10px 3px;
+        }
+        .slider:nth-child(1)::before {content: '이미지1';}
+        .slider:nth-child(2)::before {content: '이미지2';}
+        .slider:nth-child(3)::before {content: '이미지3';}
+        .slider:nth-child(4)::before {content: '이미지4';}
+        .slider:nth-child(5)::before {content: '이미지5';}
+        .slider:nth-child(1) {z-index: 5;}
+        .slider:nth-child(2) {z-index: 4;}
+        .slider:nth-child(3) {z-index: 3;}
+        .slider:nth-child(4) {z-index: 2;}
+        .slider:nth-child(5) {z-index: 1;}
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;!-- main --&gt;
+    &lt;main&gt;
+        &lt;section id="sliderType01" class="nexon"&gt;
+            &lt;div class="slider__wrap"&gt;
+                &lt;div class="slider__img"&gt;
+                    &lt;div class="slider"&gt;&lt;img src="../img/images01.jpg" alt="이미지1"&gt;&lt;/div&gt;
+                    &lt;div class="slider"&gt;&lt;img src="../img/images02.jpg" alt="이미지2"&gt;&lt;/div&gt;
+                    &lt;div class="slider"&gt;&lt;img src="../img/images03.jpg" alt="이미지3"&gt;&lt;/div&gt;
+                    &lt;div class="slider"&gt;&lt;img src="../img/images04.jpg" alt="이미지4"&gt;&lt;/div&gt;
+                    &lt;div class="slider"&gt;&lt;img src="../img/images05.jpg" alt="이미지5"&gt;&lt;/div&gt;
+                &lt;/div&gt; 
+            &lt;/div&gt;
+        &lt;/section&gt;
+    &lt;/main&gt;
+    &lt;!-- //main --&gt;
+
+    &lt;!-- script --&gt;
+    &lt;script&gt;
+
+    &lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
