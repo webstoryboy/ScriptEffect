@@ -9,8 +9,9 @@
     <!-- CSS -->
     <link rel="stylesheet" href="../../assets/css/fonts.css">
     <link rel="stylesheet" href="../../assets/css/reset.css">
+    <link rel="stylesheet" href="../../assets/css/dracula.css">
     <link rel="stylesheet" href="../../assets/css/style.css">
-    <link rel="stylesheet" href="../../assets/css/prism.css">
+    
 </head>
 <body>
     <header id="header">
@@ -127,7 +128,7 @@
                     우선 <code>image_code01.html</code> 페이지를 만들고, <code>!</code>를 치고 <code>tab</code>을 누르겠습니다. 
                     언어를 <code>ko</code>로 변경하고 <code>title</code>은 카드 유형01로 변경하겠습니다.
                 </p>
-<pre><code class="language-html">&lt;!DOCTYPE html&gt;
+<pre><code class="hljs language-html">&lt;!DOCTYPE html&gt;
 &lt;html lang="ko"&gt;
 &lt;head&gt;
     &lt;meta charset="UTF-8"&gt;
@@ -659,7 +660,10 @@
     <!-- script -->
     <script src="../../assets/js/jquery-3.6.0.js"></script>
     <script src="../../assets/js/jquery-ui.js"></script>
-    <script src="../../assets/js/prism.js"></script>
+    <script src="../../assets/js/highlight.min.js"></script>
     <script src="../../assets/js/script.js"></script> 
+    <script>
+        hljs.highlightAll();
+    </script>
 </body>
 </html>

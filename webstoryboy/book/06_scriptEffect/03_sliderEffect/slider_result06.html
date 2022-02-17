@@ -103,6 +103,24 @@
         .slider__btn .next {
             right: 0;
         }
+        .slider__dot {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            bottom: 20px;
+        }
+        .slider__dot .dot {
+            width: 20px; height: 20px;
+            background: rgba(0,0,0,0.4);
+            display: inline-block;
+            border-radius: 50%;
+            transition: all 0.3s;
+            text-indent: -9999px;
+            margin: 3px;
+        }
+        .slider__dot .dot.active {
+            background: rgba(255,255,255,0.9);
+        }
     </style>
 </head>
 <body>
@@ -123,6 +141,12 @@
                     <a href="#" class="prev">prev</a>
                     <a href="#" class="next">next</a>
                 </div>
+                <div class="slider__dot">
+                    <!-- <a href="#" class="dot active"></a>
+                    <a href="#" class="dot"></a>
+                    <a href="#" class="dot"></a>
+                    <a href="#" class="dot"></a> -->
+                </div>
             </div>
         </section>
     </main>
@@ -135,32 +159,59 @@
         const sliderImg = document.querySelector(".slider__img");
         const sliderInner = document.querySelector(".slider__inner");
         const slider = document.querySelectorAll(".slider");
-        const sliderBtn = document.querySelector(".slider__btn");
-        const sliderBtnPrev = sliderBtn.querySelector(".prev");
-        const sliderBtnNext = sliderBtn.querySelector(".next");
-
-        let currentIndex = 0;   
-        let sliderCount = slider.length;                                   
-        let sliderWidth = sliderImg.offsetWidth; 
+        const sliderDot = document.querySelector(".slider__dot");
         
+        let currentIndex = 0;
+        let sliderCount = slider.length;  
+        let sliderWidth = sliderImg.offsetWidth;     
+        let dotIndex = "";
+        let dotActive;
+
+        function init(){
+            // 이미지 갯수만큼 <a></a>
+            // dotIndex += "<a href='#' class='dot'></a>"
+            // dotIndex += "<a href='#' class='dot'></a>"
+            // dotIndex += "<a href='#' class='dot'></a>"
+            // dotIndex += "<a href='#' class='dot'></a>"
+            // dotIndex += "<a href='#' class='dot'></a>"
+
+            slider.forEach(() => dotIndex += "<a href='#' class='dot'></a>");
+            sliderDot.innerHTML = dotIndex;
+            //첫 번재 닷 버튼한테 활성화 표시(active)
+            sliderDot.firstElementChild.classList.add("active");
+        }
+        init();
+
         function gotoSlider(num){
-            sliderInner.style.transition = "all 400ms";
+            sliderInner.style.transition = "all 600ms";
             sliderInner.style.transform = "translateX("+ -sliderWidth * num +"px)";
             currentIndex = num;
-        }
-        
-        sliderBtnPrev.addEventListener("click", () => {
-            let prevIndex = (currentIndex + (sliderCount - 1)) % sliderCount;
-            // 첫번째 있을 때 0 --> 4 
-            // if( currentIndex == 0 ) prevIndex = sliderCount - 1;
-            // 0 1 2 3 4 
-            gotoSlider(prevIndex);
-        })
 
-        sliderBtnNext.addEventListener("click", () => {
-            let nextIndex = (currentIndex + 1) % sliderCount;
-            gotoSlider(nextIndex);
-        })
+            dotActive = document.querySelectorAll(".slider__dot .dot");
+            dotActive.forEach(el => {
+                el.classList.remove("active");
+            })
+            dotActive[num].classList.add("active");
+        }
+
+        document.querySelectorAll(".slider__btn a").forEach((btn, index) => {
+            btn.addEventListener("click", () => {
+                let prevIndex = (currentIndex + (sliderCount - 1)) % sliderCount;
+                let nextIndex = (currentIndex + 1) % sliderCount;
+
+                if(btn.classList.contains("prev")){
+                    gotoSlider(prevIndex);
+                } else {
+                    gotoSlider(nextIndex);
+                };
+            });
+        });
+
+        document.querySelectorAll(".slider__dot .dot").forEach((dot, index) => {
+            dot.addEventListener("click", () => {
+                gotoSlider(index);
+            });
+        });
     </script>
 </body>
 </html>
